@@ -43,7 +43,13 @@ body {font-family: Arial;}
   border-top: none;
 }
 </style>
-  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+</script>
+<script>
+ $(function(){
+ $("#anotherContent").load("lake.html"); 
+ });
+</script> 
   
   
   <img align="center" src="Image/Logo-elvenar.png" style="width:10%;height:10%">
@@ -60,6 +66,7 @@ body {font-family: Arial;}
 <div id="London" class="tabcontent">
   <h3>London</h3>
   <p>Bienvenue sur le portail des Chevaliers</p>
+  <div id="anotherContent"></div>
 </div>
 
 <div id="Paris" class="tabcontent">
@@ -74,6 +81,8 @@ body {font-family: Arial;}
 
 <script>
 function openCity(evt, cityName) {
+     let audio = new Audio("Image/CLIC.mp3");
+    audio.play();
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
