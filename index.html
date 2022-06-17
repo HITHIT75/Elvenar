@@ -80,7 +80,7 @@
     <th>CARTE 3</th>
   </tr>
      <tr align="center">
-    <th>CARTE 1</th>
+    <th><img align="center" src="Image/CARTE 1.png" ></th>
     <th>CARTE 2</th>
     <th>CARTE 3</th>
   </tr> 
@@ -103,6 +103,10 @@
   
 <script>
 function openPage(pageName,elmnt,color) {
+      let audio = new Audio("Image/CLIC.mp3");
+    audio.play();
+  
+  
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
