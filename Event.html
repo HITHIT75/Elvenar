@@ -35,47 +35,9 @@
   color: black;
 }
 </style>
-</head>
-<body>
-<p id="demo" onclick="myFunction()">Click me to change my textual content.</p>
-
-
-   
-<div class="Vert"  id="B1" width="80%";>
-  <span class="closebtn">&times;</span>  
-  <strong>Quete 1</strong> Indicates .
-</div>
-
-<div class="Orange" id="B2">
-  <span class="closebtn">&times;</span>  
-  <strong>Quete 2</strong> Indicates .
-</div>
-
-<div class="Rouge" id="B3">
-  <span class="closebtn">&times;</span>  
-  <strong>Quete 3</strong> Indicates.
-</div>
-
-<script>
-  var Chaine = "Txt1,1"
-  document.getElementById('B1').className = "Rouge";
-   document.getElementById('B2').className = "Vert";
-   document.getElementById('B3').className = "Orange";
-var close = document.getElementsByClassName("closebtn");
-var i;
   
- 
   
-for (i = 0; i < close.length; i++) {
-  var div = this.parentElement;
- 
-  close[i].onclick = function(){
-    var div = this.parentElement;
-    div.style.opacity = "0";
-    setTimeout(function(){ div.style.display = "none"; }, 600);
-  }
-}
-
+  <script>
 function myFunction() {
 
 
@@ -140,6 +102,47 @@ var B56='Collectez 12 reliques ET Produire des marchandises OU Collectez 2 catal
 }
   
 </script>
+</head>
+<body>
+<p id="demo" onclick="myFunction()">Click me to change my textual content.</p>
+
+
+   
+<div class="Vert"  id="B1" width="80%";>
+  <span class="closebtn">&times;</span>  
+  <strong>Quete 1</strong> Indicates .
+</div>
+
+<div class="Orange" id="B2">
+  <span class="closebtn">&times;</span>  
+  <strong>Quete 2</strong> Indicates .
+</div>
+
+<div class="Rouge" id="B3">
+  <span class="closebtn">&times;</span>  
+  <strong>Quete 3</strong> Indicates.
+</div>
+
+<script>
+  var Chaine = "Txt1,1"
+  document.getElementById('B1').className = "Rouge";
+   document.getElementById('B2').className = "Vert";
+   document.getElementById('B3').className = "Orange";
+var close = document.getElementsByClassName("closebtn");
+var i;
+  
+ 
+  
+for (i = 0; i < close.length; i++) {
+  var div = this.parentElement;
+ 
+  close[i].onclick = function(){
+    var div = this.parentElement;
+    div.style.opacity = "0";
+    setTimeout(function(){ div.style.display = "none"; }, 600);
+  }
+}
+
 
 </body>
 </html>
