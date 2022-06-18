@@ -62,45 +62,13 @@ background-image:url(/Image/Fond1.png);
 #Aventure {background-color: #DCC297;}
 #Liens {background-color: #DCC297;}
 #con {background-color: #DCC297;}  
-</style>
-<style>
+
   
   th, td {
   border: 1px solid black;
   border-radius: 10px;
 }
   
-  
-  
-/* Tooltip container */
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
-}
-
-/* Tooltip text */
-.tooltip .tooltiptext {
-  visibility: hide;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-  
- 
-  /* Position the tooltip text - see examples below! */
-  /*top: -5px;*/
-  /*left: 105%;*/
-   position: absolute;
-  z-index: 1;
-}
-
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
 </style>
   
   
@@ -136,7 +104,7 @@ background-image:url(/Image/Fond1.png);
   
   <img align="center" src="Image/site_en_construction.gif" style="width:10%;height:10%"><br>
   <p></p> 
- <object data="Event.html"></object>
+ <object data="Event.html" style="width:100%;height:100%"></object>
  
 </div>
 
@@ -160,11 +128,10 @@ background-image:url(/Image/Fond1.png);
   
  <div id="Liens" class="tabcontent">
   <img align="center" src="Image/site_en_construction.gif" style="width:10%;height:10%"><br>
-   Le doc de Flo83
-    <a href="https://docs.google.com/spreadsheets/d/1mrcTcVNs3g_ollPNwm6n-xtzKx3HVlBZpq8-Mn2LJOA/edit#gid=2016481855" target="_blank"></a>
-<br>
-  Le spoiler de Marina mis à jour à chaque event et aventure + quelques autres infos
-   <a href="https://docs.google.com/spreadsheets/d/1O6R0sPbaXSadzo1NX-W2miK-QekJF7PGEw2c3ml66WI/edit#gid=880756840" target="_blank"></a>
+  <br>
+    <a href="https://docs.google.com/spreadsheets/d/1mrcTcVNs3g_ollPNwm6n-xtzKx3HVlBZpq8-Mn2LJOA/edit#gid=2016481855" target="_blank">Le doc de Flo83</a>
+ <br>  
+   <a href="https://docs.google.com/spreadsheets/d/1O6R0sPbaXSadzo1NX-W2miK-QekJF7PGEw2c3ml66WI/edit#gid=880756840" target="_blank">Le spoiler de Marina mis à jour à chaque event et aventure + quelques autres infos</a>
     
 
    
@@ -175,7 +142,7 @@ background-image:url(/Image/Fond1.png);
  <div id="con" class="tabcontent">
   <img align="center" src="Image/site_en_construction.gif" style="width:10%;height:10%">
 </div> 
-  
+ 
 <script>
 function openPage(pageName,elmnt,color) {
       let audio = new Audio("Image/CLIC.mp3");
