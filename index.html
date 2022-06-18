@@ -26,13 +26,15 @@ background-image:url(Image/Fond1.png);
 }
 .a {
  align :center 
+  text-align: center;
   style :font-family:verdana
- font-size: 14px;
+ font-size: 26px;
 }
 .p {
+ text-align: center;
  align :center 
   style :font-family:verdana
- font-size: 14px;
+ font-size: 26px;
 } 
  
 </style>
@@ -66,7 +68,7 @@ background-image:url(Image/Fond1.png);
   color: black;
   display: none;
   height: 100%;
-  max-width: 80%;
+  max-width: 90%;
 }
 
 #Accueil {background-color: #DCC297;}
@@ -76,15 +78,17 @@ background-image:url(Image/Fond1.png);
 #con {background-color: #DCC297;}  
 
 </style>
-  
-  
-  
-  
-  
-  
-  <img align="Left" src="Image/Logo-elvenar.png" style="width:10%;height:10%">
- <img align="center" src="Image/site_en_construction.gif" style="width:10%;height:10%">
-    <img align="Right" src="Image/drapeau.png" style="width:8%;height:8%">
+ <table align="center">
+    <tr align="center">
+    <th align="center"><img  src="Image/Logo-elvenar.png" style="width:10%;height:10%" >PORTAIL</th>
+    <th align="center">DES CHEVALIERS<img  src="Image/site_en_construction.gif" style="width:10%;height:10%" ></th>
+    <th align="center"><img src="Image/drapeau.png" style="width:8%;height:8%" ></th>
+  </tr> 
+</table>
+ 
+ 
+ 
+ 
 <div class="tab">
   <button class="tablink" onclick="openPage('Accueil', this, '#CDFA94' )" id="defaultOpen"  >Accueil</button>
 <button class="tablink" onclick="openPage('Evenement', this, '#CDFA94')" >Evenement</button>
