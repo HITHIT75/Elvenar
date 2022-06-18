@@ -12,9 +12,9 @@
   margin-bottom: 15px;
 }
 
-.alert.success {background-color: #04AA6D;}
-.alert.info {background-color: #2196F3;}
-.alert.warning {background-color: #ff9800;}
+.Vert {background-color: #04AA6D;}
+.Orange {background-color: #FBD86A;}
+.Rouge {background-color: #FAB793;}
 
 .closebtn {
   margin-left: 15px;
@@ -36,22 +36,18 @@
 
 <h2>Alert Messages</h2>
 <p>Click on the "x" symbol to close the alert message.</p>
-<div class="alert">
-  <span class="closebtn">&times;</span>  
-  <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
-</div>
-
-<div class="alert success">
+   
+<div class="Vert">
   <span class="closebtn">&times;</span>  
   <strong>Success!</strong> Indicates a successful or positive action.
 </div>
 
-<div class="alert info">
+<div class="Orange">
   <span class="closebtn">&times;</span>  
   <strong>Info!</strong> Indicates a neutral informative change or action.
 </div>
 
-<div class="alert warning">
+<div class="Rouge">
   <span class="closebtn">&times;</span>  
   <strong>Warning!</strong> Indicates a warning that might need attention.
 </div>
@@ -59,8 +55,24 @@
 <script>
 var close = document.getElementsByClassName("closebtn");
 var i;
-
+  var Chaine = "Txt1,1
+ 
+  
 for (i = 0; i < close.length; i++) {
+  var div = this.parentElement;
+  var j = i + 1
+ 
+       if (i=0){ 
+         div.className = "Rouge";
+    }
+      if (i=1){ 
+         div.className = "Orange";
+    } 
+       if (i=2){ 
+         div.className = "Rouge";
+    }  
+  
+  
   close[i].onclick = function(){
     var div = this.parentElement;
     div.style.opacity = "0";
