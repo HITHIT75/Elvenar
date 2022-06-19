@@ -40,7 +40,7 @@ body {
  <table align="center" style="max-width:100%;max-height:15%">
    <tr align="center">
     <th align="center"><img  src="Image/Logo1.png" style="max-width:100%;height:auto;" onclick="openPage1()"></th>
-    <th align="center"><img  src="Image/Home1.png" style="max-width:70%;height:auto;" onclick="openPage(2)"></th>
+    <th align="center"><img  src="Image/Home1.png" style="max-width:70%;height:auto;" onclick="openPage1()"></th>
     <th align="center"><img src="Image/Aventure1.png" style="max-width:100%;height:auto;" ></th>
     <th align="center"><img src="Image/Evenement1.png" style="max-width:50%;height:auto;" ></th>  
     <th align="center"><img src="Image/Liens1.png" style="max-width:100%;height:auto;" ></th>    
@@ -59,13 +59,13 @@ body {
 
  
 <script>
-function openPage1(Num) {
+function openPage1() {
       alert(Num);
       let audio = new Audio("Image/CLIC.mp3");
       audio.play();
 
-var el = document.getElementById('chose');
-el.src = "Accueil.html";
+//var el = document.getElementById('chose');
+//el.src = "Accueil.html";
  
 }
 
