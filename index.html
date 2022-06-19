@@ -36,50 +36,14 @@ body {
 </style>
  
  
- 
- <style>
 
 
-/* Style tab links 81542B*/
-.tablink {
-  background-color: #DCC297;
-  font-weight: bold;
-  color: black;
-  float: left;
-  border: 1px solid black;
-  border-radius: 10px;
-  outline: none;
-  cursor: pointer;
-  padding: 12px 12px;
-  font-size: 17px;
-  width: 15%;
- 
-}
-
-.tablink:hover {
-  background-color: #F5F5DE ;
-}
-
-/* Style the tab content (and add height:100% for full page content) */
-.tabcontent {
-  color: black;
-  display: none;
-  height: 100%;
-  max-width: 95%;
- 
-}
-
-#Accueil {background-color: #DCC297;}
-#Evenement {background-color: #DCC297;}
-#Aventure {background-color: #DCC297;}
-#Liens {background-color: #DCC297;}
-#con {background-color: #DCC297;}  
 
 </style>
  <table align="center" style="max-width:100%;max-height:15%">
    <tr align="center">
-    <th align="center"><img  src="Image/Logo1.png" style="max-width:100%;height:auto;" ></th>
-    <th align="center"><img  src="Image/Home1.png" style="max-width:70%;height:auto;" ></th>
+    <th align="center"><img  src="Image/Logo1.png" style="max-width:100%;height:auto;" onclick="openPage(1)"></th>
+    <th align="center"><img  src="Image/Home1.png" style="max-width:70%;height:auto;" onclick="openPage(2)"></th>
     <th align="center"><img src="Image/Aventure1.png" style="max-width:100%;height:auto;" ></th>
     <th align="center"><img src="Image/Evenement1.png" style="max-width:50%;height:auto;" ></th>  
     <th align="center"><img src="Image/Liens1.png" style="max-width:100%;height:auto;" ></th>    
@@ -93,12 +57,12 @@ body {
  
  
  
-  
-
- <object data="Accueil.html" style="width:100%;height:300%"></object>
 
 
- <object data="Event.html" style="width:100%;height:300%"></object>
+ <object data="Accueil.html" Id="Chose" style="width:100%;height:300%"></object>
+
+
+ <object data="Event.html" Id="Event" style="width:100%;height:300%"></object>
  
 
  <object data="Aventure.html" style="width:100%;height:300%"></object>
@@ -120,25 +84,17 @@ body {
 
  
 <script>
-function openPage(pageName,elmnt,color) {
+function openPage(Num) {
       let audio = new Audio("Image/CLIC.mp3");
-    audio.play();
-  
-  
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
-}
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+     audio.play();
+   if (Num=1) {
+    document.getElementById('Chose').data = "Accueil.html";
+    }
+   if (Num=2) {
+    document.getElementById('Chose').data = "Event.html";
+    } 
+ 
+ 
 </script>
 
   
