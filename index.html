@@ -59,6 +59,19 @@ body {
   border-style: solid;
   border-color: transparent transparent black transparent;
 }
+ .image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.container:hover .image {
+  opacity: 0.3;
+}
+ 
+ 
 </style>
  
   <script>
@@ -76,7 +89,7 @@ alert(essai)
 </style>
  <table align="center" style="max-width:100%;max-height:15%">
    <tr align="center">
-    <th align="center" ><div class="tooltip"><img  src="Image/Logo1.png" style="max-width:100%;height:auto;" >
+    <th align="center" ><div class="tooltip"><img  class="image src="Image/Logo1.png" style="max-width:100%;height:auto;" >
      <span class="tooltiptext">Ca c'est le logo du jeu auquel vous jouez</span>
      </div></th>
     <th align="center"><div class="tooltip"><img  src="Image/Home1.png" style="max-width:70%;height:auto;" onclick="openPage1()">
@@ -103,7 +116,7 @@ alert(essai)
     <th align="center"><div class="tooltip"><img src="Image/Blason1.png" style="max-width:100%;height:auto;" >
      <span class="tooltiptext">Ca c'est notre blason! Pignouf !</span>
      </div></th>    
-    <p id="B1">test9 navigation/lisibilté</p>
+    <p id="B1">test10 Fade Img / navigation/lisibilté</p>
   </tr> 
 </table>
  
