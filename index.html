@@ -114,9 +114,9 @@ function openPage1(Num) {
       let audio = new Audio("Image/CLIC.mp3");
       audio.play();
  
- let Ici = document.parent.getElementById('chose')
+ let Ici = document.getParentNode().getNodeName()
  
-alert(Ici.name);
+alert(Ici);
  
 Ici.src = "Accueil.html"
  
