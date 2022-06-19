@@ -67,17 +67,33 @@ body {
 </style>
  <table align="center" style="max-width:100%;max-height:15%">
    <tr align="center">
-    <th align="center"><div class="tooltip"><img  src="Image/Logo1.png" style="max-width:100%;height:auto;" onclick="openPage1()">
-     <span class="tooltiptext">Tooltip text</span>
+    <th align="center" onclick="openPage1()><div class="tooltip"><img  src="Image/Logo1.png" style="max-width:100%;height:auto;" onclick="openPage1()">
+     <span class="tooltiptext">Ca c'est le logo du jeu auquel vous jouez</span>
      </div></th>
-    <th align="center"><img  src="Image/Home1.png" style="max-width:70%;height:auto;" onclick="openPage1()"></th>
-    <th align="center"><img src="Image/Aventure1.png" style="max-width:100%;height:auto;" ></th>
-    <th align="center"><img src="Image/Evenement1.png" style="max-width:50%;height:auto;" ></th>  
-    <th align="center"><img src="Image/Liens1.png" style="max-width:100%;height:auto;" ></th>    
-    <th align="center"><img src="Image/Journal1.png" style="max-width:100%;height:auto;" ></th>
-     <th align="center"><img src="Image/Aide1.png" style="max-width:100%;height:auto;" ></th>    
-    <th align="center"><img src="Image/Doigt1.png" style="max-width:70%;height:auto;" ></th>    
-    <th align="center"><img src="Image/Blason1.png" style="max-width:100%;height:auto;" ></th>    
+    <th align="center"><div class="tooltip"><img  src="Image/Home1.png" style="max-width:70%;height:auto;" onclick="openPage1()">
+     <span class="tooltiptext">Retourne à l'accueil du portail</span>
+     </div></th>
+    <th align="center"><div class="tooltip"><img src="Image/Aventure1.png" style="max-width:100%;height:auto;" >
+     <span class="tooltiptext">Vous trouvez ici les cartes et étapes décidées pour l'aventure, un lien vers Sheet et les proportions de ce qu'il faut produire</span>
+     </div></th>
+    <th align="center"><div class="tooltip"><img src="Image/Evenement1.png" style="max-width:50%;height:auto;" >
+     <span class="tooltiptext">La liste de vos quetes restantes que vous pouvez priorisées</span>
+     </div></th>  
+    <th align="center"><div class="tooltip"><div class="tooltip"><img src="Image/Liens1.png" style="max-width:100%;height:auto;" >
+     <span class="tooltiptext">Des liens utiles sur des ressources externes</span>
+     </div></th>    
+    <th align="center"><div class="tooltip"><img src="Image/Journal1.png" style="max-width:100%;height:auto;" >
+     <span class="tooltiptext">la sage du tableau de bord d'Olivius avec tous les épisodes</span>
+     </div></th>
+     <th align="center"><div class="tooltip"><img src="Image/Aide1.png" style="max-width:100%;height:auto;" >
+      <span class="tooltiptext">Les recommandations d'Olivius pour les nouveaux</span>
+      </div></th>    
+    <th align="center"><div class="tooltip"><img src="Image/Doigt1.png" style="max-width:70%;height:auto;" >
+     <span class="tooltiptext">Pour ce détendre</span>
+     </div></th>    
+    <th align="center"><div class="tooltip"><img src="Image/Blason1.png" style="max-width:100%;height:auto;" >
+     <span class="tooltiptext">Ca c'est notre blason pignouf</span>
+     </div></th>    
     
   </tr> 
 </table>
@@ -90,7 +106,7 @@ body {
  
 <script>
 function openPage1() {
-      alert(Num);
+      alert("Ok");
       let audio = new Audio("Image/CLIC.mp3");
       audio.play();
 
