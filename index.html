@@ -88,22 +88,22 @@ alert(essai)
     <th align="center"><div class="tooltip"><img src="Image/Evenement1.png" style="max-width:50%;height:auto;" onclick="openPage3()">
      <span class="tooltiptext">Pour l'evenement en cours, la liste de VOS quetes restantes et priorisées</span>
      </div></th>  
-    <th align="center"><div class="tooltip"><div class="tooltip"><img src="Image/Liens1.png" style="max-width:100%;height:auto;" onclick="openPage5()">
+    <th align="center"><div class="tooltip"><div class="tooltip"><img src="Image/Liens1.png" style="max-width:100%;height:auto;" onclick="openPage4()">
      <span class="tooltiptext">Des liens utiles vers des ressources externes</span>
      </div></th>    
     <th align="center"><div class="tooltip"><img src="Image/manuscrit.png" style="max-width:70%;height:auto;" onclick="openPage5()">
      <span class="tooltiptext">la saga invraissemblable du tableau de bord d'Olivius avec tous les épisodes</span>
      </div></th>
-     <th align="center"><div class="tooltip"><img src="Image/Aide1.png" style="max-width:100%;height:auto;" >
+     <th align="center"><div class="tooltip"><img src="Image/Aide1.png" style="max-width:100%;height:auto;" onclick="openPage6()">
       <span class="tooltiptext">Les recommandations d'Olivius pour les nouveaux</span>
       </div></th>    
-    <th align="center"><div class="tooltip"><img src="Image/Doigt1.png" style="max-width:70%;height:auto;" >
+    <th align="center"><div class="tooltip"><img src="Image/Doigt1.png" style="max-width:70%;height:auto;" onclick="openPage7()">
      <span class="tooltiptext">Pour se détendre</span>
      </div></th>    
     <th align="center"><div class="tooltip"><img src="Image/Blason1.png" style="max-width:100%;height:auto;" >
      <span class="tooltiptext">Ca c'est notre blason! Pignouf !</span>
      </div></th>    
-    <p id="B1">test5 navigation/lisibilté</p>
+    <p id="B1">test6 navigation/lisibilté</p>
   </tr> 
 </table>
  
@@ -134,8 +134,14 @@ function openPage2() {
    SonClic()
     document.getElementById("Chose").src = "Journal.html"
  }   
- 
- 
+   function openPage6() {
+   SonClic()
+    document.getElementById("Chose").src = "Aide.html"
+ }   
+   function openPage7() {
+   SonClic()
+    document.getElementById("Chose").src = "Doigt.html"
+ }   
  function SonClic() {
        let audio = new Audio("Image/CLIC.mp3");
       audio.play();
