@@ -79,13 +79,13 @@ alert(essai)
     <th align="center" ><div class="tooltip"><img  src="Image/Logo1.png" style="max-width:100%;height:auto;" >
      <span class="tooltiptext">Ca c'est le logo du jeu auquel vous jouez</span>
      </div></th>
-    <th align="center"><div class="tooltip"><img  src="Image/Home1.png" style="max-width:70%;height:auto;" onclick="myFunction()">
+    <th align="center"><div class="tooltip"><img  src="Image/Home1.png" style="max-width:70%;height:auto;" onclick="openPage1()">
      <span class="tooltiptext">Retourne à l'accueil du portail. d'habitude on met un symbole maison, mais avec un chateau c'est plus congruent</span>
      </div></th>
-    <th align="center"><div class="tooltip"><img src="Image/Aventure1.png" style="max-width:100%;height:auto;" onclick="openPage1()">
+    <th align="center"><div class="tooltip"><img src="Image/Aventure1.png" style="max-width:100%;height:auto;" onclick="openPage2()">
      <span class="tooltiptext">Vous trouvez ici les cartes et étapes décidées pour l'aventure, un lien vers Sheet et les proportions de ce qu'il faut produire</span>
      </div></th>
-    <th align="center"><div class="tooltip"><img src="Image/Evenement1.png" style="max-width:50%;height:auto;" >
+    <th align="center"><div class="tooltip"><img src="Image/Evenement1.png" style="max-width:50%;height:auto;" onclick="openPage3()>
      <span class="tooltiptext">Pour l'evenement en cours, la liste de VOS quetes restantes et priorisées</span>
      </div></th>  
     <th align="center"><div class="tooltip"><div class="tooltip"><img src="Image/Liens1.png" style="max-width:100%;height:auto;" >
@@ -103,7 +103,7 @@ alert(essai)
     <th align="center"><div class="tooltip"><img src="Image/Blason1.png" style="max-width:100%;height:auto;" >
      <span class="tooltiptext">Ca c'est notre blason! Pignouf !</span>
      </div></th>    
-    <p id="B1">test3</p>
+    <p id="B1">test4</p>
   </tr> 
 </table>
  
@@ -114,23 +114,25 @@ alert(essai)
 
  
 <script>
- 
- 
 function openPage1() {
- 
-      alert("fatigué mais ca va afficher la page apres une sieste");
-      let audio = new Audio("Image/CLIC.mp3");
+       let audio = new Audio("Image/CLIC.mp3");
       audio.play();
- 
- //let Ici = document.getParentNode().getNodeName()
- 
-//alert(Ici);  https://hithit75.github.io/Elvenar/index.html
- 
-document.getElementById("Chose").src = "Accueil.html"
- 
-}
-
-
+    document.getElementById("Chose").src = "Accueil.html"
+ }
+function openPage2() {
+       let audio = new Audio("Image/CLIC.mp3");
+      audio.play();
+    document.getElementById("Chose").src = "Aventure.html"
+ }
+ function openPage3() {
+   SonClic()
+    document.getElementById("Chose").src = "Evenement.html"
+ }    
+     
+ function SonClic() {
+       let audio = new Audio("Image/CLIC.mp3");
+      audio.play();
+ } 
 </script>
 
   
