@@ -23,12 +23,33 @@ body {
 .img {
  cursor: pointer;
 }
-.p {
- text-align: center;
- align :center 
-  style :font-family:verdana
- font-size: 26px;
-} 
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
  
 </style>
  
@@ -39,7 +60,9 @@ body {
 </style>
  <table align="center" style="max-width:100%;max-height:15%">
    <tr align="center">
-    <th align="center"><img  src="Image/Logo1.png" style="max-width:100%;height:auto;" onclick="openPage1()"></th>
+    <th align="center"><div class="tooltip"><img  src="Image/Logo1.png" style="max-width:100%;height:auto;" onclick="openPage1()">
+     <span class="tooltiptext">Tooltip text</span>
+     </div></th>
     <th align="center"><img  src="Image/Home1.png" style="max-width:70%;height:auto;" onclick="openPage1()"></th>
     <th align="center"><img src="Image/Aventure1.png" style="max-width:100%;height:auto;" ></th>
     <th align="center"><img src="Image/Evenement1.png" style="max-width:50%;height:auto;" ></th>  
