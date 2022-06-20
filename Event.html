@@ -99,7 +99,7 @@
 <table padding="0px 0;" align="center">
  <tr>  
    <th colspan="4">                    
-     <DIV align="center"   style= "font-family:verdana; font-size: 18px;"  >
+     <DIV align="center"  id="Debut" style= "font-family:verdana; font-size: 16px;"  >
      <img width= "30px;"height= "30px;" src="Image/CocheNon.png"> 
              Masquer la quête..                                    
      <img width= "30px;" height= "30px;" src="Image/Back.png">
@@ -107,7 +107,7 @@
      <img width= "30px;" height= "30px;" src="Image/Sauver.jpg">
              Sauvegarder mes sélections                                                          
       </DIV>
-   </th>                                                       </th>
+   </th>                                                      
 </tr>
 <tr><td class="VertBordure" id='C1' >Collectez des pièces</td><td class='VertBordure1' onclick='myFunction11()'><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick='myFunction21()'><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick='myFunction31()'><img width= '25px;' src='Image/Ovale.png'></td></tr>
 <tr><td class="VertBordure" id='C2' >Produire Atelier 8x5min</td><td class='VertBordure1' onclick='myFunction12()'><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick='myFunction22()'><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick='myFunction32()'><img width= '25px;' src='Image/Ovale.png'></td></tr>
@@ -185,7 +185,7 @@
 //    setTimeout(function(){ div.style.display = "none"; }, 600);
 // }
 //}
-
+document.getElementById("Debut").innerHTML = "Masque la quête 1/56";
 
 myFunction11() {
 //document.getElementById('C1').className = "VertBordure";
