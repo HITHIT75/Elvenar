@@ -43,9 +43,16 @@ body {
   left: 50%;
   margin-left: -60px;
 }
-
+/* The animation code */
+@keyframes TT1 {
+  0%   {visibility: hidden;}
+  10%  {visibility: visible;}
+  90%  {visibility: visible;}
+  100% {visibility: hidden;}
+}
 .tooltip:hover .tooltiptext {
-  visibility: visible;
+  animation-name: TT1;
+  animation-duration: 4s;
 }
  .tooltip .tooltiptext::after {
   content: "";
@@ -93,7 +100,7 @@ alert(essai)
     <th align="center" >
        <div class="tooltip">
            <img  src="Image/Logo1.png" style="max-width:100%;height:auto;" >
-          <span class="tooltiptext">Ca c'est le logo du jeu auquel vous jouez  - test en cours : navigation libilté RAF contenu de l'event</span>
+          <span class="tooltiptext">Ca c'est le logo du jeu auquel vous jouez  - test en cours : Disparition du tooltip 4s</span>
        </div>
      </th>
     <th align="center"><div class="tooltip"><img  src="Image/Home1.png" style="max-width:70%;height:auto;" onclick="openPage1()">
@@ -118,7 +125,7 @@ alert(essai)
      <span class="tooltiptext">Pour se détendre</span>
      </div></th>    
     <th align="center"><div class="tooltip"><img src="Image/Blason1.png" style="max-width:100%;height:auto;" >
-     <span class="tooltiptext">Ca c'est notre blason! Pignouf !</span>
+     <span class="tooltiptext">Ca c'est notre blason! Pignouf !  Event</span>
      </div></th>    
      </tr> 
 </table>
