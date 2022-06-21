@@ -78,8 +78,16 @@ img:hover {
     -webkit-transition: opacity .55s ease-in-out;
    
 }
- 
- 
+.container {
+  position: relative;
+  text-align: center;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} 
 </style>
  
   <script>
@@ -95,7 +103,7 @@ alert(essai)
 
 
 </style>
- <table align="center" style="max-width:100%;max-height:15%">
+ <table align="center" style="max-width:100%;max-height:15%"  border-spacing: 0px; >
    <tr align="center">
     <th align="center" >
        <div class="tooltip">
@@ -103,9 +111,10 @@ alert(essai)
           <span class="tooltiptext">Ca c'est le logo du jeu auquel vous jouez  - test en cours :</span>
        </div>
      </th>
-    <th align="center"><div class="tooltip"><img  src="Image/Titre.png" style="max-width:70%;height:auto;" onclick="openPage1()">
+    <th align="center"><div class="container"><div class="tooltip"><img  src="Image/Titre.png" style="max-width:70%;height:auto;" onclick="openPage1()">
+     <div class="centered">Accueil</div>
      <span class="tooltiptext">Retourne à l'accueil du portail. d'habitude on met un symbole maison, mais avec un chateau c'est plus congruent </span>
-     </div></th>
+     </div></div></th>
     <th align="center"><div class="tooltip"><img src="Image/Aventure1.png" style="max-width:100%;height:auto;" onclick="openPage2()">
      <span class="tooltiptext">Vous trouvez ici les cartes et étapes décidées pour l'aventure, un lien vers Sheet et les proportions de ce qu'il faut produire</span>
      </div></th>
