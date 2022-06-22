@@ -81,7 +81,29 @@
 
 
 <script>
-   
+function  Loader() {
+//alert('ok')
+Chaine ="1,2,3,1,3,2"
+const  parts = Chaine.split(",");
+//alert(parts[1])
+//alert(parts[2])
+for ( i = 1; i < 6; i++) {
+	var Posi = "C" + i
+    if (parts[i]==1) {
+    	document.getElementById(Posi).className = "VertBordure";
+    }
+    if (parts[i]==2) {
+    	document.getElementById(Posi).className = "OrangeBordure";
+    }    
+     if (parts[i]==3) {
+    	document.getElementById(Posi).className = "RougeBordure";
+    }   
+    
+}
+ 
+ 
+ 
+ 
 function myFunction11() {
 document.getElementById('C1').className = "VertBordure";
 }
@@ -93,7 +115,7 @@ document.getElementById('C1').className = "RougeBordure";
 } 
   
 </script>
-<body>
+<body onload="Loader()">
 <button onclick="myFunction()">Click me</button>
 
  <table padding="0px 0;" align="center">
