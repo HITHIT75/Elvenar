@@ -63,7 +63,11 @@
    background-color: #FAB793;
   }  
   .AfficheVide {
-  
+  	display: contents;
+
+  }
+ .PasAfficheVide {
+     display: none;
   }
 
 
@@ -85,27 +89,33 @@
 <script>
 function  Loader() {
 //alert('ok')
-Chaine ="1,2,1,1,3,2"
+Chaine ="3,4,1,1,1,1"
 const  parts = Chaine.split(",");
 //alert(parts[1])
 //alert(parts[2])
-for ( i = 1; i < 6; i++) {
-	var Posi = "C" + i
-    if (parts[i]==1) {
-    	document.getElementById(Posi).className = "VertBordure";
-    }
-    if (parts[i]==2) {
-    	document.getElementById(Posi).className = "OrangeBordure";
-    }    
-     if (parts[i]==3) {
-    	document.getElementById(Posi).className = "RougeBordure";
-    }   
-      if (parts[i]==4) {
-    	document.getElementById(Posi).className = "VideBordure";
-    }     
+  for ( i = 1; i < 6; i++) {
+  
+      var Posi = "C" + i
+      var Ligne = 'L' + i
+      if (parts[i]==1) {
+          document.getElementById(Posi).className = "VertBordure";
+      }
+      if (parts[i]==2) {
+          document.getElementById(Posi).className = "OrangeBordure";
+      }    
+       if (parts[i]==3) {
+          document.getElementById(Posi).className = "RougeBordure";
+      }   
+        if (parts[i]==4) {
+       
+      	document.getElementById(Ligne).className = "PasAfficheVide";
+      }     
+      //else {
+     // 	document.getElementById(Ligne).className = "AfficheVide";
+      //}
+  
+
 }
-
-
 
 }
 function myFunction11() {
@@ -160,10 +170,10 @@ document.getElementById('C1').className = "RougeBordure";
       </DIV>
    </th>                                                      
 </tr>
-<tr id="L1" class="AfficheVide"><td class="OrangeBordure" id="C1" >Collectez des pièces</td><td class='VertBordure1' onclick='Pinceau(1, 1, this)'><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick='Pinceau(1, 2, this)'><img width= '25px;' src='Image/Ovale.png'></td>
+<tr id='L1' class='AfficheVide'><td class='OrangeBordure' id='C1' >Collectez des pièces</td><td class='VertBordure1' onclick='Pinceau(1, 1, this)'><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick='Pinceau(1, 2, this)'><img width= '25px;' src='Image/Ovale.png'></td>
 <td class='RougeBordure1'  onclick='Pinceau(1, 3, this)'><img width= '25px;' src='Image/Ovale.png'></td></tr>
 
-<tr id="L2"><td class="VertBordure" id='C2' >Produire Atelier 8x5min</td><td class='VertBordure1' onclick='Pinceau(2, 1, this)'><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick='Pinceau(2, 2, this)'><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick='Pinceau(2, 3, this)'><img width= '25px;' src='Image/Ovale.png'></td></tr>
+<tr id='L2'><td class='VertBordure' id='C2' >Produire Atelier 8x5min</td><td class='VertBordure1' onclick='Pinceau(2, 1, this)'><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick='Pinceau(2, 2, this)'><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick='Pinceau(2, 3, this)'><img width= '25px;' src='Image/Ovale.png'></td></tr>
 <tr><td class="RougeBordure" id='C3' >Dépenser 8 PC</td><td class='VertBordure1' onclick='myFunction13()'><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick='myFunction23()'><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick='myFunction33()'><img width= '25px;' src='Image/Ovale.png'></td></tr>
 <tr><td class="VertBordure" id='C4' >Produire T1 2x3h</td><td class='VertBordure1' onclick='myFunction14()'><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick='myFunction24()'><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick='myFunction34()'><img width= '25px;' src='Image/Ovale.png'></td></tr>
 <tr><td class="VertBordure" id='C5' >Produire Atelier 7x15min</td><td class='VertBordure1' onclick='myFunction15()'><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick='myFunction25()'><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick='myFunction35()'><img width= '25px;' src='Image/Ovale.png'></td></tr>
