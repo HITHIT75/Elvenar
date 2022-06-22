@@ -100,7 +100,10 @@ for ( i = 1; i < 6; i++) {
     }   
     
 }
-
+function myFunction0(A,B) {
+alert (A)
+alert (A)
+}
 
 
 }
@@ -116,7 +119,25 @@ document.getElementById('C1').className = "RougeBordure";
   
 </script>
 <body onload="Loader()">
-<button onclick="myFunction()">Click me</button>
+<button onclick="test(1, 2, this)">Click me</button>
+ 
+ <script>
+            var test = function(value1,value2,object) {
+            	var Cible ='C' + value1
+                if (value2==1) {
+                         document.getElementById(Cible).className = "VertBordure";
+                }
+                if (value2==2) {
+                         document.getElementById(Cible).className = "OrangeBordure";
+                }
+                if (value2==3) {
+                         document.getElementById(Cible).className = "RougeBordure";
+                }                
+               // object.innerHTML=
+            };
+ </script>
+
+
 
  <table padding="0px 0;" align="center">
   <tr>  
@@ -138,8 +159,8 @@ document.getElementById('C1').className = "RougeBordure";
       </DIV>
    </th>                                                      
 </tr>
-<tr><td class="OrangeBordure" id="C1" >Collectez des pièces</td><td class='VertBordure1' onclick='myFunction11()'><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick='myFunction21()'><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick='myFunction31()'><img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr><td class="VertBordure" id='C2' >Produire Atelier 8x5min</td><td class='VertBordure1' onclick='myFunction12()'><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick='myFunction22()'><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick='myFunction32()'><img width= '25px;' src='Image/Ovale.png'></td></tr>
+<tr><td class="OrangeBordure" id="C1" >Collectez des pièces</td><td class='VertBordure1' onclick='test(1, 1, this)'><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick='test(1, 2, this)'><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick='test(1, 3, this)'><img width= '25px;' src='Image/Ovale.png'></td></tr>
+<tr><td class="VertBordure" id='C2' >Produire Atelier 8x5min</td><td class='VertBordure1' onclick='test(2 1, this)'><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick='test(2, 2, this)'><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick='test(2, 3, this)'><img width= '25px;' src='Image/Ovale.png'></td></tr>
 <tr><td class="RougeBordure" id='C3' >Dépenser 8 PC</td><td class='VertBordure1' onclick='myFunction13()'><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick='myFunction23()'><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick='myFunction33()'><img width= '25px;' src='Image/Ovale.png'></td></tr>
 <tr><td class="VertBordure" id='C4' >Produire T1 2x3h</td><td class='VertBordure1' onclick='myFunction14()'><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick='myFunction24()'><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick='myFunction34()'><img width= '25px;' src='Image/Ovale.png'></td></tr>
 <tr><td class="VertBordure" id='C5' >Produire Atelier 7x15min</td><td class='VertBordure1' onclick='myFunction15()'><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick='myFunction25()'><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick='myFunction35()'><img width= '25px;' src='Image/Ovale.png'></td></tr>
