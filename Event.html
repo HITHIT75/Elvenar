@@ -89,14 +89,21 @@
 <script>
 function  Loader() {
 //alert('ok')
-Chaine ="3,4,1,1,1,1"
+Chaine ="0,2,1,3,1,1"
 const  parts = Chaine.split(",");
 //alert(parts[1])
 //alert(parts[2])
+var Max=parts[0]
+var  LigneActuel=parts[0]*1+1
+document.getElementById("LigneMax").innerHTML=LigneActuel
   for ( i = 1; i < 6; i++) {
   
       var Posi = "C" + i
       var Ligne = 'L' + i
+      if (i<=Max) {
+      	parts[i]=4
+      }
+      
       if (parts[i]==1) {
           document.getElementById(Posi).className = "VertBordure";
       }
@@ -154,20 +161,20 @@ document.getElementById('C1').className = "RougeBordure";
   <tr>  
    <th colspan="4">
     <a style= "font-family:verdana; font-size: 16px;" href="https://docs.google.com/spreadsheets/d/1UqUM6mdKNUDi7H5lR1VKQUsaN7sHH9jdh9ZfREv1xxQ/edit?usp=sharing">Lien vers les bâtiements journaliers du fichier de Flo</a>
-  <button 
+  
    </th>                                                      
 </tr>
- <tr>  
-   <th colspan="4">   
+ <tr align="center" style= "font-family:verdana; font-size: 14px;"  display= "block flow;"         >  
+   <th colspan="4" >   
      <img width= "30px;"height= "30px;" src="Image/CocheNon.png"> 
-     <DIV align="center"  id="Debut" style= "font-family:verdana; font-size: 16px;"  >Masquer la quête. </DIV>
+    Masquer la quête<DIV id="LigneMax">99</DIV>
      
                                                
      <img width= "30px;" height= "30px;" src="Image/Back.png">
-             Réafficher la quête précédente           
+             Réafficher la quête           
      <img width= "30px;" height= "30px;" src="Image/Sauver.jpg">
-             Sauvegarder mes sélections                                                          
-      </DIV>
+             Sauvegarder                                                          
+      
    </th>                                                      
 </tr>
 <tr id='L1' class='AfficheVide'><td class='OrangeBordure' id='C1' >Collectez des pièces</td><td class='VertBordure1' onclick='Pinceau(1, 1, this)'><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick='Pinceau(1, 2, this)'><img width= '25px;' src='Image/Ovale.png'></td>
