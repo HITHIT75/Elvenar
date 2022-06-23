@@ -28,7 +28,7 @@ function getCookie(cname) {
 function checkCookie() {
   let user = getCookie("username");
   if (user != "") {
-    window.open('https://hithit75.github.io/Elvenar/index.html', '');
+    window.open('https://hithit75.github.io/Elvenar/index.html', '_self');
   } else {
      user = prompt("C'est ta première visite ? Quel est ton pseudo de jeu ? ☺","");
      if (user != "" && user != null) {
