@@ -6,7 +6,9 @@ function setCookie(cname,cvalue,exdays) {
   const d = new Date();
   d.setTime(d.getTime() + (exdays*24*60*60*1000));
   let expires = "expires=" + d.toUTCString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+ 
+
+  document.cookie = cname + "=" + cvalue + ";" +  expires + ";path=/";
 }
 
 function getCookie(cname) {
@@ -27,12 +29,23 @@ function getCookie(cname) {
 
 function checkCookie() {
   let user = getCookie("username");
-  if (user != "") {
-    window.open('https://hithit75.github.io/Elvenar/index.html', '_self');
-  } else {
+  let evenement = getCookie("evenement");
+  if ((user != "") && (evenement != "")){
+  alert ("Re >" + evenement + "<")
+   // window.open('https://hithit75.github.io/Elvenar/index.html', '_self');
+  } 
+  else if ((user != "") && (evenement = "")) {
+	setCookie("evenement", "0,1,1,1,2,1,1,2,2,1,2,3,1,2,2,1,3,2,3,2,2,1,2,1,1,1,1,1,1,2,3,2,2,1,1,3,1,2,1,2,1,3,2,2,3,1,1,1,1,2,1,1,1,1,2,1,2;" 
+  , 365); 
+
+  	
+  }
+  else {
      user = prompt("C'est ta première visite ? Quel est ton pseudo de jeu ? ☺","");
      if (user != "" && user != null) {
        setCookie("username", user, 365);
+	setCookie("evenement", "0,1,1,1,2,1,1,2,2,1,2,3,1,2,2,1,3,2,3,2,2,1,2,1,1,1,1,1,1,2,3,2,2,1,1,3,1,2,1,2,1,3,2,2,3,1,1,1,1,2,1,1,1,1,2,1,2;" 
+  , 365); 
      }
   }
 }
