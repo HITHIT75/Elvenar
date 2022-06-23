@@ -131,8 +131,10 @@ document.getElementById('LigneLigne').style.visibility = "visible"
 
 }
 function  Loader() {
-//alert("ok")
-Chaine ="0,2,1,3,1,1"
+
+  let user = getCookie("username");
+  let Chaine = getCookie("evenement");
+document.getElementById("Chaine").innerHTML=Chaine
 
 const  parts = Chaine.split(",");
 var Max=parts[0]
@@ -185,7 +187,7 @@ document.getElementById('C1').className = "RougeBordure";
 }   
 </script>
 <body onload="Loader()">
-<button onclick="Gateau()">Click me</button>
+<DIV id="Chaine">Chaine</DIV>
  
  <script>
             var Pinceau = function(value1,value2,object) {
