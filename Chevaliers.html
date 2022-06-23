@@ -32,7 +32,7 @@ function checkCookie() {
   } else {
      user = prompt("C'est ta première visite ? Quel est ton pseudo de jeu ? ☺","");
      if (user != "" && user != null) {
-       setCookie("username", user, 30);
+       setCookie("username", user, 365);
      }
   }
 }
