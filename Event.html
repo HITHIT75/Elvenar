@@ -97,6 +97,8 @@ var Max=document.getElementById("LigneMax").innerHTML
 LigneActuel=Max*1+1
 document.getElementById("LigneMax").innerHTML = LigneActuel
 document.getElementById("LigneMax2").innerHTML = Max
+document.getElementById('LigneLigne').style.visibility = "visible"
+
 }
 function  Loader() {
 //alert("ok")
@@ -207,9 +209,9 @@ document.getElementById('C1').className = "RougeBordure";
      <img width= "30px;" style="display: inline"    height= "30px;" onclick='Cacher()' src="Image/CocheNon.png"> 
     Masquer la quête <DIV style="display: inline" id="LigneMax" >1</DIV> / 56
      
-                                               
+      <DIV id="LigneLigne" style="display: inline; visibility:hidden;" >                                         
      <img style="display: inline" width= "30px;" height= "30px;" src="Image/Back.png">
-             Réafficher la quête <DIV style="display: inline" id="LigneMax2" ></DIV>
+             Réafficher la quête <DIV style="display: inline;" id="LigneMax2" ></DIV>
                                                         
       
    </td>                                                      
