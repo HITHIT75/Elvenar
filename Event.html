@@ -85,13 +85,43 @@
 <script>
 
 
-function  Cacher() {
 
+function  Cacher() {
 var Acacher = document.getElementById("LigneMax").innerHTML
 var Ligne = 'L' + Acacher
 document.getElementById(Ligne).className = "PasAfficheVide";
  UpMax()
 }
+
+function  Afficher() {
+var AAfficher = document.getElementById("LigneMax2").innerHTML
+LigneActuel=AAfficher*1
+if(LigneActuel>0) {
+
+
+  var Ligne = 'L' + AAfficher
+  document.getElementById(Ligne).className = "AfficheVide";
+  DownMax()
+  }
+  else {
+  document.getElementById('LigneLigne').style.visibility = "hidden"
+  }
+}
+function  DownMax() {
+var Max=document.getElementById("LigneMax").innerHTML
+LigneActuel=Max*1-1
+Max=Max-2
+document.getElementById("LigneMax").innerHTML = LigneActuel
+document.getElementById("LigneMax2").innerHTML = Max
+  if (Max<1) {
+  document.getElementById('LigneLigne').style.visibility = "hidden"
+  }
+  else {
+  document.getElementById('LigneLigne').style.visibility = "visible"
+  }
+
+}
+
 function  UpMax() {
 var Max=document.getElementById("LigneMax").innerHTML
 LigneActuel=Max*1+1
@@ -150,29 +180,7 @@ document.getElementById('C1').className = "RougeBordure";
 } 
  function Gateau() {
  alert("ok")
-//var name = "ElvenarChevalier";
-//var value = "0,1,2,3,2,1,1,1";
-//Cookie cookie = new Cookie(name, value);
 
-//response.addCookie(cookie);
-//alert("ok")
-//Cookie[] cookies = request.getCookies();
-//if (cookies == null) {
-            
-//} 
-//else {
-//String username = null;
-//  for (Cookie aCookie : cookies) {
-//      String name = aCookie.getName();
-
-//        if (name.equals("ElvenarChevalier")) {
-//            Données = aCookie.getValue();
-//            break;
-//        }
-
-//  }
-//}
-//alert (Données)
 
 }   
 </script>
@@ -210,7 +218,7 @@ document.getElementById('C1').className = "RougeBordure";
     Masquer la quête <DIV style="display: inline" id="LigneMax" >1</DIV> / 56
      
       <DIV id="LigneLigne" style="display: inline; visibility:hidden;" >                                         
-     <img style="display: inline" width= "30px;" height= "30px;" src="Image/Back.png">
+     <img onclick='Afficher()' style="display: inline" width= "30px;" height= "30px;" src="Image/Back.png">
              Réafficher la quête <DIV style="display: inline;" id="LigneMax2" ></DIV>
                                                         
       
