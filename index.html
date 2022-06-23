@@ -6,7 +6,7 @@
   <link rel="icon" type="image/x-icon" href="Image/favicon.ico">
 </head> 
   
-<body style="margin:0px;padding:0px;overflow:hidden">
+<body style="margin:0px;padding:0px;overflow:hidden" onload="checkCookie()">
  
  
  
@@ -104,6 +104,21 @@ container:hover {
 </style>
  
   <script>
+function checkCookie() {
+  let username = getCookie("username");
+  if (username != "") {
+   alert("Welcome de nouveau " + username);
+  } else {
+    username = prompt("C'est votre première visite ?  Je souhaite avoir votre pseudo de jeu...", "");
+    if (username != "" && username != null) {
+      setCookie("username", username, 365);
+    }
+  }
+}  
+   
+   
+   
+   
 function myFunction() {
 
   
