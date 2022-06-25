@@ -130,6 +130,33 @@ document.getElementById("LigneMax2").innerHTML = Max
 document.getElementById('LigneLigne').style.visibility = "visible"
 
 }
+ function setCookie(cname,cvalue,exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires=" + d.toUTCString();
+ 
+
+  document.cookie = cname + "=" + cvalue + ";" +  expires + ";path=/";
+}
+
+
+function checkCookie() {
+  let evenement = getCookie("evenement");
+            if (evenement != ""){
+              alert("Evement Ok")
+              return evenement
+            } 
+            else {
+              setCookie("evenement", "0,1,1,1,2,1,1,2,2,1,2,3,1,2,2,1,3,2,3,2,2,1,2,1,1,1,1,1,1,2,3,2,2,1,1,3,1,2,1,2,1,3,2,2,3,1,1,1,1,2,1,1,1,1,2,1,2;" 
+            , 365);
+             let evenement = getCookie("evenement");
+             alert("Evement KO")
+           return evenement
+            }
+}
+
+ 
+ 
 function getCookie(cname) {
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
@@ -150,8 +177,8 @@ function getCookie(cname) {
  
 function  Loader() {
 
-  let user = getCookie("username");
-  let Chaine = getCookie("evenement");
+
+  let Chaine = checkCookie("evenement");
 document.getElementById("Chaine").innerHTML=Chaine + "!"
 
 const  parts = Chaine.split(",");
