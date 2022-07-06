@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+  function Test() {
+  //  alert(document.getElementById("Img1").style.margintop)
+        // ="450px"
+      }
+  function JouerSon() {
+      var sound = document.getElementById("MonSon");
+        sound.play();}
+  function CalculInitial() {
+    besoinAtelier1 = 100 * 2 *50 // temps de prod en minute
+    besoinAtelier2 = 80 * 10 * 180
+    besoinAtelier3 = 50 * 5 * 9 *60
+    besoinAtelier4 = 40 * 5 * 12 * 60
+    TotalbesoinAtelier = besoinAtelier1+besoinAtelier2+besoinAtelier3+besoinAtelier4
+    document.getElementById("PC1").innerText=Math.round(besoinAtelier1*100/TotalbesoinAtelier)+"%"
+    document.getElementById("PC2").innerText=Math.round(besoinAtelier2*100/TotalbesoinAtelier)+"%"
+    document.getElementById("PC3").innerText=Math.round(besoinAtelier3*100/TotalbesoinAtelier)+"%"
+    document.getElementById("PC4").innerText=Math.round(besoinAtelier4*100/TotalbesoinAtelier)+"%"
+    besoinT1 = 60 * 5 * 9 * 60 // temps de prod en minute
+    besoinT2 = 50 * 3 * 24 * 60
+    besoinT3 = 40 * 3 * 48 *60
+    TotalbesoinT1 = besoinT1+besoinT2+besoinT3
+    document.getElementById("PC5").innerText=Math.round(besoinT1*100/TotalbesoinT1)+"%"
+    document.getElementById("PC6").innerText=Math.round(besoinT2*100/TotalbesoinT1)+"%"
+    document.getElementById("PC7").innerText=Math.round(besoinT3*100/TotalbesoinT1)+"%"
+
+
+  }
+  function Suite0(Ligne,Action,Ou) {
+
+  var DureeEvent = 10 // durée en jour de l'event
+  if (Action!=0){
+    if (Ou==1) {   var cible = "Nb"+Ligne }
+    if (Ou==2) {   var cible = "J"+Ligne }
+    var Nb0 =document.getElementById(cible).value
+    if (Action==1) {
+
+      Nb0=Nb0*1+5
+
+      if ((Nb0>DureeEvent) && (Ou==2)) {
+        alert("Impossible de prévoir une durée de production plus grande que la durée de l'event.")
+        Nb0=DureeEvent
+      }
+
+    }
+    if (Action==2) {
+       Nb0=Nb0*1+1
+       if ((Nb0>DureeEvent) && (Ou==2)) {
+         alert("Impossible de prévoir une durée de production plus grande que la durée de l'event.")
+         Nb0=DureeEvent
+       }
+     }
+    if (Action==3) {
+       Nb0=Nb0*1-1
+       if (Nb0<0) {
+         Nb0=0
+       }
+     }
+  document.getElementById(cible).value=Nb0
+  }
+
+
+
+     cible1 = "Nb"+Ligne
+     cible2 = "J"+Ligne
+     cible3 = "Prevu"+Ligne
+     Qte0 = document.getElementById(cible1).value
+     Jour0= document.getElementById(cible2).value
+     Total0=Qte0*Jour0*24*60 // nombre de minutes sur l'event
+     if (Ligne==1) { TotalZ = 2*50} // Production de 1 unité en minute
+     if (Ligne==2) { TotalZ = 10*180} // Production de 1 unité en minute
+     if (Ligne==3) { TotalZ = 5*9*60} // Production de 1 unité en minute
+     if (Ligne==4) { TotalZ = 5*24*60} // Production de 1 unité en minute
+
+     if (Ligne==5) { TotalZ = 9*60*10} // Production de 1 unité en minute
+     if (Ligne==6) { TotalZ = 24*60*3} // Production de 1 unité en minute
+     if (Ligne==7) { TotalZ = 48*60*3} // Production de 1 unité en minute
+
+
+
+
+
+     NbUnitéProduite = Math.round(Total0*10/TotalZ)/10
+     // if ((Action==1) && (Ligne==3)){
+     //   alert(Total0+"/"+TotalZ)
+     // }
+      document.getElementById(cible3).innerText=NbUnitéProduite
+      TotalDureeEvent=DureeEvent*24*60 // en minute
+      //Pour ateliers
+      Qte1 = document.getElementById("Nb1").value
+      Jour1= document.getElementById("J1").value
+      Consomme1=Qte1*Jour1*60
+      Qte2 = document.getElementById("Nb2").value
+      Jour2= document.getElementById("J2").value
+      Consomme2=Qte2*Jour2*60
+      Qte3 = document.getElementById("Nb3").value
+      Jour3= document.getElementById("J3").value
+      Consomme3=Qte3*Jour3*60
+      Qte4 = document.getElementById("Nb4").value
+      Jour4= document.getElementById("J4").value
+      Consomme4=Qte4*Jour4*60
+
+      Qte5 = document.getElementById("Nb5").value
+      Jour5= document.getElementById("J5").value
+      Consomme5=Qte5*Jour5*60
+      Qte6 = document.getElementById("Nb6").value
+      Jour6= document.getElementById("J6").value
+      Consomme6=Qte6*Jour6*60
+      Qte7 = document.getElementById("Nb7").value
+      Jour7= document.getElementById("J7").value
+      Consomme7=Qte7*Jour7*60
+
+  consommeTotalAtelier = Math.round(Consomme1+Consomme2+Consomme3+Consomme4)
+  consommeTotalT1 = Math.round(Consomme5+Consomme6+Consomme7)
+
+  PCAtelier= Math.round(consommeTotalAtelier*100/TotalDureeEvent)
+  PCT1= Math.round(consommeTotalT1*100/TotalDureeEvent)
+  consommeTotalAtelier = Math.round(consommeTotalAtelier/60)
+  consommeTotalT1= Math.round(consommeTotalT1/60)
+  TotalDureeEvent= Math.round(TotalDureeEvent/60)
+
+  document.getElementById("Temps1").innerText=consommeTotalAtelier +" jours de prod. sur " + TotalDureeEvent +" ("+PCAtelier+"%)"
+  document.getElementById("Temps2").innerText=consommeTotalT1 +" jours de prod. sur " + TotalDureeEvent +" ("+PCT1+"%)"
+
+  }
+
+
+
+</script>
+</head>
+<style>
+   body {
+     align: center;
+     text-align:center;
+     padding: 0px;
+     margin: 0px;
+     display:inline;
+     font-size: 14px;
+     font-family: Verdana;
+     color:#051E4C;
+
+   }
+   @keyframes Blason {
+     0%   {}
+    100% {transform:rotate(360deg);}
+   }
+   img {
+     align:center;
+     margin-top: auto;
+   }
+    .Carte {
+     animation-name: Blason;
+     animation-duration: 2s;
+     animation-fill-mode: forwards;
+     animation-iteration-count: infinite;
+   }
+   table, tr, td {
+     align:center;
+     font-size: 14px;
+     margin:0px;
+     padding: 0px;
+   }
+
+    td {
+     border: 1px solid #333;
+   }
+   .PourCent {
+     font-size: 12px;
+     font-weight: bold;
+      text-align: center;
+      position: absolute;
+      margin-top: -57px;
+      margin-left: 22px;
+      z-index: 5;
+    }
+  .UetD {
+    cursor: pointer;
+  }
+  .UetD:hover {
+    animation-name: Blason;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+  input {
+    width:50%;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    border: 1px solid #333;
+    border-radius: 6px;
+  }
+  @keyframes LienHtml {
+    0%   {opacity: 0;}
+   100% {opacity:1;}
+  }
+  .LienHtml {
+    animation-name: LienHtml;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+  .Aide {
+    display: inline;
+    position:relative;
+    align:left;
+    margin-left: 0%;
+    margin-top:  0%
+  }
+</style>
+<body onload="CalculInitial()" >
+<audio  id="MonSon" src="Image\Son.wav"></audio>
+<div style="align:center;">
+  <img style="transform:rotate(-90deg)" src="C:\Temp\Elvenar\Image\Ecu.png" class="LienHtml" width="10px" style="display: inline;">
+   <div style='display: inline'>Lien vers le fichier Google Sheet de la confrérie</div>
+   <img style="transform:rotate(90deg)" src="C:\Temp\Elvenar\Image\Ecu.png" class="LienHtml" width="10px" style='display: inline'>
+</div>
+<div style="align:center;">
+  <img  src="C:\Temp\Elvenar\Image\Carte.png" class="Carte" width="15px" style="display: inline;">
+   <div style='display: inline'><a href="file:///C:/Temp/Elvenar/Aventure.html">Aller aux Cartes</a></div>
+   <img  src="C:\Temp\Elvenar\Image\Carte.png" class="Carte" width="15px" style='display: inline'>
+</div>
+
+<div>
+   <table >
+       <tr>
+         <td width="5%" style="border: 0;"></td>
+         <td width="5%" colspan="4" style='border-right: 3px solid;border-top: 3px solid;border-left: 3px solid;'>
+           ATELIERS</td>
+         <td width="5%" colspan="3" style='border-right: 3px solid;border-top: 3px solid;border-left: 3px solid;'>T1</td>
+         <td width="5%" colspan="3" style='border-right: 3px solid;border-top: 3px solid;border-left: 3px solid;'>Autres</td>
+      </tr >
+
+     <tr>
+       <td rowspan="2" width="5%" style="max-width:5%;font-size: 11px">
+         <strong>Proportion de production demandée pour les étapes sélectionnées</strong>
+       </td>
+       <td  style='border-left: 3px solid;' width="5%" style="max-width:5%;">
+         Brasseur
+       </td>
+       <td width="5%" style="max-width:5%;">
+         Menuisier
+       </td>
+       <td width="5%">
+         Fermier
+       </td>
+      <td width="5%" style='border-right: 3px solid;'>
+         Forgeron
+       </td>
+       <td  style='border-left: 3px solid;' width="5%">
+         Bracelet
+       </td>
+       <td width="5%">
+         Collier
+       </td>
+       <td width="5%"style='border-right: 3px solid;'>
+         Statue
+       </td>
+       <td width="5%" style='border-left: 3px solid;'>
+         Truc8
+       </td>
+       <td   width="5%">
+         Truc9
+       </td>
+       <td  style='border-right: 3px solid;' width="5%">
+         Truc10
+       </td>
+
+    </tr >
+       <td style='border-left: 3px solid;' >
+         <img id="Img1" style="margin-top:40px" height="10px;" src="Image\CarreBleu0.png" width="25px;"  >
+         <div class="PourCent" id="PC1" >10%</div>
+      </td>
+      <td><img id="Img2" style="margin-top:0px" height="50px;"  src="Image\CarreBleu0.png" width="20px;" >
+        <div class="PourCent" id="PC2" >40%</div></td>
+      <td><img id="Img3" style="margin-top:20px" height="30px;" src="Image\CarreBleu0.png" width="20px;" >
+        <div class="PourCent" id="PC3" >20%</div></td>
+
+        <td style='border-right: 3px solid;'><img id="Img4" style="margin-top:30px"height="20px;" src="Image\CarreBleu0.png"  width="20px;" >
+        <div class="PourCent" id="PC4" >20%</div></td>
+
+        <td style='border-left: 3px solid;' ><img id="Img5" style="margin-top:20px" height="30px;" src="Image\CarreBleu.png"  width="20px;" >
+        <div class="PourCent" id="PC5" >20%</div></td>
+        <td><img id="Img6" style="margin-top:35px"height="15px;" src="Image\CarreBleu.png"  width="20px;" >
+        <div class="PourCent" id="PC6" >20%</div></td>
+        <td style='border-right: 3px solid;'><img id="Img7" style="margin-top:30px" height="20px;" src="Image\CarreBleu.png"  width="20px;" >
+        <div class="PourCent" id="PC7" >20%</div></td>
+        <td style='border-left: 3px solid;'><img id="Img8" style="margin-top:45px"height="20px;" src="Image\travaux.gif"  width="20px;" >
+        <div class="PourCent" id="PC8" >0%</div></td>
+        <td  ><img id="Img9" style="margin-top:45px" height="20px;" src="Image\travaux.gif"  width="20px;" >
+        <div class="PourCent" id="PC9" >0%</div></td>
+        <td style='border-right: 3px solid;' ><img id="Img10" style="margin-top:45px"height="20px;" src="Image\travaux.gif"  width="20px;" >
+        <div class="PourCent" id="PC10" >0%</div></td>
+
+     </tr>
+     <tr >
+       <td width="5%" style="max-width:5%;font-size: 11px">
+         <strong>Nb. de bâtiement envisagé</strong>
+       </td>
+        <td  style='border-left: 3px solid;' ><span style="font-size: 9px;">Ateliers </span>
+          <input height ="40px;" type="text" id="Nb1" name="Nb1" value=0 onchange=Suite0(1,0,1)><br>
+        <img class="UetD" onclick=Suite0(1,1,1) src="Image\Plus.png" width="15px;" >
+        <img class="UetD" onclick=Suite0(1,2,1) src="Image\Plus.png" width="10px;" >
+        <img class="UetD" onclick=Suite0(1,3,1) src="Image\Moins.png" width="10px;" ></td>
+        <td ><span style="font-size: 9px;">Ateliers </span>
+          <input height ="40px;" type="text" id="Nb2" name="Nb2" value=0 onchange=Suite0(2,0,1)><br>
+          <img class="UetD" onclick=Suite0(2,1,1) src="Image\Plus.png" width="15px;" >
+          <img class="UetD" onclick=Suite0(2,2,1) src="Image\Plus.png" width="10px;" >
+          <img class="UetD" onclick=Suite0(2,3,1) src="Image\Moins.png" width="10px;" ></td>
+        <td ><span style="font-size: 9px;">Ateliers </span>
+          <input height ="40px;" type="text" id="Nb3" name="Nb3" value=0 onchange=Suite0(3,0,1)><br>
+          <img class="UetD" onclick=Suite0(3,1,1) src="Image\Plus.png" width="15px;" >
+          <img class="UetD" onclick=Suite0(3,2,1) src="Image\Plus.png" width="10px;" >
+          <img class="UetD" onclick=Suite0(3,3,1) src="Image\Moins.png" width="10px;" ></td>
+        <td style='border-right: 3px solid;'><span style="font-size: 9px;">Ateliers </span>
+          <input height ="40px;" type="text" id="Nb4" name="Nb4" value=0 onchange=Suite0(4,0,1)><br>
+          <img class="UetD" onclick=Suite0(4,1,1) src="Image\Plus.png" width="15px;" >
+          <img class="UetD" onclick=Suite0(4,2,1) src="Image\Plus.png" width="10px;" >
+          <img class="UetD" onclick=Suite0(4,3,1) src="Image\Moins.png" width="10px;" ></td>
+        <td  style='border-left: 3px solid;' ><span style="font-size: 9px;">T1 </span>
+          <input height ="40px;" type="text" id="Nb5" name="Nb5" value=0 onchange=Suite0(5,0,1)><br>
+          <img class="UetD" onclick=Suite0(5,1,1) src="Image\Plus.png" width="15px;" >
+          <img class="UetD" onclick=Suite0(5,2,1) src="Image\Plus.png" width="10px;" >
+          <img class="UetD" onclick=Suite0(5,3,1) src="Image\Moins.png" width="10px;" ></td>
+        <td ><span style="font-size: 9px;">T1 </span>
+          <input height ="40px;" type="text" id="Nb6" name="Nb6" value=0 onchange=Suite0(6,0,1)><br>
+          <img class="UetD" onclick=Suite0(6,1,1) src="Image\Plus.png" width="15px;" >
+          <img class="UetD" onclick=Suite0(6,2,1) src="Image\Plus.png" width="10px;" >
+          <img class="UetD" onclick=Suite0(6,3,1) src="Image\Moins.png" width="10px;" ></td>
+        <td  style='border-right: 3px solid;'><span style="font-size: 9px;">T1 </span>
+          <input height ="40px;" type="text" id="Nb7" name="Nb7" value=0 onchange=Suite0(7,0,1)><br>
+          <img class="UetD" onclick=Suite0(7,1,1) src="Image\Plus.png" width="15px;" >
+          <img class="UetD" onclick=Suite0(7,2,1) src="Image\Plus.png" width="10px;" >
+          <img class="UetD" onclick=Suite0(7,3,1) src="Image\Moins.png" width="10px;" ></td>
+        <td  style='border-left: 3px solid;'><span style="font-size: 9px;">T1 </span>
+          <input height ="40px;" type="text" id="Nb8" name="Nb8" value=0 onchange=Suite0(8,0,1)><br>
+          <img class="UetD" onclick=Suite0(8,1,1) src="Image\Plus.png" width="15px;" >
+          <img class="UetD" onclick=Suite0(8,2,1) src="Image\Plus.png" width="10px;" >
+          <img class="UetD" onclick=Suite0(8,3,1) src="Image\Moins.png" width="10px;" ></td>
+        <td  ><span style="font-size: 9px;">Autre </span>
+          <input height ="40px;" type="text" id="Nb9" name="Nb9" value=0 onchange=Suite0(9,0,1)>
+          <img class="UetD" onclick=Suite0(9,1,1) src="Image\Plus.png" width="15px;" >
+          <img class="UetD" onclick=Suite0(9,2,1) src="Image\Plus.png" width="10px;" >
+          <img class="UetD" onclick=Suite0(9,3,1) src="Image\Moins.png" width="10px;" ></td>
+        <td  style='border-right: 3px solid;'><span style="font-size: 9px;">Autre </span>
+          <input height ="40px;" type="text" id="Nb10" name="Nb10" value=0 onchange=Suite0(10,0,1)>
+          <img class="UetD" onclick=Suite0(10,1,1) src="Image\Plus.png" width="15px;" >
+          <img class="UetD" onclick=Suite0(10,2,1) src="Image\Plus.png" width="10px;" >
+          <img class="UetD" onclick=Suite0(10,3,1) src="Image\Moins.png" width="10px;" ></td>
+      </tr >
+      <tr >
+        <td  width="5%" style="max-width:5%;font-size: 10px">
+        <strong>Nb. de jour de prod envisagé</strong>
+        </td>
+        <td  style='border-left: 3px solid;' ><input height ="40px;" type="text" id="J1" name="J1" value=0 onchange=Suite0(1,0,2)>
+          <span style="font-size: 9px;">jours</span><br>
+        <img class="UetD" onclick=Suite0(1,1,2) src="Image\Plus.png" width="15px;" >
+        <img class="UetD" onclick=Suite0(1,2,2) src="Image\Plus.png" width="10px;" >
+        <img class="UetD" onclick=Suite0(1,3,2) src="Image\Moins.png" width="10px;" >
+        </td>
+          <td >    <input height ="40px;" type="text" id="J2" name="J2" value=0 onchange=Suite0(2,0,2)>
+          <span style="font-size: 9px;">jours</span><br>
+          <img class="UetD" onclick=Suite0(2,1,2) src="Image\Plus.png" width="15px;" >
+          <img class="UetD" onclick=Suite0(2,2,2) src="Image\Plus.png" width="10px;" >
+          <img class="UetD" onclick=Suite0(2,3,2) src="Image\Moins.png" width="10px;" ></td>
+          <td >       <input height ="40px;" type="text" id="J3" name="J3" value=0 onchange=Suite0(3,0,2)>
+          <span style="font-size: 9px;">jours</span><br>
+          <img class="UetD" onclick=Suite0(3,1,2) src="Image\Plus.png" width="15px;" >
+          <img class="UetD" onclick=Suite0(3,2,2) src="Image\Plus.png" width="10px;" >
+          <img class="UetD" onclick=Suite0(3,3,2) src="Image\Moins.png" width="10px;" ></td>
+          <td style='border-right: 3px solid;'>        <input height ="40px;" type="text" id="J4" name="J4" value=0 onchange=Suite0(4,0,2)>
+          <span style="font-size: 9px;">jours</span><br>
+          <img class="UetD" onclick=Suite0(4,1,2) src="Image\Plus.png" width="15px;" >
+          <img class="UetD" onclick=Suite0(4,2,2) src="Image\Plus.png" width="10px;" >
+          <img class="UetD" onclick=Suite0(4,3,2) src="Image\Moins.png" width="10px;" ></td>
+          <td  style='border-left: 3px solid;' >          <input height ="40px;" type="text" id="J5" name="J5" value=0 onchange=Suite0(5,0,2)>
+          <span style="font-size: 9px;">jours</span><br>
+          <img class="UetD" onclick=Suite0(5,1,2) src="Image\Plus.png" width="15px;" >
+          <img class="UetD" onclick=Suite0(5,2,2) src="Image\Plus.png" width="10px;" >
+          <img class="UetD" onclick=Suite0(5,3,2) src="Image\Moins.png" width="10px;" ></td>
+          <td >          <input height ="40px;" type="text" id="J6" name="J6" value=0 onchange=Suite0(6,0,2)>
+          <span style="font-size: 9px;">jours</span><br>
+          <img class="UetD" onclick=Suite0(6,1,2) src="Image\Plus.png" width="15px;" >
+          <img class="UetD" onclick=Suite0(6,2,2) src="Image\Plus.png" width="10px;" >
+          <img class="UetD" onclick=Suite0(6,3,2) src="Image\Moins.png" width="10px;" ></td>
+          <td style='border-right: 3px solid;'>       <input height ="40px;" type="text" id="J7" name="J7" value=0 onchange=Suite0(7,0,2)>
+          <span style="font-size: 9px;">jours</span><br>
+          <img class="UetD" onclick=Suite0(7,1,2) src="Image\Plus.png" width="15px;" >
+          <img class="UetD" onclick=Suite0(7,2,2) src="Image\Plus.png" width="10px;" >
+          <img class="UetD" onclick=Suite0(7,3,2) src="Image\Moins.png" width="10px;" ></td>
+          <td style='border-left: 3px solid;'>         <input height ="40px;" type="text" id="J8" name="J8" value=0 onchange=Suite0(8,0,2)>
+          <span style="font-size: 9px;">jours</span><br>
+          <img class="UetD" onclick=Suite0(8,1,2) src="Image\Plus.png" width="15px;" >
+          <img class="UetD" onclick=Suite0(8,2,2) src="Image\Plus.png" width="10px;" >
+          <img class="UetD" onclick=Suite0(8,3,2) src="Image\Moins.png" width="10px;" ></td>
+          <td   ><input height ="40px;" type="text" id="J9" name="J9" value=0 onchange=Suite0(9,0,2)>
+            <span style="font-size: 9px;">jours</span><br>
+            <img class="UetD" onclick=Suite0(9,1,2) src="Image\Plus.png" width="15px;" >
+            <img class="UetD" onclick=Suite0(9,2,2) src="Image\Plus.png" width="10px;" >
+            <img class="UetD" onclick=Suite0(9,3,2) src="Image\Moins.png" width="10px;" >
+          </td>
+          <td  style='border-right: 3px solid;'><input height ="40px;" type="text" id="J10" name="J10" value=0 onchange=Suite0(10,0,2)>
+            <span style="font-size: 9px;">jours</span><br>
+            <img class="UetD" onclick=Suite0(10,1,2) src="Image\Plus.png" width="15px;" >
+            <img class="UetD" onclick=Suite0(10,2,2) src="Image\Plus.png" width="10px;" >
+            <img class="UetD" onclick=Suite0(10,3,2) src="Image\Moins.png" width="10px;" >
+          </td>
+      </tr>
+      <tr>
+        <td width="5%" style="max-width:5%;font-size: 10px">
+          <strong>Quantité produite</strong>
+        </td>
+        <td style='border-left: 3px solid;' width="5%" style="max-width:5%;" id='Prevu1'>
+          0
+        </td>
+        <td width="5%" style="max-width:5%;" id='Prevu2'>0</td>
+        <td width="5%" style="max-width:5%;" id='Prevu3'>0</td>
+        <td style='border-right: 3px solid;' width="5%" style="max-width:5%;" id='Prevu4'>0</td>
+        <td style='border-left: 3px solid;'  width="5%" style="max-width:5%;" id='Prevu5'>0</td>
+        <td width="5%" style="max-width:5%;" id='Prevu6'>0</td>
+        <td style='border-right: 3px solid;'width="5%" style="max-width:5%;" id='Prevu7'>0</td>
+        <td style='border-left: 3px solid;' width="5%" style="max-width:5%;" id='Prevu8'>0</td>
+        <td  width="5%" style="max-width:5%;" id='Prevu9'>0</td>
+        <td  style='border-right: 3px solid;' width="5%" style="max-width:5%;" id='Prevu10'>0</td>
+      </tr >
+      <tr>
+        <td width="5%" style="max-width:5%;font-size: 10px">
+          <strong>Temps consommé</strong></td>
+        <td style='border-right: 3px solid;border-bottom: 3px solid;border-left: 3px solid;' width="5%" colspan="4" id="Temps1">0</td>
+        <td  style='border-right: 3px solid;border-bottom: 3px solid;border-left: 3px solid;' width="5%" colspan="3" id="Temps2">0</td>
+        <td  style='border-right: 3px solid;border-bottom: 3px solid;border-left: 3px solid;' width="5%" colspan="3" id="Temps3">0</td>
+     </tr>
+    </table>
+</div>
+<img  src="C:\Temp\Elvenar\Image\Personage3.png" class="Aide" width="49px" >
+<img  src="C:\Temp\Elvenar\Image\Bulle3.png" class="Aide" style="width:90%;" >
+<Div style="position:absolute; margin-top:-5.4%;margin-left:12%;font-size: 12px;width:79%;text-align:left;">
+  <span>
+  Bah, ça fait peur, Hein ? Le simulateur est surtout utile avant l'aventure,
+   il permet de faire une simulation pour toute sa durée.
+  Les proportions à produire proviennent des chemins & étapes sélectionnés par nos chefs adorés.
+  Ensuite vous simulez en choisissant le nombre d'ateliers, de T1...que vous envisagez de poser ;
+  mais aussi le nombre de jour de production. Vous pouvez utiliser les
+  <img  src="Image\Plus.png" width="10px;"> & <img  src="Image\Moins.png" width="10px;">
+  pour vous aider ou alors entrer manuellement les valeurs (décimales autorisées).
+  Le but, évidement, est de coller aux proportions à produire.
+</span>
+</div>
+
+</body>
+</html>

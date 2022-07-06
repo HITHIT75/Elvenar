@@ -1,41 +1,238 @@
 <!DOCTYPE html>
 <html>
- <head>
-  <title>Elvenar Chevaliers</title>
-</head> 
+<head>
+<script type="text/javascript">
+  function Test() {
+  //  alert(document.getElementById("Img1").style.margintop)
+        // ="450px"
+      }
+  function JouerSon() {
+      var sound = document.getElementById("MonSon");
+        sound.play();}
+  function CalculInitial() {
+    besoinAtelier1 = 100 * 2 *50 // temps de prod en minute
+    besoinAtelier2 = 80 * 10 * 180
+    besoinAtelier3 = 50 * 5 * 9 *60
+    besoinAtelier4 = 40 * 5 * 12 * 60
+    TotalbesoinAtelier = besoinAtelier1+besoinAtelier2+besoinAtelier3+besoinAtelier4
+    document.getElementById("PC1").innerText=Math.round(besoinAtelier1*100/TotalbesoinAtelier)+"%"
+    document.getElementById("PC2").innerText=Math.round(besoinAtelier2*100/TotalbesoinAtelier)+"%"
+    document.getElementById("PC3").innerText=Math.round(besoinAtelier3*100/TotalbesoinAtelier)+"%"
+    document.getElementById("PC4").innerText=Math.round(besoinAtelier4*100/TotalbesoinAtelier)+"%"
+  //alert(document.getElementById("PC1").style.size)
+  }
+  function Suite0(Ligne,Action,Ou) {
 
+  var DureeEvent = 10 // durée en jour de l'event
+  if (Action!=0){
+    if (Ou==1) {   var cible = "Nb"+Ligne }
+    if (Ou==2) {   var cible = "J"+Ligne }
+    var Nb0 =document.getElementById(cible).value
+    if (Action==1) {
+
+      Nb0=Nb0*1+5
+
+      if ((Nb0>DureeEvent) && (Ou==2)) {
+        alert("Impossible de prévoir une durée de production plus grande que la durée de l'event.")
+        Nb0=DureeEvent
+      }
+
+    }
+    if (Action==2) {
+       Nb0=Nb0*1+1
+       if ((Nb0>DureeEvent) && (Ou==2)) {
+         alert("Impossible de prévoir une durée de production plus grande que la durée de l'event.")
+         Nb0=DureeEvent
+       }
+     }
+    if (Action==3) {
+       Nb0=Nb0*1-1
+       if (Nb0<0) {
+         Nb0=0
+       }
+     }
+  document.getElementById(cible).value=Nb0
+  }
+
+
+
+     cible1 = "Nb"+Ligne
+     cible2 = "J"+Ligne
+     cible3 = "Prevu"+Ligne
+     Qte0 = document.getElementById(cible1).value
+     Jour0= document.getElementById(cible2).value
+     Total0=Qte0*Jour0*24*60 // nombre de minutes sur l'event
+     if (Ligne==1) { TotalZ = 2*50} // Production de 1 unité en minute
+     if (Ligne==2) { TotalZ = 10*180} // Production de 1 unité en minute
+     if (Ligne==3) { TotalZ = 5*9*60} // Production de 1 unité en minute
+     if (Ligne==4) { TotalZ = 5*24*60} // Production de 1 unité en minute
+     NbUnitéProduite = Math.round(Total0*10/TotalZ)/10
+     // if ((Action==1) && (Ligne==3)){
+     //   alert(Total0+"/"+TotalZ)
+     // }
+      document.getElementById(cible3).innerText=NbUnitéProduite
+      TotalDureeEvent=DureeEvent*24*60 // en minute
+      //Pour ateliers
+      Qte1 = document.getElementById("Nb1").value
+      Jour1= document.getElementById("J1").value
+      Consomme1=Qte1*Jour1*60
+      Qte2 = document.getElementById("Nb2").value
+      Jour2= document.getElementById("J2").value
+      Consomme2=Qte2*Jour2*60
+      Qte3 = document.getElementById("Nb3").value
+      Jour3= document.getElementById("J3").value
+      Consomme3=Qte3*Jour3*60
+      Qte4 = document.getElementById("Nb4").value
+      Jour4= document.getElementById("J4").value
+      Consomme4=Qte4*Jour4*60
+
+  consommeTotal = Math.round(Consomme1+Consomme2+Consomme3+Consomme4)
+  PC= Math.round(consommeTotal*100/TotalDureeEvent)
+  consommeTotal = Math.round(consommeTotal/60)
+  TotalDureeEvent= Math.round(TotalDureeEvent/60)
+
+  document.getElementById("Temps1").innerText=consommeTotal +" jours de prod sur " + TotalDureeEvent +" ("+PC+"%)"
+
+  }
+
+
+
+</script>
+</head>
 <style>
-body {
- align:center 
-  text-align: center
- font-family:verdana;
- background-color: #E5E8EA;
- font-size:12
-  height:100%
-}
- .a{
- align:center 
-  text-align: center
- font-family:verdana;
- font-size:12
-}
-</Style>
- 
-<body>
- <br>
-  <table align="center">
-      <tr align="center">
-        <a text-align= "center" href="https://docs.google.com/spreadsheets/d/1dMKuTO8IRpIcLGpUCquzwEXG33rULQBouQmcJ4A2kGg/edit#gid=0" target="_blank" font-size="26px" >
-          Lien vers le fichier Sheet des Chevaliers</a>
-     </tr> 
-</table>
-  <p font-weight="bold" align="center" font-size="26px" text-align= "center">Etapes séléctionnées pour l'aventure</p>
-<table align="center">
-    <tr align="center">
-    <th align="center">CARTE 1<br><img  src="Image/CARTE 1.png" ></th>
-    <th align="center">CARTE 2<br><img  src="Image/CARTE 2.png" ></th>
-    <th align="center">CARTE 3<br><img src="Image/CARTE 3.png" ></th>
-  </tr> 
-</table>
+   body {
+     align: center;
+     text-align:center;
+     padding: 0px;
+     margin: 0px;
+     display:inline;
+     font-size: 14px;
+     font-family: Verdana;
+     color:#051E4C;
+
+   }
+   @keyframes Blason {
+     0%   {}
+    100% {transform:rotate(360deg);}
+   }
+   img {
+     align:center;
+     margin-top: auto;
+   }
+    .Engrenage {
+     animation-name: Blason;
+     animation-duration: 2s;
+     animation-fill-mode: forwards;
+     animation-iteration-count: infinite;
+   }
+   table, tr, td {
+     align:center;
+     font-size: 14px;
+     margin:0px;
+     padding: 0px;
+   }
+
+    td {
+     border: 1px solid #333;
+     /* border-radius: 6px; */
+   }
+   .PourCent {
+     font-size: 12px;
+     font-weight: bold;
+      text-align: center;
+      position: absolute;
+      margin-top: -57px;
+      margin-left: 22px;
+      z-index: 5;
+    }
+  .UetD {
+    cursor: pointer;
+
+  }
+  input {
+    width:50%;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    border: 1px solid #333;
+    border-radius: 6px;
+  }
+  @keyframes LienHtml {
+    0%   {opacity: 0;}
+   100% {opacity:1;}
+  }
+  .LienHtml {
+    animation-name: LienHtml;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+  .Tablecarte {
+     position:relative;
+     margin-top: inherit;
+     margin-left:30%;
+  }
+  .Aide {
+    display: inline;
+    position:relative;
+    align:left;
+    margin-left: 0%;
+    margin-top:  0%
+  }
+
+</style>
+<body onload="CalculInitial()" >
+<audio  id="MonSon" src="Image\Son.wav"></audio>
+<div style="align:center;">
+  <img style="transform:rotate(-90deg)" src="Image\Ecu.png" class="LienHtml" width="10px" style="display: inline;">
+   <div style='display: inline'>Lien vers le fichier Google Sheet de la confrérie</div>
+   <img style="transform:rotate(90deg)" src="Image\Ecu.png" class="LienHtml" width="10px" style='display: inline'>
+</div>
+<div style="align:center;">
+  <img  src="Image\Engrenage.png" class="Engrenage" width="15px" style="display: inline;">
+   <div style='display: inline'><a href="file:///C:/Temp/Elvenar/Aventure2.html">Aller au simulateur</a></div>
+   <img  src="Image\Engrenage.png" class="Engrenage" width="15px" style='display: inline'>
+</div>
+<img  src="Image\Personage2.png" width="100px" >
+<img  src="Image\Bulle.png" class="Aide" width="80%" >
+<Div style="position:absolute; margin-top:-11%;margin-left:16%;text-align:left;width:70%">
+Je donne ici des conseils et recommandantions pertinents pour l'aventure.<br>
+Mes conseils du moment : Attendre la prochaine aventure et faire mumuse avec le simulateur.
+</div>
+
+
+
+
+<div style="display: inline;" class="Tablecarte">
+    <table  style="display: inline;width:100%">
+      <tr >
+      <td colspan="3" width="60%"><strong>Chemins & étapes sélectionnés</strong>
+      </tr >
+      <tr >
+       <td >
+         <div style="top:0%;" >CARTE 1</div>
+         <img  src="Image\EventEcu1.png" width="40px" style="display: inline;">
+       </td>
+       <td >
+         <div style="top:0%;" >CARTE 2</div>
+         <img  src="Image\EventEcu2.png" width="40px" style="display: inline;">
+
+       </td>
+       <td >
+         <div style="top:0%;" >CARTE 3</div>
+         <img  src="Image\EventEcu3.png" width="40px" style="display: inline;">
+
+       </td>
+    </tr>
+    <tr>
+       <td>
+         <img src="Image\CARTE 1.png" class="Sou" width="120px" >
+      </td>
+       <td><img src="Image\CARTE 2.png" class="Sou" width="120px" >   </td>
+        <td><img src="Image\CARTE 3.png" class="Sou" width="120px" ></td>
+     </tr>
+   </table>
+</div>
+
+
 </body>
 </html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript">
+function Dessus() {
+    }
+function JouerSon() {
+    var sound = document.getElementById("MonSon");
+      sound.play();}
+function Debut() {
+  document.getElementById("Scen1").classList.toggle("Generik");
+  document.getElementById("Scen2").classList.toggle("Generik2");
+
+//  document.getElementById("Scen1").classList.toggle("Generik1");
+
+}
+
+
+</script>
+</head>
+<style>
+ html { overflow-y: hidden; overflow-x: hidden; }
+ body {
+   font-family: verdana;
+   font-size: 25px;
+   color: blue
+   align:center
+
+ }
+ @keyframes Pulp {
+   0%   {margin-top: -5%;width: 1%;opacity: 0;margin-left: 10%;}
+   50% {margin-top: 23%;width: 31%;opacity: 0.5;margin-left: -10%;}
+   100% {margin-top: 15%;width: 61%;opacity: 1;margin-left: -30%;}
+ }
+ @keyframes Pulp3 {
+   0%   {margin-top: 15%;margin-left: -30%;}
+   10% {margin-top: 17%;margin-left: -33%;}
+   20% {margin-top: 12%;margin-left: -30%;}
+   30% {margin-top: 14%;margin-left: -27%;}
+   40% {margin-top: 16%;margin-left: -29%;}
+   50% {margin-top: 15%;margin-left: -25%;}
+   60% {margin-top: 13%;margin-left: -32%;}
+   70% {margin-top: 17%;margin-left: -25%;}
+   80% {margin-top: 14%;margin-left: -27%;}
+   90% {margin-top: 16%;margin-left: -32%;}
+   100% {margin-top: 15%;margin-left: -30%;}
+
+ }
+ @keyframes Pulp2 {
+   0%   {margin-top: -3%;}
+   100% {margin-top: 12.7%;transform:rotate(1440deg)}
+ }
+ .Generik0 {
+  position:absolute;
+   margin-top: 15%;
+   margin-left: -30%;
+   z-index: 1;
+
+  }
+  .Generik1 {
+  animation-name: Pulp3;
+  animation-delay: 10s;
+  animation-duration: 10s;
+ }
+  .Generik {
+  animation-name: Pulp;
+  animation-duration: 3s;
+ }
+ .Generik20 {
+    position:absolute;
+    margin-top: -5%;
+    margin-left: 13.3%;
+    z-index: -1;
+    }
+
+ .Generik2 {
+    margin-left: 13.3%;
+    animation-name: Pulp2;
+    animation-timing-function: ease-in-out;
+    animation-delay: 3s;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+   animation-fill-mode: forwards;
+  }
+
+</style>
+
+<body align="center" onload="Debut()">
+<audio  id="MonSon" src="Image\Son.wav"></audio>
+
+
+<img  class="Generik20" id="Scen2" width="3.5%" onclick="Debut2()" src="Image/Casque.png"    >
+
+<img   id="Scen1"  width="61%" class="Generik0"  src="Image/LesChevaliers2.png" >
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+</head>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function Debut() {
+
+  var Contenu = []
+  Contenu111="11";Contenu112="11";Contenu113="11";Contenu114="11";Contenu115="11";Contenu116="11"
+  Contenu[1,2,1]='12';Contenu[1,2,2]='21';Contenu[1,2,3]='12';Contenu[1,2,4]='21';Contenu[1,2,5]='21';Contenu[1,2,6]='12'
+  Contenu[2,1,1]='13';Contenu[2,1,2]='21';Contenu[2,1,3]='111';Contenu[2,1,4]='12';Contenu[2,1,5]='81';Contenu[2,1,6]='131'
+  Contenu[2,2,1]='14';Contenu[2,2,2]='11';Contenu[2,2,3]='111';Contenu[2,2,4]='11';Contenu[2,2,5]='12';Contenu[2,2,6]='121'
+  Contenu[3,1,1]='15';Contenu[3,1,2]='15';Contenu[3,1,3]='111';Contenu[3,1,4]='11';Contenu[3,1,5]='81';Contenu[3,1,6]='12'
+  Contenu[3,2,1]='14';Contenu[3,2,2]='15';Contenu[3,2,3]='111';Contenu[3,2,4]='11';Contenu[3,2,5]='12';Contenu[3,2,6]='121'
+  Contenu[4,1,1]='13';Contenu[4,1,2]='12';Contenu[4,1,3]='13';Contenu[4,1,4]='12';Contenu[4,1,5]='13';Contenu[4,1,6]='13'
+  Contenu[4,2,1]='12';Contenu[4,2,2]='15';Contenu[4,2,3]='12';Contenu[4,2,4]='11';Contenu[4,2,5]='81';Contenu[4,2,6]='141'
+  Contenu[5,1,1]='11';Contenu[5,1,2]='12';Contenu[5,1,3]='111';Contenu[5,1,4]='11';Contenu[5,1,5]='81';Contenu[5,1,6]='151'
+  Contenu[5,2,1]='12';Contenu[5,2,2]='12';Contenu[5,2,3]='12';Contenu[5,2,4]='11';Contenu[5,2,5]='81';Contenu[5,2,6]='141'
+  Contenu[6,1,1]='13';Contenu[6,1,2]='14';Contenu[6,1,3]='111';Contenu[6,1,4]='11';Contenu[6,1,5]='81';Contenu[6,1,6]='131'
+  Contenu[6,2,1]='14';Contenu[6,2,2]='14';Contenu[6,2,3]='111';Contenu[6,2,4]='12';Contenu[6,2,5]='81';Contenu[6,2,6]='141'
+  Contenu[7,1,1]='15';Contenu[7,1,2]='14';Contenu[7,1,3]='111';Contenu[7,1,4]='11';Contenu[7,1,5]='81';Contenu[7,1,6]='141'
+  Contenu[7,2,1]='14';Contenu[7,2,2]='12';Contenu[7,2,3]='111';Contenu[7,2,4]='11';Contenu[7,2,5]='81';Contenu[7,2,6]='141'
+  Contenu[8,1,1]='13';Contenu[8,1,2]='13';Contenu[8,1,3]='111';Contenu[8,1,4]='11';Contenu[8,1,5]='81';Contenu[8,1,6]='31'
+  Contenu[8,2,1]='12';Contenu[8,2,2]='12';Contenu[8,2,3]='111';Contenu[8,2,4]='11';Contenu[8,2,5]='81';Contenu[8,2,6]='11'
+  Contenu[9,1,1]='11';Contenu[9,1,2]='12';Contenu[9,1,3]='111';Contenu[9,1,4]='11';Contenu[9,1,5]='81';Contenu[9,1,6]='11'
+  Contenu[9,2,1]='11';Contenu[9,2,2]='12';Contenu[9,2,3]='11';Contenu[9,2,4]='12';Contenu[9,2,5]='11';Contenu[9,2,6]='141'
+
+  // for ( i = 1; i < 7;i++) {
+  //    cible="Contenu11"+i"
+  //   document.getElementById("M1"+i).src ="file:///C:/Temp/Elvenar/Image/Mili"+cible+".png";
+  //   document.getElementById("M2"+i).src ="file:///C:/Temp/Elvenar/Image/Mili"+Contenu[2,1,i]+".png";
+  //   document.getElementById("M3"+i).src ="file:///C:/Temp/Elvenar/Image/Mili"+Contenu[3,1,i]+".png";
+  //   document.getElementById("M4"+i).src ="file:///C:/Temp/Elvenar/Image/Mili"+Contenu[4,1,i]+".png";
+  //   document.getElementById("M5"+i).src ="file:///C:/Temp/Elvenar/Image/Mili"+Contenu[5,1,i]+".png";
+  //   document.getElementById("M6"+i).src ="file:///C:/Temp/Elvenar/Image/Mili"+Contenu[6,1,i]+".png";
+  //   document.getElementById("M7"+i).src ="file:///C:/Temp/Elvenar/Image/Mili"+Contenu[7,1,i]+".png";
+  //   document.getElementById("M8"+i).src ="file:///C:/Temp/Elvenar/Image/Mili"+Contenu[8,1,i]+".png";
+  //   document.getElementById("M9"+i).src ="file:///C:/Temp/Elvenar/Image/Mili"+Contenu[9,1,i]+".png";
+  //   alert(i+"/"+Contenu[1,1,i])
+  // }
+
+}
+  function JouerSon() {
+      var sound = document.getElementById("MonSon");
+        sound.play();}
+  function Humain() {
+    JouerSon()
+    document.getElementById("ON1").src ="Image\OuiNon1.png";
+    document.getElementById("ON2").src ="Image\OuiNon2.png";
+  }
+  function Elf() {
+    JouerSon()
+    document.getElementById("ON1").src ="Image\OuiNon2.png"
+    document.getElementById("ON2").src ="Image\OuiNon1.png"
+  }
+}
+</script>
+</head>
+<style>
+  body {
+             align: center;
+             text-align:center;
+             padding: 0px;
+             margin: 0px;
+             display:inline;
+             font-size: 14px;
+             font-family: Verdana;
+             color:#051E4C;
+           }
+    table {
+      margin: 0px;
+      padding: 0px;
+    }
+    Img {
+      width:25px;
+      margin: 0px;
+      padding: 0px;
+    }
+    td {
+      opacity: 0.5;
+      border: 1px solid #333;
+    }
+    .BordOff {
+      opacity: 1;
+      border: 3px solid #333;
+      /* animation-name: Bord;
+      animation-duration: 4s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite; */
+    }
+    .Normal {
+      width:13px;
+      cursor: pointer;
+    }
+    @keyframes Bord {
+      0%   {border: 1px solid #333;}
+     100% {border: 0px solid #333;}
+    }
+    @keyframes Blason {
+      0%   {opacity: 1;}
+      50% {opacity: 0;}
+     100% {opacity: 1;}
+    }
+  .Flash {
+    animation-name: Blason;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+  @keyframes LienHtml {
+    0%   {opacity: 0;}
+   100% {opacity:1;}
+  }
+  .LienHtml {
+    width:10px;
+    animation-name: LienHtml;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+</style>
+<body onload="Debut()">
+  <audio  id="MonSon" src="Image\Son.wav"></audio>
+  <div style="align:center;">
+    <img style="transform:rotate(-90deg)" src="Image\Ecu.png" class="LienHtml" width="15px" style="display: inline;">
+     <div style='display: inline'>Lien vers le fichier de Flo</div>
+     <img style="transform:rotate(90deg)" src="Image\Ecu.png" class="LienHtml" width="15px" style='display: inline'>
+  </div>
+
+  <table >
+    <tr style="opacity: 1;">
+      <td style="width:90px" class="BordOff">
+        <div style="align:left;">
+            <img id="ON1" onclick="Humain()" src="C:\Temp\Elvenar\Image\OuiNon1.png" class="Normal"  style="display: inline;">
+            <div style="display: inline;cursor:pointer;" onclick="Humain()" >Humains</div>
+
+            <img  id="ON2" onclick="Elf()" src="C:\Temp\Elvenar\Image\OuiNon2.png" class="Normal" >
+            <div style="display: inline;cursor:pointer;" onclick="Elf()" >Elfes</div>
+        </div>
+
+      </td>
+      <td style="opacity: 1;">Caserne</td><td style="opacity: 1;">Terrain</td><td style="opacity: 1;">Mercenaire</td>
+      <td style="opacity: 1;">Caserne<br>en craftable</td><td style="opacity: 1;">Terrain<br>en craftable</td><td style="opacity: 1;">Mercenaire<br>en craftable</td>
+    </tr >
+
+    <tr >
+      <td width="10%" ><img  src="Image\Marbre.png"  style="display: inline;"></td>
+      <td><img  id="M11" src="" ></td>
+      <td><img  id="M12" src="" ></td>
+      <td><img  id="M13" src="" ></td>
+      <td><img  id="M14" src="" ></td>
+      <td><img  id="M15" src="" ></td>
+      <td><img  id="M16" src="" ></td>
+    </tr >
+    <tr >
+      <td width="10%"><img  src="Image\Acier.png"  style="display: inline;"></td>
+      <td><img  id="M21" src="Image\Mili11.png" ></td>
+      <td ><img  id="M22" src="Image\Mili11.png" ></td>
+      <td ><img  id="M23" src="Image\Mili11.png" ></td>
+      <td><img  id="M24" src="Image\Mili11.png" ></td>
+      <td><img  id="M25" src="Image\Mili11.png" ></td>
+      <td><img  id="M26" src="Image\Mili11.png" ></td>
+    </tr >
+    <tr >
+      <td width="10%"><img  src="Image\Planche.png"  style="display: inline;"></td>
+      <td><img  id="M31" src="Image\Mili11.png" ></td>
+      <td ><img  id="M32" src="Image\Mili11.png" ></td>
+      <td ><img  id="M33" src="Image\Mili11.png" ></td>
+      <td><img  id="M34" src="Image\Mili11.png" ></td>
+      <td><img  id="M35" src="Image\Mili11.png" ></td>
+      <td><img  id="M36" src="Image\Mili11.png" ></td>
+    </tr >
+    <tr >
+      <td  class="BordOff" width="10%" ><img class="Flash" src="Image\Rubis.png"  style="display: inline;"></td>
+      <td class="BordOff"><img  id="M41" src="Image\Mili11.png" ></td>
+      <td class="BordOff"><img  id="M42" src="Image\Mili12.png" ></td>
+      <td class="BordOff"><img  id="M43" src="Image\Mili11.png" ></td>
+      <td class="BordOff"><img  id="M44" src="Image\Mili11.png" ></td>
+      <td class="BordOff"><img  id="M45" src="Image\Mili11.png" ></td>
+      <td class="BordOff"><img  id="M46" src="Image\Mili11.png" ></td>
+    </tr >
+    <tr >
+      <td width="10%"><img  src="Image\Parchemin.png"  style="display: inline;"></td>
+      <td><img  id="M51" src="Image\Mili11.png" ></td>
+      <td ><img  id="M52" src="Image\Mili11.png" ></td>
+      <td ><img  id="M53" src="Image\Mili11.png" ></td>
+      <td><img  id="M54" src="Image\Mili11.png" ></td>
+      <td><img  id="M55" src="Image\Mili11.png" ></td>
+      <td><img  id="M56" src="Image\Mili11.png" ></td>
+    </tr >
+    <tr >
+      <td width="10%"><img  src="Image\Cristal.png" width="30px" style="display: inline;"></td>
+      <td><img  id="M61" src="Image\Mili11.png" ></td>
+      <td ><img  id="M62" src="Image\Mili11.png" ></td>
+      <td ><img  id="M63" src="Image\Mili11.png" ></td>
+      <td><img  id="M64" src="Image\Mili11.png" ></td>
+      <td><img  id="M65" src="Image\Mili11.png" ></td>
+      <td><img  id="M66" src="Image\Mili11.png" ></td>
+    </tr >
+    <tr >
+      <td width="10%"><img  src="Image\Elixir.png"  style="display: inline;"></td>
+      <td><img  id="M71" src="Image\Mili11.png" ></td>
+      <td ><img  id="M72" src="Image\Mili11.png" ></td>
+      <td ><img  id="M73" src="Image\Mili11.png" ></td>
+      <td><img  id="M74" src="Image\Mili11.png" ></td>
+      <td><img  id="M75" src="Image\Mili11.png" ></td>
+      <td><img  id="M76" src="Image\Mili11.png" ></td>
+    </tr >
+    <tr >
+      <td width="10%"><img  src="Image\Poussiere.png"  style="display: inline;"></td>
+      <td><img  id="M81" src="Image\Mili11.png" ></td>
+      <td ><img  id="M82" src="Image\Mili11.png" ></td>
+      <td ><img  id="M83" src="Image\Mili11.png" ></td>
+      <td><img  id="M84" src="Image\Mili11.png" ></td>
+      <td><img  id="M85" src="Image\Mili11.png" ></td>
+      <td><img  id="M86" src="Image\Mili11.png" ></td>
+    </tr >
+    <tr >
+      <td width="10%"><img  src="Image\Rubis.png"  style="display: inline;"></td>
+      <td><img  id="M91" src="Image\Mili11.png" ></td>
+      <td ><img  id="M92" src="Image\Mili11.png" ></td>
+      <td ><img  id="M93" src="Image\Mili11.png" ></td>
+      <td><img  id="M94" src="Image\Mili11.png" ></td>
+      <td><img  id="M95" src="Image\Mili11.png" ></td>
+      <td><img  id="M96" src="Image\Mili11.png" ></td>
+    </tr >
+  </table >
+</body>
+</html>

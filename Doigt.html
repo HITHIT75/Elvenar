@@ -1,10 +1,130 @@
 <!DOCTYPE html>
 <html>
- 
-<body align="center">
+<head>
+</head>
+<style>
+  body {
+  background-color:transparent
+  align:center
+  font-size: 18px;
+  font-family: Verdana;
+  text-align: center;
+  color: #051E4C;
+  }
+  span {
+      font-weight: bold;
+      /* display: block; */
+      }
+    img {
+      align:center
+      }
+    table {
+      min-width: 40%
+      max-width: 40%
+    }
+    td {
+      width: 100px
+    }
+    tr {
+      font-weight: bold;
+      font-size: 22px;
+      display:inline"
+      width: 25px
+    }
+      @keyframes Pulp {
+        0%   {font-size: 0%;opacity: 0;}
+        50% {font-size: 100%; opacity: 1; }
+        100% {font-size: 100%;opacity: 1;}
+      }
+    .Lettre {
+      text-align:right;
+      animation-name: Pulp;
+       animation-duration: 4s;
+       animation-iteration-count: infinite;
+      }
+    .Lettre2 {
+      animation-delay: 500ms;
+      animation-name: Pulp;
+       animation-duration: 4s;
+       animation-iteration-count: infinite;
+      }
+    .Lettre3 {
+      animation-delay: 1s;
+      animation-name: Pulp;
+       animation-duration: 4s;
+       animation-iteration-count: infinite;
+      }
+    .Lettre4 {
+      animation-delay: 1500ms;
+      animation-name: Pulp;
+       animation-duration: 4s;
+       animation-iteration-count: infinite;
+      }
+    .Lettre5 {
+       text-align:left;
+      animation-delay: 2s;
+      animation-name: Pulp;
+       animation-duration: 4s;
+       animation-iteration-count: infinite;
+      }
+      @keyframes Pulp1 {
+        0%   {width:35px}
+        20%   {width:30px}
+        40%   {width:40px}
+        60%   {width:25px}
+        80%   {width:45px}
 
-<img align="center" src="Image/site_en_construction.gif">
+        100% {width:35px;transform:rotate(360deg)}
+      }
+    .Sou {
+      cursor: pointer;
+    }
+    .Sou:hover {
+      opacity: 0.5;
+      animation-name: Pulp1;
+      animation-duration: 1s;
+      /* animation-fill-mode: forward */
+    }
+</style>
+<body >
+     <div>
+        <img src="Image\Sou.png" class="Sou" width="35px" >
+        <img src="Image\Sou.png" class="Sou"  width="35px">
+        <img src="Image\Sou.png" class="Sou" width="35px" >
+        <br>
+        <img src="Image\Sou.png" class="Sou" width="35px" >
+        <img src="Image\Sou.png"  class="Sou" width="35px">
+        <br>
+        <img src="Image\Sou.png" class="Sou" width="35px" >
+       <p>
+       Avec <strong>6</strong> écus chevaliers diposés sur une table en face de toi, déplaces un seul écu afin d'obtenir deux lignes (droite) de <strong>4</strong> écus.<br>
+       </p>
+     </div>
+     <img src="Image\EntreLigne2.png" width="10%" >
+     <p>
+     Un peu alpha, un peu numérique. <br> Un peu étrangère mais un peu universelle. <br> Prise de tête pour les matheux mais en tête pour la plupart !<br>Mais quelle lettre prolonge cette suite ?
+    </p>
 
- 
-</body >
-  </html>
+
+    <table align="center" >
+    <tr>
+      <td>
+           <p class="Lettre" >O -</p>
+    	</td>
+    	<td>
+        <p class="Lettre2" > T - T -</p>
+      </td>
+    	<td>
+        <p class="Lettre3" > F - F -</p>
+
+  </body>
+    </td>
+    <td>
+      <p class="Lettre4" > S - S -</p>
+    </td>
+    <td>
+      <p class="Lettre5"> E - ?</p>
+    </td>
+  </tr>
+  </table>
+</body>
