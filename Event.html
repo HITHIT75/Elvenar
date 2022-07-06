@@ -121,11 +121,31 @@
     document.getElementById('LigneLigne').style.visibility = "visible"
 
     }
-
+function SauverCookie()  {
+   Chaine=  document.getElementById("Chaine").innerHTML
+   const  parts = Chaine.split(",");
+   ChaineSauver =document.getElementById("LigneMax").innerHTML*1-1+","
+   
+    for ( i = 1; i < parts.length; i++) {
+       
+       var Posi = "C" + i
+       if (document.getElementById(Posi).className = "VertBordure") {
+          ChaineSauver =ChaineSauver +"1,"
+       }
+       if (document.getElementById(Posi).className = "OrangeBordure") {
+          ChaineSauver =ChaineSauver +"2,"
+       }
+        if (document.getElementById(Posi).className = "RougeBordure") {
+          ChaineSauver =ChaineSauver +"3,"
+       }      
+       
+    }
+   alert (ChaineSauver)
+}
 
 
    function Loader() {
-     //document.cookie = "user=John; path=/; expires=Tue, 19 Jan 2038 03:14:07 GMT"
+     //document.cookie = "evenement=John; path=/; expires=Tue, 19 Jan 2038 03:14:07 GMT"
       name="evenement"
         let matches = document.cookie.match(new RegExp(
     "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
@@ -140,7 +160,7 @@
        var Max=parts[0]
         var  LigneActuel=parts[0]*1+1
        document.getElementById("LigneMax").innerHTML=LigneActuel
-
+         document.getElementById("LigneBout").innerHTML="/"+parts.length
          for ( i = 1; i < parts.length; i++) {
  
               var Posi = "C" + i
@@ -189,6 +209,7 @@
    var Ligne = 'L' + Acacher
     document.getElementById(Ligne).className = "PasAfficheVide";
      UpMax()
+     SauverCookie()
     }
 
 
@@ -209,7 +230,7 @@
  <tr align="center" style= "font-family:verdana; font-size: 14px;  width: 100%"        >
    <td colspan="4" >
      <img width= "30px;" style="display: inline;cursor:pointer;"    height= "30px;" onclick="Cacher()" src="Image/CocheNon.png">
-    Masquer la quête <DIV style="display: inline" id="LigneMax" >1</DIV> / 56
+    Masquer la quête <DIV style="display: inline" id="LigneMax" >1</DIV><DIV style="display: inline" id="LigneBout" /?</DIV>
 
       <DIV id="LigneLigne" style="display: inline; visibility:hidden;" >
      <img onclick='Afficher()' style="display: inline" width= "30px;" height= "30px;" src="Image/Back.png">
