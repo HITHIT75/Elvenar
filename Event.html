@@ -124,16 +124,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
    function Loader() {
      //document.cookie = "user=John; path=/; expires=Tue, 19 Jan 2038 03:14:07 GMT"
       name="evenement"
@@ -145,42 +135,38 @@
  //     alert( document.cookie )
   //
   //       //  let Chaine = checkCookie("evenement");
-  //     Chaine=  document.getElementById("Chaine").innerHTML
-  //
-  //       const  parts = Chaine.split(",");
-  //       var Max=parts[0]
-  //       var  LigneActuel=parts[0]*1+1
-  //       document.getElementById("LigneMax").innerHTML=LigneActuel
-  //
-  //
-  //         for ( i = 1; i < 15; i++) {
-  //
-  //             var Posi = "C" + i
-  //             var Ligne = 'L' + i
-  //             if (i<=Max) {
-  //             	parts[i]=4
-  //             }
-  //
-  //             if (parts[i]==1) {
-  //                 document.getElementById(Posi).className = "VertBordure";
-  //             }
-  //             if (parts[i]==2) {
-  //                 document.getElementById(Posi).className = "OrangeBordure";
-  //             }
-  //              if (parts[i]==3) {
-  //                 document.getElementById(Posi).className = "RougeBordure";
-  //             }
-  //               if (parts[i]==4) {
-  //
-  //             	document.getElementById(Ligne).className = "PasAfficheVide";
-  //             }
-  //             else {
-  //             	document.getElementById(Ligne).className = "AfficheVide";
-  //             }
-  //
-  //
-  //       }
-  //
+      Chaine=  document.getElementById("Chaine").innerHTML
+      const  parts = Chaine.split(",");
+       var Max=parts[0]
+        var  LigneActuel=parts[0]*1+1
+       document.getElementById("LigneMax").innerHTML=LigneActuel
+
+         for ( i = 1; i < parts.length; i++) {
+ 
+              var Posi = "C" + i
+              var Ligne = 'L' + i
+              if (i<=Max) {
+              	parts[i]=4
+              }
+              if (parts[i]==1) {
+                  document.getElementById(Posi).className = "VertBordure";
+              }
+              if (parts[i]==2) {
+                  document.getElementById(Posi).className = "OrangeBordure";
+              }
+               if (parts[i]==3) {
+                  document.getElementById(Posi).className = "RougeBordure";
+              }
+                if (parts[i]==4) {
+ 
+              	document.getElementById(Ligne).className = "PasAfficheVide";
+              }
+              else {
+              	document.getElementById(Ligne).className = "AfficheVide";
+              }
+ 
+ 
+       }
    }
   function myFunction11() {
     document.getElementById('C1').className = "VertBordure";
@@ -208,7 +194,7 @@
 
 </script>
 <body onload="Loader()">
-<DIV id="Chaine">0,1,1,1,2,1,1,2,2,1,2,3,1,2,2,1,3,2,3,2,2,1,2,1,1,1,1,1,1,2,3,2,2,1,1,3,1,2,1,2,1,3,2,2,3,1,1,1,1,2,1,1,1,1,2,1,2</DIV>
+<DIV id="Chaine">0,1,2,3,2,1,1,2,2,1,2,3,1,2,2,1,3,2,3,2,2,1,2,1,1,1,1,1,1,2,3,2,2,1,1,3,1,2,1,2,1,3,2,2,3,1,1,1,1,2,1,1,1,1,2,1,2</DIV>
 
 
 
