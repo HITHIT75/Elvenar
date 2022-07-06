@@ -1,253 +1,266 @@
-
 <!DOCTYPE html>
 <html>
- <head>
-  <title>Elvenar Chevaliers</title>
-  <link rel="icon" type="image/x-icon" href="Image/favicon.ico">
-</head> 
-  
-<body style="margin:0px;padding:0px;overflow:hidden" onload="checkCookie()">
- 
- 
- 
- 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
-body {
- align:center 
- font-family:verdana;
- background-color: #E5E8EA;
- font-size:12
-  height:100%
-}
-
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
-
-.tooltip .tooltiptext {
-
-  visibility: hidden;
-  font-family:verdana;
-   font-size:12
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  top: 150%;
-  left: 50%;
-  margin-left: -60px;
-}
-/* The animation code */
-@keyframes TT1 {
-  0%   {visibility: hidden;}
-  10%  {visibility: visible;}
-  90%  {visibility: visible;}
-  100% {visibility: hidden;}
-}
-.tooltip:hover .tooltiptext {
-  animation-name: TT1;
-  animation-duration: 4s;
-}
- .tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent transparent black transparent;
-}
-img {
-    opacity: 1;
-    transition: opacity 1s ease-in-out;
-    -moz-transition: opacity 1s ease-in-out;
-    -webkit-transition: opacity 1s ease-in-out;
-}
- img:hover {
-    opacity: 0.2;
-   cursor: pointer;
-    transition: opacity .55s ease-in-out;
-    -moz-transition: opacity .55s ease-in-out;
-    -webkit-transition: opacity .55s ease-in-out;
-   
-}
-container:hover {
-    opacity: 0.2;
-   cursor: pointer;
-    transition: opacity .55s ease-in-out;
-    -moz-transition: opacity .55s ease-in-out;
-    -webkit-transition: opacity .55s ease-in-out;
-   
-}
-.container {
-  position: relative;
-  text-align: center;
- 
-}
-.centered {
- font-family:verdana;
-  color: white;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} 
-</style>
- 
-<script>
-
-function setCookie(cname,cvalue,exdays) {
-  const d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60*60*1000));
-  let expires = "expires=" + d.toUTCString();
- 
-
-  document.cookie = cname + "=" + cvalue + ";" +  expires + ";path=/";
-}
-
-function getCookie(cname) {
-  let name = cname + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(';');
-  for(let i = 0; i < ca.length; i++) {
-    let c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-}
-
-function checkCookie() {
-  let user = getCookie("username");
-  let evenement = getCookie("evenement");
-  if ((user != "") && (evenement != "")){
-
-  } 
-  else if ((user != "") && (evenement = "")) {
-	setCookie("evenement", "0,1,1,1,2,1,1,2,2,1,2,3,1,2,2,1,3,2,3,2,2,1,2,1,1,1,1,1,1,2,3,2,2,1,1,3,1,2,1,2,1,3,2,2,3,1,1,1,1,2,1,1,1,1,2,1,2;" 
-  , 365); 
-
-  	
-  }
-  else {
-     user = prompt("C'est ta première visite ? Quel est ton pseudo de jeu ? ☺","");
-     if (user != "" && user != null) {
-       setCookie("username", user, 365);
-	setCookie("evenement", "0,1,1,1,2,1,1,2,2,1,2,3,1,2,2,1,3,2,3,2,2,1,2,1,1,1,1,1,1,2,3,2,2,1,1,3,1,2,1,2,1,3,2,2,3,1,1,1,1,2,1,1,1,1,2,1,2;" 
-  , 365); 
+<head>
+<script type="text/javascript">
+  function Test() {
+      JouerSon()
+      Opacifier(2)
+    //alert(document.getElementById("Corps").width)
+      //   document.getElementById("Corps").height="450px"
+      }
+  function Dessus1() {
+       document.getElementById("TT1").classList.toggle("TT1");
+         }
+     function Saut(){
+       JouerSon()
+       //document.getElementById("Frame").src="file:///C:/Temp/Elvenar/generik.html";
+       Opacifier(1)
      }
+  function SautGenerik(){
+    JouerSon()
+    document.getElementById("Frame").src="file:///C:/Temp/Elvenar/generik.html";
+    Opacifier(10)
   }
-}
+  function SautDoigt(){
+    JouerSon()
+    document.getElementById("Frame").src="file:///C:/Temp/Elvenar/Doigt.html";
+    Opacifier(9)
+  }
+  function SautJournal(){
+    JouerSon()
+    document.getElementById("Frame").src="file:///C:/Temp/Elvenar/Journal.html";
+    Opacifier(6)
+  }
+  function SautPadawan(){
+    JouerSon()
+    document.getElementById("Frame").src="file:///C:/Temp/Elvenar/Padawan.html";
+    Opacifier(8)
+  }
+  function SautHome(){
+    JouerSon()
+    document.getElementById("Frame").src="file:///C:/Temp/Elvenar/Home.html";
+    Opacifier(2)
+  }
+  function SautAventure(){
+    JouerSon()
+    document.getElementById("Frame").src="Aventure.html";
+    Opacifier(4)
+  }
+  function SautLiens(){
+    JouerSon()
+    document.getElementById("Frame").src="Liens.html";
+    Opacifier(7)
+  }
+  function SautTournois(){
+    JouerSon()
+    document.getElementById("Frame").src="Tournois.html";
+    Opacifier(5)
+  }
+  function SautEvent(){
+    JouerSon()
+    document.getElementById("Frame").src="Event.html";
+    Opacifier(3)
+  }
+  function Opacifier(Num){
+    document.getElementById("Img1").style.opacity= "1";
+    document.getElementById("Img2").style.opacity= "1";
+    document.getElementById("Img3").style.opacity= "1";
+    document.getElementById("Img4").style.opacity= "1";
+    document.getElementById("Img5").style.opacity= "1";
+    document.getElementById("Img6").style.opacity= "1";
+    document.getElementById("Img7").style.opacity= "1";
+    document.getElementById("Img8").style.opacity= "1";
+    document.getElementById("Img9").style.opacity= "1";
+    document.getElementById("Img10").style.opacity= "1";
+    var Cible = "Img" + Num
+    document.getElementById(Cible).style.opacity= "0.5";
+  }
+  function JouerSon() {
+      var sound = document.getElementById("MonSon");
+        sound.play();}
 </script>
 </head>
+<style>
+   body {
+     align: center;
+     padding: 0px;
+     margin: 0px;
+     font-family: verdana;
+     font-size: 25px;
+     color: #051E4C;
+     scrolling: none;
+     background-color: #E5E8EA;
+     text.background = transparent;
+     background-size: cover;
+     /* background-repeat: no-repeat; */
+     /* background-size: 100%; */
+     background-image:url(Image/Ecran.png)
 
-<body onload="checkCookie()"></body>
-
-</html>
-   
-   
 
 
 
+   }
+  .hide{display: none;}
+   div {
+     display: inline;
+     align:center;
+    }
 
+  img:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  /* table {
+    align: center;
+    width: 100%
+    max-height: 10%
+    } */
+  .tooltiptext {
+    visibility: hidden;
+    display: none;
+    /* width: 190px; */
+    background-color: #990000;
+    color: #051E4C;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font: 15px Verdana, sans-serif;
+    background-color: black;
+    color: #fff;
+    position: absolute;
+    z-index: 1;
+    margin-left: 15%; /* Use half of the width (120/2 = 60), to center the tooltip */
+    margin-top: 20%;
+    max-width: 30%
+  }
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    }
+  .TT1 .TT1txt {
+    visibility: hidden;
+    width: 180px;
+    height:100px;
+    color: blue;
+    text-align: center;
+    border-width:  2px;
+    border-color:white;
+    border-radius: 6px;
+    font: 14px Verdana, sans-serif;
+    background-color: #051E4C;
+    color: white;
+    box-shadow: 0 0 0 2px #000,
+    	0 0 0 3px #FFFFFF,
+    	0 0 0 3px #051E4C,
+    	0 0 0 6px #051E4C,
+    	0 0 0 6px #f6da24,
+    	0 0 0 6px #FFFFFF;
+
+
+
+    position: absolute;
+    margin-top: 5%;
+    margin-left: -3%;
+    z-index:10;
+    }
+    @keyframes TT {
+      0%   {visibility: visible;}
+      99%  {visibility: visible;}
+      100% {visibility: hidden;}
+    }
+  .TT1:hover .TT1txt {
+    visibility: visible;
+    animation-name: TT;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+        }
 </style>
- <table align="center" style="max-width:100%;max-height:15%"  border-spacing: 0px; >
-   <tr align="center">
-    <th align="center" >
-       <div class="tooltip">
-           <img  src="Image/Logo1.png" style="max-width:100%;height:auto;" >
-          <span class="tooltiptext">Ca c'est le logo du jeu auquel vous jouez  - test en cours : Cookie </span>
-       </div>
-     </th>
-    <th align="center"><div class="container" onclick="openPage1()"><div class="tooltip"><img  src="Image/Titre.png" style="max-width:95%;height:auto;" onclick="openPage1()">
-     <div class="centered">Accueil</div>
-     <span class="tooltiptext">Retourne à l'accueil du portail. d'habitude on met un symbole maison, mais avec un chateau c'est plus congruent </span>
-     </div></div></th>
-    <th align="center"><div class="container" onclick="openPage2()"><div class="tooltip"><img src="Image/Titre.png" style="max-width:95%;height:auto;" onclick="openPage2()">
-     <div class="centered">Aventure</div>
-     <span class="tooltiptext">Vous trouvez ici les cartes et étapes décidées pour l'aventure, un lien vers Sheet et les proportions de ce qu'il faut produire</span>
-     </div></div></th>
-    <th align="center"><div class="container" onclick="openPage3()"><div class="tooltip"><img src="Image/Titre.png" style="max-width:95%;height:auto;" onclick="openPage3()">
-     <div class="centered">Evenement</div>
-     <span class="tooltiptext">Pour l'evenement en cours, la liste de VOS quetes restantes et priorisées</span>
-     </div></div></th>  
-    <th align="center"><div class="container" onclick="openPage4()"><div class="tooltip"><div class="tooltip"><img src="Image/Titre.png" style="max-width:95%;height:auto;" onclick="openPage4()">
-     <div class="centered">Liens</div>
-     <span class="tooltiptext">Des liens utiles vers des ressources externes</span>
-     </div></div></th>    
-    <th align="center"><div class="container" onclick="openPage5()"><div class="tooltip"><img src="Image/Titre.png" style="max-width:95%;height:auto;" onclick="openPage5()">
-     <div class="centered">Journal</div>
-     <span class="tooltiptext">la saga invraissemblable du journal de bord d'Olivius avec tous les épisodes</span>
-     </div></div></th>
-     <th align="center"><div class="container"><div class="tooltip"><img src="Image/Titre.png" style="max-width:95%;height:auto;" onclick="openPage6()">
-      <div class="centered">Padawan</div>
-      <span class="tooltiptext">Les recommandations d'Olivius pour les nouveaux</span>
-      </div></div></th>    
-    <th align="center"><div class="container"><div class="tooltip"><img src="Image/Titre.png" style="max-width:95%;height:auto;" onclick="openPage7()">
-     <div class="centered">Très con</div>
-     <span class="tooltiptext">Pour se détendre</span>
-     </div></div></th>    
-    <th align="center"><div class="tooltip"><img src="Image/Blason1.png" style="max-width:100%;height:auto;" >
-     <span class="tooltiptext">Ca c'est notre blason! Pignouf !  En réalisation Event</span>
-     </div></th>    
-     </tr> 
-</table>
- 
- 
- 
-<iframe height="2000" id="Chose" src="Home.html"  style="overflow:hidden;height:1000;width:100%"  width="100%" ></iframe>
-   
 
- 
-<script>
-function openPage1() {
-   SonClic()
-    document.getElementById("Chose").src = "Home.html"
- }
-function openPage2() {
-   SonClic()
-    document.getElementById("Chose").src = "Aventure.html"
- }
- function openPage3() {
-   SonClic()
-    document.getElementById("Chose").src = "Event.html"
- }    
- function openPage4() {
-   SonClic()
-    document.getElementById("Chose").src = "Liens.html"
- }       
-  function openPage5() {
-   SonClic()
-    document.getElementById("Chose").src = "Journal.html"
- }   
-   function openPage6() {
-   SonClic()
-    document.getElementById("Chose").src = "Aide.html"
- }   
-   function openPage7() {
-   SonClic()
-    document.getElementById("Chose").src = "Doigt.html"
- }   
- function SonClic() {
-      // let audio = new Audio("Image/CLIC.mp3");
-     // audio.play();
- } 
-</script>
+<body onload="Test()" >
+<audio  id="MonSon" src="Image\Son.wav"></audio>
+<div style="position: fixed;margin-left:6%;">
+    <div class="TT1" id="TT1" >
+      <div class="TT1txt">
+        Ca c'est le logo du jeu auquel tu joues -T'avais jamais remarqué ?
+      </div>
+      <img src="Image/Logo1.png" id="Img1" width="9%" max-width="8%" onclick="Saut()" >
+      </div>
 
-  
-  
+      <div class="TT1" id="TT1" >
+          <div class="TT1txt">
+          La page d'accueil avec les informations sensibles de la confrérie.
+          </div>
+        <img src="Image/MAccueil.png" style="opacity: 0.5"; id="Img2" onclick="SautHome()" width="8%" max-width="8%">
+      </div>
+
+      <div class="TT1" id="TT1" >
+          <div class="TT1txt">
+          La listes des quêtes de l'event avec possibilité de colorier les quêtes à anticiper<br>et de faire disparaître les quêtes réalisées.
+          </div>
+        <img src="Image/MEvent.png"  id="Img3" onclick="SautEvent()"  width="6.3%" max-width="6.3%">
+      </div>
+
+      <div class="TT1" id="TT1" >
+          <div class="TT1txt">
+          Les chemins & étapes sélectionnés pour l'aventure.<br>
+          Et un simulateur gratuit pour doser manufactures et ateliers.
+          </div>
+      <img src="Image/MAventure.png" id="Img4" onclick="SautAventure()" width="9.2%" max-width="9.2%">
+      </div>
+
+      <div class="TT1" id="TT1" >
+          <div class="TT1txt">
+          Des informations pour bien chiader son tournoi.
+          </div>
+      <img src="Image/MTournois.png" id="Img5" onclick="SautTournois()" width="9%"  max-width="9%">
+      </div>
+
+      <div class="TT1" id="TT1" >
+          <div class="TT1txt">
+          L'extraordinaire et peu probable saga du journal de bord de la confrérie.
+          </div>
+      <img src="Image/MJournal.png" id="Img6" onclick="SautJournal()" width="8.5%" max-width="8.5%">
+      </div>
+
+      <div class="TT1" id="TT1" >
+          <div class="TT1txt">
+          Une compile des liens elvenar utiles et inutiles sur internet.
+          </div>
+      <img src="Image/Mlien.png" id="Img7" onclick="SautLiens()" width="5.4%" max-width="5.4%">
+      </div>
+
+      <div class="TT1" id="TT1" >
+          <div class="TT1txt">
+          Les recommandations pour les pauvres nouveaux arrivants dans la confrérie.
+          </div>
+      <img src="Image/MPadawan.png" id="Img8" onclick="SautPadawan()" width="8.2%" max-width="8.2%">
+      </div>
+
+      <div class="TT1" id="TT1" >
+
+          <div class="TT1txt">
+            Pour augmenter ou diminuer le nombre de neurones (vaste programme)
+          </div>
+      <img src="Image/MDoigt.png" id="Img9" onclick="SautDoigt()" width="9.0%" max-width="9.0%">
+      </div>
+
+      <div class="TT1" id="TT1" >
+          <div class="TT1txt">
+          Ceci est le blason de la confrérie.<br>Tu peux cliquer dessus si ça t'amuse.
+          </div>
+      <img src="Image/Blason1.png" id="Img10" onclick="SautGenerik()" width="5%" max-width="5%">
+      </div>
+    </div>
+  <iframe id="Frame" style="position: fixed;margin-top:7%;z-index:-1;"
+      width="95%;" height="900px;" scrolling="0;" frameBorder="0px;"
+      src="Home.html">
+  </iframe>
+
+
+
+
+
+
+
+
 </body>
 </html>

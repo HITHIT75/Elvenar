@@ -1,64 +1,247 @@
-<!DOCTYPE html>
-<html>
-  <style>
-body {
-  color: blue;
-   font-family:verdana;
- font-size:12
-  height:400%
-   background-image: url('Image/Ecran.png');
-}
-.bulle {
-   border: 3px solid blue
-  border-radius= "10px"
-  border-collapse:collapse
-     background-color: #EBEBEB;
-}
+
+<head>
+<script>
+    function Test() {
+
+      //alert(document.getElementByClass("Zone1").top)
+      //alert(document.body.width)
+      // 824 = ecran 17
+          // document.getElementById("Corps").width
+        }
+    function Debut() {
+        Test()
+        var alea = Math.random()
+        var Position1 = Entier(alea)
+        var alea = Math.random()
+        var Position2 = Entier(alea)
+        var alea = Math.random()
+        var Position3 = Entier(alea)
+        var alea = Math.random()
+        var Position4 = Entier(alea)
+        var alea = Math.random()
+        var Position5 = Entier(alea)
+        var alea = Math.random()
+        var Position6 = Entier(alea)
+        var alea = Math.random()
+        var Position7 = Entier(alea)
+        var alea = Math.random()
+        var Position8 = Entier(alea)
+
+        var Contenu1 = []
+        var Contenu2 = []
+        var Contenu3 = []
+        var Contenu4 = []
+        var Contenu5 = []
+        var Contenu6 = []
+        var Contenu7 = []
+        var Contenu8 = []
+
+        var Toi ="Toi !"
+
+        Contenu1[1] ="Hello !"
+        Contenu1[2] ="Bonjour !"
+        Contenu1[3] ="Salut !"
+        Contenu1[4] ="Ave !"
+        Contenu1[5] ="Hi !"
+        Contenu1[6] ="Guthaben !"
+
+        Contenu2[1] ="Sublime "
+        Contenu2[2] ="Grandiose "
+        Contenu2[3] ="Spectaculaire "
+        Contenu2[4] ="Inénarrable "
+        Contenu2[5] ="Immense "
+        Contenu2[6] ="Incroyable "
+
+        Contenu3[1] =" Je suis la grande AlexAngus ! "
+        Contenu3[2] =" Je suis l'immense AlexAngus ! "
+        Contenu3[3] =" Je suis la sublissime AlexAngus ! "
+        Contenu3[4] =" Je suis la désirable AlexAngus ! "
+        Contenu3[5] =" Je suis la sage AlexAngus ! "
+        Contenu3[6] =" Je suis la remarquée AlexAngus ! "
+
+        Contenu4[1] =" Je vais te parler ici des "
+        Contenu4[2] =" Je vais t'enchanter avec des "
+        Contenu4[3] =" Je vais t'ensorceler grâce aux "
+        Contenu4[4] =" Je vais t'envouter avec des "
+        Contenu4[5] =" Je vais te sussurer des "
+        Contenu4[6] =" Je parle suavement des "
+
+        Contenu5[1] ="Encore toi !?  "
+        Contenu5[2] ="Resalut."
+        Contenu5[3] ="Décidement tu insites!"
+        Contenu5[4] ="Hi"
+        Contenu5[5] ="De nouveau là !"
+        Contenu5[6] ="Toujours toi !"
+
+        Contenu6[1] ="Moi, j'te cause "
+        Contenu6[2] ="Moi, j'te baragouine "
+        Contenu6[3] ="Moi, j'te jacasse "
+        Contenu6[4] ="Moi, j'te raconte "
+        Contenu6[5] ="Moi, j'annonce "
+        Contenu6[6] ="Moi, j't'informe "
+
+        Contenu7[1] ="des machins "
+        Contenu7[2] ="des trucs "
+        Contenu7[3] ="des évolutions "
+        Contenu7[4] ="des nouveautés "
+        Contenu7[5] ="des changements "
+        Contenu7[6] ="des bidules "
+
+        document.getElementById("mot1").innerHTML=Contenu1[Position1]
+        document.getElementById("mot2").innerHTML=Contenu2[Position2]
+        document.getElementById("mot3").innerHTML=Toi
+      var tempo =  Contenu1[Position3] + Toi
+        document.getElementById("mot5").innerHTML=tempo
+        document.getElementById("mot6").innerHTML=Contenu3[Position4]
+        document.getElementById("mot7").innerHTML=Contenu4[Position5]
+        document.getElementById("mot9").innerHTML=Contenu5[Position6]
+        document.getElementById("mot10").innerHTML=Contenu6[Position7]
+        document.getElementById("mot11").innerHTML=Contenu7[Position8]
+      }
+    function Entier(alea){
+
+      if (alea <0.15) {  Position1 = 1  }
+       else if (alea <0.30){   Position1 = 2   }
+       else if (alea <0.45){   Position1 = 3   }
+       else if (alea <0.60){   Position1 = 4   }
+       else if (alea <0.75){   Position1 = 5   }
+       else if (alea <1){   Position1 = 6   }
+       return Position1
+    }
+    function Mute(){
+    var element = document.getElementById("Speaker").src;
+    alert(">>" + element)
+    //element.src="C:/Temp/Elvenar/Image/SonOff.png"
+          if (element= "file:///C:/Temp/Elvenar/Image/SonOn.png")     {
+            element="Image\SonOff.png"
+           }
+           else  {
+            element="Image\SonOn.png"
+           }
+
+    }
+    function JouerSon() {
+    var sound = document.getElementById("MonSon");
+    sound.play();}
+</script>
+</head>
+<style>
+    html { overflow-y: hidden; overflow-x: hidden; }
+    body  {
+        font-family: verdana;
+        font-size: 14;
+        color: #051E4C;
+      }
+    .tooltip {
+        position: absolute;
+        display: inline;
+        z-index: 1;
+        top: 5%;
+        left: 17%;
+        }
+    .tooltip2 {
+        position: absolute;
+        display: inline;
+        z-index: 1;
+        top: 30%;
+        left: 10%;
+      }
+    .tooltip3 {
+        position: absolute;
+        display: inline;
+        z-index: 1;
+        top: 53%;
+        left: 18%;
+        }
+    #Zone1 {
+      font-size: 22;
+    }
+    .tooltiptext {
+        width: 300px;
+        display: inline;
+        //background-color: #990000;
+        color: #051E4C;
+        text-align: left;
+      }
 </style>
- <script> 
-  function getCookie(cname) {
-  let name = cname + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(';');
-  for(let i = 0; i < ca.length; i++) {
-    let c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-function Loader() {
-  let user = getCookie("username");
-  
-}
-    
-    
-</script>  
-<body onload="Loader()">
-  <table align="center" style="width:100%;height:100%;">
-    <tr style="max-height:30%;">
-     <th><img  align="right" src="Image/Personage1.png" ></th>
-     <th><Div class="bulle" position= "relative;" top=" 20%;" >
-             <marquee direction="up" height="100%"  scrollamount="2"  color="blue">
-              Bonjour <DIV id="Toi">toi</Div>! Je m'appelle Olivius et je vais mettre ici des messages importants et permanents et cool et disciplinés  
-              </marquee>  </Div>                                 
-      </th>
-     <th  ></th>
-  </tr> 
-    <tr style="height:30%;">
-     <th style="width:25%" ></th>
-     <th  style="width:50%"   class="bulle"    position= "relative;" top=" 50%;" > 
-     <marquee direction="up"   scrollamount="2"  style="height:50%;" color="blue">
-              Salut, je suis AlexAngus, la belle de ces lieux.<br>Mes paroles de sirène vous transporteront
-              </marquee> 
-      </th>                                                                                                                                    
-                                                                                                                                         
-   <th  style="width:30%"><img align="left" src="Image/Personage2.png" ></th>
-  </tr> 
-   
- </table>
- 
+<body onload="Debut()" >
+<audio  id="MonSon" src="Image\Son.wav"></audio>
+<Div>
+<img src="C:\Temp\Elvenar\Image\Personage1.png" onClick="JouerSon()" width="8%" style="float:left">
+
+<img id="Corps" src="C:\Temp\Elvenar\Image\Bulle.png" width="79%" max-height="100%" style="float:left">
+<div style="float:left" class="tooltip">
+  <marquee  height="85hv" width= "85%" scrollamount="1" direction="up">
+  <div class="tooltiptext" id="Zone1" style="font-size: 14;">
+      <span  id ="mot1">Hello !</span>
+      <span id ="mot2" > sublime   </span>
+      <span id ="mot3" > Toi.    </span><br>
+      <span id ="mot4" >
+        Moi, c'est Wençolivius.<br>
+        je mets ici, de manière brève, le résultat de mes raisonnements
+        toujours cools et disciplinés<br>
+        Pas de blabla inutile, mes recommandations sont à suivre car votre avis
+        m'interesse, dans le respect d'une équité de temps de parole et d'une bonne
+        répartition des avis de 25 caractères différents et pourtant pas semblables.<br><br>
+        Voilà, je vous devais la vérité.<br><br>
+        Au fait sur un autre serveur, il y a Dumachin qui a spoilé l'event de Dutruc ! En utilisant un Off-target rétroactif...
+        On trouve cela scandaleux ! On l'a viré cool et discipliné.<br><br>
+        Qu'en pensez-vous ? Car mon avis vous interesse.
+      </span>
+    </marquee>
+
+  </div>
+</div>
+<div>
+  <img src="C:\Temp\Elvenar\Image\Bulle2.png" width="79%" max-height="100%" left="0" >
+  <div class="tooltip2" style="align:right">
+    <div class="tooltiptext">
+      <marquee  height="85hv" width= "100%" scrollamount="1" direction="up">
+        <span id ="mot5">Salut !</span><br>
+        <span id ="mot6" > je suis la grande AlexAngus ! </span><br>
+        <span id ="mot7" > Je vais te parler ici des </span>
+        <span id ="mot8" >
+           évenements notables touchant la confrérie.
+        </span>
+      </marquee>
+      </div>
+    </div>
+    <img src="C:\Temp\Elvenar\Image\Personage2.png" onClick="JouerSon()" width="10%" >
+
+
+</div>
+<div>
+  <img src="C:\Temp\Elvenar\Image\Personage3.png" width="7%" >
+  <img src="C:\Temp\Elvenar\Image\Bulle.png" onClick="JouerSon()" width="79%" max-height="100%" >
+  <div class="tooltip3" >
+      <div class="tooltiptext">
+        <marquee  height="85hv" width= "85%" scrollamount="1" direction="up">
+          <span id ="mot9">Encore toi !?</span><br>
+          <span id ="mot10" >Moi, j'te cause </span>
+          <span id ="mot11" > des machins </span>
+          <span id ="mot12" >
+            du portail.<br>
+            Sur <strong>'Très con'</strong> du
+            <img src="C:\Temp\Elvenar\Image\Nouveau.gif" width="6%"><br>
+            Les solutions arriveront précisement aux calandes élvénariennes.<br>
+            Sur <strong>'Journal'</strong> du
+            <img src="C:\Temp\Elvenar\Image\Nouveau.gif" width="6%"><br>
+            Sur <strong>'Tournois'</strong> rien de nouveau, c'est toujours en construction.
+            </span><img src="C:\Temp\Elvenar\Image\travaux.gif" width="3%"><br>
+            Sur <strong>'Aventure'</strong> le simulateur demande encore quelques évolutions mais on peut s'amuser avec.
+
+
+        </marquee>
+      </div>
+  </div>
+
+
+
+</div>
+
+
+
 </body>
-</html>
+
+
+</body>
