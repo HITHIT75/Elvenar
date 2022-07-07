@@ -85,7 +85,6 @@
     animation-duration: 1s;
     animation-iteration-count: infinite;
   }
-
 </style>
 
 
@@ -93,50 +92,51 @@
 
 
   function  Afficher() {
-      var AAfficher = document.getElementById("LigneMax2").innerHTML
+    JouerSon()
+      var AAfficher = document.getElementById("LigneMax").innerHTML
       LigneActuel=AAfficher*1
+      alert(LigneActuel)
       if(LigneActuel>0) {
-
-
-        var Ligne = 'L' + AAfficher
+        var Ligne = 'L' + LigneActuel
         document.getElementById(Ligne).className = "AfficheVide";
-        DownMax()
         }
         else {
-        document.getElementById('LigneLigne').style.visibility = "hidden"
+        //document.getElementById("LigneLigne").style.visibility = "hidden"
         }
-      } 
+      }
   function  DownMax() {
     var Max=document.getElementById("LigneMax").innerHTML
     LigneActuel=Max*1-1
     Max=Max-2
     document.getElementById("LigneMax").innerHTML = LigneActuel
     document.getElementById("LigneMax2").innerHTML = Max
-      if (Max<1) {
-      document.getElementById('LigneLigne').style.visibility = "hidden"
-      }
-      else {
-      document.getElementById('LigneLigne').style.visibility = "visible"
-      }
-
+      // if (Max<1) {
+      // document.getElementById("BlocReaffiche").className="Reaffiche1"
+      // }
+      // else {
+      // document.getElementById("BlocReaffiche").className="Reaffiche1"
+      // }
+      SauverCookie()
     }
 
   function  UpMax() {
-     alert("ok entree")
+
     var Max=document.getElementById("LigneMax").innerHTML
-    LigneActuel=Max*1+1
-    document.getElementById("LigneMax").innerHTML = LigneActuel
-    document.getElementById("LigneMax2").innerHTML = Max
-    document.getElementById('LigneLigne').style.visibility = "visible"
-   alert("ok sortie")
+    Max=Max*1+1
+    alert(document.getElementById("LigneMax").innerHTML + "/" + Max)
+    document.getElementById("LigneMax").innerHTML = Max
+    alert(document.getElementById("LigneMax").innerHTML )
+    document.getElementById("LigneMax2").innerHTML = Max-1
+    // document.getElementById("BlocReaffiche").className="Reaffiche2"
+    SauverCookie()
     }
-function SauverCookie()  {
+  function SauverCookie()  {
    Chaine=  document.getElementById("Chaine").innerHTML
    const  parts = Chaine.split(",");
    ChaineSauver =document.getElementById("LigneMax").innerHTML*1-1+","
-   
+
     for ( i = 1; i < parts.length; i++) {
-       
+
        var Posi = "C" + i
        if (document.getElementById(Posi).className = "VertBordure") {
           ChaineSauver =ChaineSauver +"1,"
@@ -146,35 +146,42 @@ function SauverCookie()  {
        }
         if (document.getElementById(Posi).className = "RougeBordure") {
           ChaineSauver =ChaineSauver +"3,"
-       }      
-       
+       }
+
     }
    Chaine=  document.getElementById("Chaine").innerHTML=ChaineSauver
- // alert (ChaineSauver)
+   ColorierChaine()
+  // alert (ChaineSauver)
 }
 
 
-   function Loader() {
+  function Loader() {
      //document.cookie = "evenement=John; path=/; expires=Tue, 19 Jan 2038 03:14:07 GMT"
+     ColorierChaine()
       name="evenement"
         let matches = document.cookie.match(new RegExp(
     "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-  ));
-  //alert(decodeURIComponent(matches[1]))
+    ));
+    //alert(decodeURIComponent(matches[1]))
       document.getElementById("Chaine").innerHTML=  decodeURIComponent(matches[1]) +",C"
- //     alert( document.cookie )
-  //
-  //       //  let Chaine = checkCookie("evenement");
+      ColorierChaine()
+    }
+  function ColorierChaine() {
+    alert("colorier")
+    // if (document.getElementById("LigneMax").innerHTML*1>1) {
+    //   document.getElementById('LigneLigne').style.visibility = "visible"
+    // }
+
       Chaine=  document.getElementById("Chaine").innerHTML
       const  parts = Chaine.split(",");
-       var Max=parts[0]
+       var Max=parts[0]*1
         var  LigneActuel=parts[0]*1+1
        document.getElementById("LigneMax").innerHTML=LigneActuel
          document.getElementById("LigneBout").innerHTML="/"+parts.length
          for ( i = 1; i < parts.length; i++) {
- 
+
               var Posi = "C" + i
-              var Ligne = 'L' + i
+              var Ligne = "L" + i
               if (i<=Max) {
               	parts[i]=4
               }
@@ -187,16 +194,18 @@ function SauverCookie()  {
                if (parts[i]==3) {
                   document.getElementById(Posi).className = "RougeBordure";
               }
-                if (parts[i]==4) {
- 
-              	document.getElementById(Ligne).className = "PasAfficheVide";
-              }
-              else {
-              	document.getElementById(Ligne).className = "AfficheVide";
-              }
- 
- 
+              // if (parts[i]==4) {
+              // 	document.getElementById(Ligne).className = "PasAfficheVide";
+              // }
        }
+      // alert(document.getElementById("LigneMax").innerHTML)
+      // if (document.getElementById("LigneMax").innerHTML*1>1) {
+         // document.getElementById("BlocReaffiche").className="Reaffiche2"
+       //}
+       // else {
+       //   document.getElementById("BlocReaffiche").className="Reaffiche1"
+       // }
+//alert("fin colorier")
    }
   function myFunction11() {
     document.getElementById('C1').className = "VertBordure";
@@ -207,24 +216,23 @@ function SauverCookie()  {
   function myFunction31() {
     document.getElementById('C1').className = "RougeBordure";
     }
-  function Gateau() {
-   alert("ok")
-
-
-  }
 
   function  Cacher() {
-
+    JouerSon()
     var Acacher = document.getElementById("LigneMax").innerHTML
-   var Ligne = 'L' + Acacher
+    var Ligne = 'L' + Acacher
     document.getElementById(Ligne).className = "PasAfficheVide";
+    // document.getElementById("BlocReaffiche").className="Reaffiche2"
+
      UpMax()
-
     }
-
+  function JouerSon() {
+        var sound = document.getElementById("MonSon");
+          sound.play();}
 
 </script>
 <body onload="Loader()">
+<audio  id="MonSon" src="Image\Son.wav"></audio>
 <DIV id="Chaine">0,1,2,3,2,1,1,2,2,1,2,3,1,2,2,1,3,2,3,2,2,1,2,1,1,1,1,1,1,2,3,2,2,1,1,3,1,2,1,2,1,3,2,2,3,1,1,1,1,2,1,1,1,1,2,1,2</DIV>
 
 
@@ -233,81 +241,83 @@ function SauverCookie()  {
  <table padding="0px 0;" align="center" min-width: 75%; >
   <tr>
    <td colspan="4">
-     <img style="transform:rotate(-90deg)" src="Image\Blason1.png" class="LienHtml" width="10px" style="display: inline;"> 
+     <img style="transform:rotate(-90deg)" src="Image\Blason1.png" class="LienHtml" width="10px" style="display: inline;">
     <a style= "font-family:verdana; font-size: 16px; width: 100%;"  target="_blank" href="https://docs.google.com/spreadsheets/d/1UqUM6mdKNUDi7H5lR1VKQUsaN7sHH9jdh9ZfREv1xxQ/edit?usp=sharing">Lien vers les bâtiements journaliers du fichier de Flo</a>
    <img style="transform:rotate(90deg)" src="Image\Blason1.png" class="LienHtml" width="10px" style="display: inline;">
    </td>
 </tr>
  <tr align="center" style= "font-family:verdana; font-size: 14px;  width: 100%"        >
-   <td colspan="4" >
+   <td colspan="2" >
      <img width= "30px;" style="display: inline;cursor:pointer;"    height= "30px;" onclick="Cacher()" src="Image/CocheNon.png">
-    Masquer la quête <DIV style="display: inline" id="LigneMax" >1</DIV><DIV style="display: inline" id="LigneBout" /?</DIV>
-
-      <DIV id="LigneLigne" style="display: inline; visibility:hidden;" >
-     <img onclick='Afficher()' style="display: inline" width= "30px;" height= "30px;" src="Image/Back.png">
-             Réafficher la quête <DIV style="display: inline;" id="LigneMax2" >?</DIV></DIV>
-
-
-   </td>
+    Masquer la quête <DIV style="display: inline" id="LigneMax" >1</DIV>
+    <DIV style="display: inline" id="LigneBout" /?</DIV>
+    </td>
+      <td colspan="2" >
+      <!-- <DIV id="BlocReaffiche" class="Reaffiche2" style="display: inline;" > -->
+          <img onclick="Afficher()" style="display: inline;cursor:pointer;" width= "30px;" height= "30px;" src="Image/Back.png">
+          <div onclick="Afficher()" style="display: inline;cursor:pointer;">Réafficher la quête </div>
+          <DIV style="display: inline;" id="LigneMax2" >?</DIV>
+        <!-- </DIV> -->
+      </td>
 </tr>
  </table>
  <table padding="0px 0;" align="center" min-width: 75%; >
-<tr id='L1' class='AfficheVide'><td class='VertBordure' id='C1' >Collectez des pièces</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C1').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C1').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L2' class='AfficheVide'><td class='VertBordure' id='C2' >Produire Atelier 8x5min</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C2').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C2').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L3' class='AfficheVide'><td class='VertBordure' id='C3' >Dépenser 8 PC</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C3').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C3').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L4' class='AfficheVide'><td class='VertBordure' id='C4' >Produire T1 2x3h</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C4').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C4').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L5' class='AfficheVide'><td class='VertBordure' id='C5' >Produire Atelier 7x15min</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C5').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C5').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L6' class='AfficheVide'><td class='VertBordure' id='C6' >Utilisez 1 sort</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C6').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C6').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L7' class='AfficheVide'><td class='VertBordure' id='C7' >Résoudre 4 rencontres <br>Produire Atelier 2x3h</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C7').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C7').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L8' class='AfficheVide'><td class='VertBordure' id='C8' >Collectez 4 reliques<br>Produire T1 4x3h</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C8').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C8').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L9' class='AfficheVide'><td class='VertBordure' id='C9' >Dépensez 4 PC<br>Acceptez 3 offres du grossiste</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C9').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C9').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L10' class='AfficheVide'><td class='VertBordure' id='C10' >Négociez 2 rencontres province<strong> OU </strong>Utilisez 2 béné unité<br>Produire T1 4x3h</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C10').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C10').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L11' class='AfficheVide'><td class='VertBordure' id='C11' >Produire Atelier 4x9h<strong> OU </strong>Produire T1 4x9h<br>Dépensez 10 PC</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C11').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C11').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L12' class='AfficheVide'><td class='VertBordure' id='C12' >Résoudre 4 rencontres <br>Produire Atelier 6x1h</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C12').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C12').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L13' class='AfficheVide'><td class='VertBordure' id='C13' >Obtenez 200 fragments<strong> OU </strong>Recrutez des unités<br>Collectez 2 catalyseurs<strong> OU </strong>Combattre 2 rencontres province</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C13').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C13').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L14' class='AfficheVide'><td class='VertBordure' id='C14' >Dépenser 8 PC<strong> OU </strong>Produire T1 6x3h<br>Obtenez 12 visions<strong> OU </strong>Collectez 4 reliques</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C14').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C14').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L15' class='AfficheVide'><td class='VertBordure' id='C15' >Collectez des pièces<br>Dépensez 4 PC</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C15').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C15').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L16' class='AfficheVide'><td class='VertBordure' id='C16' >Produire des marchandises<strong> OU </strong>Produire Atelier 3x9h<br>Résoudre 4 rencontres</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C16').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C16').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L17' class='AfficheVide'><td class='VertBordure' id='C17' >Obtenez 6 visions<strong> OU </strong>Négociez 3 rencontres province<br>Collectez 2 sorts<strong> OU </strong>Collectez 2 catalyseurs</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C17').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C17').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L18' class='AfficheVide'><td class='VertBordure' id='C18' >Résoudre 4 rencontres <br>Produire Atelier 3x9h</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C18').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C18').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L19' class='AfficheVide'><td class='VertBordure' id='C19' >Obtenez 400 fragments<strong> OU </strong>Explorez 1 province<br>Produire Atelier 2x3h</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C19').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C19').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L20' class='AfficheVide'><td class='VertBordure' id='C20' >Résoudre 4 rencontres province<strong> OU </strong>Obtenez 12 visions<br>Collectez 8 reliques</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C20').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C20').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L21' class='AfficheVide'><td class='VertBordure' id='C21' >Collectez des pièces<br>Produire Atelier 3x1h</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C21').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C21').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L22' class='AfficheVide'><td class='VertBordure' id='C22' >Résoudre 2 rencontres<br>Obtenez 6 visions<strong> OU </strong>Explorez 1 province</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C22').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C22').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L23' class='AfficheVide'><td class='VertBordure' id='C23' >Utilisez 3 sorts<br>Produire des matériaux</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C23').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C23').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L24' class='AfficheVide'><td class='VertBordure' id='C24' >Dépensez 4 PC<br>Produire des marchandises</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C24').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C24').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L25' class='AfficheVide'><td class='VertBordure' id='C25' >Résoudre 4 rencontres<br>Produire des matériaux</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C25').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C25').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L26' class='AfficheVide'><td class='VertBordure' id='C26' >Up 1 bat lv 5+<strong> OU </strong>Explorez 1 province<br>Achetez 4 PC</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C26').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C26').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L27' class='AfficheVide'><td class='VertBordure' id='C27' >Collectez 4 reliques<br>Produire des marchandises</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C27').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C27').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L28' class='AfficheVide'><td class='VertBordure' id='C28' >Recrutez des unités<strong> OU </strong>Collectez des pièces<br>Dépensez 12 PC</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C28').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C28').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L29' class='AfficheVide'><td class='VertBordure' id='C29' >Résoudre 6 rencontres <br>Obtenez 600 fragments</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C29').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C29').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L30' class='AfficheVide'><td class='VertBordure' id='C30' >Achetez 8 PC<br>Aidez 7 voisins</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C30').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C30').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L31' class='AfficheVide'><td class='VertBordure' id='C31' >Produire des matériaux<br>Collectez 2 catalyseurs<strong> OU </strong>Obtenez 24 visions</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C31').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C31').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L32' class='AfficheVide'><td class='VertBordure' id='C32' >Collectez 1 sort<strong> OU </strong>Obtenez 600 fragments<br>Produire des marchandises</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C32').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C32').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L33' class='AfficheVide'><td class='VertBordure' id='C33' >Résoudre 4 rencontres province<br>Achetez 8 PC<strong> OU </strong>Obtenez 12 visions</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C33').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C33').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L34' class='AfficheVide'><td class='VertBordure' id='C34' >Produire des marchandises<br>Up 2 bat lv 5+<strong> OU </strong>Dépensez 12 PC</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C34').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C34').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L35' class='AfficheVide'><td class='VertBordure' id='C35' >Collectez 4 reliques<br>Produire T1 2x9h</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C35').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C35').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L36' class='AfficheVide'><td class='VertBordure' id='C36' >Résoudre 6 rencontres<br>Produire des matériaux</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C36').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C36').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L37' class='AfficheVide'><td class='VertBordure' id='C37' >Recherchez 1 techno<strong> OU </strong>Obtenez 24 visions<br>Dépensez 16 PC</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C37').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C37').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L38' class='AfficheVide'><td class='VertBordure' id='C38' >Obtenez 600 fragments<br>Acceptez 3 offres du grossiste</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C38').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C38').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L39' class='AfficheVide'><td class='VertBordure' id='C39' >Produire des marchandises<br>Collectez 2 catalyseurs</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C39').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C39').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L40' class='AfficheVide'><td class='VertBordure' id='C40' >Obtenez 800 fragments<strong> OU </strong>Recrutez des unités<br>Produire des matériaux</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C40').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C40').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L41' class='AfficheVide'><td class='VertBordure' id='C41' >Produire des marchandises<strong> OU </strong>Recherchez 1 techno<br>Collectez 12 reliques<strong> OU </strong>Obtenez 18 visions</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C41').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C41').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L42' class='AfficheVide'><td class='VertBordure' id='C42' >Résoudre 4 rencontres <br>Collectez 1 catalyseur<strong> OU </strong>Explorez 1 province</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C42').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C42').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L43' class='AfficheVide'><td class='VertBordure' id='C43' >Produire des marchandises<br>Collectez 1 sort<strong> OU </strong>Collectez 1 catalyseur</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C43').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C43').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L44' class='AfficheVide'><td class='VertBordure' id='C44' >Collectez 12 reliques<br>Produire T1 4x9h</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C44').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C44').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L45' class='AfficheVide'><td class='VertBordure' id='C45' >Obtenez 400 fragments<strong> OU </strong>Recrutez des unités<br>Produire des matériaux</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C45').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C45').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L46' class='AfficheVide'><td class='VertBordure' id='C46' >Résoudre 6 rencontres <br>Acceptez 3 offres du grossiste<strong> OU </strong>Collectez 2 catalyseurs</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C46').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C46').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L47' class='AfficheVide'><td class='VertBordure' id='C47' >Produire des marchandises<br>Dépensez 12 PC</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C47').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C47').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L48' class='AfficheVide'><td class='VertBordure' id='C48' >Résoudre 8 rencontres <br>Produire des matériaux</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C48').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C48').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L49' class='AfficheVide'><td class='VertBordure' id='C49' >Collectez 16 reliques<strong> OU </strong>Collectez 2 catalyseurs<br>Up 1 bat lv 5+<strong> OU </strong>Utilisez 3 béné pièces</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C49').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C49').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L50' class='AfficheVide'><td class='VertBordure' id='C50' >Utilisez 3 sorts<br>Produire des matériaux</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C50').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C50').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L51' class='AfficheVide'><td class='VertBordure' id='C51' >Dépensez 12 PC<br>Produire des marchandises</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C51').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C51').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L52' class='AfficheVide'><td class='VertBordure' id='C52' >Résoudre 6 rencontres tournoi <strong> OU </strong>Explorez 1 province<br>Produire des matériaux</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C52').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C52').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L53' class='AfficheVide'><td class='VertBordure' id='C53' >Recrutez des unités<strong> OU </strong>Obtenez 12 visions<br>Produire des marchandises</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C53').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C53').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L54' class='AfficheVide'><td class='VertBordure' id='C54' >Explorez 1 province<strong> OU </strong>Up 2 bat lv 5+<br>Produire des marchandises<strong> OU </strong>Obtenez 18 visions</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C54').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C54').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L55' class='AfficheVide'><td class='VertBordure' id='C55' >Produire des matériaux<br>Dépensez 12 PC</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C55').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C55').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
-<tr id='L56' class='AfficheVide'><td class='VertBordure' id='C56' >Collectez 12 reliques<br>Produire des marchandises<strong> OU </strong>Collectez 2 catalyseurs</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1'  onclick="getElementById('C56').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C56').className = 'RougeBordure'"<img width= '25px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L1' class='AfficheVide'><td class='VertBordure' id='C1' >Collectez des pièces</td><td class='VertBordure1' onclick="getElementById('C1').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C1').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C1').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L2' class='AfficheVide'><td class='VertBordure' id='C2' >Produire Atelier 8x5min</td><td class='VertBordure1' onclick="getElementById('C2').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C2').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C2').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L3' class='AfficheVide'><td class='VertBordure' id='C3' >Dépenser 8 PC</td><td class='VertBordure1' onclick="getElementById('C3').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C3').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C3').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L4' class='AfficheVide'><td class='VertBordure' id='C4' >Produire T1 2x3h</td><td class='VertBordure1' onclick="getElementById('C4').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C4').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C4').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L5' class='AfficheVide'><td class='VertBordure' id='C5' >Produire Atelier 7x15min</td><td class='VertBordure1' onclick="getElementById('C5').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C5').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C5').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L6' class='AfficheVide'><td class='VertBordure' id='C6' >Utilisez 1 sort</td><td class='VertBordure1' onclick="getElementById('C6').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C6').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C6').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L7' class='AfficheVide'><td class='VertBordure' id='C7' >Résoudre 4 rencontres <br>Produire Atelier 2x3h</td><td class='VertBordure1' onclick="getElementById('C7').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C7').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C7').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L8' class='AfficheVide'><td class='VertBordure' id='C8' >Collectez 4 reliques<br>Produire T1 4x3h</td><td class='VertBordure1' onclick="getElementById('C8').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C8').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C8').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L9' class='AfficheVide'><td class='VertBordure' id='C9' >Dépensez 4 PC<br>Acceptez 3 offres du grossiste</td><td class='VertBordure1' onclick="getElementById('C9').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C9').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C9').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L10' class='AfficheVide'><td class='VertBordure' id='C10' >Négociez 2 rencontres province<strong> OU </strong>Utilisez 2 béné unité<br>Produire T1 4x3h</td><td class='VertBordure1' onclick="getElementById('C10').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C10').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C10').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L11' class='AfficheVide'><td class='VertBordure' id='C11' >Produire Atelier 4x9h<strong> OU </strong>Produire T1 4x9h<br>Dépensez 10 PC</td><td class='VertBordure1' onclick="getElementById('C11').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C11').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C11').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L12' class='AfficheVide'><td class='VertBordure' id='C12' >Résoudre 4 rencontres <br>Produire Atelier 6x1h</td><td class='VertBordure1' onclick="getElementById('C12').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C12').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C12').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L13' class='AfficheVide'><td class='VertBordure' id='C13' >Obtenez 200 fragments<strong> OU </strong>Recrutez des unités<br>Collectez 2 catalyseurs<strong> OU </strong>Combattre 2 rencontres province</td><td class='VertBordure1' onclick="getElementById('C13').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C13').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C13').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L14' class='AfficheVide'><td class='VertBordure' id='C14' >Dépenser 8 PC<strong> OU </strong>Produire T1 6x3h<br>Obtenez 12 visions<strong> OU </strong>Collectez 4 reliques</td><td class='VertBordure1' onclick="getElementById('C14').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C14').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C14').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L15' class='AfficheVide'><td class='VertBordure' id='C15' >Collectez des pièces<br>Dépensez 4 PC</td><td class='VertBordure1' onclick="getElementById('C15').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C15').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C15').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L16' class='AfficheVide'><td class='VertBordure' id='C16' >Produire des marchandises<strong> OU </strong>Produire Atelier 3x9h<br>Résoudre 4 rencontres</td><td class='VertBordure1' onclick="getElementById('C16').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C16').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C16').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L17' class='AfficheVide'><td class='VertBordure' id='C17' >Obtenez 6 visions<strong> OU </strong>Négociez 3 rencontres province<br>Collectez 2 sorts<strong> OU </strong>Collectez 2 catalyseurs</td><td class='VertBordure1' onclick="getElementById('C17').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C17').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C17').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L18' class='AfficheVide'><td class='VertBordure' id='C18' >Résoudre 4 rencontres <br>Produire Atelier 3x9h</td><td class='VertBordure1' onclick="getElementById('C18').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C18').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C18').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L19' class='AfficheVide'><td class='VertBordure' id='C19' >Obtenez 400 fragments<strong> OU </strong>Explorez 1 province<br>Produire Atelier 2x3h</td><td class='VertBordure1' onclick="getElementById('C19').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C19').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C19').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L20' class='AfficheVide'><td class='VertBordure' id='C20' >Résoudre 4 rencontres province<strong> OU </strong>Obtenez 12 visions<br>Collectez 8 reliques</td><td class='VertBordure1' onclick="getElementById('C20').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C20').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C20').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L21' class='AfficheVide'><td class='VertBordure' id='C21' >Collectez des pièces<br>Produire Atelier 3x1h</td><td class='VertBordure1' onclick="getElementById('C21').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C21').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C21').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L22' class='AfficheVide'><td class='VertBordure' id='C22' >Résoudre 2 rencontres<br>Obtenez 6 visions<strong> OU </strong>Explorez 1 province</td><td class='VertBordure1' onclick="getElementById('C22').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C22').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C22').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L23' class='AfficheVide'><td class='VertBordure' id='C23' >Utilisez 3 sorts<br>Produire des matériaux</td><td class='VertBordure1' onclick="getElementById('C23').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C23').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C23').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L24' class='AfficheVide'><td class='VertBordure' id='C24' >Dépensez 4 PC<br>Produire des marchandises</td><td class='VertBordure1' onclick="getElementById('C24').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C24').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C24').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L25' class='AfficheVide'><td class='VertBordure' id='C25' >Résoudre 4 rencontres<br>Produire des matériaux</td><td class='VertBordure1' onclick="getElementById('C25').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C25').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C25').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L26' class='AfficheVide'><td class='VertBordure' id='C26' >Up 1 bat lv 5+<strong> OU </strong>Explorez 1 province<br>Achetez 4 PC</td><td class='VertBordure1' onclick="getElementById('C26').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C26').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C26').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L27' class='AfficheVide'><td class='VertBordure' id='C27' >Collectez 4 reliques<br>Produire des marchandises</td><td class='VertBordure1' onclick="getElementById('C27').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C27').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C27').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L28' class='AfficheVide'><td class='VertBordure' id='C28' >Recrutez des unités<strong> OU </strong>Collectez des pièces<br>Dépensez 12 PC</td><td class='VertBordure1' onclick="getElementById('C28').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C28').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C28').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L29' class='AfficheVide'><td class='VertBordure' id='C29' >Résoudre 6 rencontres <br>Obtenez 600 fragments</td><td class='VertBordure1' onclick="getElementById('C29').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C29').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C29').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L30' class='AfficheVide'><td class='VertBordure' id='C30' >Achetez 8 PC<br>Aidez 7 voisins</td><td class='VertBordure1' onclick="getElementById('C30').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C30').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C30').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L31' class='AfficheVide'><td class='VertBordure' id='C31' >Produire des matériaux<br>Collectez 2 catalyseurs<strong> OU </strong>Obtenez 24 visions</td><td class='VertBordure1' onclick="getElementById('C31').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C31').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C31').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L32' class='AfficheVide'><td class='VertBordure' id='C32' >Collectez 1 sort<strong> OU </strong>Obtenez 600 fragments<br>Produire des marchandises</td><td class='VertBordure1' onclick="getElementById('C32').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C32').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C32').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L33' class='AfficheVide'><td class='VertBordure' id='C33' >Résoudre 4 rencontres province<br>Achetez 8 PC<strong> OU </strong>Obtenez 12 visions</td><td class='VertBordure1' onclick="getElementById('C33').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C33').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C33').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L34' class='AfficheVide'><td class='VertBordure' id='C34' >Produire des marchandises<br>Up 2 bat lv 5+<strong> OU </strong>Dépensez 12 PC</td><td class='VertBordure1' onclick="getElementById('C34').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C34').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C34').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L35' class='AfficheVide'><td class='VertBordure' id='C35' >Collectez 4 reliques<br>Produire T1 2x9h</td><td class='VertBordure1' onclick="getElementById('C35').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C35').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C35').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L36' class='AfficheVide'><td class='VertBordure' id='C36' >Résoudre 6 rencontres<br>Produire des matériaux</td><td class='VertBordure1' onclick="getElementById('C36').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C36').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C36').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L37' class='AfficheVide'><td class='VertBordure' id='C37' >Recherchez 1 techno<strong> OU </strong>Obtenez 24 visions<br>Dépensez 16 PC</td><td class='VertBordure1' onclick="getElementById('C37').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C37').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C37').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L38' class='AfficheVide'><td class='VertBordure' id='C38' >Obtenez 600 fragments<br>Acceptez 3 offres du grossiste</td><td class='VertBordure1' onclick="getElementById('C38').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C38').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C38').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L39' class='AfficheVide'><td class='VertBordure' id='C39' >Produire des marchandises<br>Collectez 2 catalyseurs</td><td class='VertBordure1' onclick="getElementById('C39').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C39').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C39').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L40' class='AfficheVide'><td class='VertBordure' id='C40' >Obtenez 800 fragments<strong> OU </strong>Recrutez des unités<br>Produire des matériaux</td><td class='VertBordure1' onclick="getElementById('C40').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C40').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C40').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L41' class='AfficheVide'><td class='VertBordure' id='C41' >Produire des marchandises<strong> OU </strong>Recherchez 1 techno<br>Collectez 12 reliques<strong> OU </strong>Obtenez 18 visions</td><td class='VertBordure1' onclick="getElementById('C41').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C41').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C41').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L42' class='AfficheVide'><td class='VertBordure' id='C42' >Résoudre 4 rencontres <br>Collectez 1 catalyseur<strong> OU </strong>Explorez 1 province</td><td class='VertBordure1' onclick="getElementById('C42').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C42').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C42').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L43' class='AfficheVide'><td class='VertBordure' id='C43' >Produire des marchandises<br>Collectez 1 sort<strong> OU </strong>Collectez 1 catalyseur</td><td class='VertBordure1' onclick="getElementById('C43').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C43').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C43').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L44' class='AfficheVide'><td class='VertBordure' id='C44' >Collectez 12 reliques<br>Produire T1 4x9h</td><td class='VertBordure1' onclick="getElementById('C44').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C44').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C44').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L45' class='AfficheVide'><td class='VertBordure' id='C45' >Obtenez 400 fragments<strong> OU </strong>Recrutez des unités<br>Produire des matériaux</td><td class='VertBordure1' onclick="getElementById('C45').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C45').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C45').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L46' class='AfficheVide'><td class='VertBordure' id='C46' >Résoudre 6 rencontres <br>Acceptez 3 offres du grossiste<strong> OU </strong>Collectez 2 catalyseurs</td><td class='VertBordure1' onclick="getElementById('C46').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C46').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C46').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L47' class='AfficheVide'><td class='VertBordure' id='C47' >Produire des marchandises<br>Dépensez 12 PC</td><td class='VertBordure1' onclick="getElementById('C47').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C47').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C47').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L48' class='AfficheVide'><td class='VertBordure' id='C48' >Résoudre 8 rencontres <br>Produire des matériaux</td><td class='VertBordure1' onclick="getElementById('C48').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C48').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C48').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L49' class='AfficheVide'><td class='VertBordure' id='C49' >Collectez 16 reliques<strong> OU </strong>Collectez 2 catalyseurs<br>Up 1 bat lv 5+<strong> OU </strong>Utilisez 3 béné pièces</td><td class='VertBordure1' onclick="getElementById('C49').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C49').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C49').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L50' class='AfficheVide'><td class='VertBordure' id='C50' >Utilisez 3 sorts<br>Produire des matériaux</td><td class='VertBordure1' onclick="getElementById('C50').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C50').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C50').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L51' class='AfficheVide'><td class='VertBordure' id='C51' >Dépensez 12 PC<br>Produire des marchandises</td><td class='VertBordure1' onclick="getElementById('C51').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C51').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C51').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L52' class='AfficheVide'><td class='VertBordure' id='C52' >Résoudre 6 rencontres tournoi <strong> OU </strong>Explorez 1 province<br>Produire des matériaux</td><td class='VertBordure1' onclick="getElementById('C52').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C52').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C52').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L53' class='AfficheVide'><td class='VertBordure' id='C53' >Recrutez des unités<strong> OU </strong>Obtenez 12 visions<br>Produire des marchandises</td><td class='VertBordure1' onclick="getElementById('C53').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C53').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C53').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L54' class='AfficheVide'><td class='VertBordure' id='C54' >Explorez 1 province<strong> OU </strong>Up 2 bat lv 5+<br>Produire des marchandises<strong> OU </strong>Obtenez 18 visions</td><td class='VertBordure1' onclick="getElementById('C54').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C54').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C54').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L55' class='AfficheVide'><td class='VertBordure' id='C55' >Produire des matériaux<br>Dépensez 12 PC</td><td class='VertBordure1' onclick="getElementById('C55').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C55').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C55').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
+   <tr id='L56' class='AfficheVide'><td class='VertBordure' id='C56' >Collectez 12 reliques<br>Produire des marchandises<strong> OU </strong>Collectez 2 catalyseurs</td><td class='VertBordure1' onclick="getElementById('C56').className = 'VertBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='OrangeBordure1' onclick="getElementById('C56').className = 'OrangeBordure'"><img width= '25px;' src='Image/Ovale.png'></td><td class='RougeBordure1'  onclick="getElementById('C56').className = 'RougeBordure'"><img width= '26px;' src='Image/Ovale.png'></td></tr>
 
 
  </table>
