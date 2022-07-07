@@ -95,19 +95,17 @@
     JouerSon()
       var AAfficher = document.getElementById("LigneMax").innerHTML
       LigneActuel=AAfficher*1-1
-   //   alert(LigneActuel)
       if(LigneActuel>0) {
         var Ligne = 'L' + LigneActuel
         document.getElementById(Ligne).className = "AfficheVide";
-        }
-        else {
-        //document.getElementById("LigneLigne").style.visibility = "hidden"
+        DownMax()
         }
       }
   function  DownMax() {
     var Max=document.getElementById("LigneMax").innerHTML
     LigneActuel=Max*1-1
     Max=Max-2
+
     document.getElementById("LigneMax").innerHTML = LigneActuel
     document.getElementById("LigneMax2").innerHTML = Max
       // if (Max<1) {
@@ -123,31 +121,34 @@
 
     var Max=document.getElementById("LigneMax").innerHTML
     Max=Max*1+1
-    alert(document.getElementById("LigneMax").innerHTML + "/" + Max)
+  //  alert(document.getElementById("LigneMax").innerHTML + "/" + Max)
     document.getElementById("LigneMax").innerHTML = Max
-    alert(document.getElementById("LigneMax").innerHTML )
+  //  alert(document.getElementById("LigneMax").innerHTML )
     document.getElementById("LigneMax2").innerHTML = Max-1
     // document.getElementById("BlocReaffiche").className="Reaffiche2"
     SauverCookie()
     }
   function SauverCookie()  {
    Chaine=  document.getElementById("Chaine").innerHTML
+
    const  parts = Chaine.split(",");
    ChaineSauver =document.getElementById("LigneMax").innerHTML*1-1+","
 
+//alert(ChaineSauver)
     for ( i = 1; i < parts.length; i++) {
 
        var Posi = "C" + i
-       if (document.getElementById(Posi).className = "VertBordure") {
+
+       if (document.getElementById(Posi).className == "VertBordure") {
           ChaineSauver =ChaineSauver +"1,"
        }
-       if (document.getElementById(Posi).className = "OrangeBordure") {
+       if (document.getElementById(Posi).className == "OrangeBordure") {
           ChaineSauver =ChaineSauver +"2,"
        }
-        if (document.getElementById(Posi).className = "RougeBordure") {
+        if (document.getElementById(Posi).className == "RougeBordure") {
           ChaineSauver =ChaineSauver +"3,"
        }
-
+       //alert(ChaineSauver)
     }
    document.getElementById("Chaine").innerHTML=ChaineSauver
    ColorierChaine()
@@ -167,7 +168,7 @@
       ColorierChaine()
     }
   function ColorierChaine() {
-    //alert("colorier")
+  //  alert("colorier")
     // if (document.getElementById("LigneMax").innerHTML*1>1) {
     //   document.getElementById('LigneLigne').style.visibility = "visible"
     // }
@@ -249,7 +250,8 @@
  <tr align="center" style= "font-family:verdana; font-size: 14px;  width: 100%"        >
    <td colspan="2" >
      <img width= "30px;" style="display: inline;cursor:pointer;"    height= "30px;" onclick="Cacher()" src="Image/CocheNon.png">
-    Masquer la quête <DIV style="display: inline" id="LigneMax" >1</DIV>
+    <div onclick="Cacher()" style="display: inline;cursor:pointer;">Masquer la quête </div>
+      <DIV style="display: inline" id="LigneMax" >1</DIV>
     <DIV style="display: inline" id="LigneBout" /?</DIV>
     </td>
       <td colspan="2" >
