@@ -123,10 +123,10 @@
       font-family: 'Dancing Script', cursiv;
       font-size: 20px;
       color: #051E4C;
-      background: center;
+      <!-- background: center;
       background-repeat: no-repeat;
       background-size: auto 99%;
-      background-image:url(Image/EcranJournal.png)
+      background-image:url(Image/EcranJournal.png) -->
     }
 
   .Pointeur {
@@ -139,7 +139,7 @@
     max-width:31%;
     height:62%;
     position:fixed;
-
+    z-index: 1;
   }
   .Contenu2 {
     Top:9%;
@@ -148,12 +148,32 @@
     max-width:31%;
     height:62%;
     position:fixed;
-
+    z-index: 2;
   }
+  .Contenu3 {
+    Top:0%;
+    Left:10%;
+    width:80%;
+    max-width:80%;
+    height:86%;
+    position:fixed;
+
+    z-index: 0;
+  }
+ table {
+   Top:5%;
+   Left:40%;
+   position:fixed;
+  text-align:center
+  border: 1px solid black;
+  z-index: 2;
+
+ }
+
 </style>
 <body onload="Debut()">
 <audio  id="MonSon" src="Image\Son.wav"></audio>
-<table style="align:center;text-align:center;margin-left: 40%;margin-top:3%;border: 1px solid black;">
+<table>
   <tr >
     <td>
       <p id="Posi">0</p>
@@ -171,7 +191,7 @@
 
   </tr>
 </table>
-
+<img class="Contenu3 id="Contient3" src="Image\EcranJournal.png" >
 <div class="Contenu1" id="Contient1">dgh dfgb dfd bdjkf d skhf sjd hs;udfh sj; sdf s sfkvkj iljnfvjn ksjf s;fjk vs;fv jisfj vk;f ;kf fk fk fk </div>
 <div class="Contenu2" id="Contient2">dgh dfgb dfd b </div>
 <!-- <table style="width:80%; osition:absolute;margin-top:-0%;margin-left:13%"">
