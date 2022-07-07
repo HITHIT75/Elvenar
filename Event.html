@@ -94,8 +94,8 @@
   function  Afficher() {
     JouerSon()
       var AAfficher = document.getElementById("LigneMax").innerHTML
-      LigneActuel=AAfficher*1
-      alert(LigneActuel)
+      LigneActuel=AAfficher*1-1
+   //   alert(LigneActuel)
       if(LigneActuel>0) {
         var Ligne = 'L' + LigneActuel
         document.getElementById(Ligne).className = "AfficheVide";
@@ -149,7 +149,7 @@
        }
 
     }
-   Chaine=  document.getElementById("Chaine").innerHTML=ChaineSauver
+   document.getElementById("Chaine").innerHTML=ChaineSauver
    ColorierChaine()
   // alert (ChaineSauver)
 }
@@ -167,7 +167,7 @@
       ColorierChaine()
     }
   function ColorierChaine() {
-    alert("colorier")
+    //alert("colorier")
     // if (document.getElementById("LigneMax").innerHTML*1>1) {
     //   document.getElementById('LigneLigne').style.visibility = "visible"
     // }
