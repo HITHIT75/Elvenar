@@ -131,10 +131,10 @@
     SauverCookie()
     }
   function SauverCookie()  {
-   Chaine=  document.getElementById("Chaine").innerHTML
+      Chaine=  document.getElementById("Chaine").innerHTML
 
-   const  parts = Chaine.split(",");
-   ChaineSauver =document.getElementById("LigneMax").innerHTML*1-1+","
+    const  parts = Chaine.split(",");
+      ChaineSauver =document.getElementById("LigneMax").innerHTML*1-1+","
 
 //alert(ChaineSauver)
     for ( i = 1; i < parts.length-1; i++) {
@@ -152,7 +152,8 @@
        }
        //alert(ChaineSauver)
     }
-   document.getElementById("Chaine").innerHTML=ChaineSauver 
+     ChaineSauver = ChaineSauver.substring1,ChaineSauver.length-1)
+      document.getElementById("Chaine").innerHTML=ChaineSauver 
      document.getElementById("Chaine2").innerHTML=ChaineSauver +"Cookie?"
    
      document.cookie = "event=" + ChaineSauver +"; path=/; expires=Tue, 19 Jan 2038 03:14:07 GMT"
