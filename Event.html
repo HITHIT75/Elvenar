@@ -105,7 +105,9 @@
     var Max=document.getElementById("LigneMax").innerHTML
     LigneActuel=Max*1-1
     Max=Max-2
-
+   if (Max<1) {
+   Max=""
+   }
     document.getElementById("LigneMax").innerHTML = LigneActuel
     document.getElementById("LigneMax2").innerHTML = Max
       // if (Max<1) {
@@ -168,6 +170,7 @@
     ));
     //alert(decodeURIComponent(matches[1]))
       document.getElementById("Chaine").innerHTML=  decodeURIComponent(matches[1]) +",C"
+     
       ColorierChaine()
     }
   function ColorierChaine() {
@@ -181,6 +184,7 @@
        var Max=parts[0]*1
         var  LigneActuel=parts[0]*1+1
        document.getElementById("LigneMax").innerHTML=LigneActuel
+     document.getElementById("LigneMax2").innerHTML=LigneActuel-1
          document.getElementById("LigneBout").innerHTML="/"+parts.length
          for ( i = 1; i < parts.length; i++) {
 
