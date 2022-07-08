@@ -11,17 +11,17 @@
         sound.play();}
   function CalculInitial() {
     besoinAtelier1 = 100 * 2 *50 // temps de prod en minute
-    besoinAtelier2 = 80 * 10 * 180
-    besoinAtelier3 = 50 * 5 * 9 *60
+    besoinAtelier2 = 80 * 10 * 3 * 60
+    besoinAtelier3 = 50 * 10 * 9 * 60
     besoinAtelier4 = 40 * 5 * 12 * 60
     TotalbesoinAtelier = besoinAtelier1+besoinAtelier2+besoinAtelier3+besoinAtelier4
     document.getElementById("PC1").innerText=Math.round(besoinAtelier1*100/TotalbesoinAtelier)+"%"
     document.getElementById("PC2").innerText=Math.round(besoinAtelier2*100/TotalbesoinAtelier)+"%"
     document.getElementById("PC3").innerText=Math.round(besoinAtelier3*100/TotalbesoinAtelier)+"%"
     document.getElementById("PC4").innerText=Math.round(besoinAtelier4*100/TotalbesoinAtelier)+"%"
-    besoinT1 = 60 * 5 * 9 * 60 // temps de prod en minute
-    besoinT2 = 50 * 3 * 24 * 60
-    besoinT3 = 40 * 3 * 48 *60
+    besoinT1 = 60 * 10 * 3 * 60 // temps de prod en minute
+    besoinT2 = 50 * 4 * 24 * 60
+    besoinT3 = 40 * 2 * 48 *60
     TotalbesoinT1 = besoinT1+besoinT2+besoinT3
     document.getElementById("PC5").innerText=Math.round(besoinT1*100/TotalbesoinT1)+"%"
     document.getElementById("PC6").innerText=Math.round(besoinT2*100/TotalbesoinT1)+"%"
