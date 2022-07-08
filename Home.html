@@ -1,15 +1,47 @@
-
 <head>
 <script>
-    function Test() {
 
-      //alert(document.getElementByClass("Zone1").top)
-      //alert(document.body.width)
-      // 824 = ecran 17
-          // document.getElementById("Corps").width
+      function setCookie(cname, cvalue, exdays) {
+        document.getElementById("Chaine").innerHTML=  cvalue
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        let expires = "expires="+d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      }
+
+      function getCookie(cname) {
+        let name = cname + "=";
+        let ca = document.cookie.split(';');
+        for(let i = 0; i < ca.length; i++) {
+          let c = ca[i];
+          while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
         }
+        return "";
+      }
+
+
+      function checkCookie() {
+        let username = getCookie("Pseudo");
+        if (username != "") {
+         alert("Welcome again " + username);
+         //document.getElementById("Chaine").innerHTML=  username
+        } else {
+          username = prompt("Please enter your name:", "");
+          if (username != "" && username != null) {
+            setCookie("Pseudo", username, 365);
+          }
+        }
+      }
+
+
+
     function Debut() {
-        Test()
+        //checkCookie()
         var alea = Math.random()
         var Position1 = Entier(alea)
         var alea = Math.random()
@@ -126,19 +158,23 @@
 </script>
 </head>
 <style>
-    html { overflow-y: hidden; overflow-x: hidden; }
+    html {
+      overflow-y: hidden;
+      overflow-x: hidden;
+      font-size: 100%;
+     }
     body  {
         font-family: verdana;
-        font-size: 14;
         color: #051E4C;
+        font-size: 1em;
       }
-    .tooltip {
+    <!-- .tooltip {
         position: absolute;
         display: inline;
         z-index: 1;
         top: 5%;
         left: 17%;
-        }
+        } -->
     .tooltip2 {
         position: absolute;
         display: inline;
@@ -153,25 +189,173 @@
         top: 53%;
         left: 18%;
         }
-    #Zone1 {
-      font-size: 22;
-    }
-    .tooltiptext {
+    <!-- .tooltiptext {
         width: 300px;
         display: inline;
         //background-color: #990000;
         color: #051E4C;
         text-align: left;
+      } -->
+      .boite0 {
+          position:fixed;
+          border-style: dashed solid;
+          top: 0%;
+          left:0%;
+          width:10%;
+          height:3%;
+
       }
+    .boite1 {
+        position:fixed;
+        top: 5%;
+        left:5%;
+        width:10%;
+        height:20%;
+        z-index: 5;
+    }
+    .boite2 {
+      position:fixed;
+      top: 5%;
+      left:15%;
+      width:71%;
+      height:20%;
+      z-index: 1;
+    }
+    .boite3 {
+      position:fixed;
+      top: 6%;
+      left:23%;
+      width:62%;
+      height:18%;
+
+      z-index: 2;
+    }
+    .boite4 {
+      position:fixed;
+
+      top: 28%;
+      left:5%;
+      width:71%;
+      height:20%;
+      z-index: 1;
+    }
+    .boite5 {
+      position:fixed;
+      top: 29%;
+      left:7%;
+      width:64%;
+      height:18%;
+      z-index: 2;
+    }
+    .boite6 {
+        position:fixed;
+        top: 28%;
+        left:84%;
+        width:10%;
+        height:20%;
+        z-index: 5;
+    }
+    .boite7 {
+        position:fixed;
+        top: 50%;
+        left:5%;
+        width:10%;
+        height:20%;
+        z-index: 5;
+    }
+    .boite8 {
+      position:fixed;
+      top: 50%;
+      left:15%;
+      width:71%;
+      height:20%;
+      z-index: 1;
+    }
+    .boite9 {
+      position:fixed;
+      top: 51%;
+      left:23%;
+      width:62%;
+      height:18%;
+      z-index: 2;
+    }
+  marquee {
+      width:100%;
+      height:100%;
+      font-size: 1vw;
+     }
+    img {
+
+      height:inherit%;
+    }
+
 </style>
 <body onload="Debut()" >
 <audio  id="MonSon" src="Image\Son.wav"></audio>
-<Div>
+<div class="boite0" id="Chaine">Chaine<div>
+<div class="boite1"><img height="116%;" src="Image\Personage1.png"><div>
+<div class="boite2"><img src="Image\Bulle.png"><div>
+<div class="boite3"><div class="tooltiptext">
+  <marquee  scrollamount="1" direction="up">
+  <div class="tooltiptext" id="Zone1" >
+      <span  id ="mot1">Hello !</span>
+      <span id ="mot2" > sublime   </span>
+      <span id ="mot3" > Toi.    </span><br>
+      <span id ="mot4" >
+        Moi, c'est Wençolivius.<br>
+        je mets ici, de manière brève, le résultat de mes raisonnements
+        toujours cools et disciplinés<br>
+        Pas de blabla inutile, mes recommandations sont à suivre car votre avis
+        m'interesse, dans le respect d'une équité de temps de parole et d'une bonne
+        répartition des avis de 25 caractères différents et pourtant pas semblables.<br><br>
+        Voilà, je vous devais la vérité.<br><br>
+        Au fait sur un autre serveur, il y a Dumachin qui a spoilé l'event de Dutruc ! En utilisant un Off-target rétroactif...
+        On trouve cela scandaleux ! On l'a viré cool et discipliné.<br><br>
+        Qu'en pensez-vous ? Car mon avis vous interesse.
+      </span>
+    </marquee></div></div>
+<div class="boite4"><img src="Image\Bulle2.png"></div>
+<div class="boite5">    <div class="tooltiptext">
+    <marquee  height="85hv" width= "100%" scrollamount="1" direction="up">
+        <span id ="mot5">Salut !</span><br>
+        <span id ="mot6" > je suis la grande AlexAngus ! </span><br>
+        <span id ="mot7" > Je vais te parler ici des </span>
+        <span id ="mot8" >
+           évenements notables touchant la confrérie.
+        </span>
+      </marquee></div></div>
+<div class="boite6"><img src="Image\Personage2.png"></div>
+  <div class="boite7"><img height="100%;" src="Image\Personage3.png"></div>
+  <div class="boite8"><img src="Image\Bulle.png"></div>
+  <div class="boite9">    <div class="tooltiptext">
+    <marquee  height="85hv" width= "85%" scrollamount="1" direction="up">
+      <span id ="mot9">Encore toi !?</span><br>
+      <span id ="mot10" >Moi, j'te cause </span>
+      <span id ="mot11" > des machins </span>
+      <span id ="mot12" >
+        du portail.<br>
+        Sur <strong>'Très con'</strong> du
+        <img src="Image\Nouveau.gif" width="6%"><br>
+        Les solutions arriveront précisement aux calandes élvénariennes.<br>
+        Sur <strong>'Journal'</strong> du
+        <img src="Image\Nouveau.gif" width="6%"><br>
+        Sur <strong>'Tournois'</strong> rien de nouveau, c'est toujours en construction.
+        </span><img src="Image\travaux.gif" width="3%"><br>
+        Sur <strong>'Aventure'</strong> le simulateur demande encore quelques évolutions mais on peut s'amuser avec.
+
+
+    </marquee>
+        </div></div>
+
+
+
+
+<!-- <Div>
 <img src="Image\Personage1.png" onClick="JouerSon()" width="8%" style="float:left">
 
 <img id="Corps" src="Image\Bulle.png" width="79%" max-height="100%" style="float:left">
 <div style="float:left" class="tooltip">
-  <marquee  height="85hv" width= "85%" scrollamount="0" direction="up">
+  <marquee  height="85hv" width= "85%" scrollamount="1" direction="up">
   <div class="tooltiptext" id="Zone1" style="font-size: 14;">
       <span  id ="mot1">Hello !</span>
       <span id ="mot2" > sublime   </span>
@@ -237,7 +421,7 @@
 
 
 
-</div>
+</div> -->
 
 
 
