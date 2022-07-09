@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
- <link rel="shortcut icon" type="image/x-icon" href="Image/favicon.ico" /> 
+ <link rel="shortcut icon" type="image/x-icon" href="Image/favicon.ico" />
  <link rel="icon" type="image/png" href="Image/Blason1.png" />
  <title>Les Chevaliers</title>
 <script type="text/javascript">
-  function Test() {
-      JouerSon()
-      Opacifier(2)
-    //alert(document.getElementById("Corps").width)
-      //   document.getElementById("Corps").height="450px"
+  function SonOO() {
+      SonOO=document.getElementById("SonOO").src
+      alert(SonOO)
+      if (SonOO="Image/SonOn.png")  {
+          SonOO=document.getElementById("SonOO").src="Image/SonOn.png"
+      }
+      else {
+        SonOO=document.getElementById("SonOO").src="Image/SonOff.png"
+      }
       }
   function Dessus1() {
        document.getElementById("TT1").classList.toggle("TT1");
@@ -180,6 +184,8 @@
 
 <body onload="Test()" >
 <audio  id="MonSon" src="Image\Son.wav"></audio>
+<img src="Image/SonOn.png" id="SonOO" style="position: fixed;left:5px;Top:5px;width:35px" onclick="SonOO()" >
+
 <div style="position: fixed;margin-left:6%;">
     <div class="TT1" id="TT1" >
       <div class="TT1txt">
