@@ -105,9 +105,7 @@
     var Max=document.getElementById("LigneMax").innerHTML
     LigneActuel=Max*1-1
     Max=Max-2
-   if (Max<1) {
-   Max=""
-   }
+
     document.getElementById("LigneMax").innerHTML = LigneActuel
     document.getElementById("LigneMax2").innerHTML = Max
       // if (Max<1) {
@@ -131,47 +129,60 @@
     SauverCookie()
     }
   function SauverCookie()  {
-      Chaine=  document.getElementById("Chaine").innerHTML
+   Chaine=  document.getElementById("Chaine").innerHTML
+	ChaineSauver =""
+   const  parts = Chaine.split(",");
+   ChaineSauver =document.getElementById("LigneMax").innerHTML*1-1+","
+    Jusqua=document.getElementById("LigneBout").innerHTML
 
-    const  parts = Chaine.split(",");
-      ChaineSauver =document.getElementById("LigneMax").innerHTML*1-1+","
-
-//alert(ChaineSauver)
-    for ( i = 1; i < parts.length-1; i++) {
+    for ( i = 1; i < Jusqua; i++) {
 
        var Posi = "C" + i
 
        if (document.getElementById(Posi).className == "VertBordure") {
-          ChaineSauver =ChaineSauver +"1,"
+          if (i==Jusqua-1) {
+          	ChaineSauver =ChaineSauver +"1" }
+          else {
+          	ChaineSauver =ChaineSauver +"1,"
+          }
        }
        if (document.getElementById(Posi).className == "OrangeBordure") {
-          ChaineSauver =ChaineSauver +"2,"
+          if (i==Jusqua-1) {
+          	ChaineSauver =ChaineSauver +"2" }
+          else {
+          	ChaineSauver =ChaineSauver +"2,"
+          }
+
        }
         if (document.getElementById(Posi).className == "RougeBordure") {
-          ChaineSauver =ChaineSauver +"3,"
+          if (i==Jusqua-1) {
+          	ChaineSauver =ChaineSauver +"3" }
+          else {
+          	ChaineSauver =ChaineSauver +"3,"
+          }
+
        }
-       //alert(ChaineSauver)
+       //
     }
-     ChaineSauver = ChaineSauver.substring1,ChaineSauver.length-1)
-      document.getElementById("Chaine").innerHTML=ChaineSauver 
-     document.getElementById("Chaine2").innerHTML=ChaineSauver +"Cookie?"
-   
-     document.cookie = "event=" + ChaineSauver +"; path=/; expires=Tue, 19 Jan 2038 03:14:07 GMT"
-     ColorierChaine()
+
+    //alert(ChaineSauver)
+    document.getElementById("Chaine").innerHTML=ChaineSauver
+   document.cookie = "evenement=" + ChaineSauver + "; path=/; expires=Tue, 19 Jan 2038 03:14:07 GMT"
+
+   ColorierChaine()
   // alert (ChaineSauver)
 }
 
 
   function Loader() {
-    // document.cookie = "event=0,1,2,3,2,1,1,2,2,1,2,3,1,2,2,1,3,2,3,2,2,1,2,1,1,1,1,1,1,2,3,2,2,1,1,3,1,2,1,2,1,3,2,2,3,1,1,1,1,2,1,1,1,1,2,1,2; path=/; expires=Tue, 19 Jan 2038 03:14:07 GMT"
-     //ColorierChaine()
-      name="event"
+     //document.cookie = "evenement=John; path=/; expires=Tue, 19 Jan 2038 03:14:07 GMT"
+     ColorierChaine()
+      name="evenement"
         let matches = document.cookie.match(new RegExp(
     "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
     ));
     //alert(decodeURIComponent(matches[1]))
       document.getElementById("Chaine").innerHTML=  decodeURIComponent(matches[1]) +",C"
-     
       ColorierChaine()
     }
   function ColorierChaine() {
@@ -185,8 +196,8 @@
        var Max=parts[0]*1
         var  LigneActuel=parts[0]*1+1
        document.getElementById("LigneMax").innerHTML=LigneActuel
-     document.getElementById("LigneMax2").innerHTML=LigneActuel-1
-         document.getElementById("LigneBout").innerHTML="/"+parts.length
+       document.getElementById("LigneMax2").innerHTML=Max
+         document.getElementById("LigneBout").innerHTML=parts.length
          for ( i = 1; i < parts.length; i++) {
 
               var Posi = "C" + i
@@ -240,19 +251,19 @@
           sound.play();}
 
 </script>
-<body onload="Loader()">
+<body onload="Loader()" onunload="SauverCookie()">
 <audio  id="MonSon" src="Image\Son.wav"></audio>
 <DIV id="Chaine">0,1,2,3,2,1,1,2,2,1,2,3,1,2,2,1,3,2,3,2,2,1,2,1,1,1,1,1,1,2,3,2,2,1,1,3,1,2,1,2,1,3,2,2,3,1,1,1,1,2,1,1,1,1,2,1,2</DIV>
-<DIV id="Chaine2">0,1,2,3,2,1,1,2,2,1,2,3,1,2,2,1,3,2,3,2,2,1,2,1,1,1,1,1,1,2,3,2,2,1,1,3,1,2,1,2,1,3,2,2,3,1,1,1,1,2,1,1,1,1,2,1,2</DIV>
+
 
 
 
  <table padding="0px 0;" align="center" min-width: 75%; >
   <tr>
    <td colspan="4">
-     <img  src="Image\Blason1.png" class="LienHtml" width="15px" style="display: inline;">
+     <img style="transform:rotate(-90deg)" src="Image\Blason1.png" class="LienHtml" width="10px" style="display: inline;">
     <a style= "font-family:verdana; font-size: 16px; width: 100%;"  target="_blank" href="https://docs.google.com/spreadsheets/d/1UqUM6mdKNUDi7H5lR1VKQUsaN7sHH9jdh9ZfREv1xxQ/edit?usp=sharing">Lien vers les bâtiements journaliers du fichier de Flo</a>
-   <img  src="Image\Blason1.png" class="LienHtml" width="15px" style="display: inline;">
+   <img style="transform:rotate(90deg)" src="Image\Blason1.png" class="LienHtml" width="10px" style="display: inline;">
    </td>
 </tr>
  <tr align="center" style= "font-family:verdana; font-size: 14px;  width: 100%"        >
@@ -260,7 +271,8 @@
      <img width= "30px;" style="display: inline;cursor:pointer;"    height= "30px;" onclick="Cacher()" src="Image/CocheNon.png">
     <div onclick="Cacher()" style="display: inline;cursor:pointer;">Masquer la quête </div>
       <DIV style="display: inline" id="LigneMax" >1</DIV>
-    <DIV style="display: inline" id="LigneBout" /?</DIV>
+      <DIV style="display: inline"> /</DIV>
+    <DIV style="display: inline" id="LigneBout">?</DIV>
     </td>
       <td colspan="2" >
       <!-- <DIV id="BlocReaffiche" class="Reaffiche2" style="display: inline;" > -->
