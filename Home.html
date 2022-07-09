@@ -72,12 +72,12 @@
 
         var Toi ="Toi !"
 
-        Contenu1[1] ="Hello !"
-        Contenu1[2] ="Bonjour !"
-        Contenu1[3] ="Salut !"
-        Contenu1[4] ="Ave !"
-        Contenu1[5] ="Hi !"
-        Contenu1[6] ="Guthaben !"
+        Contenu1[1] ="Hello ! "
+        Contenu1[2] ="Bonjour ! "
+        Contenu1[3] ="Salut ! "
+        Contenu1[4] ="Ave ! "
+        Contenu1[5] ="Hi ! "
+        Contenu1[6] ="Guthaben ! "
 
         Contenu2[1] ="Sublime "
         Contenu2[2] ="Grandiose "
@@ -124,8 +124,8 @@
 		Toi = document.getElementById("Chaine").innerHTML
         document.getElementById("mot1").innerHTML=Contenu1[Position1]
         document.getElementById("mot2").innerHTML=Contenu2[Position2]
-        document.getElementById("mot3").innerHTML=Toi
-      var tempo =  Contenu1[Position3] + Toi
+        document.getElementById("mot3").innerHTML="<strong>" + Toi + "</strong>" 
+      var tempo =  Contenu1[Position3] + "<strong>" + Toi + "</strong>" 
         document.getElementById("mot5").innerHTML=tempo
         document.getElementById("mot6").innerHTML=Contenu3[Position4]
         document.getElementById("mot7").innerHTML=Contenu4[Position5]
