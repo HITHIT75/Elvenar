@@ -6,13 +6,13 @@
  <title>Les Chevaliers</title>
 <script type="text/javascript">
   function SonOO() {
-      SonOO=document.getElementById("SonOO").src
-      alert(SonOO)
+      SonOO=document.getElementById("SonOO")
+      alert(SonOO.src)
       if (SonOO="https://hithit75.github.io/Elvenar/Image/SonOn.png")  {
-          document.getElementById("SonOO").src="https://hithit75.github.io/Elvenar/Image/SonOff.png"
+       SonOO.setAttribute('src', 'https://hithit75.github.io/Elvenar/Image/SonOff.png');
       }
       else {
-        document.getElementById("SonOO").src="https://hithit75.github.io/Elvenar/Image/SonOn.png"
+        SonOO.setAttribute('src', 'https://hithit75.github.io/Elvenar/Image/SonOn.png');
       }
       }
   function Dessus1() {
