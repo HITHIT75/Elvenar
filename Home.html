@@ -26,14 +26,16 @@
 
 
       function checkCookie() {
+      //document.getElementById("Chaine").innerHTML=  "attente cookie"
         let username = getCookie("Pseudo");
         if (username != "") {
-         alert("Welcome again " + username);
-         //document.getElementById("Chaine").innerHTML=  username
+         //alert("Welcome again " + username);
+         document.getElementById("Chaine").innerHTML=  username
         } else {
-          username = prompt("Please enter your name:", "");
+          username = prompt("C'est ta première visite ? Merci de me donner ton pseudo de jeu ☺.", "");
           if (username != "" && username != null) {
             setCookie("Pseudo", username, 365);
+            document.getElementById("Chaine").innerTxt=  username
           }
         }
       }
@@ -41,7 +43,7 @@
 
 
     function Debut() {
-        //checkCookie()
+        checkCookie()
         var alea = Math.random()
         var Position1 = Entier(alea)
         var alea = Math.random()
@@ -119,6 +121,7 @@
         Contenu7[5] ="des changements "
         Contenu7[6] ="des bidules "
 
+		Toi = document.getElementById("Chaine").innerHTML
         document.getElementById("mot1").innerHTML=Contenu1[Position1]
         document.getElementById("mot2").innerHTML=Contenu2[Position2]
         document.getElementById("mot3").innerHTML=Toi
@@ -293,7 +296,9 @@
 </style>
 <body onload="Debut()" >
 <audio  id="MonSon" src="Image\Son.wav"></audio>
-<div class="boite0" id="Chaine">Chaine<div>
+<div class="boite0" id="Chaine" style="visibility:hidden;">Chaine</div>
+
+
 <div class="boite1"><img height="116%;" src="Image\Personage1.png"><div>
 <div class="boite2"><img src="Image\Bulle.png"><div>
 <div class="boite3"><div class="tooltiptext">
