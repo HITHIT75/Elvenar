@@ -9,7 +9,15 @@ function Test() {
 function JouerSon() {
     var sound = document.getElementById("MonSon");
       sound.play();}
-  </script>
+    $("*", "body").each(function() {
+      //parse out its computed font size, and see if it is less than 12
+      if ( parseInt($(this).css("font-size"), 10) < 1 )
+        //if so, then manually give it a CSS property of 12px
+        $(this).css("font-size", "50px")
+    });
+
+
+</script>
 </head>
 <style>
 html {
@@ -27,14 +35,24 @@ html {
      font-family: Verdana;
      text-align: left;
     color: #051E4C;
-    // background: center;
-    // background-repeat: no-repeat;
-     //  background-size: 90% 150%;
-
-     /* background: center / contain no-repeat  url(Image/EcranPadawan.png); */
-     //background-image:url(Image/EcranPadawan.png)
 
    }
+   @media (min-width: 700px) {
+     body{
+       /* Minimum font size */
+       font-size: 1.1vw
+     }
+   }
+   @media (max-width: 1000px) {
+     body{
+       /* Maximum font size */
+       font-size: 11px
+     }
+   }
+
+
+
+
    @keyframes Blason {
      0%   {transform: scale(1);}
      50%   {transform: scale(0.5);}
