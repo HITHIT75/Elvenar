@@ -10,7 +10,7 @@ function JouerSon() {
 function Debut() {
   document.getElementById("Scen1").classList.toggle("Generik");
   document.getElementById("Scen2").classList.toggle("Generik2");
-  Chrono(8000)
+  Chrono(7000)
 //  document.getElementById("Scen1").classList.toggle("Generik1");
 
 }
@@ -25,13 +25,9 @@ var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   if (distance < 0) {
     clearInterval(x);
-    if (Timing=8000) {
+    if (Timing=7000) {
       window.location.href = "index2.html" }
-  //    if (Timing=4000) {
-  //      window.location.href = "Index.html" }
-    //document.getElementById("Scen1").classList.toggle("Generik");
-    //document.getElementById("Scen2").classList.toggle("Generik2");
-    //window.location.href = "Index.html"
+
   }
 }, 1000);
 }
