@@ -10,11 +10,31 @@ function JouerSon() {
 function Debut() {
   document.getElementById("Scen1").classList.toggle("Generik");
   document.getElementById("Scen2").classList.toggle("Generik2");
-
+  Chrono(8000)
 //  document.getElementById("Scen1").classList.toggle("Generik1");
 
 }
 
+function Chrono(Timing) {
+var countDownDate = new Date().getTime() + Timing;
+var x = setInterval(function() {
+var now = new Date().getTime();
+var distance = countDownDate - now;
+var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+//  document.getElementById("demo").innerHTML =  seconds + "s ";
+
+  if (distance < 0) {
+    clearInterval(x);
+    if (Timing=8000) {
+      window.location.href = "index2.html" }
+  //    if (Timing=4000) {
+  //      window.location.href = "Index.html" }
+    //document.getElementById("Scen1").classList.toggle("Generik");
+    //document.getElementById("Scen2").classList.toggle("Generik2");
+    //window.location.href = "Index.html"
+  }
+}, 1000);
+}
 
 </script>
 </head>
@@ -23,9 +43,9 @@ function Debut() {
  body {
    font-family: verdana;
    font-size: 25px;
-   color: blue
-   align:center
-
+   align:center;
+   background-size: cover;
+   background-image:url(Image/Ecran2.png)
  }
  @keyframes Pulp {
    0%   {margin-top: -5%;width: 1%;opacity: 0;margin-left: 10%;}
@@ -60,7 +80,7 @@ function Debut() {
   .Generik1 {
   animation-name: Pulp3;
   animation-delay: 10s;
-  animation-duration: 10s;
+  animation-duration: 8s;
  }
   .Generik {
   animation-name: Pulp;
@@ -78,7 +98,7 @@ function Debut() {
     animation-name: Pulp2;
     animation-timing-function: ease-in-out;
     animation-delay: 3s;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-timing-function: ease-in;
    animation-fill-mode: forwards;
   }

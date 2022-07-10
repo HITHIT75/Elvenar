@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+<script>
+function Debut() {
+Chrono(2000)
+}
+
+
+function Chrono(Timing) {
+var countDownDate = new Date().getTime() + Timing;
+var x = setInterval(function() {
+var now = new Date().getTime();
+var distance = countDownDate - now;
+var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+//  document.getElementById("demo").innerHTML =  seconds + "s ";
+
+  if (distance < 0) {
+    clearInterval(x);
+    if (Timing=2000) {
+      window.location.href = "Generik.html" }
+  //    if (Timing=4000) {
+  //      window.location.href = "Index.html" }
+    //document.getElementById("Scen1").classList.toggle("Generik");
+    //document.getElementById("Scen2").classList.toggle("Generik2");
+    //window.location.href = "Index.html"
+  }
+}, 1000);
+}
+
+
+
+function playVid() {
+var vid = document.getElementById("myVideo");
+    vid.play();
+}
+</script>
+
+</head>
+<style>
+.center{
+   margin:  15%  40%;
+   width: 300px;
+   display: block;
+  }
+html { overflow-y: hidden; overflow-x: hidden; }
+body {
+  align:center;
+  text.background = transparent;
+  background-size: cover;
+  background-image:url(Image/Ecran2.png)
+}
+</style>
+
+<body onload="Debut()">
+
+  <video  id ="myVideo" class="center" width="320" height="240" autoplay muted >
+    <source src="Image/Video.mp4"  type="video/mp4">
+    Votre explorateur ne supporte pas la balise video.
+  </video>
+
+</body>
+</html>
