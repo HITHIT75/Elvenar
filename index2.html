@@ -184,11 +184,29 @@
     animation-duration: 5s;
     animation-fill-mode: forwards;
         }
+ 
+    input[type="checkbox"] {
+        content: url('Image/SonOn.png');
+        display: block;
+        position: fixed;
+        left:5px;
+        Top:5px;
+        width:25px"
+    }
+    input[type="checkbox"]:checked {
+        content: url('Image/SonOff.png');
+    }
+    .native-hidden {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+ 
 </style>
 
 <body onload="Test()" >
 <audio  id="MonSon" src="Image\Son.wav"></audio>
-<img src="Image/SonOn.png" id="SonOO" style="position: fixed;left:5px;Top:5px;width:35px" onclick="SonOO()" >
+<input id="SonOO" class="native-hidden" type="checkbox" />
 
 <div style="position: fixed;margin-left:6%;">
     <div class="TT1" id="TT1" >
