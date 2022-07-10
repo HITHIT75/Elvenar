@@ -1,9 +1,11 @@
 <head>
 <script>
+
 function Test() {
   alert("ok")
 alert(parent.document.getElementById("SonOO").src)
 }
+
       function setCookie(cname, cvalue, exdays) {
         document.getElementById("Chaine").innerHTML=  cvalue
         const d = new Date();
@@ -127,8 +129,8 @@ Contenu3[6] =" Je suis la remarquée AlexAngus ! "
 		Toi = document.getElementById("Chaine").innerHTML
         document.getElementById("mot1").innerHTML=Contenu1[Position1]
         document.getElementById("mot2").innerHTML=Contenu2[Position2]
-        document.getElementById("mot3").innerHTML="<strong>" + Toi + "</strong>" 
-      var tempo =  Contenu1[Position3] + "<strong>" + Toi + "</strong>" 
+        document.getElementById("mot3").innerHTML="<strong>" + Toi + "</strong>"
+      var tempo =  Contenu1[Position3] + "<strong>" + Toi + "</strong>"
         document.getElementById("mot5").innerHTML=tempo
         document.getElementById("mot6").innerHTML=Contenu3[Position4]
         document.getElementById("mot7").innerHTML=Contenu4[Position5]
@@ -172,15 +174,20 @@ Contenu3[6] =" Je suis la remarquée AlexAngus ! "
     body  {
         font-family: verdana;
         color: #051E4C;
-        font-size: 1em;
+        font-size: 1vw;
       }
-    <!-- .tooltip {
-        position: absolute;
-        display: inline;
-        z-index: 1;
-        top: 5%;
-        left: 17%;
-        } -->
+      @media (min-width: 700px) {
+        body{
+          /* Minimum font size */
+          font-size: 1vw
+        }
+      }
+      @media (max-width: 900px) {
+        body{
+          /* Maximum font size */
+          font-size: 12px
+        }
+      }
     .tooltip2 {
         position: absolute;
         display: inline;
@@ -215,24 +222,23 @@ Contenu3[6] =" Je suis la remarquée AlexAngus ! "
         position:fixed;
         top: 5%;
         left:5%;
-        width:10%;
+        width:100%;
         height:20%;
-        z-index: 5;
+        z-index: 10;
     }
     .boite2 {
       position:fixed;
       top: 5%;
       left:15%;
-      width:71%;
+      width:10.1vw;
       height:20%;
       z-index: 1;
     }
     .boite3 {
       position:fixed;
       top: 6%;
-      left:0%;    
-      margin-left:23%;
-      width:58%;
+      left:15%;
+      width:70%;
       height:18%;
 
       z-index: 2;
@@ -257,7 +263,7 @@ Contenu3[6] =" Je suis la remarquée AlexAngus ! "
     .boite6 {
         position:fixed;
         top: 28%;
-        left:84%;
+        left:75%;
         width:10%;
         height:20%;
         z-index: 5;
@@ -281,31 +287,43 @@ Contenu3[6] =" Je suis la remarquée AlexAngus ! "
     .boite9 {
       position:fixed;
       top: 51%;
-      left:23%;
-      width:62%;
+      left:15%;
+      width:70%;
       height:18%;
       z-index: 2;
     }
   marquee {
       width:100%;
-      height:100%;
-      font-size: 1vw;
-     }
-    img {
+      height:60%;
+      padding: 40px;
+      border:solid;
+      border-radius: 5% / 10%;
+      border-color: #E2E5E4 #051E4C #051E4C #E2E5E4;
+      border-width: 4px 3px 3px 4px;
+        background-image: linear-gradient(105deg, rgba(255,255,255,1) 20%, rgba(226,229,228,1) 140%);
+         }
+    <!-- img {
 
       height:inherit%;
+    } -->
+    @keyframes LienHtml {
+      0%   {opacity: 0;}
+     100% {opacity:1;}
     }
-
+    .LienHtml {
+      animation-name: LienHtml;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }
 </style>
 <body onload="Debut()" >
 <audio  id="MonSon" src="Image\Son.wav"></audio>
 <div class="boite0" id="Chaine" style="visibility:hidden;">Chaine</div>
 
 
-<div class="boite1" onclick="Test()"><img height="116%;" src="Image\Personage1.png"><div>
-<div class="boite2"><img src="Image\Bulle.png"><div>
+<div class="boite1" onclick="Test()" ><img style="z-index: 10;"cursor="pointer" height="116%;" src="Image\Personage1.png"><div>
 <div class="boite3"><div class="tooltiptext">
-  <marquee  onmouseover="stop()" onmouseout="start()" scrollamount="1" direction="up">
+  <marquee onmouseover="stop()" onmouseout="start()" scrollamount="1" direction="up">
   <div class="tooltiptext" id="Zone1" >
       <span  id ="mot1">Hello !</span>
       <span id ="mot2" > sublime   </span>
@@ -323,7 +341,7 @@ Contenu3[6] =" Je suis la remarquée AlexAngus ! "
         Qu'en pensez-vous ? Car mon avis vous interesse.
       </span>
     </marquee></div></div>
-<div class="boite4"><img src="Image\Bulle2.png"></div>
+
 <div class="boite5">    <div class="tooltiptext">
     <marquee  onmouseover="stop()" onmouseout="start()" height="85hv" width= "100%" scrollamount="1" direction="up">
         <span id ="mot5">Salut !</span><br>
@@ -335,13 +353,14 @@ Contenu3[6] =" Je suis la remarquée AlexAngus ! "
 	 <span >Un nouvel event a commencé hier sur la bêta sous une toute nouvelle forme.<br>
 		Ça a l’air un peu compliqué et fastidieux. À voir...<br>
 		Voici le lien pour regarder la vidéo explicative faite par MarinaDelicia :<br>
-		<a align="center;" target="_blank" href="https://www.youtube.com/watch?v=jyDJLf-EXNM&ab_channel=MarinaDelicia">Aller vers Youtube</a><br>
-		Les quêtes vont être mises sur l'onglet évent très bientôt<br>
-	    
+    <img  src="Image\Blason1.png" class="LienHtml" width="15px" style="display: inline;">
+		<a style="display: inline;" target="_blank" href="https://www.youtube.com/watch?v=jyDJLf-EXNM&ab_channel=MarinaDelicia">Aller vers Youtube</a>
+<img  src="Image\Blason1.png" class="LienHtml" width="15px" style="display: inline;"><br>
+    Les quêtes vont être mises sur l'onglet évent très bientôt<br>
+
       </marquee></div></div>
 <div class="boite6"><img src="Image\Personage2.png"></div>
   <div class="boite7"><img height="100%;" src="Image\Personage3.png"></div>
-  <div class="boite8"><img src="Image\Bulle.png"></div>
   <div class="boite9">    <div class="tooltiptext">
     <marquee onmouseover="stop()" onmouseout="start()" height="85hv" width= "85%" scrollamount="1" direction="up">
       <span id ="mot9">Encore toi !?</span><br>
@@ -360,9 +379,6 @@ Contenu3[6] =" Je suis la remarquée AlexAngus ! "
 
 
 
-
-
-</body>
 
 
 </body>
