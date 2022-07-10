@@ -144,7 +144,18 @@ i = i + 1
       color: #051E4C;
       font-size: 1em;
     }
-
+    @media (min-width: 500px) {
+      body{
+        /* Minimum font size */
+        font-size: 1.1vw
+      }
+    }
+    @media (max-width: 900px) {
+      body{
+        /* Maximum font size */
+        font-size: 12px
+      }
+    }
   .Pointeur {
     cursor:pointer;
       }
