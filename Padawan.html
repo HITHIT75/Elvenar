@@ -12,28 +12,29 @@ function JouerSon() {
   </script>
 </head>
 <style>
-     html {
-      overflow-y: hidden;
-      overflow-x: hidden;
-      font-size: 100%;
-     }
-   
+html {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  font-size: 100%;
+ }
    body {
      align: center;
      text-align:right;
      padding: 0px;
      margin: 0px;
      display:inline;
-     font-size: 0.95em
+     font-size: 1.1vw;
      font-family: Verdana;
      text-align: left;
     color: #051E4C;
+    // background: center;
+    // background-repeat: no-repeat;
+     //  background-size: 90% 150%;
+
+     /* background: center / contain no-repeat  url(Image/EcranPadawan.png); */
+     //background-image:url(Image/EcranPadawan.png)
 
    }
-
-
-
-
    @keyframes Blason {
      0%   {transform: scale(1);}
      50%   {transform: scale(0.5);}
@@ -43,21 +44,18 @@ function JouerSon() {
    .Sou {
      align:left;
      float:left;
-     width:19px;
+     width:1.1vw;
    }
    /* img:hover {
      animation-name: Blason;
      animation-duration: 1s;
      animation-fill-mode: forwards;
    } */
-   div {
-     margin-top:2px;
-     margin-left:40px;
-   }
+
    #lettrine{
   width:150px;
   border:1px solid #999999;
-  font-family:Arial, Helvetica, sans-serif;
+
 }
 #lettrine span.lettrine{
   text-indent : -100%;
@@ -74,16 +72,19 @@ function JouerSon() {
 <body align="left" onresize="Test()" >
 <audio  id="MonSon" src="Image\Son.wav"></audio>
 
-<DIV style="margin-top:0%;margin-left:5%;width:85%;text-align: justify;text-justify: inter-word;">
 
-Comme ils n'existent aucune règles, on ne fait que des recommandations qui se résument en <strong><em>"Jouer Moderne"</em></strong> et <strong><em>"Développer votre militaire omniprésent"</em></strong><br><br>
-<img src="Image\LettrineJ.png" style="width:80px;display:inline;" ><p style="display:inline;"><strong><em> ouer Moderne en :</em></strong></p><br>
+
+
+<DIV style="margin-top:0%;margin-left:5%;width:85%;max-height: 90%;text-align: justify;text-justify: inter-word;">
+
+Comme ils n'existent aucune règles, on ne fait que des recommandations qui se résument en " Jouer Moderne " et " Développer votre militaire omniprésent "<br><br>
+<img src="Image\LettrineJ.png" width="80px" ><strong><em>ouer Moderne en :</em></strong><br>
    <img src="Image\Blason1.png" class="Sou"  >
    <div>poussant votre Académie de Magie en niv 4, faites là travailler en 24/24 en consommant des reliques</div>
    <img src="Image\Blason1.png" class="Sou"  >
    <div>faites le Donjon au max pour les Batiments Magiques, l'armurier nain, les boosts temps et portails</div>
-   <img src="Image\Blason1.png" class="Sou"  >
-   <div>faites vos progressions technologiques à coup de bénés portail... construire un champs de " campements " a peu d'intérêt : ça coûte trés cher en ressources, prend énormément de place, vous ralentira... et vous retrouverez les quêtes en facultatif au début du chapitre suivant.</div>
+   <img src="Image\Blason1.png" class="Sou" w >
+   <div>faites vos progressions technologiques à coup de bénés portail ... construire un champs de " campements " a peu d'intérêt : ça coûte trés cher en ressources, prend énormément de place, vous ralentira... et vous retrouverez les quêtes en facultatif au début du chapitre suivant.</div>
    <img src="Image\Blason1.png" class="Sou"   >
    <div>ayez plus d'usines T1 que d'autres... un rapport 6 T1, 5 T2, 3 T3 est honnête</div>
    <img src="Image\Blason1.png" class="Sou"  >
@@ -92,19 +93,19 @@ Comme ils n'existent aucune règles, on ne fait que des recommandations qui se r
    <div>faites les events à fond pour gagner des bat pop/culture, des bénés, du divers... le cadeau event est le plus souvent moyen. Evitez les champs de maisons, tracez des rues droites, attachez vos bat aux rues par le petit coté...</div><br>
 </DIV>
   <DIV style="margin-left:5%;width:85%">
-  <img src="Image\LettrineD.png" width="80px"  ><strong><em> évelopper son Militaire :</em></strong><br>
+  <img src="Image\LettrineD.png" width="80px"  ><strong><em>évelopper son Militaire :</em></strong><br>
     <img src="Image\Blason1.png" class="Sou"  >
    <div>Parce qu'il est omniprésent partout, du donjon aux events et même en Aventures...</div>
    <img src="Image\Blason1.png" class="Sou"   >
    <div>posez vos 3 casernes et boostez en au moins 2 .. celle de Base (Aiguilles) + Mercenaire (Académie volante) pour les Elfes, Base et Entrainement (Fontaines) pour les Humains.</div>
    <img src="Image\Blason1.png" class="Sou"   >
-   <div>posez Rempart au début sans pousser... vous le remplacerez par Champis ensuite (Champis s'amplifie avec les armureries)</div>
+   <div>posez Rempart au début sans pousser .. vous le remplacerez par Champis ensuite (Champis s'amplifie avec les armureries)</div>
    <img src="Image\Blason1.png" class="Sou"  >
    <div>chercher en priorité absolue le Phoenix de Feu (Phoenix des Tempètes bleu si de caractère, vous êtes sur de ne jamais combattre)... quel domage</div>
    <img src="Image\Blason1.png" class="Sou"   >
    <div>développez Crapaud pour muscler vos Golems et demain vos Grenouilles. En comparaison, Forge sert pas à grand chose.</div>
    <img src="Image\Blason1.png" class="Sou"   >
-   <div>le chapitre 14 apporte Simia et Voyage ... 2 merveilles obligatoires pour améliorer le confort de combattre</div>
+   <div>le chapitre 14 apporte Simia et Voyage ... 2 merveilles obligatoires pour améliorer le comfort de combattre</div>
    <img src="Image\Blason1.png" class="Sou"  >
    <div>le chapitre 15 Elvenar est 100% militaire .. il booste les casernes de Base+Mercenaire, les soldats de Mercenaires qui deviendront omniprésents et double votre production Matériaux ... quand vous aurez fini le chapitre 15, vous pourrez arrêter votre progression techno si vous le souhaitez.</div>
 
