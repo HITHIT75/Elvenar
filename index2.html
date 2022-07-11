@@ -1,20 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
- <link rel="shortcut icon" type="image/x-icon" href="Image/favicon.ico" />
  <link rel="icon" type="image/png" href="Image/Blason1.png" />
  <title>Les Chevaliers</title>
 <script type="text/javascript">
-  function SonOO() {
-      SonOO=document.getElementById("SonOO")
-      alert(SonOO.src)
-      if (SonOO="https://hithit75.github.io/Elvenar/Image/SonOn.png")  {
-       SonOO.setAttribute('src', 'https://hithit75.github.io/Elvenar/Image/SonOff.png');
+  function test() {
+    //  alert(document.getElementById("Ecoute").src)
+      //alert(document.getElementById("Ecoute0").innerHTML)
+      Ecouter = document.getElementById("Ecoute0").innerHTML
+      document.getElementById("Ecoute0").innerHTML=Math.abs(Ecouter-1);
+      if (Ecouter == 1 ) {
+          document.getElementById("Ecoute").src="file:///C:/Temp/Elvenar/Image/SonOff.png"
       }
       else {
-        SonOO.setAttribute('src', 'https://hithit75.github.io/Elvenar/Image/SonOn.png');
+        document.getElementById("Ecoute").src="file:///C:/Temp/Elvenar/Image/SonOn.png"
       }
+    //  document.getElementById("Ecoute").src=""
+  }
+  function setCookie(cname, cvalue, exdays) {
+    document.getElementById("Chaine").innerHTML=  cvalue
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    let expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+
+  function getCookie(cname) {
+    let name = cname + "=";
+    let ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
       }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+
+
+  function checkCookie() {
+  //document.getElementById("Chaine").innerHTML=  "attente cookie"
+    let username = getCookie("Ecoutes");
+    if (username != "") {
+     //alert("Welcome again " + username);
+     document.getElementById("Ecoute0").innerHTML=  username
+    } else {
+        setCookie("Ecoutes", "1", 365);
+        document.getElementById("Ecoute0").innerHTML=  "1"
+        test()
+    }
+  }
   function Dessus1() {
        document.getElementById("TT1").classList.toggle("TT1");
          }
@@ -83,8 +121,11 @@
     document.getElementById(Cible).style.opacity= "0.5";
   }
   function JouerSon() {
+    Ecouter = document.getElementById("Ecoute0").innerHTML
+    if (Ecouter==1) {
       var sound = document.getElementById("MonSon");
         sound.play();}
+      }
 </script>
 </head>
 <style>
@@ -100,16 +141,10 @@
      text.background = transparent;
      background-size: cover;
         margin:0;
-    
+
     height:100%;
-    background-attachment:fixed;   
-     /* background-repeat: no-repeat;width:100%; */
-     /* background-size: 100%; */
+    background-attachment:fixed;
      background-image:url(Image/Ecran2.png)
-
-
-
-
    }
   .hide{display: none;}
    div {
@@ -121,15 +156,9 @@
     opacity: 0.5;
     cursor: pointer;
   }
-  /* table {
-    align: center;
-    width: 100%
-    max-height: 10%
-    } */
   .tooltiptext {
     visibility: hidden;
     display: none;
-    /* width: 190px; */
     background-color: #990000;
     color: #051E4C;
     text-align: center;
@@ -140,7 +169,7 @@
     color: #fff;
     position: absolute;
     z-index: 1;
-    margin-left: 18%; /* Use half of the width (120/2 = 60), to center the tooltip */
+    margin-left: 18%;
     margin-top: 20%;
     max-width: 30%
   }
@@ -165,9 +194,6 @@
     	0 0 0 6px #051E4C,
     	0 0 0 6px #f6da24,
     	0 0 0 6px #FFFFFF;
-
-
-
     position: absolute;
     margin-top: 5%;
     margin-left: 0%;
@@ -184,7 +210,6 @@
     animation-duration: 5s;
     animation-fill-mode: forwards;
         }
- 
     input[type="checkbox"] {
         content: url('Image/SonOn.png');
         display: block;
@@ -201,19 +226,20 @@
         -moz-appearance: none;
         appearance: none;
     }
- 
+
 </style>
 
-<body onload="Test()" >
+<body  >
 <audio  id="MonSon" src="Image\Son.wav"></audio>
-<input id="SonOO" class="native-hidden" type="checkbox" />
-
+<!-- <input  id="SonOO" class="native-hidden" type="checkbox" /> -->
+<img src="Image/SonOn.png" id="Ecoute" width="25px" onclick="test()" >
+<div id="Ecoute0" style="display:none;">1</div>
 <div style="position: fixed;margin-left:6%;">
     <div class="TT1" id="TT1" >
       <div class="TT1txt">
         Ca c'est le logo du jeu auquel tu joues -T'avais jamais remarqué ?
       </div>
-      <img src="Image/Logo1.png" id="Img1" width="9%" max-width="8%" onclick="Saut()" >
+      <img src="Image/Logo1.png" id="Img1" width="9%" max-width="8%"" >
       </div>
 
       <div class="TT1" id="TT1" >
