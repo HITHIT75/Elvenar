@@ -5,7 +5,9 @@ function Test() {
   alert("ok")
 alert(parent.document.getElementById("SonOO").src)
 }
-
+function Admin() {
+window.open('https://docs.google.com/spreadsheets/d/1ipOIG7IVsOwUMadLCSf_twuR17hYc8-gIECkJOJxWBE/edit#gid=1779030654', '_blank');
+}
       function setCookie(cname, cvalue, exdays) {
         document.getElementById("Chaine").innerHTML=  cvalue
         const d = new Date();
@@ -297,7 +299,7 @@ Contenu3[6] =" Je suis la remarquée AlexAngus ! "
 <div class="boite0" id="Chaine" style="visibility:hidden;">Chaine</div>
 
 
-<div class="boite1" onclick="Test()" ><img style="z-index: 10;"cursor="pointer" height="116%;" src="Image\Personage1.png"><div>
+<div class="boite1" ><img style="z-index: 10;"cursor="pointer" height="116%;" src="Image\Personage1.png"><div>
 <div class="boite3"><div class="tooltiptext">
   <marquee onmouseover="stop()" onmouseout="start()" scrollamount="1" direction="up">
   <div class="tooltiptext" id="Zone1" >
@@ -335,7 +337,7 @@ Contenu3[6] =" Je suis la remarquée AlexAngus ! "
     Les quêtes vont être mises sur l'onglet évent très bientôt<br>
 
       </marquee></div></div>
-<div class="boite6"><img src="Image\Personage2.png"></div>
+<div class="boite6" ondblclick="Admin()" ><img src="Image\Personage2.png"></div>
   <div class="boite7"><img height="100%;" src="Image\Personage3.png"></div>
   <div class="boite9">    <div class="tooltiptext">
     <marquee onmouseover="stop()" onmouseout="start()" height="85hv" width= "85%" scrollamount="1" direction="up">
