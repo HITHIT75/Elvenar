@@ -11,11 +11,12 @@
       document.getElementById("Ecoute0").innerHTML=Math.abs(Ecouter-1);
       if (Ecouter == 1 ) {
           document.getElementById("Ecoute").src="Image/SonOff.png"
+       setCookie("Ecoutes", "0", 365);
       }
       else {
         document.getElementById("Ecoute").src="Image/SonOn.png"
+       setCookie("Ecoutes", "1", 365);
       }
-    //  document.getElementById("Ecoute").src=""
   }
   function setCookie(cname, cvalue, exdays) {
     document.getElementById("Chaine").innerHTML=  cvalue
