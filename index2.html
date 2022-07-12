@@ -44,13 +44,16 @@
 
   function checkCookie() {
   //document.getElementById("Chaine").innerHTML=  "attente cookie"
+
     let username = getCookie("Ecoutes");
-   alert(username)
+//    alert("audio check cookie >" + username +"<")
     if (username != "") {
-     //alert("Welcome again " + username);
+
      document.getElementById("Ecoute0").innerHTML=  username
-    } else {
-        setCookie("Ecoutes", "1", 365);
+    }
+    else {
+       valeur = "1"
+        setCookie("Ecoutes", valeur, 365);
         document.getElementById("Ecoute0").innerHTML=  "1"
         test()
     }
@@ -128,6 +131,9 @@
       var sound = document.getElementById("MonSon");
         sound.play();}
       }
+  // function essai() {
+  //   alert(document.cookie)
+  //   }
 </script>
 </head>
 <style>
@@ -231,11 +237,11 @@
 
 </style>
 
-<body >
+<body onload="checkCookie()">
 <audio  id="MonSon" src="Image\Son.wav"></audio>
 <!-- <input  id="SonOO" class="native-hidden" type="checkbox" /> -->
 <img src="Image/SonOn.png" id="Ecoute" width="25px" onclick="test()" >
-<div id="Ecoute0" style="display:none;">1</div>
+<div id="Ecoute0" >1</div>
 <div style="position: fixed;margin-left:6%;">
     <div class="TT1" id="TT1" >
       <div class="TT1txt">
