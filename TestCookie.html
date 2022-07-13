@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="icon" type="image/png" href="Image/Blason1.png" />
+ <title>Les Chevaliers</title>
+<script type="text/javascript">
+  function test() {
+    //  alert(document.getElementById("Ecoute").src)
+      //alert(document.getElementById("Ecoute0").innerHTML)
+      Ecouter = document.getElementById("Ecoute0").innerHTML
+      document.getElementById("Ecoute0").innerHTML=Math.abs(Ecouter-1);
+      if (Ecouter == 1 ) {
+          document.getElementById("Ecoute").src="Image/SonOff.png"
+       setCookie("Ecoutes", "0", 365);
+      }
+      else {
+        document.getElementById("Ecoute").src="Image/SonOn.png"
+       setCookie("Ecoutes", "1", 365);
+      }
+  }
+  function setCookie(cname, cvalue, exdays) {
+    document.getElementById("Chaine").innerHTML=  cvalue
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    let expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+
+  function getCookie(cname) {
+    alert("Get Cookie >" + document.cookie +"<")
+    let name = cname + "=";
+    let ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+
+
+  function checkCookie() {
+  //document.getElementById("Chaine").innerHTML=  "attente cookie"
+
+    let username = getCookie("Ecoutes");
+
+    if (username != "") {
+alert("audio check cookie OK>" + username +"<")
+     document.getElementById("Ecoute0").innerHTML=  username
+    }
+    else {
+       valeur = "1"
+       alert("audio check cookie KO>" + username +"<")
+        setCookie("Ecoutes", valeur, 365);
+        document.getElementById("Ecoute0").innerHTML=  "1"
+        test()
+    }
+  }
+  function Dessus1() {
+       document.getElementById("TT1").classList.toggle("TT1");
+         }
+     function Saut(){
+       JouerSon()
+       //document.getElementById("Frame").src="Generik.html";
+       Opacifier(1)
+     }
+  function SautGenerik(){
+    JouerSon()
+    document.getElementById("Frame").src="https://hithit75.github.io/Elvenar/Generikbis.html";
+    Opacifier(10)
+  }
+  function SautDoigt(){
+    JouerSon()
+    document.getElementById("Frame").src="Doigt.html";
+    Opacifier(9)
+  }
+  function SautJournal(){
+    JouerSon()
+    document.getElementById("Frame").src="Journal.html";
+    Opacifier(6)
+  }
+  function SautPadawan(){
+    JouerSon()
+    document.getElementById("Frame").src="Padawan.html";
+    Opacifier(8)
+  }
+  function SautHome(){
+    JouerSon()
+    document.getElementById("Frame").src="Home.html";
+    Opacifier(2)
+  }
+  function SautAventure(){
+    JouerSon()
+    document.getElementById("Frame").src="Aventure.html";
+    Opacifier(4)
+  }
+  function SautLiens(){
+    JouerSon()
+    document.getElementById("Frame").src="Liens.html";
+    Opacifier(7)
+  }
+  function SautTournois(){
+    JouerSon()
+    document.getElementById("Frame").src="Tournois.html";
+    Opacifier(5)
+  }
+  function SautEvent(){
+    JouerSon()
+    document.getElementById("Frame").src="Event.html";
+    Opacifier(3)
+  }
+  function Opacifier(Num){
+    document.getElementById("Img1").style.opacity= "1";
+    document.getElementById("Img2").style.opacity= "1";
+    document.getElementById("Img3").style.opacity= "1";
+    document.getElementById("Img4").style.opacity= "1";
+    document.getElementById("Img5").style.opacity= "1";
+    document.getElementById("Img6").style.opacity= "1";
+    document.getElementById("Img7").style.opacity= "1";
+    document.getElementById("Img8").style.opacity= "1";
+    document.getElementById("Img9").style.opacity= "1";
+    document.getElementById("Img10").style.opacity= "1";
+    var Cible = "Img" + Num
+    document.getElementById(Cible).style.opacity= "0.5";
+  }
+  function JouerSon() {
+    Ecouter = document.getElementById("Ecoute0").innerHTML
+    if (Ecouter==1) {
+      var sound = document.getElementById("MonSon");
+        sound.play();}
+      }
+  // function essai() {
+  //   alert(document.cookie)
+  //   }
+</script>
+</head>
+<style>
+   body {
+     align: center;
+     padding: 0px;
+     margin: 0px;
+     font-family: verdana;
+     font-size: 25px;
+     color: #051E4C;
+     scrolling: none;
+     background-color: #E5E8EA;
+     text.background = transparent;
+     background-size: cover;
+        margin:0;
+
+    height:100%;
+    background-attachment:fixed;
+     background-image:url(Image/Ecran2.png)
+   }
+  .hide{display: none;}
+   div {
+     display: inline;
+     align:center;
+    }
+
+  img:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  .tooltiptext {
+    visibility: hidden;
+    display: none;
+    background-color: #990000;
+    color: #051E4C;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font: 15px Verdana, sans-serif;
+    background-color: black;
+    color: #fff;
+    position: absolute;
+    z-index: 1;
+    margin-left: 18%;
+    margin-top: 20%;
+    max-width: 30%
+  }
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    }
+  .TT1 .TT1txt {
+    visibility: hidden;
+    width: 180px;
+    height:100px;
+    color: blue;
+    text-align: center;
+    border-width:  2px;
+    border-color:white;
+    border-radius: 6px;
+    font: 14px Verdana, sans-serif;
+    background-color: #051E4C;
+    color: white;
+    box-shadow: 0 0 0 2px #000,
+    	0 0 0 3px #FFFFFF,
+    	0 0 0 3px #051E4C,
+    	0 0 0 6px #051E4C,
+    	0 0 0 6px #f6da24,
+    	0 0 0 6px #FFFFFF;
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 0%;
+    z-index:10;
+    }
+    @keyframes TT {
+      0%   {visibility: visible;}
+      99%  {visibility: visible;}
+      100% {visibility: hidden;}
+    }
+  .TT1:hover .TT1txt {
+    visibility: visible;
+    animation-name: TT;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+        }
+    input[type="checkbox"] {
+        content: url('Image/SonOn.png');
+        display: block;
+        position: fixed;
+        left:5px;
+        Top:5px;
+        width:25px"
+    }
+    input[type="checkbox"]:checked {
+        content: url('Image/SonOff.png');
+    }
+    .native-hidden {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+</style>
+
+<body onload="checkCookie()">
+<audio  id="MonSon" src="Image\Son.wav"></audio>
+<!-- <input  id="SonOO" class="native-hidden" type="checkbox" /> -->
+<img src="Image/SonOn.png" id="Ecoute" width="25px" onclick="test()" >
+<div id="Ecoute0" >1</div>
+<div style="position: fixed;margin-left:6%;">
+    <div class="TT1" id="TT1" >
+      <div class="TT1txt">
+        Ca c'est le logo du jeu auquel tu joues -T'avais jamais remarqué ?
+      </div>
+      <img src="Image/Logo1.png" id="Img1" width="9%" max-width="8%"" >
+      </div>
+
+      <div class="TT1" id="TT1" >
+          <div class="TT1txt">
+          La page d'accueil avec les informations sensibles de la confrérie.
+          </div>
+        <img src="Image/MHome.png" style="opacity: 0.5"; id="Img2" onclick="SautHome()" width="8%" max-width="8%">
+      </div>
+
+      <div class="TT1" id="TT1" >
+          <div class="TT1txt">
+          La listes des quêtes de l'event avec possibilité de colorier les quêtes à anticiper<br>et de faire disparaître les quêtes réalisées.
+          </div>
+        <img src="Image/MEvent.png"  id="Img3" onclick="SautEvent()"  width="6.3%" max-width="6.3%">
+      </div>
+
+      <div class="TT1" id="TT1" >
+          <div class="TT1txt">
+          Les chemins & étapes sélectionnés pour l'aventure.<br>
+          Et un simulateur gratuit pour doser manufactures et ateliers.
+          </div>
+      <img src="Image/MAventure.png" id="Img4" onclick="SautAventure()" width="9.2%" max-width="9.2%">
+      </div>
+
+      <div class="TT1" id="TT1" >
+          <div class="TT1txt">
+          Des informations pour bien chiader son tournoi.
+          </div>
+      <img src="Image/MTournois.png" id="Img5" onclick="SautTournois()" width="9%"  max-width="9%">
+      </div>
+
+      <div class="TT1" id="TT1" >
+          <div class="TT1txt">
+          L'extraordinaire et peu probable saga du journal de bord de la confrérie.
+          </div>
+      <img src="Image/MJournal.png" id="Img6" onclick="SautJournal()" width="8.5%" max-width="8.5%">
+      </div>
+
+      <div class="TT1" id="TT1" >
+          <div class="TT1txt">
+          Une compile des liens elvenar utiles et inutiles sur internet.
+          </div>
+      <img src="Image/Mlien.png" id="Img7" onclick="SautLiens()" width="5.4%" max-width="5.4%">
+      </div>
+
+      <div class="TT1" id="TT1" >
+          <div class="TT1txt">
+          Les recommandations pour les pauvres nouveaux arrivants dans la confrérie.
+          </div>
+      <img src="Image/MPadawan.png" id="Img8" onclick="SautPadawan()" width="8.2%" max-width="8.2%">
+      </div>
+
+      <div class="TT1" id="TT1" >
+
+          <div class="TT1txt">
+            Pour augmenter ou diminuer le nombre de neurones (vaste programme)
+          </div>
+      <img src="Image/MDoigt.png" id="Img9" onclick="SautDoigt()" width="9.0%" max-width="9.0%">
+      </div>
+
+      <div class="TT1" id="TT1" >
+          <div class="TT1txt">
+          Ceci est le blason de la confrérie.<br>Tu peux cliquer dessus si ça t'amuse.
+          </div>
+      <img src="Image/Blason1.png" id="Img10" onclick="SautGenerik()" width="5%" max-width="5%">
+      </div>
+    </div>
+  <iframe id="Frame" style="position: fixed;margin-top:7%;z-index:-1;"
+      width="95%;" height="900px;" scrolling="0;" frameBorder="0px;"
+      src="Home.html">
+  </iframe>
+
+
+
+
+
+
+
+
+</body>
+</html>
