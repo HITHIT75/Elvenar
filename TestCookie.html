@@ -5,10 +5,13 @@
  <title>Les Chevaliers</title>
 <script type="text/javascript">
   function test() {
-    //  alert(document.getElementById("Ecoute").src)
-      //alert(document.getElementById("Ecoute0").innerHTML)
       Ecouter = document.getElementById("Ecoute0").innerHTML
       document.getElementById("Ecoute0").innerHTML=Math.abs(Ecouter-1);
+    ActualisationEcouteur()
+  }
+   
+ function ActualisationEcouteur() { 
+      Ecouter = document.getElementById("Ecoute0").innerHTML
       if (Ecouter == 1 ) {
           document.getElementById("Ecoute").src="Image/SonOff.png"
        setCookie("Ecouteur", "0", 365);
@@ -54,13 +57,14 @@
     if (username != "") {
 alert("audio check cookie OK>" + username +"<")
      document.getElementById("Ecoute0").innerHTML=  username
+     ActualisationEcouteur()
     }
     else {
        valeur = "1"
        alert("audio check cookie KO>" + username +"<")
         setCookie("Ecouteur", valeur, 365);
         document.getElementById("Ecoute0").innerHTML=  "1"
-        
+        ActualisationEcouteur()
     }
   }
   function Dessus1() {
