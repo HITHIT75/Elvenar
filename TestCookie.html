@@ -19,12 +19,14 @@
       }
   }
   function setCookie(cname, cvalue, exdays) {
-    document.getElementById("Chaine").innerHTML=  cvalue
+   alert("set coookie bebut")
+   // document.getElementById("Chaine").innerHTML=  cvalue
     const d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     let expires = "expires="+d.toUTCString();
    alert("Set Cookie >" + cname + "=" + cvalue + ";" + expires + ";path=/" +"<")
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+   alert("fin set cookie")
   }
 
   function getCookie(cname) {
@@ -58,7 +60,7 @@ alert("audio check cookie OK>" + username +"<")
        alert("audio check cookie KO>" + username +"<")
         setCookie("Ecouteur", valeur, 365);
         document.getElementById("Ecoute0").innerHTML=  "1"
-        test()
+        
     }
   }
   function Dessus1() {
