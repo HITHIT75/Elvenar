@@ -6,9 +6,12 @@ function Test() {
 //  alert("ok")
       // document.getElementById("Corps").height="450px"
     }
-function JouerSon() {
-    var sound = document.getElementById("MonSon");
-      sound.play();}
+  function JouerSon() {
+	Resultat = getCookie("Ecouteur")
+	    if (Resultat ==1) {
+    		var sound = document.getElementById("MonSon");
+    		sound.play();}
+    		}
     $("*", "body").each(function() {
       //parse out its computed font size, and see if it is less than 12
       if ( parseInt($(this).css("font-size"), 10) < 1 )
