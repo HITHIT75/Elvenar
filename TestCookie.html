@@ -50,8 +50,6 @@
 
 
   function checkCookie() {
-
-
     let username = getCookie("Ecouteur");
 
     if (username != "") {
@@ -59,19 +57,20 @@
      document.getElementById("Ecoute0").innerHTML=  username
        if (username==1) {
           document.getElementById("Ecoute0").innerHTML=  "1"
-         document.getElementById("Ecoute").src="Image/SonOn.png"     
-       }
+          document.getElementById("Ecoute").src="Image/SonOn.png"     
+        }
        else {
           document.getElementById("Ecoute0").innerHTML=  "0"
-         document.getElementById("Ecoute").src="Image/SonOff.png"     
-       }
+          document.getElementById("Ecoute").src="Image/SonOff.png"     
+        }
+    }
     else {
        valeur = "1"
-       alert("audio check cookie KO>" + username +"<")
+       //alert("audio check cookie KO>" + username +"<")
         setCookie("Ecouteur", valeur, 365);
         document.getElementById("Ecoute0").innerHTML=  "1"
-      document.getElementById("Ecoute").src="Image/SonOn.png"
-    }
+        document.getElementById("Ecoute").src="Image/SonOn.png"
+     }
   }
   function Dessus1() {
        document.getElementById("TT1").classList.toggle("TT1");
