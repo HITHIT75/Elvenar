@@ -22,7 +22,8 @@
 <script>
 
 function Test() {
-  //alert("ok")
+	Resultat = getCookie("Ecouteur")
+  alert(">" + Resultat + "<")
 //alert(parent.document.getElementById("EcouteO").InnerHTML)
 }
 function Admin() {
@@ -357,7 +358,7 @@ Contenu3[6] =" Je suis la remarquée AlexAngus ! "
     Les quêtes vont être mises sur l'onglet évent très bientôt<br>
 
       </marquee></div></div>
-<div class="boite6" ondblclick="Admin()" ><img src="Image\Personage2.png"></div>
+<div class="boite6" ondblclick="Admin()" ><img onclick="Test()" src="Image\Personage2.png"></div>
 
 
   <div class="boite7"><img height="100%;" src="Image\Personage3.png"></div>
