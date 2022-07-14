@@ -5,8 +5,11 @@
 
 <script>
   function JouerSon() {
-    var sound = document.getElementById("MonSon");
-      sound.play();}
+	Resultat = getCookie("Ecouteur")
+	    if (Resultat ==1) {
+    		var sound = document.getElementById("MonSon");
+    		sound.play();}
+    		}
   function Debut() {
     var Chaine =Contenu(1)
     document.getElementById("Contient1").innerHTML=Chaine
