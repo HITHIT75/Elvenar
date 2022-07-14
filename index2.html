@@ -5,28 +5,35 @@
  <title>Les Chevaliers</title>
 <script type="text/javascript">
   function test() {
-    //  alert(document.getElementById("Ecoute").src)
-      //alert(document.getElementById("Ecoute0").innerHTML)
       Ecouter = document.getElementById("Ecoute0").innerHTML
       document.getElementById("Ecoute0").innerHTML=Math.abs(Ecouter-1);
+    ActualisationEcouteur()
+  }
+   
+ function ActualisationEcouteur() { 
+      Ecouter = document.getElementById("Ecoute0").innerHTML
       if (Ecouter == 1 ) {
-          document.getElementById("Ecoute").src="Image/SonOff.png"
-       setCookie("Ecoutes", "0", 365);
+          document.getElementById("Ecoute").src="Image/SonOn.png"
+       setCookie("Ecouteur", "1", 365);
       }
       else {
-        document.getElementById("Ecoute").src="Image/SonOn.png"
-       setCookie("Ecoutes", "1", 365);
+        document.getElementById("Ecoute").src="Image/SonOff.png"
+       setCookie("Ecouteur", "0", 365);
       }
   }
   function setCookie(cname, cvalue, exdays) {
-    document.getElementById("Chaine").innerHTML=  cvalue
+   //alert("set coookie bebut")
+   // document.getElementById("Ecoute0").innerHTML=  cvalue
     const d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     let expires = "expires="+d.toUTCString();
+   //alert("Set Cookie >" + cname + "=" + cvalue + ";" + expires + ";path=/" +"<")
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+   //alert("fin set cookie")
   }
 
   function getCookie(cname) {
+    //alert("Get Cookie >" + document.cookie +"<")
     let name = cname + "=";
     let ca = document.cookie.split(';');
     for(let i = 0; i < ca.length; i++) {
@@ -43,20 +50,27 @@
 
 
   function checkCookie() {
-  //document.getElementById("Chaine").innerHTML=  "attente cookie"
-
     let username = getCookie("Ecouteur");
-//    alert("audio check cookie >" + username +"<")
-    if (username != "") {
 
+    if (username != "") {
+//alert("audio check cookie OK>" + username +"<")
      document.getElementById("Ecoute0").innerHTML=  username
+       if (username==1) {
+          document.getElementById("Ecoute0").innerHTML=  "1"
+          document.getElementById("Ecoute").src="Image/SonOn.png"     
+        }
+       else {
+          document.getElementById("Ecoute0").innerHTML=  "0"
+          document.getElementById("Ecoute").src="Image/SonOff.png"     
+        }
     }
     else {
        valeur = "1"
-        setCookie("Ecoutes", valeur, 365);
+       //alert("audio check cookie KO>" + username +"<")
+        setCookie("Ecouteur", valeur, 365);
         document.getElementById("Ecoute0").innerHTML=  "1"
-        test()
-    }
+        document.getElementById("Ecoute").src="Image/SonOn.png"
+     }
   }
   function Dessus1() {
        document.getElementById("TT1").classList.toggle("TT1");
@@ -131,9 +145,7 @@
       var sound = document.getElementById("MonSon");
         sound.play();}
       }
-  // function essai() {
-  //   alert(document.cookie)
-  //   }
+
 </script>
 </head>
 <style>
@@ -237,11 +249,10 @@
 
 </style>
 
-<body>
+<body onload="checkCookie()">
 <audio  id="MonSon" src="Image\Son.wav"></audio>
-<!-- <input  id="SonOO" class="native-hidden" type="checkbox" /> -->
 <img src="Image/SonOn.png" id="Ecoute" width="25px" onclick="test()" >
-<div id="Ecoute0" >1</div>
+<div id="Ecoute0" style="visibility:hidden;" >1</div>
 <div style="position: fixed;margin-left:6%;">
     <div class="TT1" id="TT1" >
       <div class="TT1txt">
