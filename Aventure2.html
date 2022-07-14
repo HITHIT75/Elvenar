@@ -6,9 +6,12 @@
   //  alert(document.getElementById("Img1").style.margintop)
         // ="450px"
       }
-  function JouerSon() {
-      var sound = document.getElementById("MonSon");
-        sound.play();}
+ function JouerSon() {
+	Resultat = getCookie("Ecouteur")
+	    if (Resultat ==1) {
+    		var sound = document.getElementById("MonSon");
+    		sound.play();}
+    		}
   function CalculInitial() {
     besoinAtelier1 = 100 * 2 *50 // temps de prod en minute
     besoinAtelier2 = 80 * 10 * 3 * 60
