@@ -286,8 +286,11 @@ document.getElementById("Chaine").innerHTML=ChaineSauver
      UpMax()
     }
   function JouerSon() {
-        var sound = document.getElementById("MonSon");
-          sound.play();}
+	Resultat = getCookie("Ecouteur")
+	    if (Resultat ==1) {
+    		var sound = document.getElementById("MonSon");
+    		sound.play();}
+    		}
 
 </script>
 <body onload="Loader()" onunload="SauverCookie()">
