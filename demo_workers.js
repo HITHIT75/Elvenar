@@ -1,10 +1,4 @@
-var i = 0;
+var myMusic;
 
-function timedCount() {
-
-  i = i + 1;
-  postMessage(i);
-  setTimeout("timedCount()",500);
-}
-
-timedCount();
+    myMusic = new sound("Image/Corne.wav");
+    myMusic.play();
