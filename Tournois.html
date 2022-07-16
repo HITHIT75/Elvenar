@@ -1,6 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script type="text/javascript">
+  //Paramètrer le discour d'Alex
+    function Placer1(){
+      JouerSon(1)
+      document.getElementById("Place").innerHTML="Tournoi de Marbre"
+      document.getElementById("ImageTournoi").src="Image/Tournoi1.png"
+        }
+    function Placer2(){
+      JouerSon(1)
+      document.getElementById("Place").innerHTML="Tournoi d'Acier"
+      document.getElementById("ImageTournoi").src="Image/Tournoi2.png"
+        }
+    function Placer3(){
+      JouerSon(1)
+      document.getElementById("Place").innerHTML="Tournoi de Planches"
+      document.getElementById("ImageTournoi").src="Image/Tournoi3.png"
+        }
+    function Placer4(){
+      JouerSon(1)
+      document.getElementById("Place").innerHTML="Tournoi de Cristal"
+      document.getElementById("ImageTournoi").src="Image/Tournoi4.png"
+        }
+    function Placer5(){
+      JouerSon(1)
+      document.getElementById("Place").innerHTML="Tournoi de Parchemin"
+      document.getElementById("ImageTournoi").src="Image/Tournoi5.png"
+        }
+    function Placer6(){
+      JouerSon(1)
+      document.getElementById("Place").innerHTML="Tournoi de Soie"
+      document.getElementById("ImageTournoi").src="Image/Tournoi6.png"
+        }
+    function Placer7(){
+      JouerSon(1)
+      document.getElementById("Place").innerHTML="Tournoi d'Elixir"
+      document.getElementById("ImageTournoi").src="Image/Tournoi7.png"
+        }
+    function Placer8(){
+      JouerSon(1)
+      document.getElementById("Place").innerHTML="Tournoi de Poussière"
+      document.getElementById("ImageTournoi").src="Image/Tournoi8.png"
+        }
+    function Placer9(){
+      JouerSon(1)
+      document.getElementById("Place").innerHTML="Tournoi de Gemme"
+      document.getElementById("ImageTournoi").src="Image/Tournoi9.png"
+        }
+
+    function JouerSon(Num) {
+  	   Resultat = getCookie("Ecouteur")
+  	    if (Resultat ==1) {
+          if (Num==1) {
+        		var sound = document.getElementById("MonSon");
+        		sound.play();}
+      		}
+        }
+    function getCookie(cname) {
+      let name = cname + "=";
+      let ca = document.cookie.split(';');
+      for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+
+
+
+  </script>
+
 </head>
 <style>
    body {
@@ -27,6 +102,46 @@
 
    }
  }
+ .dropbtn {
+   background-color: #04AA6D;
+   color: white;
+   padding: 16px;
+   font-size: 16px;
+   border: none;
+ }
+
+ .dropdown {
+   position: relative;
+   display: inline-block;
+ }
+ #Place {
+   background-color: #DBF642;
+ }
+
+ .dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #f1f1f1;
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+ }
+
+ .dropdown-content a {
+   vertical-align: bottom;
+   color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+ }
+
+ .dropdown-content a:hover {background-color: #ddd;}
+
+ .dropdown:hover .dropdown-content {display: block;}
+
+ .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
  </style>
  <body onload="CalculInitial()" >
  <audio  id="MonSon" src="Image\Son.wav"></audio>
@@ -43,12 +158,37 @@
     <img src="Image\Blason1.png" class="LienHtml" width="20px" style='display: inline'>
  </div>
 <br>
-  <div style="align:center;text-align:center"><BR>   
-<strong>Prochain tournoi de planche</strong><BR>
-<img  src="Image\TournoiActuel.png" style="display: inline;">
+  <div style="align:center;text-align:center"><BR>
+
+  <div class="dropdown">
+    <strong><span class="dropbtn" id="Place">Tournoi de Planches</span></strong>
+    <div class="dropdown-content">
+      <img  src="Image\Marbre.png" width="20px" style="float:left;">
+      <a onclick="Placer1()" href="#">Marbre</a>
+      <img  src="Image\Acier.png" width="20px" style="float:left;">
+      <a onclick="Placer2()" href="#">Acier</a>
+      <img  src="Image\Planche.png" width="20px" style="float:left;">
+      <a onclick="Placer3()" href="#">Planches</a>
+      <img  src="Image\Cristal.png" width="20px" style="float:left;">
+      <a onclick="Placer4()" href="#">Cristal</a>
+        <img  src="Image\Parchemin.png" width="20px" style="float:left;">
+      <a onclick="Placer5()" href="#">Parchemin</a>
+        <img  src="Image\Soie.png" width="20px" style="float:left;">
+      <a onclick="Placer6()" href="#">Soie</a>
+        <img  src="Image\Elixir.png" width="20px" style="float:left;">
+      <a onclick="Placer7()" href="#">Elixir</a>
+      <img  src="Image\Poussiere.png" width="20px" style="float:left;">
+      <a onclick="Placer8()" href="#">Poussière</a>
+      <img  src="Image\Rubis.png" width="20px" style="float:left;">
+      <a onclick="Placer9()" href="#">Gemme</a>
+
+    </div>
+  </div><BR>
+
+<img  id="ImageTournoi" src="Image\TournoiActuel.png" style="display: inline;">
 </div><br>
- <div style="align:center;text-align:center">Attention <strong>elvengems</strong> n'est plus mis à jour toutes les informations ne sont pas pertinentes.</div>   
-    
+ <div style="align:center;text-align:center">Attention <strong>elvengems</strong> n'est plus mis à jour toutes les informations ne sont pas pertinentes.</div>
+
  <div style="align:center;">
     <img  src="Image\Marbre.png" class="LienHtml" width="20px" style="display: inline;">
     <div style='display: inline'><a target="_blank"  href="https://elvengems.com/tournament/marble/">
