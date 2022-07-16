@@ -1,6 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script type="text/javascript">
+  //Paramètrer le discour d'Alex
+    function Soluce1(){
+
+
+      document.getElementById("Sou1").src="Image/SouDouble.png"
+      document.getElementById("SouVolant").classList.toggle("SouVolant");
+      document.getElementById("Sou2").src="Image/SouVide.png"
+        }
+
+    function JouerSon() {
+  	   Resultat = getCookie("Ecouteur")
+  	    if (Resultat ==1) {
+      		var sound = document.getElementById("MonSon");
+      		sound.play();}
+      		}
+    function getCookie(cname) {
+      let name = cname + "=";
+      let ca = document.cookie.split(';');
+      for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+
+
+
+  </script>
+
+
 </head>
 <style>
   body {
@@ -85,17 +121,48 @@
       animation-duration: 1s;
       /* animation-fill-mode: forward */
     }
+    @keyframes SouVolant {
+      0%   {Top:5%;left:50%;width:35px;}
+      80%   {Top:0%;left:43%;width:120px;}
+      99% {Top:1.3%;left:46.2%;width:35px;transform:rotate(270deg)}
+      100% {width:0px;}
+    }
+    .SouVolant0 {
+      width:0px;
+    }
+    .SouVolant {
+      width:35px;
+      position:absolute;
+      animation-name: SouVolant;
+      animation-fill-mode:forwards;
+      animation-duration: 4s;
+      /* animation-fill-mode: forward */
+    }
+    @keyframes LienHtml {
+      0%   {opacity: 0;}
+     50% {opacity:1;}
+     100% {opacity:0;}
+    }
+    .LienHtml {
+      color: #051E4C;
+      animation-name: LienHtml;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+
+    }
+
+
 </style>
 <body >
      <div>
-        <img src="Image\Sou.png" class="Sou" width="35px" >
-        <img src="Image\Sou.png" class="Sou"  width="35px">
-        <img src="Image\Sou.png" class="Sou" width="35px" >
+        <img src="Image\Sou.png" onclick="Soluce1()"  class="Sou" id="Sou1" width="35px" >
+        <img src="Image\Sou.png" onclick="Soluce1()"  class="Sou"  width="35px">
+        <img src="Image\Sou.png" onclick="Soluce1()"  class="Sou" width="35px" >
         <br>
-        <img src="Image\Sou.png" class="Sou" width="35px" >
-        <img src="Image\Sou.png"  class="Sou" width="35px">
+        <img src="Image\Sou.png" onclick="Soluce1()" class="Sou" width="35px" >
+        <img src="Image\Sou.png" onclick="Soluce1()" class="Sou" id="Sou2" width="35px">
         <br>
-        <img src="Image\Sou.png" class="Sou" width="35px" >
+        <img src="Image\Sou.png" onclick="Soluce1()"  class="Sou" width="35px" >
        <p>
        Avec <strong>6</strong> écus chevaliers diposés sur une table en face de toi, déplaces un seul écu afin d'obtenir deux lignes (droite) de <strong>4</strong> écus.<br>
        </p>
@@ -127,4 +194,19 @@
     </td>
   </tr>
   </table>
+<img src="Image\EntreLigne2.png" width="10%" ><br>
+<img src="Image\Feuille.png"  >
+<p>
+Il faut relier les 9 points avec seulement 4 lignes droites, sans lever son crayon.
+</p>
+<img src="Image\EntreLigne2.png" width="10%" ><br>
+
+<div style="align:center;">
+   <img  src="Image\Blason1.png" class="LienHtml" width="15px" style="display: inline;">
+   <div style='display: inline'><a target="_blank" href="http://www.numdam.org/article/RO_1987__21_1_87_0.pdf">Un lien sympa, complet et clair pour vous aider à négocier dans le donjon<br>Je l'utilise à chaque fois.</a>
+</div>
+   <img  src="Image\Blason1.png" class="LienHtml" width="15px" style='display: inline'>
+</div>
+
+  <img src="Image\Sou.png" class="SouVolant0" id="SouVolant">
 </body>
