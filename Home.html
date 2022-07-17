@@ -1,7 +1,22 @@
 <head>
-  <script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-	</script>
+<script>
+function MessageAlex() {
+	// Paramètrage du messa	ge d'Alex sur Ligne de 1 à 7 - la balise <img...> sert à inserer des images ; la balise <a...> des leins hypertexte
+	Ligne1 ="Un nouvel event a commencé hier sur la bêta sous une toute nouvelle forme.<br>"
+	Ligne2 ="Ça a l’air un peu compliqué et fastidieux. À voir...<br>"
+	Ligne3 ="Voici le lien pour regarder la vidéo explicative faite par MarinaDelicia :<br>"
+    	Ligne4 ="<img  src="Image\Blason1.png" class="LienHtml" width="15px" style="display: inline;">"
+	Ligne5 ="<a style="display: inline;" target="_blank" href="https://www.youtube.com/watch?v=jyDJLf-EXNM&ab_channel=MarinaDelicia">Aller vers Youtube</a>"
+	Ligne6 ="<img  src="Image\Blason1.png" class="LienHtml" width="15px" style="display: inline;"><br>"
+    	Ligne7 ="Les quêtes vont être mises sur l'onglet évent très bientôt<br>"
+
+	
+	
+	TotalLigne=Ligne1+Ligne2+Ligne3+Ligne4+Ligne5+Ligne6+Ligne7	
+	document.getElementById("motAlex").innerHTML=	TotalLigne
+}	
+</script>	
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">	</script>
   <script type="text/javascript">
 		$(window).resize(function () {
 
@@ -160,6 +175,7 @@ Contenu3[6] =" Je suis la remarquée AlexAngus ! "
         document.getElementById("mot9").innerHTML=Contenu5[Position6]
         document.getElementById("mot10").innerHTML=Contenu6[Position7]
         document.getElementById("mot11").innerHTML=Contenu7[Position8]
+	MessageAlex()    
       }
     function Entier(alea){
 
@@ -352,14 +368,14 @@ Contenu3[6] =" Je suis la remarquée AlexAngus ! "
         <span id ="mot8" >
            évenements notables touchant la confrérie.
         </span><br>
-	 <span >Un nouvel event a commencé hier sur la bêta sous une toute nouvelle forme.<br>
+	 <span id="motAlex">Un nouvel Event a commencé hier sur la bêta sous une toute nouvelle forme.<br>
 		Ça a l’air un peu compliqué et fastidieux. À voir...<br>
 		Voici le lien pour regarder la vidéo explicative faite par MarinaDelicia :<br>
     		<img  src="Image\Blason1.png" class="LienHtml" width="15px" style="display: inline;">
 		<a style="display: inline;" target="_blank" href="https://www.youtube.com/watch?v=jyDJLf-EXNM&ab_channel=MarinaDelicia">Aller vers Youtube</a>
 		<img  src="Image\Blason1.png" class="LienHtml" width="15px" style="display: inline;"><br>
     		Les quêtes vont être mises sur l'onglet évent très bientôt<br>
-
+	</span>
       </marquee></div></div>
 <div class="boite6" ondblclick="Admin()" ><img height="100%;" src="Image\Personage2.png"></div>
 
