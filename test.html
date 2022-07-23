@@ -4,24 +4,28 @@
 
 
 <script>
-//poster="Images/Sou.png"
+function loadData() {
+//https://docs.google.com/spreadsheets/d/1dMKuTO8IRpIcLGpUCquzwEXG33rULQBouQmcJ4A2kGg/edit#gid=0
+// https://docs.google.com/spreadsheets/d/e/2PACX-1vS7h49K5ALJK98pf34d7KHeUecOC2w7xZLA8r5k6MMNTzOBhA8VvXSo7v5_xlAxPfrw69xGxKg5DqKf/pubhtml?gid=0&single=true
+var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7h49K5ALJK98pf34d7KHeUecOC2w7xZLA8r5k6MMNTzOBhA8VvXSo7v5_xlAxPfrw69xGxKg5DqKf/pub?gid=569730062&single=true&output=csv";
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4) {
+            document.getElementById("display").innerHTML = xmlhttp.responseText;
+            //alert(xmlhttp.responseText);
+        }
+    };
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send(null);
+}
 </script>
 
 </head>
 <style>
-.center{
- margin:  15%  40%;
- width: 300px;
- display: block;
-}
+
 </style>
 
-<body align="center;">
-
-  <video  class="center" width="320" height="240" autoplay >
-    <source src="Image/Video.mp4"  type="video/mp4">
-
-    Votre explorateur ne supporte pas la balise video.
-  </video>
+<button type="button" onclick="loadData()">Load Spreadsheet </button>
+<div id="display"></div>
 </body>
 </html>
