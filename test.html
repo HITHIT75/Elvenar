@@ -13,7 +13,7 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7h49K5ALJK98pf34d7K
         if (xmlhttp.readyState == 4) {
 
             const parts = xmlhttp.responseText.split("|");
-            document.getElementById("display").innerHTML = parts[0] + "<br><br><br><br>" + parts[1] + "<br><br><br><br>" + parts[2];            
+            document.getElementById("display").innerHTML = parts[1] + "<br><br><br><br>" + parts[2] + "<br><br><br><br>" + parts[3];            
             
         }
     };
