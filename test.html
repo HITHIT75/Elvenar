@@ -11,8 +11,10 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7h49K5ALJK98pf34d7K
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4) {
-            document.getElementById("display").innerHTML = xmlhttp.responseText;
-            //alert(xmlhttp.responseText);
+
+            const parts = xmlhttp.responseText.split("|");
+            document.getElementById("display").innerHTML = parts[0] + "<br><br><br><br>" + parts[1] + "<br><br><br><br>" + parts[2];            
+            
         }
     };
     xmlhttp.open("GET", url, true);
