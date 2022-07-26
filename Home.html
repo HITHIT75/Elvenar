@@ -30,12 +30,28 @@ function MessageAlex() {
 			// the page
 			$("*").css("font-size", size + "px");
 		});
-	</script>
+</script>
 
 
 
 <script>
+function loadData() {
+var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7h49K5ALJK98pf34d7KHeUecOC2w7xZLA8r5k6MMNTzOBhA8VvXSo7v5_xlAxPfrw69xGxKg5DqKf/pub?gid=569730062&single=true&output=csv";
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4) {
 
+            const parts = xmlhttp.responseText.split("|");
+		var0=parts[1]
+   		 result = var0.substring(0, var0.length-4);
+		document.getElementById("motAlex").innerHTML=result
+  
+
+        }
+    };
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send(null);
+}
 function Test() {
 //	Resultat = getCookie("Ecouteur")
 //  alert(">" + Resultat + "<")
@@ -176,7 +192,7 @@ Contenu3[6] =" Je suis la remarquée AlexAngus ! "
         document.getElementById("mot9").innerHTML=Contenu5[Position6]
         document.getElementById("mot10").innerHTML=Contenu6[Position7]
         document.getElementById("mot11").innerHTML=Contenu7[Position8]
-	  MessageAlex() 
+	  loadData()
       }
     function Entier(alea){
 
