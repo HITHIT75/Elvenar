@@ -5,10 +5,10 @@
 //Paramètrer le discour d'Alex
   function Debut() {
     // Ci-dessous à paramètrer <br> signifie saut à la ligne <strong> en gras
-	  
+
 	loadData()
- 
-	  
+
+
    // Ligne1 ="Re-Bonjour à tous.<br>"
    // Ligne2 ="Suite au bug sur cette aventure, ne pas faire les points demandant des sacs Or ou bracelet.<br>"
    // Ligne3 ="Carte 3 : finir juste le 1er point jaune du bas et après STOP. <br>"
@@ -19,8 +19,10 @@
    // document.getElementById("Contenu").innerHTML=LigneTotal
       }
 function loadData() {
-//https://docs.google.com/spreadsheets/d/1dMKuTO8IRpIcLGpUCquzwEXG33rULQBouQmcJ4A2kGg/edit#gid=0
-// https://docs.google.com/spreadsheets/d/e/2PACX-1vS7h49K5ALJK98pf34d7KHeUecOC2w7xZLA8r5k6MMNTzOBhA8VvXSo7v5_xlAxPfrw69xGxKg5DqKf/pubhtml?gid=0&single=true
+
+
+
+
 var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7h49K5ALJK98pf34d7KHeUecOC2w7xZLA8r5k6MMNTzOBhA8VvXSo7v5_xlAxPfrw69xGxKg5DqKf/pub?gid=569730062&single=true&output=csv";
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -29,9 +31,52 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7h49K5ALJK98pf34d7K
             const parts = xmlhttp.responseText.split("|");
 		var0=parts[2]
    		 result = var0.substring(0, var0.length-4);
-		document.getElementById("Contenu").innerHTML=result 	
-            //document.getElementById("display").innerHTML = parts[1] + "<br><br><br><br>" + parts[2] + "<br><br><br><br>" + parts[3]+ "<br><br><br><br>" + parts[4];            
-            
+		document.getElementById("Contenu").innerHTML=result
+            //document.getElementById("display").innerHTML = parts[1] + "<br><br><br><br>" + parts[2] + "<br><br><br><br>" + parts[3]+ "<br><br><br><br>" + parts[4];
+            var Chaine = parts[4]
+            var Chain = Chaine.split(",");
+
+            for ( i = 0; i < 151; i += 2) {
+              Cible = "I" + ((i/2)+1)
+              j = ((i/2)+1)
+                 if (Chain[i]==0) {
+                   document.getElementById(Cible).src="file:///C:/Users/hugue/github/Elvenar/Image/RondVide.png"
+                 }
+                else {
+                  if (Chain[i+1]==1) {
+                     if ((j==1) || (j==26) || (j==51)){
+                       document.getElementById(Cible).src="file:///C:/Users/hugue/github/Elvenar/Image/RondDepartBarre.png"
+                     }
+                     else if (((j>1) && (j<10)) || ((j>26) && (j<35)) || ((j>51) && (j<60))) {
+                       document.getElementById(Cible).src="file:///C:/Users/hugue/github/Elvenar/Image/RondRougeBarre.png"
+                     }
+                     else if (((j>=10) && (j<=17)) || ((j>=35) && (j<=42)) || ((j>=60) && (j<=67))) {
+                       document.getElementById(Cible).src="file:///C:/Users/hugue/github/Elvenar/Image/RondBleuBarre.png"
+                     }
+                     else if (((j>=18) && (j<=25)) || ((j>42) && (j<=50)) || ((j>=67) && (j<=75))) {
+                       document.getElementById(Cible).src="file:///C:/Users/hugue/github/Elvenar/Image/RondVertBarre.png"
+                     }
+                   }
+                     else {
+                       if ((j==1) || (j==26) || (j==51)) {
+                         document.getElementById(Cible).src="file:///C:/Users/hugue/github/Elvenar/Image/RondDepart.png"
+                       }
+                       else if (((j>1) && (j<10)) || ((j>26) && (j<35)) || ((j>51) && (j<60))) {
+                         document.getElementById(Cible).src="file:///C:/Users/hugue/github/Elvenar/Image/RondRouge.png"
+                       }
+                       else if (((j>=10) && (j<=17)) || ((j>=35) && (j<=42)) || ((j>=60) && (j<=67)))  {
+                         document.getElementById(Cible).src="file:///C:/Users/hugue/github/Elvenar/Image/RondBleu.png"
+                       }
+                       else if (((j>=18) && (j<=25)) || ((j>=42) && (j<=50)) || ((j>=67) && (j<=75)))  {
+                         document.getElementById(Cible).src="file:///C:/Users/hugue/github/Elvenar/Image/RondVert.png"
+                       }
+                     }
+                   }
+              }
+
+
+
+
         }
     };
     xmlhttp.open("GET", url, true);
@@ -88,16 +133,18 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7h49K5ALJK98pf34d7K
      animation-fill-mode: forwards;
      animation-iteration-count: infinite;
    }
-   table, tr, td {
+   table, th, td {
+     margin-left: auto;
+     margin-right: auto;
      align:center;
-     font-size: 14px;
-     margin:0px;
+     text-align: center;
+     /* background-color: white; */
+     border-collapse:collapse;
      padding: 0px;
-   }
 
-    td {
-     border: 1px solid #333;
-     /* border-radius: 6px; */
+   }
+   .ImgRond {
+       width:25px;
    }
    marquee {
        width:60%;
@@ -166,36 +213,151 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7h49K5ALJK98pf34d7K
 
 
 
-<div style="display: inline;" class="Tablecarte">
-    <table  style="display: inline;width:100%">
-      <tr >
-      <td colspan="3" width="60%"><strong>Chemins & étapes sélectionnés</strong>
-      </tr >
-      <tr >
-       <td >
-         <div style="top:0%;" >CARTE 1</div>
-         <img  src="Image\EventEcu1.png" width="40px" style="display: inline;">
-       </td>
-       <td >
-         <div style="top:0%;" >CARTE 2</div>
-         <img  src="Image\EventEcu2.png" width="40px" style="display: inline;">
+  <table  style="width:30%;">
+    <tr >
+    <td colspan="11" ><strong>Chemins & étapes sélectionnés</strong>
+    </tr >
+    <tr >
+     <td colspan="3" style="width:20%">
+       <div style="top:0%;" >CARTE 1</div>
+       <img  src="Image\EventEcu1.png" width="40px" ><br>
+     </td>
+     <td style="width:5%">
+     </td>
+     <td colspan="3" style="width:20%">
+       <div style="top:0%;" >CARTE 2</div>
+       <img  src="Image\EventEcu2.png" width="40px" ><br>
+     </td>
+     <td style="width:5%">
+     </td>
+     <td colspan="3" style="width:20%">
+       <div style="top:0%;" >CARTE 3</div>
+       <img  src="Image\EventEcu3.png" width="40px" ><br>
+     </td>
+  </tr>
 
-       </td>
-       <td >
-         <div style="top:0%;" >CARTE 3</div>
-         <img  src="Image\EventEcu3.png" width="40px" style="display: inline;">
 
-       </td>
-    </tr>
-    <tr>
-       <td>
-         <img src="Image\CARTE 1.png" class="Sou" width="120px" >
-      </td>
-       <td><img src="Image\CARTE 2.png" class="Sou" width="120px" >   </td>
-        <td><img src="Image\CARTE 3.png" class="Sou" width="120px" ></td>
-     </tr>
-   </table>
-</div>
+  <tr>
+     <td colspan="3" style="background-color:white;"><img class="ImgRond" src="Image\RondDepart.png"></td>
+     <td></td>
+     <td style="background-color:white;" colspan="3"><img class="ImgRond" src="Image\RondDepart.png"></td>
+     <td></td>
+     <td style="background-color:white;" colspan="3"><img  class="ImgRond" src="Image\RondDepart.png"></td>
+  </tr>
+
+  <tr>
+     <td style="background-color:white;"><img id ="I9" class="ImgRond" src="Image\RondRouge.png"></td>
+     <td style="background-color:white;"><img id ="I17" class="ImgRond" src="Image\RondBleu.png"></td>
+     <td style="background-color:white;"><img id ="I25" class="ImgRond" src="Image\RondVert.png"></td>
+     <td></td>
+     <td style="background-color:white;"><img id ="I34" class="ImgRond" src=""></td>
+     <td style="background-color:white;"><img id ="I42" class="ImgRond" src=""></td>
+     <td style="background-color:white;"><img id ="I50" class="ImgRond" src=""></td>
+     <td></td>
+     <td style="background-color:white;"><img id ="I59" class="ImgRond" src=""></td>
+     <td style="background-color:white;"><img id ="I67" class="ImgRond" src=""></td>
+     <td style="background-color:white;"><img id ="I75" class="ImgRond" src=""></td>
+  </tr>
+  <tr>
+     <td style="background-color:white;"><img id ="I8" class="ImgRond" src=""></td>
+     <td style="background-color:white;"><img id ="I16" class="ImgRond" src=""></td>
+     <td style="background-color:white;"><img id ="I24" class="ImgRond" src=""></td>
+     <td></td>
+     <td style="background-color:white;"><img id ="I33" class="ImgRond" src=""></td>
+     <td style="background-color:white;"><img id ="I41" class="ImgRond" src=""></td>
+     <td style="background-color:white;"><img id ="I49" class="ImgRond" src=""></td>
+     <td></td>
+     <td style="background-color:white;"><img id ="I58" class="ImgRond" src=""></td>
+     <td style="background-color:white;"><img id ="I66" class="ImgRond" src=""></td>
+     <td style="background-color:white;"><img id ="I74" class="ImgRond" src=""></td>
+  </tr>
+  <tr>
+     <td style="background-color:white;"><img id ="I7" class="ImgRond" src=""></td>
+     <td style="background-color:white;"><img id ="I15" class="ImgRond" src=""></td>
+     <td style="background-color:white;"><img id ="I23" class="ImgRond" src=""></td>
+     <td></td>
+     <td style="background-color:white;"><img id ="I32" class="ImgRond" src=""></td>
+     <td style="background-color:white;"><img id ="I40" class="ImgRond" src=""></td>
+     <td style="background-color:white;"><img id ="I48" class="ImgRond" src=""></td>
+     <td></td>
+     <td style="background-color:white;"><img id ="I57" class="ImgRond" src=""></td>
+     <td style="background-color:white;"><img id ="I65" class="ImgRond" src=""></td>
+     <td style="background-color:white;"><img id ="I73" class="ImgRond" src=""></td>
+  </tr>
+  <tr>
+     <td style="background-color:white;"><img id ="I6" class="ImgRond" src="Image\RondRouge.png"></td>
+     <td style="background-color:white;"><img id ="I14" class="ImgRond" src="Image\RondBleu.png"></td>
+     <td style="background-color:white;"><img id ="I22" class="ImgRond" src="Image\RondVert.png"></td>
+     <td></td>
+     <td style="background-color:white;"><img id ="I31" class="ImgRond" src=""></td>
+     <td style="background-color:white;"><img id ="I39" class="ImgRond" src=""></td>
+     <td style="background-color:white;"><img id ="I47" class="ImgRond" src=""></td>
+     <td></td>
+     <td style="background-color:white;"><img id ="I56" class="ImgRond" src=""></td>
+     <td style="background-color:white;"><img id ="I64" class="ImgRond" src=""></td>
+     <td style="background-color:white;"><img id ="I72" class="ImgRond" src=""></td>
+  </tr>
+  <tr>
+     <td style="background-color:white;"><img id ="I5" class="ImgRond" src="Image\RondRouge.png"></td>
+     <td style="background-color:white;"><img id ="I13" class="ImgRond" src="Image\RondBleu.png"></td>
+     <td style="background-color:white;"><img id ="I21" class="ImgRond" src="Image\RondVert.png"></td>
+     <td></td>
+     <td style="background-color:white;"><img id ="I30" class="ImgRond" src=""></td>
+     <td style="background-color:white;"><img id ="I38" class="ImgRond" src=""></td>
+     <td style="background-color:white;"><img id ="I46" class="ImgRond" src=""></td>
+     <td></td>
+     <td style="background-color:white;"><img id ="I55" class="ImgRond" src=""></td>
+     <td style="background-color:white;"><img id ="I63" class="ImgRond" src=""></td>
+     <td style="background-color:white;"><img id ="I71" class="ImgRond" src=""></td>
+  </tr>
+  <tr>
+     <td style="background-color:white;"><img id ="I4" class="ImgRond" src="Image\RondRouge.png"></td>
+     <td style="background-color:white;"><img id ="I12" class="ImgRond" src="Image\RondBleu.png"></td>
+     <td style="background-color:white;"><img id ="I20" class="ImgRond" src="Image\RondVert.png"></td>
+     <td></td>
+     <td style="background-color:white;"><img id ="I29" class="ImgRond" src="Image\RondRouge.png"></td>
+     <td style="background-color:white;"><img id ="I37" class="ImgRond" src="Image\RondBleu.png"></td>
+     <td style="background-color:white;"><img id ="I45" class="ImgRond" src="Image\RondVert.png"></td>
+     <td></td>
+     <td style="background-color:white;"><img id ="I54" class="ImgRond" src="Image\RondRouge.png"></td>
+     <td style="background-color:white;"><img id ="I62" class="ImgRond" src="Image\RondBleu.png"></td>
+     <td style="background-color:white;"><img id ="I70" class="ImgRond" src="Image\RondVert.png"></td>
+  </tr>
+  <tr>
+     <td style="background-color:white;"><img id ="I3" class="ImgRond" src="Image\RondRouge.png"></td>
+     <td style="background-color:white;"><img id ="I11" class="ImgRond" src="Image\RondBleu.png"></td>
+     <td style="background-color:white;"><img id ="I19" class="ImgRond" src="Image\RondVert.png"></td>
+     <td></td>
+     <td style="background-color:white;"><img id ="I28" class="ImgRond" src="Image\RondRouge.png"></td>
+     <td style="background-color:white;"><img id ="I36" class="ImgRond" src="Image\RondBleu.png"></td>
+     <td style="background-color:white;"><img id ="I44" class="ImgRond" src="Image\RondVert.png"></td>
+     <td></td>
+     <td style="background-color:white;"><img id ="I53" class="ImgRond" src="Image\RondRouge.png"></td>
+     <td style="background-color:white;"><img id ="I61" class="ImgRond" src="Image\RondBleu.png"></td>
+     <td style="background-color:white;"><img id ="I69" class="ImgRond" src="Image\RondVert.png"></td>
+  </tr>
+  <tr>
+     <td style="background-color:white;"><img id ="I2" class="ImgRond" src=""></td>
+     <td style="background-color:white;"><img id ="I10" class="ImgRond" src=""></td>
+     <td style="background-color:white;"><img id ="I18" class="ImgRond" src=""></td>
+     <td></td>
+     <td style="background-color:white;"><img id ="I27" class="ImgRond" src="Image\RondRouge.png"></td>
+     <td style="background-color:white;"><img id ="I35" class="ImgRond" src="Image\RondBleu.png"></td>
+     <td style="background-color:white;"><img id ="I43" class="ImgRond" src="Image\RondVert.png"></td>
+     <td></td>
+     <td style="background-color:white;"><img id ="I52" class="ImgRond" src=""></td>
+     <td style="background-color:white;"><img id ="I60" class="ImgRond" src=""></td>
+     <td style="background-color:white;"><img id ="I68" class="ImgRond" src=""></td>
+  </tr>
+  <tr>
+     <td style="background-color:white;" colspan="3"><img id ="I1" class="ImgRond" src="Image\RondDepart.png"</td>
+     <td></td>
+     <td style="background-color:white;" colspan="3"><img id ="I26" class="ImgRond"src="Image\RondDepart.png"</td>
+     <td></td>
+     <td style="background-color:white;" colspan="3"><img id ="I51"  class="ImgRond"src="Image\RondDepart.png"</td>
+  </tr>
+
+  </table>
 
 
 </body>
