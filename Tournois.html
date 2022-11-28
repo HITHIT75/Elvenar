@@ -3,6 +3,12 @@
 <head>
   <script type="text/javascript">
   function CalculInitial(){
+    Date aujourdhui = new Date()
+    Date DateRef = simpleDateFormat.parse("23/10/2022"); // dimanche 23/10/2022 00:00 tournoi = 1
+    
+        long diff = aujourdhui.getTime() - DateRef.getTime();
+        TimeUnit time = TimeUnit.DAYS;
+   alert(diff)
     Placer5()
   }
     function Placer1(){
