@@ -3,17 +3,47 @@
 <head>
   <script type="text/javascript">
   function CalculInitial(){
-   aujourdhui = new Date("2022-10-23")
+   aujourdhui = new Date()
     DateRef = new Date("2022-10-23"); // dimanche 23/10/2022 00:00 tournoi = 1
-    alert(DateRef)
         diff = aujourdhui.getTime() - DateRef.getTime();
         diff =diff/86400000
-     NumTournoi=1+Math.floor(((diff/63)-Math.floor(diff/63))*10)
-   alert(NumTournoi) 
-    
-    
-    
+     NumTournoi=Math.floor(((diff/63)-Math.floor(diff/63))*10)
+if (NumTournoi==1) {
+    Placer1()
+}
+ if (NumTournoi==1) {
+    Placer1()
+}
+ if (NumTournoi==2) {
+    Placer23()
+}
+ if (NumTournoi==3) {
+    Placer3()
+}
+ if (NumTournoi==4) {
+    Placer4()
+}
+ if (NumTournoi==5) {
     Placer5()
+}
+ if (NumTournoi==6) {
+    Placer6()
+}
+ if (NumTournoi==7) {
+    Placer7()
+}
+ if (NumTournoi==8) {
+    Placer8()
+}
+ if (NumTournoi==9) {
+    Placer9()
+}
+
+
+    
+    
+    
+  
   }
     function Placer1(){
       JouerSon(1)
