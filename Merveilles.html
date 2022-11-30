@@ -1,0 +1,620 @@
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<style>
+     body {
+       align: center;
+       text-align:center;
+       padding: 0px;
+       margin: 0px;
+       display:inline;
+       font-size: 16px;
+       font-family: Verdana;
+       color: #051E4C;
+
+     }
+
+     @keyframes LienHtml {
+       0%   {opacity: 0;}
+      50% {opacity:1;}
+        100% {opacity:0;}
+     }
+#ImageMerv {
+
+height: 100px;
+       transition:  height 2s;
+     }
+#ImageMerv:hover {
+height: 500px;
+}
+
+     .LienHtml {
+       color: #051E4C;
+       animation-name: LienHtml;
+       animation-duration: 10s;
+       animation-iteration-count: infinite;
+
+     }
+   }
+   .dropbtn {
+     background-color: #04AA6D;
+     color: white;
+     padding: 1px;
+     font-size: 14px;
+     border: none;
+   }
+
+   .dropdown {
+     position: relative;
+     display: inline-block;
+   }
+   #Place {
+     background-color: #DBF642;
+   }
+
+   .dropdown-content {
+     display: none;
+     position: absolute;
+     background-color: #f1f1f1;
+     min-width: 160px;
+     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+     z-index: 1;
+   }
+
+   .dropdown-content a {
+     vertical-align: bottom;
+     color: black;
+     padding: 1px 4px;
+     text-decoration: none;
+     display: block;
+   }
+
+   .dropdown-content a:hover {background-color: #ddd;}
+
+   .dropdown:hover .dropdown-content {display: block;}
+
+   .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+   </style>
+ <script type="text/javascript">
+  function CalculInitial(){
+    Placer1()
+  }
+  function Placer1(){
+    JouerSon(1)
+    document.getElementById("Place").innerHTML="Abysse_dore"
+    document.getElementById("ImageMerv").src="https://fr.wiki.elvenar.com/images/f/f8/Abysse_dor%C3%A9.png"
+      }
+  function Placer2(){
+    JouerSon(1)
+    document.getElementById("Place").innerHTML="Excavation_sans_fin"
+    document.getElementById("ImageMerv").src="https://fr.wiki.elvenar.com/images/b/b4/Excavation_sans_fin.png"
+      }
+    function Placer3(){
+      JouerSon(1)
+      document.getElementById("Place").innerHTML="Aiguilles_de_la_tempete"
+      document.getElementById("ImageMerv").src="https://fr.wiki.elvenar.com/images/4/4e/Aiguilles_de_la_temp%C3%AAte.png"
+        }
+    function Placer4(){
+      JouerSon(1)
+      document.getElementById("Place").innerHTML="Tournoi de Cristal"
+      document.getElementById("ImageTournoi").src="Image/Tournoi4.png"
+        }
+    function Placer5(){
+      JouerSon(1)
+      document.getElementById("Place").innerHTML="Tournoi de Parchemin"
+      document.getElementById("ImageTournoi").src="Image/Tournoi5.png"
+        }
+    function Placer6(){
+      JouerSon(1)
+      document.getElementById("Place").innerHTML="Tournoi de Soie"
+      document.getElementById("ImageTournoi").src="Image/Tournoi6.png"
+        }
+    function Placer7(){
+      JouerSon(1)
+      document.getElementById("Place").innerHTML="Tournoi d'Elixir"
+      document.getElementById("ImageTournoi").src="Image/Tournoi7.png"
+        }
+    function Placer8(){
+      JouerSon(1)
+      document.getElementById("Place").innerHTML="Tournoi de Poussière"
+      document.getElementById("ImageTournoi").src="Image/Tournoi8.png"
+        }
+    function Placer9(){
+      JouerSon(1)
+      document.getElementById("Place").innerHTML="Tournoi de Gemme"
+      document.getElementById("ImageTournoi").src="Image/Tournoi9.png"
+        }
+
+    function JouerSon(Num) {
+  	   Resultat = getCookie("Ecouteur")
+  	    if (Resultat ==1) {
+          if (Num==1) {
+        		var sound = document.getElementById("MonSon");
+        		sound.play();}
+      		}
+        }
+    function getCookie(cname) {
+      let name = cname + "=";
+      let ca = document.cookie.split(';');
+      for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+
+
+
+  </script>
+</head>
+
+
+<body onload="Debut()">
+  <audio  id="MonSon" src="Image\Son.wav"></audio>
+
+
+
+
+
+  <div style="align:left;text-align:left"><BR>
+
+  <div class="dropdown">
+    <strong><span class="dropbtn" id="Place">Tome_des_mysteres</span></strong>
+    <div class="dropdown-content">
+      <a onclick="Placer1()" href="#">Abysse_dore</a>
+      <a onclick="Placer2()" href="#">Excavation_sans_fin</a>
+      <a onclick="Placer3()" href="#">Aiguilles_de_la_tempete</a>
+      <a onclick="Placer4()" href="#">Monastere_martial</a>
+      <a onclick="Placer5()" href="#">Le_sanctuaire</a>
+      <a onclick="Placer6()" href="#">Tour_du_clocher</a>
+      <a onclick="Placer7()" href="#">Phare_de_cristal</a>
+      <a onclick="Placer8()" href="#">Tour_de_guet_en_ruines</a>
+      <a onclick="Placer9()" href="#">Trones_des_hauts_hommes</a>
+      <a onclick="Placer10()" href="#">Rempart_nain</a>
+      <a onclick="Placer11()" href="#">Coeur_de_la_montagne</a>
+      <a onclick="Placer12()" href="#">Tours_de_la_prosperite</a>
+      <a onclick="Placer13()" href="#">Guilde_du_marchand_prospere</a>
+       <a onclick="Placer15()" href="#">Forge_des_heros</a>
+      <a onclick="Placer16()" href="#">Ambassade_d_enar</a>
+      <a onclick="Placer9()" href="#">Sanctuaire_des_champignons_astucieux</a>
+      <a onclick="Placer9()" href="#">Academie_volante</a>
+            <a onclick="Placer9()" href="#">Labyrinthe_de_la_matiere_noire</a>
+      <a onclick="Placer9()" href="#">Abbaye_du_dragon</a>
+      <a onclick="Placer9()" href="#">Temple_des_crapauds</a>
+      <a onclick="Placer9()" href="#">Centre_d_echange_d_Elvenar</a>
+            <a onclick="Placer9()" href="#">Tours_du_crepuscule</a>
+      <a onclick="Placer9()" href="#">Fontaines_triomphantes</a>
+      <a onclick="Placer9()" href="#">Pyramide_purificatrice</a>
+      <a onclick="Placer9()" href="#">Phare_de_bon_entourage</a>
+      <a onclick="Placer9()" href="#">D111_a_Voyage_temporel</a>
+      <a onclick="Placer9()" href="#">D222_z_Simia_Sapiens</a>
+      <a onclick="Placer9()" href="#">Vortex_de_stockage</a>
+      <a onclick="Placer9()" href="#">Fontaine_de_jouvence_thermale</a>
+      <a onclick="Placer9()" href="#">Bibliotheque_du_donjon</a>
+      <a onclick="Placer9()" href="#">Arene_de_tournois</a>
+      <a onclick="Placer9()" href="#">Arche_dragonique</a>
+      <a onclick="Placer9()" href="#">Oracle_du_destin</a>
+      <a onclick="Placer9()" href="#">Autel_des_champions</a>
+      <a onclick="Placer9()" href="#">Temple_des_esprits</a>
+      <a onclick="Placer9()" href="#">Tour_de_sceau_vallorien</a>
+      <a onclick="Placer9()" href="#">Arbre_d_illumination</a>
+
+
+    </div>
+  </div><BR><BR><BR>
+    <table width="80%" style="text-align:center">
+      <tr>
+        <th>Niveau  <img   src="https://fr.wiki.elvenar.com/images/a/a8/Level_small.png"></th>
+        <th>Coûts  <img   src="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"></th>
+        <th>SA</th>
+        <th>Runes</th>
+        <th>SA</th>
+        <th>Runes</th>
+        <th>SA</th>
+        <th>Runes</th>
+        <th>SA</th>
+        <th>Runes</th>
+        <th>SA</th>
+        <th>Runes</th>
+        <th>SA</th>
+        <th>Runes</th>
+        <th>SA</th>
+        <th>Runes</th>
+        <th>SA</th>
+        <th>Runes</th>
+
+
+        <th></th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>300</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+
+        <td rowspan="3"><img id='ImageMerv' height="100px;"  src="https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png">
+  </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>350</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>350</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>350</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td rowspan="10"><img  height="100px;"  src="Data/Abysse_dore.png">
+
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>350</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>350</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>350</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+
+      </tr>
+    <tr>
+        <td>3</td>
+        <td>350</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>350</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>350</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>350</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>350</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>350</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+        <td>45</td>
+        <td>2</td>
+
+      </tr>
+
+
+
+    </table>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+const person = [];
+MervImage[1] = "https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png";
+MervImage[1] = "https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png";
+
+
+https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png
+function Placer1(){
+  JouerSon(1)
+  document.getElementById("Place").innerHTML="Abysse_dore"
+  document.getElementById("ImageMerv").src="https://fr.wiki.elvenar.com/images/f/f8/Abysse_dor%C3%A9.png"
+    }
+function Placer2(){
+  JouerSon(1)
+  document.getElementById("Place").innerHTML="Excavation_sans_fin"
+  document.getElementById("ImageMerv").src="https://fr.wiki.elvenar.com/images/b/b4/Excavation_sans_fin.png"
+    }
+  function Placer3(){
+    JouerSon(1)
+    document.getElementById("Place").innerHTML="Aiguilles_de_la_tempete"
+    document.getElementById("ImageMerv").src="https://fr.wiki.elvenar.com/images/4/4e/Aiguilles_de_la_temp%C3%AAte.png"
+      }
+
+
+
+https://fr.wiki.elvenar.com/images/f/f8/Abysse_dor%C3%A9.png
+https://fr.wiki.elvenar.com/images/b/b4/Excavation_sans_fin.png
+https://fr.wiki.elvenar.com/images/4/4e/Aiguilles_de_la_temp%C3%AAte.png
+https://fr.wiki.elvenar.com/images/thumb/8/8e/48_GreatBuild_Inner_Elves_01_cropped.png/800px-48_GreatBuild_Inner_Elves_01_cropped.png
+https://fr.wiki.elvenar.com/images/thumb/7/75/48_GreatBuild_Inner_Elves_02_cropped.png/800px-48_GreatBuild_Inner_Elves_02_cropped.png
+https://fr.wiki.elvenar.com/images/thumb/8/81/47_Greatbuilding_Elves_Crystaltree_01_cropped.png/700px-47_Greatbuilding_Elves_Crystaltree_01_cropped.png
+https://fr.wiki.elvenar.com/images/thumb/b/be/47_Greatbuilding_Elves_Innercity_Crystaltree_06_cropped.png/695px-47_Greatbuilding_Elves_Innercity_Crystaltree_06_cropped.png
+https://fr.wiki.elvenar.com/images/thumb/4/47/48_greatbuilding_humans_innercity_monastery_01.png/800px-48_greatbuilding_humans_innercity_monastery_01.png
+https://fr.wiki.elvenar.com/images/thumb/8/86/48_greatbuilding_humans_innercity_monastery_02_cropped.png/800px-48_greatbuilding_humans_innercity_monastery_02_cropped.png
+https://fr.wiki.elvenar.com/images/c/c2/47_Greatbuilding_Humans_Innercity_Belltower_01_cropped.png
+https://fr.wiki.elvenar.com/images/a/aa/47_Greatbuilding_Humans_Innercity_Belltower_06_cropped.png
+https://fr.wiki.elvenar.com/images/7/73/Tour_de_guet_en_ruines1.png
+https://fr.wiki.elvenar.com/images/9/96/Tr%C3%B4ne_des_Hauts_Hommes.png
+https://fr.wiki.elvenar.com/images/thumb/2/23/D_greatbuilding_dwarves_military_01_cropped.png/638px-D_greatbuilding_dwarves_military_01_cropped.png
+https://fr.wiki.elvenar.com/images/thumb/1/1f/D_greatbuilding_dwarves_military_02_cropped.png/681px-D_greatbuilding_dwarves_military_02_cropped.png
+<img id='ImageMerv' height="10%;" src="https://fr.wiki.elvenar.com/images/8/8c/D_greatbuilding_dwarves_goods_02.png">
+https://fr.wiki.elvenar.com/images/8/8c/D_greatbuilding_dwarves_goods_02.png
+https://fr.wiki.elvenar.com/images/2/20/F_AncientWonder_Supplies_Inner_L1_cropped.png
+https://fr.wiki.elvenar.com/images/6/66/F_AncientWonder_Supplies_Inner_L2_cropped.png
+https://fr.wiki.elvenar.com/images/1/1d/F_AncientWonder_Trader_InnerCity_L1_cropped.png
+https://fr.wiki.elvenar.com/images/9/9c/F_AncientWonder_Trader_InnerCity_L2_cropped.png
+https://fr.wiki.elvenar.com/images/3/39/B_Orcs_AW1_1_0003.png
+https://fr.wiki.elvenar.com/images/f/f0/B_Orcs_AW2_1_0003.png
+https://fr.wiki.elvenar.com/images/9/9a/B_Woodelves_AW1.png
+https://fr.wiki.elvenar.com/images/8/89/B_Woodelves_AW2.png
+https://fr.wiki.elvenar.com/images/6/61/B_gr5_aw1.png
+https://fr.wiki.elvenar.com/images/7/7a/B_gr5_aw2.png
+https://fr.wiki.elvenar.com/images/3/37/0009_B_Gr6_AW1_1.png
+https://fr.wiki.elvenar.com/images/d/de/0008_B_Gr6_AW2_1.png
+https://fr.wiki.elvenar.com/images/thumb/6/6d/B_Gr7_AW1_1_0009.png/714px-B_Gr7_AW1_1_0009.png
+https://fr.wiki.elvenar.com/images/7/7f/B_Gr7_AW2_1_0010.png
+https://fr.wiki.elvenar.com/images/thumb/4/4a/0010_B_Gr8_AW1_1_0000.png/656px-0010_B_Gr8_AW1_1_0000.png
+https://fr.wiki.elvenar.com/images/a/a7/I_0011_B_Gr8_AW2_1_0000.png
+https://fr.wiki.elvenar.com/images/f/ff/B_Gr9_AW1_1_0000.png
+https://fr.wiki.elvenar.com/images/6/67/B_Gr9_AW2_1_0000.png
+https://fr.wiki.elvenar.com/images/3/37/GR10_AW1_3x6.png
+https://fr.wiki.elvenar.com/images/a/a8/GR10_AW2_7x3.png
+https://fr.wiki.elvenar.com/images/0/0f/GR11_AW1_6x4.png
+https://fr.wiki.elvenar.com/images/5/54/GR11_AW2_4x5.png
+https://fr.wiki.elvenar.com/images/a/a0/GR12_AW1_5x4.png
+https://fr.wiki.elvenar.com/images/6/6a/GR12_AW2_5x5.png
+https://fr.wiki.elvenar.com/images/0/0b/B_Ch18_AW1_1.png
+https://fr.wiki.elvenar.com/images/3/3a/B_Ch18_AW2_1.png
+https://fr.wiki.elvenar.com/images/c/cb/B_Ch19_AW1_1.png
+https://fr.wiki.elvenar.com/images/d/d2/B_Ch19_AW2_1.png
+https://fr.wiki.elvenar.com/images/3/3b/B_Ch20_AW1_1.png
+https://fr.wiki.elvenar.com/images/6/69/B_Ch20_AW2_1.png
+<img id='ImageMerv' height="10%;" src="https://fr.wiki.elvenar.com/images/6/69/B_Ch20_AW2_1.png">
+
+<div class="parent">
+<div class="div1"> </div>
+<div class="div2"> </div>
+<div class="div3"> </div>
+</div>
+</body>
