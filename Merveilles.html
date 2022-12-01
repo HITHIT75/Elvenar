@@ -120,64 +120,30 @@ function Placer(Num){
 MervImage[0] = "https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png";
 MervImage[1] = "https://fr.wiki.elvenar.com/images/f/f8/Abysse_dor%C3%A9.png";
 MervImage[2] = "https://fr.wiki.elvenar.com/images/b/b4/Excavation_sans_fin.png";
-  
+MervImage[3] = "https://fr.wiki.elvenar.com/images/4/4e/Aiguilles_de_la_temp%C3%AAte.png";
+MervImage[4] = "https://fr.wiki.elvenar.com/images/thumb/8/8e/48_GreatBuild_Inner_Elves_01_cropped.png/800px-48_GreatBuild_Inner_Elves_01_cropped.png";
+MervImage[5] = "https://fr.wiki.elvenar.com/images/thumb/7/75/48_GreatBuild_Inner_Elves_02_cropped.png/800px-48_GreatBuild_Inner_Elves_02_cropped.png";
+MervImage[6] = "https://fr.wiki.elvenar.com/images/thumb/8/81/47_Greatbuilding_Elves_Crystaltree_01_cropped.png/700px-47_Greatbuilding_Elves_Crystaltree_01_cropped.png";
+MervImage[7] = "https://fr.wiki.elvenar.com/images/thumb/b/be/47_Greatbuilding_Elves_Innercity_Crystaltree_06_cropped.png/695px-47_Greatbuilding_Elves_Innercity_Crystaltree_06_cropped.png";
+MervImage[8] = "https://fr.wiki.elvenar.com/images/thumb/4/47/48_greatbuilding_humans_innercity_monastery_01.png/800px-48_greatbuilding_humans_innercity_monastery_01.png";
+MervImage[9] = "https://fr.wiki.elvenar.com/images/thumb/8/86/48_greatbuilding_humans_innercity_monastery_02_cropped.png/800px-48_greatbuilding_humans_innercity_monastery_02_cropped.png";
+
 MervImageBis[0] ="Data/Tome_des_mysteres.png"
 MervImageBis[1] ="Data/Abysse_dore.png"   
 MervImageBis[2] ="Data/Excavation_sans_fin.png"    
 MervImageBis[3] ="Data/Aiguilles_de_la_tempete.png"   
+MervImageBis[4] ="Data/Monastere_martial.png"
+MervImageBis[5] ="Data/Le_sanctuaire.png"   
+MervImageBis[6] ="Data/Tour_du_clocher.png"    
+MervImageBis[7] ="Data/Phare_de_cristal.png"   
+MervImageBis[8] ="Data/Trones_des_hauts_hommes.png"
+MervImageBis[9] ="Data/Rempart_nain.png"   
   
   document.getElementById("ImageMerv").src=MervImage[Num]
   document.getElementById("ImageMervBis").src=MervImageBis[Num] 
-      
-    //    if (Num==1) {
-        //  document.getElementById("Place").innerHTML="Abysse_dore"
-    //      document.getElementById("ImageMerv").src="https://fr.wiki.elvenar.com/images/f/f8/Abysse_dor%C3%A9.png"
-     //   }
-    //    if (Num==2) {
-    //      //document.getElementById("Place").innerHTML="Excavation_sans_fin"
-    //      document.getElementById("ImageMerv").src="https://fr.wiki.elvenar.com/images/b/b4/Excavation_sans_fin.png"
-    //    }
+
       }
-    function Placer2(){
-    JouerSon(1)
-    document.getElementById("Place").innerHTML="Excavation_sans_fin"
-    document.getElementById("ImageMerv").src="https://fr.wiki.elvenar.com/images/b/b4/Excavation_sans_fin.png"
-      }
-    function Placer3(){
-      JouerSon(1)
-      document.getElementById("Place").innerHTML="Aiguilles_de_la_tempete"
-      document.getElementById("ImageMerv").src="https://fr.wiki.elvenar.com/images/4/4e/Aiguilles_de_la_temp%C3%AAte.png"
-        }
-    function Placer4(){
-      JouerSon(1)
-      document.getElementById("Place").innerHTML="Tournoi de Cristal"
-      document.getElementById("ImageTournoi").src="Image/Tournoi4.png"
-        }
-    function Placer5(){
-      JouerSon(1)
-      document.getElementById("Place").innerHTML="Tournoi de Parchemin"
-      document.getElementById("ImageTournoi").src="Image/Tournoi5.png"
-        }
-    function Placer6(){
-      JouerSon(1)
-      document.getElementById("Place").innerHTML="Tournoi de Soie"
-      document.getElementById("ImageTournoi").src="Image/Tournoi6.png"
-        }
-    function Placer7(){
-      JouerSon(1)
-      document.getElementById("Place").innerHTML="Tournoi d'Elixir"
-      document.getElementById("ImageTournoi").src="Image/Tournoi7.png"
-        }
-    function Placer8(){
-      JouerSon(1)
-      document.getElementById("Place").innerHTML="Tournoi de Poussière"
-      document.getElementById("ImageTournoi").src="Image/Tournoi8.png"
-        }
-    function Placer9(){
-      JouerSon(1)
-      document.getElementById("Place").innerHTML="Tournoi de Gemme"
-      document.getElementById("ImageTournoi").src="Image/Tournoi9.png"
-        }
+ 
 
     function JouerSon(Num) {
   	   Resultat = getCookie("Ecouteur")
@@ -214,7 +180,7 @@ MervImageBis[3] ="Data/Aiguilles_de_la_tempete.png"
 
   <div style="align:left;text-align:left"><BR>
 <form action="">
-  <select size="1">
+  <select size="1" size="font-size:20px;">
    
   <option>Tome_des_mysteres</option>
   <option>Abysse_dore</option>
@@ -289,15 +255,15 @@ elt.addEventListener('change', function () {
         <th rowspan="2" style="background-color: #ffffff;"><img id='ImageMerv' height="20%;"  src="https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png"></th>
       </tr>
       <tr>
-        <td colspan=">18"</td>
+        <td colspan="18"></td>
       </tr>
       <tr>
-        <td colspan="18"</td>
+        <td colspan="18"></td>
 
       </tr>
 
       <tr>
-        <td colspan="19"><img id='ImageMervBis' height="90%;"  src="Data/Abysse_dore.png"></td>
+        <td colspan="19"><img id='ImageMervBis' height="90%;"  src="Data/Tome_des_mysteres.png"></td>
 
       </tr>
     </table>
