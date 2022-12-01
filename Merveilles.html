@@ -113,16 +113,23 @@ tr:nth-child(even) {background-color: #f2f2f2;}
    function CalculInitial(){
     Placer1()
   }
-  function Placer(Num){
-        JouerSon(1)
-        if (Num==1) {
+function Placer(Num){
+   JouerSon(1) 
+ const person = [];
+MervImage[0] = "https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png";
+MervImage[1] = "https://fr.wiki.elvenar.com/images/f/f8/Abysse_dor%C3%A9.png";
+MervImage[2] = "https://fr.wiki.elvenar.com/images/b/b4/Excavation_sans_fin.png";
+  document.getElementById("ImageMerv").src=MervImage[Num]
+  
+      
+    //    if (Num==1) {
         //  document.getElementById("Place").innerHTML="Abysse_dore"
-          document.getElementById("ImageMerv").src="https://fr.wiki.elvenar.com/images/f/f8/Abysse_dor%C3%A9.png"
-        }
-        if (Num==2) {
-          //document.getElementById("Place").innerHTML="Excavation_sans_fin"
-          document.getElementById("ImageMerv").src="https://fr.wiki.elvenar.com/images/b/b4/Excavation_sans_fin.png"
-        }
+    //      document.getElementById("ImageMerv").src="https://fr.wiki.elvenar.com/images/f/f8/Abysse_dor%C3%A9.png"
+     //   }
+    //    if (Num==2) {
+    //      //document.getElementById("Place").innerHTML="Excavation_sans_fin"
+    //      document.getElementById("ImageMerv").src="https://fr.wiki.elvenar.com/images/b/b4/Excavation_sans_fin.png"
+    //    }
       }
     function Placer2(){
     JouerSon(1)
@@ -242,7 +249,7 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 
   </select>
 </form>
-  </div><BR><BR><BR>
+  </div>
 
 <script>
 var elt = document.querySelector('select');
@@ -252,10 +259,7 @@ elt.addEventListener('change', function () {
 })
 </script>
 
-
-
     <table width="80%" style="text-align:center">
-      
       <tr>
         <th>Niveau  <img   src="https://fr.wiki.elvenar.com/images/a/a8/Level_small.png"></th>
         <th>Coûts  <img   src="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"></th>
@@ -291,9 +295,6 @@ elt.addEventListener('change', function () {
         <td colspan="19"><img  height="100%;"  src="Data/Abysse_dore.png"></td>
 
       </tr>
-
-
-
     </table>
 
 
@@ -313,8 +314,8 @@ elt.addEventListener('change', function () {
 
 const person = [];
 MervImage[0] = "https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png";
-MervImage[1] = "https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png";
-
+MervImage[1] = "https://fr.wiki.elvenar.com/images/f/f8/Abysse_dor%C3%A9.png";
+MervImage[2] = "https://fr.wiki.elvenar.com/images/b/b4/Excavation_sans_fin.png";
 
 https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png
 https://fr.wiki.elvenar.com/images/f/f8/Abysse_dor%C3%A9.png
