@@ -1,6 +1,10 @@
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/lib/bootstrap.min.css">
+  <script src="/lib/jquery-1.12.2.min.js"></script>
+  <script src="/lib/bootstrap.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
 <style>
      body {
@@ -23,21 +27,38 @@
 th {
   background-color: #04AA6D;
   color: white;
-}  
-  
+}
+
 th, td {
   border: 1px solid;
-} 
-tr:nth-child(even) {background-color: #f2f2f2;}  
-  
-#ImageMerv {
-
-height: 100px;
-       transition:  height 2s;
-     }
-#ImageMerv:hover {
-height: 500px;
 }
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+  #ImageMerv {
+  height: 100px;
+         transition:  height 2s;
+       }
+  #ImageMerv:hover {
+  height: 500px;
+  }
+  .styled-select select {
+     background: transparent;
+     width: 400px;
+     padding: 5px;
+     font-size: 16px;
+     line-height: 1;
+     border: 0;
+     border-radius: 0;
+     height: 34px;
+     -webkit-appearance: none;
+     }
+   .styled-select {
+      width: 240px;
+      height: 34px;
+      overflow: hidden;
+      background: url(Image\DropDown.png) no-repeat right #ddd;
+      border: 1px solid #ccc;
+      }
 
      .LienHtml {
        color: #051E4C;
@@ -87,17 +108,23 @@ height: 500px;
    .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
 
-   </style>
- <script type="text/javascript">
-  function CalculInitial(){
+</style>
+<script type="text/javascript">
+   function CalculInitial(){
     Placer1()
   }
-  function Placer1(){
-    JouerSon(1)
-    document.getElementById("Place").innerHTML="Abysse_dore"
-    document.getElementById("ImageMerv").src="https://fr.wiki.elvenar.com/images/f/f8/Abysse_dor%C3%A9.png"
+  function Placer(Num){
+        JouerSon(1)
+        if (Num==1) {
+        //  document.getElementById("Place").innerHTML="Abysse_dore"
+          document.getElementById("ImageMerv").src="https://fr.wiki.elvenar.com/images/f/f8/Abysse_dor%C3%A9.png"
+        }
+        if (Num==2) {
+          //document.getElementById("Place").innerHTML="Excavation_sans_fin"
+          document.getElementById("ImageMerv").src="https://fr.wiki.elvenar.com/images/b/b4/Excavation_sans_fin.png"
+        }
       }
-  function Placer2(){
+    function Placer2(){
     JouerSon(1)
     document.getElementById("Place").innerHTML="Excavation_sans_fin"
     document.getElementById("ImageMerv").src="https://fr.wiki.elvenar.com/images/b/b4/Excavation_sans_fin.png"
@@ -163,7 +190,7 @@ height: 500px;
 
 
 
-  </script>
+</script>
 </head>
 
 
@@ -171,61 +198,69 @@ height: 500px;
   <audio  id="MonSon" src="Image\Son.wav"></audio>
 
 
-
-
-
   <div style="align:left;text-align:left"><BR>
+<form action="">
+  <select size="1">
 
-  <div class="dropdown">
-    <strong><span class="dropbtn" id="Place">Tome_des_mysteres</span></strong>
-    <div class="dropdown-content">
-      <a onclick="Placer1()" href="#">Abysse_dore</a>
-      <a onclick="Placer2()" href="#">Excavation_sans_fin</a>
-      <a onclick="Placer3()" href="#">Aiguilles_de_la_tempete</a>
-      <a onclick="Placer4()" href="#">Monastere_martial</a>
-      <a onclick="Placer5()" href="#">Le_sanctuaire</a>
-      <a onclick="Placer6()" href="#">Tour_du_clocher</a>
-      <a onclick="Placer7()" href="#">Phare_de_cristal</a>
-      <a onclick="Placer8()" href="#">Tour_de_guet_en_ruines</a>
-      <a onclick="Placer9()" href="#">Trones_des_hauts_hommes</a>
-      <a onclick="Placer10()" href="#">Rempart_nain</a>
-      <a onclick="Placer11()" href="#">Coeur_de_la_montagne</a>
-      <a onclick="Placer12()" href="#">Tours_de_la_prosperite</a>
-      <a onclick="Placer13()" href="#">Guilde_du_marchand_prospere</a>
-       <a onclick="Placer15()" href="#">Forge_des_heros</a>
-      <a onclick="Placer16()" href="#">Ambassade_d_enar</a>
-      <a onclick="Placer9()" href="#">Sanctuaire_des_champignons_astucieux</a>
-      <a onclick="Placer9()" href="#">Academie_volante</a>
-            <a onclick="Placer9()" href="#">Labyrinthe_de_la_matiere_noire</a>
-      <a onclick="Placer9()" href="#">Abbaye_du_dragon</a>
-      <a onclick="Placer9()" href="#">Temple_des_crapauds</a>
-      <a onclick="Placer9()" href="#">Centre_d_echange_d_Elvenar</a>
-            <a onclick="Placer9()" href="#">Tours_du_crepuscule</a>
-      <a onclick="Placer9()" href="#">Fontaines_triomphantes</a>
-      <a onclick="Placer9()" href="#">Pyramide_purificatrice</a>
-      <a onclick="Placer9()" href="#">Phare_de_bon_entourage</a>
-      <a onclick="Placer9()" href="#">D111_a_Voyage_temporel</a>
-      <a onclick="Placer9()" href="#">D222_z_Simia_Sapiens</a>
-      <a onclick="Placer9()" href="#">Vortex_de_stockage</a>
-      <a onclick="Placer9()" href="#">Fontaine_de_jouvence_thermale</a>
-      <a onclick="Placer9()" href="#">Bibliotheque_du_donjon</a>
-      <a onclick="Placer9()" href="#">Arene_de_tournois</a>
-      <a onclick="Placer9()" href="#">Arche_dragonique</a>
-      <a onclick="Placer9()" href="#">Oracle_du_destin</a>
-      <a onclick="Placer9()" href="#">Autel_des_champions</a>
-      <a onclick="Placer9()" href="#">Temple_des_esprits</a>
-      <a onclick="Placer9()" href="#">Tour_de_sceau_vallorien</a>
-      <a onclick="Placer9()" href="#">Arbre_d_illumination</a>
+  <option>Tome_des_mysteres</option>
+  <option>Abysse_dore</option>
+  <option>Excavation_sans_fin</option>
+  <option>Aiguilles_de_la_tempete</option>
+  <option>Monastere_martial</option>
+  <option>Le_sanctuaire</option>
+  <option>Tour_du_clocher</option>
+  <option>Phare_de_cristal</option>
+  <option>Trones_des_hauts_hommes</option>
+  <option>Rempart_nain</option>
+  <option>Coeur_de_la_montagne</option>
+  <option>Tours_de_la_prosperite</option>
+  <option>Guilde_du_marchand_prospere</option>
+  <option>Forge_des_heros</option>
+  <option>Ambassade_d_enar</option>
+  <option>Sanctuaire_des_champignons_astucieux</option>
+  <option>Academie_volante</option>
+  <option>Labyrinthe_de_la_matiere_noire</option>
+  <option>Abbaye_du_dragon</option>
+  <option>Temple_des_crapauds</option>
+  <option>Centre_d_echange_d_Elvenar</option>
+  <option>Tours_du_crepuscule</option>
+  <option>Fontaines_triomphantes</option>
+  <option>Pyramide_purificatrice</option>
+  <option>Phare_de_bon_entourage</option>
+  <option>D111_a_Voyage_temporel</option>
+  <option>D222_z_Simia_Sapiens</option>
+  <option>Vortex_de_stockage</option>
+  <option>Fontaine_de_jouvence_thermale</option>
+  <option>Bibliotheque_du_donjon</option>
+  <option>Arene_de_tournois</option>
+  <option>Arche_dragonique</option>
+  <option>Oracle_du_destin</option>
+  <option>Autel_des_champions</option>
+  <option>Temple_des_esprits</option>
+  <option>Tour_de_sceau_vallorien</option>
+  <option>Arbre_d_illumination</option>
 
-
-    </div>
+  </select>
+</form>
   </div><BR><BR><BR>
+
+<script>
+var elt = document.querySelector('select');
+elt.addEventListener('change', function () {
+  Placer(this.selectedIndex)
+//  alert('selectedIndex => '+this.selectedIndex);
+})
+</script>
+
+
+
     <table width="80%" style="text-align:center">
+      
       <tr>
         <th>Niveau  <img   src="https://fr.wiki.elvenar.com/images/a/a8/Level_small.png"></th>
         <th>Coûts  <img   src="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"></th>
         <th>SA</th>
-        <th>Runes</th>
+        <th><img   src="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"></th>
         <th>SA</th>
         <th>Runes</th>
         <th>SA</th>
@@ -331,314 +366,12 @@ height: 500px;
         <td rowspan="25"><img  height="100%;"  src="Data/Abysse_dore.png"></td>
 
       </tr>
-      <tr>
-        <td>6</td>
-        <td>350</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
 
-      </tr>
-      <tr>
-        <td>7</td>
-        <td>350</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
 
-      </tr>
-      <tr>
-        <td>8</td>
-        <td>350</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
 
-      </tr>
-    <tr>
-        <td>9</td>
-        <td>350</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-
-      </tr>
-      <tr>
-        <td>11</td>
-        <td>350</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-
-      </tr>
-      <tr>
-        <td>12</td>
-        <td>350</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-
-      </tr>
-      <tr>
-        <td>13</td>
-        <td>350</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-
-      </tr>
-      <tr>
-        <td>14</td>
-        <td>350</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-
-      </tr>
-      <tr>
-        <td>16</td>
-        <td>350</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-
-      </tr>
-      <tr>
-        <td>17</td>
-        <td>350</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-
-      </tr>
-      <tr>
-        <td>18</td>
-        <td>350</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-
-      </tr>
-      <tr>
-        <td>19</td>
-        <td>350</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-
-      </tr>
-      <tr>
-        <td>21</td>
-        <td>350</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-
-      </tr>    
-       <tr>
-        <td>22</td>
-        <td>350</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-        <td>45</td>
-        <td>2</td>
-
-      </tr>   
-    
-    
     </table>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 <br>
 <br>
 <br>
