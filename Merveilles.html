@@ -119,8 +119,14 @@ function Placer(Num){
 MervImage[0] = "https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png";
 MervImage[1] = "https://fr.wiki.elvenar.com/images/f/f8/Abysse_dor%C3%A9.png";
 MervImage[2] = "https://fr.wiki.elvenar.com/images/b/b4/Excavation_sans_fin.png";
-  document.getElementById("ImageMerv").src=MervImage[Num]
   
+MervImageBis[0] ="Data/Tome_des_mysteres.png"
+MervImageBis[1] ="Data/Abysse_dore.png"   
+MervImageBis[2] ="Data/Excavation_sans_fin.png"    
+MervImageBis[3] ="Data/Aiguilles_de_la_tempete.png"   
+  
+  document.getElementById("ImageMerv").src=MervImage[Num]
+  document.getElementById("ImageMervBis").src=MervImageBis[Num] 
       
     //    if (Num==1) {
         //  document.getElementById("Place").innerHTML="Abysse_dore"
@@ -208,7 +214,7 @@ MervImage[2] = "https://fr.wiki.elvenar.com/images/b/b4/Excavation_sans_fin.png"
   <div style="align:left;text-align:left"><BR>
 <form action="">
   <select size="1">
-
+   
   <option>Tome_des_mysteres</option>
   <option>Abysse_dore</option>
   <option>Excavation_sans_fin</option>
@@ -264,7 +270,7 @@ elt.addEventListener('change', function () {
         <th>Niveau  <img   src="https://fr.wiki.elvenar.com/images/a/a8/Level_small.png"></th>
         <th>Coûts  <img   src="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"></th>
         <th>SA</th>
-        <th><img  height="20%;" src="Data/Ancient_Knowledge.png"></th>
+        <th><img  height="20px;" src="Data/Ancient_Knowledge.png"></th>
         <th>SA</th>
         <th><img height="20%;"  src="Data/Ancient_Knowledge.png"></th>
         <th>SA</th>
@@ -292,7 +298,7 @@ elt.addEventListener('change', function () {
       </tr>
 
       <tr>
-        <td colspan="19"><img  height="100%;"  src="Data/Abysse_dore.png"></td>
+        <td colspan="19"><img id='ImageMervBis' height="90%;"  src="Data/Abysse_dore.png"></td>
 
       </tr>
     </table>
