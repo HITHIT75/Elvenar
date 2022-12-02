@@ -204,7 +204,7 @@ MervImageBis[3] ="Data/Arche_dragonique.png"
   
   document.getElementById("ImageMerv").src=MervImage[Num]
   document.getElementById("ImageMervBis").src=MervImageBis[Num] 
-  // document.getElementById("Annonce").innerhtml=MervImageBis[Num]
+   document.getElementById("Annonce").innerhtml=username + "..."
 
       }
  
@@ -385,13 +385,10 @@ elt.addEventListener('change', function () {
       
       
       <tr>
-        <td colspan="18"  >Annonce avant upgrade</td> 
+        <td colspan="2"  >Annonce avant upgrade</td> 
+        <td colspan="16" id="Annonce" >...</td> 
       </tr>
 
-      <tr>
-        <td colspan="18" id="Annonce" >...</td> 
-
-      </tr>
       <tr>
 
 <td colspan="18"  rowspan="18" style="background-color: #ffffff;"><img id='ImageMerv' height="20%;"  src="https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png"></td>
