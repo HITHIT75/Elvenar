@@ -125,7 +125,7 @@ function LoadFile() {
 
       var oFrame = document.getElementById("frmFile");
       var strRawContents = oFrame.contentWindow.document.body.childNodes[0].innerHTML;
-      alert(strRawContents)
+   //   alert(strRawContents)
       while (strRawContents.indexOf("\r") >= 0)
           strRawContents = strRawContents.replace("\r", "");
       var arrLines = strRawContents.split("\n");
