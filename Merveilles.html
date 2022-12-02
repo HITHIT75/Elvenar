@@ -294,7 +294,13 @@ MervImageBis[3] ="Data/Arche_dragonique.png"
 
   </select>
 </form>
-
+<script>
+var elt = document.querySelector('select');
+elt.addEventListener('change', function () {
+  Placer(this.selectedIndex)
+//  alert('selectedIndex => '+this.selectedIndex);document.getElementById('liste').value;
+})
+</script>
 <form action="">
   <select size="1" style="font-size:20px;left:0;">
    
@@ -333,13 +339,13 @@ MervImageBis[3] ="Data/Arche_dragonique.png"
    </select>
 </form> 
   
-  </div>
+ 
 
 <script>
 var elt = document.querySelector('select');
 elt.addEventListener('change', function () {
   Placer(this.selectedIndex)
-//  alert('selectedIndex => '+this.selectedIndex);
+  alert('selectedIndex => '+this.selectedIndex);document.getElementById('liste').value;
 })
 </script>
 
