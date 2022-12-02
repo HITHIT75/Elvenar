@@ -1,11 +1,8 @@
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/lib/bootstrap.min.css">
-  <script src="/lib/jquery-1.12.2.min.js"></script>
-  <script src="/lib/bootstrap.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+
 <style>
      body {
        align: center;
@@ -24,9 +21,9 @@
       50% {opacity:1;}
         100% {opacity:0;}
      }
-table {  
+table {
   border-collapse: collapse;
-  }  
+  }
 th {
   background-color: #29088A;
   color: white;
@@ -111,30 +108,35 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 
    .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
-
+   label {display:table-cell;float: left;}
 </style>
 <script type="text/javascript">
-   function CalculInitial(){
-      document.getElementById("Annonce").innerhtml= "????"
-     
-  ;  checkCookie()
-  alert("ok")   
-  var file = "Data/Abysse_dore.txt";
-  var reader = new FileReader();
-  reader.onload = function(progressEvent){    
-    alert(this.result)
-    var fileContentArray = this.result.split(/\r\n|\n/);
-    for(var line = 0; line < lines.length-1; line++){
-      if (line==2) {
-      alert(line + " --> "+ lines[line]);
-    }
-  };
-  reader.readAsText("Data/Abysse_dore.txt");
-};
-     
-     
-     
-  }     
+function CalculInitial(){
+  //    document.getElementById("Annonce").innerhtml= "????"
+LoadFile()
+  // checkCookie()
+
+  file = "Data/Abysse_dore.txt";
+
+
+
+  }
+function LoadFile() {
+
+      var oFrame = document.getElementById("frmFile");
+      var strRawContents = oFrame.contentWindow.document.body.childNodes[0].innerHTML;
+      alert(strRawContents)
+      while (strRawContents.indexOf("\r") >= 0)
+          strRawContents = strRawContents.replace("\r", "");
+      var arrLines = strRawContents.split("\n");
+      alert("File " + oFrame.src + " has " + arrLines.length + " lines");
+      for (var i = 0; i < arrLines.length; i++) {
+          var curLine = arrLines[i];
+          alert("Line #" + (i + 1) + " is: '" + curLine + "'");
+      }
+  }
+
+
    function getCookie(cname) {
         let name = cname + "=";
         let ca = document.cookie.split(';');
@@ -155,11 +157,11 @@ tr:nth-child(even) {background-color: #f2f2f2;}
         if (username != "") {
          //alert("Welcome again " + username);
          document.getElementById("Annonce").innerhtml=  username
-        } 
+        }
       }
 
 function Placer(Num){
-   JouerSon(1) 
+   JouerSon(1)
  const MervImage = [];
   const MervImageBis = [];
 MervImage[0] = "https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png";
@@ -184,70 +186,70 @@ MervImage[18] = "https://fr.wiki.elvenar.com/images/7/7a/B_gr5_aw2.png";
 MervImage[19] = "https://fr.wiki.elvenar.com/images/3/37/0009_B_Gr6_AW1_1.png";
 MervImage[20] = "https://fr.wiki.elvenar.com/images/d/de/0008_B_Gr6_AW2_1.png";
 
-  
-MervImageBis[0] ="Data/Tome_des_mysteres.png"
-MervImageBis[1] ="Data/Abysse_dore.png"   
-MervImageBis[2] ="Data/Excavation_sans_fin.png"    
-MervImageBis[3] ="Data/Aiguilles_de_la_tempete.png"   
-MervImageBis[4] ="Data/Monastere_martial_le_sanctuaire.png"
-MervImageBis[5] ="Data/Monastere_martial_le_sanctuaire.png"   
-MervImageBis[6] ="Data/Phare_de_cristal_Tour_du_clocher.png"    
-MervImageBis[7] ="Data/Phare_de_cristal_Tour_du_clocher.png"   
-MervImageBis[8] ="Data/Trones_des_hauts_hommes.png"
-MervImageBis[9] ="Data/Rempart_nain.png"   
-MervImageBis[10] ="Data/Coeur_de_la_montagne.png"   
-MervImageBis[11] ="Data/Tours_de_la_prosperite.png"   
-MervImageBis[12] ="Data/Guilde_du_marchand_prospere.png"   
-MervImageBis[13] ="Data/Forge_des_heros.png"   
-MervImageBis[14] ="Data/Ambassade_d_enar.png"   
-MervImageBis[15] ="Data/Sanctuaire_des_champignons_astucieux.png"   
-MervImageBis[16] ="Data/Academie_volante.png"   
-MervImageBis[17] ="Data/Labyrinthe_de_la_matiere_noire.png"   
-MervImageBis[18] ="Data/Abbaye_du_dragon.png"   
-MervImageBis[19] ="Data/Temple_des_crapauds.png"   
-MervImageBis[20] ="Data/Centre_d_echange_d_Elvenar.png"   
 
-MervImage[21] = "https://fr.wiki.elvenar.com/images/thumb/6/6d/B_Gr7_AW1_1_0009.png/714px-B_Gr7_AW1_1_0009.png";  
-MervImage[22] = "https://fr.wiki.elvenar.com/images/7/7f/B_Gr7_AW2_1_0010.png";    
-MervImage[23] = "https://fr.wiki.elvenar.com/images/e/e2/Construct_AW1_main.png";  
-  MervImage[24] = "https://fr.wiki.elvenar.com/images/1/11/Construct_AW2_main.png";  
-  MervImage[25] = "https://fr.wiki.elvenar.com/images/3/37/GR10_AW1_3x6.png";  
-  MervImage[26] = "https://fr.wiki.elvenar.com/images/a/a8/GR10_AW2_7x3.png";  
-  MervImage[27] = "https://fr.wiki.elvenar.com/images/0/0f/GR11_AW1_6x4.png";  
-  MervImage[28] = "https://fr.wiki.elvenar.com/images/5/54/GR11_AW2_4x5.png";  
-  MervImage[29] = "https://fr.wiki.elvenar.com/images/e/e5/GR12_AW1_main.png";  
-   MervImage[30]= "https://fr.wiki.elvenar.com/images/9/92/GR12_AW2_main.png"; 
-  
-MervImageBis[21] ="Data/Tours_du_crepuscule.png"     
-MervImageBis[22] ="Data/Fontaines_triomphantes.png"     
-MervImageBis[23] ="Data/D111_a_Voyage_temporel.png"     
-MervImageBis[24] ="Data/D222_z_Simia_Sapiens.png"     
-MervImageBis[25] ="Data/Vortex_de_stockage.png"     
-MervImageBis[26] ="Data/Fontaine_de_jouvence_thermale.png"     
-MervImageBis[27] ="Data/Bibliotheque_du_donjon.png"     
-MervImageBis[28] ="Data/Arene_de_tournois.png"     
-MervImageBis[29] ="Data/Arche_dragonique.png" 
- MervImageBis[30]="Data/Oracle_du_destin.png" 
-  
-MervImageBis[31] ="Data/Autel_des_Champignons.png" 
+MervImageBis[0] ="Data/Tome_des_mysteres.png"
+MervImageBis[1] ="Data/Abysse_dore.png"
+MervImageBis[2] ="Data/Excavation_sans_fin.png"
+MervImageBis[3] ="Data/Aiguilles_de_la_tempete.png"
+MervImageBis[4] ="Data/Monastere_martial_le_sanctuaire.png"
+MervImageBis[5] ="Data/Monastere_martial_le_sanctuaire.png"
+MervImageBis[6] ="Data/Phare_de_cristal_Tour_du_clocher.png"
+MervImageBis[7] ="Data/Phare_de_cristal_Tour_du_clocher.png"
+MervImageBis[8] ="Data/Trones_des_hauts_hommes.png"
+MervImageBis[9] ="Data/Rempart_nain.png"
+MervImageBis[10] ="Data/Coeur_de_la_montagne.png"
+MervImageBis[11] ="Data/Tours_de_la_prosperite.png"
+MervImageBis[12] ="Data/Guilde_du_marchand_prospere.png"
+MervImageBis[13] ="Data/Forge_des_heros.png"
+MervImageBis[14] ="Data/Ambassade_d_enar.png"
+MervImageBis[15] ="Data/Sanctuaire_des_champignons_astucieux.png"
+MervImageBis[16] ="Data/Academie_volante.png"
+MervImageBis[17] ="Data/Labyrinthe_de_la_matiere_noire.png"
+MervImageBis[18] ="Data/Abbaye_du_dragon.png"
+MervImageBis[19] ="Data/Temple_des_crapauds.png"
+MervImageBis[20] ="Data/Centre_d_echange_d_Elvenar.png"
+
+MervImage[21] = "https://fr.wiki.elvenar.com/images/thumb/6/6d/B_Gr7_AW1_1_0009.png/714px-B_Gr7_AW1_1_0009.png";
+MervImage[22] = "https://fr.wiki.elvenar.com/images/7/7f/B_Gr7_AW2_1_0010.png";
+MervImage[23] = "https://fr.wiki.elvenar.com/images/e/e2/Construct_AW1_main.png";
+  MervImage[24] = "https://fr.wiki.elvenar.com/images/1/11/Construct_AW2_main.png";
+  MervImage[25] = "https://fr.wiki.elvenar.com/images/3/37/GR10_AW1_3x6.png";
+  MervImage[26] = "https://fr.wiki.elvenar.com/images/a/a8/GR10_AW2_7x3.png";
+  MervImage[27] = "https://fr.wiki.elvenar.com/images/0/0f/GR11_AW1_6x4.png";
+  MervImage[28] = "https://fr.wiki.elvenar.com/images/5/54/GR11_AW2_4x5.png";
+  MervImage[29] = "https://fr.wiki.elvenar.com/images/e/e5/GR12_AW1_main.png";
+   MervImage[30]= "https://fr.wiki.elvenar.com/images/9/92/GR12_AW2_main.png";
+
+MervImageBis[21] ="Data/Tours_du_crepuscule.png"
+MervImageBis[22] ="Data/Fontaines_triomphantes.png"
+MervImageBis[23] ="Data/D111_a_Voyage_temporel.png"
+MervImageBis[24] ="Data/D222_z_Simia_Sapiens.png"
+MervImageBis[25] ="Data/Vortex_de_stockage.png"
+MervImageBis[26] ="Data/Fontaine_de_jouvence_thermale.png"
+MervImageBis[27] ="Data/Bibliotheque_du_donjon.png"
+MervImageBis[28] ="Data/Arene_de_tournois.png"
+MervImageBis[29] ="Data/Arche_dragonique.png"
+ MervImageBis[30]="Data/Oracle_du_destin.png"
+
+MervImageBis[31] ="Data/Autel_des_Champignons.png"
 MervImage[31]= "https://fr.wiki.elvenar.com/images/0/0b/B_Ch18_AW1_1.png"
-MervImageBis[32] ="Data/Temple_des_Esprits.png" 
-MervImage[32]= "https://fr.wiki.elvenar.com/images/3/3a/B_Ch18_AW2_1.png" 
-MervImageBis[33] ="Data/Tour_du_sceau_Vallorien.png" 
-MervImage[33]= "https://fr.wiki.elvenar.com/images/2/27/GR14_AW1_main.png"  
- MervImageBis[34] ="Data/Arbre_d_illumination.png" 
-MervImage[34]= "https://fr.wiki.elvenar.com/images/1/12/GR14_AW2_main.png" 
-MervImageBis[35] ="Data/Lieu_de_repos_ancestral.png" 
-MervImage[35]= "https://fr.wiki.elvenar.com/images/d/db/GR15_AW1_main.png"  
- MervImageBis[36] ="Data/Taverne_des_Explorateurs.png" 
-MervImage[36]= "https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png"  
-  
+MervImageBis[32] ="Data/Temple_des_Esprits.png"
+MervImage[32]= "https://fr.wiki.elvenar.com/images/3/3a/B_Ch18_AW2_1.png"
+MervImageBis[33] ="Data/Tour_du_sceau_Vallorien.png"
+MervImage[33]= "https://fr.wiki.elvenar.com/images/2/27/GR14_AW1_main.png"
+ MervImageBis[34] ="Data/Arbre_d_illumination.png"
+MervImage[34]= "https://fr.wiki.elvenar.com/images/1/12/GR14_AW2_main.png"
+MervImageBis[35] ="Data/Lieu_de_repos_ancestral.png"
+MervImage[35]= "https://fr.wiki.elvenar.com/images/d/db/GR15_AW1_main.png"
+ MervImageBis[36] ="Data/Taverne_des_Explorateurs.png"
+MervImage[36]= "https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png"
+
   document.getElementById("ImageMerv").src=MervImage[Num]
-  document.getElementById("ImageMervBis").src=MervImageBis[Num] 
+  document.getElementById("ImageMervBis").src=MervImageBis[Num]
    document.getElementById("Annonce").innerhtml=username + "......."
 
       }
- 
+
 
     function JouerSon(Num) {
   	   Resultat = getCookie("Ecouteur")
@@ -268,11 +270,13 @@ MervImage[36]= "https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png"
 <body onload="CalculInitial()">
   <audio  id="MonSon" src="Image\Son.wav"></audio>
 
-
+<table width="60%" style="text-align:center">
+  <tr height="3%;">
+    <td colspan="18">
 
 <form action="">
   <select size="1" style="font-size:20px;left:0;">
-   
+
   <option style="font-size:20px;">Tome_des_mysteres</option>
   <option>Abysse_dore</option>
   <option>Excavation_sans_fin</option>
@@ -316,61 +320,21 @@ MervImage[36]= "https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png"
 <script>
 var elt = document.querySelector('select');
 elt.addEventListener('change', function () {
-  Placer(this.selectedIndex)
-//  alert('selectedIndex => '+this.selectedIndex);document.getElementById('liste').value;
-})
-</script>
-<form action="">
-  <select size="1" style="font-size:20px;left:0;display:inline">
-   
-  <option>1</option>
-  <option>2</option>  
-  <option>3</option>
-  <option>4</option> 
- <option>6</option>
-  <option>7</option>  
-  <option>8</option>
-  <option>9</option>    
-  <option>11</option>
-  <option>12</option>  
-  <option>13</option>
-  <option>14</option> 
- <option>16</option>
-  <option>17</option>  
-  <option>18</option>
-  <option>19</option>     
-  <option>21</option>
-  <option>22</option>  
-  <option>23</option>
-  <option>24</option> 
- <option>26</option>
-  <option>27</option>  
-  <option>28</option>
-  <option>29</option>     
-  <option>31</option>
-  <option>32</option>  
-  <option>33</option>
-  <option>34</option> 
- 
-    
-    
-    
-   </select>
-</form> 
-  
- 
 
-<script>
-var elt = document.querySelector('select');
-elt.addEventListener('change', function () {
   Placer(this.selectedIndex)
-  
-  document.getElementById('Niveau').InnerHTML = this.selectedIndex;
-  alert('selectedIndex => '+this.selectedIndex);document.getElementById('liste').value;
+
 })
 </script>
 
-    <table width="60%" style="text-align:center">
+</td>
+<td rowspan="19" style="background-color: #ffffff;"><img id='ImageMervBis' height="500px;"  src="Data/Tome_des_mysteres.png"></td>
+
+</tr>
+
+
+
+
+
       <tr>
         <th>Niveau<img   src="https://fr.wiki.elvenar.com/images/a/a8/Level_small.png"></th>
         <th>Coûts<img   src="https://fr.wiki.elvenar.com/images/thumb/b/bf/Researchico.png/25px-Researchico.png"></th>
@@ -390,14 +354,52 @@ elt.addEventListener('change', function () {
         <th><img height="20px;"  src="Data/Ancient_Knowledge.png"></th>
         <th><img height="20px;"  src="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"></th>
         <th><img height="20px;"  src="Data/Ancient_Knowledge.png"></th>
-        
-        <th rowspan="19" style="background-color: #ffffff;"><img id='ImageMervBis' height="500px;"  src="Data/Tome_des_mysteres.png"></th>
+
       </tr>
-      <tr height="3%;">
+      <tr height="3%;" length="30%;">
         <td colspan="18">Coffres disponibles pour passer du niveau 1 à 2</td>
       </tr>
-       <tr>
-        <td id="Niveau" >  1</td>
+       <tr height="3%;">
+        <td id="Niveau" >
+          <form action="">
+            <select size="1" style="align:center;font-size:20px;left:0;display:inline;width:50px;">
+
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+           <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+           <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>21</option>
+            <option>22</option>
+            <option>23</option>
+            <option>24</option>
+           <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>31</option>
+            <option>32</option>
+            <option>33</option>
+            <option>34onchange="Niveaux(this.value)" </option>
+
+
+
+
+             </select>
+          </form>
+
+        </td>
         <td  Niveau id="Couts">  189</td>
         <td>  20</td>
         <td>  1</td>
@@ -415,152 +417,79 @@ elt.addEventListener('change', function () {
         <td>  </td>
         <td>  </td>
         <td>  </td>
-      </tr>       
+      </tr>
 
-        <tr>
+        <tr height="3%;">
         <td colspan="2">      </td>
         <td colspan="2">
               <div>
                 <input type="checkbox" id="Pris1" name="Pris">
                <label for="horns">Pris</label>
-            </div> 
-          </td>          
-          
+            </div>
+          </td>
+
         <td colspan="2">
               <div>
                 <input type="checkbox" id="Pris2" name="Pris">
                <label for="horns">Pris</label>
-            </div> 
+            </div>
           </td>
         <td colspan="2">
               <div>
                 <input type="checkbox" id="Pris3" name="Pris">
                <label for="horns">Pris</label>
-            </div> 
+            </div>
           </td>
         <td colspan="2">
               <div>
                 <input type="checkbox" id="Pris4" name="Pris">
                <label for="horns">Pris</label>
-            </div> 
+            </div>
           </td>
         <td colspan="2">
               <div>
                 <input type="checkbox" id="Pris5" name="Pris">
                <label for="horns">Pris</label>
-            </div> 
-          </td>          
+            </div>
+          </td>
          <td colspan="2">
               <div>
                 <input type="checkbox" id="Pris6" name="horns">
                <label for="horns">Pris</label>
-            </div> 
-          </td>         
+            </div>
+          </td>
         <td colspan="2">
               <div>
                 <input type="checkbox" id="Pris7" name="Pris">
                <label for="horns">Pris</label>
-            </div> 
-          </td>          
+            </div>
+          </td>
         <td colspan="2">
               <div>
                 <input type="checkbox" id="Pris8" name="Pris">
                <label for="horns">Pris</label>
-            </div> 
+            </div>
           </td>
-          
-      </tr>      
-      
-      
-      
-      
-      
-      <tr>
-        <td colspan="2"  >Annonce avant upgrade</td> 
-        <td colspan="16" id="Annonce" >...</td> 
+
       </tr>
 
       <tr>
+        <td colspan="2"   height="3%;">Annonce&nbspavant&nbspupgrade</td>
+        <td colspan="16" id="Annonce" >...</td>
+      </tr>
 
-<td colspan="18"  rowspan="18" style="background-color: #ffffff;"><img id='ImageMerv' height="20%;"  src="https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png"></td>
-      </tr>     
-      
-      
+      <tr>
+        <td colspan="18"  rowspan="18" style="background-color: #ffffff;"><img id='ImageMerv' height="20%;"  src="https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png"></td>
+      </tr>
+
+
     </table>
 
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
-const person = [];
-MervImage[0] = "https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png";
-MervImage[1] = "https://fr.wiki.elvenar.com/images/f/f8/Abysse_dor%C3%A9.png";
-MervImage[2] = "https://fr.wiki.elvenar.com/images/b/b4/Excavation_sans_fin.png";
+<br>
+<br>
+<br>
+<iframe id="frmFile" src="Data/Abysse_dore.txt" onload="LoadFile();" ></iframe>
 
-https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png
-https://fr.wiki.elvenar.com/images/f/f8/Abysse_dor%C3%A9.png
-https://fr.wiki.elvenar.com/images/b/b4/Excavation_sans_fin.png
-https://fr.wiki.elvenar.com/images/4/4e/Aiguilles_de_la_temp%C3%AAte.png
-https://fr.wiki.elvenar.com/images/thumb/8/8e/48_GreatBuild_Inner_Elves_01_cropped.png/800px-48_GreatBuild_Inner_Elves_01_cropped.png
-https://fr.wiki.elvenar.com/images/thumb/7/75/48_GreatBuild_Inner_Elves_02_cropped.png/800px-48_GreatBuild_Inner_Elves_02_cropped.png
-https://fr.wiki.elvenar.com/images/thumb/8/81/47_Greatbuilding_Elves_Crystaltree_01_cropped.png/700px-47_Greatbuilding_Elves_Crystaltree_01_cropped.png
-https://fr.wiki.elvenar.com/images/thumb/b/be/47_Greatbuilding_Elves_Innercity_Crystaltree_06_cropped.png/695px-47_Greatbuilding_Elves_Innercity_Crystaltree_06_cropped.png
-https://fr.wiki.elvenar.com/images/thumb/4/47/48_greatbuilding_humans_innercity_monastery_01.png/800px-48_greatbuilding_humans_innercity_monastery_01.png
-https://fr.wiki.elvenar.com/images/thumb/8/86/48_greatbuilding_humans_innercity_monastery_02_cropped.png/800px-48_greatbuilding_humans_innercity_monastery_02_cropped.png
-https://fr.wiki.elvenar.com/images/c/c2/47_Greatbuilding_Humans_Innercity_Belltower_01_cropped.png
-https://fr.wiki.elvenar.com/images/a/aa/47_Greatbuilding_Humans_Innercity_Belltower_06_cropped.png
-https://fr.wiki.elvenar.com/images/7/73/Tour_de_guet_en_ruines1.png
-https://fr.wiki.elvenar.com/images/9/96/Tr%C3%B4ne_des_Hauts_Hommes.png
-https://fr.wiki.elvenar.com/images/thumb/2/23/D_greatbuilding_dwarves_military_01_cropped.png/638px-D_greatbuilding_dwarves_military_01_cropped.png
-https://fr.wiki.elvenar.com/images/thumb/1/1f/D_greatbuilding_dwarves_military_02_cropped.png/681px-D_greatbuilding_dwarves_military_02_cropped.png
-<img id='ImageMerv' height="10%;" src="https://fr.wiki.elvenar.com/images/8/8c/D_greatbuilding_dwarves_goods_02.png">
-https://fr.wiki.elvenar.com/images/8/8c/D_greatbuilding_dwarves_goods_02.png
-https://fr.wiki.elvenar.com/images/2/20/F_AncientWonder_Supplies_Inner_L1_cropped.png
-https://fr.wiki.elvenar.com/images/6/66/F_AncientWonder_Supplies_Inner_L2_cropped.png
-https://fr.wiki.elvenar.com/images/1/1d/F_AncientWonder_Trader_InnerCity_L1_cropped.png
-https://fr.wiki.elvenar.com/images/9/9c/F_AncientWonder_Trader_InnerCity_L2_cropped.png
-https://fr.wiki.elvenar.com/images/3/39/B_Orcs_AW1_1_0003.png
-https://fr.wiki.elvenar.com/images/f/f0/B_Orcs_AW2_1_0003.png
-https://fr.wiki.elvenar.com/images/9/9a/B_Woodelves_AW1.png
-https://fr.wiki.elvenar.com/images/8/89/B_Woodelves_AW2.png
-https://fr.wiki.elvenar.com/images/6/61/B_gr5_aw1.png
-https://fr.wiki.elvenar.com/images/7/7a/B_gr5_aw2.png
-https://fr.wiki.elvenar.com/images/3/37/0009_B_Gr6_AW1_1.png
-https://fr.wiki.elvenar.com/images/d/de/0008_B_Gr6_AW2_1.png
-https://fr.wiki.elvenar.com/images/thumb/6/6d/B_Gr7_AW1_1_0009.png/714px-B_Gr7_AW1_1_0009.png
-https://fr.wiki.elvenar.com/images/7/7f/B_Gr7_AW2_1_0010.png
-https://fr.wiki.elvenar.com/images/thumb/4/4a/0010_B_Gr8_AW1_1_0000.png/656px-0010_B_Gr8_AW1_1_0000.png
-https://fr.wiki.elvenar.com/images/a/a7/I_0011_B_Gr8_AW2_1_0000.png
-https://fr.wiki.elvenar.com/images/f/ff/B_Gr9_AW1_1_0000.png
-https://fr.wiki.elvenar.com/images/6/67/B_Gr9_AW2_1_0000.png
-https://fr.wiki.elvenar.com/images/3/37/GR10_AW1_3x6.png
-https://fr.wiki.elvenar.com/images/a/a8/GR10_AW2_7x3.png
-https://fr.wiki.elvenar.com/images/0/0f/GR11_AW1_6x4.png
-https://fr.wiki.elvenar.com/images/5/54/GR11_AW2_4x5.png
-https://fr.wiki.elvenar.com/images/a/a0/GR12_AW1_5x4.png
-https://fr.wiki.elvenar.com/images/6/6a/GR12_AW2_5x5.png
-https://fr.wiki.elvenar.com/images/0/0b/B_Ch18_AW1_1.png
-https://fr.wiki.elvenar.com/images/3/3a/B_Ch18_AW2_1.png
-https://fr.wiki.elvenar.com/images/c/cb/B_Ch19_AW1_1.png
-https://fr.wiki.elvenar.com/images/d/d2/B_Ch19_AW2_1.png
-https://fr.wiki.elvenar.com/images/3/3b/B_Ch20_AW1_1.png
-https://fr.wiki.elvenar.com/images/6/69/B_Ch20_AW2_1.png
-<img id='ImageMerv' height="10%;" src="https://fr.wiki.elvenar.com/images/6/69/B_Ch20_AW2_1.png">
-
-<div class="parent">
-<div class="div1"> </div>
-<div class="div2"> </div>
-<div class="div3"> </div>
-</div>
 </body>
