@@ -115,11 +115,11 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 </style>
 <script type="text/javascript">
    function CalculInitial(){
-      document.getElementById("Annonce").innerhtml=username + "????"
+      document.getElementById("Annonce").innerhtml= "????"
      
-     checkCookie()
+  ;  checkCookie()
   alert("ok")   
-  var file = this.files[0];
+  var file = "Data/Abysse_dore.txt";
   var reader = new FileReader();
   reader.onload = function(progressEvent){    
     alert(this.result)
@@ -175,14 +175,14 @@ MervImage[9] = "https://fr.wiki.elvenar.com/images/thumb/1/1f/D_greatbuilding_dw
 MervImage[10] = "https://fr.wiki.elvenar.com/images/1/1d/D_greatbuilding_dwarves_goods_01_cropped.png";
 MervImage[11] = "https://fr.wiki.elvenar.com/images/6/66/F_AncientWonder_Supplies_Inner_L2_cropped.png";
 MervImage[12] = "https://fr.wiki.elvenar.com/images/9/9c/F_AncientWonder_Trader_InnerCity_L2_cropped.png";
-MervImage[13] = "";
-MervImage[14] = "";
-MervImage[15] = "";
-MervImage[16] = "";
-MervImage[17] = "";
-MervImage[18] = "";
-MervImage[19] = "";
-MervImage[20] = "";
+MervImage[13] = "https://fr.wiki.elvenar.com/images/f/f0/B_Orcs_AW2_1_0003.png";
+MervImage[14] = "https://fr.wiki.elvenar.com/images/9/9a/B_Woodelves_AW1.png";
+MervImage[15] = "https://fr.wiki.elvenar.com/images/f/f0/B_Orcs_AW2_1_0003.png";
+MervImage[16] = "https://fr.wiki.elvenar.com/images/8/89/B_Woodelves_AW2.png";
+MervImage[17] = "https://fr.wiki.elvenar.com/images/6/61/B_gr5_aw1.png";
+MervImage[18] = "https://fr.wiki.elvenar.com/images/7/7a/B_gr5_aw2.png";
+MervImage[19] = "https://fr.wiki.elvenar.com/images/3/37/0009_B_Gr6_AW1_1.png";
+MervImage[20] = "https://fr.wiki.elvenar.com/images/d/de/0008_B_Gr6_AW2_1.png";
 
   
 MervImageBis[0] ="Data/Tome_des_mysteres.png"
@@ -203,19 +203,31 @@ MervImageBis[14] ="Data/Ambassade_d_enar.png"
 MervImageBis[15] ="Data/Sanctuaire_des_champignons_astucieux.png"   
 MervImageBis[16] ="Data/Academie_volante.png"   
 MervImageBis[17] ="Data/Labyrinthe_de_la_matiere_noire.png"   
-MervImageBis[19] ="Data/Abbaye_du_dragon.png"   
-MervImageBis[20] ="Data/Temple_des_crapauds.png"   
-MervImageBis[21] ="Data/Centre_d_echange_d_Elvenar.png"     
-MervImageBis[22] ="Data/Tours_du_crepuscule.png"     
-MervImageBis[23] ="Data/Fontaines_triomphantes.png"     
-MervImageBis[24] ="Data/D111_a_Voyage_temporel.png"     
-MervImageBis[25] ="Data/D222_z_Simia_Sapiens.png"     
-MervImageBis[26] ="Data/Vortex_de_stockage.png"     
-MervImageBis[27] ="Data/Fontaine_de_jouvence_thermale.png"     
-MervImageBis[28] ="Data/Bibliotheque_du_donjon.png"     
-MervImageBis[29] ="Data/Arene_de_tournois.png"     
-MervImageBis[3] ="Data/Arche_dragonique.png"     
+MervImageBis[18] ="Data/Abbaye_du_dragon.png"   
+MervImageBis[19] ="Data/Temple_des_crapauds.png"   
+MervImageBis[20] ="Data/Centre_d_echange_d_Elvenar.png"   
 
+MervImage[21] = "https://fr.wiki.elvenar.com/images/thumb/6/6d/B_Gr7_AW1_1_0009.png/714px-B_Gr7_AW1_1_0009.png";  
+MervImage[22] = "https://fr.wiki.elvenar.com/images/7/7f/B_Gr7_AW2_1_0010.png";    
+MervImage[23] = "https://fr.wiki.elvenar.com/images/e/e2/Construct_AW1_main.png";  
+  MervImage[24] = "https://fr.wiki.elvenar.com/images/1/11/Construct_AW2_main.png";  
+  MervImage[25] = "https://fr.wiki.elvenar.com/images/3/37/GR10_AW1_3x6.png";  
+  MervImage[26] = "https://fr.wiki.elvenar.com/images/a/a8/GR10_AW2_7x3.png";  
+  MervImage[27] = "https://fr.wiki.elvenar.com/images/0/0f/GR11_AW1_6x4.png";  
+  MervImage[28] = "https://fr.wiki.elvenar.com/images/5/54/GR11_AW2_4x5.png";  
+  MervImage[29] = "https://fr.wiki.elvenar.com/images/e/e5/GR12_AW1_main.png";  
+   MervImage[30]= "https://fr.wiki.elvenar.com/images/9/92/GR12_AW2_main.png"; 
+  
+MervImageBis[21] ="Data/Tours_du_crepuscule.png"     
+MervImageBis[22] ="Data/Fontaines_triomphantes.png"     
+MervImageBis[23] ="Data/D111_a_Voyage_temporel.png"     
+MervImageBis[24] ="Data/D222_z_Simia_Sapiens.png"     
+MervImageBis[25] ="Data/Vortex_de_stockage.png"     
+MervImageBis[26] ="Data/Fontaine_de_jouvence_thermale.png"     
+MervImageBis[27] ="Data/Bibliotheque_du_donjon.png"     
+MervImageBis[28] ="Data/Arene_de_tournois.png"     
+MervImageBis[29] ="Data/Arche_dragonique.png" 
+ MervImageBis[30]="Data/Oracle_du_destin.png" 
 
 
  
