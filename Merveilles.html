@@ -116,6 +116,22 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 <script type="text/javascript">
    function CalculInitial(){
      checkCookie()
+  alert("ok")   
+  var file = this.files[0];
+  var reader = new FileReader();
+  reader.onload = function(progressEvent){    
+    alert(this.result)
+    var fileContentArray = this.result.split(/\r\n|\n/);
+    for(var line = 0; line < lines.length-1; line++){
+      if (line==2) {
+      alert(line + " --> "+ lines[line]);
+    }
+  };
+  reader.readAsText("Data/Abysse_dore.txt");
+};
+     
+     
+     
   }     
    function getCookie(cname) {
         let name = cname + "=";
