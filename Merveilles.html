@@ -302,7 +302,7 @@ elt.addEventListener('change', function () {
 })
 </script>
 <form action="">
-  <select size="1" style="font-size:20px;left:0;">
+  <select size="1" style="font-size:20px;left:0;display:inline">
    
   <option>1</option>
   <option>2</option>  
@@ -345,14 +345,16 @@ elt.addEventListener('change', function () {
 var elt = document.querySelector('select');
 elt.addEventListener('change', function () {
   Placer(this.selectedIndex)
+  
+  document.getElementById('Niveau').InnerHTML = this.selectedIndex;
   alert('selectedIndex => '+this.selectedIndex);document.getElementById('liste').value;
 })
 </script>
 
     <table width="60%" style="text-align:center">
       <tr>
-        <th>Niveau  <img   src="https://fr.wiki.elvenar.com/images/a/a8/Level_small.png"></th>
-        <th>Coûts  <img   src="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"></th>
+        <th>Niveau<img   src="https://fr.wiki.elvenar.com/images/a/a8/Level_small.png"></th>
+        <th>Coûts<img   src="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"></th>
         <th>SA</th>
         <th><img  height="20px;" src="Data/Ancient_Knowledge.png"></th>
         <th>SA</th>
@@ -376,8 +378,8 @@ elt.addEventListener('change', function () {
         <td colspan="18">A </td>
       </tr>
        <tr>
-        <td>  1</td>
-        <td>  189</td>
+        <td id="Niveau" >  1</td>
+        <td  Niveau id="Couts">  189</td>
         <td>  20</td>
         <td>  1</td>
         <td> 15</td>
