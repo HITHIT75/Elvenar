@@ -131,9 +131,27 @@ function Lister2() {
       //alert(document.getElementById("Liste2").value)
       LoadFile()
       }
-function LoadFile() {
+function annoncer() {
   alert("annoncer")
-  alert(document.getElementById("Pirs1").value)
+  
+  checkBox2 = document.getElementById("Pris2").checked
+  checkBox3 = document.getElementById("Pris3").checked
+  checkBox4 = document.getElementById("Pris4").checked
+  checkBox5 = document.getElementById("Pris5").checked
+  checkBox6 = document.getElementById("Pris6").checked
+  checkBox7 = document.getElementById("Pris7").checked
+  checkBox8 = document.getElementById("Pris8").checked
+  checkBox1 = document.getElementById("Pris1").checked
+  Chaine =""
+    if (checkBox1.checked == true){
+      Chaine = Chaine + document.getElementById("SA1").innerHTM
+  } 
+    if (checkBox2.checked == true){
+      Chaine = Chaine + "  " + document.getElementById("SA2").innerHTM
+  }  
+  alert(Chaine )
+  
+  
   
 }
 
