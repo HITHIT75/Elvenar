@@ -248,10 +248,25 @@ for (var i = 0; i < 10; i++) {
   
   }
 function beneficier() {
-        Benefice = ["Tome_des_mysteres","– Produit un ou des point(s) de connaissance toutes les 24h", "https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png", ,"– Vous donne des matériaux pour chaque exploration lancée. La production correspond à un pourcentage du montant total de la capacité de stockage en matériaux de votre hôtel de ville","https://fr.wiki.elvenar.com/images/6/62/Supply_small.png",,,,];
-//  alert(document.getElementById("Liste1").value + Benefice[0])
+ Benefice = []
+        Benefice[0] = "Tome_des_mysteres"
+        Benefice[1] ="Produit un ou des point(s) de connaissance toutes les 24h"
+        Benefice[2] ="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"
+        Benefice[3] =""
+        Benefice[4] ="Vous donne des matériaux pour chaque exploration lancée. La production correspond à un pourcentage du montant total de la capacité de stockage en matériaux de votre hôtel de ville"
+        Benefice[5] ="https://fr.wiki.elvenar.com/images/6/62/Supply_small.png"
+        Benefice[6] =""
+        Benefice[7] =""
+        Benefice[8] =""
+        Benefice[9] =""
+        Benefice[10] ="Abysse_dore"
+        Benefice[11] ="Produit des pièces toutes les 3h. La production correspond à un pourcentage du montant total de la capacité de stockage en pièces de votre hôtel de ville.", "https://fr.wiki.elvenar.com/images/a/a3/Coin_small.png", , "Vous procure de la population additionnelle. Cette population supplémentaire correspond à un pourcentage du montant de votre population au travail (population employée dans l'ensemble de vos bâtiments)."
+        Benefice[12] ="https://fr.wiki.elvenar.com/images/8/8d/Populationadd.png"
+
+
+  alert(document.getElementById("Liste1").value + Benefice[0])
       for (var i = 0; i < 10; i++) {
-        if (document.getElementById("Liste1").value==   Benefice[i*8]) {
+        if (document.getElementById("Liste1").value==   Benefice[i*10]) {
 
           Icone1=""
           Icone2=""
@@ -260,29 +275,26 @@ function beneficier() {
           Icone9=""
           Icone10=""
 
-          if (Benefice[2+(i*8)] !="") {
-            Icone1="<img   src='" + Benefice[2+(i*8)] + "'>"
+          if (Benefice[2+(i*10)] !="") {
+            Icone1="<img   src='" + Benefice[2+(i*10)] + "'>"
           }
-          if (Benefice[3+(i*8)] !="") {
-            Icone2="<img   src='" + Benefice[3+(i*8)] + "'>"
+          if (Benefice[3+(i*10)] !="") {
+            Icone2="<img   src='" + Benefice[3+(i*10)] + "'>"
           }
-          if (Benefice[5+(i*8)] !="") {
-            Icone5="<img   src='" + Benefice[5+(i*8)] + "'>"
+          if (Benefice[5+(i*10)] !="") {
+            Icone5="<img   src='" + Benefice[5+(i*10)] + "'>"
           }
-          if (Benefice[6+(i*8)] !="") {
-            Icone6="<img   src='" + Benefice[6+(i*8)] + "'>"
+          if (Benefice[6+(i*10)] !="") {
+            Icone6="<img   src='" + Benefice[6+(i*10)] + "'>"
           }
-          if (Benefice[7+(i*8)] =="undefined") {
-            Benefice[7+(i*8)] =""
+          if (Benefice[7+(i*10)] =="undefined") {
+            Benefice[7+(i*10)] =""
           }
 
 
-           document.getElementById("Benef1").innerHTML=Icone1+Icone2+Benefice[1+(i*8)]
-          document.getElementById("Benef2").innerHTML=Icone5+Icone6+Benefice[4+(i*8)]
-        //  document.getElementById("Benef3").innerHTML=" " /Icone9+Icone10+Benefice[7+(i*8)]
-        }
-
-      }
+           document.getElementById("Benef1").innerHTML=Icone1+Icone2+Benefice[1+(i*10)]
+          document.getElementById("Benef2").innerHTML=Icone5+Icone6+Benefice[4+(i*10)]
+        //  docu
 }
 
    function getCookie(cname) {
