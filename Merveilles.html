@@ -117,33 +117,37 @@ LoadFile()
   // checkCookie()
   }
 function Lister1() {
-  
-    alert(document.getElementById("Liste1").value)
+
+//    alert(document.getElementById("Liste1").selectedIndex)
 //var elt = document.querySelector('select');
 //elt.addEventListener('change', function () {
 
-//  Placer(this.selectedIndex)  
+Fichier="Data/" + document.getElementById("Liste1").value +".txt"
+document.getElementById("frmFile").src = Fichier
+  Placer(document.getElementById("Liste1").selectedIndex)
     }
 function Lister2() {
-      alert(document.getElementById("Liste2").value)
+      //alert(document.getElementById("Liste2").value)
+      LoadFile()
       }
-  
-  
+
+
 function LoadFile() {
 Num=document.getElementById("Liste2").value
+//alert(Num+ "!")
       var oFrame = document.getElementById("frmFile");
       var strRawContents = oFrame.contentWindow.document.body.childNodes[0].innerHTML;
-   //   alert(strRawContents)
+      alert(strRawContents)
       while (strRawContents.indexOf("\r") >= 0)
           strRawContents = strRawContents.replace("\r", "");
       var arrLines = strRawContents.split("\n");
-     // alert("File " + oFrame.src + " has " + arrLines.length + " lines");
+      alert("File " + oFrame.src + " has " + arrLines.length + " lines");
       for (var i = 0; i < arrLines.length; i++) {
           var curLine = arrLines[i];
         if (Num==i + 1) {
           alert("Line #" + (i + 1) + " is: '" + curLine + "'");
         }
-          
+
       }
   }
 
@@ -286,7 +290,7 @@ MervImage[36]= "https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png"
     <td colspan="18">
 
 <form action="">
-  <select size="1 id="Liste1" onchange="Lister1()" style="font-size:20px;left:0;">
+  <select size="1" id="Liste1" onchange="Lister1()" style="font-size:20px;left:0;">
 
   <option style="font-size:20px;">Tome_des_mysteres</option>
   <option>Abysse_dore</option>
@@ -375,35 +379,46 @@ MervImage[36]= "https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png"
           <form action="">
             <select size="1" id="Liste2" onchange="Lister2()" style="align:center;font-size:20px;left:0;display:inline;width:70px;">
 
-            <option>1</option>
+
             <option>2</option>
             <option>3</option>
             <option>4</option>
-           <option>6</option>
+              <option>5</option>
+
             <option>7</option>
             <option>8</option>
             <option>9</option>
-            <option>11</option>
+            <option>10</option>
+
+
             <option>12</option>
             <option>13</option>
             <option>14</option>
-           <option>16</option>
+            <option>15</option>
+
+
             <option>17</option>
             <option>18</option>
             <option>19</option>
-            <option>21</option>
+           <option>20</option>
+
+
             <option>22</option>
             <option>23</option>
             <option>24</option>
-           <option>26</option>
+          <option>25</option>
+
+
             <option>27</option>
             <option>28</option>
             <option>29</option>
-            <option>31</option>
+           <option>30</option>
+
+
             <option>32</option>
             <option>33</option>
-            <option>34" </option>
-
+            <option>34 </option>
+            <option>35</option>
 
 
 
