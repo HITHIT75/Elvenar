@@ -128,9 +128,9 @@ document.getElementById("frmFile").src = Fichier
 LoadFile()
     }
 function Lister2() {
-//  document.getElementById("Intitule").InnerHTML="Coffres disponibles pour passer du niveau " + document.getElementById("Liste2").value + " à " + document.getElementById("Liste2").value+1
-//LoadFile()
-  Annoncer()
+document.getElementById("Intitule").InnerHTML="Coffres disponibles pour passer du niveau " + document.getElementById("Liste2").value + " à " + document.getElementById("Liste2").value+1
+LoadFile()
+Annoncer()
       //alert(document.getElementById("Liste2").value)
     //
 
@@ -511,7 +511,7 @@ MervImage[36]= "https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png"
           </td>
 
         <td colspan="2">
-              <div><img  height="20px;" src="Image/coffre_ouvert.png">
+              <div><img  height="30px;" src="Image/coffre_ouvert.png">
                 <input type="checkbox" id="Pris2" onchange="Annoncer()" name="Pris">
                <label for="horns">Pris</label>
             </div>
