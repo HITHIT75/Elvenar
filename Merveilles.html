@@ -248,13 +248,38 @@ for (var i = 0; i < 10; i++) {
   
   }
 function beneficier() {
-
-        Benefice = ["Tome_des_mysteres","– Produit un ou des point(s) de connaissance toutes les 24h", "https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png", ,"– Vous donne des matériaux pour chaque exploration lancée. La production correspond à un pourcentage du montant total de la capacité de stockage en matériaux de votre hôtel de ville","https://fr.wiki.elvenar.com/images/6/62/Supply_small.png",];
+        Benefice = ["Tome_des_mysteres","– Produit un ou des point(s) de connaissance toutes les 24h", "https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png", ,"– Vous donne des matériaux pour chaque exploration lancée. La production correspond à un pourcentage du montant total de la capacité de stockage en matériaux de votre hôtel de ville","https://fr.wiki.elvenar.com/images/6/62/Supply_small.png",,,,];
 //  alert(document.getElementById("Liste1").value + Benefice[0])
       for (var i = 0; i < 10; i++) {
         if (document.getElementById("Liste1").value==   Benefice[i*8]) {
-           document.getElementById("Benef1").innerHTML=Benefice[1+(i*8)]
-          document.getElementById("Benef2").innerHTML=Benefice[4+(i*8)]
+
+          Icone1=""
+          Icone2=""
+          Icone5=""
+          Icone6=""
+          Icone9=""
+          Icone10=""
+
+          if (Benefice[2+(i*8)] !="") {
+            Icone1="<img   src='" + Benefice[2+(i*8)] + "'>"
+          }
+          if (Benefice[3+(i*8)] !="") {
+            Icone2="<img   src='" + Benefice[3+(i*8)] + "'>"
+          }
+          if (Benefice[5+(i*8)] !="") {
+            Icone5="<img   src='" + Benefice[5+(i*8)] + "'>"
+          }
+          if (Benefice[6+(i*8)] !="") {
+            Icone6="<img   src='" + Benefice[6+(i*8)] + "'>"
+          }
+          if (Benefice[7+(i*8)] =="undefined") {
+            Benefice[7+(i*8)] =""
+          }
+
+
+           document.getElementById("Benef1").innerHTML=Icone1+Icone2+Benefice[1+(i*8)]
+          document.getElementById("Benef2").innerHTML=Icone5+Icone6+Benefice[4+(i*8)]
+        //  document.getElementById("Benef3").innerHTML=" " /Icone9+Icone10+Benefice[7+(i*8)]
         }
 
       }
