@@ -128,46 +128,46 @@ document.getElementById("frmFile").src = Fichier
 //***********************  LoadFile()
     }
 function Lister2() {
-      alert(document.getElementById("Liste2").value)
-      //LoadFile()
+      //alert(document.getElementById("Liste2").value)
+      LoadFile()
       }
 
 
 function LoadFile() {
 Num=document.getElementById("Liste2").value
-alert(Num+ "!")
+//alert(Num+ "!")
       var oFrame = document.getElementById("frmFile");
       var strRawContents = oFrame.contentWindow.document.body.childNodes[0].innerHTML;
-      alert(strRawContents)
+      //alert(strRawContents)
       while (strRawContents.indexOf("\r") >= 0)
           strRawContents = strRawContents.replace("\r", "");
       var arrLines = strRawContents.split("\n");
-      alert("File " + oFrame.src + " has " + arrLines.length + " lines");
+      //alert("File " + oFrame.src + " has " + arrLines.length + " lines");
       for (var i = 0; i < arrLines.length; i++) {
           var curLine = arrLines[i];
         if (Num==i + 1) {
            data = [];
           data = curLine.split(",");
           document.getElementById("Couts").innerHTML=data [0];
-//          document.getElementById("SA1").innerHTML=data[1];
-//          document.getElementById("Ru1").innerHTML=data[2];
-//          document.getElementById("SA2").innerHTML=data[3];
-//          document.getElementById("Ru2").innerHTML=data[4];
-//          document.getElementById("SA3").innerHTML=data[5];
-//          document.getElementById("Ru3").innerHTML=data[6];
-//          document.getElementById("SA4").innerHTML=data[7];
-//          document.getElementById("Ru4").innerHTML=data[8];
-//         document.getElementById("SA5").innerHTML=data[9];
-//          document.getElementById("Ru5").innerHTML=data[10];
-//          document.getElementById("SA6").innerHTML=data[11];
- //         document.getElementById("Ru6").innerHTML=data[12];
-//          document.getElementById("SA7").innerHTML=data[13];
- //         document.getElementById("Ru7").innerHTML=data[14];
- //        document.getElementById("SA8").innerHTML=data[15];
- //         document.getElementById("Ru8").innerHTML=data[16];
+          document.getElementById("SA1").innerHTML=data [1];
+          document.getElementById("Ru1").innerHTML=data [2];
+          document.getElementById("SA2").innerHTML=data [3];
+          document.getElementById("Ru2").innerHTML=data [4];
+          document.getElementById("SA3").innerHTML=data [5];
+          document.getElementById("Ru3").innerHTML=data [6];
+          document.getElementById("SA4").innerHTML=data [7];
+          document.getElementById("Ru4").innerHTML=data [8];
+         document.getElementById("SA5").innerHTML=data [9];
+          document.getElementById("Ru5").innerHTML=data [10];
+          document.getElementById("SA6").innerHTML=data [11];
+          document.getElementById("Ru6").innerHTML=data [12];
+          document.getElementById("SA7").innerHTML=data [13];
+          document.getElementById("Ru7").innerHTML=data [14];
+         document.getElementById("SA8").innerHTML=data [15];
+         document.getElementById("Ru8").innerHTML=data [16];
           
           
-          alert("Line #" + (i + 1) + " is: '" + curLine + "'");
+        //  alert("Line #" + (i + 1) + " is: '" + curLine + "'");
         }
 
       }
