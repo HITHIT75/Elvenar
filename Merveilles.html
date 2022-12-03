@@ -122,7 +122,9 @@ JouerSon(1)
 Fichier="Data/" + document.getElementById("Liste1").value +".txt"
 document.getElementById("frmFile").src = Fichier
   Placer(document.getElementById("Liste1").selectedIndex)
-LoadFile()
+   beneficier()
+  
+//LoadFile()
     }
 function Lister2() {
 JouerSon(1)  
@@ -245,7 +247,18 @@ for (var i = 0; i < 10; i++) {
   
   
   }
+function beneficier() {
 
+        Benefice = ["Tome_des_mysteres","– Produit un ou des point(s) de connaissance toutes les 24h", "https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png", ,"– Vous donne des matériaux pour chaque exploration lancée. La production correspond à un pourcentage du montant total de la capacité de stockage en matériaux de votre hôtel de ville","https://fr.wiki.elvenar.com/images/6/62/Supply_small.png",];
+//  alert(document.getElementById("Liste1").value + Benefice[0])
+      for (var i = 0; i < 10; i++) {
+        if (document.getElementById("Liste1").value==   Benefice[i*8]) {
+           document.getElementById("Benef1").innerHTML=Benefice[1+(i*8)]
+          document.getElementById("Benef2").innerHTML=Benefice[4+(i*8)]
+        }
+
+      }
+}
 
    function getCookie(cname) {
         let name = cname + "=";
@@ -434,7 +447,7 @@ MervImage[36]= "https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png"
 
 </tr>
 <tr>
-  <td colspan="18" id="Benef1" >Benef1 </td>
+  <td colspan="18" id="Benef1" >Benef1.. </td>
 </tr>
 <tr>
   <td colspan="18" id="Benef2" >Benef2 </td>
