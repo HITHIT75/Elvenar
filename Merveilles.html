@@ -191,15 +191,7 @@ document.getElementById("Annonce").innerHTML = Chaine +"!!!"
 }
 
 function LoadFile() {
-Benefice = ["Tome_des_mystere","– Produit un ou des point(s) de connaissance toutes les 24h", "https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png", ,"– Vous donne des matériaux pour chaque exploration lancée. La production correspond à un pourcentage du montant total de la capacité de stockage en matériaux de votre hôtel de ville","https://fr.wiki.elvenar.com/images/6/62/Supply_small.png",];
-// cars[0];  
-for (var i = 0; i < 10; i++) {  
-  if (document.getElementById("Liste1").value==   Benefice[i*8]) {
-     document.getElementById("Benef1")=Benefice[1+(i*8)]
-    document.getElementById("Benef2")=Benefice[4+(i*8)]
-  }
- 
-}  
+
   
   
 Num=document.getElementById("Liste2").value
@@ -239,6 +231,19 @@ Num=document.getElementById("Liste2").value
         }
 
       }
+  Benefice = ["Tome_des_mystere","– Produit un ou des point(s) de connaissance toutes les 24h", "https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png", ,"– Vous donne des matériaux pour chaque exploration lancée. La production correspond à un pourcentage du montant total de la capacité de stockage en matériaux de votre hôtel de ville","https://fr.wiki.elvenar.com/images/6/62/Supply_small.png",];
+
+for (var i = 0; i < 10; i++) {  
+  if (document.getElementById("Liste1").value==   Benefice[i*8]) {
+     document.getElementById("Benef1")=Benefice[1+(i*8)]
+    document.getElementById("Benef2")=Benefice[4+(i*8)]
+  }
+ 
+}  
+  
+  
+  
+  
   }
 
 
@@ -351,7 +356,7 @@ MervImage[36]= "https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png"
 
   document.getElementById("ImageMerv").src=MervImage[Num]
   document.getElementById("ImageMervBis").src=MervImageBis[Num]
-   document.getElementById("Annonce").innerhtml=username + "......."
+   document.getElementById("Annonce").innerhtml=username + "....1"
 
       }
 
