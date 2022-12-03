@@ -121,17 +121,14 @@ function CalculInitial(){
    checkCookie()
   }
 function Lister1() {
-
-//    alert(document.getElementById("Liste1").selectedIndex)
-//var elt = document.querySelector('select');
-//elt.addEventListener('change', function () {
-
+JouerSon(1)  
 Fichier="Data/" + document.getElementById("Liste1").value +".txt"
 document.getElementById("frmFile").src = Fichier
   Placer(document.getElementById("Liste1").selectedIndex)
 LoadFile()
     }
 function Lister2() {
+JouerSon(1)  
 document.getElementById("Intitule").InnerHTML="Coffres disponibles pour passer du niveau " + document.getElementById("Liste2").value + " à " + document.getElementById("Liste2").value+1
 LoadFile()
 Annoncer()
@@ -508,7 +505,7 @@ MervImage[36]= "https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png"
         <tr height="3%;">
         <td colspan="2">      </td>
         <td colspan="2">
-              <div><img  height="20px;" src="Image/coffre_ouvert.png">
+              <div><img  height="30px;" src="Image/coffre_ouvert.png">
                 <input type="checkbox" id="Pris1" onchange="Annoncer()" name="Pris">
                <label for="horns">Pris</label>
             </div>
@@ -521,37 +518,37 @@ MervImage[36]= "https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png"
             </div>
           </td>
         <td colspan="2">
-              <div><img  height="20px;" src="Image/coffre_ouvert.png">
+              <div><img  height="30px;" src="Image/coffre_ouvert.png">
                 <input type="checkbox" id="Pris3" onclick="Annoncer()" name="Pris">
                <label for="horns">Pris</label>
             </div>
           </td>
         <td colspan="2">
-              <div><img  height="20px;" src="Image/coffre_ouvert.png">
+              <div><img  height="30px;" src="Image/coffre_ouvert.png">
                 <input type="checkbox" id="Pris4" onclick="Annoncer()" name="Pris">
                <label for="horns">Pris</label>
             </div>
           </td>
         <td colspan="2">
-              <div><img  height="20px;" src="Image/coffre_ouvert.png">
+              <div><img  height="30px;" src="Image/coffre_ouvert.png">
                 <input type="checkbox" id="Pris5" onclick="Annoncer()" name="Pris">
                <label for="horns">Pris</label>
             </div>
           </td>
          <td colspan="2">
-              <div><img  height="20px;" src="Image/coffre_ouvert.png">
+              <div><img  height="30px;" src="Image/coffre_ouvert.png">
                 <input type="checkbox" id="Pris6" onclick="Annoncer()" name="horns">
                <label for="horns">Pris</label>
             </div>
           </td>
         <td colspan="2">
-              <div><img  height="20px;" src="Image/coffre_ouvert.png">
+              <div><img  height="30px;" src="Image/coffre_ouvert.png">
                 <input type="checkbox" id="Pris7" onclick="Annoncer()" name="Pris">
                <label for="horns">Pris</label>
             </div>
           </td>
         <td colspan="2">
-              <div><img  height="20px;" src="Image/coffre_ouvert.png">
+              <div><img  height="30px;" src="Image/coffre_ouvert.png">
                 <input type="checkbox" id="Pris8" onclick="Annoncer()" name="Pris">
                <label for="horns">Pris</label>
             </div>
