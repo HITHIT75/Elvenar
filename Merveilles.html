@@ -115,12 +115,15 @@ function CalculInitial(){
   //    document.getElementById("Annonce").innerhtml= "????"
 LoadFile()
   // checkCookie()
-
-  file = "Data/Abysse_dore.txt";
-
-
-
   }
+function Lister1() {
+    alert(document.getElementById("Liste1").selectedIndex)
+    }
+function Lister2() {
+      alert(document.getElementById("Liste2").value)
+      }
+  
+  
 function LoadFile() {
 
       var oFrame = document.getElementById("frmFile");
@@ -275,7 +278,7 @@ MervImage[36]= "https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png"
     <td colspan="18">
 
 <form action="">
-  <select size="1" style="font-size:20px;left:0;">
+  <select size="1 id="Liste1" onchange="Lister1()"" style="font-size:20px;left:0;">
 
   <option style="font-size:20px;">Tome_des_mysteres</option>
   <option>Abysse_dore</option>
@@ -362,7 +365,7 @@ elt.addEventListener('change', function () {
        <tr height="3%;">
         <td id="Niveau" >
           <form action="">
-            <select size="1" style="align:center;font-size:20px;left:0;display:inline;width:50px;">
+            <select size="1" id="Liste2" onchange="Lister2()" style="align:center;font-size:20px;left:0;display:inline;width:70px;">
 
             <option>1</option>
             <option>2</option>
@@ -391,7 +394,7 @@ elt.addEventListener('change', function () {
             <option>31</option>
             <option>32</option>
             <option>33</option>
-            <option>34onchange="Niveaux(this.value)" </option>
+            <option>34" </option>
 
 
 
