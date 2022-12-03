@@ -128,14 +128,16 @@ document.getElementById("frmFile").src = Fichier
 LoadFile()
     }
 function Lister2() {
+//  document.getElementById("Intitule").InnerHTML="Coffres disponibles pour passer du niveau " + document.getElementById("Liste2").value + " à " + document.getElementById("Liste2").value+1
+//LoadFile()
+  Annoncer()
       //alert(document.getElementById("Liste2").value)
-      LoadFile()
-  document.getElementById("Intitule").InnerHTML="Coffres disponibles pour passer du niveau " + document.getElementById("Liste2").value + " à " + document.getElementById("Liste2").value+1
-  
+    //
+
       }
-function annoncer() {
-  alert("annoncer")
-  
+function Annoncer() {
+
+  checkBox1 = document.getElementById("Pris1").checked
   checkBox2 = document.getElementById("Pris2").checked
   checkBox3 = document.getElementById("Pris3").checked
   checkBox4 = document.getElementById("Pris4").checked
@@ -143,18 +145,28 @@ function annoncer() {
   checkBox6 = document.getElementById("Pris6").checked
   checkBox7 = document.getElementById("Pris7").checked
   checkBox8 = document.getElementById("Pris8").checked
-  checkBox1 = document.getElementById("Pris1").checked
+
+
   Chaine =""
-    if (checkBox1.checked == true){
-      Chaine = Chaine + document.getElementById("SA1").innerHTM
-  } 
-    if (checkBox2.checked == true){
-      Chaine = Chaine + "  " + document.getElementById("SA2").innerHTM
-  }  
-  alert(Chaine )
-  
-  
-  
+    if (checkBox1 != true){
+  //    alert(document.getElementById("SA1").innerHTML)
+      Chaine = Chaine + document.getElementById("SA1").innerHTML
+      compteur=compteur+1
+    }
+    if (checkBox2 != true){
+      Chaine = Chaine + "  " + document.getElementById("SA2").innerHTML
+    }
+    if (checkBox3 != true){
+      Chaine = Chaine + "  " + document.getElementById("SA3").innerHTML
+    }
+//if (checkBox4 == false){
+//  Chaine = Chaine + "  " + document.getElementById("SA4").innerHTML
+//}
+  Chaine = "Reste "  + " coffres: " + Chaine
+  //Chaine = document.getElementById("SA1").innerHTML + document.getElementById("SA2").innerHTML + document.getElementById("SA3").innerHTML
+document.getElementById("Annonce").innerHTML = Chaine +"!!!"
+
+
 }
 
 function LoadFile() {
@@ -189,9 +201,9 @@ Num=document.getElementById("Liste2").value
           document.getElementById("Ru7").innerHTML=data [14];
          document.getElementById("SA8").innerHTML=data [15];
          document.getElementById("Ru8").innerHTML=data [16];
-          
-          
-        //  alert("Line #" + (i + 1) + " is: '" + curLine + "'");
+
+
+          //alert("Line #" + (i + 1) + " is: '" + curLine + "'");
         }
 
       }
@@ -378,24 +390,21 @@ MervImage[36]= "https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png"
 
   </select>
 </form>
-<script>
-//var elt = document.querySelector('select');
-//elt.addEventListener('change', function () {
 
-//  Placer(this.selectedIndex)
-
-//})
-</script>
 
 </td>
 <td rowspan="19" style="background-color: #ffffff;"><img id='ImageMervBis' height="500px;"  src="Data/Tome_des_mysteres.png"></td>
 
 </tr>
-
-
-
-
-
+<tr>
+  <td colspan="18" id="Benef1" >Benef1 </td>
+</tr>
+<tr>
+  <td colspan="18" id="Benef2" >Benef2 </td>
+</tr>
+<tr>
+  <td colspan="18" id="Benef3" >Benef3 </td>
+</tr>
       <tr>
         <th>Niveau<img   src="https://fr.wiki.elvenar.com/images/a/a8/Level_small.png"></th>
         <th>Coûts<img   src="https://fr.wiki.elvenar.com/images/thumb/b/bf/Researchico.png/25px-Researchico.png"></th>
@@ -495,50 +504,50 @@ MervImage[36]= "https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png"
         <tr height="3%;">
         <td colspan="2">      </td>
         <td colspan="2">
-              <div>
-                <input type="checkbox" id="Pris1" onclick="Annoncer()" name="Pris">
+              <div><img  height="20px;" src="Image/coffre_ouvert.png">
+                <input type="checkbox" id="Pris1" onchange="Annoncer()" name="Pris">
                <label for="horns">Pris</label>
             </div>
           </td>
 
         <td colspan="2">
-              <div>
-                <input type="checkbox" id="Pris2" onclick="Annoncer()" name="Pris">
+              <div><img  height="20px;" src="Image/coffre_ouvert.png">
+                <input type="checkbox" id="Pris2" onchange="Annoncer()" name="Pris">
                <label for="horns">Pris</label>
             </div>
           </td>
         <td colspan="2">
-              <div>
+              <div><img  height="20px;" src="Image/coffre_ouvert.png">
                 <input type="checkbox" id="Pris3" onclick="Annoncer()" name="Pris">
                <label for="horns">Pris</label>
             </div>
           </td>
         <td colspan="2">
-              <div>
+              <div><img  height="20px;" src="Image/coffre_ouvert.png">
                 <input type="checkbox" id="Pris4" onclick="Annoncer()" name="Pris">
                <label for="horns">Pris</label>
             </div>
           </td>
         <td colspan="2">
-              <div>
+              <div><img  height="20px;" src="Image/coffre_ouvert.png">
                 <input type="checkbox" id="Pris5" onclick="Annoncer()" name="Pris">
                <label for="horns">Pris</label>
             </div>
           </td>
          <td colspan="2">
-              <div>
+              <div><img  height="20px;" src="Image/coffre_ouvert.png">
                 <input type="checkbox" id="Pris6" onclick="Annoncer()" name="horns">
                <label for="horns">Pris</label>
             </div>
           </td>
         <td colspan="2">
-              <div>
+              <div><img  height="20px;" src="Image/coffre_ouvert.png">
                 <input type="checkbox" id="Pris7" onclick="Annoncer()" name="Pris">
                <label for="horns">Pris</label>
             </div>
           </td>
         <td colspan="2">
-              <div>
+              <div><img  height="20px;" src="Image/coffre_ouvert.png">
                 <input type="checkbox" id="Pris8" onclick="Annoncer()" name="Pris">
                <label for="horns">Pris</label>
             </div>
@@ -548,7 +557,8 @@ MervImage[36]= "https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png"
 
       <tr>
         <td colspan="2"   height="3%;">Annonce&nbspavant&nbspupgrade</td>
-        <td colspan="16" id="Annonce" >........</td>
+        <td colspan="14" id="Annonce" >........</td>
+        <td colspan="2"  ><button type="button" onclick="alert('Hello world!')">Copier</button></td>
       </tr>
 
       <tr>
