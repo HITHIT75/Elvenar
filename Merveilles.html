@@ -125,7 +125,7 @@ function Lister1() {
 Fichier="Data/" + document.getElementById("Liste1").value +".txt"
 document.getElementById("frmFile").src = Fichier
   Placer(document.getElementById("Liste1").selectedIndex)
-  LoadFile()
+//***********************  LoadFile()
     }
 function Lister2() {
       //alert(document.getElementById("Liste2").value)
@@ -146,7 +146,8 @@ Num=document.getElementById("Liste2").value
       for (var i = 0; i < arrLines.length; i++) {
           var curLine = arrLines[i];
         if (Num==i + 1) {
-          String[] data = curLine.split(",");
+          const data = [];
+          data = curLine.split(",");
           document.getElementById("Couts").innerHTML=data[0];
           document.getElementById("SA1").innerHTML=data[1];
           document.getElementById("Ru1").innerHTML=data[2];
