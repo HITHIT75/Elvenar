@@ -125,11 +125,13 @@ function Lister1() {
 Fichier="Data/" + document.getElementById("Liste1").value +".txt"
 document.getElementById("frmFile").src = Fichier
   Placer(document.getElementById("Liste1").selectedIndex)
-//***********************  LoadFile()
+LoadFile()
     }
 function Lister2() {
       //alert(document.getElementById("Liste2").value)
       LoadFile()
+  document.getElementById("Intitule").InnerHTML="Coffres disponibles pour passer du niveau " + document.getElementById("Liste2").value + " à " + document.getElementById("Liste2").value+1
+  
       }
 function annoncer() {
   alert("annoncer")
@@ -417,7 +419,7 @@ MervImage[36]= "https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png"
       </tr>
       <tr height="3%;" length="30%;">
         <td colspan="2"></td>
-        <td colspan="16">Coffres disponibles pour passer du niveau 1 à 2</td>
+        <td colspan="16" id="Intitule" >Coffres disponibles pour passer du niveau 1 à 2</td>
       </tr>
        <tr height="3%;">
         <td id="Niveau" >
