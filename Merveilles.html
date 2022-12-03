@@ -147,23 +147,46 @@ function Annoncer() {
   checkBox7 = document.getElementById("Pris7").checked
   checkBox8 = document.getElementById("Pris8").checked
 
-
+  Recompense1=document.getElementById("SA1").innerHTML
+  Recompense2=document.getElementById("SA2").innerHTML
+  Recompense3=document.getElementById("SA3").innerHTML
+  Recompense4=document.getElementById("SA4").innerHTML
+  Recompense5=document.getElementById("SA5").innerHTML
+  Recompense6=document.getElementById("SA6").innerHTML
+  Recompense7=document.getElementById("SA7").innerHTML
+  Recompense8=document.getElementById("SA8").innerHTML
+  compteur=0
   Chaine =""
-    if (checkBox1 != true){
+    if ((checkBox1 != true) && (Recompense1>0)){
   //    alert(document.getElementById("SA1").innerHTML)
-      Chaine = Chaine + document.getElementById("SA1").innerHTML
+      Chaine = Chaine + Recompense1
       compteur=compteur+1
     }
-    if (checkBox2 != true){
-      Chaine = Chaine + "  " + document.getElementById("SA2").innerHTML
+    if ((checkBox2 != true) && (Recompense2>0)){
+      Chaine = Chaine + "  " + Recompense2
+      compteur=compteur+1      
     }
-    if (checkBox3 != true){
-      Chaine = Chaine + "  " + document.getElementById("SA3").innerHTML
+    if ((checkBox3 != true) && (Recompense3>0)){
+      Chaine = Chaine + "  " + Recompense3
+      compteur=compteur+1      
     }
+     if ((checkBox4 != true) && (Recompense4>0)){
+      Chaine = Chaine + "  " + Recompense4
+      compteur=compteur+1       
+    }
+   
+  
+  
 //if (checkBox4 == false){
 //  Chaine = Chaine + "  " + document.getElementById("SA4").innerHTML
 //}
-  Chaine = "Reste "  + " coffres: " + Chaine
+  if(compteur>1) {
+    Pluriel="s"
+  }
+  else {
+    Pluriel="s"  
+  }
+  Chaine = "Reste " + compteur + " coffre" + Pluriel ": " + Chaine
   //Chaine = document.getElementById("SA1").innerHTML + document.getElementById("SA2").innerHTML + document.getElementById("SA3").innerHTML
 document.getElementById("Annonce").innerHTML = Chaine +"!!!"
 
