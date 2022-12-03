@@ -113,8 +113,8 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 <script type="text/javascript">
 function CalculInitial(){
   //    document.getElementById("Annonce").innerhtml= "????"
-LoadFile()
-  // checkCookie()
+
+   checkCookie()
   }
 function Lister1() {
 
@@ -131,7 +131,9 @@ function Lister2() {
       //alert(document.getElementById("Liste2").value)
       LoadFile()
       }
-
+function LoadFile() {
+  alert("annoncer")
+}
 
 function LoadFile() {
 Num=document.getElementById("Liste2").value
@@ -186,7 +188,7 @@ Num=document.getElementById("Liste2").value
             return c.substring(name.length, c.length);
           }
         }
-        return "";
+        return "##";
       }
    function checkCookie() {
       //document.getElementById("Chaine").innerHTML=  "attente cookie"
@@ -471,50 +473,50 @@ MervImage[36]= "https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png"
         <td colspan="2">      </td>
         <td colspan="2">
               <div>
-                <input type="checkbox" id="Pris1" name="Pris">
+                <input type="checkbox" id="Pris1" onchange="Annoncer()" name="Pris">
                <label for="horns">Pris</label>
             </div>
           </td>
 
         <td colspan="2">
               <div>
-                <input type="checkbox" id="Pris2" name="Pris">
+                <input type="checkbox" id="Pris2" onchange="Annoncer()" name="Pris">
                <label for="horns">Pris</label>
             </div>
           </td>
         <td colspan="2">
               <div>
-                <input type="checkbox" id="Pris3" name="Pris">
+                <input type="checkbox" id="Pris3" onchange="Annoncer()" name="Pris">
                <label for="horns">Pris</label>
             </div>
           </td>
         <td colspan="2">
               <div>
-                <input type="checkbox" id="Pris4" name="Pris">
+                <input type="checkbox" id="Pris4" onchange="Annoncer()" name="Pris">
                <label for="horns">Pris</label>
             </div>
           </td>
         <td colspan="2">
               <div>
-                <input type="checkbox" id="Pris5" name="Pris">
+                <input type="checkbox" id="Pris5" onchange="Annoncer()" name="Pris">
                <label for="horns">Pris</label>
             </div>
           </td>
          <td colspan="2">
               <div>
-                <input type="checkbox" id="Pris6" name="horns">
+                <input type="checkbox" id="Pris6" onchange="Annoncer()" name="horns">
                <label for="horns">Pris</label>
             </div>
           </td>
         <td colspan="2">
               <div>
-                <input type="checkbox" id="Pris7" name="Pris">
+                <input type="checkbox" id="Pris7" onchange="Annoncer()" name="Pris">
                <label for="horns">Pris</label>
             </div>
           </td>
         <td colspan="2">
               <div>
-                <input type="checkbox" id="Pris8" name="Pris">
+                <input type="checkbox" id="Pris8" onchange="Annoncer()" name="Pris">
                <label for="horns">Pris</label>
             </div>
           </td>
