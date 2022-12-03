@@ -125,6 +125,7 @@ function Lister1() {
 Fichier="Data/" + document.getElementById("Liste1").value +".txt"
 document.getElementById("frmFile").src = Fichier
   Placer(document.getElementById("Liste1").selectedIndex)
+  LoadFile()
     }
 function Lister2() {
       //alert(document.getElementById("Liste2").value)
@@ -137,11 +138,11 @@ Num=document.getElementById("Liste2").value
 //alert(Num+ "!")
       var oFrame = document.getElementById("frmFile");
       var strRawContents = oFrame.contentWindow.document.body.childNodes[0].innerHTML;
-      alert(strRawContents)
+      //alert(strRawContents)
       while (strRawContents.indexOf("\r") >= 0)
           strRawContents = strRawContents.replace("\r", "");
       var arrLines = strRawContents.split("\n");
-      alert("File " + oFrame.src + " has " + arrLines.length + " lines");
+      //alert("File " + oFrame.src + " has " + arrLines.length + " lines");
       for (var i = 0; i < arrLines.length; i++) {
           var curLine = arrLines[i];
         if (Num==i + 1) {
