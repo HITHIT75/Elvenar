@@ -125,7 +125,7 @@ function Lister2() {
   
   
 function LoadFile() {
-
+Num=document.getElementById("Liste2").value
       var oFrame = document.getElementById("frmFile");
       var strRawContents = oFrame.contentWindow.document.body.childNodes[0].innerHTML;
    //   alert(strRawContents)
@@ -135,7 +135,10 @@ function LoadFile() {
      // alert("File " + oFrame.src + " has " + arrLines.length + " lines");
       for (var i = 0; i < arrLines.length; i++) {
           var curLine = arrLines[i];
-     //     alert("Line #" + (i + 1) + " is: '" + curLine + "'");
+        if (Num==i + 1) {
+          alert("Line #" + (i + 1) + " is: '" + curLine + "'");
+        }
+          
       }
   }
 
