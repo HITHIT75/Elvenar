@@ -401,7 +401,10 @@ MervImage[36]= "https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png"
 
       }
     function Test() {
-    alert("ok")
+Fichier="Data/" + document.getElementById("Liste1").value +".txt"
+ // alert("Fichier")
+document.getElementById("frmFile").src = Fichier
+  Placer(document.getElementById("Liste1").selectedIndex)
     }
     function JouerSon(Num) {
   	   Resultat = getCookie("Ecouteur")
