@@ -400,11 +400,12 @@ MervImage[36]= "https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png"
    document.getElementById("Annonce").innerhtml=username + "....1"
 
       }
-    function Test() {
-Fichier="Data/" + document.getElementById("Liste1").value +".txt"
- // alert("Fichier")
-document.getElementById("frmFile").src = Fichier
-  Placer(document.getElementById("Liste1").selectedIndex)
+function Test() {
+      Fichier="Data/" + document.getElementById("Liste1").value +".txt"
+     // alert("Fichier")
+      document.getElementById("frmFile").src = Fichier
+      Placer(document.getElementById("Liste1").selectedIndex)
+LoadFile()
     }
     function JouerSon(Num) {
   	   Resultat = getCookie("Ecouteur")
