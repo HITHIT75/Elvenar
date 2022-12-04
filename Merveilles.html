@@ -117,7 +117,7 @@ th, td {
 
  //  checkCookie()
 //  }
-function Lister1() {
+//function Lister1() {
 //JouerSon(1)
 //Fichier="Data/" + document.getElementById("Liste1").value +".txt"
   alert("Fichier")
@@ -126,7 +126,7 @@ function Lister1() {
 //   beneficier()
 
 //    LoadFile()
-}
+//}
 //function Lister2() {
 //JouerSon(1)
 //document.getElementById("Intitule").InnerHTML="Coffres disponibles pour passer du niveau " + document.getElementById("Liste2").value + " à " + document.getElementById("Liste2").value+1
@@ -400,8 +400,9 @@ MervImage[36]= "https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png"
    document.getElementById("Annonce").innerhtml=username + "....1"
 
       }
-
-
+    function Test() {
+    alert("ok")
+    }
     function JouerSon(Num) {
   	   Resultat = getCookie("Ecouteur")
   	    if (Resultat ==1) {
@@ -426,7 +427,7 @@ MervImage[36]= "https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png"
     <td colspan="18">
 
 <form action="">
-  <select size="1" id="Liste1" onchange="Lister1()" style="font-size:24px;left:0;">
+  <select size="1" id="Liste1" onchange="Test()" style="font-size:24px;left:0;">
 
   <option style="font-size:20px;">Tome_des_mysteres</option>
   <option>Abysse_dore</option>
