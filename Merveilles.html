@@ -197,14 +197,14 @@ function LoadFile() {
   
   
 Num=document.getElementById("Liste2").value
-//alert(Num+ "!")
+alert(Num+ "!")
       var oFrame = document.getElementById("frmFile");
       var strRawContents = oFrame.contentWindow.document.body.childNodes[0].innerHTML;
-      //alert(strRawContents)
+      alert(strRawContents)
       while (strRawContents.indexOf("\r") >= 0)
           strRawContents = strRawContents.replace("\r", "");
       var arrLines = strRawContents.split("\n");
-      //alert("File " + oFrame.src + " has " + arrLines.length + " lines");
+      alert("File " + oFrame.src + " has " + arrLines.length + " lines");
       for (var i = 0; i < arrLines.length; i++) {
           var curLine = arrLines[i];
         if (Num==i + 1) {
@@ -235,13 +235,7 @@ Num=document.getElementById("Liste2").value
       }
   Benefice = ["Tome_des_mystere","– Produit un ou des point(s) de connaissance toutes les 24h", "https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png", ,"– Vous donne des matériaux pour chaque exploration lancée. La production correspond à un pourcentage du montant total de la capacité de stockage en matériaux de votre hôtel de ville","https://fr.wiki.elvenar.com/images/6/62/Supply_small.png",];
 
-for (var i = 0; i < 10; i++) {  
-  if (document.getElementById("Liste1").value==   Benefice[i*8]) {
-     document.getElementById("Benef1")=Benefice[1+(i*8)]
-    document.getElementById("Benef2")=Benefice[4+(i*8)]
-  }
- 
-}  
+
   
   
   
