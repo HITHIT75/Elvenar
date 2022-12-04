@@ -33,7 +33,7 @@ th {
 th, td {
   border: 1px solid;
 }
-  
+
 //tr:nth-child(even) {background-color: #f2f2f2;}
 
   #ImageMerv {
@@ -112,90 +112,90 @@ th, td {
    label {display:table-cell;float: left;}
 </style>
 <script type="text/javascript">
-function CalculInitial(){
+//function CalculInitial(){
   //    document.getElementById("Annonce").innerhtml= "????"
 
  //  checkCookie()
-  }
+//  }
 function Lister1() {
-JouerSon(1)  
+JouerSon(1)
 Fichier="Data/" + document.getElementById("Liste1").value +".txt"
 document.getElementById("frmFile").src = Fichier
   Placer(document.getElementById("Liste1").selectedIndex)
 //   beneficier()
-  
+
 //LoadFile()
     }
 function Lister2() {
-JouerSon(1)  
+JouerSon(1)
 //document.getElementById("Intitule").InnerHTML="Coffres disponibles pour passer du niveau " + document.getElementById("Liste2").value + " à " + document.getElementById("Liste2").value+1
-LoadFile()
+//LoadFile()
 //Annoncer()
       //alert(document.getElementById("Liste2").value)
     //
 
       }
-function Annoncer() {
-
-  checkBox1 = document.getElementById("Pris1").checked
-  checkBox2 = document.getElementById("Pris2").checked
-  checkBox3 = document.getElementById("Pris3").checked
-  checkBox4 = document.getElementById("Pris4").checked
-  checkBox5 = document.getElementById("Pris5").checked
-  checkBox6 = document.getElementById("Pris6").checked
-  checkBox7 = document.getElementById("Pris7").checked
-  checkBox8 = document.getElementById("Pris8").checked
-
-  Recompense1=document.getElementById("SA1").innerHTML
-  Recompense2=document.getElementById("SA2").innerHTML
-  Recompense3=document.getElementById("SA3").innerHTML
-  Recompense4=document.getElementById("SA4").innerHTML
-  Recompense5=document.getElementById("SA5").innerHTML
-  Recompense6=document.getElementById("SA6").innerHTML
-  Recompense7=document.getElementById("SA7").innerHTML
-  Recompense8=document.getElementById("SA8").innerHTML
-  compteur=0
-  Chaine =""
-    if ((checkBox1 != true) && (Recompense1>0)){
-  //    alert(document.getElementById("SA1").innerHTML)
-      Chaine = Chaine + Recompense1
-      compteur=compteur+1
-    }
-    if ((checkBox2 != true) && (Recompense2>0)){
-      Chaine = Chaine + "  " + Recompense2
-      compteur=compteur+1      
-    }
-    if ((checkBox3 != true) && (Recompense3>0)){
-      Chaine = Chaine + "  " + Recompense3
-      compteur=compteur+1      
-    }
-     if ((checkBox4 != true) && (Recompense4>0)){
-      Chaine = Chaine + "  " + Recompense4
-      compteur=compteur+1       
-    }
-   
-  
-  
-//if (checkBox4 == false){
-//  Chaine = Chaine + "  " + document.getElementById("SA4").innerHTML
-//}
-  if(compteur>1) {
-    Pluriel="s"
-  }
-  else {
-    Pluriel="s"  
-  }
-  Chaine = "Reste " + compteur + " coffre" + Pluriel ": " + Chaine
-  //Chaine = document.getElementById("SA1").innerHTML + document.getElementById("SA2").innerHTML + document.getElementById("SA3").innerHTML
-document.getElementById("Annonce").innerHTML = Chaine +"!!!"
-
-
-}
+// function Annoncer() {
+//
+//   checkBox1 = document.getElementById("Pris1").checked
+//   checkBox2 = document.getElementById("Pris2").checked
+//   checkBox3 = document.getElementById("Pris3").checked
+//   checkBox4 = document.getElementById("Pris4").checked
+//   checkBox5 = document.getElementById("Pris5").checked
+//   checkBox6 = document.getElementById("Pris6").checked
+//   checkBox7 = document.getElementById("Pris7").checked
+//   checkBox8 = document.getElementById("Pris8").checked
+//
+//   Recompense1=document.getElementById("SA1").innerHTML
+//   Recompense2=document.getElementById("SA2").innerHTML
+//   Recompense3=document.getElementById("SA3").innerHTML
+//   Recompense4=document.getElementById("SA4").innerHTML
+//   Recompense5=document.getElementById("SA5").innerHTML
+//   Recompense6=document.getElementById("SA6").innerHTML
+//   Recompense7=document.getElementById("SA7").innerHTML
+//   Recompense8=document.getElementById("SA8").innerHTML
+//   compteur=0
+//   Chaine =""
+//     if ((checkBox1 != true) && (Recompense1>0)){
+//   //    alert(document.getElementById("SA1").innerHTML)
+//       Chaine = Chaine + Recompense1
+//       compteur=compteur+1
+//     }
+//     if ((checkBox2 != true) && (Recompense2>0)){
+//       Chaine = Chaine + "  " + Recompense2
+//       compteur=compteur+1
+//     }
+//     if ((checkBox3 != true) && (Recompense3>0)){
+//       Chaine = Chaine + "  " + Recompense3
+//       compteur=compteur+1
+//     }
+//      if ((checkBox4 != true) && (Recompense4>0)){
+//       Chaine = Chaine + "  " + Recompense4
+//       compteur=compteur+1
+//     }
+//
+//
+//
+// //if (checkBox4 == false){
+// //  Chaine = Chaine + "  " + document.getElementById("SA4").innerHTML
+// //}
+//   if(compteur>1) {
+//     Pluriel="s"
+//   }
+//   else {
+//     Pluriel="s"
+//   }
+//   Chaine = "Reste " + compteur + " coffre" + Pluriel ": " + Chaine
+//   //Chaine = document.getElementById("SA1").innerHTML + document.getElementById("SA2").innerHTML + document.getElementById("SA3").innerHTML
+// document.getElementById("Annonce").innerHTML = Chaine +"!!!"
+//
+//
+// }
 
 function LoadFile() {
 
-  
-  
+
+
 Num=document.getElementById("Liste2").value
 alert(Num+ "!")
       var oFrame = document.getElementById("frmFile");
@@ -233,82 +233,82 @@ alert(Num+ "!")
         }
 
       }
-  
-  
-  
+
+
+
   }
-function beneficier() {
- Benefice = []
-        Benefice[0] = "Tome_des_mysteres"
-        Benefice[1] ="Produit un ou des point(s) de connaissance toutes les 24h"
-        Benefice[2] ="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"
-        Benefice[3] =""
-        Benefice[4] ="Vous donne des matériaux pour chaque exploration lancée. La production correspond à un pourcentage du montant total de la capacité de stockage en matériaux de votre hôtel de ville"
-        Benefice[5] ="https://fr.wiki.elvenar.com/images/6/62/Supply_small.png"
-        Benefice[6] =""
-        Benefice[7] =""
-        Benefice[8] =""
-        Benefice[9] =""
-        Benefice[10] ="Abysse_dore"
-        Benefice[11] ="Produit des pièces toutes les 3h. La production correspond à un pourcentage du montant total de la capacité de stockage en pièces de votre hôtel de ville.", "https://fr.wiki.elvenar.com/images/a/a3/Coin_small.png", , "Vous procure de la population additionnelle. Cette population supplémentaire correspond à un pourcentage du montant de votre population au travail (population employée dans l'ensemble de vos bâtiments)."
-        Benefice[12] ="https://fr.wiki.elvenar.com/images/8/8d/Populationadd.png"
+// function beneficier() {
+//  Benefice = []
+//         Benefice[0] = "Tome_des_mysteres"
+//         Benefice[1] ="Produit un ou des point(s) de connaissance toutes les 24h"
+//         Benefice[2] ="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"
+//         Benefice[3] =""
+//         Benefice[4] ="Vous donne des matériaux pour chaque exploration lancée. La production correspond à un pourcentage du montant total de la capacité de stockage en matériaux de votre hôtel de ville"
+//         Benefice[5] ="https://fr.wiki.elvenar.com/images/6/62/Supply_small.png"
+//         Benefice[6] =""
+//         Benefice[7] =""
+//         Benefice[8] =""
+//         Benefice[9] =""
+//         Benefice[10] ="Abysse_dore"
+//         Benefice[11] ="Produit des pièces toutes les 3h. La production correspond à un pourcentage du montant total de la capacité de stockage en pièces de votre hôtel de ville.", "https://fr.wiki.elvenar.com/images/a/a3/Coin_small.png", , "Vous procure de la population additionnelle. Cette population supplémentaire correspond à un pourcentage du montant de votre population au travail (population employée dans l'ensemble de vos bâtiments)."
+//         Benefice[12] ="https://fr.wiki.elvenar.com/images/8/8d/Populationadd.png"
+//
+//
+//   alert(document.getElementById("Liste1").value + Benefice[0])
+//       for (var i = 0; i < 10; i++) {
+//         if (document.getElementById("Liste1").value==   Benefice[i*10]) {
+//
+//           Icone1=""
+//           Icone2=""
+//           Icone5=""
+//           Icone6=""
+//           Icone9=""
+//           Icone10=""
+//
+//           if (Benefice[2+(i*10)] !="") {
+//             Icone1="<img   src='" + Benefice[2+(i*10)] + "'>"
+//           }
+//           if (Benefice[3+(i*10)] !="") {
+//             Icone2="<img   src='" + Benefice[3+(i*10)] + "'>"
+//           }
+//           if (Benefice[5+(i*10)] !="") {
+//             Icone5="<img   src='" + Benefice[5+(i*10)] + "'>"
+//           }
+//           if (Benefice[6+(i*10)] !="") {
+//             Icone6="<img   src='" + Benefice[6+(i*10)] + "'>"
+//           }
+//           if (Benefice[7+(i*10)] =="undefined") {
+//             Benefice[7+(i*10)] =""
+//           }
+//
+//
+//            document.getElementById("Benef1").innerHTML=Icone1+Icone2+Benefice[1+(i*10)]
+//           document.getElementById("Benef2").innerHTML=Icone5+Icone6+Benefice[4+(i*10)]
+//         //  docu
+// }
 
-
-  alert(document.getElementById("Liste1").value + Benefice[0])
-      for (var i = 0; i < 10; i++) {
-        if (document.getElementById("Liste1").value==   Benefice[i*10]) {
-
-          Icone1=""
-          Icone2=""
-          Icone5=""
-          Icone6=""
-          Icone9=""
-          Icone10=""
-
-          if (Benefice[2+(i*10)] !="") {
-            Icone1="<img   src='" + Benefice[2+(i*10)] + "'>"
-          }
-          if (Benefice[3+(i*10)] !="") {
-            Icone2="<img   src='" + Benefice[3+(i*10)] + "'>"
-          }
-          if (Benefice[5+(i*10)] !="") {
-            Icone5="<img   src='" + Benefice[5+(i*10)] + "'>"
-          }
-          if (Benefice[6+(i*10)] !="") {
-            Icone6="<img   src='" + Benefice[6+(i*10)] + "'>"
-          }
-          if (Benefice[7+(i*10)] =="undefined") {
-            Benefice[7+(i*10)] =""
-          }
-
-
-           document.getElementById("Benef1").innerHTML=Icone1+Icone2+Benefice[1+(i*10)]
-          document.getElementById("Benef2").innerHTML=Icone5+Icone6+Benefice[4+(i*10)]
-        //  docu
-}
-
-   function getCookie(cname) {
-        let name = cname + "=";
-        let ca = document.cookie.split(';');
-        for(let i = 0; i < ca.length; i++) {
-          let c = ca[i];
-          while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-          }
-          if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-          }
-        }
-        return "##";
-      }
-   function checkCookie() {
-      //document.getElementById("Chaine").innerHTML=  "attente cookie"
-        let username = getCookie("Pseudo");
-        if (username != "") {
-         //alert("Welcome again " + username);
-         document.getElementById("Annonce").innerhtml=  username
-        }
-      }
+   // function getCookie(cname) {
+   //      let name = cname + "=";
+   //      let ca = document.cookie.split(';');
+   //      for(let i = 0; i < ca.length; i++) {
+   //        let c = ca[i];
+   //        while (c.charAt(0) == ' ') {
+   //          c = c.substring(1);
+   //        }
+   //        if (c.indexOf(name) == 0) {
+   //          return c.substring(name.length, c.length);
+   //        }
+   //      }
+   //      return "##";
+   //    }
+   // function checkCookie() {
+   //    //document.getElementById("Chaine").innerHTML=  "attente cookie"
+   //      let username = getCookie("Pseudo");
+   //      if (username != "") {
+   //       //alert("Welcome again " + username);
+   //       document.getElementById("Annonce").innerhtml=  username
+   //      }
+   //    }
 
 function Placer(Num){
    JouerSon(1)
@@ -650,6 +650,84 @@ MervImage[36]= "https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png"
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+</body>
+
+<br>
+<br>
+<br>
+<br>
+<td><a href="/index.php?title=Les_nains" title="Les nains"><img alt="Dwarvesbannerteck.png" src="https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png" decoding="async" width="80" height="100" /></a>
+<p><a href="/index.php?title=Les_nains" title="Les nains">Les nains</a>
+</p>
+</td>
+<td><a href="/index.php?title=Les_f%C3%A9es" title="Les fées"><img alt="Fairiesbannerteck.png" src="https://fr.wiki.elvenar.com//images/a/a6/Fairiesbannerteck.png" decoding="async" width="80" height="100" /></a>
+<p><a href="/index.php?title=Les_f%C3%A9es" title="Les fées">Les fées</a>
+</p>
+</td>
+<td><a href="/index.php?title=Les_orcs_et_gobelins" title="Les orcs et gobelins"><img alt="Orcs&amp;Goblinsbannerteck.png" src="https://fr.wiki.elvenar.com//images/5/5d/Orcs%26Goblinsbannerteck.png" decoding="async" width="80" height="100" /></a>
+<p><a href="/index.php?title=Les_orcs_et_gobelins" title="Les orcs et gobelins">Les orcs et</a><br /><a href="/index.php?title=Les_orcs_et_gobelins" title="Les orcs et gobelins">Gobelins</a>
+</p>
+</td>
+<td><a href="/index.php?title=Les_elfes_sylvains" title="Les elfes sylvains"><img alt="TTFlags.png" src="https://fr.wiki.elvenar.com//images/thumb/e/e8/TTFlags.png/75px-TTFlags.png" decoding="async" width="75" height="88" srcset="/images/e/e8/TTFlags.png 1.5x" /></a>
+<p><a href="/index.php?title=Les_elfes_sylvains" title="Les elfes sylvains">Les elfes</a><br /><a href="/index.php?title=Les_elfes_sylvains" title="Les elfes sylvains">sylvains</a>
+</p>
+</td>
+<td><a href="/index.php?title=Sorciers_et_dragons" title="Sorciers et dragons"><img alt="SRCbanner.png" src="https://fr.wiki.elvenar.com//images/thumb/3/3c/SRCbanner.png/80px-SRCbanner.png" decoding="async" width="80" height="99" srcset="/images/3/3c/SRCbanner.png 1.5x" /></a>
+<p><a href="/index.php?title=Sorciers_et_dragons" title="Sorciers et dragons">Sorciers et</a><br /><a href="/index.php?title=Sorciers_et_dragons" title="Sorciers et dragons">Dragons</a>
+</p>
+</td>
+<td><a href="/index.php?title=Halfelins" title="Halfelins"><img alt="G6flag.png" src="https://fr.wiki.elvenar.com//images/7/78/G6flag.png" decoding="async" width="80" height="100" /></a>
+<p><a href="/index.php?title=Halfelins" title="Halfelins">Halfelins</a>
+</p>
+</td>
+<td><a href="/index.php?title=%C3%89l%C3%A9mentaires" title="Élémentaires"><img alt="Gr7flag.png" src="https://fr.wiki.elvenar.com//images/9/97/Gr7flag.png" decoding="async" width="76" height="103" /></a>
+<p><a href="/index.php?title=%C3%89l%C3%A9mentaires" title="Élémentaires">Élémentaires</a>
+</p>
+</td></tr>
+<tr>
+<td><a href="/index.php?title=Amuni" title="Amuni"><img alt="Gr8flag.png" src="https://fr.wiki.elvenar.com//images/4/43/Gr8flag.png" decoding="async" width="80" height="87" /></a>
+<p><a href="/index.php?title=Amuni" title="Amuni">Amuni</a>
+</p>
+</td>
+<td><a href="/index.php?title=Cr%C3%A9ateurs" title="Créateurs"><img alt="Gr9flag.png" src="https://fr.wiki.elvenar.com//images/thumb/5/59/Gr9flag.png/90px-Gr9flag.png" decoding="async" width="90" height="90" srcset="/images/thumb/5/59/Gr9flag.png/135px-Gr9flag.png 1.5x, /images/thumb/5/59/Gr9flag.png/180px-Gr9flag.png 2x" /></a>
+<p><a href="/index.php?title=Cr%C3%A9ateurs" title="Créateurs">Créateurs</a>
+</p>
+</td>
+<td><a href="/index.php?title=Les_Elvenar" title="Les Elvenar"><img alt="Gr10flag.png" src="https://fr.wiki.elvenar.com//images/thumb/1/17/Gr10flag.png/90px-Gr10flag.png" decoding="async" width="90" height="90" srcset="/images/thumb/1/17/Gr10flag.png/135px-Gr10flag.png 1.5x, /images/1/17/Gr10flag.png 2x" /></a>
+<p><a href="/index.php?title=Les_Elvenar" title="Les Elvenar">Les Elvenar</a>
+</p>
+</td>
+<td><a href="/index.php?title=Ambassades" title="Ambassades"><img alt="Gr11flag.png" src="https://fr.wiki.elvenar.com//images/thumb/b/bb/Gr11flag.png/90px-Gr11flag.png" decoding="async" width="90" height="98" srcset="/images/b/bb/Gr11flag.png 1.5x" /></a>
+<p><a href="/index.php?title=Ambassades" title="Ambassades">Ambassades</a>
+</p>
+</td>
+<td><a href="/index.php?title=Marchands_d%27Unur" title="Marchands d&#39;Unur"><img alt="Gr12flag.png" src="https://fr.wiki.elvenar.com//images/thumb/1/14/Gr12flag.png/90px-Gr12flag.png" decoding="async" width="90" height="90" srcset="/images/1/14/Gr12flag.png 1.5x" /></a>
+<p><a href="/index.php?title=Marchands_d%27Unur" title="Marchands d&#39;Unur">Marchands d'Unur</a>
+</p>
+</td>
+<td><a href="/index.php?title=Esprit_d%27Equipe" title="Esprit d&#39;Equipe"><img alt="Gr13flag.png" src="https://fr.wiki.elvenar.com//images/thumb/2/2a/Gr13flag.png/90px-Gr13flag.png" decoding="async" width="90" height="99" srcset="/images/thumb/2/2a/Gr13flag.png/135px-Gr13flag.png 1.5x, /images/2/2a/Gr13flag.png 2x" /></a>
+<p><a href="/index.php?title=Esprit_d%27Equipe" title="Esprit d&#39;Equipe">Esprit d'Equipe</a>
+</p>
+</td>
+<td><a href="/index.php?title=La_Revanche_de_l%27Exil%C3%A9" title="La Revanche de l&#39;Exilé"><img alt="Gr14flag.png" src="https://fr.wiki.elvenar.com//images/e/e1/Gr14flag.png" decoding="async" width="90" height="90" /></a>
+<p><a href="/index.php?title=La_Revanche_de_l%27Exil%C3%A9" title="La Revanche de l&#39;Exilé">La Revanche de l'Exilé</a>
+</p>
+</td></tr>
+<tr>
+<td><a href="/index.php?title=Le_Pouvoir_de_la_Musique" title="Le Pouvoir de la Musique"><img alt="Gr15flag.png" src="https://fr.wiki.elvenar.com//images/thumb/9/94/Gr15flag.png/80px-Gr15flag.png" decoding="async" width="80" height="80" srcset="/images/9/94/Gr15flag.png 1.5x" /></a>
+<p><a href="/index.php?title=Le_Pouvoir_
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 <br>
 <br>
 <br>
