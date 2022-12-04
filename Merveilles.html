@@ -198,14 +198,14 @@ function LoadFile() {
 
 
 Num=document.getElementById("Liste2").value
-alert(Num+ "!")
+//alert(Num+ "!")
       var oFrame = document.getElementById("frmFile");
       var strRawContents = oFrame.contentWindow.document.body.childNodes[0].innerHTML;
-      alert(strRawContents)
+     // alert(strRawContents)
       while (strRawContents.indexOf("\r") >= 0)
           strRawContents = strRawContents.replace("\r", "");
       var arrLines = strRawContents.split("\n");
-      alert("File " + oFrame.src + " has " + arrLines.length + " lines");
+    // alert("File " + oFrame.src + " has " + arrLines.length + " lines");
       for (var i = 0; i < arrLines.length; i++) {
           var curLine = arrLines[i];
         if (Num==i + 1) {
@@ -230,7 +230,7 @@ alert(Num+ "!")
          document.getElementById("Ru8").innerHTML=data [16];
 
 
-          alert("Line #" + (i + 1) + " is: '" + curLine + "'");
+         // alert("Line #" + (i + 1) + " is: '" + curLine + "'");
         }
 
       }
@@ -472,7 +472,7 @@ document.getElementById("frmFile").src = Fichier
 
   </select>
 </form>
-<img  src="https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png" decoding="async" width="80" height="100" />
+<img  src="https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png" float = "right" decoding="async" width="80" height="100" />
 
 </td>
 <td rowspan="19" style="background-color: #ffffff;"><img id='ImageMervBis' height="500px;"  src="Data/Tome_des_mysteres.png"></td>
