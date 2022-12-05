@@ -399,12 +399,79 @@ MervImage[36]= "https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png"
   document.getElementById("ImageMervBis").src=MervImageBis[Num]
    document.getElementById("Annonce").innerhtml=username + "....1"
 
-      }
+  if(Num<7) {
+    document.getElementById("Ere").innerhtml="Les nains"
+    document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png"
+  }
+  if((Num>6) && (Num<9)) {
+    document.getElementById("Ere").innerhtml="Les fées"
+    document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/a/a6/Fairiesbannerteck.png"
+  }
+  if((Num>8) && (Num<11)) {
+    document.getElementById("Ere").innerhtml="Les orcs et gobelins"
+    document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/5/5d/Orcs%26Goblinsbannerteck.png"
+  }
+  if((Num>10) && (Num<13)) {
+    document.getElementById("Ere").innerhtml="Les elfes sylvains"
+    document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/e/e8/TTFlags.png/75px-TTFlags.png"
+  }
+  if((Num>12) && (Num<15)) {
+    document.getElementById("Ere").innerhtml="Sorciers et dragons"
+    document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/3/3c/SRCbanner.png/80px-SRCbanner.png"
+  }
+  if((Num>14) && (Num<17)) {
+    document.getElementById("Ere").innerhtml="Halfelins"
+    document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/7/78/G6flag.png"
+  }
+  if((Num>16) && (Num<19)) {
+    document.getElementById("Ere").innerhtml="Élémentaires"
+    document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/9/97/Gr7flag.png"
+  }
+  if((Num>18) && (Num<21)) {
+    document.getElementById("Ere").innerhtml="Amuni"
+    document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/4/43/Gr8flag.png"
+  }
+  if((Num>20) && (Num<23)) {
+    document.getElementById("Ere").innerhtml="Créateurs"
+    document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/5/59/Gr9flag.png/90px-Gr9flag.png"
+  }
+  if((Num>22) && (Num<25)) {
+    document.getElementById("Ere").innerhtml="Les Elvenar"
+    document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/1/17/Gr10flag.png/90px-Gr10flag.png"
+  }
+  if((Num>24) && (Num<27)) {
+    document.getElementById("Ere").innerhtml="Ambassades"
+    document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/b/bb/Gr11flag.png/90px-Gr11flag.png"
+  }
+  if((Num>26) && (Num<29)) {
+    document.getElementById("Ere").innerhtml="Marchands d'Unur"
+    document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/1/14/Gr12flag.png/90px-Gr12flag.png"
+  }
+  if((Num>28) && (Num<31)) {
+    document.getElementById("Ere").innerhtml="Esprit d'Equipe"
+    document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/2/2a/Gr13flag.png/90px-Gr13flag.png"
+  }
+  if((Num>30) && (Num<33)) {
+    document.getElementById("Ere").innerhtml="La Revanche de l'Exilé"
+    document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/e/e1/Gr14flag.png"
+  }
+  if((Num>32) && (Num<35)) {
+    document.getElementById("Ere").innerhtml="Le Pouvoir de la Musique"
+    document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/9/94/Gr15flag.png/80px-Gr15flag.png"
+  }
+
+
+
+}
 function Test() {
       Fichier="Data/" + document.getElementById("Liste1").value +".txt"
      // alert("Fichier")
       document.getElementById("frmFile").src = Fichier
-      Placer(document.getElementById("Liste1").selectedIndex)
+      Num=document.getElementById("Liste1").selectedIndex
+
+      Placer(Num)
+
+
 LoadFile()
     }
     function JouerSon(Num) {
@@ -428,7 +495,7 @@ LoadFile()
 
 <table width="60%" style="text-align:center">
   <tr height="3%;">
-    <td colspan="16">
+    <td colspan="14">
 
 <form action="">
   <select size="1" id="Liste1" onchange="Test()" style="font-size:24px;left:0;">
@@ -473,9 +540,12 @@ LoadFile()
 
   </select>
 </form>
-</td>      
-<td colspan="2">      
-<img  src="https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png" style = "float: right;" decoding="async" width="48" height="60" />
+</td>
+<td colspan="2" id="ere">
+
+</td>
+<td colspan="2">
+<img  id="ImgEre" src="https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png" style = "float: right;" decoding="async" width="48" height="60" />
 
 </td>
 <td rowspan="19" style="background-color: #ffffff;"><img id='ImageMervBis' height="500px;"  src="Data/Tome_des_mysteres.png"></td>
@@ -494,7 +564,7 @@ LoadFile()
         <td colspan="2"></td>
         <td colspan="16" id="Intitule" >Coffres disponibles pour passer du niveau 1 à 2</td>
       </tr>
-  
+
       <tr>
         <th>Niveau<img   src="https://fr.wiki.elvenar.com/images/a/a8/Level_small.png"></th>
         <th>Coûts<img   src="https://fr.wiki.elvenar.com/images/thumb/b/bf/Researchico.png/25px-Researchico.png"></th>
@@ -669,66 +739,7 @@ LoadFile()
 <br>
 <br>
 <br>
-<td><a href="/index.php?title=Les_nains" title="Les nains"><img  src="https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png" decoding="async" width="80" height="100" /></a>
-<p><a href="/index.php?title=Les_nains" title="Les nains">Les nains</a>
-</p>
-</td>
-<td><a href="/index.php?title=Les_f%C3%A9es" title="Les fées"><img alt="Fairiesbannerteck.png" src="https://fr.wiki.elvenar.com//images/a/a6/Fairiesbannerteck.png" decoding="async" width="80" height="100" /></a>
-<p><a href="/index.php?title=Les_f%C3%A9es" title="Les fées">Les fées</a>
-</p>
-</td>
-<td><a href="/index.php?title=Les_orcs_et_gobelins" title="Les orcs et gobelins"><img alt="Orcs&amp;Goblinsbannerteck.png" src="https://fr.wiki.elvenar.com//images/5/5d/Orcs%26Goblinsbannerteck.png" decoding="async" width="80" height="100" /></a>
-<p><a href="/index.php?title=Les_orcs_et_gobelins" title="Les orcs et gobelins">Les orcs et</a><br /><a href="/index.php?title=Les_orcs_et_gobelins" title="Les orcs et gobelins">Gobelins</a>
-</p>
-</td>
-<td><a href="/index.php?title=Les_elfes_sylvains" title="Les elfes sylvains"><img alt="TTFlags.png" src="https://fr.wiki.elvenar.com//images/thumb/e/e8/TTFlags.png/75px-TTFlags.png" decoding="async" width="75" height="88" srcset="/images/e/e8/TTFlags.png 1.5x" /></a>
-<p><a href="/index.php?title=Les_elfes_sylvains" title="Les elfes sylvains">Les elfes</a><br /><a href="/index.php?title=Les_elfes_sylvains" title="Les elfes sylvains">sylvains</a>
-</p>
-</td>
-<td><a href="/index.php?title=Sorciers_et_dragons" title="Sorciers et dragons"><img alt="SRCbanner.png" src="https://fr.wiki.elvenar.com//images/thumb/3/3c/SRCbanner.png/80px-SRCbanner.png" decoding="async" width="80" height="99" srcset="/images/3/3c/SRCbanner.png 1.5x" /></a>
-<p><a href="/index.php?title=Sorciers_et_dragons" title="Sorciers et dragons">Sorciers et</a><br /><a href="/index.php?title=Sorciers_et_dragons" title="Sorciers et dragons">Dragons</a>
-</p>
-</td>
-<td><a href="/index.php?title=Halfelins" title="Halfelins"><img alt="G6flag.png" src="https://fr.wiki.elvenar.com//images/7/78/G6flag.png" decoding="async" width="80" height="100" /></a>
-<p><a href="/index.php?title=Halfelins" title="Halfelins">Halfelins</a>
-</p>
-</td>
-<td><a href="/index.php?title=%C3%89l%C3%A9mentaires" title="Élémentaires"><img alt="Gr7flag.png" src="https://fr.wiki.elvenar.com//images/9/97/Gr7flag.png" decoding="async" width="76" height="103" /></a>
-<p><a href="/index.php?title=%C3%89l%C3%A9mentaires" title="Élémentaires">Élémentaires</a>
-</p>
-</td></tr>
-<tr>
-<td><a href="/index.php?title=Amuni" title="Amuni"><img alt="Gr8flag.png" src="https://fr.wiki.elvenar.com//images/4/43/Gr8flag.png" decoding="async" width="80" height="87" /></a>
-<p><a href="/index.php?title=Amuni" title="Amuni">Amuni</a>
-</p>
-</td>
-<td><a href="/index.php?title=Cr%C3%A9ateurs" title="Créateurs"><img alt="Gr9flag.png" src="https://fr.wiki.elvenar.com//images/thumb/5/59/Gr9flag.png/90px-Gr9flag.png" decoding="async" width="90" height="90" srcset="/images/thumb/5/59/Gr9flag.png/135px-Gr9flag.png 1.5x, /images/thumb/5/59/Gr9flag.png/180px-Gr9flag.png 2x" /></a>
-<p><a href="/index.php?title=Cr%C3%A9ateurs" title="Créateurs">Créateurs</a>
-</p>
-</td>
-<td><a href="/index.php?title=Les_Elvenar" title="Les Elvenar"><img alt="Gr10flag.png" src="https://fr.wiki.elvenar.com//images/thumb/1/17/Gr10flag.png/90px-Gr10flag.png" decoding="async" width="90" height="90" srcset="/images/thumb/1/17/Gr10flag.png/135px-Gr10flag.png 1.5x, /images/1/17/Gr10flag.png 2x" /></a>
-<p><a href="/index.php?title=Les_Elvenar" title="Les Elvenar">Les Elvenar</a>
-</p>
-</td>
-<td><a href="/index.php?title=Ambassades" title="Ambassades"><img alt="Gr11flag.png" src="https://fr.wiki.elvenar.com//images/thumb/b/bb/Gr11flag.png/90px-Gr11flag.png" decoding="async" width="90" height="98" srcset="/images/b/bb/Gr11flag.png 1.5x" /></a>
-<p><a href="/index.php?title=Ambassades" title="Ambassades">Ambassades</a>
-</p>
-</td>
-<td><a href="/index.php?title=Marchands_d%27Unur" title="Marchands d&#39;Unur"><img alt="Gr12flag.png" src="https://fr.wiki.elvenar.com//images/thumb/1/14/Gr12flag.png/90px-Gr12flag.png" decoding="async" width="90" height="90" srcset="/images/1/14/Gr12flag.png 1.5x" /></a>
-<p><a href="/index.php?title=Marchands_d%27Unur" title="Marchands d&#39;Unur">Marchands d'Unur</a>
-</p>
-</td>
-<td><a href="/index.php?title=Esprit_d%27Equipe" title="Esprit d&#39;Equipe"><img alt="Gr13flag.png" src="https://fr.wiki.elvenar.com//images/thumb/2/2a/Gr13flag.png/90px-Gr13flag.png" decoding="async" width="90" height="99" srcset="/images/thumb/2/2a/Gr13flag.png/135px-Gr13flag.png 1.5x, /images/2/2a/Gr13flag.png 2x" /></a>
-<p><a href="/index.php?title=Esprit_d%27Equipe" title="Esprit d&#39;Equipe">Esprit d'Equipe</a>
-</p>
-</td>
-<td><a href="/index.php?title=La_Revanche_de_l%27Exil%C3%A9" title="La Revanche de l&#39;Exilé"><img alt="Gr14flag.png" src="https://fr.wiki.elvenar.com//images/e/e1/Gr14flag.png" decoding="async" width="90" height="90" /></a>
-<p><a href="/index.php?title=La_Revanche_de_l%27Exil%C3%A9" title="La Revanche de l&#39;Exilé">La Revanche de l'Exilé</a>
-</p>
-</td></tr>
-<tr>
-<td><a href="/index.php?title=Le_Pouvoir_de_la_Musique" title="Le Pouvoir de la Musique"><img alt="Gr15flag.png" src="https://fr.wiki.elvenar.com//images/thumb/9/94/Gr15flag.png/80px-Gr15flag.png" decoding="async" width="80" height="80" srcset="/images/9/94/Gr15flag.png 1.5x" /></a>
-<p><a href="/index.php?title=Le_Pouvoir_
+
 <br>
 <br>
 <br><br>
