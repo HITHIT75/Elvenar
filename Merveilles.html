@@ -311,6 +311,7 @@ Num=document.getElementById("Liste2").value
 
 function Placer(Num){
   JouerSon(1)
+  alert("DEBUT de placer image en place " + Num)
   const MervImage = [];
   const MervImageBis = [];
   MervImage[0] = "https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png";
@@ -470,12 +471,12 @@ function Test() {
        Num=document.getElementById("ListeUne").selectedIndex
       alert(Num)
       Erer(Num)
-  
+      Placer(Num)
       Fichier="Data/" + document.getElementById("ListeUne").value +".txt"
      // alert("Fichier")
       document.getElementById("frmFile").src = Fichier
 
-      Placer(Num)
+      
 
 
 LoadFile()
