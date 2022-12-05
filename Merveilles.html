@@ -466,12 +466,14 @@ function Erer(Num) {
   
   
 function Test() {
+       Num=document.getElementById("ListeUne").selectedIndex
+      alert(Num)
+      Erer(Num)
+  
       Fichier="Data/" + document.getElementById("ListeUne").value +".txt"
      // alert("Fichier")
       document.getElementById("frmFile").src = Fichier
-      Num=document.getElementById("ListeUne").selectedIndex
-alert(Num)
-      function Erer(Num)
+
       Placer(Num)
 
 
