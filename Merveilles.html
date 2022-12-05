@@ -257,7 +257,7 @@ Num=document.getElementById("Liste2").value
 //
 //   alert(document.getElementById("Liste1").value + Benefice[0])
 //       for (var i = 0; i < 10; i++) {
-//         if (document.getElementById("Liste1").value==   Benefice[i*10]) {
+//         if (document.getElementById("ListeUne").value==   Benefice[i*10]) {
 //
 //           Icone1=""
 //           Icone2=""
@@ -467,7 +467,7 @@ function Test() {
       Fichier="Data/" + document.getElementById("Liste1").value +".txt"
      // alert("Fichier")
       document.getElementById("frmFile").src = Fichier
-      Num=document.getElementById("Liste1").selectedIndex
+      Num=document.getElementById("ListeUne").selectedIndex
 
       Placer(Num)
 
@@ -498,7 +498,7 @@ LoadFile()
     <td colspan="14">
 
 <form action="">
-  <select size="1" id="Liste1" onchange="Test()" style="font-size:22px;left:0;">
+  <select size="1" id="ListeUne" onchange="Test()" style="font-size:22px;left:0;">
 
   <option style="font-size:18px;">Tome_des_mysteres</option>
   <option>Abysse_dore</option>
