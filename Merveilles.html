@@ -311,6 +311,7 @@ Num=document.getElementById("Liste2").value
 
 function Placer(Num){
   JouerSon(1)
+  Num=document.getElementById("ListeUne").selectedIndex
   alert("DEBUT de placer image en place " + Num)
   const MervImage = [];
   const MervImageBis = [];
@@ -469,9 +470,10 @@ function Erer(Num) {
   
 function Test() {
        Num=document.getElementById("ListeUne").selectedIndex
-      alert(Num)
+      
       Erer(Num)
-      Placer(Num)
+  alert("Test envoi placer  " + Num)
+      Placer()
       Fichier="Data/" + document.getElementById("ListeUne").value +".txt"
      // alert("Fichier")
       document.getElementById("frmFile").src = Fichier
