@@ -472,11 +472,11 @@ function Test() {
        Num=document.getElementById("ListeUne").selectedIndex
       
       Erer(Num)
+      Fichier="Data/" + document.getElementById("ListeUne").value +".txt"
+      document.getElementById("frmFile").src = Fichier  
   alert("Test envoi placer  " + Num)
       Placier()
-      Fichier="Data/" + document.getElementById("ListeUne").value +".txt"
-     // alert("Fichier")
-      document.getElementById("frmFile").src = Fichier
+
 
       
 
