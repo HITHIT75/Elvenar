@@ -194,9 +194,6 @@ th {
 // }
 
 function LoadFile() {
-
-
-
 Num=document.getElementById("Liste2").value
 //alert(Num+ "!")
       var oFrame = document.getElementById("frmFile");
@@ -398,7 +395,13 @@ MervImage[36]= "https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png"
   document.getElementById("ImageMerv").src=MervImage[Num]
   document.getElementById("ImageMervBis").src=MervImageBis[Num]
    document.getElementById("Annonce").innerhtml=username + "....1"
-alert(Num + "Placer pour blan ere")
+
+
+
+
+}
+function Erer(Num) { 
+  alert(Num + "Placer pour blan ere")
   if(Num<7) {
     document.getElementById("Ere").innerhtml="Les nains"
     document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png"
@@ -459,16 +462,16 @@ alert(Num + "Placer pour blan ere")
     document.getElementById("Ere").innerhtml="Le Pouvoir de la Musique"
     document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/9/94/Gr15flag.png/80px-Gr15flag.png"
   }
-
-
-
 }
+  
+  
 function Test() {
       Fichier="Data/" + document.getElementById("ListeUne").value +".txt"
      // alert("Fichier")
       document.getElementById("frmFile").src = Fichier
       Num=document.getElementById("ListeUne").selectedIndex
-
+alert(Num)
+      function Erer(Num)
       Placer(Num)
 
 
