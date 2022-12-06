@@ -310,7 +310,7 @@ Num=document.getElementById("Liste2").value
    //    }
 function Imager() {
   Num=document.getElementById("ListeUne").selectedIndex
-  alert("DEBUT de placer image en place " + Num)
+//  alert("DEBUT de placer image en place " + Num)
   MervImage = [];
   MervImageBis = [];
   MervImage[0] = "https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png";
@@ -392,105 +392,12 @@ function Imager() {
     MervImage[35]= "https://fr.wiki.elvenar.com/images/d/db/GR15_AW1_main.png"
      MervImageBis[36] ="Data/Taverne_des_Explorateurs.png"
     MervImage[36]= "https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png"
-alert("fin de placer image en place " + Num)
+//alert("fin de placer image en place " + Num)
     document.getElementById("ImageMerv").src=MervImage[Num]
     document.getElementById("ImageMervBis").src=MervImageBis[Num]
     //document.getElementById("Annonce").innerhtml=username + "....1"
 }
-function Placer() {
-  JouerSon(1)
-  Num=document.getElementById("ListeUne").selectedIndex
-  alert("DEBUT de placer image en place " + Num)
-  const MervImage = [];
-  const MervImageBis = [];
-  MervImage[0] = "https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png";
-  MervImage[1] = "https://fr.wiki.elvenar.com/images/f/f8/Abysse_dor%C3%A9.png";
-  MervImage[2] = "https://fr.wiki.elvenar.com/images/b/b4/Excavation_sans_fin.png";
-  MervImage[3] = "https://fr.wiki.elvenar.com/images/4/4e/Aiguilles_de_la_temp%C3%AAte.png";
-  MervImage[4] = "https://fr.wiki.elvenar.com/images/thumb/8/8e/48_GreatBuild_Inner_Elves_01_cropped.png/800px-48_GreatBuild_Inner_Elves_01_cropped.png";
-  MervImage[5] = "https://fr.wiki.elvenar.com/images/thumb/7/75/48_GreatBuild_Inner_Elves_02_cropped.png/800px-48_GreatBuild_Inner_Elves_02_cropped.png";
-  MervImage[6] = "https://fr.wiki.elvenar.com/images/thumb/8/81/47_Greatbuilding_Elves_Crystaltree_01_cropped.png/700px-47_Greatbuilding_Elves_Crystaltree_01_cropped.png";
-  MervImage[7] = "https://fr.wiki.elvenar.com/images/thumb/b/be/47_Greatbuilding_Elves_Innercity_Crystaltree_06_cropped.png/695px-47_Greatbuilding_Elves_Innercity_Crystaltree_06_cropped.png";
-  MervImage[8] = "https://fr.wiki.elvenar.com/images/9/96/Tr%C3%B4ne_des_Hauts_Hommes.png";
-  MervImage[9] = "https://fr.wiki.elvenar.com/images/thumb/1/1f/D_greatbuilding_dwarves_military_02_cropped.png/681px-D_greatbuilding_dwarves_military_02_cropped.png";
-  MervImage[10] = "https://fr.wiki.elvenar.com/images/1/1d/D_greatbuilding_dwarves_goods_01_cropped.png";
-  MervImage[11] = "https://fr.wiki.elvenar.com/images/6/66/F_AncientWonder_Supplies_Inner_L2_cropped.png";
-  MervImage[12] = "https://fr.wiki.elvenar.com/images/9/9c/F_AncientWonder_Trader_InnerCity_L2_cropped.png";
-  MervImage[13] = "https://fr.wiki.elvenar.com/images/f/f0/B_Orcs_AW2_1_0003.png";
-  MervImage[14] = "https://fr.wiki.elvenar.com/images/9/9a/B_Woodelves_AW1.png";
-  MervImage[15] = "https://fr.wiki.elvenar.com/images/f/f0/B_Orcs_AW2_1_0003.png";
-  MervImage[16] = "https://fr.wiki.elvenar.com/images/8/89/B_Woodelves_AW2.png";
-  MervImage[17] = "https://fr.wiki.elvenar.com/images/6/61/B_gr5_aw1.png";
-  MervImage[18] = "https://fr.wiki.elvenar.com/images/7/7a/B_gr5_aw2.png";
-  MervImage[19] = "https://fr.wiki.elvenar.com/images/3/37/0009_B_Gr6_AW1_1.png";
-  MervImage[20] = "https://fr.wiki.elvenar.com/images/d/de/0008_B_Gr6_AW2_1.png";
 
-
-  MervImageBis[0] ="Data/Tome_des_mysteres.png"
-  MervImageBis[1] ="Data/Abysse_dore.png"
-  MervImageBis[2] ="Data/Excavation_sans_fin.png"
-  MervImageBis[3] ="Data/Aiguilles_de_la_tempete.png"
-  MervImageBis[4] ="Data/Monastere_martial_le_sanctuaire.png"
-  MervImageBis[5] ="Data/Monastere_martial_le_sanctuaire.png"
-  MervImageBis[6] ="Data/Phare_de_cristal_Tour_du_clocher.png"
-  MervImageBis[7] ="Data/Phare_de_cristal_Tour_du_clocher.png"
-  MervImageBis[8] ="Data/Trones_des_hauts_hommes.png"
-  MervImageBis[9] ="Data/Rempart_nain.png"
-  MervImageBis[10] ="Data/Coeur_de_la_montagne.png"
-  MervImageBis[11] ="Data/Tours_de_la_prosperite.png"
-  MervImageBis[12] ="Data/Guilde_du_marchand_prospere.png"
-  MervImageBis[13] ="Data/Forge_des_heros.png"
-  MervImageBis[14] ="Data/Ambassade_d_enar.png"
-  MervImageBis[15] ="Data/Sanctuaire_des_champignons_astucieux.png"
-  MervImageBis[16] ="Data/Academie_volante.png"
-  MervImageBis[17] ="Data/Labyrinthe_de_la_matiere_noire.png"
-  MervImageBis[18] ="Data/Abbaye_du_dragon.png"
-  MervImageBis[19] ="Data/Temple_des_crapauds.png"
-  MervImageBis[20] ="Data/Centre_d_echange_d_Elvenar.png"
-
-  MervImage[21] = "https://fr.wiki.elvenar.com/images/thumb/6/6d/B_Gr7_AW1_1_0009.png/714px-B_Gr7_AW1_1_0009.png";
-  MervImage[22] = "https://fr.wiki.elvenar.com/images/7/7f/B_Gr7_AW2_1_0010.png";
-  MervImage[23] = "https://fr.wiki.elvenar.com/images/e/e2/Construct_AW1_main.png";
-  MervImage[24] = "https://fr.wiki.elvenar.com/images/1/11/Construct_AW2_main.png";
-  MervImage[25] = "https://fr.wiki.elvenar.com/images/3/37/GR10_AW1_3x6.png";
-  MervImage[26] = "https://fr.wiki.elvenar.com/images/a/a8/GR10_AW2_7x3.png";
-  MervImage[27] = "https://fr.wiki.elvenar.com/images/0/0f/GR11_AW1_6x4.png";
-  MervImage[28] = "https://fr.wiki.elvenar.com/images/5/54/GR11_AW2_4x5.png";
-  MervImage[29] = "https://fr.wiki.elvenar.com/images/e/e5/GR12_AW1_main.png";
-   MervImage[30]= "https://fr.wiki.elvenar.com/images/9/92/GR12_AW2_main.png";
-
-    MervImageBis[21] ="Data/Tours_du_crepuscule.png"
-    MervImageBis[22] ="Data/Fontaines_triomphantes.png"
-    MervImageBis[23] ="Data/D111_a_Voyage_temporel.png"
-    MervImageBis[24] ="Data/D222_z_Simia_Sapiens.png"
-    MervImageBis[25] ="Data/Vortex_de_stockage.png"
-    MervImageBis[26] ="Data/Fontaine_de_jouvence_thermale.png"
-    MervImageBis[27] ="Data/Bibliotheque_du_donjon.png"
-    MervImageBis[28] ="Data/Arene_de_tournois.png"
-    MervImageBis[29] ="Data/Arche_dragonique.png"
-     MervImageBis[30]="Data/Oracle_du_destin.png"
-
-    MervImageBis[31] ="Data/Autel_des_Champignons.png"
-    MervImage[31]= "https://fr.wiki.elvenar.com/images/0/0b/B_Ch18_AW1_1.png"
-    MervImageBis[32] ="Data/Temple_des_Esprits.png"
-    MervImage[32]= "https://fr.wiki.elvenar.com/images/3/3a/B_Ch18_AW2_1.png"
-    MervImageBis[33] ="Data/Tour_du_sceau_Vallorien.png"
-    MervImage[33]= "https://fr.wiki.elvenar.com/images/2/27/GR14_AW1_main.png"
-     MervImageBis[34] ="Data/Arbre_d_illumination.png"
-    MervImage[34]= "https://fr.wiki.elvenar.com/images/1/12/GR14_AW2_main.png"
-    MervImageBis[35] ="Data/Lieu_de_repos_ancestral.png"
-    MervImage[35]= "https://fr.wiki.elvenar.com/images/d/db/GR15_AW1_main.png"
-     MervImageBis[36] ="Data/Taverne_des_Explorateurs.png"
-    MervImage[36]= "https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png"
-alert("fin de placer image en place " + Num)
-    document.getElementById("ImageMerv").src=MervImage[Num]
-    document.getElementById("ImageMervBis").src=MervImageBis[Num]
-    //document.getElementById("Annonce").innerhtml=username + "....1"
-
-
-
-
-}
 function Erer(Num) { 
  // alert(Num + "Placer pour blan ere")
   if(Num<7) {
@@ -562,7 +469,7 @@ function Test() {
       Erer(Num)
       Fichier="Data/" + document.getElementById("ListeUne").value +".txt"
       document.getElementById("frmFile").src = Fichier  
-  alert("Test envoi placer  " + Num)
+ // alert("Test envoi placer  " + Num)
   //document.getElementById("ImageMerv").src="https://fr.wiki.elvenar.com/images/8/89/B_Woodelves_AW2.png";
   //  document.getElementById("ImageMervBis").src="Data/Guilde_du_marchand_prospere.png"
       Imager()
