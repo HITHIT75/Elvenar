@@ -194,15 +194,20 @@ function CalculInitial(){
 //
 // }
 function LoadFile2() {
-    $.ajax({
-    url:'Data/Abbaye_du_dragon.txt',
-    success: function (data){
-      alert(data)
-      //parse your data here
-      //you can split into lines using data.split('\n') 
-      //an use regex functions to effectively parse it
+alert("Load2") 
+  var url = Data/Abbaye_du_dragon.txt";
+
+var jsonFile = new XMLHttpRequest();
+    jsonFile.open("GET",url,true);
+    jsonFile.send();
+
+    jsonFile.onreadystatechange = function() {
+        if (jsonFile.readyState== 4 && jsonFile.status == 200) {
+           alert(jsonFile.responseText)
+        }
     }
-  });
+  
+
 }
 function LoadFile() {
 Num=document.getElementById("Liste2").value
