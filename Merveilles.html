@@ -193,7 +193,17 @@ function CalculInitial(){
 //
 //
 // }
-
+function LoadFile2() {
+    $.ajax({
+    url:'Data/Abbaye_du_dragon.txt',
+    success: function (data){
+      alert(data)
+      //parse your data here
+      //you can split into lines using data.split('\n') 
+      //an use regex functions to effectively parse it
+    }
+  });
+}
 function LoadFile() {
 Num=document.getElementById("Liste2").value
 //alert(Num+ "!")
@@ -720,7 +730,7 @@ LoadFile()
       <tr>
         <td colspan="2"   height="3%;">Annonce&nbspavant&nbspupgrade</td>
         <td colspan="14" id="Annonce" >........</td>
-        <td colspan="2"  ><button type="button" onclick="beneficier()">Copier</button></td>
+        <td colspan="2"  ><button type="button" onclick="LoadFile2()">Copier</button></td>
       </tr>
 
       <tr>
