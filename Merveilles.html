@@ -205,7 +205,9 @@ Num=document.getElementById("ListeUne").value
       data = [];
       for (var i = 0; i < arrLines.length; i++) {
           var curLine = arrLines[i];
-        
+          for (var i = 0; i < 10; i++) {
+            data [i]=""
+          }
           data = curLine.split("|");
         
         if (Num==data [0]) {
@@ -229,10 +231,10 @@ Num=document.getElementById("ListeUne").value
              Icone6="<img   src='" + data [6] + "'>"
            }          
            if (data [7] !="") {
-             Icone5="<img   src='" + data [7] + "'>"
+             Icone5="<img   src='" + data [8] + "'>"
            }
            if (data [8] !="") {
-             Icone6="<img   src='" + data [8] + "'>"
+             Icone6="<img   src='" + data [9] + "'>"
            }    
 
 //           document.getElementById("Benef1").innerHTML=Icone1+Icone2+data [1]
