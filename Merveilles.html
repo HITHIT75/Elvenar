@@ -209,7 +209,37 @@ Num=document.getElementById("ListeUne").value
           data = curLine.split("/");
         
         if (Num==data [0]) {
-          alert(Num + "trouvé");
+           Icone1=""
+           Icone2=""
+           Icone5=""
+           Icone6=""
+           Icone9=""
+           Icone10=""
+
+           if (data [2] !="") {
+             Icone1="<img   src='" + data [2] + "'>"
+           }
+           if (data [3] !="") {
+             Icone2="<img   src='" + data [3] + "'>"
+           }
+           if (data [5] !="") {
+             Icone5="<img   src='" + data [5] + "'>"
+           }
+           if (data [6] !="") {
+             Icone6="<img   src='" + data [6] + "'>"
+           }          
+           if (data [7] !="") {
+             Icone5="<img   src='" + data [7] + "'>"
+           }
+           if (data [8] !="") {
+             Icone6="<img   src='" + data [8] + "'>"
+           }    
+
+           document.getElementById("Benef1").innerHTML=Icone1+Icone2+data [1]
+           document.getElementById("Benef2").innerHTML=Icone5+Icone6+data [4]
+           document.getElementById("Benef3").innerHTML=Icone8+Icone9+data [7]      
+          
+        // alert(Num + "trouvé");
         }
   } 
 }
