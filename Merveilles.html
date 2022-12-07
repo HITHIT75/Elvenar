@@ -195,10 +195,23 @@ function CalculInitial(){
 // }
 function LoadFile2() {
 Num=document.getElementById("ListeUne").value 
-alert(Num) 
-
-  
-
+      var oFrame = document.getElementById("frmFile2");
+      var strRawContents = oFrame.contentWindow.document.body.childNodes[0].innerHTML;
+     // alert(strRawContents)
+      while (strRawContents.indexOf("\r") >= 0)
+          strRawContents = strRawContents.replace("\r", "");
+      var arrLines = strRawContents.split("\n");
+    // alert("File " + oFrame.src + " has " + arrLines.length + " lines");
+      data = [];
+      for (var i = 0; i < arrLines.length; i++) {
+          var curLine = arrLines[i];
+        
+          data = curLine.split("/");
+        
+        if (Num==data [0]) {
+          alert(Num + "trouvé");
+        }
+  } 
 }
 function LoadFile() {
 Num=document.getElementById("Liste2").value
