@@ -235,11 +235,11 @@ Num=document.getElementById("ListeUne").value
              Icone6="<img   src='" + data [8] + "'>"
            }    
 
-           document.getElementById("Benef1").innerHTML=Icone1+Icone2+data [1]
-           document.getElementById("Benef2").innerHTML=Icone5+Icone6+data [4]
-           document.getElementById("Benef3").innerHTML=Icone8+Icone9+data [7]      
+//           document.getElementById("Benef1").innerHTML=Icone1+Icone2+data [1]
+//           document.getElementById("Benef2").innerHTML=Icone5+Icone6+data [4]
+//           document.getElementById("Benef3").innerHTML=Icone8+Icone9+data [7]      
           
-        // alert(Num + "trouvé");
+         alert(Num + Icone1+Icone2+data [1]);
         }
   } 
 }
@@ -553,9 +553,9 @@ LoadFile()
     <td colspan="14">
 
 <form action="">
-  <select size="1" id="ListeUne" onchange="Test()" style="font-size:22px;left:0;">
+  <select size="1" id="ListeUne" onchange="Test()" style="font-size:20px;left:0;">
 
-  <option style="font-size:18px;">Tome_des_mysteres</option>
+  <option>Tome_des_mysteres</option>
   <option>Abysse_dore</option>
   <option>Excavation_sans_fin</option>
   <option>Aiguilles_de_la_tempete</option>
