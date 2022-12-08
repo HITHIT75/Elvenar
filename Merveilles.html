@@ -200,23 +200,20 @@ LoadFile()
 function LoadFile2() {
 Num=document.getElementById("ListeUne").value 
   alert(Num)
-     //var oFrame = document.getElementById("frmFile2");
-   //  var strRawContents = oFrame.contentWindow.document.body.childNodes[0].innerHTML;
-     // alert(strRawContents)
-   //   while (strRawContents.indexOf("\r") >= 0)
-  //        strRawContents = strRawContents.replace("\r", "");
- //     var arrLines = strRawContents.split("\n");
-    // alert("File " + oFrame.src + " has " + arrLines.length + " lines");
+     var oFrame = document.getElementById("frmFile2");
+     var strRawContents = oFrame.contentWindow.document.body.childNodes[0].innerHTML;
+     alert(strRawContents)
+      while (strRawContents.indexOf("\r") >= 0)
+          strRawContents = strRawContents.replace("\r", "");
+      var arrLines = strRawContents.split("\n");
+     alert("File " + oFrame.src + " has " + arrLines.length + " lines");
       
- //     for (var i = 0; i < arrLines.length; i++) {
- //         var curLine = arrLines[i];
-        //  for (var i = 0; i < 10; i++) {
-        //    data [i]=""
-        //  }
- //       data = [];
-   //       data = curLine.split("|");
+      for (var i = 0; i < arrLines.length; i++) {
+         var curLine = arrLines[i];
+        data = [];
+          data = curLine.split("|");
         
- //       if (Num==data [0]) {
+        if (Num==data [0]) {
  //          Icone1=""
  //          Icone2=""
   //         Icone5=""
@@ -247,9 +244,9 @@ Num=document.getElementById("ListeUne").value
 //           document.getElementById("Benef2").innerHTML=Icone5+Icone6+data [4]
 //           document.getElementById("Benef3").innerHTML=Icone8+Icone9+data [7]      
           
-   //      alert(Num + Icone1+Icone2+data [1] + Icone5+Icone6+data [4] + Icone8+Icone9+data [7]);
-     //   }
- // } 
+         alert(Num + Icone1+Icone2+data [1] + Icone5+Icone6+data [4] + Icone8+Icone9+data [7]);
+        }
+  } 
 }
 function LoadFile() {
 Num=document.getElementById("Liste2").value
@@ -810,7 +807,7 @@ LoadFile()
       </tr>
       <tr>
         <td colspan="2"  >Annonce&nbspavant&nbspupgrade</td>
-        <td colspan="14 style="border-left: solid;border-right: solid;border-bottom: solid;background-color: #ffffff;height="3%;" id="Annonce" >........</td>
+        <td colspan="14 style="border-left: solid;border-right: solid;border-bottom: solid;background-color: #ffffff;height=3%;" id="Annonce" >........</td>
         <td colspan="2"  ><button type="button" onclick="LoadFile2()">Copier</button></td>
       </tr>
 
