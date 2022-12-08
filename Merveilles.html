@@ -113,9 +113,7 @@ th {
 </style>
 <script type="text/javascript">
 function CalculInitial(){
-  document.getElementsByClassName('colo8')[0].style.visibility = 'hidden'
-  document.getElementsByClassName('colo8')[1].style.visibility = 'hidden'
-  document.getElementsByClassName('colo8')[2].style.visibility = 'hidden'  
+
   
       //alert(document.getElementById("Ere").innerText)
         //    document.getElementById("Annonce").innerhtml= "????"
@@ -280,7 +278,16 @@ Num=document.getElementById("Liste2").value
           document.getElementById("Ru7").innerHTML=data [14];
          document.getElementById("SA8").innerHTML=data [15];
          document.getElementById("Ru8").innerHTML=data [16];
-
+          if (data [15]<1) {
+            document.getElementsByClassName('colo8')[0].style.visibility = 'hidden'
+            document.getElementsByClassName('colo8')[1].style.visibility = 'hidden'
+            document.getElementsByClassName('colo8')[2].style.visibility = 'hidden'             
+          }
+          if (data [13]<1) {
+            document.getElementsByClassName('colo7')[0].style.visibility = 'hidden'
+            document.getElementsByClassName('colo7')[1].style.visibility = 'hidden'
+            document.getElementsByClassName('colo7')[2].style.visibility = 'hidden'             
+          }
 
          // alert("Line #" + (i + 1) + " is: '" + curLine + "'");
         }
@@ -639,8 +646,8 @@ LoadFile()
         <th><img height="20px;"  src="Data/Ancient_Knowledge.png"></th>
         <th><img  height="20px;" src="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"></th>
         <th><img height="20px;"  src="Data/Ancient_Knowledge.png"></th>
-        <th><img  height="20px;" src="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"></th>
-        <th><img height="20px;"  src="Data/Ancient_Knowledge.png"></th>
+        <th><img  height="20px;" class="colo7" src="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"></th>
+        <th><img height="20px;" class="colo7"  src="Data/Ancient_Knowledge.png"></th>
         <th><img height="20px;"  class="colo8"   src="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"></th>
         <th><img height="20px;" class="colo8"  src="Data/Ancient_Knowledge.png"></th>
 
@@ -711,8 +718,8 @@ LoadFile()
         <td id="Ru5">  </td>
         <td id="SA6" style="border-left: solid;">  </td>
         <td id="Ru6">  </td>
-        <td id="SA7" style="border-left: solid;">  </td>
-        <td id="Ru7">  </td>
+        <td id="SA7 class="colo7"" style="border-left: solid;">  </td>
+        <td id="Ru7" class="colo7">  </td>
         <td id="SA8" class="colo8"  style="border-left: solid;">  </td>
         <td id="Ru8" class="colo8"   style="border-right: solid;">  </td>
       </tr>
@@ -744,7 +751,7 @@ LoadFile()
               <div><img  height="30px;" src="Image/coffre_ouvert.png">
             </div>
           </td>
-        <td style="border-left: solid;" colspan="2">
+        <td style="border-left: solid;" colspan="2" class="colo7">
               <div><img  height="30px;" src="Image/coffre_ouvert.png">
             </div>
           </td>
@@ -791,7 +798,7 @@ LoadFile()
                <label for="horns">Pris</label>
             </div>
           </td>
-        <td style="border-left: solid;border-bottom: solid;" colspan="2">
+        <td style="border-left: solid;border-bottom: solid;" class="colo7" colspan="2">
               <div>
                 <input type="checkbox" id="Pris7" onclick="Annoncer()" name="Pris">
                <label for="horns">Pris</label>
