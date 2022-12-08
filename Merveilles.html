@@ -113,9 +113,9 @@ th {
 </style>
 <script type="text/javascript">
 function CalculInitial(){
-   box = document.getElementsByClassName('colo8'); //[0]
-  box.style.visibility = 'hidden';
-  
+  document.getElementsByClassName('colo8')[0].style.visibility = 'hidden'
+  document.getElementsByClassName('colo8')[1].style.visibility = 'hidden'
+  document.getElementsByClassName('colo8')[2].style.visibility = 'hidden'  
   
       //alert(document.getElementById("Ere").innerText)
         //    document.getElementById("Annonce").innerhtml= "????"
@@ -199,56 +199,57 @@ LoadFile()
 // }
 function LoadFile2() {
 Num=document.getElementById("ListeUne").value 
-      var oFrame = document.getElementById("frmFile2");
-      var strRawContents = oFrame.contentWindow.document.body.childNodes[0].innerHTML;
+  alert(Num)
+     //var oFrame = document.getElementById("frmFile2");
+   //  var strRawContents = oFrame.contentWindow.document.body.childNodes[0].innerHTML;
      // alert(strRawContents)
-      while (strRawContents.indexOf("\r") >= 0)
-          strRawContents = strRawContents.replace("\r", "");
-      var arrLines = strRawContents.split("\n");
+   //   while (strRawContents.indexOf("\r") >= 0)
+  //        strRawContents = strRawContents.replace("\r", "");
+ //     var arrLines = strRawContents.split("\n");
     // alert("File " + oFrame.src + " has " + arrLines.length + " lines");
       
-      for (var i = 0; i < arrLines.length; i++) {
-          var curLine = arrLines[i];
+ //     for (var i = 0; i < arrLines.length; i++) {
+ //         var curLine = arrLines[i];
         //  for (var i = 0; i < 10; i++) {
         //    data [i]=""
         //  }
-        data = [];
-          data = curLine.split("|");
+ //       data = [];
+   //       data = curLine.split("|");
         
-        if (Num==data [0]) {
-           Icone1=""
-           Icone2=""
-           Icone5=""
-           Icone6=""
-           Icone9=""
-           Icone10=""
+ //       if (Num==data [0]) {
+ //          Icone1=""
+ //          Icone2=""
+  //         Icone5=""
+ //          Icone6=""
+  //         Icone9=""
+  //         Icone10=""
 
-           if (data [2] !="") {
-             Icone1="<img   src='" + data [2] + "'>"
-           }
-           if (data [3] !="") {
-             Icone2="<img   src='" + data [3] + "'>"
-           }
-           if (data [5] !="") {
-             Icone5="<img   src='" + data [5] + "'>"
-           }
-           if (data [6] !="") {
-             Icone6="<img   src='" + data [6] + "'>"
-           }          
-           if (data [7] !="") {
-             Icone5="<img   src='" + data [8] + "'>"
-           }
-           if (data [8] !="") {
-             Icone6="<img   src='" + data [9] + "'>"
-           }    
+  //         if (data [2] !="") {
+  //           Icone1="<img   src='" + data [2] + "'>"
+  //         }
+   //        if (data [3] !="") {
+   //          Icone2="<img   src='" + data [3] + "'>"
+   //        }
+  //         if (data [5] !="") {
+   //          Icone5="<img   src='" + data [5] + "'>"
+   //        }
+   //        if (data [6] !="") {
+   //          Icone6="<img   src='" + data [6] + "'>"
+   //        }          
+    //       if (data [7] !="") {
+    //         Icone5="<img   src='" + data [8] + "'>"
+     //      }
+     //      if (data [8] !="") {
+    //         Icone6="<img   src='" + data [9] + "'>"
+    //       }    
 
 //           document.getElementById("Benef1").innerHTML=Icone1+Icone2+data [1]
 //           document.getElementById("Benef2").innerHTML=Icone5+Icone6+data [4]
 //           document.getElementById("Benef3").innerHTML=Icone8+Icone9+data [7]      
           
-         alert(Num + Icone1+Icone2+data [1] + Icone5+Icone6+data [4] + Icone8+Icone9+data [7]);
-        }
-  } 
+   //      alert(Num + Icone1+Icone2+data [1] + Icone5+Icone6+data [4] + Icone8+Icone9+data [7]);
+     //   }
+ // } 
 }
 function LoadFile() {
 Num=document.getElementById("Liste2").value
@@ -734,7 +735,7 @@ LoadFile()
               <div><img  height="30px;" src="Image/coffre_ouvert.png">
             </div>
           </td>
-        <td style="border-left: solid;border-bottom: solid;"  colspan="2">
+        <td style="border-left: solid;"  colspan="2">
               <div><img  height="30px;" src="Image/coffre_ouvert.png">
             </div>
           </td>
