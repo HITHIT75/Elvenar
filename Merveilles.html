@@ -197,20 +197,20 @@ LoadFile()
 // }
 function LoadFile2() {
 Num=document.getElementById("ListeUne").value 
-  alert(Num)
+//  alert(Num)
      var oFrame = document.getElementById("frmFile2");
      var strRawContents = oFrame.contentWindow.document.body.childNodes[0].innerHTML;
-     alert(strRawContents)
+//     alert(strRawContents)
       while (strRawContents.indexOf("\r") >= 0)
           strRawContents = strRawContents.replace("\r", "");
       var arrLines = strRawContents.split("\n");
-     alert("File " + oFrame.src + " has " + arrLines.length + " lines");
+//     alert("File " + oFrame.src + " has " + arrLines.length + " lines");
       
       for (var i = 0; i < arrLines.length; i++) {
          var curLine = arrLines[i];
         data = [];
           data = curLine.split("|");
-        
+        alert(data [0])
         if (Num==data [0]) {
  //          Icone1=""
  //          Icone2=""
