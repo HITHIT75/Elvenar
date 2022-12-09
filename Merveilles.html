@@ -281,7 +281,9 @@ Num=document.getElementById("Liste2").value
           document.getElementById("Ru7").innerHTML=data [14];
          document.getElementById("SA8").innerHTML=data [15];
          document.getElementById("Ru8").innerHTML=data [16];
-          if (data [15]==="") {
+          alert( ">" + data [15] + "<"
+                document.getElementsByClassName('colo8')[0].style.visibility = 'hidden'
+          if (data [15]=="") {
             document.getElementsByClassName('colo8')[0].style.visibility = 'hidden'
             document.getElementsByClassName('colo8')[1].style.visibility = 'hidden'
             document.getElementsByClassName('colo8')[2].style.visibility = 'hidden'             
