@@ -140,32 +140,32 @@ LoadFile()
     //
 
       }
-// function Annoncer() {
-//
-//   checkBox1 = document.getElementById("Pris1").checked
-//   checkBox2 = document.getElementById("Pris2").checked
-//   checkBox3 = document.getElementById("Pris3").checked
-//   checkBox4 = document.getElementById("Pris4").checked
-//   checkBox5 = document.getElementById("Pris5").checked
-//   checkBox6 = document.getElementById("Pris6").checked
-//   checkBox7 = document.getElementById("Pris7").checked
-//   checkBox8 = document.getElementById("Pris8").checked
-//
-//   Recompense1=document.getElementById("SA1").innerHTML
-//   Recompense2=document.getElementById("SA2").innerHTML
-//   Recompense3=document.getElementById("SA3").innerHTML
-//   Recompense4=document.getElementById("SA4").innerHTML
-//   Recompense5=document.getElementById("SA5").innerHTML
-//   Recompense6=document.getElementById("SA6").innerHTML
-//   Recompense7=document.getElementById("SA7").innerHTML
-//   Recompense8=document.getElementById("SA8").innerHTML
-//   compteur=0
-//   Chaine =""
-//     if ((checkBox1 != true) && (Recompense1>0)){
-//   //    alert(document.getElementById("SA1").innerHTML)
-//       Chaine = Chaine + Recompense1
-//       compteur=compteur+1
-//     }
+ function Annoncer() {
+
+   checkBox1 = document.getElementById("Pris1").checked
+   checkBox2 = document.getElementById("Pris2").checked
+   checkBox3 = document.getElementById("Pris3").checked
+   checkBox4 = document.getElementById("Pris4").checked
+   checkBox5 = document.getElementById("Pris5").checked
+   checkBox6 = document.getElementById("Pris6").checked
+   checkBox7 = document.getElementById("Pris7").checked
+   checkBox8 = document.getElementById("Pris8").checked
+
+   Recompense1=document.getElementById("SA1").innerHTML*1
+   Recompense2=document.getElementById("SA2").innerHTML*1
+   Recompense3=document.getElementById("SA3").innerHTML*1
+   Recompense4=document.getElementById("SA4").innerHTML*1
+   Recompense5=document.getElementById("SA5").innerHTML*1
+   Recompense6=document.getElementById("SA6").innerHTML*1
+   Recompense7=document.getElementById("SA7").innerHTML*1
+   Recompense8=document.getElementById("SA8").innerHTML*1
+   compteur=0
+   Chaine =""
+     if ((checkBox1 != true) && (Recompense1>0)){
+       alert(document.getElementById("SA1").innerHTML)
+       Chaine = Chaine + Recompense1
+       compteur=compteur+1
+     }
 //     if ((checkBox2 != true) && (Recompense2>0)){
 //       Chaine = Chaine + "  " + Recompense2
 //       compteur=compteur+1
@@ -184,15 +184,15 @@ LoadFile()
 // //if (checkBox4 == false){
 // //  Chaine = Chaine + "  " + document.getElementById("SA4").innerHTML
 // //}
-//   if(compteur>1) {
-//     Pluriel="s"
-//   }
-//   else {
-//     Pluriel="s"
-//   }
-//   Chaine = "Reste " + compteur + " coffre" + Pluriel ": " + Chaine
+   if(compteur>1) {
+     Pluriel="s"
+   }
+   else {
+     Pluriel="s"
+   }
+   Chaine = "Reste " + compteur + " coffre" + Pluriel ": " + Chaine
 //   //Chaine = document.getElementById("SA1").innerHTML + document.getElementById("SA2").innerHTML + document.getElementById("SA3").innerHTML
-// document.getElementById("Annonce").innerHTML = Chaine +"!!!"
+ document.getElementById("Annonce").innerHTML = Chaine +"!!!"
 //
 //
 // }
