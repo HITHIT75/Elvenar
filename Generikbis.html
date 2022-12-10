@@ -59,7 +59,7 @@ var seconds = Math.floor((distance % (1000 * 60)) / 1000);
  @keyframes Pulp {
    0% {top: 0%;opacity: 0;width: 0%;left:50%;}
    50% {top: 40%;opacity: 0.5;width: 15%;left:37%;}
-   100% {top: 33%;opacity: 1;width: 30%;left:25%;}
+   100% {top: 33%;opacity: 1;width: 37%;left:25%;}
  }
  @keyframes Pulp3 {
    0% {}
@@ -302,7 +302,18 @@ var seconds = Math.floor((distance % (1000 * 60)) / 1000);
   animation-duration: 2s;
  animation-fill-mode: forwards;
 }
-
+#ImgLettre{
+  height: 0%;
+  animation-delay: 2s;
+  animation-name: ImgLettre;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+ animation-fill-mode: forwards;
+}
+@keyframes ImgLettre  {
+  0%   {height: 0%;}
+  100% {height: 7%;}
+}
 
 </style>
 
@@ -314,6 +325,24 @@ var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 <!-- </div> -->
 <span id="Apres">©</span>
 <span id="Avant">®</span>
+<br>
+<br>
+<br><br>
+<br>
+<br><br>
+<br>
+<br>
+<div style="margin-top:4.5%;">
+<img  id="ImgLettre" style="height:0%;left:32.3%;position:absolute;" src="Image/ImgGenerikLettreL.png"    >
+<img  id="ImgLettre" style="height:0%;;left:35%;position:absolute;"  src="Image/ImgGenerikLettree.png"    >
+<img  id="ImgLettre" style="height:0%;;left:38.3%;position:absolute;"  src="Image/ImgGenerikLettreP.png"    >
+<img  id="ImgLettre" style="height:0%;;left:41%;position:absolute;"  src="Image/ImgGenerikLettreo.png"    >
+<img  id="ImgLettre" style="height:0%;;left:43.5%;position:absolute;"  src="Image/ImgGenerikLettrer.png"    >
+<img  id="ImgLettre" style="height:0%;;left:45.5%;position:absolute;" src="Image/ImgGenerikLettret.png"    >
+<img  id="ImgLettre"  style="height:0%;;left:47.5%;position:absolute;" src="Image/ImgGenerikLettrea.png"    >
+<img  id="ImgLettre"  style="height:0%;;left:50.5%;position:absolute;" src="Image/ImgGenerikLettrei.png"    >
+<img  id="ImgLettre"  style="height:0%;;left:52%;position:absolute;" src="Image/ImgGenerikLettrell.png"    >
+</div>
 
 <div  align="center;" id="Scen3" >
 Conquise par des troupes d’élite,<br>
