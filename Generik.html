@@ -44,20 +44,19 @@ var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 </head>
 <style>
  html { overflow-y: hidden; overflow-x: hidden; }
- body {
-   font-family: 'Germania One', cursive;
 
+  body {
+   font-family: 'Germania One', cursive;
+ text.background:transparent;
+   background:transparent;
    align:center;
   text-align: center;
-   background-size: cover;
-   background-attachment:fixed;
-  background : transparent;
-   background-image:url(Image/Ecran2.png)
+
  }
-@keyframes Pulp {
+ @keyframes Pulp {
    0% {top: 0%;opacity: 0;width: 0%;left:50%;}
    50% {top: 40%;opacity: 0.5;width: 15%;left:37%;}
-   100% {top: 33%;opacity: 1;width: 37%;left:25%;}
+   100% {top: 23%;opacity: 1;width: 37%;left:25%;}
  }
  @keyframes Pulp3 {
    0% {}
@@ -126,7 +125,7 @@ var seconds = Math.floor((distance % (1000 * 60)) / 1000);
   text-align: center;
   position:fixed;
 right:0;
-bottom:-5%;
+bottom:15%;
 margin:0;
 padding:0;
 
@@ -149,13 +148,13 @@ animation-fill-mode: forwards;
 }
 @keyframes RondVert {
   0%   {width: 0%;margin-top: 20%; transform: rotate(0deg);}
-  40% {width: 100%;margin-top: 80%;transform: rotate(720deg);;}
+  40% {width: 100%;margin-top: 75%;transform: rotate(720deg);;}
   65% {width: 100%;margin-top: 60%;transform: rotate(720deg); }
-  75% {width: 100%;margin-top: 80%;transform: rotate(720deg);}
+  75% {width: 100%;margin-top: 75%;transform: rotate(720deg);}
   85% {width: 100%;margin-top: 60%; transform: rotate(720deg);}
-  90% {width: 100%;margin-top: 80%;transform: rotate(720deg); }
+  90% {width: 100%;margin-top: 75%;transform: rotate(720deg); }
   95% {width: 100%;margin-top: 70%; transform: rotate(720deg);}
-  100% {width: 100%;margin-top: 80%; transform: rotate(720deg);}
+  100% {width: 100%;margin-top: 75%; transform: rotate(720deg);}
 }
 
 
@@ -223,7 +222,7 @@ animation-fill-mode: forwards;
 }
 
 #ImgLettre1{
-  top:28%;
+  top:18%;
   position:absolute;
   height: 7%;
   opacity: 0;
@@ -234,7 +233,7 @@ animation-fill-mode: forwards;
  animation-fill-mode: forwards;
 }
 #ImgLettre2{
-  top:28%;
+  top:18%;
   position:absolute;
   height: 7%;
   opacity: 0;
@@ -245,7 +244,7 @@ animation-fill-mode: forwards;
  animation-fill-mode: forwards;
 }
 #ImgLettre3{
-  top:28%;
+  top:18%;
   position:absolute;
   height: 7%;
   opacity: 0;
@@ -256,7 +255,7 @@ animation-fill-mode: forwards;
  animation-fill-mode: forwards;
 }
 #ImgLettre4{
-  top:28%;
+  top:18%;
   position:absolute;
   height: 7%;
   opacity: 0;
@@ -267,7 +266,7 @@ animation-fill-mode: forwards;
  animation-fill-mode: forwards;
 }
 #ImgLettre5{
-  top:28%;
+  top:18%;
   position:absolute;
   height: 7%;
   opacity: 0;
@@ -278,7 +277,7 @@ animation-fill-mode: forwards;
  animation-fill-mode: forwards;
 }
 #ImgLettre6{
-  top:28%;
+  top:18%;
   position:absolute;
   height: 7%;
   opacity: 0;
@@ -289,7 +288,7 @@ animation-fill-mode: forwards;
  animation-fill-mode: forwards;
 }
 #ImgLettre7{
-  top:28%;
+  top:18%;
   position:absolute;
   height: 7%;
   opacity: 0;
@@ -300,7 +299,7 @@ animation-fill-mode: forwards;
  animation-fill-mode: forwards;
 }
 #ImgLettre8{
-  top:28%;
+  top:18%;
   position:absolute;
   height: 7%;
   opacity: 0;
@@ -311,7 +310,7 @@ animation-fill-mode: forwards;
  animation-fill-mode: forwards;
 }
 #ImgLettre9{
-  top:28%;
+  top:18%;
   position:absolute;
   height: 7%;
   opacity: 0;
@@ -348,7 +347,6 @@ body {
 }
 body {
   font-family: 'Montserrat', sans-serif;
-  background: #fff;
   position: relative;
   overflow: hidden;
   font-size: 100%;
@@ -357,7 +355,7 @@ body {
 .criterion {
   font-size: 1.6rem;
   position: absolute;
-  top: 33%;
+  top: 23%;
   left: 45%;
   height: 0;
   width: 0;
@@ -571,8 +569,9 @@ body {
   -webkit-animation: particle-animation012 1s ease-in-out 3s 1 normal forwards;
           animation: particle-animation012 1s ease-in-out 3s 1 normal forwards;
 }
+
 .particle10 {
-  left: -160px;
+  left: -200px;
   opacity: 0;
   background-color: #e52217;
   -webkit-animation: particle-animation10 1s ease-in-out 3.2s 1 normal forwards;
@@ -662,6 +661,7 @@ body {
   -webkit-animation: particle-animation112 1s ease-in-out 3.2s 1 normal forwards;
           animation: particle-animation112 1s ease-in-out 3.2s 1 normal forwards;
 }
+
 .particle20 {
   left: -120px;
   opacity: 0;
@@ -753,6 +753,7 @@ body {
   -webkit-animation: particle-animation212 1s ease-in-out 3.4s 1 normal forwards;
           animation: particle-animation212 1s ease-in-out 3.4s 1 normal forwards;
 }
+
 .particle30 {
   left: -80px;
   opacity: 0;
@@ -1393,7 +1394,7 @@ body {
 }
 @-webkit-keyframes particle-animation00 {
   0% {
-    left: -140px;
+    left: -200px;
     top: 0;
     opacity: 0;
     transform: scale(1, 1);
@@ -1407,7 +1408,7 @@ body {
 }
 @keyframes particle-animation00 {
   0% {
-    left: -140px;
+    left: -200px;
     top: 0;
     opacity: 0;
     transform: scale(1, 1);
@@ -1421,7 +1422,7 @@ body {
 }
 @-webkit-keyframes particle-animation01 {
   0% {
-    left: -140px;
+    left: -200px;
     top: 0;
     opacity: 0;
     transform: scale(1, 1);
@@ -1435,7 +1436,7 @@ body {
 }
 @keyframes particle-animation01 {
   0% {
-    left: -140px;
+    left: -200px;
     top: 0;
     opacity: 0;
     transform: scale(1, 1);
@@ -5048,7 +5049,7 @@ body {
 
 
 </div>
-<div style="margin-top:4.5%;max-width:20%">
+<div style="margin-top:0%;max-width:20%">
 <img  id="ImgLettre1" style="left:32.3%;" src="Image/ImgGenerikLettreL.png"    >
 <img  id="ImgLettre2" style="left:35%;"  src="Image/ImgGenerikLettree.png"    >
 <img  id="ImgLettre3" style="left:38.3%;"  src="Image/ImgGenerikLettreP.png"    >
@@ -5059,9 +5060,7 @@ body {
 <img  id="ImgLettre8"  style="left:50.5%;" src="Image/ImgGenerikLettrei.png"    >
 <img  id="ImgLettre9"  style="left:52%;" src="Image/ImgGenerikLettrell.png"    >
 </div>
-<div id="PosiPortail">
-  <img  id="Portail"  src="Image/Chateau.gif"    >
-</div>
+
 <img  id="ImgGenerik" src="Image/ImgGenerik2.png"    >
 
 
