@@ -11,17 +11,17 @@ checkCookie()
 }
 
 
-function Chrono(Timing) {
-var countDownDate = new Date().getTime() + Timing;
-var x = setInterval(function() {
-var now = new Date().getTime();
-var distance = countDownDate - now;
-var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+//function Chrono(Timing) {
+//var countDownDate = new Date().getTime() + Timing;
+//var x = setInterval(function() {
+//var now = new Date().getTime();
+//var distance = countDownDate - now;
+//var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 //  document.getElementById("demo").innerHTML =  seconds + "s ";
 
-  if (distance < 0) {
-    clearInterval(x);
-    if (Timing=4000) {
+//  if (distance < 0) {
+//   clearInterval(x);
+ //   if (Timing=4000) {
  //      document.getElementById("Frame2").[0].style.visibility = 'hidden'
 //	document.getElementById("Contenu").style.visibility = 'visible'    
   //    if (Timing=4000) {
@@ -29,9 +29,9 @@ var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     //document.getElementById("Scen1").classList.toggle("Generik");
     //document.getElementById("Scen2").classList.toggle("Generik2");
     //window.location.href = "Index.html"
-  }
-}, 1000);
-}
+//  }
+//}, 1000);
+//}
 	
 	
 	
@@ -383,13 +383,7 @@ var seconds = Math.floor((distance % (1000 * 60)) / 1000);
   <img  id="Portail"  src="Image/Chateau.gif"    >
 </div>
 </div>
-<script src="http://code.jquery.com/jquery.min.js"></script>
-     <script> $(document).ready(function(){
-		$(".bar").fadeOut(5000, function(){     
-		$("#contenu".show();
-			});
-			})	     
-	</script>
+
 
 
 
