@@ -294,6 +294,128 @@ checkCookie()
 #contenu {
 	display:visible;		
 	}
+	#Nuage1 {
+z-index:1;
+ 	 width:93%;
+	}
+#PosiNuage1 {
+
+  text-align: center;
+  position:fixed;
+	right:-10%;
+	bottom:40%;
+  opacity: 1;
+	margin:0;
+	padding:0;
+  animation-name: Nuage1;
+  animation-timing-function: ease-in-out;
+  animation-duration: 30s;
+  animation-fill-mode: forwards;
+  animation-iteration-count:infinite
+
+  text-align: right;
+  }
+@keyframes Nuage1 {
+  0%   {right: -10%;opacity: 1;}
+  100% {right: 20%;opacity: 0;}
+}
+
+
+#Nuage2 {
+z-index:1;
+ 	 width:93%;
+	}
+#PosiNuage2 {
+  text-align: center;
+  position:fixed;
+  opacity: 1;
+	right:-10%;
+	bottom:30%;
+	margin:0;
+	padding:0;
+  text-align: right;
+  animation-name: Nuage2;
+  animation-timing-function: ease-in-out;
+  animation-duration: 45s;
+  animation-fill-mode: forwards;
+  animation-iteration-count:infinite
+}
+@keyframes Nuage2 {
+  0%   {right: -10%;opacity: 1;}
+  100% {right: 20%;opacity: 0;}
+}
+#Nuage3 {
+z-index:1;
+ 	 width:93%;
+	}
+#PosiNuage3 {
+  text-align: center;
+  opacity: 1;
+  position:fixed;
+	right:-10%;
+	bottom:20%;
+	margin:0;
+	padding:0;
+  text-align: right;
+  animation-name: Nuage3;
+  animation-timing-function: ease-in-out;
+  animation-duration: 60s;
+  animation-fill-mode: forwards;
+  animation-iteration-count:infinite
+}
+@keyframes Nuage3 {
+  0%   {right: -10%;opacity: 1;}
+  100% {right: 20%;opacity: 0;}
+}
+#PosiNuage0 {
+  text-align: center;
+  opacity: 1;
+  position:fixed;
+	right:-25%;
+	bottom:55%;
+	margin:0;
+	padding:0;
+  text-align: right;
+  animation-name: Nuage0;
+  animation-timing-function: ease-in-out;
+  animation-duration: 25s;
+  animation-fill-mode: forwards;
+  animation-iteration-count:infinite
+}
+@keyframes Nuage0 {
+  0%   {right: -25%;opacity: 1;}
+  100% {right: 20%;opacity: 0;}
+}
+#contenu {
+	display:visible;
+	}
+  #Nuage4 {
+  z-index:1;
+   	 width:93%;
+  	}
+  #PosiNuage4 {
+    text-align: center;
+    opacity: 1;
+    position:fixed;
+  	right:10%;
+  	bottom:15%;
+  	margin:0;
+  	padding:0;
+    text-align: right;
+    animation-name: Nuage4;
+    animation-timing-function: ease-in-out;
+    animation-duration: 50s;
+    animation-fill-mode: forwards;
+    animation-iteration-count:infinite
+  }
+  @keyframes Nuage4 {
+    0%   {right: 10%;opacity: 1;}
+
+    100% {right: 20%;opacity: 0;}
+  }
+	
+	
+	
 </style>
 
 <body onload="debut()">
@@ -379,8 +501,27 @@ checkCookie()
       width="95%;" height="900px;" scrolling="0;" frameBorder="0px;"
       src="Home.html">
   </iframe>
-<div id="PosiPortail">
-  <img  id="Portail"  src="Image/Chateau.gif"    >
+<Div>
+  <div id="PosiNuage1">
+    <img  id="Nuage1"  src="Image/Nuage1.png"    >
+  </div>
+  <div id="PosiNuage2">
+    <img  id="Nuage2"  src="Image/Nuage2.png"    >
+  </div>
+  <div id="PosiNuage3">
+    <img  id="Nuage3"  src="Image/Nuage3.png"    >
+  </div>
+  <div id="PosiNuage0">
+    <img  id="Nuage0"  src="Image/Nuage0.png"    >
+  </div>
+  <div id="PosiNuage4">
+    <img  id="Nuage4"  src="Image/Nuage3.png"    >
+  </div>
+
+  <div id="PosiPortail">
+    <img  id="Portail"  src="Image/Chateau.gif"    >
+  </div>
+
 </div>
 </div>
 
