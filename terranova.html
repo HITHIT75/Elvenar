@@ -22,8 +22,8 @@ var seconds = Math.floor((distance % (1000 * 60)) / 1000);
   if (distance < 0) {
     clearInterval(x);
     if (Timing=4000) {
-       document.getElementById("Frame2").[0].style.visibility = 'hidden'
-	document.getElementById("Contenu").style.visibility = 'visible'    
+ //      document.getElementById("Frame2").[0].style.visibility = 'hidden'
+//	document.getElementById("Contenu").style.visibility = 'visible'    
   //    if (Timing=4000) {
   //      window.location.href = "Index.html" }
     //document.getElementById("Scen1").classList.toggle("Generik");
@@ -298,9 +298,7 @@ var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 <body onload="debut()">
 <audio  id="MonSon" src="Image\Son.wav"></audio>
-<iframe id="Frame2" style="display:hidden;" class="Bar" style=";backgroundColor :transparent;"
-      width="100%;" height="100%;" scrolling="0;" frameBorder="0px;"
-      src="Portail.html">	
+	
 <div id="contenu">	
 <img src="Image/SonOn.png" id="Ecoute" width="25px" onclick="test()" >
 <div id="Ecoute0" style="visibility:hidden;" >1</div>
