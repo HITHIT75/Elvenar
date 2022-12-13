@@ -46,20 +46,46 @@ var vid = document.getElementById("myVideo");
    display: block;
   }
 html { overflow-y: hidden; overflow-x: hidden; }
+</head>
+<style>
+
+html { overflow-y: hidden; overflow-x: hidden; }
 body {
   align:center;
-  text.background = transparent;
+  text.background : transparent;
   background-size: cover;
   background-image:url(Image/Ecran2.png)
+}
+.videoo {
+  position: relative;
+  margin: 0 0;
+  margin-top:10%;
+  margin-left:0%;
+  z-index: 1;
+}
+//style="Margin-left:-133%;Margin-Top:-63%;"
+.contenu {
+
+    position:relative;
+
+
+    z-index:100;
+
 }
 </style>
 
 <body onload="Debut()">
 
-  <video  id ="myVideo" class="center" width="320" height="240" autoplay muted >
+ <div class="videoo" style="text-align: center;align: center;">
+  <video  id ="myVideo"  width="360;"  autoplay muted >
     <source src="Image/Video.mp4"  type="video/mp4">
     Votre explorateur ne supporte pas la balise video.
   </video>
+
+  <div class="contenu" >
+    <img    style="position: absolute;margin-top: -34%;Margin-left:-21.5%;width:49.5%;" src="Image/Tele.png"   />
+  </div>
+</div>
 
 </body>
 </html>
