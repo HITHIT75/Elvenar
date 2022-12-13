@@ -4,6 +4,37 @@
  <link rel="icon" type="image/png" href="Image/Blason1.png" />
  <title>Le Portail des Confréries</title>
 <script type="text/javascript">
+function Debut() {
+checkCookie()
+Chrono(2000)	
+
+}
+
+
+function Chrono(Timing) {
+var countDownDate = new Date().getTime() + Timing;
+var x = setInterval(function() {
+var now = new Date().getTime();
+var distance = countDownDate - now;
+var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+//  document.getElementById("demo").innerHTML =  seconds + "s ";
+
+  if (distance < 0) {
+    clearInterval(x);
+    if (Timing=4000) {
+       document.getElementById("Frame2").[0].style.visibility = 'hidden'
+	document.getElementById("Contenu").style.visibility = 'visible'    
+  //    if (Timing=4000) {
+  //      window.location.href = "Index.html" }
+    //document.getElementById("Scen1").classList.toggle("Generik");
+    //document.getElementById("Scen2").classList.toggle("Generik2");
+    //window.location.href = "Index.html"
+  }
+}, 1000);
+}
+	
+	
+	
   function test() {
       Ecouter = document.getElementById("Ecoute0").innerHTML
       document.getElementById("Ecoute0").innerHTML=Math.abs(Ecouter-1);
@@ -265,7 +296,7 @@
 	}
 </style>
 
-<body onload="checkCookie()">
+<body onload="debut()">
 <audio  id="MonSon" src="Image\Son.wav"></audio>
 <iframe id="Frame2" class="Bar" style=";backgroundColor :transparent;"
       width="100%;" height="100%;" scrolling="0;" frameBorder="0px;"
