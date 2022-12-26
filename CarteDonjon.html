@@ -336,6 +336,7 @@ function Chainer()  {
   Chaine = Chaine + document.getElementById("Selection5").innerHTML + "|"
   Chaine = Chaine + "Commentaire|"
   document.getElementById("Chaine").innerHTML=Chaine
+  setCookie("Donjon1", Chaine, 365);
 }
 function Posit(Num)  {
 
@@ -392,8 +393,10 @@ function checkCookie() {
   } else {
     //username = prompt("C'est ta première visite ? Merci de me donner ton pseudo de jeu ☺.", "");
     //if (username != "" && username != null) {
-      setCookie("Donjon1", "Cookie", 365);
-      document.getElementById("Chaine").innerTxt=  "Cookie"
+      Cookie=document.getElementById("Chaine").innerTxt
+      setCookie("Donjon1", Cookie, 365);
+    
+      =  "Cookie"
     //}
   }
 }
