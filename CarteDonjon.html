@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+table {
+//  border-collapse: collapse;
+  border-radius: 30%;
+  text-align: center;
+  margin-left:10%;
+  text-align:center;
+  }
+
+
+td {
+  padding: 2px;
+  border-radius: 30%;
+  max-height:3%;
+  max-width:5%;
+  min-height:3%;
+  min-width:5%;
+  width:30px;
+  border: 2px solid #000000;
+}
+td {
+}
+.Modif:hover {
+  background-color: rgba(220, 0, 0, 1);
+
+}
+.SelOn {
+ border: 3px solid Red;
+}
+.SelOff {
+ border: 2px solid #000000;
+}
+Img{
+      cursor: pointer;
+  }
+  .styled {
+      border: 0;
+      line-height: 2.5;
+      padding: 0 20px;
+      font-size: 1rem;
+      text-align: center;
+      color: #fff;
+      text-shadow: 1px 1px 1px #000;
+      border-radius: 10px;
+      background-color: rgba(220, 0, 0, 1);
+      background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+      box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+  }
+
+  .styled:hover {
+      background-color: rgba(255, 0, 0, 1);
+  }
+
+  .styled:active {
+      box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+  }
+
+</style>
+
+<body onload="Debut()">
+<audio  id="MonSon" src="Image\Son.wav"></audio>
+
+
+  <form style="text-align:center;" >
+     <label class="radio-inline">
+       <input style="font-size: 2rem;background-color: rgba(220, 0, 0, 1);color: #fff;border-radius: 0%;" type="radio" id="optradio1" onclick="Racer1();"  checked>Humains
+     </label>
+     <label class="radio-inline">
+       <input  type="radio" id="optradio2" onclick="Racer2();" >Elfes
+     </label>
+   </form>
+
+   <Div>Blabla explicatif...............................................
+   </Div>
+<Div id ="Chaine">Chaine</Div>
+<Div id ="Posi">1</Div>
+<Div id ="Etape">1</Div>
+<Div id ="Race">1</Div>
+<Div id ="Selection1" style="display:inline">?</Div>
+<Div id ="Selection2" style="display:inline">?</Div>
+<Div id ="Selection3" style="display:inline">?</Div>
+<Div id ="Selection4" style="display:inline">?</Div>
+<Div id ="Selection5" style="display:inline" >?</Div>
+
+<table style="display:inline">
+  <tr >
+    <td id="Etap12" style="border: 0px"><button class="favorite styled" onclick="Etaper(12)"   type="button">&nbsp;&nbsp;&nbsp;&nbsp;Etape&nbsp;12&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+  </tr >
+  <tr >
+    <td id="Etap11" style="border: 0px"><button class="favorite styled" onclick="Etaper(11)"   type="button">Etape&nbsp;11</button></td>
+  </tr >
+  <tr >
+    <td id="Etap10" style="border: 0px"><button class="favorite styled" onclick="Etaper(10)"   type="button">Etape&nbsp;10</button></td>
+  </tr >
+  <tr >
+    <td id="Etap9" style="border: 0px"><button class="favorite styled" onclick="Etaper(9)"   type="button">Etape&nbsp;9</button></td>
+  </tr >
+
+  <tr >
+    <td id="Etap8" style="border: 0px"><button class="favorite styled" onclick="Etaper(8)"   type="button">&nbsp;&nbsp;&nbsp;&nbsp;Etape&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+  </tr >
+  <tr >
+    <td id="Etap7" style="border: 0px"><button class="favorite styled" onclick="Etaper(7)"   type="button">Etape&nbsp;7</button></td>
+  </tr >
+  <tr >
+    <td id="Etap6" style="border: 0px"><button class="favorite styled" onclick="Etaper(6)"   type="button">Etape&nbsp;6</button></td>
+  </tr >
+  <tr >
+    <td id="Etap5" style="border: 0px"><button class="favorite styled" onclick="Etaper(5)"   type="button">Etape&nbsp;5</button></td>
+  </tr >
+  <tr >
+    <td id="Etap4" style="border: 0px"><button class="favorite styled" onclick="Etaper(4)"   type="button">&nbsp;&nbsp;&nbsp;&nbsp;Etape&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+  </tr >
+  <tr >
+    <td id="Etap3" style="border: 0px"><button class="favorite styled" onclick="Etaper(3)"   type="button">Etape&nbsp;3</button></td>
+  </tr >
+  <tr >
+    <td id="Etap2" style="border: 0px"><button class="favorite styled" onclick="Etaper(2)" type="button">Etape&nbsp;2</button></td>
+  </tr >
+  <tr >
+    <td id="Etap1" style="border: 0px"><button class="favorite styled" onclick="Etaper(1)" type="button">Etape&nbsp;1</button></td>
+  </tr >
+</table>
+
+<table style="display:inline">
+  <tr >
+    <td colspan="5" style="font-size: 2rem;background-color: rgba(220, 0, 0, 1);color: #fff;border-radius: 0%;">Sélectioner vos unités</td>
+  </tr >
+  <tr>
+    <td class="Modif" >
+      <img  id="Unite1" onclick="Choisir(1)" src="https://fr.wiki.elvenar.com/images/thumb/d/df/Eb_lm_1_big.png/55px-Eb_lm_1_big.png" decoding="async" />
+    </td>
+    <td class="Modif">
+      <img  id="Unite2" onclick="Choisir(2)" src="https://fr.wiki.elvenar.com/images/thumb/4/49/Eb_lr_1_big.png/55px-Eb_lr_1_big.png" decoding="async" />
+    </td>
+    <td class="Modif">
+      <img  id="Unite3" onclick="Choisir(3)" src="https://fr.wiki.elvenar.com/images/thumb/a/a2/Eb_ma_1_big.png/55px-Eb_ma_1_big.png" decoding="async" />
+    </td>
+    <td class="Modif">
+      <img  id="Unite4" onclick="Choisir(4)" src="https://fr.wiki.elvenar.com/images/thumb/8/83/Eb_hm_1_big.png/55px-Eb_hm_1_big.png" decoding="async" />
+    </td>
+    <td class="Modif">
+      <img  id="Unite5" onclick="Choisir(5)" src="https://fr.wiki.elvenar.com/images/thumb/1/1f/Eb_hr_1_big.png/55px-Eb_hr_1_big.png" decoding="async" />
+    </td>
+  </tr>
+  <tr >
+    <td class="Modif">
+      <img  id="Unite6" onclick="Choisir(6)" src="https://fr.wiki.elvenar.com/images/thumb/5/59/Tg_lm_1_big.png/65px-Tg_lm_1_big.png" decoding="async" />
+    </td>
+    <td class="Modif">
+      <img  id="Unite7" onclick="Choisir(7)"  src="https://fr.wiki.elvenar.com/images/thumb/7/78/Tg_lr_1_big.png/55px-Tg_lr_1_big.png" decoding="async" />
+    </td>
+    <td class="Modif">
+      <img  id="Unite8"  onclick="Choisir(8)" src="https://fr.wiki.elvenar.com/images/thumb/b/b8/Tg_ma_1_big.png/55px-Tg_ma_1_big.png" decoding="async" />
+    </td>
+    <td>
+      <img  id="Unite9"  onclick="Choisir(9)" src="https://fr.wiki.elvenar.com/images/thumb/2/28/Tg_hm_1_big.png/55px-Tg_hm_1_big.png" decoding="async" />
+    </td>
+    <td class="Modif">
+      <img  id="Unite10" onclick="Choisir(10)" src="https://fr.wiki.elvenar.com/images/thumb/5/5f/Tg_hr_1_big.png/55px-Tg_hr_1_big.png" decoding="async" />
+    </td>
+  </tr>
+  <tr >
+    <td class="Modif">
+      <img  id="Unite11" onclick="Choisir(11)"  src="https://fr.wiki.elvenar.com/images/thumb/8/8a/Mc_lm_1_big.png/55px-Mc_lm_1_big.png" decoding="async" />
+    </td>
+    <td class="Modif">
+      <img  id="Unite12" onclick="Choisir(12)"  src="https://fr.wiki.elvenar.com/images/thumb/d/d0/Mc_lr_1_big.png/55px-Mc_lr_1_big.png" decoding="async" />
+    </td>
+    <td>
+      <img  id="Unite13" onclick="Choisir(13)"  src="https://fr.wiki.elvenar.com/images/thumb/6/6c/Mc_ma_1_big.png/55px-Mc_ma_1_big.png" decoding="async" />
+    </td>
+    <td class="Modif">
+      <img  id="Unite14" onclick="Choisir(14)"  src="https://fr.wiki.elvenar.com/images/thumb/9/98/Mc_hm_1_big.png/55px-Mc_hm_1_big.png" decoding="async" />
+    </td>
+    <td class="Modif">
+      <img  id="Unite15" onclick="Choisir(15)"  src="https://fr.wiki.elvenar.com/images/thumb/5/56/Mc_hr_1_big.png/55px-Mc_hr_1_big.png" decoding="async" />
+    </td>
+  </tr>
+</table>
+<table style="display:inline">
+  <tr >
+    <td colspan="5" style="font-size: 2rem;background-color: rgba(220, 0, 0, 1);color: #fff;border-radius: 0%;">Sélection</td>
+  </tr >
+  <tr >
+    <td class="SelOn" id="Sele1">
+      <img  id="Sel1" onclick="Posit(1);" width="55px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Question_mark_%28black%29.svg/1200px-Question_mark_%28black%29.svg.png" decoding="async" />
+    </td>
+    <td class="SelOff" id="Sele2">
+      <img  id="Sel2" onclick="Posit(2);" width="55px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Question_mark_%28black%29.svg/1200px-Question_mark_%28black%29.svg.png" decoding="async" />
+    </td>
+    <td class="SelOff" id="Sele3">
+      <img  id="Sel3" onclick="Posit(3);"  width="55px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Question_mark_%28black%29.svg/1200px-Question_mark_%28black%29.svg.png" decoding="async" />
+    </td>
+    <td class="SelOff" id="Sele4">
+      <img  id="Sel4" onclick="Posit(4);"  width="55px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Question_mark_%28black%29.svg/1200px-Question_mark_%28black%29.svg.png" decoding="async" />
+    </td>
+    <td class="SelOff" id="Sele5">
+      <img  id="Sel5" onclick="Posit(5);"  width="55px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Question_mark_%28black%29.svg/1200px-Question_mark_%28black%29.svg.png" decoding="async" />
+    </td>
+  </tr>
+
+</table>
+<table style="display:inline" background="https://www.casalux.fr/10549-large_default/mosaique-nordic-hexagone-35x35cm-light-grey-gris-clair-mat-sur-trame-nylon-324x317cm-ref-909.jpg;">
+  <tr >
+    <td colspan="5" style="font-size: 2rem;background-color: rgba(220, 0, 0, 1);color: #fff;border-radius: 0%;">Disposition sur le terrain</td>
+  </tr >
+  <tr >
+    <td class="SelOff" id="Terr4">
+      <img   id="Ter4" onclick="Posit(4);" width="55px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Question_mark_%28black%29.svg/1200px-Question_mark_%28black%29.svg.png" decoding="async" />
+    </td>
+  </tr>
+  <tr >
+    <td class="SelOff"  onclick="Posit(2);" id="Terr2">
+      <img   id="Ter2"  width="55px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Question_mark_%28black%29.svg/1200px-Question_mark_%28black%29.svg.png" decoding="async" />
+    </td>
+  </tr>
+  <tr >
+    <td class="SelOn"  onclick="Posit(1);" id="Terr1">
+      <img   id="Ter1"  width="55px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Question_mark_%28black%29.svg/1200px-Question_mark_%28black%29.svg.png" decoding="async" />
+    </td>
+  </tr>
+  <tr >
+    <td class="SelOff" id="Terr3">
+      <img   id="Ter3"  onclick="Posit(3);" width="55px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Question_mark_%28black%29.svg/1200px-Question_mark_%28black%29.svg.png" decoding="async" />
+    </td>
+  </tr>
+  <tr >
+    <td class="SelOff" id="Terr5">
+      <img   id="Ter5"  onclick="Posit(5);" width="55px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Question_mark_%28black%29.svg/1200px-Question_mark_%28black%29.svg.png" decoding="async" />
+    </td>
+  </tr>
+</table>
+<div style="text-align:center;">
+<img  id="Local" width="40%" src="c:\\Temp\Donjon\1.png"  alt=" Fichier absent c:\Temp\Donjon\1.png"/>
+</div>
+<script type="text/javascript">
+function Debut() {
+  //alert("ok")
+  Racer1()
+  //document.getElementById("Etape").innerHTML="1"
+
+  Etaper(1)
+Chainer()
+}
+function Etaper(Num) {
+  //alert(Num)
+
+NumEx = document.getElementById("Etape").innerHTML
+  // for (int i = 1; i < 13; i++) {
+     Nom2="Etap" + NumEx*1
+    // Nom3="c:\\Temp\Donjon\" + Num
+     document.getElementById(Nom2).style.backgroundColor = "";
+    // Nom3 = 'c:\\Temp\Donjon\' //+ Num  + '.png'
+  //   alert(Nom3)
+  //   document.getElementById("Local").setAttribute("src", Nom3 )
+    // document.getElementById("Local").setAttribute("alt", Nom3)
+
+
+
+Nom="Etap" + Num
+
+  document.getElementById("Etape").innerHTML=Num
+  document.getElementById(Nom).style.backgroundColor = "red";
+  document.getElementById(Nom).styleborderRadius = "50%";
+  Chainer()
+}
+
+function Racer1() {
+    document.getElementById("optradio2").checked=false
+    document.getElementById("Unite1").setAttribute("src", "https://fr.wiki.elvenar.com/images/thumb/d/df/Hb_lm_1_big.png/55px-Hb_lm_1_big.png");
+    document.getElementById("Unite2").setAttribute("src", "https://fr.wiki.elvenar.com/images/thumb/e/e3/Hb_lr_1_big.png/55px-Hb_lr_1_big.png");
+    document.getElementById("Unite3").setAttribute("src", "https://fr.wiki.elvenar.com/images/thumb/e/ed/Hb_ma_1_big.png/55px-Hb_ma_1_big.png");
+    document.getElementById("Unite4").setAttribute("src", "https://fr.wiki.elvenar.com/images/thumb/6/6f/Hb_hm_1_big.png/55px-Hb_hm_1_big.png");
+    document.getElementById("Unite5").setAttribute("src", "https://fr.wiki.elvenar.com/images/thumb/9/9f/Hb_hr_1_big.png/55px-Hb_hr_1_big.png");
+    document.getElementById("Race").innerHTML="1"
+    Chainer()
+      }
+function Racer2() {
+      document.getElementById("optradio1").checked=false
+      document.getElementById("Unite1").setAttribute("src", "https://fr.wiki.elvenar.com/images/thumb/d/df/Eb_lm_1_big.png/55px-Eb_lm_1_big.png");
+      document.getElementById("Unite2").setAttribute("src", "https://fr.wiki.elvenar.com/images/thumb/4/49/Eb_lr_1_big.png/55px-Eb_lr_1_big.png");
+      document.getElementById("Unite3").setAttribute("src", "https://fr.wiki.elvenar.com/images/thumb/a/a2/Eb_ma_1_big.png/55px-Eb_ma_1_big.png");
+      document.getElementById("Unite4").setAttribute("src", "https://fr.wiki.elvenar.com/images/thumb/8/83/Eb_hm_1_big.png/55px-Eb_hm_1_big.png");
+      document.getElementById("Unite5").setAttribute("src", "https://fr.wiki.elvenar.com/images/thumb/1/1f/Eb_hr_1_big.png/55px-Eb_hr_1_big.png");
+        document.getElementById("Race").innerHTML="2"
+        Chainer()
+  }
+function Choisir(Num)  {
+
+      Position = 1*document.getElementById("Posi").innerHTML;
+
+      NomDeImage=document.getElementById("Unite" + Num).src
+
+      Nom="Sele" + Position
+      NomImg="Sel" + Position
+      NomImg2="Ter" + Position
+      NomImg3="Selection" + Position
+      var element = document.getElementById(Nom);
+      element.classList.className = "SelOn"
+
+        document.getElementById(NomImg).setAttribute("src", NomDeImage);
+        document.getElementById(NomImg2).setAttribute("src", NomDeImage);
+        document.getElementById(NomImg3).innerHTML=Num
+        Position=Position+1
+        if (Position==6) {
+          Position=5
+        }
+         document.getElementById("Posi").innerHTML=Position
+         Posit(Position)
+
+         Chainer()
+}
+function Chainer()  {
+  Chaine = document.getElementById("Race").innerHTML + "|"
+  Chaine = Chaine + document.getElementById("Etape").innerHTML + "|"
+  Chaine = Chaine + document.getElementById("Selection1").innerHTML + "|"
+  Chaine = Chaine + document.getElementById("Selection2").innerHTML + "|"
+  Chaine = Chaine + document.getElementById("Selection3").innerHTML + "|"
+  Chaine = Chaine + document.getElementById("Selection4").innerHTML + "|"
+  Chaine = Chaine + document.getElementById("Selection5").innerHTML + "|"
+  Chaine = Chaine + "Commentaire|"
+  document.getElementById("Chaine").innerHTML=Chaine
+}
+function Posit(Num)  {
+
+  document.getElementById("Posi").innerHTML=Num
+  document.getElementById("Sele1").className = "SelOff"
+  document.getElementById("Sele2").className = "SelOff"
+  document.getElementById("Sele3").className = "SelOff"
+  document.getElementById("Sele4").className = "SelOff"
+  document.getElementById("Sele5").className = "SelOff"
+  document.getElementById("Terr1").className = "SelOff"
+  document.getElementById("Terr2").className = "SelOff"
+  document.getElementById("Terr3").className = "SelOff"
+  document.getElementById("Terr4").className = "SelOff"
+  document.getElementById("Terr5").className = "SelOff"
+Position = 1*document.getElementById("Posi").innerHTML;
+  Nom="Sele" + Position
+  var element = document.getElementById(Nom);
+  element.className = "SelOn"
+  Nom="Terr" + Position
+  var element = document.getElementById(Nom);
+  element.className = "SelOn"
+
+}
+function setCookie(cname, cvalue, exdays) {
+  document.getElementById("Chaine").innerHTML=  cvalue
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  let expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let ca = document.cookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+
+function checkCookie() {
+//document.getElementById("Chaine").innerHTML=  "attente cookie"
+  let username = getCookie("Donjon1");
+  if (username != "") {
+   //alert("Welcome again " + username);
+   document.getElementById("Chaine").innerHTML=  username
+  } else {
+    //username = prompt("C'est ta première visite ? Merci de me donner ton pseudo de jeu ☺.", "");
+    //if (username != "" && username != null) {
+      setCookie("Donjon1", "Cookie", 365);
+      document.getElementById("Chaine").innerTxt=  "Cookie"
+    //}
+  }
+}
+
+
+
+
+</script>
+
+</body>
+</html>
