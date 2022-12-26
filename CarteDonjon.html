@@ -6,6 +6,20 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+     <link rel="stylesheet" href="https://rawgit.com/angular/bower-material/master/angular-material.css">
+    <style>
+      #file-input { display: none; }
+    </style>
+
+    <script src="https://code.angularjs.org/1.4.0-beta.6/angular.js"></script>
+    <script src="https://code.angularjs.org/1.4.0-beta.6/angular-animate.js"></script>
+    <script src="https://code.angularjs.org/1.4.0-beta.6/angular-aria.js"></script>
+
+    <script src="https://rawgit.com/angular/bower-material/master/angular-material.min.js"></script>
+  
+  
+  
 </head>
 <style>
     body {
@@ -72,7 +86,7 @@ Img{
 
 </style>
 
-<body onload="Debut()">
+<body onload="Debut()" ng-app="app" >
 <audio  id="MonSon" src="Image\Son.wav"></audio>
 
 
@@ -246,11 +260,19 @@ Img{
     </td>
   </tr>
 </table>
-<div style="text-align:center;">
-<input type="file"
-       id="avatar" name="avatar"
-       >
-</div>
+   <div>
+      <h2>File Upload with Material:</h2>
+
+      <md-button>
+        <label for="file-input">Select</label>  
+      </md-button>
+      <input id="file-input" type="file">
+
+    </div>
+
+    <script>
+      angular.module('app', ['ngMaterial']);
+    </script>
 <script type="text/javascript">
 function Debut() {
   //alert("ok")
