@@ -472,23 +472,15 @@
   color: rgba(B1, 10, 0D, 0%);
   transition: transform 1s;
 }
-.containerMenuBis {
-  position: relative;
-  float:left;
-  height: 80%;
-  display:inline-block;
-  color: Red;
-  color: rgba(B1, 10, 0D, 0%);
-  transform: rotate(10deg);
-}
+
 
 .centered {
   position: absolute;
-  top: 50%;
+  top: 58%;
   left: 50%;
   transform: translate(-50%, -85%);
   font-family: 'Metamorphous', cursive;
-  font-size:22px;
+  font-size:1vw;
   font-weight: bold;
   text-shadow: -1px -1px 3px White, 2px 2px 3px rgba(0,0,0,1);
 //  text-shadow: 1px 1px 3px #000000;rgba(100,100,100,1)
@@ -515,6 +507,22 @@
       align-items: center;
   }
 
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  height:10%;
+  width:100%;
+}
+.flex-container > div {
+  width: 10%;
+  margin: 0px;
+  text-align: center;
+  line-height: 30px;
+}
+/*<img src="Image/SonOn.png" id="Ecoute" width="25px" onclick="test()" >
+<div id="Ecoute0" style="visibility:hidden;" >1</div>*/
 
 
 </style>
@@ -523,56 +531,50 @@
   <body onload="debut()">
   <audio  id="MonSon" src="Image/Son.wav"></audio>
 
-<div id="contenu" style="padding: 10%;">
-  <img src="Image/SonOn.png" id="Ecoute" width="25px" onclick="test()" >
-  <div id="Ecoute0" style="visibility:hidden;" >1</div>
+
+  <div class="flex-container">
 
 
 
-  <div style="position: fixed;margin-left:0%;height:20%;width: 95%;margin: 0 auto;text-align: center;display:inline-block;">
-
-          <div id="KTR1" class="containerMenu"  onmouseout="essaiVide()" onmouseover="essai11()" >
-            <img id="Img1" src="Image/Logo1.png" style="height: 100%;">
+        <div class="containerMenu"  onmouseout="essaiVide()" onmouseover="essai11()" >
+            <img id="Img1" src="C:/Temp/Image/Logo1.png" style="width: 100%;">
+            <div class="centered"></div>
         </div>
-        <div id="KTR2" class="containerMenuBis" onmouseout="essaiVide()" onmouseover="essai21()" onclick="SautHome()">
-            <img  id="Img2" src="Image/Logo-elvenarVide2.png" style="height: 80%;" >
+        <div class="containerMenu" onmouseout="essaiVide()" onmouseover="essai21()" onclick="SautHome()">
+            <img  id="Img2" src="C:/Temp/Image/Logo-elvenarVide2.png" style="width: 80%;" >
             <div class="centered">AccueiL</div>
         </div>
 
-        <div id="KTR3"  class="containerMenu" onmouseout="essaiVide()" onmouseover="essai31()" onclick="SautEvent()">
-            <img src="Image/Logo-elvenarVide2.png" style="height: 80%;" >
+        <div class="containerMenu" onmouseout="essaiVide()" onmouseover="essai31()" onclick="SautEvent()">
+            <img src="C:/Temp/Image/Logo-elvenarVide2.png" style="width: 80%;" >
             <div class="centered">EvenT</div>
         </div>
-        <div  id="KTR4" class="containerMenu" onmouseout="essaiVide()" onmouseover="essai41()" onclick="SautAventure()">
-            <img src="Image/Logo-elvenarVide2.png" style="height: 80%;" >
+        <div class="containerMenu" onmouseout="essaiVide()" onmouseover="essai41()" onclick="SautAventure()">
+            <img src="C:/Temp/Image/Logo-elvenarVide2.png" style="width: 80%;" >
             <div class="centered">AventurE</div>
         </div>
-        <div  id="KTR5" class="containerMenu" onmouseout="essaiVide()" onmouseover="essai51()" onclick="SautTournois()">
-            <img src="Image/Logo-elvenarVide2.png" style="height: 80%;" >
+        <div class="containerMenu" onmouseout="essaiVide()" onmouseover="essai51()" onclick="SautTournois()">
+            <img src="C:/Temp/Image/Logo-elvenarVide2.png" style="width: 80%;" >
             <div class="centered">TournoI</div>
         </div>
-        <div  id="KTR6" class="containerMenu" onmouseout="essaiVide()" onmouseover="essai61()" onclick="SautJournal()">
-            <img src="Image/Logo-elvenarVide2.png" style="height: 80%;" >
+        <div class="containerMenu" onmouseout="essaiVide()" onmouseover="essai61()" onclick="SautJournal()">
+            <img src="C:/Temp/Image/Logo-elvenarVide2.png" style="width: 80%;" >
             <div class="centered">JournaL</div>
         </div>
-        <div  id="KTR7" class="containerMenu" onmouseout="essaiVide()" onmouseover="essai71()" onclick="SautLiens()">
-            <img src="Image/Logo-elvenarVide2.png" style="height: 80%;" >
+        <div class="containerMenu" onmouseout="essaiVide()" onmouseover="essai71()" onclick="SautLiens()">
+            <img src="C:/Temp/Image/Logo-elvenarVide2.png" style="width: 80%;" >
             <div class="centered">LienS</div>
         </div>
-        <div id="KTR8"  class="containerMenu" onmouseout="essaiVide()" onmouseover="essai81()" onclick="SautPadawan()">
-            <img src="Image/Logo-elvenarVide2.png" style="height: 80%;" >
+        <div class="containerMenu" onmouseout="essaiVide()" onmouseover="essai81()" onclick="SautPadawan()">
+            <img src="C:/Temp/Image/Logo-elvenarVide2.png" style="width: 80%;" >
             <div class="centered">PadawaN</div>
         </div>
 
 
-            <div id="KTR9"  class="containerMenu" onmouseout="essaiVide()" onmouseover="essai91()" onclick="SautGenerik()">
-                <img src="Image/Blason1.png" style="height: 90%;" >
-            </div>
 
 
 
     </div>
-    <br><br><br><br><br>
     <div class="container2" id="expication">&nbsp
     </div>
 </div>
