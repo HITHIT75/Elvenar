@@ -206,19 +206,19 @@
 
     function Opacifier(Num){
       document.getElementById("KTR1").className = "containerMenu";
-      
-      document.getElementById("Img1").style.opacity= "1";
-      document.getElementById("Img2").style.opacity= "1";
-      document.getElementById("Img3").style.opacity= "1";
-      document.getElementById("Img4").style.opacity= "1";
-      document.getElementById("Img5").style.opacity= "1";
-      document.getElementById("Img6").style.opacity= "1";
-      document.getElementById("Img7").style.opacity= "1";
-      document.getElementById("Img8").style.opacity= "1";
-      document.getElementById("Img9").style.opacity= "1";
-      document.getElementById("Img10").style.opacity= "1";
-      var Cible = "Img" + Num
-      document.getElementById(Cible).style.opacity= "0.5";
+      document.getElementById("KTR2").className = "containerMenu";
+      document.getElementById("KTR3").className = "containerMenu";
+      document.getElementById("KTR4").className = "containerMenu";
+      document.getElementById("KTR5").className = "containerMenu";
+      document.getElementById("KTR6").className = "containerMenu";
+      document.getElementById("KTR7").className = "containerMenu";
+      document.getElementById("KTR8").className = "containerMenu";
+      document.getElementById("KTR9").className = "containerMenu";
+
+    //  document.getElementById("Img9").style.opacity= "1";
+  //    document.getElementById("Img10").style.opacity= "1";
+      var Cible = "KTR" + Num
+    //  document.getElementById(Cible).style.opacity= "0.5";
       document.getElementById("KTR1").className = "containerMenuBis";
       //document.getElementById(Cible).style.transform = "rotate(5deg)";
     }
@@ -528,41 +528,41 @@
 
   <div style="position: fixed;margin-left:0%;height:20%;width: 95%;margin: 0 auto;text-align: center;display:inline-block;">
 
-          <div class="containerMenu"  onmouseout="essaiVide()" onmouseover="essai11()" >
+          <div id="KTR1" class="containerMenu"  onmouseout="essaiVide()" onmouseover="essai11()" >
             <img id="Img1" src="Image/Logo1.png" style="height: 100%;">
         </div>
-        <div id="KTR1" class="containerMenu" onmouseout="essaiVide()" onmouseover="essai21()" onclick="SautHome()">
+        <div id="KTR2" class="containerMenu" onmouseout="essaiVide()" onmouseover="essai21()" onclick="SautHome()">
             <img  id="Img2" src="Image/Logo-elvenarVide2.png" style="height: 80%;" >
             <div class="centered">AccueiL</div>
         </div>
 
-        <div class="containerMenu" onmouseout="essaiVide()" onmouseover="essai31()" onclick="SautEvent()">
+        <div id="KTR3"  class="containerMenu" onmouseout="essaiVide()" onmouseover="essai31()" onclick="SautEvent()">
             <img src="Image/Logo-elvenarVide2.png" style="height: 80%;" >
             <div class="centered">EvenT</div>
         </div>
-        <div class="containerMenu" onmouseout="essaiVide()" onmouseover="essai41()" onclick="SautAventure()">
+        <div  id="KTR4" class="containerMenu" onmouseout="essaiVide()" onmouseover="essai41()" onclick="SautAventure()">
             <img src="Image/Logo-elvenarVide2.png" style="height: 80%;" >
             <div class="centered">AventurE</div>
         </div>
-        <div class="containerMenu" onmouseout="essaiVide()" onmouseover="essai51()" onclick="SautTournois()">
+        <div  id="KTR5" class="containerMenu" onmouseout="essaiVide()" onmouseover="essai51()" onclick="SautTournois()">
             <img src="Image/Logo-elvenarVide2.png" style="height: 80%;" >
             <div class="centered">TournoI</div>
         </div>
-        <div class="containerMenu" onmouseout="essaiVide()" onmouseover="essai61()" onclick="SautJournal()">
+        <div  id="KTR6" class="containerMenu" onmouseout="essaiVide()" onmouseover="essai61()" onclick="SautJournal()">
             <img src="Image/Logo-elvenarVide2.png" style="height: 80%;" >
             <div class="centered">JournaL</div>
         </div>
-        <div class="containerMenu" onmouseout="essaiVide()" onmouseover="essai71()" onclick="SautLiens()">
+        <div  id="KTR7" class="containerMenu" onmouseout="essaiVide()" onmouseover="essai71()" onclick="SautLiens()">
             <img src="Image/Logo-elvenarVide2.png" style="height: 80%;" >
             <div class="centered">LienS</div>
         </div>
-        <div class="containerMenu" onmouseout="essaiVide()" onmouseover="essai81()" onclick="SautPadawan()">
+        <div id="KTR8"  class="containerMenu" onmouseout="essaiVide()" onmouseover="essai81()" onclick="SautPadawan()">
             <img src="Image/Logo-elvenarVide2.png" style="height: 80%;" >
             <div class="centered">PadawaN</div>
         </div>
 
 
-            <div class="containerMenu" onmouseout="essaiVide()" onmouseover="essai91()" onclick="SautGenerik()">
+            <div id="KTR9"  class="containerMenu" onmouseout="essaiVide()" onmouseover="essai91()" onclick="SautGenerik()">
                 <img src="Image/Blason1.png" style="height: 90%;" >
             </div>
 
