@@ -205,6 +205,8 @@
 
 
     function Opacifier(Num){
+      document.getElementById("KTR1").className = "containerMenu";
+      
       document.getElementById("Img1").style.opacity= "1";
       document.getElementById("Img2").style.opacity= "1";
       document.getElementById("Img3").style.opacity= "1";
@@ -217,6 +219,7 @@
       document.getElementById("Img10").style.opacity= "1";
       var Cible = "Img" + Num
       document.getElementById(Cible).style.opacity= "0.5";
+      document.getElementById("KTR1").className = "containerMenuBis";
       //document.getElementById(Cible).style.transform = "rotate(5deg)";
     }
     function JouerSon() {
@@ -466,7 +469,15 @@
   color: rgba(B1, 10, 0D, 0%);
   transition: transform 1s;
 }
-
+.containerMenuBis {
+  position: relative;
+  float:left;
+  height: 80%;
+  display:inline-block;
+  color: Red;
+  color: rgba(B1, 10, 0D, 0%);
+  transform: rotate(10deg);
+}
 
 .centered {
   position: absolute;
@@ -520,7 +531,7 @@
           <div class="containerMenu"  onmouseout="essaiVide()" onmouseover="essai11()" >
             <img id="Img1" src="Image/Logo1.png" style="height: 100%;">
         </div>
-        <div class="containerMenu" onmouseout="essaiVide()" onmouseover="essai21()" onclick="SautHome()">
+        <div id="KTR1" class="containerMenu" onmouseout="essaiVide()" onmouseover="essai21()" onclick="SautHome()">
             <img  id="Img2" src="Image/Logo-elvenarVide2.png" style="height: 80%;" >
             <div class="centered">AccueiL</div>
         </div>
