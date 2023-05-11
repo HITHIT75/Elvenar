@@ -1,19 +1,544 @@
-<!doctype html>
-<title>Example</title>
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+   <link rel="icon" type="image/png" href="Image/Blason1.png" />
+   <title>Le Portail des Confréries</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Metamorphous&family=Rubik+Beastly&display=swap" rel="stylesheet">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script type="text/javascript">
+  function Debut() {
+  checkCookie()
+  //Chrono(2000)
+
+  }
+
+
+  //function Chrono(Timing) {
+  //var countDownDate = new Date().getTime() + Timing;
+  //var x = setInterval(function() {
+  //var now = new Date().getTime();
+  //var distance = countDownDate - now;
+  //var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  //  document.getElementById("demo").innerHTML =  seconds + "s ";
+
+  //  if (distance < 0) {
+  //   clearInterval(x);
+   //   if (Timing=4000) {
+   //      document.getElementById("Frame2").[0].style.visibility = 'hidden'
+  //	document.getElementById("Contenu").style.visibility = 'visible'
+    //    if (Timing=4000) {
+    //      window.location.href = "Index.html" }
+      //document.getElementById("Scen1").classList.toggle("Generik");
+      //document.getElementById("Scen2").classList.toggle("Generik2");
+      //window.location.href = "Index.html"
+  //  }
+  //}, 1000);
+  //}
+
+
+
+  function test() {
+        Ecouter = document.getElementById("Ecoute0").innerHTML
+        document.getElementById("Ecoute0").innerHTML=Math.abs(Ecouter-1);
+      ActualisationEcouteur()
+    }
+  function essai11() {
+    document.getElementById("expication").innerHTML= "Ca c'est le logo du jeu auquel tu joues -T'avais jamais remarqué ?"
+  }
+  function essaiVide() {
+    document.getElementById("expication").innerHTML = "&nbsp"
+  }
+  function essai21() {
+    document.getElementById("expication").innerHTML = "La page d'accueil avec les informations sensibles de la confrérie."
+  }
+  function essai31() {
+    document.getElementById("expication").innerHTML = "La listes des quêtes de l'event avec possibilité de colorier les quêtes à anticiper et de faire disparaître les quêtes réalisées."
+  }
+  function essai41() {
+    document.getElementById("expication").innerHTML = "Les chemins & étapes sélectionnés pour l'aventure et un simulateur gratuit pour doser manufactures et ateliers."
+  }
+  function essai61() {
+    document.getElementById("expication").innerHTML = "Le journal de bord de la confrérie."
+  }
+  function essai51() {
+    document.getElementById("expication").innerHTML = "Des informations pour bien chiader son tournoi."
+  }
+  function essai71() {
+    document.getElementById("expication").innerHTML = "Une compile des liens elvenar utiles et inutiles sur internet."
+  }
+  function essai81() {
+    document.getElementById("expication").innerHTML = "Les recommandations pour les pauvres nouveaux arrivants dans la confrérie."
+  }
+  function essai91() {
+    document.getElementById("expication").innerHTML = "Ceci est le blason de la confrérie. Tu peux cliquer dessus si ça t'amuse."
+  }
+
+
+   function ActualisationEcouteur() {
+        Ecouter = document.getElementById("Ecoute0").innerHTML
+        if (Ecouter == 1 ) {
+            document.getElementById("Ecoute").src="Image/SonOn.png"
+         setCookie("Ecouteur", "1", 365);
+        }
+        else {
+          document.getElementById("Ecoute").src="Image/SonOff.png"
+         setCookie("Ecouteur", "0", 365);
+        }
+    }
+    function setCookie(cname, cvalue, exdays) {
+     //alert("set coookie bebut")
+     // document.getElementById("Ecoute0").innerHTML=  cvalue
+      const d = new Date();
+      d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+      let expires = "expires="+d.toUTCString();
+     //alert("Set Cookie >" + cname + "=" + cvalue + ";" + expires + ";path=/" +"<")
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+     //alert("fin set cookie")
+    }
+
+    function getCookie(cname) {
+      //alert("Get Cookie >" + document.cookie +"<")
+      let name = cname + "=";
+      let ca = document.cookie.split(';');
+      for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+
+
+    function checkCookie() {
+      let username = getCookie("Ecouteur");
+
+      if (username != "") {
+  //alert("audio check cookie OK>" + username +"<")
+       document.getElementById("Ecoute0").innerHTML=  username
+         if (username==1) {
+            document.getElementById("Ecoute0").innerHTML=  "1"
+            document.getElementById("Ecoute").src="Image/SonOn.png"
+          }
+         else {
+            document.getElementById("Ecoute0").innerHTML=  "0"
+            document.getElementById("Ecoute").src="Image/SonOff.png"
+          }
+      }
+      else {
+         valeur = "1"
+         //alert("audio check cookie KO>" + username +"<")
+          setCookie("Ecouteur", valeur, 365);
+          document.getElementById("Ecoute0").innerHTML=  "1"
+          document.getElementById("Ecoute").src="Image/SonOn.png"
+       }
+    }
+    function Dessus1() {
+         document.getElementById("TT1").classList.toggle("TT1");
+           }
+       function Saut(){
+         JouerSon()
+         //document.getElementById("Frame").src="Generik.html";
+         Opacifier(1)
+       }
+    function SautGenerik(){
+      JouerSon()
+      document.getElementById("Frame").src="https://hithit75.github.io/Elvenar/Generikbis.html";
+      Opacifier(9)
+    }
+      function SautJournal(){
+      JouerSon()
+      document.getElementById("Frame").src="https://hithit75.github.io/Elvenar/Journal.html";
+      Opacifier(10)
+    }
+    function SautDoigt(){
+      JouerSon()
+      document.getElementById("Frame").src="Zoom.html";
+      Opacifier(9)
+    }
+    function SautMerveille(){
+      JouerSon()
+
+  	document.getElementById("Frame").src="CarteDonjon.html";
+      //document.getElementById("Frame").src="Merveilles.html";
+      Opacifier(6)
+    }
+    function SautPadawan(){
+      JouerSon()
+      document.getElementById("Frame").src="Padawan.html";
+      Opacifier(8)
+    }
+    function SautHome(){
+      JouerSon()
+      document.getElementById("Frame").src="Home.html";
+      Opacifier(2)
+    }
+    function SautAventure(){
+      JouerSon()
+      document.getElementById("Frame").src="Aventure.html";
+      Opacifier(4)
+    }
+    function SautLiens(){
+      JouerSon()
+      document.getElementById("Frame").src="Liens.html";
+      Opacifier(7)
+    }
+    function SautTournois(){
+      JouerSon()
+      document.getElementById("Frame").src="Tournois.html";
+      Opacifier(5)
+    }
+    function SautEvent(){
+      JouerSon()
+      document.getElementById("Frame").src="Event.html";
+      Opacifier(3)
+    }
+
+
+
+
+    function Opacifier(Num){
+
+      document.getElementById("KTR1").className = "containerMenu";
+      document.getElementById("KTR2").className = "containerMenu";
+      document.getElementById("KTR3").className = "containerMenu";
+      document.getElementById("KTR4").className = "containerMenu";
+      document.getElementById("KTR5").className = "containerMenu";
+      document.getElementById("KTR6").className = "containerMenu";
+      document.getElementById("KTR7").className = "containerMenu";
+      document.getElementById("KTR8").className = "containerMenu";
+
+    //  document.getElementById("Img9").style.opacity= "1";
+  //    document.getElementById("Img10").style.opacity= "1";
+      var Cible = "KTR" + Num
+
+    //  document.getElementById(Cible).style.opacity= "0.5";
+      document.getElementById(Cible).className = "containerMenuBis";
+
+      //document.getElementById(Cible).style.transform = "rotate(5deg)";
+    }
+    function JouerSon() {
+      Ecouter = document.getElementById("Ecoute0").innerHTML
+      if (Ecouter==1) {
+        var sound = document.getElementById("MonSon");
+          sound.play();}
+        }
+
+  </script>
+  </head>
 <style>
 * {
   box-sizing: border-box;
 }
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  margin: 0;
+    body {
+       align: center;
+       padding: 0px;
+       margin: 0px;
+       font-family: verdana;
+       font-size: 25px;
+       color: #051E4C;
+       scrolling: none;
+       background-color: #E5E8EA;
+       text.background: transparent;
+       background-size: cover;
+          margin:0;
+          display: flex;
+          min-height: 100vh;
+          flex-direction: column;
+          margin: 0;
+
+      height:100%;
+      background-attachment:fixed;
+       background-image:url(Image/Ecran2.png)
+     }
+  .hide{display: none;}
+   div {
+       display: inline;
+       align:center;
+      }
+  .tooltiptext {
+      visibility: hidden;
+      display: none;
+      background-color: #990000;
+      color: #051E4C;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      font: 15px Verdana, sans-serif;
+      background-color: #404E3C;
+      color: #fff;
+      position: absolute;
+      z-index: 1;
+      margin-left: 50%;
+      margin-top: 40%;
+      max-width: 30%
+    }
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      }
+    .TT1 .TT1txt {
+      visibility: hidden;
+      width: 180px;
+      height:100px;
+      color: blue;
+      text-align: center;
+      border-width:  2px;
+      border-color:white;
+      border-radius: 6px;
+      font: 14px Verdana, sans-serif;
+      background-color: #506E62;
+      color: white;
+      box-shadow: 0 0 0 2px #000,
+      	0 0 0 3px #FFFFFF,
+      	0 0 0 3px #051E4C,
+      	0 0 0 6px #051E4C,
+      	0 0 0 6px #f6da24,
+      	0 0 0 6px #FFFFFF;
+      position: absolute;
+      margin-top: 7%;
+      margin-left: 0%;
+      z-index:10;
+      }
+      @keyframes TT {
+        0%   {visibility: visible;}
+        99%  {visibility: visible;}
+        100% {visibility: hidden;}
+      }
+    .TT1:hover .TT1txt {
+      visibility: visible;
+      animation-name: TT;
+      animation-duration: 5s;
+      animation-fill-mode: forwards;
+          }
+      input[type="checkbox"] {
+          content: url('Image/SonOn.png');
+          display: block;
+          position: fixed;
+          left:5px;
+          Top:5px;
+          width:25px"
+      }
+      input[type="checkbox"]:checked {
+          content: url('Image/SonOff.png');
+      }
+      .native-hidden {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+      }
+  #Portail {
+  	z-index:20;
+   	 width:93%;
+  	}
+  #PosiPortail {
+    text-align: center;
+    position:fixed;
+  	right:0%;
+  	bottom:-1%;
+  	margin:0;
+  	padding:0;
+
+    text-align: right;
+  }
+  #contenu {
+  	display:visible;
+  	}
+  #Nuage1 {
+      z-index:1;
+   	  width:93%;
+  	}
+  #PosiNuage1 {
+
+    text-align: center;
+    position:fixed;
+  	right:-10%;
+  	bottom:40%;
+    opacity: 1;
+  	margin:0;
+  	padding:0;
+    animation-name: Nuage1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 30s;
+    animation-fill-mode: forwards;
+    animation-iteration-count:infinite
+
+    text-align: right;
+    }
+  @keyframes Nuage1 {
+    0%   {right: -10%;opacity: 1;}
+    100% {right: 20%;opacity: 0;}
+  }
+  #Nuage2 {
+    z-index:1;
+   	 width:93%;
+  	}
+  #PosiNuage2 {
+    text-align: center;
+    position:fixed;
+    opacity: 1;
+  	right:-10%;
+  	bottom:30%;
+  	margin:0;
+  	padding:0;
+    text-align: right;
+    animation-name: Nuage2;
+    animation-timing-function: ease-in-out;
+    animation-duration: 45s;
+    animation-fill-mode: forwards;
+    animation-iteration-count:infinite
+  }
+  @keyframes Nuage2 {
+    0%   {right: -10%;opacity: 1;}
+    100% {right: 20%;opacity: 0;}
+  }
+  #Nuage3 {
+  z-index:1;
+   	 width:93%;
+  	}
+  #PosiNuage3 {
+    text-align: center;
+    opacity: 1;
+    position:fixed;
+  	right:-10%;
+  	bottom:20%;
+  	margin:0;
+  	padding:0;
+    text-align: right;
+    animation-name: Nuage3;
+    animation-timing-function: ease-in-out;
+    animation-duration: 60s;
+    animation-fill-mode: forwards;
+    animation-iteration-count:infinite
+  }
+  @keyframes Nuage3 {
+    0%   {right: -10%;opacity: 1;}
+    100% {right: 20%;opacity: 0;}
+  }
+  #PosiNuage0 {
+    text-align: center;
+    opacity: 1;
+    position:fixed;
+  	right:-25%;
+  	bottom:55%;
+  	margin:0;
+  	padding:0;
+    text-align: right;
+    animation-name: Nuage0;
+    animation-timing-function: ease-in-out;
+    animation-duration: 25s;
+    animation-fill-mode: forwards;
+    animation-iteration-count:infinite
+  }
+  @keyframes Nuage0 {
+    0%   {right: -25%;opacity: 1;}
+    100% {right: 20%;opacity: 0;}
+  }
+  #contenu {
+  	display:visible;
+  	}
+    #Nuage4 {
+    z-index:1;
+     	 width:93%;
+    	}
+    #PosiNuage4 {
+      text-align: center;
+      opacity: 1;
+      position:fixed;
+    	right:10%;
+    	bottom:15%;
+    	margin:0;
+    	padding:0;
+      text-align: right;
+      animation-name: Nuage4;
+      animation-timing-function: ease-in-out;
+      animation-duration: 50s;
+      animation-fill-mode: forwards;
+      animation-iteration-count:infinite
+    }
+    @keyframes Nuage4 {
+      0%   {right: 10%;opacity: 1;}
+
+      100% {right: 20%;opacity: 0;}
+    }
+
+
+.containerMenu {
+  position: relative;
+  height: 80%;
+  color:red;
+  color: rgba(B1, 10, 0D, 0%);
+  transition: transform 1s;
 }
+.containerMenuBis {
+  position: relative;
+  height: 80%;
+  color:red;
+  color: rgba(B1, 10, 0D, 0%);
+  transform: rotate(10deg);
+}
+
+.centered {
+  position: absolute;
+  /*top: -17%;
+  left: 50%;*/
+  transform: translate(15%, -200%);
+  font-family: 'Metamorphous', cursive;
+  font-size:1vw;
+  font-weight: bold;
+  text-shadow: -1px -1px 3px White, 2px 2px 3px rgba(0,0,0,1);
+
+}
+
+.centered::first-letter {
+  color: rgba(78, 0E, 0A, 1);
+  font-size: 140%;
+}
+.containerMenu:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  color: rgba(40, 4E, 3C, 0%);
+  transform: rotate(5deg);
+}
+
+
+.container2 {
+  font-family: 'Metamorphous', cursive;
+  font-size:16px;
+  color: rgba(B1, 10, 0D, 0%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  height:20%;
+  width:100%;
+}
+.flex-container > div {
+  width: 12.5%;
+  margin: 0px;
+  text-align: center;
+  line-height: 30px;
+}
+/*<img src="Image/SonOn.png" id="Ecoute" width="25px" onclick="test()" >
+<div id="Ecoute0" style="visibility:hidden;" >1</div>*/
 #main {
   display: flex;
   flex: 1;
   flex-direction: column;
+  max-height: 95%;
+  flex-wrap: nowrap;
 }
 #main > article {
   flex: 1;
@@ -24,13 +549,18 @@ body {
 }
 #main > nav {
   order: -1;
+  max-width:7.5%;
 }
 header, footer {
   background: yellowgreen;
-  height: 20vh;
+  /*height: 20vh;*/
+  max-height: 5%;
+  height: 40px;
+
 }
 header, footer, article, nav, aside {
   padding: 1em;
+
 }
 @media screen and (min-width: 576px) {
   #main {
@@ -42,12 +572,96 @@ header, footer, article, nav, aside {
   }
 }
 </style>
-<body>
-  <header>Header</header>
+</head>
+
+  <body onload="debut()">
+  <audio  id="MonSon" src="Image/Son.wav"></audio>
+
+  <header>
+    <img src="Image/SonOn.png" id="Ecoute" width="25px"  style="margin-top: -40px;" onclick="test()" >
+    <div id="Ecoute0" style="visibility:hidden;" >1</div>
+      <div class="container2" id="expication" style="margin-top: -40px;">&nbsp
+      </div>
+  </header>
   <div id="main">
-    <article>Article</article>
-    <nav>Nav</nav>
-    <aside>Aside</aside>
+
+    <article>
+      <iframe id="Frame" style="position: fixed;margin-left:0%;margin-top:1%;z-index:-1;backgroundColor :transparent;visibility:hidden;" onload="this.style.visibility = 'visible';"
+          width="95%;" height="900px;" scrolling="0;" frameBorder="0px;"
+          src="Home.html">
+      </iframe>
+    </article>
+
+    <nav>
+          <div id="KTR1" class="containerMenu"  onmouseout="essaiVide()" onmouseover="essai11()" >
+              <img id="Img1" src="Image/Logo2.png" style="height: 5%;">
+              <div class="centered"></div>
+          </div>
+          <div id="KTR2"  class="containerMenuBis" onmouseout="essaiVide()" onmouseover="essai21()" onclick="SautHome()">
+              <img  id="Img2" src="Image/Logo-elvenarVide2.png" style="height: 5%;" >
+              <div class="centered">AccueiL</div>
+          </div>
+
+          <div id="KTR3"  class="containerMenu" onmouseout="essaiVide()" onmouseover="essai31()" onclick="SautEvent()">
+              <img src="Image/Logo-elvenarVide2.png" style="height: 5%;" >
+              <div class="centered">EvenT</div>
+          </div>
+          <div id="KTR4"  class="containerMenu" onmouseout="essaiVide()" onmouseover="essai41()" onclick="SautAventure()">
+              <img src="Image/Logo-elvenarVide2.png" style="height: 5%;" >
+              <div class="centered">AventurE</div>
+          </div>
+          <div id="KTR5"  class="containerMenu" onmouseout="essaiVide()" onmouseover="essai51()" onclick="SautTournois()">
+              <img src="Image/Logo-elvenarVide2.png" style="height: 5%;" >
+              <div class="centered">TournoI</div>
+          </div>
+          <div id="KTR6"  class="containerMenu" onmouseout="essaiVide()" onmouseover="essai61()" onclick="SautJournal()">
+              <img src="Image/Logo-elvenarVide2.png" style="height: 5%;" >
+              <div class="centered">JournaL</div>
+          </div>
+          <div id="KTR7"  class="containerMenu" onmouseout="essaiVide()" onmouseover="essai71()" onclick="SautLiens()">
+              <img src="Image/Logo-elvenarVide2.png" style="height: 5%;">
+              <div class="centered">LienS</div>
+          </div>
+          <div id="KTR8"  class="containerMenu" onmouseout="essaiVide()" onmouseover="essai81()" onclick="SautPadawan()">
+              <img src="Image/Logo-elvenarVide2.png" style="height: 5%;" >
+              <div class="centered">PadawaN</div>
+          </div>
+
+    </nav>
+
+    <aside>
+      <div id="PosiNuage1">
+        <img  id="Nuage1"  src="Image/Nuage1.png"    >
+      </div>
+      <div id="PosiNuage2">
+        <img  id="Nuage2"  src="Image/Nuage2.png"    >
+      </div>
+      <div id="PosiNuage3">
+        <img  id="Nuage3"  src="Image/Nuage3.png"    >
+      </div>
+      <div id="PosiNuage0">
+        <img  id="Nuage0"  src="Image/Nuage0.png"    >
+      </div>
+      <div id="PosiNuage4">
+        <img  id="Nuage4"  src="Image/Nuage3.png"    >
+      </div>
+
+      <div id="PosiPortail">
+        <img  id="Portail"  src="Image/Chateau.gif"    >
+      </div>
+    </aside>
   </div>
 
+
+
+
+
+
+
+
+
+
+
+
 </body>
+</html>
