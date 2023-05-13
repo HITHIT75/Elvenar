@@ -38,15 +38,24 @@ body {
 #main > nav {
   background: beige;
     /* flex: 0 0 8vw; */
-    flex: 0 0 150px;
+    flex: 0 0 130px;
   /* display: inline-grid; */
   align-content: space-between;
   justify-content: center; /* align horizontal */
   flex-flow: row wrap;
   order: -1;
-
-align-items: stretch;
+  align-items: stretch;
+  margin-left: -130px;
+  animation-name: navdroite;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
   }
+  @keyframes navdroite {
+    from {margin-left: -130px;}
+    to {margin-left: 0px;}
+  }
+
 header  {
   background: yellowgreen;
   height: 5vh;
@@ -69,7 +78,6 @@ header,  article, nav, aside {
 .containerMenu {
   color: Red;
   color: rgba(B1, 10, 0D, 0%);
-  transition: transform 1s;
   text-align: center;
   line-height: 2em;
 
@@ -80,7 +88,7 @@ header,  article, nav, aside {
 
 margin-top: -7.2vh;
    font-family: 'Metamorphous', cursive;
-   text-shadow: -1px -1px 3px White, 2px 2px 3px rgba(0,0,0,1);
+   text-shadow: -1px -1px 1px White, 1px 1px 1px rgba(0,0,0,1);
    font-size:21px;
    font-weight: bold;
    max-height: 10ex
