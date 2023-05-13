@@ -10,6 +10,24 @@
 
 
 <title>Example</title>
+<script>
+function navOnOff() {
+
+  Res=document.getElementById("nav").classList
+
+  // if (res="nav1") {
+  //     document.getElementById("imgNavOO").src="Image/Logo31.png"
+  // }
+  // if (res="nav1 nav2") {
+  //     document.getElementById("imgNavOO").src="Image/Logo32.png"
+  // }
+document.getElementById("imgNavOO").classList.toggle("imgNavOO2");
+document.getElementById("nav").classList.toggle("nav2");
+}
+</script>
+
+
+
 <style>
 * {
   box-sizing: border-box;
@@ -35,7 +53,34 @@ body {
   align-content: space-between;
   justify-content: center; /* align horizontal */
 }
-#main > nav {
+.imgNavOO1 {
+  content: url('Image/Logo32.png');
+  animation-name: imgNavDroite;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes imgNavDroite {
+  from {margin-left: -50px;  transform: rotate(0deg);}
+  to {margin-left: 130px;  transform: rotate(360deg);}
+}
+
+
+
+.imgNavOO2 {
+  content: url('Image/Logo31.png');
+  animation-name: imgNavGauche;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+
+}
+@keyframes imgNavGauche {
+  from {margin-left: 130px;transform: rotate(0deg);}
+  to {margin-left: 5px;transform: rotate(-360deg);}
+}
+
+.nav1 {
   background: beige;
     /* flex: 0 0 8vw; */
     flex: 0 0 130px;
@@ -55,6 +100,31 @@ body {
     from {margin-left: -130px;}
     to {margin-left: 0px;}
   }
+.nav2 {
+    background: beige;
+      /* flex: 0 0 8vw; */
+      flex: 0 0 130px;
+    /* display: inline-grid; */
+    align-content: space-between;
+    justify-content: center; /* align horizontal */
+    flex-flow: row wrap;
+    order: -1;
+    align-items: stretch;
+    margin-left: 0px;
+    animation-name: navgauche;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    }
+    @keyframes navgauche {
+      from {margin-left: 0px;}
+      to {margin-left: -130px;}
+    }
+
+
+
+
+
 
 header  {
   background: yellowgreen;
@@ -104,12 +174,14 @@ margin-top: -7.2vh;
 
 </style>
 <body>
-  <header>Header</header>
+  <header>
+      <img id="imgNavOO" class="imgNavOO1" onclick="navOnOff()" src="Image/Logo32.png" style ="margin-left:130px;margin-top:-15px;cursor: pointer;">
+  </header>
   <div id="main">
     <article>
 
     </article>
-    <nav>
+    <nav id="nav" class='nav1'>
       <div style="margin-top: -6vh"  class="containerMenu"  onmouseout="essaiVide()" onmouseover="essai11()" >
           <img src="Image/Logo2.png" style="width: 90%;">
           <div class="centered"></div>
