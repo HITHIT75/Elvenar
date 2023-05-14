@@ -23,6 +23,8 @@ function navOnOff() {
   // }
 document.getElementById("imgNavOO").classList.toggle("imgNavOO2");
 document.getElementById("nav").classList.toggle("nav2");
+document.getElementById("K2").id.toggle("K2bis");
+document.getElementById("K3").id.toggle("K3bis");
 }
 </script>
 
@@ -45,6 +47,7 @@ body {
 }
 #main > article {
   flex: 1;
+  background: beige;
 }
 #main > aside {
   background: beige;
@@ -155,21 +158,132 @@ header,  article, nav, aside {
 
 
  .centered {
-
-margin-top: -7.2vh;
+  color: #C7100A;
+  font-size:21px;
+  font-weight: bold;
+  /* margin-top: -7.2vh; */
+  font-variant-caps: small-caps;
    font-family: 'Metamorphous', cursive;
-   text-shadow: -1px -1px 1px White, 1px 1px 1px rgba(0,0,0,1);
-   font-size:21px;
-   font-weight: bold;
+   /* text-shadow: -1px -1px 1px rgba(255,255,255,0.75), 1px 1px 1px rgba(0,0,0,0.75); */
+   background-image: linear-gradient(#E41E13, #660B06);
+   -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    z-index: 7;
+
+
+
+     text-shadow: -1px -1px 1px white,1px 1px 4px black,-1px -1px 3px black
+
+
    max-height: 10ex
 
 }
+.centered2 {
+  color: #C7100A;
+  font-size:210px;
+  font-weight: bold;
+font-variant-caps: small-caps;
+  font-family: 'Metamorphous', cursive;
+  /* text-shadow: -1px -1px 1px rgba(255,255,255,0.75), 1px 1px 1px rgba(0,0,0,0.75); */
+
+background-image: linear-gradient(#E41E13, #660B06);
+-webkit-background-clip: text;
+ -moz-background-clip: text;
+ background-clip: text;
+ color: transparent;
+text-shadow: -4px -4px 5px #E8610A,1px 1px 5px black,-5px -5px 4px black */
+}
+.centered3 {
+  text-align: center;
+  line-height: 85px;
+  width: 105px;
+  color: #C7100A;
+  font-size:21px;
+  font-weight: bold;
+  font-variant-caps: small-caps;
+  font-family: 'Metamorphous', cursive;
+  /* text-shadow: -1px -1px 1px #E8610A,1px 1px 1px black,-2px -2px 1px black ;  */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('Image/Logo-elvenarVide2.png')
+  /*text-shadow: -4px -4px 5px #E8610A,1px 1px 5px black,-5px -5px 4px black */
+  }
+  .centered3bis {
+    margin-top: -100px;
+    text-align: center;
+    line-height: 85px;
+    width: 105px;
+    color: #C7100A;
+    font-size:21px;
+    font-weight: bold;
+    font-variant-caps: small-caps;
+    font-family: 'Metamorphous', cursive;
+    /* text-shadow: -1px -1px 1px #E8610A,1px 1px 1px black,-2px -2px 1px black ;  */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('Image/Logo-elvenarVide2.png')
+    /*text-shadow: -4px -4px 5px #E8610A,1px 1px 5px black,-5px -5px 4px black */
+    }
+
+
+
+
 .containerMenu:hover {
   opacity: 0.7;
   cursor: pointer;
   color: rgba(40, 4E, 3C, 0%);
   transform: rotate(5deg);
 }
+#K2 {
+  animation-name: Kbas2;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+
+}
+@keyframes Kbas2 {
+  from {margin-top: -6.3vh;}
+  to {margin-top: 6.3vh;}
+}
+#K2bis {
+  animation-name: Kbas2Bis;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes Kbas2 {
+  from {margin-top: -6.3vh;}
+  to {margin-top: 6.3vh;}
+}
+@keyframes Kbas2Bis {
+  from {margin-top: 6.3vh;}
+  to {margin-top: -6.3vh;}
+}
+
+#K3 {
+  animation-name: Kbas3;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+
+}
+#K3bis {
+  animation-name: Kbas3bIS;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes Kbas3 {
+  from {margin-top: -20vh;}
+  to {margin-top: 2.8vh;}
+}
+@keyframes Kbas3bIS {
+  from {margin-top: 2.8vh;}
+  to {margin-top: 20vh;}
+}
+
 
 
 </style>
@@ -179,31 +293,45 @@ margin-top: -7.2vh;
   </header>
   <div id="main">
     <article>
-
+      <div class="centered3">ElvenaR</div>
+      <div class="centered2" >ElvenaR</div>
+      <img style="width:40%" src="Image/Logo1.png">
     </article>
     <nav id="nav" class='nav1'>
-      <div style="margin-top: -6vh"  class="containerMenu"  onmouseout="essaiVide()" onmouseover="essai11()" >
+      <!-- <div style="margin-top: -6vh"  class="containerMenu"  onmouseout="essaiVide()" onmouseover="essai11()" >
           <img src="Image/Logo2.png" style="width: 90%;">
           <div class="centered"></div>
-      </div>
-      <div style="margin-top: 6.3vh" class="containerMenu" onmouseout="essaiVide()" onmouseover="essai21()" onclick="SautHome()">
-          <img  src="Image/Logo-elvenarVide2.png" style="width: 90%;" >
+      </div> -->
+<div style="margin-top: -60px;background-image: url('Image/Logo2.png')" class="centered3">...</div>
+
+<div class="centered3">AccueiL</div>
+<div class="centered3">EvenT</div>
+<div class="centered3">AventurE</div>
+<div class="centered3">TournoI</div>
+<div class="centered3">JournaL</div>
+<div class="centered3">LienS</div>
+<div class="centered3">AccueiL</div>
+<div class="centered3">PadawaN</div>
+
+      <!-- <div  id="K2" class="containerMenu" onmouseout="essaiVide()" onmouseover="essai21()" onclick="SautHome()">
           <div class="centered">AccueiL</div>
+          <img src="Image/Logo-elvenarVide2.png" style="width: 90%;" >
+
       </div>
 
-      <div style="margin-top: 2.8vh" class="containerMenu" onmouseout="essaiVide()" onmouseover="essai31()" onclick="SautEvent()">
+      <div id="Img3" style="margin-top: 2.8vh" id="K3" class="containerMenu" onmouseout="essaiVide()" onmouseover="essai31()" onclick="SautEvent()">
           <img src="Image/Logo-elvenarVide2.png" style="width: 90%;" >
           <div class="centered">EvenT</div>
       </div>
-      <div  style="margin-top: 2.8vh"  class="containerMenu" onmouseout="essaiVide()" onmouseover="essai41()" onclick="SautAventure()">
+      <div  style="margin-top: 2.8vh" id="K3" class="containerMenu" onmouseout="essaiVide()" onmouseover="essai41()" onclick="SautAventure()">
           <img src="Image/Logo-elvenarVide2.png" style="width: 90%;" >
           <div class="centered">AventurE</div>
       </div>
-      <div  style="margin-top: 2.8vh"   class="containerMenu" onmouseout="essaiVide()" onmouseover="essai51()" onclick="SautTournois()">
+      <div  style="margin-top: 2.8vh"  id="K3"  class="containerMenu" onmouseout="essaiVide()" onmouseover="essai51()" onclick="SautTournois()">
           <img src="Image/Logo-elvenarVide2.png" style="width: 90%;" >
           <div class="centered">TournoI</div>
       </div>
-      <div  style="margin-top: 2.8vh"  class="containerMenu" onmouseout="essaiVide()" onmouseover="essai61()" onclick="SautJournal()">
+      <div  style="margin-top: 2.8vh"  id="K3" class="containerMenu" onmouseout="essaiVide()" onmouseover="essai61()" onclick="SautJournal()">
           <img src="Image/Logo-elvenarVide2.png" style="width: 90%;" >
           <div class="centered">JournaL</div>
       </div>
@@ -214,7 +342,7 @@ margin-top: -7.2vh;
       <div  style="margin-top: 2.8vh" class="containerMenu" onmouseout="essaiVide()" onmouseover="essai81()" onclick="SautPadawan()">
           <img src="Image/Logo-elvenarVide2.png" style="width: 90%;" >
           <div class="centered">PadawaN</div>
-      </div>
+      </div> -->
 
     </nav>
     <aside>Aside</aside>
