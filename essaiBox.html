@@ -23,9 +23,54 @@ function navOnOff() {
   // }
 document.getElementById("imgNavOO").classList.toggle("imgNavOO2");
 document.getElementById("nav").classList.toggle("nav2");
-document.getElementById("K2").id.toggle("K2bis");
-document.getElementById("K3").id.toggle("K3bis");
+document.getElementById("MenuItem1").classList.toggle("centered3bis");
+document.getElementById("MenuItem2").classList.toggle("centered3bis");
+document.getElementById("MenuItem3").classList.toggle("centered3bis");
+document.getElementById("MenuItem4").classList.toggle("centered3bis");
+document.getElementById("MenuItem5").classList.toggle("centered3bis");
+document.getElementById("MenuItem6").classList.toggle("centered3bis");
+document.getElementById("MenuItem7").classList.toggle("centered3bis");
+document.getElementById("MenuItem8").classList.toggle("centered3bis");
+document.getElementById("MenuItem9").classList.toggle("centered3bis");
 }
+function test() {
+      Ecouter = document.getElementById("Ecoute0").innerHTML
+      document.getElementById("Ecoute0").innerHTML=Math.abs(Ecouter-1);
+    ActualisationEcouteur()
+  }
+function essai11() {
+  document.getElementById("expication").innerHTML= "Ca c'est le logo du jeu auquel tu joues -T'avais jamais remarqué ?"
+}
+function essaiVide() {
+  document.getElementById("expication").innerHTML = ""
+}
+function essai21() {
+  document.getElementById("expication").innerHTML = "La page d'accueil avec les informations sensibles de la confrérie."
+}
+function essai31() {
+  document.getElementById("expication").innerHTML = "La listes des quêtes de l'event avec possibilité de colorier les quêtes à anticiper et de faire disparaître les quêtes réalisées."
+}
+function essai41() {
+  document.getElementById("expication").innerHTML = "Les chemins & étapes sélectionnés pour l'aventure et un simulateur gratuit pour doser manufactures et ateliers."
+}
+function essai61() {
+  document.getElementById("expication").innerHTML = "Le journal de bord de la confrérie."
+}
+function essai51() {
+  document.getElementById("expication").innerHTML = "Des informations pour bien chiader son tournoi."
+}
+function essai71() {
+  document.getElementById("expication").innerHTML = "Une compile des liens elvenar utiles et inutiles sur internet."
+}
+function essai81() {
+  document.getElementById("expication").innerHTML = "Les recommandations pour les pauvres nouveaux arrivants dans la confrérie."
+}
+function essai91() {
+  document.getElementById("expication").innerHTML = "Ceci est le blason de la confrérie. Tu peux cliquer dessus si ça t'amuse."
+}
+
+
+
 </script>
 
 
@@ -196,37 +241,68 @@ background-image: linear-gradient(#E41E13, #660B06);
 text-shadow: -4px -4px 5px #E8610A,1px 1px 5px black,-5px -5px 4px black */
 }
 .centered3 {
-  text-align: center;
-  line-height: 85px;
-  width: 105px;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+margin-top: -100px;
+line-height: 5px;
+width: 0px;
+
+
+  /* line-height: 75px;
+  width: 90px; */
+
+  vertical-align: middle;
+
   color: #C7100A;
-  font-size:21px;
+  font-size:17px;
   font-weight: bold;
   font-variant-caps: small-caps;
   font-family: 'Metamorphous', cursive;
-  /* text-shadow: -1px -1px 1px #E8610A,1px 1px 1px black,-2px -2px 1px black ;  */
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url('Image/Logo-elvenarVide2.png')
-  /*text-shadow: -4px -4px 5px #E8610A,1px 1px 5px black,-5px -5px 4px black */
+  background-image: url('Image/Logo-elvenarVide2.png');
+  animation-name: Menubas;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  }
+  @keyframes Menubas{
+    from {margin-top: -100px;line-height: 5px;width: 0px;}
+    to {margin-top: 0px;line-height: 75px;width: 90px;}
   }
   .centered3bis {
-    margin-top: -100px;
-    text-align: center;
-    line-height: 85px;
-    width: 105px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+margin-top: 0px;
+line-height: 75px;
+width: 90px;
+
+
+    vertical-align: middle;
     color: #C7100A;
-    font-size:21px;
+    font-size:17px;
     font-weight: bold;
     font-variant-caps: small-caps;
     font-family: 'Metamorphous', cursive;
-    /* text-shadow: -1px -1px 1px #E8610A,1px 1px 1px black,-2px -2px 1px black ;  */
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url('Image/Logo-elvenarVide2.png')
-    /*text-shadow: -4px -4px 5px #E8610A,1px 1px 5px black,-5px -5px 4px black */
+    background-image: url('Image/Logo-elvenarVide2.png');
+    animation-name: Menuhaut;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
     }
-
+    @keyframes Menuhaut{
+      from {margin-top: 0px;line-height: 75px;width: 90px;}
+      to {margin-top: -100px;line-height: 5px;width: 0px;}
+    }
+.centered3:hover {
+      opacity: 0.7;
+      cursor: pointer;
+      transform: rotate(5deg);
+    }
 
 
 
@@ -283,35 +359,47 @@ text-shadow: -4px -4px 5px #E8610A,1px 1px 5px black,-5px -5px 4px black */
   from {margin-top: 2.8vh;}
   to {margin-top: 20vh;}
 }
-
+.containerExpli {
+  font-family: 'Metamorphous', cursive;
+  font-size:18px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
 
 
 </style>
 <body>
   <header>
       <img id="imgNavOO" class="imgNavOO1" onclick="navOnOff()" src="Image/Logo32.png" style ="margin-left:130px;margin-top:-15px;cursor: pointer;">
+      <div class="containerExpli" id="expication">
+              .centered-element
+      </div>
+
   </header>
   <div id="main">
     <article>
-      <div class="centered3">ElvenaR</div>
-      <div class="centered2" >ElvenaR</div>
-      <img style="width:40%" src="Image/Logo1.png">
+      <iframe id="Frame" style="position: fixed;margin-left:0%;margin-top:1%;z-index:-1;backgroundColor :transparent;visibility:hidden;" onload="this.style.visibility = 'visible';"
+          width="95%;" height="900px;" scrolling="0;" frameBorder="0px;"
+          src="Home.html">
+      </iframe>
     </article>
     <nav id="nav" class='nav1'>
       <!-- <div style="margin-top: -6vh"  class="containerMenu"  onmouseout="essaiVide()" onmouseover="essai11()" >
           <img src="Image/Logo2.png" style="width: 90%;">
           <div class="centered"></div>
       </div> -->
-<div style="margin-top: -60px;background-image: url('Image/Logo2.png')" class="centered3">...</div>
+<div  id="MenuItem1" style="margin-top: -60px;background-image: url('Image/Logo2.png')" class="centered3">&nbsp;</div>
 
-<div class="centered3">AccueiL</div>
-<div class="centered3">EvenT</div>
-<div class="centered3">AventurE</div>
-<div class="centered3">TournoI</div>
-<div class="centered3">JournaL</div>
-<div class="centered3">LienS</div>
-<div class="centered3">AccueiL</div>
-<div class="centered3">PadawaN</div>
+<div class="centered3" id="MenuItem2"   onmouseout="essaiVide()" onmouseover="essai11()">AccueiL</div>
+<div class="centered3" id="MenuItem3" onmouseout="essaiVide()" onmouseover="essai21()">EvenT</div>
+<div class="centered3" id="MenuItem4">AventurE</div>
+<div class="centered3" id="MenuItem5">TournoI</div>
+<div class="centered3" id="MenuItem6">JournaL</div>
+<div class="centered3" id="MenuItem7">LienS</div>
+<div class="centered3" id="MenuItem8">AccueiL</div>
+<div class="centered3" id="MenuItem9">PadawaN</div>
 
       <!-- <div  id="K2" class="containerMenu" onmouseout="essaiVide()" onmouseover="essai21()" onclick="SautHome()">
           <div class="centered">AccueiL</div>
