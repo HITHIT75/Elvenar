@@ -93,55 +93,55 @@ function SautDoigt(){
   document.getElementById("Frame").src="Zoom.html";
   Opacifier(9)
 }
-function SautMerveille(){
+function SautJournal(){
   JouerSon()
-
-document.getElementById("Frame").src="CarteDonjon.html";
-  //document.getElementById("Frame").src="Merveilles.html";
   Opacifier(6)
+document.getElementById("Frame").src="Journal.html";
+  //document.getElementById("Frame").src="Merveilles.html";
+
 }
 function SautPadawan(){
   JouerSon()
-  document.getElementById("Frame").src="Padawan.html";
   Opacifier(8)
+  document.getElementById("Frame").src="Padawan.html";
 }
 function SautHome(){
   JouerSon()
-  document.getElementById("Frame").src="Home.html";
   Opacifier(2)
+  document.getElementById("Frame").src="Home.html";
 }
 function SautAventure(){
   JouerSon()
-  document.getElementById("Frame").src="Aventure.html";
   Opacifier(4)
+  document.getElementById("Frame").src="Aventure.html";
 }
 function SautLiens(){
   JouerSon()
-  document.getElementById("Frame").src="Liens.html";
   Opacifier(7)
+  document.getElementById("Frame").src="Liens.html";
 }
 function SautTournois(){
   JouerSon()
-  document.getElementById("Frame").src="Tournois.html";
   Opacifier(5)
+  document.getElementById("Frame").src="Tournois.html";
 }
 function SautEvent(){
   JouerSon()
-  document.getElementById("Frame").src="Event.html";
   Opacifier(3)
+  document.getElementById("Frame").src="Event.html";
 }
 function Opacifier(Num){
-  document.getElementById("MenuItem1").style.transform = "rotate(0deg)";
-  document.getElementById("MenuItem2").style.transform = "rotate(0deg)";
-  document.getElementById("MenuItem3").style.transform = "rotate(0deg)";
-  document.getElementById("MenuItem4").style.transform = "rotate(0deg)";
-  document.getElementById("MenuItem5").transform = "rotate(0deg)";
-  document.getElementById("MenuItem6").transform = "rotate(0deg)";
-  document.getElementById("MenuItem7").transform = "rotate(0deg)";
-  document.getElementById("MenuItem8").transform = "rotate(0deg)";
+  document.getElementById("MenuItem1").style.transform = none;
+  document.getElementById("MenuItem2").style.transform = none;
+  document.getElementById("MenuItem3").style.transform = none;
+  document.getElementById("MenuItem4").style.transform = none;
+  document.getElementById("MenuItem5").transform = none;
+  document.getElementById("MenuItem6").transform = none;
+  document.getElementById("MenuItem7").transform = none;
+  document.getElementById("MenuItem8").transform = none;
   var Cible = "MenuItem" + Num
   // document.getElementById(Cible).style.opacity= "0.5";
-  document.getElementById(Cible).style.transform = "rotate(5deg)";
+  document.getElementById(Cible).style.transform = "rotate(10deg)";
 }
 
 </script>
@@ -157,6 +157,12 @@ body {
   min-height: 100vh;
   flex-direction: column;
   margin: 0;
+  background-size: cover;
+  background-attachment:fixed;
+  background-image:url(Image/Ecran2.png)
+
+
+
 }
 #main {
   display: flex;
@@ -167,9 +173,10 @@ body {
   flex: 1;
 }
 #main > aside {
+  /* flex: 0 0 30vw; */
   display: flex;
   align-content: space-between;
-  justify-content: center; 
+  justify-content: center; /* align horizontal */
 }
 .imgNavOO1 {
   content: url('Image/Logo32.png');
@@ -195,7 +202,9 @@ body {
   to {margin-left: 5px;transform: rotate(-360deg);}
 }
 .nav1 {
-  flex: 0 0 130px;
+    /* flex: 0 0 8vw; */
+    flex: 0 0 130px;
+  /* display: inline-grid; */
   align-content: space-between;
   justify-content: center; /* align horizontal */
   flex-flow: row wrap;
@@ -212,7 +221,9 @@ body {
     to {margin-left: 0px;}
   }
 .nav2 {
-    flex: 0 0 130px;
+      /* flex: 0 0 8vw; */
+      flex: 0 0 130px;
+    /* display: inline-grid; */
     align-content: space-between;
     justify-content: center; /* align horizontal */
     flex-flow: row wrap;
@@ -231,9 +242,10 @@ body {
 header  {
   height: 5vh;
 }
-header,  article, nav, aside {
+/* header,  article, nav, aside {
   padding: 1em;
-}
+} */
+
 .centered3 {
   display: flex;
   align-items:center;
@@ -263,7 +275,7 @@ header,  article, nav, aside {
     display: flex;
     align-items:center;
     justify-content:center;
-    margin-top: -60px;
+    margin-top: -45px;
     line-height: 75px;
     width: 90px;
     vertical-align: middle;
@@ -308,6 +320,15 @@ header,  article, nav, aside {
       cursor: pointer;
       transform: rotate(5deg);
     }
+
+
+
+/* .containerMenu:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  color: rgba(40, 4E, 3C, 0%);
+  transform: rotate(5deg);
+} */
 #K2 {
   animation-name: Kbas2;
   animation-duration: 0.5s;
@@ -334,33 +355,13 @@ header,  article, nav, aside {
   to {margin-top: -6.3vh;}
 }
 
-/* #K3 {
-  animation-name: Kbas3;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-
-}
-#K3bis {
-  animation-name: Kbas3bIS;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-}
-@keyframes Kbas3 {
-  from {margin-top: -20vh;}
-  to {margin-top: 2.8vh;}
-}
-@keyframes Kbas3bIS {
-  from {margin-top: 2.8vh;}
-  to {margin-top: 20vh;}
-} */
 .containerExpli {
   font-family: 'Metamorphous', cursive;
-  font-size:14px;
+  font-size:12px;
     color: black;
-  top:-90px
-  textAlign:center;
+  text-align:center;
+  vertical-align:middle;
+  line-height: 14px;
   /* display: flex;
   justify-content: center;
   align-items: center; */
@@ -371,13 +372,30 @@ header,  article, nav, aside {
 <body onload="debut()">
 <audio  id="MonSon" src="Image/Son.wav"></audio>
 
-  <header>
-      <img id="imgNavOO" class="imgNavOO1" onclick="navOnOff()" src="Image/Logo32.png" style ="float: left;margin-left:50px;margin-top:-15px;cursor: pointer;">
-      <div class="containerExpli" id="expication" style ="display: inline;"">
+  <header >
+    <table>
+      <tr>
+        <th>      <img id="imgNavOO" class="imgNavOO1" onclick="navOnOff()" src="Image/Logo32.png" style ="float: left;margin-left:50px;cursor: pointer;"></th>
+        <th>
+          <img src="Image/SonOn.png" id="Ecoute" width="25px"   onclick="test()" style ="float:right;margin-left:0px;cursor:pointer;">
+          <div id="Ecoute0" style="visibility:hidden;" >1</div>
+        </th>
+
+        <th valign="top">
+              <div class="containerExpli" id="expication" style ="display: inline";>
+                      &nbsp;
+              </div>
+        </th>
+
+      </tr>
+    </table>
+
+      <!-- <img id="imgNavOO" class="imgNavOO1" onclick="navOnOff()" src="Image/Logo32.png" style ="float: left;margin-left:50px;margin-top:-15px;cursor: pointer;">
+      <div class="containerExpli" id="expication" style ="display: inline";>
               &nbsp;
       </div>
       <img src="Image/SonOn.png" id="Ecoute" width="25px"   onclick="test()" style ="float:right;margin-left:0px">
-      <div id="Ecoute0" style="visibility:hidden;" >1</div>
+      <div id="Ecoute0" style="visibility:hidden;" >1</div> -->
   </header>
   <div id="main">
   <article>
@@ -388,7 +406,7 @@ header,  article, nav, aside {
   </article>
   <nav id="nav" class='nav1'>
 
-      <div class="centered3Menu1"  id="MenuItem1" style="margin-top: -60px;background-image: url('Image/Logo2.png')" >&nbsp;</div>
+      <div class="centered3Menu1"  id="MenuItem1" style="background-image: url('Image/Logo2.png')" >&nbsp;</div>
       <div class="centered3" id="MenuItem2"   onmouseout="essaiVide()" onmouseover="essai11()" onclick="SautHome()">AccueiL</div>
       <div class="centered3" id="MenuItem3" onmouseout="essaiVide()" onmouseover="essai21()" onclick="SautEvent()">EvenT</div>
       <div class="centered3" id="MenuItem4" onmouseout="essaiVide()" onmouseover="essai41()" onclick="SautAventure()">AventurE</div>
