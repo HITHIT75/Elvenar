@@ -11,6 +11,15 @@
 
 <title>Example</title>
 <script>
+function Debut() {
+  Opacifier(2)
+//checkCookie()
+//Chrono(2000)
+
+}
+
+
+
 function navOnOff() {
 
   //Res=document.getElementById("nav").classList
@@ -131,15 +140,11 @@ function SautEvent(){
   document.getElementById("Frame").src="Event.html";
 }
 function Opacifier(Num){
-  document.getElementById("MenuItem1").style.transform = none;
-  document.getElementById("MenuItem2").style.transform = none;
-  document.getElementById("MenuItem3").style.transform = none;
-  document.getElementById("MenuItem4").style.transform = none;
-  document.getElementById("MenuItem5").style.transform = none;
-  document.getElementById("MenuItem6").style.transform = none;
-  document.getElementById("MenuItem7").style.transform = none;
-  document.getElementById("MenuItem8").style.transform = none;
+  Res=document.getElementById("Degre10").innerHTML
+  var Res = "MenuItem" + Res
+  document.getElementById(Res).style.transform = "rotate(0deg)";
   var Cible = "MenuItem" + Num
+  document.getElementById("Degre10").innerHTML=Num
   // document.getElementById(Cible).style.opacity= "0.5";
   document.getElementById(Cible).style.transform = "rotate(10deg)";
 }
@@ -149,9 +154,9 @@ function Opacifier(Num){
 
 
 <style>
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 body {
   display: flex;
   min-height: 100vh;
@@ -369,7 +374,7 @@ header  {
 
 
 </style>
-<body onload="debut()">
+<body onload="Debut()">
 <audio  id="MonSon" src="Image/Son.wav"></audio>
 
   <header >
@@ -377,8 +382,11 @@ header  {
       <tr>
         <th>      <img id="imgNavOO" class="imgNavOO1" onclick="navOnOff()" src="Image/Logo32.png" style ="float: left;margin-left:50px;cursor: pointer;"></th>
         <th>
-          <img src="Image/SonOn.png" id="Ecoute" width="25px"   onclick="test()" style ="float:right;margin-left:0px;cursor:pointer;">
+          <Div style="vertical-align: middle;text-align: center;display: table-cell;">
+          <img src="Image/SonOn.png" id="Ecoute" width="25px"   onclick="test()" style ="display: block;margin: 0 auto;;cursor:pointer;">
+        </div>
           <div id="Ecoute0" style="visibility:hidden;" >1</div>
+          <div id="Degre10" style="visibility:hidden;" >2</div>
         </th>
 
         <th valign="top">
@@ -406,9 +414,9 @@ header  {
   </article>
   <nav id="nav" class='nav1'>
 
-      <div class="centered3Menu1"  id="MenuItem1" style="background-image: url('Image/Logo2.png')" >&nbsp;</div>
-      <div class="centered3" id="MenuItem2"   onmouseout="essaiVide()" onmouseover="essai11()" onclick="SautHome()">AccueiL</div>
-      <div class="centered3" id="MenuItem3" onmouseout="essaiVide()" onmouseover="essai21()" onclick="SautEvent()">EvenT</div>
+      <div class="centered3Menu1"  id="MenuItem1" onmouseout="essaiVide()" onmouseover="essai11()" style="background-image: url('Image/Logo2.png')" >&nbsp;</div>
+      <div class="centered3" id="MenuItem2"   onmouseout="essaiVide()" onmouseover="essai21()" onclick="SautHome()">AccueiL</div>
+      <div class="centered3" id="MenuItem3" onmouseout="essaiVide()" onmouseover="essai31()" onclick="SautEvent()">EvenT</div>
       <div class="centered3" id="MenuItem4" onmouseout="essaiVide()" onmouseover="essai41()" onclick="SautAventure()">AventurE</div>
       <div class="centered3" id="MenuItem5" onmouseout="essaiVide()" onmouseover="essai51()" onclick="SautTournois()">TournoI</div>
       <div class="centered3" id="MenuItem6" onmouseout="essaiVide()" onmouseover="essai61()" onclick="SautJournal()">JournaL</div>
