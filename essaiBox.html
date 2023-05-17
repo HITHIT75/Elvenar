@@ -58,33 +58,83 @@ function JouerSon() {
        }
 
 function essai11() {
+  if (window.innerWidth<850) {
+    document.getElementById("expication").style.fontSize = "5px";
+  }
+  else {
+    document.getElementById("expication").style.fontSize = "12px";
+  }
   document.getElementById("expication").innerHTML= "&nbsp;&nbsp;Ca c'est le logo du jeu auquel tu joues -T'avais jamais remarqué ?"
 }
 function essaiVide() {
   document.getElementById("expication").innerHTML = "&nbsp;"
+
 }
 function essai21() {
-  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;La page d'accueil avec les informations sensibles de la confrérie."
+  if (window.innerWidth<850) {
+    document.getElementById("expication").style.fontSize = "5px";
+  }
+  else {
+    document.getElementById("expication").style.fontSize = "12px";
+  }
+  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;La page d'accueil avec les informations sensibles de la confrérie." + window.innerWidth
+
 }
 function essai31() {
+  if (window.innerWidth<850) {
+    document.getElementById("expication").style.fontSize = "5px";
+  }
+  else {
+    document.getElementById("expication").style.fontSize = "12px";
+  }
   document.getElementById("expication").innerHTML = "&nbsp;&nbsp;La listes des quêtes de l'event avec possibilité de colorier les quêtes à anticiper et de faire disparaître les quêtes réalisées."
 }
 function essai41() {
+  if (window.innerWidth<850) {
+    document.getElementById("expication").style.fontSize = "5px";
+  }
+  else {
+    document.getElementById("expication").style.fontSize = "12px";
+  }
   document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Les chemins & étapes sélectionnés pour l'aventure et un simulateur gratuit pour doser manufactures et ateliers."
 }
 function essai61() {
+  if (window.innerWidth<850) {
+    document.getElementById("expication").style.fontSize = "5px";
+  }
+  else {
+    document.getElementById("expication").style.fontSize = "12px";
+  }
   document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Le journal de bord de la confrérie."
 }
 function essai51() {
   document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Des informations pour bien chiader son tournoi."
 }
 function essai71() {
+  if (window.innerWidth<850) {
+    document.getElementById("expication").style.fontSize = "5px";
+  }
+  else {
+    document.getElementById("expication").style.fontSize = "12px";
+  }
   document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Une compile des liens elvenar utiles et inutiles sur internet."
 }
 function essai81() {
+  if (window.innerWidth<850) {
+    document.getElementById("expication").style.fontSize = "5px";
+  }
+  else {
+    document.getElementById("expication").style.fontSize = "12px";
+  }
   document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Les recommandations pour les pauvres nouveaux arrivants dans la confrérie."
 }
 function essai91() {
+  if (window.innerWidth<850) {
+    document.getElementById("expication").style.fontSize = "5px";
+  }
+  else {
+    document.getElementById("expication").style.fontSize = "12px";
+  }
   document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Ceci est le blason de la confrérie. Tu peux cliquer dessus si ça t'amuse."
 }
 function Saut(){
@@ -96,16 +146,25 @@ function SautGenerik(){
   JouerSon()
   document.getElementById("Frame").src="https://hithit75.github.io/Elvenar/Generikbis.html";
   Opacifier(10)
+  if (window.innerWidth<850) {
+    navOnOff()
+  }
 }
 function SautDoigt(){
   JouerSon()
   document.getElementById("Frame").src="Zoom.html";
   Opacifier(9)
+  if (window.innerWidth<850) {
+    navOnOff()
+  }
 }
 function SautJournal(){
   JouerSon()
   Opacifier(6)
 document.getElementById("Frame").src="Journal.html";
+if (window.innerWidth<850) {
+  navOnOff()
+}
   //document.getElementById("Frame").src="Merveilles.html";
 
 }
@@ -113,31 +172,49 @@ function SautPadawan(){
   JouerSon()
   Opacifier(8)
   document.getElementById("Frame").src="Padawan.html";
+  if (window.innerWidth<850) {
+    navOnOff()
+  }
 }
 function SautHome(){
   JouerSon()
   Opacifier(2)
   document.getElementById("Frame").src="Home.html";
+  if (window.innerWidth<850) {
+    navOnOff()
+  }
 }
 function SautAventure(){
   JouerSon()
   Opacifier(4)
   document.getElementById("Frame").src="Aventure.html";
+  if (window.innerWidth<850) {
+    navOnOff()
+  }
 }
 function SautLiens(){
   JouerSon()
   Opacifier(7)
   document.getElementById("Frame").src="Liens.html";
+  if (window.innerWidth<850) {
+    navOnOff()
+  }
 }
 function SautTournois(){
   JouerSon()
   Opacifier(5)
   document.getElementById("Frame").src="Tournois.html";
+  if (window.innerWidth<850) {
+    navOnOff()
+  }
 }
 function SautEvent(){
   JouerSon()
   Opacifier(3)
   document.getElementById("Frame").src="Event.html";
+  if (window.innerWidth<850) {
+    navOnOff()
+  }
 }
 function Opacifier(Num){
   Res=document.getElementById("Degre10").innerHTML
