@@ -10,12 +10,12 @@ function MessageAlex() {
 	Ligne6 ="<img  src='Image\Blason1.png' class='LienHtml' width='15px' style='display: inline;'><br>"
     	Ligne7 ="Les quêtes vont être mises sur l'onglet évent très bientôt<br>"
 
-	
-	
-	TotalLigne=Ligne1+Ligne2+Ligne3+Ligne4+Ligne5+Ligne6+Ligne7	
+
+
+	TotalLigne=Ligne1+Ligne2+Ligne3+Ligne4+Ligne5+Ligne6+Ligne7
 	document.getElementById("motAlex").innerHTML=	TotalLigne
-}	
-</script>	
+}
+</script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">	</script>
   <script type="text/javascript">
 		$(window).resize(function () {
@@ -45,7 +45,7 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 		var0=parts[1]
    		 result = var0.substring(0, var0.length-4);
 		document.getElementById("motAlex").innerHTML=result
-  
+
 
         }
     };
@@ -103,7 +103,7 @@ window.open('https://docs.google.com/spreadsheets/d/1ipOIG7IVsOwUMadLCSf_twuR17h
 
     function Debut() {
         checkCookie()
-	//MessageAlex()      
+	//MessageAlex()
         var alea = Math.random()
         var Position1 = Entier(alea)
         var alea = Math.random()
@@ -198,9 +198,9 @@ Contenu3[6] =" Je suis la remarquée AlexAngus ! "
 //        <span id ="mot7" > Je vais te parler ici des </span>
 //        <span id ="mot8" >
 //           évenements notables touchant la confrérie.
-//        </span><br>	
-	
-	
+//        </span><br>
+
+
     function Entier(alea){
 
       if (alea <0.15) {  Position1 = 1  }
@@ -233,197 +233,81 @@ Contenu3[6] =" Je suis la remarquée AlexAngus ! "
 </script>
 </head>
 <style>
-    html {
-      overflow: auto;
-      overflow-x: hidden;
-      font-size: 14px;
-     }
-    body  {
+    body {
         font-family: verdana;
         color: #051E4C;
         font-size: 14px;
       }
-      <!-- @media (min-width: 700px) {
-        body{
-          /* Minimum font size */
-          font-size: 18px;
-        }
-      }
-      @media (max-width: 900px) {
-        body{
-          /* Maximum font size */
-          font-size: 10px;
-        }
-      } -->
-    .tooltip2 {
-        position: absolute;
-        display: inline;
-        z-index: 1;
-        top: 30%;
-        left: 10%;
-      }
-    .tooltip3 {
-        position: absolute;
-        display: inline;
-        z-index: 1;
-        top: 53%;
-        left: 18%;
-        }
-    <!-- .tooltiptext {
-        width: 300px;
-        display: inline;
-        //background-color: #990000;
-        color: #051E4C;
-        text-align: left;
-      } -->
-      .boite0 {
-          position:fixed;
-          border-style: dashed solid;
-          top: 0%;
-          left:0%;
-          width:10%;
-          height:3%;
+		marquee {
+		    border:solid;
+		    padding-left: 10px;
+		    padding-right: 10px;
+		    border-radius: 5% / 10%;
+		    border-color: #E2E5E4 #051E4C #051E4C #E2E5E4;
+		    border-width: 4px 3px 3px 4px;
+		      box-shadow: inset -10px -10px 35px gray;
+		      background-image: linear-gradient(105deg, rgba(255,255,255,1) 100%, rgba(226,229,228,1) 140%);
+		           }
 
-      }
-    .boite1 {
-        position:fixed;
-        top:-500%;
-        left:5%;
-        width:100%;
-        height:20%;
-        z-index: 10;
-    }
-
-    .boite3 {
-      position:fixed;
-      top: -600%;
-      left:15%;
-      width:70%;
-      height:18%;
-      z-index: 1;
-    }
-
-    .boite5 {
-      position:fixed;
-      top: 5%;
-      left:7%;
-      width:64%;
-      height:10 vmax;
-      z-index: 2;
-    }
-    .boite6 {
-        position:fixed;
-        top: 6%;
-        left:75%;
-        width:10%;
-        height:20%;
-        z-index: 5;
-    }
-    .boite7 {
-        position:fixed;
-        top: 47%;
-        left:3%;
-        width:10%;
-        height:20%;
-        z-index: 5;
-    }
-    .boite9 {
-      position:fixed;
-      top:46%;
-      left:12%;
-      width:64%;
-      height:10 vmax;
-      z-index: 2;
-    }
-  marquee {
-	color:#487073;
-      width:100%;
-      height:60%;
-      padding: 40px;
-      border:solid;
-      border-radius: 5% / 10%;
-      border-color: #E2E5E4 #051E4C #051E4C #E2E5E4;
-      border-width: 4px 3px 3px 4px;
-        box-shadow: inset -10px -10px 35px gray;
-        background-image: linear-gradient(105deg, rgba(255,255,255,1) 100%, rgba(226,229,228,1) 140%);
-
-
-             }
-
-    @keyframes LienHtml {
-      0%   {opacity: 0;}
-     100% {opacity:1;}
-    }
     .LienHtml {
       animation-name: LienHtml;
       animation-duration: 1s;
       animation-iteration-count: infinite;
     }
+		@keyframes LienHtml {
+      0%   {opacity: 0;}
+     100% {opacity:1;}
+    }
 
-	
 </style>
 <body onload="Debut()" >
 <audio  id="MonSon" src="Image/Son.wav"></audio>
-<div class="boite0" id="Chaine" style="visibility:hidden;">Chaine</div>
 
+<Div style="display:inline-flex;width:80%;height:40%;">
+  <Div style="width: 150px;max-width:150px;display:inline-block;">
+  <img src="Image\Personage2.png" style="width: 130px;max-width:130px;height: 210px">
+  </div>
+  <Div style="width: 90%; display:inline-block;">
+    <marquee  onmouseover="stop()" onmouseout="start()" height="90%"  scrollamount="1" direction="up">
+        <span style="padding-top:10px;padding-bottom: 10px;" id ="mot5">Salut !</span><br>
+        <span id ="mot6" > je suis la grande Alex Angus ! </span><br>
+        <span id ="mot7" > Je vais te parler ici des </span>
+        <span id ="mot8" >
+           évenements notables touchant la confrérie.
+        </span><br>
+       <span >Un nouvel event a commencé hier sur la bêta sous une toute nouvelle forme.<br>
+        Ça a l’air un peu compliqué et fastidieux. À voir...<br>
+        Voici le lien pour regarder la vidéo explicative faite par MarinaDelicia :<br>
+        <img  src="Image\Blason1.png" class="LienHtml" width="15px" style="display: inline;">
+        <a style="display: inline;" target="_blank" href="https://www.youtube.com/watch?v=jyDJLf-EXNM&ab_channel=MarinaDelicia">Aller vers Youtube</a>
+        <img  src="Image\Blason1.png" class="LienHtml" width="15px" style="display: inline;"><br>
+        Les quêtes vont être mises sur l'onglet évent très bientôt<br>
+      </marquee>
+  </div>
+</div>
 
-<div class="boite1" cursor="pointer" onclick="Test()" ><img style="z-index: 10;"cursor="pointer" onclick="Test()" height="116%;" src="Image\Personage1.png"><div>
-<div class="boite3"><div class="tooltiptext">
-  <marquee onmouseover="stop()" onmouseout="start()" scrollamount="1" direction="up">
-  <div class="tooltiptext" id="Zone1" >
-      <span  id ="mot1">Hello !</span>
-      <span id ="mot2" > sublime   </span>
-      <span id ="mot3" > Toi.    </span><br>
-      <span id ="mot4" >
-        Moi, c'est Wençolivius.<br>
-        je mets ici, de manière brève, le résultat de mes raisonnements
-        toujours cools et disciplinés<br>
-        Pas de blabla inutile, mes recommandations sont à suivre car votre avis
-        m'interesse, dans le respect d'une équité de temps de parole et d'une bonne
-        répartition des avis de 25 caractères différents et pourtant pas semblables.<br><br>
-        Voilà, je vous devais la vérité.<br><br>
-        Au fait sur un autre serveur, il y a Dumachin qui a spoilé l'event de Dutruc ! En utilisant un Off-target rétroactif...
-        On trouve cela scandaleux ! On l'a viré cool et discipliné.<br><br>
-        Qu'en pensez-vous ? Car mon avis vous interesse.
-      </span>
-    </marquee></div></div>
-
-<div class="boite5">    <div class="tooltiptext">
-    <marquee  onmouseover="stop()" onmouseout="start()" height="85hv" width= "60%" scrollamount="1" direction="up">
-        <span id ="mot5">Salut !</span><br>
-        
-
-	 <span id="motAlex">Un nouvel Event a commencé hier sur la bêta sous une toute nouvelle forme.<br>
-		Ça a l’air un peu compliqué et fastidieux. À voir...<br>
-		Voici le lien pour regarder la vidéo explicative faite par MarinaDelicia :<br>
-    		<img  src="Image\Blason1.png" class="LienHtml" width="15px" style="display: inline;">
-		<a style="display: inline;" target="_blank" href="https://www.youtube.com/watch?v=jyDJLf-EXNM&ab_channel=MarinaDelicia">Aller vers Youtube</a>
-		<img  src="Image\Blason1.png" class="LienHtml" width="15px" style="display: inline;"><br>
-    		Les quêtes vont être mises sur l'onglet évent très bientôt<br>
-	</span>
-      </marquee></div></div>
-<div class="boite6" ondblclick="Admin()" ><img height="100%;" src="Image\Personage2.png"></div>
-
-
-  <div class="boite7"><img height="100%;" src="Image\Personage3.png"></div>
-  <div class="boite9">    <div class="tooltiptext">
-    <marquee onmouseover="stop()" onmouseout="start()" height="85hv" width= "85%" scrollamount="1" direction="up">
-      <span id ="mot9">Encore toi !?</span><br>
+<Div style="display:inline-flex;width:80%;height:40%;">
+  <Div style="width: 90%; display:inline-block;">
+    <marquee onmouseover="stop()" onmouseout="start()" height="90%" scrollamount="1" direction="up">
+      <span style="padding-top:10px;padding-bottom: 10px;" id ="mot9">Encore toi !?</span><br>
       <span id ="mot10" >Moi, j'te cause </span>
       <span id ="mot11" > des machins </span>
       <span id ="mot12" >
         du portail.<br>
-	      Sur <strong> <span style="color:Red;">'Event'</span></strong> le prochain event est en place.
-	      <br>
-	      Sur <strong> <span style="color:Red;">'Padawan'</span></strong> ajout prochain de la Charte et des annonces merveille.
-	      <br>
-        
+        Sur <strong> <span style="color:Red;">'Event'</span></strong> ajout des numérations & de couleurs par type de quête.
+        <br>
+        Sur <strong> <span style="color:Red;">'Tournois'</span></strong> ajout des unités à préparer sur la page.
+        <br>
+        Sur <strong>'Très con'</strong> les solutions arriveront précisement aux calendes élvénariennes.<br>
+        Notre portail est encore assez pourri, la faute à l'autre gusgus qui y travaille pas assez ;<br>
+        mais bon, on fera avec, c'est suffisament fonctionnel...<br>
+        Nous avons besoin de vos retours pour les bugs, l'ai fôtes d'aurteaugraffe, les suggestions,...<br>
      </marquee>
-        </div></div>
-
-
-
-
+  </div>
+  <Div style="width: 150px;max-width:150px;display:inline-block;overflow: visible;">
+  <img src="Image\Personage3b.png" style="width: 130px;max-width:130px;">
+  </div>
+</div>
 
 
 
