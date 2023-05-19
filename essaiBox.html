@@ -210,6 +210,15 @@ function SautEvent(){
   if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
     navOnOff()
   }
+ function Sauttest(){
+  JouerSon()
+  Opacifier(1)
+  document.getElementById("Frame").src="test.html";
+  if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+    navOnOff()
+  }
+ 
+ 
 }
 function Opacifier(Num){
   Res=document.getElementById("Degre10").innerHTML
@@ -493,7 +502,7 @@ header  {
   </article>
   <nav id="nav" class='nav1'>
 
-      <div class="centered3Menu1"  id="MenuItem1" onmouseout="essaiVide()" onmouseover="essai11()" style="background-image: url('Image/Logo2.png')" >&nbsp;</div>
+      <div class="centered3Menu1"  id="MenuItem1" onmouseout="essaiVide()" onmouseover="essai11()" onclick="Sauttest()" style="background-image: url('Image/Logo2.png')" >&nbsp;</div>
       <div class="centered3" id="MenuItem2"   onmouseout="essaiVide()" onmouseover="essai21()" onclick="SautHome()">AccueiL</div>
       <div class="centered3" id="MenuItem3" onmouseout="essaiVide()" onmouseover="essai31()" onclick="SautEvent()">EvenT</div>
       <div class="centered3" id="MenuItem4" onmouseout="essaiVide()" onmouseover="essai41()" onclick="SautAventure()">AventurE</div>
