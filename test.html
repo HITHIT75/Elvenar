@@ -9,7 +9,7 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4) {
-
+alert(xmlhttp.responseText)
             const parts = xmlhttp.responseText.split("|");
 		var0=parts[1]
    		 result = var0.substring(0, var0.length-4);
