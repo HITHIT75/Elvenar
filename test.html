@@ -1,33 +1,29 @@
 
 <!DOCTYPE html>
-<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-
+<html>
 <script>
 function loadData() {
-//https://docs.google.com/spreadsheets/d/1dMKuTO8IRpIcLGpUCquzwEXG33rULQBouQmcJ4A2kGg/edit#gid=0
-// https://docs.google.com/spreadsheets/d/e/2PACX-1vS7h49K5ALJK98pf34d7KHeUecOC2w7xZLA8r5k6MMNTzOBhA8VvXSo7v5_xlAxPfrw69xGxKg5DqKf/pubhtml?gid=0&single=true
-var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7h49K5ALJK98pf34d7KHeUecOC2w7xZLA8r5k6MMNTzOBhA8VvXSo7v5_xlAxPfrw69xGxKg5DqKf/pub?gid=569730062&single=true&output=csv";
+var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JIJ--cTg2nZoNkudiqBrnvWDs-TZlzcw3PBOGPCv7dl9WxtasEhiJ8eJsRbV/pub?gid=569730062&single=true&output=csv";
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4) {
 
             const parts = xmlhttp.responseText.split("|");
-            document.getElementById("display").innerHTML = parts[1] + "<br><br><br><br>" + parts[2] + "<br><br><br><br>" + parts[3]+ "<br><br><br><br>" + parts[4] + "<br><br><br><br>" +  xmlhttp.responseText ;            
-            
+		var0=parts[1]
+   		 result = var0.substring(0, var0.length-4);
+		alert(result)
         }
     };
     xmlhttp.open("GET", url, true);
     xmlhttp.send(null);
 }
-</script>
-
-</head>
+<script>
 <style>
-
 </style>
 
-<button type="button" onclick="loadData()">Load Spreadsheet </button>
-<div id="display"></div>
+
+<body onload="loadData()">
+
+
 </body>
 </html>
