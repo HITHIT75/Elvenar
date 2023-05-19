@@ -15,13 +15,8 @@ function Debut() {
   Opacifier(2)
 //checkCookie()
 //Chrono(2000)
-
 }
-
-
-
 function navOnOff() {
-
   //Res=document.getElementById("nav").classList
   document.getElementById("imgNavOO").classList.toggle("imgNavOO2");
   document.getElementById("nav").classList.toggle("nav2");
@@ -77,7 +72,7 @@ function essai21() {
   else {
     document.getElementById("expication").style.fontSize = "12px";
   }
-  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;La page d'accueil avec les informations sensibles de la confrérie." + window.innerWidth
+  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Toutes les informations relatives à la confrérie : News et actualités."
 
 }
 function essai31() {
@@ -87,7 +82,8 @@ function essai31() {
   else {
     document.getElementById("expication").style.fontSize = "12px";
   }
-  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;La listes des quêtes de l'event avec possibilité de colorier les quêtes à anticiper et de faire disparaître les quêtes réalisées."
+  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Liste des quêtes avec une visualisation de la difficulté:<br>Vert «facile», jaune «moyen» et rouge «difficile».<br>Possibilité de masquer les quêtes terminées."
+
 }
 function essai41() {
   if (window.innerWidth<850) {
@@ -105,10 +101,10 @@ function essai61() {
   else {
     document.getElementById("expication").style.fontSize = "12px";
   }
-  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Le journal de bord de la confrérie."
+  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Retrouvez ici tous les journaux de bord de la confrérie et la FAQ. ."
 }
 function essai51() {
-  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Des informations pour bien chiader son tournoi."
+  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Toutes les infos pour préparer son tournoi.."
 }
 function essai71() {
   if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
@@ -117,7 +113,7 @@ function essai71() {
   else {
     document.getElementById("expication").style.fontSize = "12px";
   }
-  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Une compile des liens elvenar utiles et inutiles sur internet."
+  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Un listing des liens Elvenar en tout genre."
 }
 function essai81() {
   if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
@@ -126,7 +122,7 @@ function essai81() {
   else {
     document.getElementById("expication").style.fontSize = "12px";
   }
-  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Les recommandations pour les pauvres nouveaux arrivants dans la confrérie."
+  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Conseils et avis aux nouveaux membres."
 }
 function essai91() {
   if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
@@ -161,13 +157,12 @@ function SautDoigt(){
 function SautJournal(){
   JouerSon()
   Opacifier(6)
-document.getElementById("Frame").src="Journal.html";
-  if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
-  navOnOff()
-}
+  document.getElementById("Frame").src="Journal.html";
+    if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+    navOnOff()
+  }
   //document.getElementById("Frame").src="Merveilles.html";
-
-}
+  }
 function SautPadawan(){
   JouerSon()
   Opacifier(8)
@@ -252,11 +247,14 @@ body {
 
 }
 #main > article {
-  flex: 1;
+   flex: 1 1 auto;
+  z-index:5;
+  display: flex; /* new */
+  width:1vw;
 }
 #main > aside {
   /* flex: 0 0 30vw; */
- flex: 0 0 15%;
+ flex: 0 0 10%;
   display: flex;
   align-content: space-between;
   justify-content: center; /* align horizontal */
@@ -298,6 +296,7 @@ body {
   animation-duration: 0.5s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
+    z-index:10;
   }
   @keyframes navdroite {
     from {margin-left: -130px;}
@@ -317,13 +316,15 @@ body {
     animation-duration: 0.5s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
+    z-index:10;
     }
     @keyframes navgauche {
       from {margin-left: 0px;}
       to {margin-left: -130px;}
     }
 header  {
-  height: 5vh;
+  height: 12vh;
+  z-index:9;
 }
 /* header,  article, nav, aside {
   padding: 1em;
@@ -358,7 +359,7 @@ header  {
     display: flex;
     align-items:center;
     justify-content:center;
-    margin-top: -45px;
+    margin-top: -112px;
     line-height: 75px;
     width: 90px;
     vertical-align: middle;
@@ -449,8 +450,9 @@ header  {
   justify-content: center;
   align-items: center; */
   }
-
-
+.Frame {
+  /* background-color: white; */
+  }
 </style>
 <body onload="Debut()">
 <audio  id="MonSon" src="Image/Son.wav"></audio>
@@ -485,9 +487,8 @@ header  {
   </header>
   <div id="main">
   <article>
-      <iframe id="Frame" style="position: fixed;margin-left:0%;margin-top:1%;z-index:-1;backgroundColor :transparent;visibility:hidden;" onload="this.style.visibility = 'visible';"
-          width="95%;" height="120%;" frameBorder="0px;"
-          src="Home.html">
+      <iframe id="Frame" style="Border:0;overflow:hidden; height:99%; width:100%;  top: 0; left: 0; bottom: 0; right: 0;" height="100%" width="100%"
+          src="test.html">
       </iframe>
   </article>
   <nav id="nav" class='nav1'>
