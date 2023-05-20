@@ -20,13 +20,13 @@
 						Max = parts.length-2
 						if (Num=0) {
 							Num=Max*1
-							document.getElementById("Max").innerHTML=Max
-							document.getElementById("Actuel").innerHTML=Num
+							document.getElementById("Max").innerText=Max
+							document.getElementById("Actuel").innerText=Num
 						}
 					var0=parts[Num]
    					result = var0.substring(0, var0.length-4);
-						document.getElementById("Contenu").innerHTML=result
-						document.getElementById("Actuel").innerHTML=Num
+						document.getElementById("Contenu").innerText=result
+						document.getElementById("Actuel").innerText=Num
         }
     	};
 	    xmlhttp.open("GET", url, true);
@@ -35,7 +35,7 @@
 
 	function FlecheMoins() {
 		alert("Moins")
-			Num=document.getElementById("Actuel").innerHTML*1
+			Num=document.getElementById("Actuel").innerText*1
 		alert(Num)
 			if (Num>1) {
 				Num=Num-1
@@ -51,8 +51,8 @@
 		}
 		function FlechePlus() {
 			alert("Plus")
-				Num=document.getElementById("Actuel").innerHTML*1
-				Max=document.getElementById("Max").innerHTML*1
+				Num=document.getElementById("Actuel").innerText*1
+				Max=document.getElementById("Max").innerText*1
 			alert(Max)
 				if (Num<Max) {
 					Num=Num+1
