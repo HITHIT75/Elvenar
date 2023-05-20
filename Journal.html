@@ -10,6 +10,7 @@
       }
   function loadData(Num) {
 	  Num=Num*1
+	  alert("ok" + Num)
   var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JIJ--cTg2nZoNkudiqBrnvWDs-TZlzcw3PBOGPCv7dl9WxtasEhiJ8eJsRbV/pub?gid=569730062&single=true&output=csv";
 
     xmlhttp = new XMLHttpRequest();
@@ -17,7 +18,7 @@
         if (xmlhttp.readyState == 4) {
 
             const parts = xmlhttp.responseText.split("#JdB");
-		alert("ok")
+		
 						Max = parts.length-2
 						if (Num=0) {
 							Num=Max*1
