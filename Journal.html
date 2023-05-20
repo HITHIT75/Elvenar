@@ -6,9 +6,9 @@
 
 <script type="text/javascript">
   function Debut() {
-	  loadData()
+	  loadData(3)
       }
-  function loadData() {
+  function loadData(Num) {
   var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JIJ--cTg2nZoNkudiqBrnvWDs-TZlzcw3PBOGPCv7dl9WxtasEhiJ8eJsRbV/pub?gid=569730062&single=true&output=csv";
   
     xmlhttp = new XMLHttpRequest();
@@ -16,7 +16,7 @@
         if (xmlhttp.readyState == 4) {
 	
             const parts = xmlhttp.responseText.split("#JdB");
-		var0=parts[2]
+		var0=parts[Num]
    		 result = var0.substring(0, var0.length-4);
 		document.getElementById("Contenu").innerHTML=xmlhttp.responseText
 
