@@ -12,8 +12,7 @@
 	  loadData(1)
       }
   function loadData(Num) {
-	  Num=Num*1
-	  alert("ok" + Num)
+	Num=Num*1
   var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JIJ--cTg2nZoNkudiqBrnvWDs-TZlzcw3PBOGPCv7dl9WxtasEhiJ8eJsRbV/pub?gid=569730062&single=true&output=csv";
 
     xmlhttp = new XMLHttpRequest();
@@ -24,6 +23,7 @@
 		
 						Max = parts.length-2
 						if (Num=0) {
+							alert (Num)
 							Num=Max*1
 							document.getElementById("Max").innerText=Max
 							document.getElementById("Actuel").innerText=Num
