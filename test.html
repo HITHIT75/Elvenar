@@ -3,19 +3,25 @@
 <html>
 <script>
 function loadData() {
-	alert("pk")
-var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JIJ--cTg2nZoNkudiqBrnvWDs-TZlzcw3PBOGPCv7dl9WxtasEhiJ8eJsRbV/pub?gid=569730062&single=true&output=csv";
-	//https://docs.google.com/spreadsheets/d/11Ox6ICcDifWzeiEupoTduIiEzGWKkjQvG3zGgF8NeJo/edit#gid=569730062
-	//
-	//https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JIJ--cTg2nZoNkudiqBrnvWDs-TZlzcw3PBOGPCv7dl9WxtasEhiJ8eJsRbV/pub?gid=1999072414&single=true&output=csv
+  var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JIJ--cTg2nZoNkudiqBrnvWDs-TZlzcw3PBOGPCv7dl9WxtasEhiJ8eJsRbV/pub?gid=569730062&single=true&output=csv";
+  //var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7h49K5ALJK98pf34d7KHeUecOC2w7xZLA8r5k6MMNTzOBhA8VvXSo7v5_xlAxPfrw69xGxKg5DqKf/pub?gid=569730062&single=true&output=csv";
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4) {
-alert(xmlhttp.responseText)
+
             const parts = xmlhttp.responseText.split("|");
-		var0=parts[1]
+		var0=parts[2]
    		 result = var0.substring(0, var0.length-4);
 		alert(result)
+		//document.getElementById("Contenu").innerHTML=result
+            //document.getElementById("display").innerHTML = parts[1] + "<br><br><br><br>" + parts[2] + "<br><br><br><br>" + parts[3]+ "<br><br><br><br>" + parts[4];
+
+
+
+
+
+
+
         }
     };
     xmlhttp.open("GET", url, true);
