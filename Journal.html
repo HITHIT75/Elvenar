@@ -19,19 +19,19 @@
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4) {
 
-            const parts = xmlhttp.responseText.split("#JdB");
+           // const parts = xmlhttp.responseText.split("#JdB");
 		
-						Max = parts.length-2
-						if (Num=0) {
-							alert (Num)
-							Num=Max*1
-							document.getElementById("Max").innerText=Max
-							document.getElementById("Actuel").innerText=Num
-						}
-					var0=parts[1]
-   					result = var0.substring(0, var0.length-4);
+						//Max = parts.length-2
+						//if (Num=0) {
+							//alert (Num)
+							//Num=Max*1
+							//document.getElementById("Max").innerText=Max
+							//document.getElementById("Actuel").innerText=Num
+						//}
+					//var0=parts[1]
+   					//result = var0.substring(0, var0.length-4);
 						document.getElementById("Contenu").innerHtml=xmlhttp.responseText
-						document.getElementById("Actuel").innerText=Num
+						//document.getElementById("Actuel").innerText=Num
         }
     	};
 	    xmlhttp.open("GET", url, true);
