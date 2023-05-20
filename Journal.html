@@ -4,7 +4,29 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <link rel="stylesheet" type="text/css" href="style.css" />
 
+<script type="text/javascript">
+  function Debut() {
+	  loadData()
+      }
+  function loadData() {
+  var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JIJ--cTg2nZoNkudiqBrnvWDs-TZlzcw3PBOGPCv7dl9WxtasEhiJ8eJsRbV/pub?gid=569730062&single=true&output=csv";
+  //var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7h49K5ALJK98pf34d7KHeUecOC2w7xZLA8r5k6MMNTzOBhA8VvXSo7v5_xlAxPfrw69xGxKg5DqKf/pub?gid=569730062&single=true&output=csv";
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4) {
 
+            const parts = xmlhttp.responseText.split("|");
+		var0=parts[2]
+   		 result = var0.substring(0, var0.length-4);
+		document.getElementById("Contenu").innerHTML=result
+
+
+        }
+    };
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send(null);
+}
+	</script>
 <Style>
 /*********************************** Site Structure ******************************/
 
@@ -161,7 +183,7 @@ alert(Contenu.length)
 
   <div id="content">
     <h3 id="heading_about"><span class="invisible_headings">About this template</span></h3>
-    <p class="text">
+    <p class="text" id="Contenu">
       "Bonsoir à tous, voici le 1er journal de bord de la conf
       But : aider les joueurs demandeurs, annoncer les nouveautés et actualités et faire un point sur la semaine.
       Dédié principalement aux jeunes villes donc merci aux joueurs expérimentés pour leur indulgence sur la lourdeur ou la redondance de ces journaux.
@@ -188,8 +210,8 @@ alert(Contenu.length)
       Prochain journal samedi prochain."
 
     </p>
-    <h3 id="heading_ipsum"><span class="invisible_headings">Lorem Ipsum</span></h3>
-    <p></p>
+
+
   </div>
 
 </div>
