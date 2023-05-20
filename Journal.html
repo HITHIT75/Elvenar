@@ -18,10 +18,10 @@
             const parts = xmlhttp.responseText.split("#JdB");
 						Max = parts.length-2
 						if (Num=0) {
-							Num=Max
+							Num=Max*1
 							document.getElementById("Max").innerHTML=Max
 						}
-						var0=parts[Num]
+					var0=parts[Num]
    					result = var0.substring(0, var0.length-4);
 						document.getElementById("Contenu").innerHTML=result
 						document.getElementById("Actuel").innerHTML=Num
@@ -32,6 +32,7 @@
 		}
 
 	function FlecheMoins() {
+		alert("Moins")
 			Num=document.getElementById("Actuel").innerHTML
 			if (Num>1) {
 				Num=Num-1
@@ -46,6 +47,7 @@
 
 		}
 		function FlechePlus() {
+			alert("Plus")
 				Num=document.getElementById("Actuel").innerHTML
 				Max=document.getElementById("Max").innerHTML
 				if (Num<Max) {
@@ -177,7 +179,7 @@ text-align: center;
 </head>
 <body onload="Debut()">
 <div style="display: inline-block;width:20%;"
-	<div style="display: inline-block;width: 50px;" onclick="FlecheMoins()">
+	<div style="display: inline-block;width: 50px;cursor:pointer;" onclick="FlecheMoins()">
 		<img id="Fleche1" src="Image\Fleche.png" style="width: 50px;transform: rotateY(180deg);">
 	</div>
 	<div id="Actuel" style="display:  inline-block;text-align: center;">
@@ -190,7 +192,7 @@ text-align: center;
 	<div id="max" style="display: inline-block;text-align: center;">
 	 3
 	</div>
-	<div style="display: inline-block;width: 50px;"  onclick="FlechePlus()">
+	<div style="display: inline-block;width: 50px;cursor:pointer;"  onclick="FlechePlus()">
 		<img id="Fleche2" src="Image\Fleche.png" style="width: 50px;0">
 	</div>
 
