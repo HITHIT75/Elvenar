@@ -21,8 +21,9 @@
 						if (Num=0) {
 							Num=Max*1
 							document.getElementById("Max").innerHTML=Max
+							document.getElementById("Actuel").innerHTML=Num
 						}
-					var0=parts[2]
+					var0=parts[Num]
    					result = var0.substring(0, var0.length-4);
 						document.getElementById("Contenu").innerHTML=result
 						document.getElementById("Actuel").innerHTML=Num
@@ -34,7 +35,7 @@
 
 	function FlecheMoins() {
 		alert("Moins")
-			Num=document.getElementById("Actuel").innerHTML
+			Num=document.getElementById("Actuel").innerHTML*1
 			if (Num>1) {
 				Num=Num-1
 				if (Num=1) {
@@ -49,8 +50,8 @@
 		}
 		function FlechePlus() {
 			alert("Plus")
-				Num=document.getElementById("Actuel").innerHTML
-				Max=document.getElementById("Max").innerHTML
+				Num=document.getElementById("Actuel").innerHTML*1
+				Max=document.getElementById("Max").innerHTML*1
 				if (Num<Max) {
 					Num=Num+1
 					if (Num=Max) {
