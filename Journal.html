@@ -19,20 +19,21 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
         if (xmlhttp.readyState == 4) {
 
             const parts = xmlhttp.responseText.split("@");
-		Max=parts.length-2;
+		Maxo=parts.length-2;
 		
 		if (Num*1>0) {
 			}
 		else {
-			Num=Max
+			Num=Maxo
 		}
 		
 		var0=parts[Num]
    		 result = var0.substring(0, var0.length-4);
-		document.getElementById("Contenu").innerHTML=result + "  " + Max +" >>>" + Num + " >>> " + Num*1 +" test1"
+		document.getElementById("Contenu").innerHTML=result + "  " + Maxo +" >>>" + Num + " >>> " + Num*1 +" test1"
 		
- 		document.getElementById("Maxi").innerHTML = Max +"*"
 		document.getElementById("Actuel").innerHTML = Num +"*"
+ 		document.getElementById("Maxi").innerHTML = Maxo +"*"
+		
         }
     };
     xmlhttp.open("GET", url, true);
