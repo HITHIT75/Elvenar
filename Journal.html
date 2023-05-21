@@ -41,7 +41,7 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 
 	function FlecheMoins() {
 		alert("Moins")
-			Num=document.getElementById("Actuel").innerHTML*1
+			Num=document.getElementById("Actuel").innerHTML
 		alert(Num)
 			if (Num>1) {
 				Num=Num-1
@@ -57,8 +57,8 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 		}
 		function FlechePlus() {
 			alert("Plus")
-				Num=document.getElementById("Actuel").innerHTML*1
-				Max=document.getElementById("Max").innerHTML*1
+				Num=document.getElementById("Actuel").innerHTML
+				Max=document.getElementById("Maxi").innerHTML
 			alert(Max)
 				if (Num<Max) {
 					Num=Num+1
