@@ -34,7 +34,7 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
    		 result = var0.substring(0, var0.length-4);
 		document.getElementById("Contenu").innerHTML=result 
 		document.getElementById("Contenu").style.textAlign = "left";
-		document.getElementById("Actuel").innerHTML = Num
+		//document.getElementById("Actuel").innerHTML = Num
  		
 		
         }
@@ -44,7 +44,8 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 		}
 
 	function FlecheMoins() {
-	
+		document.getElementById("Contenu").innerHTML="<img src="https://img1.picmix.com/output/stamp/normal/2/4/0/6/1356042_c854c.gif" style="width: 200px;">" 
+		document.getElementById("Contenu").style.textAlign = "center";	
 			Num=document.getElementById("Actuel").innerHTML*1
 			Maxo=document.getElementById("Maxi").innerHTML
 			if (Num>1) {
