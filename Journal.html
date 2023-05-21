@@ -17,6 +17,8 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4) {
+		
+		Num=document.getElementById("Actuel").innerHTML
 		alert(Num + "Num de loaddata")
             const parts = xmlhttp.responseText.split("@");
 		Maxo=parts.length-2;
@@ -47,6 +49,7 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 		alert(Num)
 			if (Num>1) {
 				Num=Num-1
+				document.getElementById("Actuel").innerHTML=Num
 				alert("Num-1 = " + Num)
 				if (Num=1) {
 					document.getElementById("Fleche1").document.style.visibility = "hidden";
@@ -65,6 +68,7 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 			alert(Max)
 				if (Num<Maxo) {
 					Num=Num+1
+					document.getElementById("Actuel").innerHTML=Num
 					alert("Num+1 = " + Num)
 					if (Num=Maxo) {
 						document.getElementById("Fleche2").document.style.visibility = "hidden";
@@ -196,12 +200,12 @@ text-align: center;
 	<div style="cursor:pointer;display: inline-block;width: 30px;" onclick="FlecheMoins()">
 		<img id="Fleche1" src="Image\Fleche.png" style="width: 50px;transform: rotateY(180deg);">
 	</div>
-	<div id="Actuel" style="display: inline-block;text-align: center;width: 20px;">2</div>
+	<div id="Actuel" style="display: inline-block;text-align: center;width: 20px;"></div>
 	<div style="display: inline-block;text-align: center;width: 20px;">
 	 //
 	</div>
 
-	<div id="Maxi" style="display: inline-block;text-align: center;width: 20px;">4</div>
+	<div id="Maxi" style="display: inline-block;text-align: center;width: 20px;"></div>
 	<div style="display: inline-block;width: 50px;cursor:pointer;"  onclick="FlechePlus()">
 		<img id="Fleche2" src="Image\Fleche.png" style="width: 50px;">
 	</div>
@@ -211,12 +215,12 @@ text-align: center;
   <div id="content">
     <h3 id="heading_about"><span class="invisible_headings">About this template</span></h3>
     <p class="text" id="Contenu">
-		<img src="Image\loading.gif">
-	    <img src="Image\loading1.gif">
-	    <img src="Image\loading2.gif">
-	    <img src="Image\loading3.gif">
-	    <img src="Image\loading4.gif">
-	    <img src="Image\loading5.gif">
+		<img src="Image\loading.gif" style="width: 50px;">
+	    <img src="Image\loading1.gif" style="width: 50px;">
+	    <img src="Image\loading2.gif" style="width: 50px;">
+	    <img src="Image\loading3.gif" style="width: 50px;">
+	    <img src="Image\loading4.gif" style="width: 50px;">
+	    <img src="Image\loading5.gif" style="width: 50px;">
     </p>
 
 
