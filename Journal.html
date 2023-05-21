@@ -51,13 +51,14 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 				Num=Num-1
 				document.getElementById("Actuel").innerHTML=Num
 				alert("Num-1 = " + Num)
+				loadData()
 				if (Num=1) {
 					document.getElementById("Fleche1").document.style.visibility = "none";
 				}
 				else {
 					document.getElementById("Fleche1").document.style.visibility = "visible";
 				}
-				loadData()
+				
 			}
 
 		}
@@ -70,13 +71,14 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 					Num=Num+1
 					document.getElementById("Actuel").innerHTML=Num
 					alert("Num+1 = " + Num)
+					loadData()
 					if (Num=Maxo) {
 						document.getElementById("Fleche2").document.style.visibility = "none";
 					}
 					else {
 						document.getElementById("Fleche2").document.style.visibility = "visible";
 					}
-					loadData()
+					
 				}
 			}
 
