@@ -17,7 +17,7 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4) {
-
+		alert(Num + "Num de loaddata")
             const parts = xmlhttp.responseText.split("@");
 		Maxo=parts.length-2;
 		
