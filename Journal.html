@@ -11,7 +11,7 @@
   function Debut() {
 	  loadData()
       }
-  function loadData(Num) {
+  function loadData() {
 var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JIJ--cTg2nZoNkudiqBrnvWDs-TZlzcw3PBOGPCv7dl9WxtasEhiJ8eJsRbV/pub?gid=569730062&single=true&output=csv";
   //var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7h49K5ALJK98pf34d7KHeUecOC2w7xZLA8r5k6MMNTzOBhA8VvXSo7v5_xlAxPfrw69xGxKg5DqKf/pub?gid=569730062&single=true&output=csv";
     xmlhttp = new XMLHttpRequest();
@@ -52,12 +52,12 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 				document.getElementById("Actuel").innerHTML=Num
 				alert("Num-1 = " + Num)
 				if (Num=1) {
-					document.getElementById("Fleche1").document.style.visibility = "hidden";
+					document.getElementById("Fleche1").document.style.visibility = "none";
 				}
 				else {
 					document.getElementById("Fleche1").document.style.visibility = "visible";
 				}
-				loadData(Num)
+				loadData()
 			}
 
 		}
@@ -71,12 +71,12 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 					document.getElementById("Actuel").innerHTML=Num
 					alert("Num+1 = " + Num)
 					if (Num=Maxo) {
-						document.getElementById("Fleche2").document.style.visibility = "hidden";
+						document.getElementById("Fleche2").document.style.visibility = "none";
 					}
 					else {
 						document.getElementById("Fleche2").document.style.visibility = "visible";
 					}
-					loadData(Num)
+					loadData()
 				}
 			}
 
@@ -215,12 +215,12 @@ text-align: center;
   <div id="content">
     <h3 id="heading_about"><span class="invisible_headings">About this template</span></h3>
     <p class="text" id="Contenu">
-		<img src="Image\loading.gif" style="width: 50px;">
-	    <img src="Image\loading1.gif" style="width: 50px;">
-	    <img src="Image\loading2.gif" style="width: 50px;">
-	    <img src="Image\loading3.gif" style="width: 50px;">
-	    <img src="Image\loading4.gif" style="width: 50px;">
-	    <img src="Image\loading5.gif" style="width: 50px;">
+		<img src="Image\loading.gif" style="width:100px;">
+	    <img src="Image\loading1.gif" style="width: 100px;">
+	    <img src="Image\loading2.gif" style="width: 100px;">
+	    <img src="Image\loading3.gif" style="width: 100px;">
+	    <img src="Image\loading4.gif" style="width: 100px;">
+	    <img src="Image\loading5.gif" style="width: 100px;">
     </p>
 
 
