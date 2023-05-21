@@ -34,9 +34,8 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
    		 result = var0.substring(0, var0.length-4);
 		document.getElementById("Contenu").innerHTML=result 
 		document.getElementById("Contenu").style.textAlign = "left";
-		//document.getElementById("Actuel").innerHTML = Num
- 		
-		
+		document.getElementById("Actuel").innerHTML = Num
+
         }
     };
     xmlhttp.open("GET", url, true);
@@ -64,11 +63,6 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 			else {
 				document.getElementById("Fleche1").visiblity="hidden";
 				}
-		
-		
-		
-		
-		
 		}
 	function FlechePlus() {
 			//alert("Plus")
