@@ -46,7 +46,7 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 	function FlecheMoins() {
 	
 			Num=document.getElementById("Actuel").innerHTML*1
-		//alert(Num)
+			Maxo=document.getElementById("Maxi").innerHTML
 			if (Num>1) {
 				Num=Num-1
 				document.getElementById("Actuel").innerHTML=Num
@@ -56,7 +56,17 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 			}
 			else {
 				document.getElementById("Fleche1").visiblity="hidden";
+				}
+			if (Num<Maxo) {
+					document.getElementById("Fleche2").visiblity="visible";
+				}
+			else {
+					document.getElementById("Fleche2").visiblity="hidden";
 				}		
+		
+		
+		
+		
 		}
 	function FlechePlus() {
 			//alert("Plus")
@@ -71,9 +81,15 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 					loadData()
 					document.getElementById("Fleche2").visiblity="visible";
 				}
+				else {
+					document.getElementById("Fleche2").visiblity="hidden";
+				}
+			if (Num>1) {
+				document.getElementById("Fleche1").visiblity="visible";
+			}
 			else {
-				document.getElementById("Fleche2").visiblity="hidden";
-				}			
+				document.getElementById("Fleche1").visiblity="hidden";
+				}		
 			}
 
 //	background-image: url(Image/ParcheminJdB.png);
