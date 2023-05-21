@@ -10,7 +10,7 @@
 <script type="text/javascript">
   function Debut() {
 	  loadData()
-	  document.getElementById("Fleche1").visiblity="visible";
+	  //document.getElementById("MenuItem2").classList.toggle("centered3bis");
       }
   function loadData() {
 var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JIJ--cTg2nZoNkudiqBrnvWDs-TZlzcw3PBOGPCv7dl9WxtasEhiJ8eJsRbV/pub?gid=569730062&single=true&output=csv";
@@ -49,20 +49,20 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 			Num=document.getElementById("Actuel").innerHTML*1
 			Maxo=document.getElementById("Maxi").innerHTML
 			if (Num<Maxo) {
-					document.getElementById("Fleche2").visiblity="visible";
+					document.getElementById("ContFleche2").visiblity="visible";
 				}
 			else {
-					document.getElementById("Fleche2").visiblity="hidden";
+					document.getElementById("ContFleche2").visiblity="hidden";
 				}		
 			if (Num>1) {
 				Num=Num-1
 				document.getElementById("Actuel").innerHTML=Num
 				alert("Num-1 = " + Num)
 				loadData()
-				document.getElementById("Fleche1").visiblity="visible";
+				document.getElementById("ContFleche1").visiblity="visible";
 			}
 			else {
-				document.getElementById("Fleche1").visiblity="hidden";
+				document.getElementById("ContFleche1").visiblity="hidden";
 				}
 		}
 	function FlechePlus() {
@@ -70,10 +70,10 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 				Num=document.getElementById("Actuel").innerHTML*1
 				Maxo=document.getElementById("Maxi").innerHTML
 			if (Num>1) {
-				//document.getElementById("Fleche1").visiblity="visible";
+				//document.getElementById("ContFleche1").visiblity="visible";
 			}
 			else {
-				document.getElementById("Fleche1").visiblity="hidden";
+				document.getElementById("ContFleche1").visiblity="hidden";
 				}		
 				if (Num<Maxo) {
 					Num=Num+1
@@ -81,10 +81,10 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 					document.getElementById("Actuel").innerHTML=Num
 					
 					loadData()
-					document.getElementById("Fleche2").visiblity="visible";
+					document.getElementById("ContFleche2").visiblity="visible";
 				}
 				else {
-					document.getElementById("Fleche2").visiblity="hidden";
+					document.getElementById("ContFleche2").visiblity="hidden";
 				}
 		
 			}
@@ -205,17 +205,17 @@ text-align: center;
 </head>
 <body onload="Debut()">
 <div style="display: inline-block;width:50px;max-width:50px;"
-	<div style="cursor:pointer;display: inline-block;width: 30px;" onclick="FlecheMoins()">
+	<div id="ContFleche1"  style="cursor:pointer;display: inline-block;width: 30px;" onclick="FlecheMoins()">
 		<img id="Fleche1" src="Image\Fleche.png" style="width: 50px;transform: rotateY(180deg);cursor:pointer;">
 	</div>
 	<div id="Actuel" style="display: inline-block;text-align: center;width: 20px;font-size: 18px;"></div>
 	<div style="display: inline-block;text-align: center;width: 20px;">
-	 /
+	 //
 	</div>
 
 	<div id="Maxi" style="display: inline-block;text-align: center;width: 20px;font-size: 18px;"></div>
-	<div style="display: inline-block;width: 50px;cursor:pointer;"  onclick="FlechePlus()">
-		<img id="Fleche2" src="Image\Fleche.png" style="width: 50px;visibility : hidden;">
+	<div id="ContFleche2" style="display: inline-block;width: 50px;cursor:pointer;visibility : hidden;"  onclick="FlechePlus()">
+		<img id="Fleche2" src="Image\Fleche.png" style="width: 50px;">
 	</div>
 
 </div>
