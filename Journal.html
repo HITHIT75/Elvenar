@@ -31,8 +31,8 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
    		 result = var0.substring(0, var0.length-4);
 		document.getElementById("Contenu").innerHTML=result + "  " + Max +" >>>" + Num + " >>> " + Num*1 +" test1"
 		
- 		document.getElementById("Maxi").innerHTML = Max
-		document.getElementById("Actuel").innerHTML = Num
+ 		document.getElementById("Maxi").innerHTML = Max +"*"
+		document.getElementById("Actuel").innerHTML = Num +"*"
         }
     };
     xmlhttp.open("GET", url, true);
@@ -193,14 +193,14 @@ text-align: center;
 		<img id="Fleche1" src="Image\Fleche.png" style="width: 50px;transform: rotateY(180deg);">
 	</div>
 	<div id="Actuel" style="display: inline-block;text-align: center;width: 20px;">
-	.
+	?
 	</div>
 	<div style="display: inline-block;text-align: center;width: 20px;">
 	 //
 	</div>
 
 	<div id="maxi" style="display: inline-block;text-align: center;width: 20px;">
-	 .
+	 ?
 	</div>
 	<div style="display: inline-block;width: 50px;cursor:pointer;"  onclick="FlechePlus()">
 		<img id="Fleche2" src="Image\Fleche.png" style="width: 50px;">
