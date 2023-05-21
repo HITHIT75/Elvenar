@@ -42,51 +42,51 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
     xmlhttp.send(null);
 		}
 
-	function FlecheMoins() {
-		document.getElementById("Contenu").innerHTML="<img src="https://img1.picmix.com/output/stamp/normal/2/4/0/6/1356042_c854c.gif" style="width: 200px;">" 
-		document.getElementById("Contenu").style.textAlign = "center";	
-			Num=document.getElementById("Actuel").innerHTML*1
-			Maxo=document.getElementById("Maxi").innerHTML
-			if (Num<Maxo) {
-					document.getElementById("Fleche2").visiblity="visible";
-				}
-			else {
-					document.getElementById("Fleche2").visiblity="hidden";
-				}		
-			if (Num>1) {
-				Num=Num-1
-				document.getElementById("Actuel").innerHTML=Num
+	//function FlecheMoins() {
+		//document.getElementById("Contenu").innerHTML="<img src="https://img1.picmix.com/output/stamp/normal/2/4/0/6/1356042_c854c.gif" style="width: 200px;">" 
+		//document.getElementById("Contenu").style.textAlign = "center";	
+			//Num=document.getElementById("Actuel").innerHTML*1
+			//Maxo=document.getElementById("Maxi").innerHTML
+			//if (Num<Maxo) {
+					//document.getElementById("Fleche2").visiblity="visible";
+				//}
+			//else {
+					//document.getElementById("Fleche2").visiblity="hidden";
+				//}		
+			//if (Num>1) {
+				//Num=Num-1
+				//document.getElementById("Actuel").innerHTML=Num
 				//alert("Num-1 = " + Num)
-				loadData()
-				document.getElementById("Fleche1").visiblity="visible";
-			}
-			else {
-				document.getElementById("Fleche1").visiblity="hidden";
-				}
-		}
-	function FlechePlus() {
+				//loadData()
+				//document.getElementById("Fleche1").visiblity="visible";
+			//}
+			//else {
+				//document.getElementById("Fleche1").visiblity="hidden";
+				//}
+		//}
+	//function FlechePlus() {
 			//alert("Plus")
-				Num=document.getElementById("Actuel").innerHTML*1
-				Maxo=document.getElementById("Maxi").innerHTML
-			if (Num>1) {
-				document.getElementById("Fleche1").visiblity="visible";
-			}
-			else {
-				document.getElementById("Fleche1").visiblity="hidden";
-				}		
-				if (Num<Maxo) {
-					Num=Num+1
+				//Num=document.getElementById("Actuel").innerHTML*1
+				//Maxo=document.getElementById("Maxi").innerHTML
+			//if (Num>1) {
+				//document.getElementById("Fleche1").visiblity="visible";
+			//}
+			//else {
+				//document.getElementById("Fleche1").visiblity="hidden";
+				//}		
+				//if (Num<Maxo) {
+					//Num=Num+1
 					//alert("Num+1 = " + Num)
-					document.getElementById("Actuel").innerHTML=Num
+					//document.getElementById("Actuel").innerHTML=Num
 					
-					loadData()
-					document.getElementById("Fleche2").visiblity="visible";
-				}
-				else {
-					document.getElementById("Fleche2").visiblity="hidden";
-				}
+					//loadData()
+					//document.getElementById("Fleche2").visiblity="visible";
+				//}
+				//else {
+					//document.getElementById("Fleche2").visiblity="hidden";
+				//}
 		
-			}
+			//}
 
 //	background-image: url(Image/ParcheminJdB.png);
 //  background-size: contain;
