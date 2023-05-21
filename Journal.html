@@ -31,7 +31,8 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
    		 result = var0.substring(0, var0.length-4);
 		document.getElementById("Contenu").innerHTML=result + "  " + Max +" >>>" + Num + " >>> " + Num*1
 		
- 		 document.getElementById("Max").innerText = Max
+ 		document.getElementById("Max").innerHTML = Max
+		document.getElementById("Actuel").innerHTML = Num
         }
     };
     xmlhttp.open("GET", url, true);
@@ -40,7 +41,7 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 
 	function FlecheMoins() {
 		alert("Moins")
-			Num=document.getElementById("Actuel").innerText*1
+			Num=document.getElementById("Actuel").innerHTML*1
 		alert(Num)
 			if (Num>1) {
 				Num=Num-1
@@ -56,8 +57,8 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 		}
 		function FlechePlus() {
 			alert("Plus")
-				Num=document.getElementById("Actuel").innerText*1
-				Max=document.getElementById("Max").innerText*1
+				Num=document.getElementById("Actuel").innerHTML*1
+				Max=document.getElementById("Max").innerHTML*1
 			alert(Max)
 				if (Num<Max) {
 					Num=Num+1
