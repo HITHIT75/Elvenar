@@ -59,11 +59,11 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 		function FlechePlus() {
 			alert("Plus")
 				Num=document.getElementById("Actuel").innerHTML
-				Max=document.getElementById("Maxi").innerHTML
+				Maxo=document.getElementById("Maxi").innerHTML
 			alert(Max)
-				if (Num<Max) {
+				if (Num<Maxo) {
 					Num=Num+1
-					if (Num=Max) {
+					if (Num=Maxo) {
 						document.getElementById("Fleche2").document.style.visibility = "hidden";
 					}
 					else {
@@ -193,12 +193,12 @@ text-align: center;
 	<div style="cursor:pointer;display: inline-block;width: 30px;" onclick="FlecheMoins()">
 		<img id="Fleche1" src="Image\Fleche.png" style="width: 50px;transform: rotateY(180deg);">
 	</div>
-	<div id="Actuel" style="display: inline-block;text-align: center;width: 20px;">?</div>
+	<div id="Actuel" style="display: inline-block;text-align: center;width: 20px;">2</div>
 	<div style="display: inline-block;text-align: center;width: 20px;">
 	 //
 	</div>
 
-	<div id="maxi" style="display: inline-block;text-align: center;width: 20px;">?</div>
+	<div id="maxi" style="display: inline-block;text-align: center;width: 20px;">4</div>
 	<div style="display: inline-block;width: 50px;cursor:pointer;"  onclick="FlechePlus()">
 		<img id="Fleche2" src="Image\Fleche.png" style="width: 50px;">
 	</div>
