@@ -48,6 +48,12 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 		document.getElementById("Contenu").style.textAlign = "center";	
 			Num=document.getElementById("Actuel").innerHTML*1
 			Maxo=document.getElementById("Maxi").innerHTML
+			if (Num<Maxo) {
+					document.getElementById("Fleche2").visiblity="visible";
+				}
+			else {
+					document.getElementById("Fleche2").visiblity="hidden";
+				}		
 			if (Num>1) {
 				Num=Num-1
 				document.getElementById("Actuel").innerHTML=Num
@@ -58,12 +64,7 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 			else {
 				document.getElementById("Fleche1").visiblity="hidden";
 				}
-			if (Num<Maxo) {
-					document.getElementById("Fleche2").visiblity="visible";
-				}
-			else {
-					document.getElementById("Fleche2").visiblity="hidden";
-				}		
+		
 		
 		
 		
@@ -73,7 +74,12 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 			//alert("Plus")
 				Num=document.getElementById("Actuel").innerHTML*1
 				Maxo=document.getElementById("Maxi").innerHTML
-			//alert(Max)
+			if (Num>1) {
+				document.getElementById("Fleche1").visiblity="visible";
+			}
+			else {
+				document.getElementById("Fleche1").visiblity="hidden";
+				}		
 				if (Num<Maxo) {
 					Num=Num+1
 					//alert("Num+1 = " + Num)
@@ -85,12 +91,7 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 				else {
 					document.getElementById("Fleche2").visiblity="hidden";
 				}
-			if (Num>1) {
-				document.getElementById("Fleche1").visiblity="visible";
-			}
-			else {
-				document.getElementById("Fleche1").visiblity="hidden";
-				}		
+		
 			}
 
 //	background-image: url(Image/ParcheminJdB.png);
