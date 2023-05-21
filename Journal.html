@@ -25,6 +25,7 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 			}
 		else {
 			Num=Maxo
+			document.getElementById("Maxi").innerHTML = Maxo
 		}
 		
 		var0=parts[Num]
@@ -32,7 +33,7 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 		document.getElementById("Contenu").innerHTML=result + "  " + Maxo +" >>>" + Num + " >>> " + Num*1 +" test1"
 		
 		document.getElementById("Actuel").innerHTML = Num
- 		document.getElementById("Maxi").innerHTML = Maxo
+ 		
 		
         }
     };
@@ -41,11 +42,12 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 		}
 
 	function FlecheMoins() {
-		alert("Moins")
+	
 			Num=document.getElementById("Actuel").innerHTML
 		alert(Num)
 			if (Num>1) {
 				Num=Num-1
+				alert("Num-1 = " + Num)
 				if (Num=1) {
 					document.getElementById("Fleche1").document.style.visibility = "hidden";
 				}
@@ -63,6 +65,7 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 			alert(Max)
 				if (Num<Maxo) {
 					Num=Num+1
+					alert("Num+1 = " + Num)
 					if (Num=Maxo) {
 						document.getElementById("Fleche2").document.style.visibility = "hidden";
 					}
