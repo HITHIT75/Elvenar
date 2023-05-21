@@ -50,13 +50,13 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 			if (Num>1) {
 				Num=Num-1
 				document.getElementById("Actuel").innerHTML=Num
-				alert("Num-1 = " + Num)
+				//alert("Num-1 = " + Num)
 				loadData()
-				if (Num===1) {
-					document.getElementById("Fleche1").style.visibility = "hidden";
+				if (Num>1) {
+					document.getElementById("Fleche1").style.visibility = "visible";
 				}
 				else {
-					document.getElementById("Fleche1").style.visibility = "visible";
+					document.getElementById("Fleche1").style.visibility = "hidden";
 				}
 				
 			}
@@ -69,15 +69,15 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 			//alert(Max)
 				if (Num<Maxo) {
 					Num=Num+1
-					alert("Num+1 = " + Num)
+					//alert("Num+1 = " + Num)
 					document.getElementById("Actuel").innerHTML=Num
 					
 					loadData()
-					if (Num===Maxo) {
-						document.getElementById("Fleche2").style.visibility = "hidden";
+					if (Num<Maxo) {
+						document.getElementById("Fleche2").style.visibility = "visible";
 					}
 					else {
-						document.getElementById("Fleche2").style.visibility = "visible";
+						document.getElementById("Fleche2").style.visibility = "hidden";
 					}
 					
 				}
