@@ -72,23 +72,23 @@
 			loadData()
 		}
 	function FlechePlus() {
-			//alert("Plus")
-				Num=document.getElementById("Actuel").innerHTML*1
-				Maxo=document.getElementById("Maxi").innerHTML*1
+
+			Num=document.getElementById("Actuel").innerHTML*1
+			Maxo=document.getElementById("Maxi").innerHTML*1
 		NumEx=Num
 		Num=Num+1
 		//
 		//alert("apres -1 = " + Num)		
-		//	if (Num>Maxo) {
-		//				Num=Maxo
-		//				return
-		//			}
+			if (Num>Maxo) {
+						Num=Maxo
+						return
+					}
 		//document.getElementById("Actuel").innerHTML=Num
 		//	if (NumEx===1) {
 		//		document.getElementById("Fleche1").className= "FlecheVis"
 		//	}
 		//	if (NumEx=Maxo-1) {
-				document.getElementById("Fleche2")..className= "FlecheInVis"
+		//		document.getElementById("Fleche2")..className= "FlecheInVis"
 		//	}		
 		//	LoadData()		
 	
@@ -184,7 +184,7 @@ float: left;
 	</div>
 	<div id="Actuel" style="display: inline-block;text-align: center;width: 20px;font-size: 18px;"></div>
 	<div style="display: inline-block;text-align: center;width: 20px;">
-	 /*
+	 /
 	</div>
 
 	<div id="Maxi" style="display: inline-block;text-align: center;width: 20px;font-size: 18px;"></div>
