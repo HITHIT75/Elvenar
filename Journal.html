@@ -10,34 +10,10 @@
 <script type="text/javascript">
   function Debut() {
 	  alert("debut")
-	  loadData2()
+	  loadData()
 	  
       }
-  function Debut2() {
-	  alert("debut")
-	  loadData2()
-	  
-      }	
-	
-	
-function loadData2() {
-  var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JIJ--cTg2nZoNkudiqBrnvWDs-TZlzcw3PBOGPCv7dl9WxtasEhiJ8eJsRbV/pub?gid=569730062&single=true&output=csv";
-  //var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7h49K5ALJK98pf34d7KHeUecOC2w7xZLA8r5k6MMNTzOBhA8VvXSo7v5_xlAxPfrw69xGxKg5DqKf/pub?gid=569730062&single=true&output=csv";
-    xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.readyState == 4) {
 
-            const parts = xmlhttp.responseText.split("|");
-		var0=parts[2]
-   		 result = var0.substring(0, var0.length-2);
-		document.getElementById("Contenu").innerHTML=result
-            //document.getElementById("display").innerHTML = parts[1] + "<br><br><br><br>" + parts[2] + "<br><br><br><br>" + parts[3]+ "<br><br><br><br>" + parts[4];
-	}
-
-   	 };
-    xmlhttp.open("GET", url, true);
-    xmlhttp.send(null);
-}
   function loadData() {
 	 alert("debut")
 	var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JIJ--cTg2nZoNkudiqBrnvWDs-TZlzcw3PBOGPCv7dl9WxtasEhiJ8eJsRbV/pub?gid=569730062&single=true&output=csv";
@@ -69,57 +45,57 @@ function loadData2() {
 	    xmlhttp.send(null);
 	}
 
-	function FlecheMoins() {
+	//function FlecheMoins() {
 		//document.getElementById("Contenu").innerHTML="<img src='https://img1.picmix.com/output/stamp/normal/2/4/0/6/1356042_c854c.gif" style="width: 200px;'>" 
 		//document.getElementById("Contenu").style.textAlign = "center";	
-			Num=document.getElementById("Actuel").innerHTML*1
-			Maxo=document.getElementById("Maxi").innerHTML*1
+		//	Num=document.getElementById("Actuel").innerHTML*1
+		//	Maxo=document.getElementById("Maxi").innerHTML*1
 		//alert("lecture = " + Num)
-		NumEx=Num
+		//NumEx=Num
 		//alert("avant -1 = " + Num + "ex" + NumEx)
-			Num=Num-1
+		//	Num=Num-1
 		//alert("apres -1 = " + Num)		
-			if (Num<1) {
-				Num=1
-				return
-			}
+		//	if (Num<1) {
+		//		Num=1
+		//		return
+		//	}
 		//alert("apres condition 0 = " + Num)
-			document.getElementById("Actuel").innerHTML=Num	
-		Num=document.getElementById("Actuel").innerHTML*1
+		//	document.getElementById("Actuel").innerHTML=Num	
+		//Num=document.getElementById("Actuel").innerHTML*1
 		//alert("apres enregister element = " + Num + "ex" + NumEx)
-			if (NumEx===4) {
-				//alert("cond ex fleche 2" + NumEx)
-				document.getElementById("Fleche2").className= "FlecheVis"
-			}
-			if (NumEx===2) {
+		//	if (NumEx===4) {
+		//		//alert("cond ex fleche 2" + NumEx)
+		//		document.getElementById("Fleche2").className= "FlecheVis"
+		//	}
+		//	if (NumEx===2) {
 				//alert("cond ex" + NumEx)
-				document.getElementById("Fleche1").className="FlecheInVis"
-			}
+		//		document.getElementById("Fleche1").className="FlecheInVis"
+		//	}
 		//alert("fin fleche 1")
 
-			loadData()
-		}
-	function FlechePlus() {
+		//	loadData()
+		//}
+	//function FlechePlus() {
 			//alert("Plus")
-				Num=document.getElementById("Actuel").innerHTML*1
-				Maxo=document.getElementById("Maxi").innerHTML*1
-		NumEx=Num
-		Num=Num+1
-		document.getElementById("Actuel").innerHTML=Num
+		//		Num=document.getElementById("Actuel").innerHTML*1
+		//		Maxo=document.getElementById("Maxi").innerHTML*1
+		//NumEx=Num
+		//Num=Num+1
+		//document.getElementById("Actuel").innerHTML=Num
 		//alert("apres -1 = " + Num)		
-			if (Num>Maxo) {
-						Num=Maxo
-						return
-					}		
-			if (NumEx===1) {
-				document.getElementById("Fleche1").className= "FlecheVis"
-			}
-			if (NumEx=Maxo-1) {
-				document.getElementById("Fleche2")..className= "FlecheInVis"
-			}		
-			LoadData()		
+		//	if (Num>Maxo) {
+		//				Num=Maxo
+		//				return
+		//			}		
+		//	if (NumEx===1) {
+		//		document.getElementById("Fleche1").className= "FlecheVis"
+		//	}
+		//	if (NumEx=Maxo-1) {
+		//		document.getElementById("Fleche2")..className= "FlecheInVis"
+		//	}		
+		//	LoadData()		
 	
-			}
+		//	}
 
 //	background-image: url(Image/ParcheminJdB.png);
 //  background-size: contain;
@@ -204,7 +180,7 @@ float: left;
 
 
 </head>
-<body onload="loadData2()">
+<body onload="Debut()">
 <div style="display: inline-block;width:50px;max-width:50px;"
 	<div id="ContFleche1"  style="cursor:pointer;display: inline-block;width: 30px;" onclick="FlecheMoins()">
 		<img id="Fleche1" src="Image\Fleche.png" style="width: 50px;transform: rotateY(180deg);cursor:pointer;">
