@@ -64,13 +64,13 @@
 		alert("apres enregister element = " + Num + "ex" + NumEx)
 			if (NumEx===4) {
 				alert("cond ex" + NumEx)
-				document.getElementById("Fleche2").classList.toggle("FlecheVis");
+				document.getElementById("Fleche2").classList.toggle("FlecheInVis");
 			}
 			if (NumEx===2) {
 				alert("cond ex" + NumEx)
 				document.getElementById("Fleche1").classList.toggle("FlecheInVis");
 			}
-		alert("fin fleche 1")
+		//alert("fin fleche 1")
 
 			loadData()
 		}
@@ -78,18 +78,22 @@
 			//alert("Plus")
 				Num=document.getElementById("Actuel").innerHTML*1
 				Maxo=document.getElementById("Maxi").innerHTML*1
-			if (Num=1) {
-				document.getElementById("Fleche1").classList.toggle("FlecheVis");
+		NumEx=Num
+		Num=Num+1
+		document.getElementById("Actuel").innerHTML=Num
+		//alert("apres -1 = " + Num)		
+			if (Num>Maxo) {
+						Num=Maxo
+						return
+					}		
+			if (Num===1) {
+				document.getElementById("Fleche1").classList.toggle("FlecheInVis");
 			}
 			if (Num=Maxo-1) {
 				document.getElementById("Fleche2").classList.toggle("FlecheInVis");
 			}		
-			Num=Num+1
-					if (Num=Maxo+1) {
-						Num=Maxo
-						return
-					}
-					document.getElementById("Actuel").innerHTML=Num
+
+					
 					loadData()		
 	
 			}
