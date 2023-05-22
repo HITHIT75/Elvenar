@@ -24,7 +24,7 @@
             	const parts = xmlhttp.responseText.split("@");
 		Maxo=parts.length-2;
 		
-		if (Num*1>0) {
+		if (Num>0) {
 			}
 		else {
 			alert("1 er passage")
@@ -56,12 +56,14 @@
 		alert("avant -1 = " + Num + "ex" + NumEx)
 			Num=Num-1
 		alert("apres -1 = " + Num)		
-			if (Num=0) {
+			if (Num<1) {
 				Num=1
 				return
 			}
+		alert("apres condition 0 = " + Num)
 			document.getElementById("Actuel").innerHTML=Num	
-		
+		Num=document.getElementById("Actuel").innerHTML*1
+		alert("apres enregister element = " + Num)
 			if (NumEx=4) {
 				document.getElementById("Fleche2").classList.toggle("FlecheVis");
 			}
