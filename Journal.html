@@ -21,7 +21,7 @@
         if (xmlhttp.readyState == 4) {
 		
 			Num=document.getElementById("Actuel").innerHTML*1
-			alert(Num + "Num de loaddata")
+			//alert(Num + "Num de loaddata")
 			const parts = xmlhttp.responseText.split("@");
 			Maxo=parts.length-2;
 		
@@ -44,32 +44,32 @@
 	function FlecheMoins() {
 		//document.getElementById("Contenu").innerHTML="<img src='https://img1.picmix.com/output/stamp/normal/2/4/0/6/1356042_c854c.gif" style="width: 200px;'>" 
 		//document.getElementById("Contenu").style.textAlign = "center";	
-		//	Num=document.getElementById("Actuel").innerHTML*1
-		//	Maxo=document.getElementById("Maxi").innerHTML*1
+			Num=document.getElementById("Actuel").innerHTML*1
+			Maxo=document.getElementById("Maxi").innerHTML*1
 		//alert("lecture = " + Num)
-		//NumEx=Num
+		NumEx=Num
 		//alert("avant -1 = " + Num + "ex" + NumEx)
-		//	Num=Num-1
+			Num=Num-1
 		//alert("apres -1 = " + Num)		
-		//	if (Num<1) {
-		//		Num=1
-		//		return
-		//	}
+			if (Num<1) {
+				Num=1
+				return
+			}
 		//alert("apres condition 0 = " + Num)
-		//	document.getElementById("Actuel").innerHTML=Num	
+			document.getElementById("Actuel").innerHTML=Num	
 		//Num=document.getElementById("Actuel").innerHTML*1
 		//alert("apres enregister element = " + Num + "ex" + NumEx)
-		//	if (NumEx===4) {
+			if (NumEx===4) {
 		//		//alert("cond ex fleche 2" + NumEx)
-		//		document.getElementById("Fleche2").className= "FlecheVis"
-		//	}
-		//	if (NumEx===2) {
+				document.getElementById("Fleche2").className= "FlecheVis"
+			}
+			if (NumEx===2) {
 				//alert("cond ex" + NumEx)
-		//		document.getElementById("Fleche1").className="FlecheInVis"
-		//	}
+				document.getElementById("Fleche1").className="FlecheInVis"
+			}
 		//alert("fin fleche 1")
 
-		//	loadData()
+			loadData()
 		}
 	//function FlechePlus() {
 			//alert("Plus")
