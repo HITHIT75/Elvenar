@@ -10,7 +10,7 @@
 <script type="text/javascript">
   function Debut() {
 	  loadData()
-	  //document.getElementById("MenuItem2").classList.toggle("centered3bis");
+	  document.getElementById("Fleche2").classList.toggle("FlecheInVis");
       }
   function loadData() {
 var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JIJ--cTg2nZoNkudiqBrnvWDs-TZlzcw3PBOGPCv7dl9WxtasEhiJ8eJsRbV/pub?gid=569730062&single=true&output=csv";
@@ -158,46 +158,15 @@ padding: 0.143em;
 float: left;
 }
 
-.footertxt {
-	padding-top: 180px;
-	color: #F1DBC6;
-}
-
-h2 {
-	font-weight: bold;
-	padding: 10px;
-	color: #673711;
-	font-size: 14px;;
-}
-
-
-#navlist
-{
-width: 210px;
-text-align: center;
-}
-
-#navlist li
-{
-	list-style: none;
-	padding-bottom: 18px;
-	font-weight: bold;
-}
-
-#navlist li a { text-decoration: none; }
-
-/************************************ Image Headings ******************************/
+.FlecheVis {
+	visibility:visible;
+	}
+.FlecheInVis {
+	visibility:hidden;
+	}
 
 
 
-
-
-
-
-
-.invisible_headings {
-	margin-left: -3000px; /* This is used to remove the original heading*/
-}
 </Style>
 
 
@@ -214,19 +183,16 @@ text-align: center;
 	</div>
 
 	<div id="Maxi" style="display: inline-block;text-align: center;width: 20px;font-size: 18px;"></div>
-	<div id="ContFleche2" style="display: inline-block;width: 50px;cursor:pointer;visibility : hidden;"  onclick="FlechePlus()">
+	<div id="ContFleche2" Class="FlecheVis" style="display: inline-block;width: 50px;cursor:pointer;"  onclick="FlechePlus()">
 		<img id="Fleche2" src="Image\Fleche.png" style="width: 50px;">
 	</div>
 
 </div>
 <div id="container">
   <div id="content">
-    <h3 id="heading_about"><span class="invisible_headings">About this template</span></h3>
-    <p class="text" id="Contenu" style="text-align: center;">
+    <p class="text" id="Contenu" style="text-align: left;">
 	    <img src="https://img1.picmix.com/output/stamp/normal/2/4/0/6/1356042_c854c.gif" style="width: 200px;">
     </p>
-
-
   </div>
 
 </div>
