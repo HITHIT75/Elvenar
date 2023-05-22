@@ -25,7 +25,7 @@
 		Maxo=parts.length-2;
 		
 		if (Num<1) {
-			alert("1 er passage")
+			//alert("1 er passage")
 			Num=Maxo
 			document.getElementById("Maxi").innerHTML = Maxo
 			document.getElementById("Actuel").innerHTML = Num
@@ -61,14 +61,14 @@
 		//alert("apres condition 0 = " + Num)
 			document.getElementById("Actuel").innerHTML=Num	
 		Num=document.getElementById("Actuel").innerHTML*1
-		alert("apres enregister element = " + Num + "ex" + NumEx)
+		//alert("apres enregister element = " + Num + "ex" + NumEx)
 			if (NumEx===4) {
-				alert("cond ex fleche 2" + NumEx)
+				//alert("cond ex fleche 2" + NumEx)
 				document.getElementById("Fleche2").className= "FlecheVis"
 			}
 			if (NumEx===2) {
-				alert("cond ex" + NumEx)
-				document.getElementById("Fleche1").classList.toggle("FlecheInVis");
+				//alert("cond ex" + NumEx)
+				document.getElementById("Fleche1").className="FlecheInVis"
 			}
 		//alert("fin fleche 1")
 
@@ -86,15 +86,13 @@
 						Num=Maxo
 						return
 					}		
-			if (Num===1) {
-				document.getElementById("Fleche1").classList.toggle("FlecheInVis");
+			if (NumEx===1) {
+				document.getElementById("Fleche1").className= "FlecheVis"
 			}
-			if (Num=Maxo-1) {
-				document.getElementById("Fleche2").classList.toggle("FlecheInVis");
+			if (NumEx=Maxo-1) {
+				document.getElementById("Fleche2")..className= "FlecheInVis"
 			}		
-
-					
-					loadData()		
+			LoadData()		
 	
 			}
 
