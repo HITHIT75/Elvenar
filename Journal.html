@@ -9,17 +9,14 @@
 	
 <script type="text/javascript">
   function Debut() {
-	  alert("debut")
 	  loadData()
-	  
+ 
       }
 
   function loadData() {
-	 alert("debut")
 	var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JIJ--cTg2nZoNkudiqBrnvWDs-TZlzcw3PBOGPCv7dl9WxtasEhiJ8eJsRbV/pub?gid=569730062&single=true&output=csv";
   	//var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7h49K5ALJK98pf34d7KHeUecOC2w7xZLA8r5k6MMNTzOBhA8VvXSo7v5_xlAxPfrw69xGxKg5DqKf/pub?gid=569730062&single=true&output=csv";
     	xmlhttp = new XMLHttpRequest();
-	  alert("ok")
    	 xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4) {
 		
@@ -29,7 +26,6 @@
 			Maxo=parts.length-2;
 		
 			if (Num<1) {
-				alert("1 er passage")
 				Num=Maxo
 				document.getElementById("Maxi").innerHTML = Maxo
 				document.getElementById("Actuel").innerHTML = Num
@@ -45,7 +41,7 @@
 	    xmlhttp.send(null);
 	}
 
-	//function FlecheMoins() {
+	function FlecheMoins() {
 		//document.getElementById("Contenu").innerHTML="<img src='https://img1.picmix.com/output/stamp/normal/2/4/0/6/1356042_c854c.gif" style="width: 200px;'>" 
 		//document.getElementById("Contenu").style.textAlign = "center";	
 		//	Num=document.getElementById("Actuel").innerHTML*1
@@ -74,7 +70,7 @@
 		//alert("fin fleche 1")
 
 		//	loadData()
-		//}
+		}
 	//function FlechePlus() {
 			//alert("Plus")
 		//		Num=document.getElementById("Actuel").innerHTML*1
