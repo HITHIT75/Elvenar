@@ -56,6 +56,11 @@
 		alert("avant -1 = " + Num + "ex" + NumEx)
 			Num=Num-1
 		alert("apres -1 = " + Num)		
+			if (Num=0) {
+				Num=1
+				return
+			}
+			document.getElementById("Actuel").innerHTML=Num	
 		
 			if (NumEx=4) {
 				document.getElementById("Fleche2").classList.toggle("FlecheVis");
@@ -64,11 +69,7 @@
 				document.getElementById("Fleche1").classList.toggle("FlecheInVis");
 			}
 
-			if (Num=0) {
-				Num=1
-				return
-			}
-			document.getElementById("Actuel").innerHTML=Num
+
 			loadData()
 		}
 	function FlechePlus() {
