@@ -20,7 +20,7 @@
         if (xmlhttp.readyState == 4) {
 		
 		Num=document.getElementById("Actuel").innerHTML*1
-		alert(Num + "Num de loaddata")
+		//alert(Num + "Num de loaddata")
             	const parts = xmlhttp.responseText.split("@");
 		Maxo=parts.length-2;
 		
@@ -49,23 +49,25 @@
 		//document.getElementById("Contenu").style.textAlign = "center";	
 			Num=document.getElementById("Actuel").innerHTML*1
 			Maxo=document.getElementById("Maxi").innerHTML*1
-		alert("lecture = " + Num)
+		//alert("lecture = " + Num)
 		NumEx=Num
-		alert("avant -1 = " + Num + "ex" + NumEx)
+		//alert("avant -1 = " + Num + "ex" + NumEx)
 			Num=Num-1
-		alert("apres -1 = " + Num)		
+		//alert("apres -1 = " + Num)		
 			if (Num<1) {
 				Num=1
 				return
 			}
-		alert("apres condition 0 = " + Num)
+		//alert("apres condition 0 = " + Num)
 			document.getElementById("Actuel").innerHTML=Num	
 		Num=document.getElementById("Actuel").innerHTML*1
-		alert("apres enregister element = " + Num)
+		alert("apres enregister element = " + Num + "ex" + NumEx)
 			if (NumEx===4) {
+				alert("cond ex" + NumEx)
 				document.getElementById("Fleche2").classList.toggle("FlecheVis");
 			}
 			if (NumEx===2) {
+				alert("cond ex" + NumEx)
 				document.getElementById("Fleche1").classList.toggle("FlecheInVis");
 			}
 		alert("fin fleche 1")
