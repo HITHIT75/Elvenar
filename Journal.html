@@ -10,18 +10,18 @@
 <script type="text/javascript">
   function Debut() {
 	  loadData()
-	  document.getElementById("Fleche2").classList.toggle("FlecheInVis");
+	  
       }
   function loadData() {
-var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JIJ--cTg2nZoNkudiqBrnvWDs-TZlzcw3PBOGPCv7dl9WxtasEhiJ8eJsRbV/pub?gid=569730062&single=true&output=csv";
-  //var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7h49K5ALJK98pf34d7KHeUecOC2w7xZLA8r5k6MMNTzOBhA8VvXSo7v5_xlAxPfrw69xGxKg5DqKf/pub?gid=569730062&single=true&output=csv";
-    xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function () {
+	var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JIJ--cTg2nZoNkudiqBrnvWDs-TZlzcw3PBOGPCv7dl9WxtasEhiJ8eJsRbV/pub?gid=569730062&single=true&output=csv";
+  	//var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7h49K5ALJK98pf34d7KHeUecOC2w7xZLA8r5k6MMNTzOBhA8VvXSo7v5_xlAxPfrw69xGxKg5DqKf/pub?gid=569730062&single=true&output=csv";
+    	xmlhttp = new XMLHttpRequest();
+   	 xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4) {
 		
 		Num=document.getElementById("Actuel").innerHTML
 		//alert(Num + "Num de loaddata")
-            const parts = xmlhttp.responseText.split("@");
+            	const parts = xmlhttp.responseText.split("@");
 		Maxo=parts.length-2;
 		
 		if (Num*1>0) {
@@ -29,13 +29,15 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 		else {
 			Num=Maxo
 			document.getElementById("Maxi").innerHTML = Maxo
+			document.getElementById("Actuel").innerHTML = Num
+			document.getElementById("Fleche2").classList.toggle("FlecheInVis");
 		}
 		
 		var0=parts[Num]
    		 result = var0.substring(0, var0.length-4);
 		document.getElementById("Contenu").innerHTML=result 
 		document.getElementById("Contenu").style.textAlign = "left";
-		document.getElementById("Actuel").innerHTML = Num
+		
 
         }
     };
@@ -55,6 +57,7 @@ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JI
 				document.getElementById("Fleche1").classList.toggle("FlecheInVis");
 			}
 			Num=Num-1
+		alert(Num)
 			if (Num=0) {
 				Num=1
 				return
