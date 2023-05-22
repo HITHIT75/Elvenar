@@ -82,7 +82,7 @@ function essai31() {
   else {
     document.getElementById("expication").style.fontSize = "12px";
   }
-  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Quêtes avec visualisation de la difficulté:<br>Vert «facile», jaune «moyen» et rouge «difficile».<br>Possibilité de masquer les quêtes terminées."
+  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Liste des quêtes avec une visualisation de la difficulté:<br>Vert «facile», jaune «moyen» et rouge «difficile».<br>Possibilité de masquer les quêtes terminées."
 
 }
 function essai41() {
@@ -131,7 +131,7 @@ function essai91() {
   else {
     document.getElementById("expication").style.fontSize = "12px";
   }
-  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Ceci est le blason de la confrérie. Tu peux cliquer dessus si ça t'amuse."
+  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Les informations sur les Merveilles."
 }
 function Saut(){
      JouerSon()
@@ -210,16 +210,17 @@ function SautEvent(){
   if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
     navOnOff()
   }
- } 
- function Sauttest(){
+}
+function SautMerveilles(){
   JouerSon()
-  Opacifier(1)
-  alert("ok0")
-  document.getElementById("Frame").src="test.html";
+  Opacifier(3)
+  document.getElementById("Frame").src="Merveilles.html";
   if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
     navOnOff()
   }
- }
+}
+
+
 function Opacifier(Num){
   Res=document.getElementById("Degre10").innerHTML
   var Res = "MenuItem" + Res
@@ -497,16 +498,17 @@ header  {
   <div id="main">
   <article>
       <iframe id="Frame" style="Border:0;overflow:hidden; height:99%; width:100%;  top: 0; left: 0; bottom: 0; right: 0;" height="100%" width="100%"
-          src="Home.html">
+          src="test.html">
       </iframe>
   </article>
   <nav id="nav" class='nav1'>
 
-      <div class="centered3Menu1"  id="MenuItem1" onmouseout="essaiVide()" onmouseover="essai11()" onclick="Sauttest()" style="background-image: url('Image/Logo2.png')" >&nbsp;</div>
+      <div class="centered3Menu1"  id="MenuItem1" onmouseout="essaiVide()" onmouseover="essai11()" style="background-image: url('Image/Logo2.png')" >&nbsp;</div>
       <div class="centered3" id="MenuItem2"   onmouseout="essaiVide()" onmouseover="essai21()" onclick="SautHome()">AccueiL</div>
       <div class="centered3" id="MenuItem3" onmouseout="essaiVide()" onmouseover="essai31()" onclick="SautEvent()">EvenT</div>
       <div class="centered3" id="MenuItem4" onmouseout="essaiVide()" onmouseover="essai41()" onclick="SautAventure()">AventurE</div>
       <div class="centered3" id="MenuItem5" onmouseout="essaiVide()" onmouseover="essai51()" onclick="SautTournois()">TournoI</div>
+      <div class="centered3" id="MenuItem9" onmouseout="essaiVide()" onmouseover="essai91()" onclick="SautMerveilles()">Merveilles</div>
       <div class="centered3" id="MenuItem6" onmouseout="essaiVide()" onmouseover="essai61()" onclick="SautJournal()">JournaL</div>
       <div class="centered3" id="MenuItem7" onmouseout="essaiVide()" onmouseover="essai71()" onclick="SautLiens()">LienS</div>
       <div class="centered3" id="MenuItem8" onmouseout="essaiVide()" onmouseover="essai81()" onclick="SautPadawan()">PadawaN</div>
