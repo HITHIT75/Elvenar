@@ -52,15 +52,18 @@
 			Num=document.getElementById("Actuel").innerHTML*1
 			Maxo=document.getElementById("Maxi").innerHTML*1
 		alert("lecture = " + Num)
-			if (Num=4) {
+		NumEx=Num
+		alert("avant -1 = " + Num + "ex" + NumEx)
+			Num=Num-1
+		alert("apres -1 = " + Num)		
+		
+			if (NumEx=4) {
 				document.getElementById("Fleche2").classList.toggle("FlecheVis");
 			}
-			if (Num=2) {
+			if (NumEx=2) {
 				document.getElementById("Fleche1").classList.toggle("FlecheInVis");
 			}
-		alert("avant -1 = " + Num)
-			Num=Num-1
-		alert("apres -1 = " + Num)
+
 			if (Num=0) {
 				Num=1
 				return
