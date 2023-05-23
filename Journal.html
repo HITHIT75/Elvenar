@@ -34,10 +34,12 @@
 			var0=parts[Num]
 			 result = var0.substring(0, var0.length-4);
 			document.getElementById("Contenu").innerHTML=result 
-		
-				var0=parts[1]
-			 	result = var0.substring(0, var0.length-4);			
-				document.getElementById("Cont" + 1).innerHTML = result
+			//for (var i = 0; i < arrLines.length; i++) {
+				i=1
+				var0=parts[i]
+			 	result = var0.substring(0, var0.length-4);
+				
+				document.getElementById("Cont").innerHTML = "<div id='Contenu" + i + "'>" + result  + "</div>"
 					
 		
 		
@@ -197,7 +199,7 @@ float: left;
 	</div>
 	<div id="Actuel" style="display: inline-block;text-align: center;width: 20px;font-size: 18px;"></div>
 	<div style="display: inline-block;text-align: center;width: 20px;">
-	 /
+	 //
 	</div>
 
 	<div id="Maxi" style="display: inline-block;text-align: center;width: 20px;font-size: 18px;"></div>
@@ -214,7 +216,7 @@ float: left;
   </div>
 
 </div>
-<div id="Cont1" Class="FlecheVis"></div>
+<div id="Cont" Class="FlecheVis"></div>
 
 
 
