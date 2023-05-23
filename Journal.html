@@ -24,7 +24,7 @@
 			alert(Num + "Num de loaddata")
 			const parts = xmlhttp.responseText.split("@");
 			Maxo=parts.length-2;
-		
+
 			if (Num<1) {
 				Num=Maxo
 				document.getElementById("Maxi").innerHTML = Maxo
@@ -34,6 +34,11 @@
 			var0=parts[Num]
 			 result = var0.substring(0, var0.length-4);
 			document.getElementById("Contenu").innerHTML=result 
+			if (Num=1) {
+				document.getElementById("Cont" + Num).innerHTML = result
+			}		
+		
+		
 			document.getElementById("Contenu").style.textAlign = "left";
         	}
    		 };
@@ -190,7 +195,7 @@ float: left;
 	</div>
 	<div id="Actuel" style="display: inline-block;text-align: center;width: 20px;font-size: 18px;"></div>
 	<div style="display: inline-block;text-align: center;width: 20px;">
-	 /ee
+	 /
 	</div>
 
 	<div id="Maxi" style="display: inline-block;text-align: center;width: 20px;font-size: 18px;"></div>
@@ -207,7 +212,7 @@ float: left;
   </div>
 
 </div>
-
+<div id="Cont1" Class="FlecheVis"></div>
 
 
 
