@@ -34,12 +34,13 @@
 			var0=parts[Num]
 			 result = var0.substring(0, var0.length-4);
 			document.getElementById("Contenu").innerHTML=result 
+			Concat = ""
 			//for (var i = 1; i < Maxo+1; i++) {
 				i=1
 				var0=parts[i]
 			 	result = var0.substring(0, var0.length-4);
 				Concat = Concat + "<div id='Contenu" + i + "'>" + result  + "</div>"
-				
+				alert(Concat)
 			//}		
 			document.getElementById("Cont").innerHTML = Concat
 		
@@ -204,7 +205,7 @@ float: left;
 	</div>
 	<div id="Actuel" style="display: inline-block;text-align: center;width: 20px;font-size: 18px;"></div>
 	<div style="display: inline-block;text-align: center;width: 20px;">
-	 /D
+	 /
 	</div>
 
 	<div id="Maxi" style="display: inline-block;text-align: center;width: 20px;font-size: 18px;"></div>
