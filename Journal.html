@@ -78,14 +78,16 @@
 		NumEx=Num
 		Num=Num+1
 		//
-		//alert("apres -1 = " + Num)		
+		alert("apres + 1 = " + Num)		
 			if (Num>Maxo) {
 						Num=Maxo
 						return
 					}
 		document.getElementById("Actuel").innerHTML=Num
+				Num=document.getElementById("Actuel").innerHTML*1
+		alert("apres enregister element = " + Num + "ex" + NumEx)
 			if (NumEx===1) {
-				document.getElementById("Fleche1").className= "FlecheVis"
+			//	document.getElementById("Fleche1").className= "FlecheVis"
 			}
 			if (NumEx=Maxo-1) {
 		//		document.getElementById("Fleche2")..className= "FlecheInVis"
