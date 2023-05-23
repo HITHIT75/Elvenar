@@ -48,7 +48,11 @@
 	    xmlhttp.open("GET", url, true);
 	    xmlhttp.send(null);
 	}
-
+	function InfoStock() {
+		Num=document.getElementById("Actuel").innerHTML*1
+		Concat = document.getElementById("Contenu" + Num).innerHTML
+		document.getElementById("Contenu").innerHTML=Concat 
+	}
 	function FlecheMoins() {
 		document.getElementById("Contenu").innerHTML="<img src='https://img1.picmix.com/output/stamp/normal/2/4/0/6/1356042_c854c.gif' style='width: 200px;'>" 
 		//document.getElementById("Contenu").style.textAlign = "center";	
@@ -74,8 +78,8 @@
 				document.getElementById("Fleche1").className="FlecheInVis"
 			}
 		//alert("fin fleche 1")
-
-			loadData()
+			InfoStock()
+			//loadData()
 		}
 	function FlechePlus() {
 		//document.getElementById("Contenu").innerHTML="<img src='https://img1.picmix.com/output/stamp/normal/2/4/0/6/1356042_c854c.gif' style='width: 200px;'>" 
@@ -104,7 +108,7 @@
 				document.getElementById("Fleche2").className= "FlecheInVis"
 			}	
 		alert("apres enregister element = " + Num + "ex" + NumEx)
-			LoadData()
+			InfoStock()
 		alert("apres loaddata  ")
 		}
 
@@ -198,7 +202,7 @@ float: left;
 	</div>
 	<div id="Actuel" style="display: inline-block;text-align: center;width: 20px;font-size: 18px;"></div>
 	<div style="display: inline-block;text-align: center;width: 20px;">
-	 /A
+	 /B
 	</div>
 
 	<div id="Maxi" style="display: inline-block;text-align: center;width: 20px;font-size: 18px;"></div>
