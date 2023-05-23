@@ -36,7 +36,7 @@
 			document.getElementById("Contenu").innerHTML=result 
 			Concat = ""
 			//for (var i = 1; i < Maxo+1; i++) {
-				i=1
+				i=3
 				var0=parts[i]
 			 	result = var0.substring(0, var0.length-4);
 				//Concat = Concat + "<div id='Contenu" + i + "'>" + result  + "</div>"
@@ -46,7 +46,7 @@
 					para.id= "Content" + i;
 					// Append to another element:
 					document.getElementById("Cont").appendChild(para);
-					Res = document.getElementById("Content" + i).innerHTML
+					Res = document.getElementById("Content" + i).innerHTML + " [ " + i +" ]"
 		
 		
 				alert(Res)
