@@ -39,10 +39,10 @@
 				i=1
 				var0=parts[i]
 			 	result = var0.substring(0, var0.length-4);
-				Concat = Concat + "<div id='Contenu" + i + "'>" + result  + "</div>"
+				//Concat = Concat + "<div id='Contenu" + i + "'>" + result  + "</div>"
 					// Create element:
 					para = document.createElement("Div");
-					para.innerHTML = Concat;
+					para.innerHTML = result;
 					para.id= "Content" + i;
 					// Append to another element:
 					document.getElementById("Cont").appendChild(para);
@@ -215,7 +215,7 @@ float: left;
 	</div>
 	<div id="Actuel" style="display: inline-block;text-align: center;width: 20px;font-size: 18px;"></div>
 	<div style="display: inline-block;text-align: center;width: 20px;">
-	 //
+	 /A
 	</div>
 
 	<div id="Maxi" style="display: inline-block;text-align: center;width: 20px;font-size: 18px;"></div>
