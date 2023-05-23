@@ -21,7 +21,7 @@
         if (xmlhttp.readyState == 4) {
 		
 			Num=document.getElementById("Actuel").innerHTML*1
-			alert(Num + "Num de loaddata")
+			//alert(Num + "Num de loaddata")
 			const parts = xmlhttp.responseText.split("@");
 			Maxo=parts.length-2;
 
@@ -34,12 +34,13 @@
 			var0=parts[Num]
 			 result = var0.substring(0, var0.length-4);
 			document.getElementById("Contenu").innerHTML=result 
-			for (var i = 1; i < Maxo+1; i++) {
+			//for (var i = 1; i < Maxo+1; i++) {
+				i=1
 				var0=parts[i]
 			 	result = var0.substring(0, var0.length-4);
 				Concat = Concat + "<div id='Contenu" + i + "'>" + result  + "</div>"
 				
-			}		
+			//}		
 			document.getElementById("Cont").innerHTML = Concat
 		
 			document.getElementById("Contenu").style.textAlign = "left";
@@ -49,6 +50,7 @@
 	    xmlhttp.send(null);
 	}
 	function InfoStock() {
+		alert("Infostock")
 		Num=document.getElementById("Actuel").innerHTML*1
 		Concat = document.getElementById("Contenu" + Num).innerHTML
 		document.getElementById("Contenu").innerHTML=Concat 
@@ -86,12 +88,12 @@
 			Num=document.getElementById("Actuel").innerHTML*1
 			Maxo=document.getElementById("Maxi").innerHTML*1
 		NumEx=Num
-		alert("lod num = " + Num + " ex   " + NumEx  +"Maxo =" + Maxo)
+		//alert("lod num = " + Num + " ex   " + NumEx  +"Maxo =" + Maxo)
 		Num=Num+1
 		//
-		alert("apres + 1 = " + Num)		
+		//alert("apres + 1 = " + Num)		
 			if (Num>Maxo) {
-				alert("lod Num>Maxo " + Num + " Maxo   " + Maxo)
+				//alert("lod Num>Maxo " + Num + " Maxo   " + Maxo)
 						Num=Maxo
 						return
 					}
@@ -100,16 +102,16 @@
 		
 			
 			if (NumEx===1) {
-				alert("apflch1 ")
+				//alert("apflch1 ")
 				document.getElementById("Fleche1").className= "FlecheVis"
 			}
 			if (NumEx===(Maxo-1)) {
-				alert("flch2 numex =" + NumEx + " maxo = " + Maxo  + " maxo-1 = " + (Maxo-1) )
+				//alert("flch2 numex =" + NumEx + " maxo = " + Maxo  + " maxo-1 = " + (Maxo-1) )
 				document.getElementById("Fleche2").className= "FlecheInVis"
 			}	
-		alert("apres enregister element = " + Num + "ex" + NumEx)
+		//alert("apres enregister element = " + Num + "ex" + NumEx)
 			InfoStock()
-		alert("apres loaddata  ")
+		//alert("apres loaddata  ")
 		}
 
 //	background-image: url(Image/ParcheminJdB.png);
@@ -202,7 +204,7 @@ float: left;
 	</div>
 	<div id="Actuel" style="display: inline-block;text-align: center;width: 20px;font-size: 18px;"></div>
 	<div style="display: inline-block;text-align: center;width: 20px;">
-	 /C
+	 /D
 	</div>
 
 	<div id="Maxi" style="display: inline-block;text-align: center;width: 20px;font-size: 18px;"></div>
