@@ -34,9 +34,11 @@
 			var0=parts[Num]
 			 result = var0.substring(0, var0.length-4);
 			document.getElementById("Contenu").innerHTML=result 
-			if (Num=1) {
-				document.getElementById("Cont" + Num).innerHTML = result
-			}		
+		
+				var0=parts[1]
+			 	result = var0.substring(0, var0.length-4);			
+				document.getElementById("Cont" + 1).innerHTML = result
+					
 		
 		
 			document.getElementById("Contenu").style.textAlign = "left";
