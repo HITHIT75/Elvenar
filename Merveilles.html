@@ -393,8 +393,8 @@ function loadData() {
      Num=1
      //alert(Num + "Num de loaddata")
      const parts = xmlhttp.responseText.split("MERV");
-     Maxo=parts.length-2;
-
+    Maxi=parts.length-2;
+    document.getElementById("Maxo").innerHTML=Maxi
      Concat = ""
      for (var i = 1; i < Maxo+1; i++) {
 
@@ -427,14 +427,34 @@ function loadData() {
    Concat = document.getElementById("Content" + Num).innerHTML
    document.getElementById("Contenu").innerHTML=Concat
  }
+function Debut() {
+   alert("ok")
+   loadData()
+   Inscrire(1)
+}
+Inscrire(Num) {
+  Res = Trouver(Num,"Image ere:")
+  document.getElementById("ImgEre").innerHTML = Res
+}
+Trouver(Num,Zone) {
+ // Concat = "Nom:Tome des mystères |index:1|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:4x4|Lien image:https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png|Cycle de vie: Jusqu'au chapitre 5-6|Graph cycle de vie:"
+//  var2 = "Nom:Tome des mystères2 |index:1|Image ere:https://"
+Concat = document.getElementById("Content" + Num).innerHTML
+Longueur = Zone.length+1
 
+var1= indexOf (Concat Zone,1)
+var2= indexOf (Concat "|",var1+1)
+  Res = Concat.substring(Longueur, var2-var1-1)
+alert(Res)
+  return Res
+}
 </script>
 
 
 </head>
 
 
-<body onload="loadData()">
+<body onload="Debut()">
   <audio  id="MonSon" src="Image/Son.wav"></audio>
 
 <table width="60%" style="text-align:center">
@@ -688,6 +708,7 @@ function loadData() {
     </table>
 
 <br>
+<div id="maxo"><div>  
 <div id="Cont" style="display: content;"></div>
 
 </body>
