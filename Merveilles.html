@@ -102,7 +102,17 @@
    label {display:table-cell;float: left;}
 </style>
 <script type="text/javascript">
-
+public static void wait(int ms)
+{
+    try
+    {
+        Thread.sleep(ms);
+    }
+    catch(InterruptedException ex)
+    {
+        Thread.currentThread().interrupt();
+    }
+}
     function Tester() {
 
           Num=document.getElementById("ListeUne").selectedIndex
@@ -421,6 +431,7 @@ function loadData() {
  }
  function Debut() {
      loadData()
+   wait(10000);
        Res = document.getElementById("Content1" ).innerHTML 
        alert(Res)
  //   alert("ok loadata")  
