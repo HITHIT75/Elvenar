@@ -421,11 +421,11 @@ function loadData() {
  }
  function Debut() {
      loadData()
-    alert("ok loadata")  
+   // alert("ok loadata")  
    Inscrire()
   }
  function Inscrire() {
- alert("ok Inscrire")
+ //alert("ok Inscrire")
   Res = Trouver("Libellé ere:")
   document.getElementById("Ere").innerHTML = Res
   Res = Trouver("Image ere:")
@@ -462,24 +462,24 @@ function loadData() {
 
 }
  function  Trouver(Zone) {
-   alert("Trouver" )
+//   alert("Trouver" )
    Num = document.getElementById("maxo").innerHTML*1
    var = "Content" + Num
 alert("Num Trouver=" + var)  
   // Concat ="Nom:Tome des mystères |index:1|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:4x4|Lien image:https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png|Cycle de vie: Jusqu'au chapitre 5-6|Graph cycle de vie: Jusqu'au chapitre 5-7|Bonus1: Produit un ou des point(s) de connaissance toutes les 24h|Image1Bonus1:https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png|||Bonus2: Production de PC toutes les 24h|Bonus3: |Intérêt combat nb étoiles:4|Intérêt nego nb étoiles:1|Intérêt combat auto:0|Commentaires: Utile uniquement au démarrage du jeu|Graph cycle de vie:|Cout et Coffre de gains:140,10,1,5,,5,,5,,,,,,,,,   198,10,1,10,,5,,5,,5,,,,,,,   250,15,1,10,1,10,,5,,5,,,,,,,   300,20,1,15,1,10,1,5,,5,,5,,,,,   390,25,2,20,1,15,1,10,,5,,5,,,,,   430,25,2,20,1,15,1,10,1,5,,5,,,,,   470,30,2,20,1,15,1,10,1,5,,5,,,,,   510,30,2,25,1,20,1,10,1,10,,5,,,,,   580,35,2,30,1,20,1,15,1,10,,5,,5,,,   610,40,2,30,1,20,1,15,1,10,,5,,5,,,   640,40,3,30,2,20,1,15,1,10,,5,,5,,,   680,45,3,30,2,25,1,15,1,10,1,5,,5,,,   740,45,3,35,2,25,1,20,1,10,1,5,,5,,,   770,50,3,35,2,25,1,20,1,10,1,5,,5,,,   790,50,3,40,2,30,1,20,1,10,1,5,,5,,,   820,50,3,40,2,30,1,20,1,10,1,5,,5,,,   870,55,3,40,2,30,2,20,1,15,1,10,,5,,,   930,55,3,45,2,30,2,20,1,15,1,10,,5,,,   930,60,3,45,2,30,2,20,1,15,1,10,,5,,,  950,60,3,45,2,35,2,25,1,15,1,10,,5,,,   1000,65,3,50,2,35,2,25,1,15,1,10,,5,,, 1020,65,3,50,2,35,2,25,1,15,1,10,,5,,,   1050,65,3,50,3,35,2,25,1,15,1,10,,5,,,   1070,65,4,50,3,35,2,25,1,15,1,10,,5,,,   2000,95,5,75,4,55,3,35,2,25,1,15,1,10,,5,   2100,95,5,75,4,55,3,35,2,25,1,15,1,10,,5,   2200,95,5,75,4,55,3,35,2,25,1,15,1,10,,5,   2300,95,5,75,4,55,3,35,2,25,1,15,1,10,,5,|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|exploration,province,matériaux,pc|"
-Concat = document.getElementById(var).innerHTML
-alert("Concat =" + Concat)  
+Chaine = document.getElementById(var).innerHTML
+alert("Concat =" + Chaine)  
 
-   // //  var2 = "Nom:Tome des mystères2 |index:1|Image ere:https://"
+   
 // //Concat = document.getElementById("Content" + Num).innerHTML
  Longueur = (Zone.length+1)*1
 
- var1= Concat.indexOf (Zone)*1
- var2= Concat.indexOf ("|",var1+1)*1
+ var1= Chaine.indexOf (Zone)*1
+ var2= Chaine.indexOf ("|",var1+1)*1
  var3=((var1*1)+(Longueur*1)-1)
  var4=var2*1
 // alert(Zone +"   " + Longueur +"   " +var1 +"   " + var2 + "  " + var3 + "  " + var4)
-   Res = Concat.substring(var3, var4)
+   Res = Chaine.substring(var3, var4)
 // alert(Res)
  return Res
  }
