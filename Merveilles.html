@@ -393,7 +393,7 @@ function loadData() {
      Num=1
      //alert(Num + "Num de loaddata")
      const parts = xmlhttp.responseText.split("MERV");
-   // Maxi=parts.length-2;
+    Maxi=parts.length-2;
     //document.getElementById("Maxo").innerHTML=Maxi
      Concat = ""
      for (var i = 1; i < Maxi+1; i++) {
@@ -427,10 +427,10 @@ function loadData() {
 //   Concat = document.getElementById("Content" + Num).innerHTML
 //   document.getElementById("Contenu").innerHTML=Concat
 // }
-function Debut() {
-   loadData()
+//function Debut() {
+//   loadData()
    //Inscrire(1)
-}
+//}
 //Inscrire(Num) {
 //  Res = Trouver(Num,"Image ere:")
 //  document.getElementById("ImgEre").innerHTML = Res
@@ -453,7 +453,7 @@ function Debut() {
 </head>
 
 
-<body onload="Debut()">
+<body onload="loadData()">
   <audio  id="MonSon" src="Image/Son.wav"></audio>
 
 <table width="60%" style="text-align:center">
