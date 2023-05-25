@@ -1,10 +1,7 @@
 <head>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-     body {
+  body {
        align: center;
        text-align:center;
        padding: 0px;
@@ -13,7 +10,6 @@
        font-size: 16px;
        font-family: Verdana;
        color: #051E4C;
-
      }
 
      @keyframes LienHtml {
@@ -21,29 +17,23 @@
       50% {opacity:1;}
         100% {opacity:0;}
      }
-table {
-  border-collapse: collapse;
-  border-color: #506E62;
+  table {
+    border-collapse: collapse;
+    border-color: #506E62;
+    }
+  th {
+    background-color: #506E62;
+    color: white;
+     height: 20px;
   }
-th {
-  background-color: #506E62;
-  color: white;
-   height: 20px;
-}
-
-//th, td {
-//  border: 1px solid;
-//}
-
-//tr:nth-child(even) {background-color: #f2f2f2;}
 
   #ImageMerv {
-  height: 100px;
-         transition:  height 2s;
+    height: 100px;
+    transition:  height 2s;
        }
   #ImageMerv:hover {
-  height: 500px;
-  }
+    height: 500px;
+    }
   .styled-select select {
      background: transparent;
      width: 400px;
@@ -55,7 +45,7 @@ th {
      height: 34px;
      -webkit-appearance: none;
      }
-   .styled-select {
+  .styled-select {
       width: 240px;
       height: 34px;
       overflow: hidden;
@@ -63,29 +53,28 @@ th {
       border: 1px solid #ccc;
       }
 
-     .LienHtml {
+  .LienHtml {
        color: #051E4C;
        animation-name: LienHtml;
        animation-duration: 10s;
        animation-iteration-count: infinite;
-
      }
-   }
-   .dropbtn {
-     background-color: #04AA6D;
-     color: white;
-     padding: 1px;
-     font-size: 14px;
-     border: none;
-   }
 
-   .dropdown {
-     position: relative;
-     display: inline-block;
-   }
-   #Place {
-     background-color: #DBF642;
-   }
+  .dropbtn {
+         background-color: #04AA6D;
+         color: white;
+         padding: 1px;
+         font-size: 14px;
+         border: none;
+       }
+
+  .dropdown {
+       position: relative;
+       display: inline-block;
+     }
+  #Place {
+       background-color: #DBF642;
+     }
 
    .dropdown-content {
      display: none;
@@ -113,440 +102,279 @@ th {
    label {display:table-cell;float: left;}
 </style>
 <script type="text/javascript">
-function CalculInitial(){
 
-  
-      //alert(document.getElementById("Ere").innerText)
-        //    document.getElementById("Annonce").innerhtml= "????"
+    function Tester() {
 
-       //  checkCookie()
-      }
-//function Lister1() {
-//JouerSon(1)
-//Fichier="Data/" + document.getElementById("Liste1").value +".txt"
-//  alert("Fichier")
-//document.getElementById("frmFile").src = Fichier
-//  Placer(document.getElementById("Liste1").selectedIndex)
-//   beneficier()
+          Num=document.getElementById("ListeUne").selectedIndex
+          Erer(Num)
+          //Fichier="Data/" + document.getElementById("ListeUne").value +".txt"
+          //document.getElementById("frmFile").src = Fichier
+          // alert("Test envoi placer  " + Num)
+          //document.getElementById("ImageMerv").src="https://fr.wiki.elvenar.com/images/8/89/B_Woodelves_AW2.png";
+          //  document.getElementById("ImageMervBis").src="Data/Guilde_du_marchand_prospere.png"
+          Imager()
+          LoadFile()
+        }
+    function Imager() {
+          Num=document.getElementById("ListeUne").selectedIndex
+        //  alert("DEBUT de placer image en place " + Num)
+          MervImage = [];
+          MervImageBis = [];
+          MervImage[0] = "https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png";
+          MervImage[1] = "https://fr.wiki.elvenar.com/images/f/f8/Abysse_dor%C3%A9.png";
+          MervImage[2] = "https://fr.wiki.elvenar.com/images/b/b4/Excavation_sans_fin.png";
+          MervImage[3] = "https://fr.wiki.elvenar.com/images/4/4e/Aiguilles_de_la_temp%C3%AAte.png";
+          MervImage[4] = "https://fr.wiki.elvenar.com/images/thumb/8/8e/48_GreatBuild_Inner_Elves_01_cropped.png/800px-48_GreatBuild_Inner_Elves_01_cropped.png";
+          MervImage[5] = "https://fr.wiki.elvenar.com/images/thumb/7/75/48_GreatBuild_Inner_Elves_02_cropped.png/800px-48_GreatBuild_Inner_Elves_02_cropped.png";
+          MervImage[6] = "https://fr.wiki.elvenar.com/images/thumb/8/81/47_Greatbuilding_Elves_Crystaltree_01_cropped.png/700px-47_Greatbuilding_Elves_Crystaltree_01_cropped.png";
+          MervImage[7] = "https://fr.wiki.elvenar.com/images/thumb/b/be/47_Greatbuilding_Elves_Innercity_Crystaltree_06_cropped.png/695px-47_Greatbuilding_Elves_Innercity_Crystaltree_06_cropped.png";
+          MervImage[8] = "https://fr.wiki.elvenar.com/images/9/96/Tr%C3%B4ne_des_Hauts_Hommes.png";
+          MervImage[9] = "https://fr.wiki.elvenar.com/images/thumb/1/1f/D_greatbuilding_dwarves_military_02_cropped.png/681px-D_greatbuilding_dwarves_military_02_cropped.png";
+          MervImage[10] = "https://fr.wiki.elvenar.com/images/1/1d/D_greatbuilding_dwarves_goods_01_cropped.png";
+          MervImage[11] = "https://fr.wiki.elvenar.com/images/6/66/F_AncientWonder_Supplies_Inner_L2_cropped.png";
+          MervImage[12] = "https://fr.wiki.elvenar.com/images/9/9c/F_AncientWonder_Trader_InnerCity_L2_cropped.png";
+          MervImage[13] = "https://fr.wiki.elvenar.com/images/f/f0/B_Orcs_AW2_1_0003.png";
+          MervImage[14] = "https://fr.wiki.elvenar.com/images/9/9a/B_Woodelves_AW1.png";
+          MervImage[15] = "https://fr.wiki.elvenar.com/images/f/f0/B_Orcs_AW2_1_0003.png";
+          MervImage[16] = "https://fr.wiki.elvenar.com/images/8/89/B_Woodelves_AW2.png";
+          MervImage[17] = "https://fr.wiki.elvenar.com/images/6/61/B_gr5_aw1.png";
+          MervImage[18] = "https://fr.wiki.elvenar.com/images/7/7a/B_gr5_aw2.png";
+          MervImage[19] = "https://fr.wiki.elvenar.com/images/3/37/0009_B_Gr6_AW1_1.png";
+          MervImage[20] = "https://fr.wiki.elvenar.com/images/d/de/0008_B_Gr6_AW2_1.png";
 
-//    LoadFile()
-//}
-function Lister2() {
-var0=document.getElementById("Liste2").value*1+1
-document.getElementById("Intitule").innerHTML="Coffres disponibles pour passer du niveau " + document.getElementById("Liste2").value + " à " + var0
-LoadFile()
-//Annoncer()
-      //alert(document.getElementById("Liste2").value)
-    //
 
-      }
- function Annoncer() {
+          MervImageBis[0] ="Data/Tome_des_mysteres.png"
+          MervImageBis[1] ="Data/Abysse_dore.png"
+          MervImageBis[2] ="Data/Excavation_sans_fin.png"
+          MervImageBis[3] ="Data/Aiguilles_de_la_tempete.png"
+          MervImageBis[4] ="Data/Monastere_martial_le_sanctuaire.png"
+          MervImageBis[5] ="Data/Monastere_martial_le_sanctuaire.png"
+          MervImageBis[6] ="Data/Phare_de_cristal_Tour_du_clocher.png"
+          MervImageBis[7] ="Data/Phare_de_cristal_Tour_du_clocher.png"
+          MervImageBis[8] ="Data/Trones_des_hauts_hommes.png"
+          MervImageBis[9] ="Data/Rempart_nain.png"
+          MervImageBis[10] ="Data/Coeur_de_la_montagne.png"
+          MervImageBis[11] ="Data/Tours_de_la_prosperite.png"
+          MervImageBis[12] ="Data/Guilde_du_marchand_prospere.png"
+          MervImageBis[13] ="Data/Forge_des_heros.png"
+          MervImageBis[14] ="Data/Ambassade_d_enar.png"
+          MervImageBis[15] ="Data/Sanctuaire_des_champignons_astucieux.png"
+          MervImageBis[16] ="Data/Academie_volante.png"
+          MervImageBis[17] ="Data/Labyrinthe_de_la_matiere_noire.png"
+          MervImageBis[18] ="Data/Abbaye_du_dragon.png"
+          MervImageBis[19] ="Data/Temple_des_crapauds.png"
+          MervImageBis[20] ="Data/Centre_d_echange_d_Elvenar.png"
 
-   checkBox1 = document.getElementById("Pris1").checked
-   checkBox2 = document.getElementById("Pris2").checked
-   checkBox3 = document.getElementById("Pris3").checked
-   checkBox4 = document.getElementById("Pris4").checked
-   checkBox5 = document.getElementById("Pris5").checked
-   checkBox6 = document.getElementById("Pris6").checked
-   checkBox7 = document.getElementById("Pris7").checked
-   checkBox8 = document.getElementById("Pris8").checked
+          MervImage[21] = "https://fr.wiki.elvenar.com/images/thumb/6/6d/B_Gr7_AW1_1_0009.png/714px-B_Gr7_AW1_1_0009.png";
+          MervImage[22] = "https://fr.wiki.elvenar.com/images/7/7f/B_Gr7_AW2_1_0010.png";
+          MervImage[23] = "https://fr.wiki.elvenar.com/images/e/e2/Construct_AW1_main.png";
+          MervImage[24] = "https://fr.wiki.elvenar.com/images/1/11/Construct_AW2_main.png";
+          MervImage[25] = "https://fr.wiki.elvenar.com/images/3/37/GR10_AW1_3x6.png";
+          MervImage[26] = "https://fr.wiki.elvenar.com/images/a/a8/GR10_AW2_7x3.png";
+          MervImage[27] = "https://fr.wiki.elvenar.com/images/0/0f/GR11_AW1_6x4.png";
+          MervImage[28] = "https://fr.wiki.elvenar.com/images/5/54/GR11_AW2_4x5.png";
+          MervImage[29] = "https://fr.wiki.elvenar.com/images/e/e5/GR12_AW1_main.png";
+           MervImage[30]= "https://fr.wiki.elvenar.com/images/9/92/GR12_AW2_main.png";
 
-   Recompense1=document.getElementById("SA1").innerHTML*1
-   Recompense2=document.getElementById("SA2").innerHTML*1
-   Recompense3=document.getElementById("SA3").innerHTML*1
-   Recompense4=document.getElementById("SA4").innerHTML*1
-   Recompense5=document.getElementById("SA5").innerHTML*1
-   Recompense6=document.getElementById("SA6").innerHTML*1
-   Recompense7=document.getElementById("SA7").innerHTML*1
-   Recompense8=document.getElementById("SA8").innerHTML*1
-   compteur=0
-   Chaine =""
-     if ((checkBox1 != true) && (Recompense1>0)){
-       alert(document.getElementById("SA1").innerHTML)
-       Chaine = Chaine + Recompense1
-       compteur=compteur+1
+            MervImageBis[21] ="Data/Tours_du_crepuscule.png"
+            MervImageBis[22] ="Data/Fontaines_triomphantes.png"
+            MervImageBis[23] ="Data/D111_a_Voyage_temporel.png"
+            MervImageBis[24] ="Data/D222_z_Simia_Sapiens.png"
+            MervImageBis[25] ="Data/Vortex_de_stockage.png"
+            MervImageBis[26] ="Data/Fontaine_de_jouvence_thermale.png"
+            MervImageBis[27] ="Data/Bibliotheque_du_donjon.png"
+            MervImageBis[28] ="Data/Arene_de_tournois.png"
+            MervImageBis[29] ="Data/Arche_dragonique.png"
+             MervImageBis[30]="Data/Oracle_du_destin.png"
+
+            MervImageBis[31] ="Data/Autel_des_Champignons.png"
+            MervImage[31]= "https://fr.wiki.elvenar.com/images/0/0b/B_Ch18_AW1_1.png"
+            MervImageBis[32] ="Data/Temple_des_Esprits.png"
+            MervImage[32]= "https://fr.wiki.elvenar.com/images/3/3a/B_Ch18_AW2_1.png"
+            MervImageBis[33] ="Data/Tour_du_sceau_Vallorien.png"
+            MervImage[33]= "https://fr.wiki.elvenar.com/images/2/27/GR14_AW1_main.png"
+             MervImageBis[34] ="Data/Arbre_d_illumination.png"
+            MervImage[34]= "https://fr.wiki.elvenar.com/images/1/12/GR14_AW2_main.png"
+            MervImageBis[35] ="Data/Lieu_de_repos_ancestral.png"
+            MervImage[35]= "https://fr.wiki.elvenar.com/images/d/db/GR15_AW1_main.png"
+             MervImageBis[36] ="Data/Taverne_des_Explorateurs.png"
+            MervImage[36]= "https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png"
+            //alert("fin de placer image en place " + Num)
+            document.getElementById("ImageMerv").src=MervImage[Num]
+            document.getElementById("ImageMervBis").src=MervImageBis[Num]
+            //document.getElementById("Annonce").innerhtml=username + "....1"
+          }
+    function Erer(Num) {
+           // alert(Num + "Placer pour blan ere")
+            if(Num<7) {
+              document.getElementById("Ere").innerText="Les nains"
+              document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png"
+            }
+            if((Num>6) && (Num<9)) {
+              document.getElementById("Ere").innerText="Les fées"
+              document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/a/a6/Fairiesbannerteck.png"
+            }
+            if((Num>8) && (Num<11)) {
+              document.getElementById("Ere").innerText="Les orcs et gobelins"
+              document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/5/5d/Orcs%26Goblinsbannerteck.png"
+            }
+            if((Num>10) && (Num<13)) {
+              document.getElementById("Ere").innerText="Les elfes sylvains"
+              document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/e/e8/TTFlags.png/75px-TTFlags.png"
+            }
+            if((Num>12) && (Num<15)) {
+              document.getElementById("Ere").innerText="Sorciers et dragons"
+              document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/3/3c/SRCbanner.png/80px-SRCbanner.png"
+            }
+            if((Num>14) && (Num<17)) {
+              document.getElementById("Ere").innerText="Halfelins"
+              document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/7/78/G6flag.png"
+            }
+            if((Num>16) && (Num<19)) {
+              document.getElementById("Ere").innerText="Élémentaires"
+              document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/9/97/Gr7flag.png"
+            }
+            if((Num>18) && (Num<21)) {
+              document.getElementById("Ere").innerText="Amuni"
+              document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/4/43/Gr8flag.png"
+            }
+            if((Num>20) && (Num<23)) {
+              document.getElementById("Ere").innerText="Créateurs"
+              document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/5/59/Gr9flag.png/90px-Gr9flag.png"
+            }
+            if((Num>22) && (Num<25)) {
+              document.getElementById("Ere").innerText="Les Elvenar"
+              document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/1/17/Gr10flag.png/90px-Gr10flag.png"
+            }
+            if((Num>24) && (Num<27)) {
+              document.getElementById("Ere").innerText="Ambassades"
+              document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/b/bb/Gr11flag.png/90px-Gr11flag.png"
+            }
+            if((Num>26) && (Num<29)) {
+              document.getElementById("Ere").innerText="Marchands d'Unur"
+              document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/1/14/Gr12flag.png/90px-Gr12flag.png"
+            }
+            if((Num>28) && (Num<31)) {
+              document.getElementById("Ere").innerText="Esprit d'Equipe"
+              document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/2/2a/Gr13flag.png/90px-Gr13flag.png"
+            }
+            if((Num>30) && (Num<33)) {
+              document.getElementById("Ere").innerText="La Revanche de l'Exilé"
+              document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/e/e1/Gr14flag.png"
+            }
+            if((Num>32) && (Num<35)) {
+              document.getElementById("Ere").innerText="Le Pouvoir de la Musique"
+              document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/9/94/Gr15flag.png/80px-Gr15flag.png"
+            }
+          }
+    function LoadFile() {
+                //Num=document.getElementById("Liste2").value
+
+                Benef=""
+                 Benef=Benef+"Abysse_dore|Produit des pièces toutes les 3h. La production correspond à un pourcentage du montant total de la capacité de stockage en pièces de votre hôtel de ville.|https://fr.wiki.elvenar.com/images/a/a3/Coin_small.png||Vous procure de la population additionnelle. Cette population supplémentaire correspond à un pourcentage du montant de votre population au travail (population employée dans l'ensemble de vos bâtiments).|https://fr.wiki.elvenar.com/images/8/8d/Populationadd.png|||||"
+                 Benef=Benef+"Tome_des_mysteres|Produit un ou des point(s) de connaissance toutes les 24h|https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png||Vous donne des matériaux pour chaque exploration lancée. La production correspond à un pourcentage du montant total de la capacité de stockage en matériaux de votre Hôtel de Ville.|https://fr.wiki.elvenar.com/images/6/62/Supply_small.png|||||"
+                  Benef=Benef+"Excavation_sans_fin|Produit des matériaux supplémentaires toutes les 24h. La production correspond à un pourcentage du montant total de la capacité de stockage en matériaux de votre hôtel de ville.|https://fr.wiki.elvenar.com/images/6/62/Supply_small.png||Vous recevez plus de reliques à la fin de chaque province complétée|https://fr.wiki.elvenar.com/images/1/12/Extra_relic.png|||||"
+                  Benef=Benef+"Aiguilles_de_la_tempete|Renforce vos unités de portée légères|https://fr.wiki.elvenar.com/images/6/6b/Damage_boost.png||Accélère la vitesse d’entrainement de votre caserne|https://fr.wiki.elvenar.com/images/1/1d/Time_small.png|||||"
+                //   Benef=Benef+"Monastere_martial|Améliore les points de vie des troupes|https://fr.wiki.elvenar.com/images/4/4a/Aw_hitpoints.png||Ajoute de la culture supplémentaire (un pourcentage de culture supplémentaire est ajouté, en fonction de la culture nécessaire pour votre cité).|https://fr.wiki.elvenar.com/images/8/80/Culture_icon_elves.png|||||"
+                //    Benef=Benef+"Le_sanctuaire|Améliore les points de vie des troupes|https://fr.wiki.elvenar.com/images/4/4a/Aw_hitpoints.png||Ajoute de la culture supplémentaire (un pourcentage de culture supplémentaire est ajouté, en fonction de la culture nécessaire pour votre cité).|https://fr.wiki.elvenar.com/images/8/80/Culture_icon_elves.png|||||"
+                //    Benef=Benef+"Phare_de_cristal|Confère une certaine quantité de marchandises boostées, de façon aléatoire, dépendant du nombre de provinces complétées lorsque vous ouvrez un coffre lors de l'aide entre voisins.|https://fr.wiki.elvenar.com/images/f/f1/NHreward.png||Allonge la durée d’aide sur vos bâtiments de culture.|https://fr.wiki.elvenar.com/images/9/93/NHlongrime.png|||||"
+                //    Benef=Benef+"Tour_du_clocher|Confère une certaine quantité de marchandises boostées, de façon aléatoire, dépendant du nombre de provinces complétées lorsque vous ouvrez un coffre lors de l'aide entre voisins.|https://fr.wiki.elvenar.com/images/f/f1/NHreward.png||Allonge la durée d’aide sur vos bâtiments de culture.|https://fr.wiki.elvenar.com/images/9/93/NHlongrime.png|||||"
+                //    Benef=Benef+"Tour_de_guet_en_ruines|Améliore le bonus culturel conféré par un bâtiment qui a reçu l’aide d’un voisin|confrère|https://fr.wiki.elvenar.com/images/8/80/Culture_icon_elves.png||Vous offre de la culture additionnelle. Cette culture supplémentaire est un pourcentage de la culture requise (culture nécessaire) par votre ville.|https://fr.wiki.elvenar.com/images/8/80/Culture_icon_elves.png|||||"
+ //                  Benef=Benef+"Trones_des_hauts_hommes|Vous donne des points de classement supplémentaire pour chaque merveille construite ou améliorée.|https://fr.wiki.elvenar.com/images/f/f3/Rankingpoint_big.png||Ajoute de la culture supplémentaire. autant de culture supplémentaire que de points de classement bonus.|https://fr.wiki.elvenar.com/images/8/80/Culture_icon_elves.png|||||"
+ //                  Benef=Benef+"Rempart_nain|Produit des unites du premier type toutes les 3h|https://fr.wiki.elvenar.com/images/5/53/Extratroop.png||Améliore la taille des escouades entrainables dans la caserne.|https://fr.wiki.elvenar.com/images/c|c8/Add_training_cluster_size.png|||||"
+ //                  Benef=Benef+"Coeur_de_la_montagne|Améliore le boost de production de vos manufactures boostées|https://fr.wiki.elvenar.com/images/9/92/AWGoodboost.png||Ajoute de la population disponible à votre ville. |https://fr.wiki.elvenar.com/images/8/8d|Populationadd.png|||||"
+ //                  Benef=Benef+"Tours_de_la_prosperite|Augmente la durée du sortilège 'puissance des matériaux'|https://fr.wiki.elvenar.com/images/2/2d/Timeboost3.png||Améliore l'effet du sortilège “puissance des matériaux”|https://fr.wiki.elvenar.com/images/5/5a|Spell_supply_production_boost_1_bonus.png||Produit des matériaux supplémentaires collectables toutes les 3 heures.|https://fr.wiki.elvenar.com/images/6/62/Supply_small.png||"
+ //                  Benef=Benef+"Guilde_du_marchand_prospere|Réduction de la commission du marchand sur les offres des joueurs non découverts.|https://fr.wiki.elvenar.com/images/6/64/Trader_fee_reduced.png||Améliore la quantité de marchandises offertes par le grossiste.|https://fr.wiki.elvenar.com/images/7/70/Trader_small.png||Améliore le boost de production de chaque portail des races invitées construit dans votre ville.|https://fr.wiki.elvenar.com/images/3/3f|Portal_production.png||"
+ //                  Benef=Benef+"Forge_des_heros|Vous donne des orcs toutes les 24h|https://fr.wiki.elvenar.com/images/e|e3/Orcs.png||Améliore la force de vos unites de mêlée lourde|https://fr.wiki.elvenar.com/images/6/6b/Damage_boost.png|||||"
+ //                  Benef=Benef+"Sanctuaire_des_champignons_astucieux|Produit des unites du 2nd type (archer|arbalétrier) toutes les 3h|https://fr.wiki.elvenar.com/images/3/3b/Extratroop2.png||Chaque niveau d’armurerie possédé vous confère un bonus supplémentaire pour la taille de l’escouade entraînée|https://fr.wiki.elvenar.com/images/c/c8/Add_training_cluster_size.png|||||"
+ //                  Benef=Benef+"Ambassade_d_enar|Produit lentement des éclats de runes pour les merveilles.|https://fr.wiki.elvenar.com/images/8/87/Brokenshard.png||Génère du mana dès que vous lancez une exploration.|https://fr.wiki.elvenar.com/images/e|ed|Mana.png|||||"
+ //                  Benef=Benef+"Academie_volante|Produit des unités de votre 3ième type toutes les 3 heures.|https://fr.wiki.elvenar.com/images/3/38/Priesthead.png|https://fr.wiki.elvenar.com/images/9/96/Sorceresshead.png|Augmente la vitesse d'entrainement du camp de mercenaires|https://fr.wiki.elvenar.com/images/1/1d|Time_small.png|||||"
+ //                  Benef=Benef+"Labyrinthe_de_la_matière_noire|Produit du Mana toutes les 3 heures|https://fr.wiki.elvenar.com/images/e|ed|Mana.png||Réduit la perte de Mana.|https://fr.wiki.elvenar.com/images/7/79/ManaDecay.png|||||"
+ //                  Benef=Benef+"Abbaye_du_dragon|Augmente la puissance des unités magiques|https://fr.wiki.elvenar.com/images/6/6b/Damage_boost.png||Mana par sort utilisé|https://fr.wiki.elvenar.com/images/e/ed/Mana.png|||||"
+ //                  Benef=Benef+"Temple des crapauds|Produit des unités de portée lourdes toutes les 3 heures - selon un pourcentage de la taille de vos escouades (arrondi vers le haut)|https://fr.wiki.elvenar.com/images/9/96/Radmortarhead.png|https://fr.wiki.elvenar.com/images/3/38/Granitgolemhead.png||Améliore la force de vos unités de portée lourde|https://fr.wiki.elvenar.com/images/6/6b/Damage_boost.png|||||"
+ //                  Benef=Benef+"Centre_d_echange_d_Elvenar|Produit des graines divines toutes les 12 heures, basé sur le niveau de votre hôtel de ville.|https://fr.wiki.elvenar.com/images/c/c6/Seed_icon.png||Augmente la durée du sortilège "Manufacture enchantée".|https://fr.wiki.elvenar.com/images/2/2d/Timeboost3.png||Augmente la puissance du sortilège "Manufacture enchantée".|https://fr.wiki.elvenar.com/images/1/11/Spell2boost3.png||"
+ //                  Benef=Benef+"Tours_du_crepuscule|Dans les coffres lors de l'aide entre voisins, vous obtenez des graines divines supplémentaires correspondant au bonus multiplié par le niveau de votre hôtel de ville.|https://fr.wiki.elvenar.com/images/c|c6/Seed_icon.png||Réduit la perte de graines divines|https://fr.wiki.elvenar.com/images/9/9b|SeedDecay.png|||||"
+ //                  Benef=Benef+"Fontaines_triomphantes|Améliore la vitesse de formation de votre terrain d'entraînement|https://fr.wiki.elvenar.com/images/2/2d/Timeboost3.png||Dégâts des unités de mêlée légère augmentés|https://fr.wiki.elvenar.com/images/6/6b/Damage_boost.png|||||"
+ //                  Benef=Benef+"Pyramide_purificatrice|Produit des unités de mêlée lourde - selon un pourcentage de la taille de vos escouades (arrondi vers le haut).||||Donne des marchandises sensibles boostées de manière aléatoire lors de la collecte des orcs (en pourcentage de votre production d’orcs).|||||||"
+ //                  Benef=Benef+"Phare_de_bon_entourage|Augmente la durée du sortilège «don ensorcelé ».|https://fr.wiki.elvenar.com/images/2/2d/Timeboost3.png||Augmente l’effet du sortilège «don ensorcelé ».|https://fr.wiki.elvenar.com/images/3/3f/Spell_EE_icon.png||Augmente la production de mana dans les bâtiments culturels ayant reçu l’aide des voisins.|https://fr.wiki.elvenar.com/images/5/5b/ManaBoost.png||"
+ //                  Benef=Benef+"D111_a_Voyage_temporel|Augmentation du bonus de production des marchandises sensibles|https://fr.wiki.elvenar.com/images/6/63/SentientBoosted.png||Réduction du temps d'attente avant de rejouer une province de tournois|https://fr.wiki.elvenar.com|index.php?title=Fichier:TT.png|||||"
+ //                  Benef=Benef+"D222_z_Simia_Sapiens|Réduction de la perte journalière des marchandises sensibles.|https://fr.wiki.elvenar.com/images/8/81/Sentient_decay.png||Donne un pourcentage d'unités en plus à chaque récolte de la Caserne, du Terrain d'entrainement et du Camp des mercenaires.|https://fr.wiki.elvenar.com/images/3/3b/Barracks_boosted.png|||||"
+ //                  Benef=Benef+"Vortex_de_stockage|Améliore la capacité de stockage des marchandises du campement|https://fr.wiki.elvenar.com/images/9/94/Portal_capacity_boost.png ||Augmente la production de vos trois marchandises sensibles boostées|https://fr.wiki.elvenar.com/images/6/63/SentientBoosted.png|||||"
+ //                  Benef=Benef+"Fontaine_de_jouvence_thermale|Augmente la population fournie par les résidences.|https://fr.wiki.elvenar.com/images/c|cb|Population_boost.png||Confère de la culture supplémentaire pour chaque niveau de merveille antique dans votre ville.|https://fr.wiki.elvenar.com/images/8/80/Culture_icon_elves.png|||||"
+ //                  Benef=Benef+"Bibliothèque_du_donjon|Offre un bonus de Points de classement pour chaque Cristal du donjon de l’éternité obtenu.|https://fr.wiki.elvenar.com/images/f/f3/Rankingpoint_big.png||Produit des Points de connaissance toutes les 24h.|https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png|||||"
+ //                  Benef=Benef+"Arène_de_tournoi|Donne des Points de classement supplémentaires pour chaque Coffre de tournoi complété|https://fr.wiki.elvenar.com/images/f/f3/Rankingpoint_big.png||Produit une certaine quantité de chevaucheurs ailés venimeux toutes les 3 heures en fonction de votre taille d'escouade.|https://fr.wiki.elvenar.com/images/0/07/Gr11_AW2_LM.png|||||"
+ //                  Benef=Benef+"Arche_draconique|Rapporte une quantité de Marchandises sensibles précieuses boostées pour chaque quête d’histoire complétée|https://fr.wiki.elvenar.com/images/f/f3/Sg3up.png||Rapporte un(des) Catalyseurs de combinaison pour chaque Coffre mystique ouvert dans l’Artisanat.|https://fr.wiki.elvenar.com/images/6/67/Combining_Catalyst_1.png|||||"
+ //                  Benef=Benef+"Oracle_du_destin|Rapporte une quantité d’un de vos boosts de Marchandises sensibles (choix aléatoire) à chaque fois que vous récoltez une recette de l’artisanat|https://fr.wiki.elvenar.com/images/6/63/SentientBoosted.png||Produit des Sorts de Restauration royale chaque semaine.|https://fr.wiki.elvenar.com/images/0/00/Royal_Restoration.png|||||"
+ //                  Benef=Benef+"Autel_des_champions|Produit une quantité de Guerrier orc toutes les 3 heures (% en fonction de votre taille d'escouades)|https://fr.wiki.elvenar.com/images/3/32/Gruff_Orc.png||Rapporte des Orcs pour chaque point de tournois obtenus à la fin du tournoi (dépend aussi de votre culture)|https://fr.wiki.elvenar.com/images/e|e3/Orcs.png|||||"
+ //                  Benef=Benef+"Temple_des_esprits|Unurium |Coffre du donjon (en fonction de votre culture requise)|https://fr.wiki.elvenar.com/images/b|bc|Unurium.png||Unurium|Collecte de monaie d'évènement dans la ville (en fonction de votre culture requise|https://fr.wiki.elvenar.com/images/b|bc|Unurium.png|||||"
+ //                  Benef=Benef+"Tour_du_sceau_vallorien|Donne un pourcentage d'Unurium à chaque récolte de Pièces dans les résidences. La quantité d'Unurium dépend de la quantité de Pièces récoltées.|https://fr.wiki.elvenar.com/images/b|bc|Unurium.png||Réduit la perte journalière d'Unurium.|https://fr.wiki.elvenar.com/images/6/6a|Unurium_decay.png|||||"
+ //                  Benef=Benef+"Arbre_d_illumination|Produit des Ranges toutes les 3 heures (% de votre taille d'escouades).|https://fr.wiki.elvenar.com/images/4/41/Mc_lr_units.png||Augmente le boost de production des Marchandises d'Ascension.|https://fr.wiki.elvenar.com/images/f|ff|AscendedBoosted.png|||||"
+ //                  Benef=Benef+"Lieu_de_repos_ancestral|Réduction de la perte journalière des Marchandises d'ascension|https://fr.wiki.elvenar.com/images/6/6e|Ascendedgoods_decay_reduction.png||Produit des Banshee toutes les 3h (% de votre taille d'escouade)|https://fr.wiki.elvenar.com/images/f|fc|Tg_ma.png|||||"
+ data = [];
+ data = Benef.split("|");
+ for (var i = 0; i < data.length; i++) {
+    if (data [i]="Excavation_sans_fin") {
+      Chaine = data [i+1]+ " " + data [i+2]+" " + data [i+3]+" " + data [i+4]+" " + data [i+5]+" "+ data [i+6]+" " +data [i+7]+" " +data [i+8]
+
      }
-//     if ((checkBox2 != true) && (Recompense2>0)){
-//       Chaine = Chaine + "  " + Recompense2
-//       compteur=compteur+1
-//     }
-//     if ((checkBox3 != true) && (Recompense3>0)){
-//       Chaine = Chaine + "  " + Recompense3
-//       compteur=compteur+1
-//     }
-//      if ((checkBox4 != true) && (Recompense4>0)){
-//       Chaine = Chaine + "  " + Recompense4
-//       compteur=compteur+1
-//     }
-//
-//
-//
-// //if (checkBox4 == false){
-// //  Chaine = Chaine + "  " + document.getElementById("SA4").innerHTML
-// //}
-   if(compteur>1) {
-     Pluriel="s"
    }
-   else {
-     Pluriel="s"
-   }
-   Chaine = "Reste " + compteur + " coffre" + Pluriel ": " + Chaine
-//   //Chaine = document.getElementById("SA1").innerHTML + document.getElementById("SA2").innerHTML + document.getElementById("SA3").innerHTML
- document.getElementById("Annonce").innerHTML = Chaine +"!!!"
-//
-//
- }
-function LoadFile2() {
-Num=document.getElementById("ListeUne").value 
-//  alert(Num)
-     var oFrame = document.getElementById("frmFile2");
-     var strRawContents = oFrame.contentWindow.document.body.childNodes[0].innerHTML;
-//     alert(strRawContents)
-      while (strRawContents.indexOf("\r") >= 0)
-          strRawContents = strRawContents.replace("\r", "");
-      var arrLines = strRawContents.split("\n");
-//     alert("File " + oFrame.src + " has " + arrLines.length + " lines");
-      
-      for (var i = 0; i < arrLines.length; i++) {
-         var curLine = arrLines[i];
-        data = [];
-          data = curLine.split("|");
- //       alert(data [0]+ " " +data [1]+ " " + data [2]+" " + data [4]+" " + data [5]+" " +data [7]+" " +data [8])
-        if (Num==data [0]) {
-           Icone1=""
-           Icone2=""
-           Icone5=""
-           Icone6=""
-           Icone9=""
-           Icone10=""
-document.getElementById("Benef1").innerHTML=""
- document.getElementById("Benef2").innerHTML=""         
-  document.getElementById("Benef3").innerHTML=""        
-          if (data [2] !="") {
-             Icone1="<img   src='" + data [2] + "'>"
-           }
-           if (data [3] !="") {
-            Icone2="<img   src='" + data [3] + "'>"
-          }
-           if (data [5] !="") {
-             Icone5="<img   src='" + data [5] + "'>"
-           }
-           if (data [6] !="") {
-             Icone6="<img   src='" + data [6] + "'>"
-           }          
-           if (data [7] !="") {
-             Icone5="<img   src='" + data [8] + "'>"
-           }
-           if (data [8] !="") {
-             Icone6="<img   src='" + data [9] + "'>"
-           }    
-
-         //  document.getElementById("Benef1").innerHTML="<img   src='" + data [2] + "'>"data [1]+ "...........1"
-         //  document.getElementById("Benef2").innerHTML="<img   src='" + data [5] + "'>"data [4]+ "...........2"
-        //   document.getElementById("Benef3").innerHTML=Icone8+Icone9+data [7]   + "3"    
-          
-         alert(Num + Icone1+Icone2+data [1] + Icone5+Icone6+data [4] + Icone8+Icone9+data [7]);
-        }
-  } 
-}
-function LoadFile() {
-Num=document.getElementById("Liste2").value
-//alert(Num+ "!")
-      var oFrame = document.getElementById("frmFile");
-      var strRawContents = oFrame.contentWindow.document.body.childNodes[0].innerHTML;
-     // alert(strRawContents)
-      while (strRawContents.indexOf("\r") >= 0)
-          strRawContents = strRawContents.replace("\r", "");
-      var arrLines = strRawContents.split("\n");
-    // alert("File " + oFrame.src + " has " + arrLines.length + " lines");
-      for (var i = 0; i < arrLines.length; i++) {
-          var curLine = arrLines[i];
-        if (Num==i + 1) {
-           data = [];
-          data = curLine.split(",");
-          document.getElementById("Couts").innerHTML=data [0];
-          document.getElementById("SA1").innerHTML=data [1];
-          document.getElementById("Ru1").innerHTML=data [2];
-          document.getElementById("SA2").innerHTML=data [3];
-          document.getElementById("Ru2").innerHTML=data [4];
-          document.getElementById("SA3").innerHTML=data [5];
-          document.getElementById("Ru3").innerHTML=data [6];
-          document.getElementById("SA4").innerHTML=data [7];
-          document.getElementById("Ru4").innerHTML=data [8];
-         document.getElementById("SA5").innerHTML=data [9];
-          document.getElementById("Ru5").innerHTML=data [10];
-          document.getElementById("SA6").innerHTML=data [11];
-          document.getElementById("Ru6").innerHTML=data [12];
-          document.getElementById("SA7").innerHTML=data [13];
-          document.getElementById("Ru7").innerHTML=data [14];
-         document.getElementById("SA8").innerHTML=data [15];
-         document.getElementById("Ru8").innerHTML=data [16];
-          alert( ">" + data [15] + "<")
-           //     document.getElementsByClassName('colo8')[0].style.visibility = 'hidden'
-          if (data [15]=="") {
-            document.getElementsByClassName('colo8')[0].style.visibility = 'hidden'
-            document.getElementsByClassName('colo8')[1].style.visibility = 'hidden'
-            document.getElementsByClassName('colo8')[2].style.visibility = 'hidden'             
-          }
-          if (data [13]<1) {
-            document.getElementsByClassName('colo7')[0].style.visibility = 'hidden'
-            document.getElementsByClassName('colo7')[1].style.visibility = 'hidden'
-            document.getElementsByClassName('colo7')[2].style.visibility = 'hidden'             
-          }
-
-          alert("Line #" + (i + 1) + " is: '" + curLine + "'");
-        }
-
- }
-
-
-
-  }
-// function beneficier() {
-//  Benefice = []
-//         Benefice[0] = "Tome_des_mysteres"
-//         Benefice[1] ="Produit un ou des point(s) de connaissance toutes les 24h"
-//         Benefice[2] ="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"
-//         Benefice[3] =""
-//         Benefice[4] ="Vous donne des matériaux pour chaque exploration lancée. La production correspond à un pourcentage du montant total de la capacité de stockage en matériaux de votre hôtel de ville"
-//         Benefice[5] ="https://fr.wiki.elvenar.com/images/6/62/Supply_small.png"
-//         Benefice[6] =""
-//         Benefice[7] =""
-//         Benefice[8] =""
-//         Benefice[9] =""
-//         Benefice[10] ="Abysse_dore"
-//         Benefice[11] ="Produit des pièces toutes les 3h. La production correspond à un pourcentage du montant total de la capacité de stockage en pièces de votre hôtel de ville.", "https://fr.wiki.elvenar.com/images/a/a3/Coin_small.png", , "Vous procure de la population additionnelle. Cette population supplémentaire correspond à un pourcentage du montant de votre population au travail (population employée dans l'ensemble de vos bâtiments)."
-//         Benefice[12] ="https://fr.wiki.elvenar.com/images/8/8d/Populationadd.png"
-//
-//
-//   alert(document.getElementById("Liste1").value + Benefice[0])
-//       for (var i = 0; i < 10; i++) {
-//         if (document.getElementById("ListeUne").value==   Benefice[i*10]) {
-//
-//           Icone1=""
-//           Icone2=""
-//           Icone5=""
-//           Icone6=""
-//           Icone9=""
-//           Icone10=""
-//
-//           if (Benefice[2+(i*10)] !="") {
-//             Icone1="<img   src='" + Benefice[2+(i*10)] + "'>"
-//           }
-//           if (Benefice[3+(i*10)] !="") {
-//             Icone2="<img   src='" + Benefice[3+(i*10)] + "'>"
-//           }
-//           if (Benefice[5+(i*10)] !="") {
-//             Icone5="<img   src='" + Benefice[5+(i*10)] + "'>"
-//           }
-//           if (Benefice[6+(i*10)] !="") {
-//             Icone6="<img   src='" + Benefice[6+(i*10)] + "'>"
-//           }
-//           if (Benefice[7+(i*10)] =="undefined") {
-//             Benefice[7+(i*10)] =""
-//           }
-//
-//
-//            document.getElementById("Benef1").innerHTML=Icone1+Icone2+Benefice[1+(i*10)]
-//           document.getElementById("Benef2").innerHTML=Icone5+Icone6+Benefice[4+(i*10)]
-//         //  docu
-// }
-
-   // function getCookie(cname) {
-   //      let name = cname + "=";
-   //      let ca = document.cookie.split(';');
-   //      for(let i = 0; i < ca.length; i++) {
-   //        let c = ca[i];
-   //        while (c.charAt(0) == ' ') {
-   //          c = c.substring(1);
-   //        }
-   //        if (c.indexOf(name) == 0) {
-   //          return c.substring(name.length, c.length);
-   //        }
-   //      }
-   //      return "##";
-   //    }
-   // function checkCookie() {
-   //    //document.getElementById("Chaine").innerHTML=  "attente cookie"
-   //      let username = getCookie("Pseudo");
-   //      if (username != "") {
-   //       //alert("Welcome again " + username);
-   //       document.getElementById("Annonce").innerhtml=  username
-   //      }
-   //    }
-function Imager() {
-  Num=document.getElementById("ListeUne").selectedIndex
-//  alert("DEBUT de placer image en place " + Num)
-  MervImage = [];
-  MervImageBis = [];
-  MervImage[0] = "https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png";
-  MervImage[1] = "https://fr.wiki.elvenar.com/images/f/f8/Abysse_dor%C3%A9.png";
-  MervImage[2] = "https://fr.wiki.elvenar.com/images/b/b4/Excavation_sans_fin.png";
-  MervImage[3] = "https://fr.wiki.elvenar.com/images/4/4e/Aiguilles_de_la_temp%C3%AAte.png";
-  MervImage[4] = "https://fr.wiki.elvenar.com/images/thumb/8/8e/48_GreatBuild_Inner_Elves_01_cropped.png/800px-48_GreatBuild_Inner_Elves_01_cropped.png";
-  MervImage[5] = "https://fr.wiki.elvenar.com/images/thumb/7/75/48_GreatBuild_Inner_Elves_02_cropped.png/800px-48_GreatBuild_Inner_Elves_02_cropped.png";
-  MervImage[6] = "https://fr.wiki.elvenar.com/images/thumb/8/81/47_Greatbuilding_Elves_Crystaltree_01_cropped.png/700px-47_Greatbuilding_Elves_Crystaltree_01_cropped.png";
-  MervImage[7] = "https://fr.wiki.elvenar.com/images/thumb/b/be/47_Greatbuilding_Elves_Innercity_Crystaltree_06_cropped.png/695px-47_Greatbuilding_Elves_Innercity_Crystaltree_06_cropped.png";
-  MervImage[8] = "https://fr.wiki.elvenar.com/images/9/96/Tr%C3%B4ne_des_Hauts_Hommes.png";
-  MervImage[9] = "https://fr.wiki.elvenar.com/images/thumb/1/1f/D_greatbuilding_dwarves_military_02_cropped.png/681px-D_greatbuilding_dwarves_military_02_cropped.png";
-  MervImage[10] = "https://fr.wiki.elvenar.com/images/1/1d/D_greatbuilding_dwarves_goods_01_cropped.png";
-  MervImage[11] = "https://fr.wiki.elvenar.com/images/6/66/F_AncientWonder_Supplies_Inner_L2_cropped.png";
-  MervImage[12] = "https://fr.wiki.elvenar.com/images/9/9c/F_AncientWonder_Trader_InnerCity_L2_cropped.png";
-  MervImage[13] = "https://fr.wiki.elvenar.com/images/f/f0/B_Orcs_AW2_1_0003.png";
-  MervImage[14] = "https://fr.wiki.elvenar.com/images/9/9a/B_Woodelves_AW1.png";
-  MervImage[15] = "https://fr.wiki.elvenar.com/images/f/f0/B_Orcs_AW2_1_0003.png";
-  MervImage[16] = "https://fr.wiki.elvenar.com/images/8/89/B_Woodelves_AW2.png";
-  MervImage[17] = "https://fr.wiki.elvenar.com/images/6/61/B_gr5_aw1.png";
-  MervImage[18] = "https://fr.wiki.elvenar.com/images/7/7a/B_gr5_aw2.png";
-  MervImage[19] = "https://fr.wiki.elvenar.com/images/3/37/0009_B_Gr6_AW1_1.png";
-  MervImage[20] = "https://fr.wiki.elvenar.com/images/d/de/0008_B_Gr6_AW2_1.png";
-
-
-  MervImageBis[0] ="Data/Tome_des_mysteres.png"
-  MervImageBis[1] ="Data/Abysse_dore.png"
-  MervImageBis[2] ="Data/Excavation_sans_fin.png"
-  MervImageBis[3] ="Data/Aiguilles_de_la_tempete.png"
-  MervImageBis[4] ="Data/Monastere_martial_le_sanctuaire.png"
-  MervImageBis[5] ="Data/Monastere_martial_le_sanctuaire.png"
-  MervImageBis[6] ="Data/Phare_de_cristal_Tour_du_clocher.png"
-  MervImageBis[7] ="Data/Phare_de_cristal_Tour_du_clocher.png"
-  MervImageBis[8] ="Data/Trones_des_hauts_hommes.png"
-  MervImageBis[9] ="Data/Rempart_nain.png"
-  MervImageBis[10] ="Data/Coeur_de_la_montagne.png"
-  MervImageBis[11] ="Data/Tours_de_la_prosperite.png"
-  MervImageBis[12] ="Data/Guilde_du_marchand_prospere.png"
-  MervImageBis[13] ="Data/Forge_des_heros.png"
-  MervImageBis[14] ="Data/Ambassade_d_enar.png"
-  MervImageBis[15] ="Data/Sanctuaire_des_champignons_astucieux.png"
-  MervImageBis[16] ="Data/Academie_volante.png"
-  MervImageBis[17] ="Data/Labyrinthe_de_la_matiere_noire.png"
-  MervImageBis[18] ="Data/Abbaye_du_dragon.png"
-  MervImageBis[19] ="Data/Temple_des_crapauds.png"
-  MervImageBis[20] ="Data/Centre_d_echange_d_Elvenar.png"
-
-  MervImage[21] = "https://fr.wiki.elvenar.com/images/thumb/6/6d/B_Gr7_AW1_1_0009.png/714px-B_Gr7_AW1_1_0009.png";
-  MervImage[22] = "https://fr.wiki.elvenar.com/images/7/7f/B_Gr7_AW2_1_0010.png";
-  MervImage[23] = "https://fr.wiki.elvenar.com/images/e/e2/Construct_AW1_main.png";
-  MervImage[24] = "https://fr.wiki.elvenar.com/images/1/11/Construct_AW2_main.png";
-  MervImage[25] = "https://fr.wiki.elvenar.com/images/3/37/GR10_AW1_3x6.png";
-  MervImage[26] = "https://fr.wiki.elvenar.com/images/a/a8/GR10_AW2_7x3.png";
-  MervImage[27] = "https://fr.wiki.elvenar.com/images/0/0f/GR11_AW1_6x4.png";
-  MervImage[28] = "https://fr.wiki.elvenar.com/images/5/54/GR11_AW2_4x5.png";
-  MervImage[29] = "https://fr.wiki.elvenar.com/images/e/e5/GR12_AW1_main.png";
-   MervImage[30]= "https://fr.wiki.elvenar.com/images/9/92/GR12_AW2_main.png";
-
-    MervImageBis[21] ="Data/Tours_du_crepuscule.png"
-    MervImageBis[22] ="Data/Fontaines_triomphantes.png"
-    MervImageBis[23] ="Data/D111_a_Voyage_temporel.png"
-    MervImageBis[24] ="Data/D222_z_Simia_Sapiens.png"
-    MervImageBis[25] ="Data/Vortex_de_stockage.png"
-    MervImageBis[26] ="Data/Fontaine_de_jouvence_thermale.png"
-    MervImageBis[27] ="Data/Bibliotheque_du_donjon.png"
-    MervImageBis[28] ="Data/Arene_de_tournois.png"
-    MervImageBis[29] ="Data/Arche_dragonique.png"
-     MervImageBis[30]="Data/Oracle_du_destin.png"
-
-    MervImageBis[31] ="Data/Autel_des_Champignons.png"
-    MervImage[31]= "https://fr.wiki.elvenar.com/images/0/0b/B_Ch18_AW1_1.png"
-    MervImageBis[32] ="Data/Temple_des_Esprits.png"
-    MervImage[32]= "https://fr.wiki.elvenar.com/images/3/3a/B_Ch18_AW2_1.png"
-    MervImageBis[33] ="Data/Tour_du_sceau_Vallorien.png"
-    MervImage[33]= "https://fr.wiki.elvenar.com/images/2/27/GR14_AW1_main.png"
-     MervImageBis[34] ="Data/Arbre_d_illumination.png"
-    MervImage[34]= "https://fr.wiki.elvenar.com/images/1/12/GR14_AW2_main.png"
-    MervImageBis[35] ="Data/Lieu_de_repos_ancestral.png"
-    MervImage[35]= "https://fr.wiki.elvenar.com/images/d/db/GR15_AW1_main.png"
-     MervImageBis[36] ="Data/Taverne_des_Explorateurs.png"
-    MervImage[36]= "https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png"
-//alert("fin de placer image en place " + Num)
-    document.getElementById("ImageMerv").src=MervImage[Num]
-    document.getElementById("ImageMervBis").src=MervImageBis[Num]
-    //document.getElementById("Annonce").innerhtml=username + "....1"
+  alert(data [2])
+//alert(Benef)
 }
 
-function Erer(Num) { 
- // alert(Num + "Placer pour blan ere")
-  if(Num<7) {
-    document.getElementById("Ere").innerText="Les nains"
-    document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png"
-  }
-  if((Num>6) && (Num<9)) {
-    document.getElementById("Ere").innerText="Les fées"
-    document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/a/a6/Fairiesbannerteck.png"
-  }
-  if((Num>8) && (Num<11)) {
-    document.getElementById("Ere").innerText="Les orcs et gobelins"
-    document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/5/5d/Orcs%26Goblinsbannerteck.png"
-  }
-  if((Num>10) && (Num<13)) {
-    document.getElementById("Ere").innerText="Les elfes sylvains"
-    document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/e/e8/TTFlags.png/75px-TTFlags.png"
-  }
-  if((Num>12) && (Num<15)) {
-    document.getElementById("Ere").innerText="Sorciers et dragons"
-    document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/3/3c/SRCbanner.png/80px-SRCbanner.png"
-  }
-  if((Num>14) && (Num<17)) {
-    document.getElementById("Ere").innerText="Halfelins"
-    document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/7/78/G6flag.png"
-  }
-  if((Num>16) && (Num<19)) {
-    document.getElementById("Ere").innerText="Élémentaires"
-    document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/9/97/Gr7flag.png"
-  }
-  if((Num>18) && (Num<21)) {
-    document.getElementById("Ere").innerText="Amuni"
-    document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/4/43/Gr8flag.png"
-  }
-  if((Num>20) && (Num<23)) {
-    document.getElementById("Ere").innerText="Créateurs"
-    document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/5/59/Gr9flag.png/90px-Gr9flag.png"
-  }
-  if((Num>22) && (Num<25)) {
-    document.getElementById("Ere").innerText="Les Elvenar"
-    document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/1/17/Gr10flag.png/90px-Gr10flag.png"
-  }
-  if((Num>24) && (Num<27)) {
-    document.getElementById("Ere").innerText="Ambassades"
-    document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/b/bb/Gr11flag.png/90px-Gr11flag.png"
-  }
-  if((Num>26) && (Num<29)) {
-    document.getElementById("Ere").innerText="Marchands d'Unur"
-    document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/1/14/Gr12flag.png/90px-Gr12flag.png"
-  }
-  if((Num>28) && (Num<31)) {
-    document.getElementById("Ere").innerText="Esprit d'Equipe"
-    document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/2/2a/Gr13flag.png/90px-Gr13flag.png"
-  }
-  if((Num>30) && (Num<33)) {
-    document.getElementById("Ere").innerText="La Revanche de l'Exilé"
-    document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/e/e1/Gr14flag.png"
-  }
-  if((Num>32) && (Num<35)) {
-    document.getElementById("Ere").innerText="Le Pouvoir de la Musique"
-    document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/9/94/Gr15flag.png/80px-Gr15flag.png"
-  }
-}
-  
-  
-function Test() {
-       Num=document.getElementById("ListeUne").selectedIndex
-      
-      Erer(Num)
-      Fichier="Data/" + document.getElementById("ListeUne").value +".txt"
-      document.getElementById("frmFile").src = Fichier  
- // alert("Test envoi placer  " + Num)
-  //document.getElementById("ImageMerv").src="https://fr.wiki.elvenar.com/images/8/89/B_Woodelves_AW2.png";
-  //  document.getElementById("ImageMervBis").src="Data/Guilde_du_marchand_prospere.png"
-      Imager()
+
+                // var oFrame = document.getElementById("frmFile");
+                // var strRawContents = oFrame.contentDocument;
+                // alert(strRawContents)
+                // while (strRawContents.indexOf("\r") >= 0)
+                //     strRawContents = strRawContents.replace("\r", "");
+                // var arrLines = strRawContents.split("\n");
+                // // alert("File " + oFrame.src + " has " + arrLines.length + " lines");
+                // for (var i = 0; i < arrLines.length; i++) {
+                //     var curLine = arrLines[i];
+                //   if (Num==i + 1) {
+                //      data = [];
+                //     data = curLine.split(",");
+                //     document.getElementById("Couts").innerHTML=data [0];
+                //     document.getElementById("SA1").innerHTML=data [1];
+                //     document.getElementById("Ru1").innerHTML=data [2];
+                //     document.getElementById("SA2").innerHTML=data [3];
+                //     document.getElementById("Ru2").innerHTML=data [4];
+                //     document.getElementById("SA3").innerHTML=data [5];
+                //     document.getElementById("Ru3").innerHTML=data [6];
+                //     document.getElementById("SA4").innerHTML=data [7];
+                //     document.getElementById("Ru4").innerHTML=data [8];
+                //    document.getElementById("SA5").innerHTML=data [9];
+                //     document.getElementById("Ru5").innerHTML=data [10];
+                //     document.getElementById("SA6").innerHTML=data [11];
+                //     document.getElementById("Ru6").innerHTML=data [12];
+                //     document.getElementById("SA7").innerHTML=data [13];
+                //     document.getElementById("Ru7").innerHTML=data [14];
+                //    document.getElementById("SA8").innerHTML=data [15];
+                //    document.getElementById("Ru8").innerHTML=data [16];
+                //     alert( ">" + data [15] + "<")
+                //      //     document.getElementsByClassName('colo8')[0].style.visibility = 'hidden'
+                //     if (data [15]=="") {
+                //       document.getElementsByClassName('colo8')[0].style.visibility = 'hidden'
+                //       document.getElementsByClassName('colo8')[1].style.visibility = 'hidden'
+                //       document.getElementsByClassName('colo8')[2].style.visibility = 'hidden'
+                //     }
+                //     if (data [13]<1) {
+                //       document.getElementsByClassName('colo7')[0].style.visibility = 'hidden'
+                //       document.getElementsByClassName('colo7')[1].style.visibility = 'hidden'
+                //       document.getElementsByClassName('colo7')[2].style.visibility = 'hidden'
+                //     }
+                //
+                //     alert("Line #" + (i + 1) + " is: '" + curLine + "'");
+                //   }
+                //
+                // }
 
 
-      
 
 
-LoadFile()
-    }
-    function JouerSon(Num) {
+
+function JouerSon(Num) {
   	   Resultat = getCookie("Ecouteur")
   	    if (Resultat ==1) {
           if (Num==1) {
@@ -555,65 +383,109 @@ LoadFile()
       		}
         }
 
+function loadData() {
+ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JIJ--cTg2nZoNkudiqBrnvWDs-TZlzcw3PBOGPCv7dl9WxtasEhiJ8eJsRbV/pub?gid=569730062&single=true&output=csv";
+   //var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7h49K5ALJK98pf34d7KHeUecOC2w7xZLA8r5k6MMNTzOBhA8VvXSo7v5_xlAxPfrw69xGxKg5DqKf/pub?gid=569730062&single=true&output=csv";
+     xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+       if (xmlhttp.readyState == 4) {
+
+     Num=1
+     //alert(Num + "Num de loaddata")
+     const parts = xmlhttp.responseText.split("MERV");
+     Maxo=parts.length-2;
+
+     Concat = ""
+     for (var i = 1; i < Maxo+1; i++) {
+
+       var0=parts[i]
+       result = var0.substring(0, var0.length-4);
+       //Concat = Concat + "<div id='Contenu" + i + "'>" + result  + "</div>"
+         // Create element:
+         para = document.createElement("Div");
+         para.innerHTML = result;
+         para.id= "Content" + i;
+         // Append to another element:
+         document.getElementById("Cont").appendChild(para);
+        // Res = document.getElementById("Content" + i).innerHTML + " [ " + i +" ]"
 
 
+       //alert(Res)
+
+       }
+     //document.getElementById("Cont").innerHTML = Concat
+
+     document.getElementById("Contenu").style.textAlign = "left";
+         }
+      };
+     xmlhttp.open("GET", url, true);
+     xmlhttp.send(null);
+ }
+ function InfoStock() {
+   //alert("Infostock")
+   Num=document.getElementById("Actuel").innerHTML*1
+   Concat = document.getElementById("Content" + Num).innerHTML
+   document.getElementById("Contenu").innerHTML=Concat
+ }
 
 </script>
+
+
 </head>
 
 
-<body onload="CalculInitial()">
-  <audio  id="MonSon" src="Image\Son.wav"></audio>
+<body onload="loadData()">
+  <audio  id="MonSon" src="Image/Son.wav"></audio>
 
 <table width="60%" style="text-align:center">
   <tr height="3%;">
     <td colspan="10">
 
 <form action="">
-  <select size="1" id="ListeUne" onchange="Test()" style="font-size:20px;left:0;">
+  <select size="1" id="ListeUne" onchange="Tester()" style="font-size:20px;left:0;">
 
-  <option>Tome_des_mysteres</option>
-  <option>Abysse_dore</option>
-  <option>Excavation_sans_fin</option>
-  <option>Aiguilles_de_la_tempete</option>
-  <option>Monastere_martial</option>
-  <option>Le_sanctuaire</option>
-  <option>Tour_du_clocher</option>
-  <option>Phare_de_cristal</option>
-  <option>Trones_des_hauts_hommes</option>
-  <option>Rempart_nain</option>
-  <option>Coeur_de_la_montagne</option>
-  <option>Tours_de_la_prosperite</option>
-  <option>Guilde_du_marchand_prospere</option>
-  <option>Forge_des_heros</option>
-  <option>Ambassade_d_enar</option>
-  <option>Sanctuaire_des_champignons_astucieux</option>
-  <option>Academie_volante</option>
-  <option>Labyrinthe_de_la_matiere_noire</option>
-  <option>Abbaye_du_dragon</option>
-  <option>Temple_des_crapauds</option>
-  <option>Centre_d_echange_d_Elvenar</option>
-  <option>Tours_du_crepuscule</option>
-  <option>Fontaines_triomphantes</option>
-  <option>Pyramide_purificatrice</option>
-  <option>Phare_de_bon_entourage</option>
-  <option>D111_a_Voyage_temporel</option>
-  <option>D222_z_Simia_Sapiens</option>
-  <option>Vortex_de_stockage</option>
-  <option>Fontaine_de_jouvence_thermale</option>
-  <option>Bibliotheque_du_donjon</option>
-  <option>Arene_de_tournois</option>
-  <option>Arche_dragonique</option>
-  <option>Oracle_du_destin</option>
-  <option>Autel_des_champions</option>
-  <option>Temple_des_esprits</option>
-  <option>Tour_de_sceau_vallorien</option>
-  <option>Arbre_d_illumination</option>
+    <option>Tome_des_mysteres</option>
+    <option>Abysse_dore</option>
+    <option>Excavation_sans_fin</option>
+    <option>Aiguilles_de_la_tempete</option>
+    <option>Monastere_martial</option>
+    <option>Le_sanctuaire</option>
+    <option>Tour_du_clocher</option>
+    <option>Phare_de_cristal</option>
+    <option>Trones_des_hauts_hommes</option>
+    <option>Rempart_nain</option>
+    <option>Coeur_de_la_montagne</option>
+    <option>Tours_de_la_prosperite</option>
+    <option>Guilde_du_marchand_prospere</option>
+    <option>Forge_des_heros</option>
+    <option>Ambassade_d_enar</option>
+    <option>Sanctuaire_des_champignons_astucieux</option>
+    <option>Academie_volante</option>
+    <option>Labyrinthe_de_la_matiere_noire</option>
+    <option>Abbaye_du_dragon</option>
+    <option>Temple_des_crapauds</option>
+    <option>Centre_d_echange_d_Elvenar</option>
+    <option>Tours_du_crepuscule</option>
+    <option>Fontaines_triomphantes</option>
+    <option>Pyramide_purificatrice</option>
+    <option>Phare_de_bon_entourage</option>
+    <option>D111_a_Voyage_temporel</option>
+    <option>D222_z_Simia_Sapiens</option>
+    <option>Vortex_de_stockage</option>
+    <option>Fontaine_de_jouvence_thermale</option>
+    <option>Bibliotheque_du_donjon</option>
+    <option>Arene_de_tournois</option>
+    <option>Arche_dragonique</option>
+    <option>Oracle_du_destin</option>
+    <option>Autel_des_champions</option>
+    <option>Temple_des_esprits</option>
+    <option>Tour_de_sceau_vallorien</option>
+    <option>Arbre_d_illumination</option>
 
   </select>
 </form>
   </td>
-  <td colspan="6" style="text-align: right;" id="Ere">Ere</td>
+  <td colspan="6" style="text-align: right;" id="Ere">Eres</td>
   <td colspan="2">
     <div style="text-align: center;">
     <img  id="ImgEre" src="https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png" decoding="async" width="48" height="60" />
@@ -637,7 +509,7 @@ LoadFile()
       </tr>
 
       <tr>
-        <th style="border-left: solid;;">Niveau<img   src="https://fr.wiki.elvenar.com/images/a/a8/Level_small.png"></th>
+        <th style="border-left: solid;">Niveau<img   src="https://fr.wiki.elvenar.com/images/a/a8/Level_small.png"></th>
         <th>Coûts<img   src="https://fr.wiki.elvenar.com/images/thumb/b/bf/Researchico.png/25px-Researchico.png"></th>
         <th><img  height="20px;" src="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"></th>
         <th><img  height="20px;" src="Data/Ancient_Knowledge.png"></th>
@@ -659,77 +531,61 @@ LoadFile()
       </tr>
 
        <tr height="3%;">
-        <td id="Niveau" style="border-left: solid;">
+        <td id="Niveau" style="border-left: solid;border-bottom: solid;">
           <form action="">
             <select size="1" id="Liste2" onchange="Lister2()" style="align:center;font-size:20px;left:0;display:inline;width:70px;">
-
-
             <option>2</option>
             <option>3</option>
             <option>4</option>
-              <option>5</option>
-
+            <option>5</option>
             <option>7</option>
             <option>8</option>
             <option>9</option>
             <option>10</option>
-
-
             <option>12</option>
             <option>13</option>
             <option>14</option>
             <option>15</option>
-
-
             <option>17</option>
             <option>18</option>
             <option>19</option>
            <option>20</option>
-
-
             <option>22</option>
             <option>23</option>
             <option>24</option>
           <option>25</option>
-
-
             <option>27</option>
             <option>28</option>
             <option>29</option>
            <option>30</option>
-
-
             <option>32</option>
             <option>33</option>
             <option>34 </option>
             <option>35</option>
-
-
-
              </select>
           </form>
 
         </td>
-        <td  id="Couts">  189</td>
-        <td id="SA1" style="border-left: solid;">  20</td>
-        <td id="Ru1">  1</td>
-        <td id="SA2" style="border-left: solid;"> 15</td>
-        <td id="Ru2">  </td>
-        <td id="SA3" style="border-left: solid;">  5</td>
-        <td id="Ru3">  </td>
-        <td id="SA4"  class="colo4" style="border-left: solid;">  5</td>
-        <td id="Ru4" class="colo4" >  </td>
-        <td id="SA5"  class="colo5" style="border-left: solid;">  </td>
-        <td id="Ru5" class="colo5" >  </td>
-        <td id="SA6" class="colo6"  style="border-left: solid;">  </td>
-        <td id="Ru6" class="colo6" >  </td>
-        <td id="SA7 class="colo7"" style="border-left: solid;">  </td>
-        <td id="Ru7" class="colo7">  </td>
-        <td id="SA8" class="colo8"  style="border-left: solid;">  </td>
-        <td id="Ru8" class="colo8"   style="border-right: solid;">  </td>
+        <td  id="Couts" style="border-bottom: solid;">189</td>
+        <td id="SA1" style="border-left: solid;border-bottom: solid;">  20</td>
+        <td id="Ru1" style="border-bottom: solid;">  1</td>
+        <td id="SA2" style="border-left: solid;border-bottom: solid;"> 15</td>
+        <td id="Ru2" style="border-bottom: solid;">  </td>
+        <td id="SA3" style="border-left: solid;border-bottom: solid;">  5</td>
+        <td id="Ru3" style="border-bottom: solid;">  </td>
+        <td id="SA4" class="colo4" style="border-left: solid;border-bottom: solid;">  5</td>
+        <td id="Ru4"  class="colo4" style="border-bottom: solid;"  >1</td>
+        <td id="SA5"  class="colo5" style="border-left: solid;border-bottom: solid;">  </td>
+        <td id="Ru5" style="border-bottom: solid;" class="colo5" >  </td>
+        <td id="SA6" class="colo6"  style="border-left: solid;border-bottom: solid;">  </td>
+        <td id="Ru6" style="border-bottom: solid;" class="colo6" >  </td>
+        <td id="SA7" class="colo7" style="border-left: solid;border-bottom: solid;">  </td>
+        <td id="Ru7" style="border-bottom: solid;" class="colo7">  </td>
+        <td id="SA8" class="colo8"  style="border-left: solid;border-bottom: solid;">  </td>
+        <td id="Ru8" class="colo8"   style="border-right: solid;border-bottom: solid;">  </td>
       </tr>
 
-        <tr height="3%;">
+        <!-- <tr height="3%;">
         <td style="border-left: solid;"  colspan="2">      </td>
         <td  style="border-left: solid;" colspan="2">
               <div><img  height="30px;" src="Image/coffre_ouvert.png">
@@ -816,46 +672,22 @@ LoadFile()
             </div>
           </td>
 
-      </tr>
-      <tr>
+      </tr> -->
+      <!-- <tr>
         <td colspan="2" style="border-left: solid;border-bottom: solid;" >Annonce&nbspavant&nbspupgrade</td>
         <td colspan="14" style="border-left: solid;border-right: solid;border-bottom: solid;background-color: #ffffff;" id="Annonce" >........</td>
         <td colspan="2" style="border-right: solid;border-bottom: solid;" ><button type="button" onclick="LoadFile2()">Copier</button></td>
-      </tr>
+      </tr> -->
 
       <tr>
-        <td colspan="18"  rowspan="18" ><img id='ImageMerv' height="20%;"  src="https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png"></td>
+        <td colspan="18"  rowspan="18" >
+        <img id='ImageMerv' height="20%;"  src="https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png"></td>
       </tr>
 
 
     </table>
 
 <br>
-<iframe id="frmFile" width="45%;" src="Data/Abysse_dore.txt" onload="LoadFile();" ></iframe>
-<iframe id="frmFile2" width="45%;" src="Data/Benefices.txt" onload="LoadFile2();" ></iframe>  
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-</body>
+<div id="Cont" style="display: content;"></div>
 
-<br>
-<br>
-<br>
-<br>
-
-<br>
-<br>
-<br><br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<br>
-<br>
-<br>
 </body>
