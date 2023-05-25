@@ -415,7 +415,7 @@ function loadData() {
        }
      //document.getElementById("Cont").innerHTML = Concat
 
-     document.getElementById("Contenu").style.textAlign = "left";
+     //document.getElementById("Contenu").style.textAlign = "left";
          }
       };
      xmlhttp.open("GET", url, true);
@@ -460,7 +460,7 @@ function loadData() {
   for (var i = 1; i < Res+1; i++) {
     Chaine=Chaine + "<img src='https://fr.wiki.elvenar.com/images/a/a8/Level_small.png'>"
   }
-  document.getElementById("InteretNego").innerHTML = "Intérêt Negociation:" + Res + Chaine
+  document.getElementById("InteretNego").innerHTML = "Intérêt Negociation:" + Chaine
   Res = Trouver("Commentaires:")
   document.getElementById("Commentaire").innerHTML = Res
 
