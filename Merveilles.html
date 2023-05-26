@@ -454,14 +454,17 @@ function JouerSon(Num) {
   Res1 = Trouver("Bonus2:")
    Res2 = Trouver("Image1Bonus2:")
   document.getElementById("Benef2").innerHTML =  "<img src='" + Res2 +"'>" + Res1
-  Res = Trouver("Bonus3:")
-  document.getElementById("Benef3").innerHTML = Res
+  Res1 = Trouver("Bonus3:")
+   Res2 = Trouver("Image1Bonus3:")
+  document.getElementById("Benef3").innerHTML =  "<img src='" + Res2 +"'>" + Res1
+
+
   Res = Trouver("Intérêt combat nb étoiles:")
 
     if (Res.indexOf("/", 1)>0) {
       Res1=Res.substring(0,1)*1
       Res2=Res.substring(2,3)*1
-      //alert(Res + "   " + Res1 + "  " + Res2)
+    //  alert(Res + "   " + Res1 + "  " + Res2)
       Chaine =""
      for (var i = 1; i < Res1+1; i++) {
        Chaine=Chaine + "<img width='30px' src='https://fr.wiki.elvenar.com/images/a/a8/Level_small.png'>"
@@ -479,7 +482,6 @@ function JouerSon(Num) {
       }
 
    }
-
    document.getElementById("InteretCombat").innerHTML = Chaine
 //   Res = Trouver("Intérêt combat auto:")*1
  //  Chaine =""
@@ -495,9 +497,11 @@ function JouerSon(Num) {
   }
   document.getElementById("InteretNego").innerHTML =   Chaine
   Res = Trouver("Commentaires:")
+//  alert(Res)
   document.getElementById("Commentaire").innerHTML = Res
 
 Res = Trouver("Lien image:")
+//alert(Res)
 document.getElementById("ImageMerv").src = Res
 
 
@@ -801,7 +805,7 @@ document.getElementById("ImageMerv").src = Res
 
       <tr>
         <td colspan="18"  rowspan="18" >
-        <img  style="width: 200px;"></td>
+        <img id="ImageMerv"  src="https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png"></td>
       </tr>
 
 
@@ -810,7 +814,7 @@ document.getElementById("ImageMerv").src = Res
 <br>
 
 
-<div id="maxo" >1</div>
+<div id="maxo"  style='display:none'>1</div>
 <div id="Cont" style='display:none'>
   <Div id='Content1'>Nom:Tome des mystères |index:1|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:4x4|Lien image:https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png|Cycle de vie: Jusqu'au chapitre 5-6|Graph cycle de vie: 100 100 100 100 100 50 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 |Bonus1: Produit un ou des point(s) de connaissance toutes les 24h|Image1Bonus1:https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png|Image2Bonus1:|Bonus2: Vous donne des matériaux pour chaque exploration lancée. La production correspond à un pourcentage du montant total de la capacité de stockage en matériaux de votre Hôtel de Ville.|Image1Bonus2:https://fr.wiki.elvenar.com/images/6/62/Supply_small.png|Image2Bonus2:||Bonus3: |Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:4/2|Intérêt nego nb étoiles:1|Intérêt combat auto:0|Commentaires: Utile uniquement au démarrage du jeu|Graph cycle de vie:100,100,100,100,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,|Cout et Coffre de gains:140,10,1,5,,5,,5,,,,,,,,,198,10,1,10,,5,,5,,5,,,,,,,250,15,1,10,1,10,,5,,5,,,,,,,300,20,1,15,1,10,1,5,,5,,5,,,,,390,25,2,20,1,15,1,10,,5,,5,,,,,430,25,2,20,1,15,1,10,1,5,,5,,,,,470,30,2,20,1,15,1,10,1,5,,5,,,,,510,30,2,25,1,20,1,10,1,10,,5,,,,,580,35,2,30,1,20,1,15,1,10,,5,,5,,,610,40,2,30,1,20,1,15,1,10,,5,,5,,,640,40,3,30,2,20,1,15,1,10,,5,,5,,,680,45,3,30,2,25,1,15,1,10,1,5,,5,,,740,45,3,35,2,25,1,20,1,10,1,5,,5,,,770,50,3,35,2,25,1,20,1,10,1,5,,5,,,790,50,3,40,2,30,1,20,1,10,1,5,,5,,,820,50,3,40,2,30,1,20,1,10,1,5,,5,,,870,55,3,40,2,30,2,20,1,15,1,10,,5,,,930,55,3,45,2,30,2,20,1,15,1,10,,5,,,930,60,3,45,2,30,2,20,1,15,1,10,,5,,,950,60,3,45,2,35,2,25,1,15,1,10,,5,,,1000,65,3,50,2,35,2,25,1,15,1,10,,5,,,1020,65,3,50,2,35,2,25,1,15,1,10,,5,,,1050,65,3,50,3,35,2,25,1,15,1,10,,5,,,1070,65,4,50,3,35,2,25,1,15,1,10,,5,,,2000,95,5,75,4,55,3,35,2,25,1,15,1,10,,5,2100,95,5,75,4,55,3,35,2,25,1,15,1,10,,5,2200,95,5,75,4,55,3,35,2,25,1,15,1,10,,5,2300,95,5,75,4,55,3,35,2,25,1,15,1,10,,5,|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:exploration,province,matériaux,pc|SOS1:|SOS2:|</Div>
   <Div id='Content2'>Nom:Abysse doré|index:2|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:3x3|Lien image: https://fr.wiki.elvenar.com/images/f/f8/Abysse_dor%C3%A9.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Produit des pièces toutes les 3h. La production correspond à un pourcentage du montant total de la capacité de stockage en pièces de votre hôtel de ville.|Image1Bonus1: https://fr.wiki.elvenar.com/images/a/a3/Coin_small.png|Image2Bonus1:|Bonus2: Vous procure de la population additionnelle. Cette population supplémentaire correspond à un pourcentage du montant de votre population au travail (population employée dans l'ensemble de vos bâtiments).|Image1Bonus2: https://fr.wiki.elvenar.com/images/8/8d/Populationadd.png|Image2Bonus2:||Bonus3: |Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:indispensable tout au long du jeu |Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
