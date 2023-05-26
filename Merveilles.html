@@ -102,11 +102,20 @@
    label {display:table-cell;float: left;}
 </style>
 <script>
+    window.onload = function() { // can also use window.addEventListener('load', (event) => {
+    alert('Page loaded');
+
+    // image is loaded at this time
+    alert(`Image size: ${img.offsetWidth}x${img.offsetHeight}`);
+  };
+  
+  
+  
     function Tester() {
        Num=document.getElementById("ListeUne").selectedIndex
     
-      document.getElementById("maxo").innerHTML=Num+1 + "a"
-      document.getElementById("ImageMerv").src = "https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png"
+      document.getElementById("maxo").innerHTML=Num+1 + "b"
+     // document.getElementById("ImageMerv").src = "https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png"
      // Concat = document.getElementById("Content1").innerHTML
      // alert(Concat)
       //Inscrire()
