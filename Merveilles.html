@@ -102,7 +102,7 @@
    label {display:table-cell;float: left;}
 </style>
 <script>
-var variableGlobale = 1
+var variableGlobale 
   
   
   
@@ -756,6 +756,9 @@ function loadData() {
          para = document.createElement("Div");
          para.innerHTML = result;
          para.id= "Content" + i;
+        if (i=1) {
+          variableGlobale=result
+        }
          // Append to another element:
          document.getElementById("Cont").appendChild(para);
         // Res = document.getElementById("Content" + i).innerHTML + " [ " + i +" ]"
