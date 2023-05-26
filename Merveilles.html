@@ -103,16 +103,55 @@
 </style>
 <script>
 //var variableGlobale 
-  
+  function loadData() {
+ var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JIJ--cTg2nZoNkudiqBrnvWDs-TZlzcw3PBOGPCv7dl9WxtasEhiJ8eJsRbV/pub?gid=569730062&single=true&output=csv";
+   //var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7h49K5ALJK98pf34d7KHeUecOC2w7xZLA8r5k6MMNTzOBhA8VvXSo7v5_xlAxPfrw69xGxKg5DqKf/pub?gid=569730062&single=true&output=csv";
+     xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+       if (xmlhttp.readyState == 4) {
+
+     Num=1
+     //alert(Num + "Num de loaddata")
+     const parts = xmlhttp.responseText.split("MERV");
+    Maxi=parts.length-2;
+    //document.getElementById("Maxo").innerHTML=Maxi
+     Concat = ""
+        
+     for (var i = 1; i < Maxi+1; i++) {
+
+       var0=parts[i]
+       result = var0.substring(0, var0.length-4);
+       //Concat = Concat + "<div id='Contenu" + i + "'>" + result  + "</div>"
+         // Create element:
+         para = document.createElement("Div");
+         para.innerHTML = result;
+         para.id= "Content" + i;
+        if (i=1) {
+          var variableGlobale=result
+        }
+         // Append to another element:
+         document.getElementById("Cont").appendChild(para);
+        // Res = document.getElementById("Content" + i).innerHTML + " [ " + i +" ]"
+       //alert(Res)
+
+       }
+     //document.getElementById("Cont").innerHTML = Concat
+
+     //document.getElementById("Contenu").style.textAlign = "left";
+         }
+      };
+     xmlhttp.open("GET", url, true);
+     xmlhttp.send(null);
+ }
   
   
     function Tester() {
        Num=document.getElementById("ListeUne").selectedIndex
     
-      document.getElementById("maxo").innerHTML=Num+1 + "c"
+      document.getElementById("maxo").innerHTML=Num+1 + "d"
      // document.getElementById("ImageMerv").src = "https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png"
      // Concat = document.getElementById("Content1").innerHTML
-      alert(variableGlobale)
+      //alert(variableGlobale)
       //Inscrire()
       // alert(Res)
           //Num=document.getElementById("ListeUne").selectedIndex
