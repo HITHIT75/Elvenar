@@ -19,7 +19,6 @@
      }
   table {
     border-collapse: collapse;
-    border-color: #506E62;
     }
   th {
     background-color: #506E62;
@@ -28,7 +27,7 @@
   }
 
   #ImageMerv {
-    height: 100px;
+    height: 200px;
     transition:  height 2s;
        }
   #ImageMerv:hover {
@@ -147,228 +146,10 @@
        Num=document.getElementById("ListeUne").selectedIndex
 
       document.getElementById("maxo").innerHTML=Num+1
-     //document.getElementById("ImageMerv").src = "https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png"
-    //  alert("ok")
-     // Concat = document.getElementById("Content1").innerHTML
-      //alert(variableGlobale)
-      Inscrire()
-      // alert(Res)
-          //Num=document.getElementById("ListeUne").selectedIndex
-          //Erer(Num)
-          //Fichier="Data/" + document.getElementById("ListeUne").value +".txt"
-          //document.getElementById("frmFile").src = Fichier
-          // alert("Test envoi placer  " + Num)
-          //document.getElementById("ImageMerv").src="https://fr.wiki.elvenar.com/images/8/89/B_Woodelves_AW2.png";
-          //  document.getElementById("ImageMervBis").src="Data/Guilde_du_marchand_prospere.png"
-          //Imager()
-          //LoadFile()
+        Inscrire()
+
         }
-    function Imager() {
-          Num=document.getElementById("ListeUne").selectedIndex
-        //  alert("DEBUT de placer image en place " + Num)
-          MervImage = [];
-          MervImageBis = [];
-          MervImage[0] = "https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png";
-          MervImage[1] = "https://fr.wiki.elvenar.com/images/f/f8/Abysse_dor%C3%A9.png";
-          MervImage[2] = "https://fr.wiki.elvenar.com/images/b/b4/Excavation_sans_fin.png";
-          MervImage[3] = "https://fr.wiki.elvenar.com/images/4/4e/Aiguilles_de_la_temp%C3%AAte.png";
-          MervImage[4] = "https://fr.wiki.elvenar.com/images/thumb/8/8e/48_GreatBuild_Inner_Elves_01_cropped.png/800px-48_GreatBuild_Inner_Elves_01_cropped.png";
-          MervImage[5] = "https://fr.wiki.elvenar.com/images/thumb/7/75/48_GreatBuild_Inner_Elves_02_cropped.png/800px-48_GreatBuild_Inner_Elves_02_cropped.png";
-          MervImage[6] = "https://fr.wiki.elvenar.com/images/thumb/8/81/47_Greatbuilding_Elves_Crystaltree_01_cropped.png/700px-47_Greatbuilding_Elves_Crystaltree_01_cropped.png";
-          MervImage[7] = "https://fr.wiki.elvenar.com/images/thumb/b/be/47_Greatbuilding_Elves_Innercity_Crystaltree_06_cropped.png/695px-47_Greatbuilding_Elves_Innercity_Crystaltree_06_cropped.png";
-          MervImage[8] = "https://fr.wiki.elvenar.com/images/9/96/Tr%C3%B4ne_des_Hauts_Hommes.png";
-          MervImage[9] = "https://fr.wiki.elvenar.com/images/thumb/1/1f/D_greatbuilding_dwarves_military_02_cropped.png/681px-D_greatbuilding_dwarves_military_02_cropped.png";
-          MervImage[10] = "https://fr.wiki.elvenar.com/images/1/1d/D_greatbuilding_dwarves_goods_01_cropped.png";
-          MervImage[11] = "https://fr.wiki.elvenar.com/images/6/66/F_AncientWonder_Supplies_Inner_L2_cropped.png";
-          MervImage[12] = "https://fr.wiki.elvenar.com/images/9/9c/F_AncientWonder_Trader_InnerCity_L2_cropped.png";
-          MervImage[13] = "https://fr.wiki.elvenar.com/images/f/f0/B_Orcs_AW2_1_0003.png";
-          MervImage[14] = "https://fr.wiki.elvenar.com/images/9/9a/B_Woodelves_AW1.png";
-          MervImage[15] = "https://fr.wiki.elvenar.com/images/f/f0/B_Orcs_AW2_1_0003.png";
-          MervImage[16] = "https://fr.wiki.elvenar.com/images/8/89/B_Woodelves_AW2.png";
-          MervImage[17] = "https://fr.wiki.elvenar.com/images/6/61/B_gr5_aw1.png";
-          MervImage[18] = "https://fr.wiki.elvenar.com/images/7/7a/B_gr5_aw2.png";
-          MervImage[19] = "https://fr.wiki.elvenar.com/images/3/37/0009_B_Gr6_AW1_1.png";
-          MervImage[20] = "https://fr.wiki.elvenar.com/images/d/de/0008_B_Gr6_AW2_1.png";
 
-
-          MervImageBis[0] ="Data/Tome_des_mysteres.png"
-          MervImageBis[1] ="Data/Abysse_dore.png"
-          MervImageBis[2] ="Data/Excavation_sans_fin.png"
-          MervImageBis[3] ="Data/Aiguilles_de_la_tempete.png"
-          MervImageBis[4] ="Data/Monastere_martial_le_sanctuaire.png"
-          MervImageBis[5] ="Data/Monastere_martial_le_sanctuaire.png"
-          MervImageBis[6] ="Data/Phare_de_cristal_Tour_du_clocher.png"
-          MervImageBis[7] ="Data/Phare_de_cristal_Tour_du_clocher.png"
-          MervImageBis[8] ="Data/Trones_des_hauts_hommes.png"
-          MervImageBis[9] ="Data/Rempart_nain.png"
-          MervImageBis[10] ="Data/Coeur_de_la_montagne.png"
-          MervImageBis[11] ="Data/Tours_de_la_prosperite.png"
-          MervImageBis[12] ="Data/Guilde_du_marchand_prospere.png"
-          MervImageBis[13] ="Data/Forge_des_heros.png"
-          MervImageBis[14] ="Data/Ambassade_d_enar.png"
-          MervImageBis[15] ="Data/Sanctuaire_des_champignons_astucieux.png"
-          MervImageBis[16] ="Data/Academie_volante.png"
-          MervImageBis[17] ="Data/Labyrinthe_de_la_matiere_noire.png"
-          MervImageBis[18] ="Data/Abbaye_du_dragon.png"
-          MervImageBis[19] ="Data/Temple_des_crapauds.png"
-          MervImageBis[20] ="Data/Centre_d_echange_d_Elvenar.png"
-
-          MervImage[21] = "https://fr.wiki.elvenar.com/images/thumb/6/6d/B_Gr7_AW1_1_0009.png/714px-B_Gr7_AW1_1_0009.png";
-          MervImage[22] = "https://fr.wiki.elvenar.com/images/7/7f/B_Gr7_AW2_1_0010.png";
-          MervImage[23] = "https://fr.wiki.elvenar.com/images/e/e2/Construct_AW1_main.png";
-          MervImage[24] = "https://fr.wiki.elvenar.com/images/1/11/Construct_AW2_main.png";
-          MervImage[25] = "https://fr.wiki.elvenar.com/images/3/37/GR10_AW1_3x6.png";
-          MervImage[26] = "https://fr.wiki.elvenar.com/images/a/a8/GR10_AW2_7x3.png";
-          MervImage[27] = "https://fr.wiki.elvenar.com/images/0/0f/GR11_AW1_6x4.png";
-          MervImage[28] = "https://fr.wiki.elvenar.com/images/5/54/GR11_AW2_4x5.png";
-          MervImage[29] = "https://fr.wiki.elvenar.com/images/e/e5/GR12_AW1_main.png";
-           MervImage[30]= "https://fr.wiki.elvenar.com/images/9/92/GR12_AW2_main.png";
-
-            MervImageBis[21] ="Data/Tours_du_crepuscule.png"
-            MervImageBis[22] ="Data/Fontaines_triomphantes.png"
-            MervImageBis[23] ="Data/D111_a_Voyage_temporel.png"
-            MervImageBis[24] ="Data/D222_z_Simia_Sapiens.png"
-            MervImageBis[25] ="Data/Vortex_de_stockage.png"
-            MervImageBis[26] ="Data/Fontaine_de_jouvence_thermale.png"
-            MervImageBis[27] ="Data/Bibliotheque_du_donjon.png"
-            MervImageBis[28] ="Data/Arene_de_tournois.png"
-            MervImageBis[29] ="Data/Arche_dragonique.png"
-             MervImageBis[30]="Data/Oracle_du_destin.png"
-
-            MervImageBis[31] ="Data/Autel_des_Champignons.png"
-            MervImage[31]= "https://fr.wiki.elvenar.com/images/0/0b/B_Ch18_AW1_1.png"
-            MervImageBis[32] ="Data/Temple_des_Esprits.png"
-            MervImage[32]= "https://fr.wiki.elvenar.com/images/3/3a/B_Ch18_AW2_1.png"
-            MervImageBis[33] ="Data/Tour_du_sceau_Vallorien.png"
-            MervImage[33]= "https://fr.wiki.elvenar.com/images/2/27/GR14_AW1_main.png"
-             MervImageBis[34] ="Data/Arbre_d_illumination.png"
-            MervImage[34]= "https://fr.wiki.elvenar.com/images/1/12/GR14_AW2_main.png"
-            MervImageBis[35] ="Data/Lieu_de_repos_ancestral.png"
-            MervImage[35]= "https://fr.wiki.elvenar.com/images/d/db/GR15_AW1_main.png"
-             MervImageBis[36] ="Data/Taverne_des_Explorateurs.png"
-            MervImage[36]= "https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png"
-            //alert("fin de placer image en place " + Num)
-            document.getElementById("ImageMerv").src=MervImage[Num]
-            document.getElementById("ImageMervBis").src=MervImageBis[Num]
-            //document.getElementById("Annonce").innerhtml=username + "....1"
-          }
-    function Erer(Num) {
-           // alert(Num + "Placer pour blan ere")
-            if(Num<7) {
-              document.getElementById("Ere").innerText="Les nains"
-              document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png"
-            }
-            if((Num>6) && (Num<9)) {
-              document.getElementById("Ere").innerText="Les fées"
-              document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/a/a6/Fairiesbannerteck.png"
-            }
-            if((Num>8) && (Num<11)) {
-              document.getElementById("Ere").innerText="Les orcs et gobelins"
-              document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/5/5d/Orcs%26Goblinsbannerteck.png"
-            }
-            if((Num>10) && (Num<13)) {
-              document.getElementById("Ere").innerText="Les elfes sylvains"
-              document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/e/e8/TTFlags.png/75px-TTFlags.png"
-            }
-            if((Num>12) && (Num<15)) {
-              document.getElementById("Ere").innerText="Sorciers et dragons"
-              document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/3/3c/SRCbanner.png/80px-SRCbanner.png"
-            }
-            if((Num>14) && (Num<17)) {
-              document.getElementById("Ere").innerText="Halfelins"
-              document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/7/78/G6flag.png"
-            }
-            if((Num>16) && (Num<19)) {
-              document.getElementById("Ere").innerText="Élémentaires"
-              document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/9/97/Gr7flag.png"
-            }
-            if((Num>18) && (Num<21)) {
-              document.getElementById("Ere").innerText="Amuni"
-              document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/4/43/Gr8flag.png"
-            }
-            if((Num>20) && (Num<23)) {
-              document.getElementById("Ere").innerText="Créateurs"
-              document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/5/59/Gr9flag.png/90px-Gr9flag.png"
-            }
-            if((Num>22) && (Num<25)) {
-              document.getElementById("Ere").innerText="Les Elvenar"
-              document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/1/17/Gr10flag.png/90px-Gr10flag.png"
-            }
-            if((Num>24) && (Num<27)) {
-              document.getElementById("Ere").innerText="Ambassades"
-              document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/b/bb/Gr11flag.png/90px-Gr11flag.png"
-            }
-            if((Num>26) && (Num<29)) {
-              document.getElementById("Ere").innerText="Marchands d'Unur"
-              document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/1/14/Gr12flag.png/90px-Gr12flag.png"
-            }
-            if((Num>28) && (Num<31)) {
-              document.getElementById("Ere").innerText="Esprit d'Equipe"
-              document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/2/2a/Gr13flag.png/90px-Gr13flag.png"
-            }
-            if((Num>30) && (Num<33)) {
-              document.getElementById("Ere").innerText="La Revanche de l'Exilé"
-              document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/e/e1/Gr14flag.png"
-            }
-            if((Num>32) && (Num<35)) {
-              document.getElementById("Ere").innerText="Le Pouvoir de la Musique"
-              document.getElementById("ImgEre").src="https://fr.wiki.elvenar.com//images/thumb/9/94/Gr15flag.png/80px-Gr15flag.png"
-            }
-          }
-    function LoadFile() {
-                //Num=document.getElementById("Liste2").value
-
-                Benef=""
-                 Benef=Benef+"Abysse_dore|Produit des pièces toutes les 3h. La production correspond à un pourcentage du montant total de la capacité de stockage en pièces de votre hôtel de ville.|https://fr.wiki.elvenar.com/images/a/a3/Coin_small.png||Vous procure de la population additionnelle. Cette population supplémentaire correspond à un pourcentage du montant de votre population au travail (population employée dans l'ensemble de vos bâtiments).|https://fr.wiki.elvenar.com/images/8/8d/Populationadd.png|||||"
-                 Benef=Benef+"Tome_des_mysteres|Produit un ou des point(s) de connaissance toutes les 24h|https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png||Vous donne des matériaux pour chaque exploration lancée. La production correspond à un pourcentage du montant total de la capacité de stockage en matériaux de votre Hôtel de Ville.|https://fr.wiki.elvenar.com/images/6/62/Supply_small.png|||||"
-                  Benef=Benef+"Excavation_sans_fin|Produit des matériaux supplémentaires toutes les 24h. La production correspond à un pourcentage du montant total de la capacité de stockage en matériaux de votre hôtel de ville.|https://fr.wiki.elvenar.com/images/6/62/Supply_small.png||Vous recevez plus de reliques à la fin de chaque province complétée|https://fr.wiki.elvenar.com/images/1/12/Extra_relic.png|||||"
-                  Benef=Benef+"Aiguilles_de_la_tempete|Renforce vos unités de portée légères|https://fr.wiki.elvenar.com/images/6/6b/Damage_boost.png||Accélère la vitesse d’entrainement de votre caserne|https://fr.wiki.elvenar.com/images/1/1d/Time_small.png|||||"
-                //   Benef=Benef+"Monastere_martial|Améliore les points de vie des troupes|https://fr.wiki.elvenar.com/images/4/4a/Aw_hitpoints.png||Ajoute de la culture supplémentaire (un pourcentage de culture supplémentaire est ajouté, en fonction de la culture nécessaire pour votre cité).|https://fr.wiki.elvenar.com/images/8/80/Culture_icon_elves.png|||||"
-                //    Benef=Benef+"Le_sanctuaire|Améliore les points de vie des troupes|https://fr.wiki.elvenar.com/images/4/4a/Aw_hitpoints.png||Ajoute de la culture supplémentaire (un pourcentage de culture supplémentaire est ajouté, en fonction de la culture nécessaire pour votre cité).|https://fr.wiki.elvenar.com/images/8/80/Culture_icon_elves.png|||||"
-                //    Benef=Benef+"Phare_de_cristal|Confère une certaine quantité de marchandises boostées, de façon aléatoire, dépendant du nombre de provinces complétées lorsque vous ouvrez un coffre lors de l'aide entre voisins.|https://fr.wiki.elvenar.com/images/f/f1/NHreward.png||Allonge la durée d’aide sur vos bâtiments de culture.|https://fr.wiki.elvenar.com/images/9/93/NHlongrime.png|||||"
-                //    Benef=Benef+"Tour_du_clocher|Confère une certaine quantité de marchandises boostées, de façon aléatoire, dépendant du nombre de provinces complétées lorsque vous ouvrez un coffre lors de l'aide entre voisins.|https://fr.wiki.elvenar.com/images/f/f1/NHreward.png||Allonge la durée d’aide sur vos bâtiments de culture.|https://fr.wiki.elvenar.com/images/9/93/NHlongrime.png|||||"
-                //    Benef=Benef+"Tour_de_guet_en_ruines|Améliore le bonus culturel conféré par un bâtiment qui a reçu l’aide d’un voisin|confrère|https://fr.wiki.elvenar.com/images/8/80/Culture_icon_elves.png||Vous offre de la culture additionnelle. Cette culture supplémentaire est un pourcentage de la culture requise (culture nécessaire) par votre ville.|https://fr.wiki.elvenar.com/images/8/80/Culture_icon_elves.png|||||"
- //                  Benef=Benef+"Trones_des_hauts_hommes|Vous donne des points de classement supplémentaire pour chaque merveille construite ou améliorée.|https://fr.wiki.elvenar.com/images/f/f3/Rankingpoint_big.png||Ajoute de la culture supplémentaire. autant de culture supplémentaire que de points de classement bonus.|https://fr.wiki.elvenar.com/images/8/80/Culture_icon_elves.png|||||"
- //                  Benef=Benef+"Rempart_nain|Produit des unites du premier type toutes les 3h|https://fr.wiki.elvenar.com/images/5/53/Extratroop.png||Améliore la taille des escouades entrainables dans la caserne.|https://fr.wiki.elvenar.com/images/c|c8/Add_training_cluster_size.png|||||"
- //                  Benef=Benef+"Coeur_de_la_montagne|Améliore le boost de production de vos manufactures boostées|https://fr.wiki.elvenar.com/images/9/92/AWGoodboost.png||Ajoute de la population disponible à votre ville. |https://fr.wiki.elvenar.com/images/8/8d|Populationadd.png|||||"
- //                  Benef=Benef+"Tours_de_la_prosperite|Augmente la durée du sortilège 'puissance des matériaux'|https://fr.wiki.elvenar.com/images/2/2d/Timeboost3.png||Améliore l'effet du sortilège “puissance des matériaux”|https://fr.wiki.elvenar.com/images/5/5a|Spell_supply_production_boost_1_bonus.png||Produit des matériaux supplémentaires collectables toutes les 3 heures.|https://fr.wiki.elvenar.com/images/6/62/Supply_small.png||"
- //                  Benef=Benef+"Guilde_du_marchand_prospere|Réduction de la commission du marchand sur les offres des joueurs non découverts.|https://fr.wiki.elvenar.com/images/6/64/Trader_fee_reduced.png||Améliore la quantité de marchandises offertes par le grossiste.|https://fr.wiki.elvenar.com/images/7/70/Trader_small.png||Améliore le boost de production de chaque portail des races invitées construit dans votre ville.|https://fr.wiki.elvenar.com/images/3/3f|Portal_production.png||"
- //                  Benef=Benef+"Forge_des_heros|Vous donne des orcs toutes les 24h|https://fr.wiki.elvenar.com/images/e|e3/Orcs.png||Améliore la force de vos unites de mêlée lourde|https://fr.wiki.elvenar.com/images/6/6b/Damage_boost.png|||||"
- //                  Benef=Benef+"Sanctuaire_des_champignons_astucieux|Produit des unites du 2nd type (archer|arbalétrier) toutes les 3h|https://fr.wiki.elvenar.com/images/3/3b/Extratroop2.png||Chaque niveau d’armurerie possédé vous confère un bonus supplémentaire pour la taille de l’escouade entraînée|https://fr.wiki.elvenar.com/images/c/c8/Add_training_cluster_size.png|||||"
- //                  Benef=Benef+"Ambassade_d_enar|Produit lentement des éclats de runes pour les merveilles.|https://fr.wiki.elvenar.com/images/8/87/Brokenshard.png||Génère du mana dès que vous lancez une exploration.|https://fr.wiki.elvenar.com/images/e|ed|Mana.png|||||"
- //                  Benef=Benef+"Academie_volante|Produit des unités de votre 3ième type toutes les 3 heures.|https://fr.wiki.elvenar.com/images/3/38/Priesthead.png|https://fr.wiki.elvenar.com/images/9/96/Sorceresshead.png|Augmente la vitesse d'entrainement du camp de mercenaires|https://fr.wiki.elvenar.com/images/1/1d|Time_small.png|||||"
- //                  Benef=Benef+"Labyrinthe_de_la_matière_noire|Produit du Mana toutes les 3 heures|https://fr.wiki.elvenar.com/images/e|ed|Mana.png||Réduit la perte de Mana.|https://fr.wiki.elvenar.com/images/7/79/ManaDecay.png|||||"
- //                  Benef=Benef+"Abbaye_du_dragon|Augmente la puissance des unités magiques|https://fr.wiki.elvenar.com/images/6/6b/Damage_boost.png||Mana par sort utilisé|https://fr.wiki.elvenar.com/images/e/ed/Mana.png|||||"
- //                  Benef=Benef+"Temple des crapauds|Produit des unités de portée lourdes toutes les 3 heures - selon un pourcentage de la taille de vos escouades (arrondi vers le haut)|https://fr.wiki.elvenar.com/images/9/96/Radmortarhead.png|https://fr.wiki.elvenar.com/images/3/38/Granitgolemhead.png||Améliore la force de vos unités de portée lourde|https://fr.wiki.elvenar.com/images/6/6b/Damage_boost.png|||||"
- //                  Benef=Benef+"Centre_d_echange_d_Elvenar|Produit des graines divines toutes les 12 heures, basé sur le niveau de votre hôtel de ville.|https://fr.wiki.elvenar.com/images/c/c6/Seed_icon.png||Augmente la durée du sortilège "Manufacture enchantée".|https://fr.wiki.elvenar.com/images/2/2d/Timeboost3.png||Augmente la puissance du sortilège "Manufacture enchantée".|https://fr.wiki.elvenar.com/images/1/11/Spell2boost3.png||"
- //                  Benef=Benef+"Tours_du_crepuscule|Dans les coffres lors de l'aide entre voisins, vous obtenez des graines divines supplémentaires correspondant au bonus multiplié par le niveau de votre hôtel de ville.|https://fr.wiki.elvenar.com/images/c|c6/Seed_icon.png||Réduit la perte de graines divines|https://fr.wiki.elvenar.com/images/9/9b|SeedDecay.png|||||"
- //                  Benef=Benef+"Fontaines_triomphantes|Améliore la vitesse de formation de votre terrain d'entraînement|https://fr.wiki.elvenar.com/images/2/2d/Timeboost3.png||Dégâts des unités de mêlée légère augmentés|https://fr.wiki.elvenar.com/images/6/6b/Damage_boost.png|||||"
- //                  Benef=Benef+"Pyramide_purificatrice|Produit des unités de mêlée lourde - selon un pourcentage de la taille de vos escouades (arrondi vers le haut).||||Donne des marchandises sensibles boostées de manière aléatoire lors de la collecte des orcs (en pourcentage de votre production d’orcs).|||||||"
- //                  Benef=Benef+"Phare_de_bon_entourage|Augmente la durée du sortilège «don ensorcelé ».|https://fr.wiki.elvenar.com/images/2/2d/Timeboost3.png||Augmente l’effet du sortilège «don ensorcelé ».|https://fr.wiki.elvenar.com/images/3/3f/Spell_EE_icon.png||Augmente la production de mana dans les bâtiments culturels ayant reçu l’aide des voisins.|https://fr.wiki.elvenar.com/images/5/5b/ManaBoost.png||"
- //                  Benef=Benef+"D111_a_Voyage_temporel|Augmentation du bonus de production des marchandises sensibles|https://fr.wiki.elvenar.com/images/6/63/SentientBoosted.png||Réduction du temps d'attente avant de rejouer une province de tournois|https://fr.wiki.elvenar.com|index.php?title=Fichier:TT.png|||||"
- //                  Benef=Benef+"D222_z_Simia_Sapiens|Réduction de la perte journalière des marchandises sensibles.|https://fr.wiki.elvenar.com/images/8/81/Sentient_decay.png||Donne un pourcentage d'unités en plus à chaque récolte de la Caserne, du Terrain d'entrainement et du Camp des mercenaires.|https://fr.wiki.elvenar.com/images/3/3b/Barracks_boosted.png|||||"
- //                  Benef=Benef+"Vortex_de_stockage|Améliore la capacité de stockage des marchandises du campement|https://fr.wiki.elvenar.com/images/9/94/Portal_capacity_boost.png ||Augmente la production de vos trois marchandises sensibles boostées|https://fr.wiki.elvenar.com/images/6/63/SentientBoosted.png|||||"
- //                  Benef=Benef+"Fontaine_de_jouvence_thermale|Augmente la population fournie par les résidences.|https://fr.wiki.elvenar.com/images/c|cb|Population_boost.png||Confère de la culture supplémentaire pour chaque niveau de merveille antique dans votre ville.|https://fr.wiki.elvenar.com/images/8/80/Culture_icon_elves.png|||||"
- //                  Benef=Benef+"Bibliothèque_du_donjon|Offre un bonus de Points de classement pour chaque Cristal du donjon de l’éternité obtenu.|https://fr.wiki.elvenar.com/images/f/f3/Rankingpoint_big.png||Produit des Points de connaissance toutes les 24h.|https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png|||||"
- //                  Benef=Benef+"Arène_de_tournoi|Donne des Points de classement supplémentaires pour chaque Coffre de tournoi complété|https://fr.wiki.elvenar.com/images/f/f3/Rankingpoint_big.png||Produit une certaine quantité de chevaucheurs ailés venimeux toutes les 3 heures en fonction de votre taille d'escouade.|https://fr.wiki.elvenar.com/images/0/07/Gr11_AW2_LM.png|||||"
- //                  Benef=Benef+"Arche_draconique|Rapporte une quantité de Marchandises sensibles précieuses boostées pour chaque quête d’histoire complétée|https://fr.wiki.elvenar.com/images/f/f3/Sg3up.png||Rapporte un(des) Catalyseurs de combinaison pour chaque Coffre mystique ouvert dans l’Artisanat.|https://fr.wiki.elvenar.com/images/6/67/Combining_Catalyst_1.png|||||"
- //                  Benef=Benef+"Oracle_du_destin|Rapporte une quantité d’un de vos boosts de Marchandises sensibles (choix aléatoire) à chaque fois que vous récoltez une recette de l’artisanat|https://fr.wiki.elvenar.com/images/6/63/SentientBoosted.png||Produit des Sorts de Restauration royale chaque semaine.|https://fr.wiki.elvenar.com/images/0/00/Royal_Restoration.png|||||"
- //                  Benef=Benef+"Autel_des_champions|Produit une quantité de Guerrier orc toutes les 3 heures (% en fonction de votre taille d'escouades)|https://fr.wiki.elvenar.com/images/3/32/Gruff_Orc.png||Rapporte des Orcs pour chaque point de tournois obtenus à la fin du tournoi (dépend aussi de votre culture)|https://fr.wiki.elvenar.com/images/e|e3/Orcs.png|||||"
- //                  Benef=Benef+"Temple_des_esprits|Unurium |Coffre du donjon (en fonction de votre culture requise)|https://fr.wiki.elvenar.com/images/b|bc|Unurium.png||Unurium|Collecte de monaie d'évènement dans la ville (en fonction de votre culture requise|https://fr.wiki.elvenar.com/images/b|bc|Unurium.png|||||"
- //                  Benef=Benef+"Tour_du_sceau_vallorien|Donne un pourcentage d'Unurium à chaque récolte de Pièces dans les résidences. La quantité d'Unurium dépend de la quantité de Pièces récoltées.|https://fr.wiki.elvenar.com/images/b|bc|Unurium.png||Réduit la perte journalière d'Unurium.|https://fr.wiki.elvenar.com/images/6/6a|Unurium_decay.png|||||"
- //                  Benef=Benef+"Arbre_d_illumination|Produit des Ranges toutes les 3 heures (% de votre taille d'escouades).|https://fr.wiki.elvenar.com/images/4/41/Mc_lr_units.png||Augmente le boost de production des Marchandises d'Ascension.|https://fr.wiki.elvenar.com/images/f|ff|AscendedBoosted.png|||||"
- //                  Benef=Benef+"Lieu_de_repos_ancestral|Réduction de la perte journalière des Marchandises d'ascension|https://fr.wiki.elvenar.com/images/6/6e|Ascendedgoods_decay_reduction.png||Produit des Banshee toutes les 3h (% de votre taille d'escouade)|https://fr.wiki.elvenar.com/images/f|fc|Tg_ma.png|||||"
- data = [];
- data = Benef.split("|");
- for (var i = 0; i < data.length; i++) {
-    if (data [i]="Excavation_sans_fin") {
-      Chaine = data [i+1]+ " " + data [i+2]+" " + data [i+3]+" " + data [i+4]+" " + data [i+5]+" "+ data [i+6]+" " +data [i+7]+" " +data [i+8]
-
-     }
-   }
-  alert(data [2])
-//alert(Benef)
-}
 
 
                 // var oFrame = document.getElementById("frmFile");
@@ -439,6 +220,7 @@ function JouerSon(Num) {
        //alert(parts[1])
  //   alert("ok loadata")
    Inscrire()
+   TrouverCoffre()
   }
  function Inscrire() {
 // alert("ok Inscrire")
@@ -530,6 +312,44 @@ document.getElementById("ImageMerv").src = Res
  }
 
 
+ function  TrouverCoffre() {
+   Res = Trouver("Cout et Coffre de gains:")
+  //alert(Res)
+  Num = document.getElementById("maxo").innerHTML*1
+  vari = "Content" + Num
+  //alert("Num Trouver=" + vari)
+Chaine = document.getElementById(vari).innerHTML
+var e = document.getElementById("ListeDeux");
+var Num2 = e.options[e.selectedIndex].text;
+data = Res.split('/');
+tempo = data [Num2-2]
+datatempo = tempo.split(',');
+//alert(datatempo [0])
+     document.getElementById("Couts").innerHTML=datatempo [0];
+     document.getElementById("SA1").innerHTML=datatempo [1];
+     document.getElementById("Ru1").innerHTML=datatempo [2];
+     document.getElementById("SA2").innerHTML=datatempo [3];
+     document.getElementById("Ru2").innerHTML=datatempo [4];
+    document.getElementById("SA3").innerHTML=datatempo [5];
+    document.getElementById("Ru3").innerHTML=datatempo [6];
+    document.getElementById("SA4").innerHTML=datatempo [7];
+    document.getElementById("Ru4").innerHTML=datatempo [8];
+   document.getElementById("SA5").innerHTML=datatempo [9];
+    document.getElementById("Ru5").innerHTML=datatempo [10];
+    document.getElementById("SA6").innerHTML=datatempo [11];
+    document.getElementById("Ru6").innerHTML=datatempo [12];
+    document.getElementById("SA7").innerHTML=datatempo [13];
+    document.getElementById("Ru7").innerHTML=datatempo [14];
+   document.getElementById("SA8").innerHTML=datatempo [15];
+   document.getElementById("Ru8").innerHTML=datatempo [16];
+document.getElementById("Intitule").innerHTML ="Coffres disponibles pour passer du niveau " + (Num2-1)+ " à " + Num2
+
+
+
+
+
+ }
+
 </script>
 
 
@@ -539,125 +359,110 @@ document.getElementById("ImageMerv").src = Res
 <body onload="Debut()">
   <audio  id="MonSon" src="Image/Son.wav"></audio>
 
-<table width="60%" style="text-align:center">
-  <tr height="3%;">
-    <td colspan="10">
 
-<form action="">
-  <select size="1" id="ListeUne" onchange="Tester()" style="font-size:20px;left:0;">
 
-    <option>Tome_des_mysteres</option>
-    <option>Abysse_dore</option>
-    <option>Excavation_sans_fin</option>
-    <option>Aiguilles_de_la_tempete</option>
-    <option>Monastere_martial</option>
-    <option>Le_sanctuaire</option>
-    <option>Tour_du_clocher</option>
-    <option>Phare_de_cristal</option>
-    <option>Trones_des_hauts_hommes</option>
-    <option>Rempart_nain</option>
-    <option>Coeur_de_la_montagne</option>
-    <option>Tours_de_la_prosperite</option>
-    <option>Guilde_du_marchand_prospere</option>
-    <option>Forge_des_heros</option>
-    <option>Ambassade_d_enar</option>
-    <option>Sanctuaire_des_champignons_astucieux</option>
-    <option>Academie_volante</option>
-    <option>Labyrinthe_de_la_matiere_noire</option>
-    <option>Abbaye_du_dragon</option>
-    <option>Temple_des_crapauds</option>
-    <option>Centre_d_echange_d_Elvenar</option>
-    <option>Tours_du_crepuscule</option>
-    <option>Fontaines_triomphantes</option>
-    <option>Pyramide_purificatrice</option>
-    <option>Phare_de_bon_entourage</option>
-    <option>D111_a_Voyage_temporel</option>
-    <option>D222_z_Simia_Sapiens</option>
-    <option>Vortex_de_stockage</option>
-    <option>Fontaine_de_jouvence_thermale</option>
-    <option>Bibliotheque_du_donjon</option>
-    <option>Arene_de_tournois</option>
-    <option>Arche_dragonique</option>
-    <option>Oracle_du_destin</option>
-    <option>Autel_des_champions</option>
-    <option>Temple_des_esprits</option>
-    <option>Tour_de_sceau_vallorien</option>
-    <option>Arbre_d_illumination</option>
+<form action="" style="align:left;text-align:left;display:inline;">
+  <select size="1" id="ListeUne" onchange="Tester()" style="font-size:20px;width:55%;">
+
+    <option>Tome des mystères  4x4</option>
+    <option>Abysse doré 3x3</option>
+    <option>Excavation sans fin 5x4</option>
+    <option>Aiguilles de la tempete 3x5</option>
+    <option>Monastere martial 5x5</option>
+    <option>Le sanctuaire 5x5</option>
+    <option>Tour du clocher 4x6</option>
+    <option>Phare de cristal 6x4</option>
+    <option>Trones des hauts hommes 4x6</option>
+    <option>Rempart nain 7x4</option>
+    <option>Coeur de la montagne 3x8</option>
+    <option>Tours de la prosperite 5x4</option>
+    <option>Guilde du marchand prospere 3x7</option>
+    <option>Forge des heros 5x5</option>
+    <option>Ambassade d enar 4x7</option>
+    <option>Sanctuaire des champignons astucieux 5x4</option>
+    <option>Academie volante 4x4</option>
+    <option>Labyrinthe de la matiere noire 5x6</option>
+    <option>Abbaye du dragon 4x5</option>
+    <option>Temple des crapauds 6x3</option>
+    <option>Centre d echange d Elvenar 5x5</option>
+    <option>Tours du crepuscule 7x3</option>
+    <option>Fontaines triomphantes 6x4</option>
+    <option>Pyramide purificatrice 4x6</option>
+    <option>Phare de bon entourage 8x3</option>
+    <option>D111 a Voyage temporel 3x6</option>
+    <option>D222 z Simia Sapiens 6x5</option>
+    <option>Vortex de stockage 3x6</option>
+    <option>Fontaine de jouvence thermale 7x3</option>
+    <option>Bibliotheque du donjon 4x6</option>
+    <option>Arene de tournois 4x5</option>
+    <option>Arche dragonique 5x4</option>
+    <option>Oracle du destin 5x5</option>
+    <option>Autel des champions 3x4</option>
+    <option>Temple des esprits 7x4</option>
+    <option>Tour de sceau vallorien 5x6</option>
+    <option>Arbre d illumination 4x3</option>
+    <option>Tour de Guet 4x7</option>
 
   </select>
 </form>
-  </td>
-  <td colspan="6" style="text-align: right;" id="Ere"></td>
-  <td colspan="2">
-    <div style="text-align: center;">
-    <img  id="ImgEre" src="" decoding="async" width="48" height="60" />
-    </div>
-    </td>
 
-</tr>
-<tr>
-  <td colspan="18" style="text-align: left;" id="Benef1" >1...</td>
-</tr>
-<tr>
-  <td colspan="18" style="text-align: left;" id="Benef2" >2</td>
-</tr>
-<tr>
-  <td colspan="18" style="text-align: left;" id="Benef3" >3</td>
-</tr>
-<tr>
-  <td colspan="18" style="text-align: left;" >
+  <div style="text-align: right;display:inline;">Chapitre:
+    <div id="Ere" style="display:inline;"></div>
+    <img  id="ImgEre" src="" decoding="async" width="38" height="50" style="text-align: center;display:inline;"/>
+  </div>
+
+
+  <div style="text-align: left;" id="Benef1" >1...</div>
+
+  <div  style="text-align: left;" id="Benef2" >2</div>
+
+  <div  style="text-align: left;" id="Benef3" >3</div>
+
+  <div  style="text-align: left;" >
     <img height="20px;" src="Image/IconeCombat.png">Intérêt Combat:
     <div id="InteretCombat" style="display:inline">
 
     </div>
-  </td>
-</tr>
+  </div>
+
 <!-- <tr>
   <td colspan="18" style="text-align: left;" id="InteretCombatAuto" >Intérêt Combat automatique:</td>
 </tr> -->
-<tr>
-  <td colspan="18" style="text-align: left;"  >
+
+  <div  style="text-align: left;"  >
     <img height="20px;" src="Image/IconeRessources.png">
     Intérêt ressources:
     <div id="InteretNego" style="display:inline">
 
     </div>
-  </td>
-</tr>
-<tr>
-  <td colspan="18" style="text-align: left;" id="Commentaire" ></td>
-</tr>
-      <tr height="3%;" length="30%;">
-        <td colspan="2"style="border-left: solid;border-top: solid;"></td>
-        <td colspan="16" style="border-right: solid;border-top: solid;"id="Intitule" >Coffres disponibles pour passer du niveau 1 à 2</td>
-      </tr>
+  </div>
+
+
+  <div  style="text-align: left;" id="Commentaire" ></div>
+
+
+
+
+<table width="80%" style="text-align:center;">
 
       <tr>
-        <th style="border-left: solid;">Niveau<img   src="https://fr.wiki.elvenar.com/images/a/a8/Level_small.png"></th>
-        <th>Coûts<img   src="https://fr.wiki.elvenar.com/images/thumb/b/bf/Researchico.png/25px-Researchico.png"></th>
-        <th><img  height="20px;" src="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"></th>
-        <th><img  height="20px;" src="Data/Ancient_Knowledge.png"></th>
-        <th><img height="20px;"  src="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"></th>
-        <th><img height="20px;"  src="Data/Ancient_Knowledge.png"></th>
-        <th><img  height="20px;" src="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"></th>
-        <th><img height="20px;"  src="Data/Ancient_Knowledge.png"></th>
-        <th><img height="20px;"  class="colo4"  src="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"></th>
-        <th><img height="20px;"   class="colo4" src="Data/Ancient_Knowledge.png"></th>
-        <th><img  height="20px;" class="colo5"  src="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"></th>
-        <th><img height="20px;"  class="colo5"  src="Data/Ancient_Knowledge.png"></th>
-        <th><img  height="20px;" class="colo6"  src="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"></th>
-        <th><img height="20px;"   class="colo6" src="Data/Ancient_Knowledge.png"></th>
-        <th><img  height="20px;" class="colo7" src="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"></th>
-        <th><img height="20px;" class="colo7"  src="Data/Ancient_Knowledge.png"></th>
-        <th><img height="20px;"  class="colo8"   src="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"></th>
-        <th><img height="20px;" class="colo8"  src="Data/Ancient_Knowledge.png"></th>
+        <td colspan="16" rowspan="22" length="95%;" style="border: solid;">
+        <img id="ImageMerv"  src="https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png">
+        </td>
+        <td colspan="2"  width="10%;">  </td>
 
       </tr>
-
-       <tr height="3%;">
-        <td id="Niveau" style="border-left: solid;border-bottom: solid;">
+      <tr>
+          <td colspan="2"  style="font-size:12px;" style="border: solid;" id="Intitule" >
+          Coffres disponibles pour passer du niveau 1 à 2</td>
+      </tr>
+      <tr>
+        <th colspan="2" style="border-top: solid;border-rigth: solid;">Niveau<img   src="https://fr.wiki.elvenar.com/images/a/a8/Level_small.png"></th>
+      </tr>
+      <tr>
+        <td colspan="2" id="Niveau" style="border-right: solid;border-bottom: solid;">
           <form action="">
-            <select size="1" id="Liste2" onchange="Lister2()" style="align:center;font-size:20px;left:0;display:inline;width:70px;">
+            <select size="1" id="ListeDeux" onchange="TrouverCoffre()" style="align:center;font-size:20px;left:0;display:inline;width:70px;">
             <option>2</option>
             <option>3</option>
             <option>4</option>
@@ -673,15 +478,15 @@ document.getElementById("ImageMerv").src = Res
             <option>17</option>
             <option>18</option>
             <option>19</option>
-           <option>20</option>
+            <option>20</option>
             <option>22</option>
             <option>23</option>
             <option>24</option>
-          <option>25</option>
+            <option>25</option>
             <option>27</option>
             <option>28</option>
             <option>29</option>
-           <option>30</option>
+            <option>30</option>
             <option>32</option>
             <option>33</option>
             <option>34 </option>
@@ -690,24 +495,81 @@ document.getElementById("ImageMerv").src = Res
           </form>
 
         </td>
-        <td  id="Couts" style="border-bottom: solid;">189</td>
-        <td id="SA1" style="border-left: solid;border-bottom: solid;">  20</td>
-        <td id="Ru1" style="border-bottom: solid;">  1</td>
-        <td id="SA2" style="border-left: solid;border-bottom: solid;"> 15</td>
-        <td id="Ru2" style="border-bottom: solid;">  </td>
-        <td id="SA3" style="border-left: solid;border-bottom: solid;">  5</td>
-        <td id="Ru3" style="border-bottom: solid;">  </td>
-        <td id="SA4" class="colo4" style="border-left: solid;border-bottom: solid;">  5</td>
-        <td id="Ru4"  class="colo4" style="border-bottom: solid;"  >1</td>
-        <td id="SA5"  class="colo5" style="border-left: solid;border-bottom: solid;">  </td>
-        <td id="Ru5" style="border-bottom: solid;" class="colo5" >  </td>
-        <td id="SA6" class="colo6"  style="border-left: solid;border-bottom: solid;">  </td>
-        <td id="Ru6" style="border-bottom: solid;" class="colo6" >  </td>
-        <td id="SA7" class="colo7" style="border-left: solid;border-bottom: solid;">  </td>
-        <td id="Ru7" style="border-bottom: solid;" class="colo7">  </td>
-        <td id="SA8" class="colo8"  style="border-left: solid;border-bottom: solid;">  </td>
-        <td id="Ru8" class="colo8"   style="border-right: solid;border-bottom: solid;">  </td>
       </tr>
+      <tr>
+        <th colspan="2"style="border-top: solid;border-rigth: solid;">Coûts<img   src="https://fr.wiki.elvenar.com/images/thumb/b/bf/Researchico.png/25px-Researchico.png"></th>
+      </tr>
+
+      <tr>
+          <td  colspan="2" id="Couts" style="border-bottom: solid;border-rigth: solid;">189</td>
+      </tr>
+      <tr>
+          <th><img  height="20px;" src="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"></th>
+        <th><img height="20px;" style="border-rigth: solid;" src="Data/Ancient_Knowledge.png"></th>
+      </tr>
+      <tr>
+          <td id="SA1" style="border-left: solid;border-bottom: solid;">20</td>
+          <td id="Ru1" style="border-bottom: solid;">1</td>
+      </tr>
+      <tr>
+        <th><img  height="20px;" src="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"></th>
+        <th><img height="20px;"  src="Data/Ancient_Knowledge.png"></th>
+      </tr>
+      <tr>
+          <td id="SA2" style="border-left: solid;border-bottom: solid;">20</td>
+          <td id="Ru2" style="border-bottom: solid;">1</td>
+      </tr>
+      <tr>
+          <th><img  height="20px;" src="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"></th>
+        <th><img height="20px;"  src="Data/Ancient_Knowledge.png"></th>
+      </tr>
+      <tr>
+          <td id="SA3" style="border-left: solid;border-bottom: solid;">20</td>
+          <td id="Ru3" style="border-bottom: solid;">1</td>
+      </tr>
+      <tr>
+        <th><img  height="20px;" src="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"></th>
+        <th><img height="20px;"  src="Data/Ancient_Knowledge.png"></th>
+      </tr>
+      <tr>
+          <td id="SA4" style="border-left: solid;border-bottom: solid;">20</td>
+          <td id="Ru4" style="border-bottom: solid;">1</td>
+      </tr>
+      <tr>
+        <th><img  height="20px;" src="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"></th>
+        <th><img height="20px;"  src="Data/Ancient_Knowledge.png"></th>
+      </tr>
+      <tr>
+          <td id="SA5" style="border-left: solid;border-bottom: solid;">20</td>
+          <td id="Ru5" style="border-bottom: solid;">1</td>
+      </tr>
+      <tr>
+        <th><img  height="20px;" src="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"></th>
+        <th><img height="20px;"  src="Data/Ancient_Knowledge.png"></th>
+      </tr>
+      <tr>
+          <td id="SA6" style="border-left: solid;border-bottom: solid;">20</td>
+          <td id="Ru6" style="border-bottom: solid;">1</td>
+      </tr>
+      <tr>
+        <th><img  height="20px;" src="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"></th>
+        <th><img height="20px;"  src="Data/Ancient_Knowledge.png"></th>
+      </tr>
+      <tr>
+          <td id="SA7" style="border-left: solid;border-bottom: solid;">20</td>
+          <td id="Ru7" style="border-bottom: solid;">1</td>
+      </tr>
+      <tr>
+        <th><img  height="20px;" src="https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png"></th>
+        <th><img height="20px;"  src="Data/Ancient_Knowledge.png"></th>
+      </tr>
+      <tr>
+          <td id="SA8" style="border-left: solid;border-bottom: solid;">20</td>
+          <td id="Ru8" style="border-bottom: solid;">1</td>
+      </tr>
+
+
+
 
         <!-- <tr height="3%;">
         <td style="border-left: solid;"  colspan="2">      </td>
@@ -803,10 +665,10 @@ document.getElementById("ImageMerv").src = Res
         <td colspan="2" style="border-right: solid;border-bottom: solid;" ><button type="button" onclick="LoadFile2()">Copier</button></td>
       </tr> -->
 
-      <tr>
+      <!-- <tr>
         <td colspan="18"  rowspan="18" >
         <img id="ImageMerv"  src="https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png"></td>
-      </tr>
+      </tr> -->
 
 
     </table>
@@ -816,44 +678,45 @@ document.getElementById("ImageMerv").src = Res
 
 <div id="maxo"  style='display:none'>1</div>
 <div id="Cont" style='display:none'>
-  <Div id='Content1'>Nom:Tome des mystères |index:1|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:4x4|Lien image:https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png|Cycle de vie: Jusqu'au chapitre 5-6|Graph cycle de vie: 100 100 100 100 100 50 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 |Bonus1: Produit un ou des point(s) de connaissance toutes les 24h|Image1Bonus1:https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png|Image2Bonus1:|Bonus2: Vous donne des matériaux pour chaque exploration lancée. La production correspond à un pourcentage du montant total de la capacité de stockage en matériaux de votre Hôtel de Ville.|Image1Bonus2:https://fr.wiki.elvenar.com/images/6/62/Supply_small.png|Image2Bonus2:||Bonus3: |Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:4/2|Intérêt nego nb étoiles:1|Intérêt combat auto:0|Commentaires: Utile uniquement au démarrage du jeu|Graph cycle de vie:100,100,100,100,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,|Cout et Coffre de gains:140,10,1,5,,5,,5,,,,,,,,,198,10,1,10,,5,,5,,5,,,,,,,250,15,1,10,1,10,,5,,5,,,,,,,300,20,1,15,1,10,1,5,,5,,5,,,,,390,25,2,20,1,15,1,10,,5,,5,,,,,430,25,2,20,1,15,1,10,1,5,,5,,,,,470,30,2,20,1,15,1,10,1,5,,5,,,,,510,30,2,25,1,20,1,10,1,10,,5,,,,,580,35,2,30,1,20,1,15,1,10,,5,,5,,,610,40,2,30,1,20,1,15,1,10,,5,,5,,,640,40,3,30,2,20,1,15,1,10,,5,,5,,,680,45,3,30,2,25,1,15,1,10,1,5,,5,,,740,45,3,35,2,25,1,20,1,10,1,5,,5,,,770,50,3,35,2,25,1,20,1,10,1,5,,5,,,790,50,3,40,2,30,1,20,1,10,1,5,,5,,,820,50,3,40,2,30,1,20,1,10,1,5,,5,,,870,55,3,40,2,30,2,20,1,15,1,10,,5,,,930,55,3,45,2,30,2,20,1,15,1,10,,5,,,930,60,3,45,2,30,2,20,1,15,1,10,,5,,,950,60,3,45,2,35,2,25,1,15,1,10,,5,,,1000,65,3,50,2,35,2,25,1,15,1,10,,5,,,1020,65,3,50,2,35,2,25,1,15,1,10,,5,,,1050,65,3,50,3,35,2,25,1,15,1,10,,5,,,1070,65,4,50,3,35,2,25,1,15,1,10,,5,,,2000,95,5,75,4,55,3,35,2,25,1,15,1,10,,5,2100,95,5,75,4,55,3,35,2,25,1,15,1,10,,5,2200,95,5,75,4,55,3,35,2,25,1,15,1,10,,5,2300,95,5,75,4,55,3,35,2,25,1,15,1,10,,5,|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:exploration,province,matériaux,pc|SOS1:|SOS2:|</Div>
-  <Div id='Content2'>Nom:Abysse doré|index:2|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:3x3|Lien image: https://fr.wiki.elvenar.com/images/f/f8/Abysse_dor%C3%A9.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Produit des pièces toutes les 3h. La production correspond à un pourcentage du montant total de la capacité de stockage en pièces de votre hôtel de ville.|Image1Bonus1: https://fr.wiki.elvenar.com/images/a/a3/Coin_small.png|Image2Bonus1:|Bonus2: Vous procure de la population additionnelle. Cette population supplémentaire correspond à un pourcentage du montant de votre population au travail (population employée dans l'ensemble de vos bâtiments).|Image1Bonus2: https://fr.wiki.elvenar.com/images/8/8d/Populationadd.png|Image2Bonus2:||Bonus3: |Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:indispensable tout au long du jeu |Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content3'>Nom:Excavation sans fin|index:3|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/b/b4/Excavation_sans_fin.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Produit des matériaux supplémentaires toutes les 24h. La production correspond à un pourcentage du montant total de la capacité de stockage en matériaux de votre hôtel de ville.|Image1Bonus1:https://fr.wiki.elvenar.com/images/6/62/Supply_small.png|Image2Bonus1:|Bonus2:Vous recevez plus de reliques à la fin de chaque province complétée|Image1Bonus2:https://fr.wiki.elvenar.com/images/1/12/Extra_relic.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content4'>Nom:Aiguilles de la tempete|index:4|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/4/4e/Aiguilles_de_la_temp%C3%AAte.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Renforce vos unités de portée légères|Image1Bonus1:https://fr.wiki.elvenar.com/images/6/6b/Damage_boost.png|Image2Bonus1:|Bonus2:Accélère la vitesse d’entrainement de votre caserne|Image1Bonus2:https://fr.wiki.elvenar.com/images/1/1d/Time_small.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content5'>Nom:Monastere martial|index:5|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/thumb/8/8e/48_GreatBuild_Inner_Elves_01_cropped.png/800px-48_GreatBuild_Inner_Elves_01_cropped.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Améliore les points de vie des troupes|Image1Bonus1:https://fr.wiki.elvenar.com/images/4/4a/Aw_hitpoints.png|Image2Bonus1:|Bonus2:Ajoute de la culture supplémentaire (un pourcentage de culture supplémentaire est ajouté, en fonction de la culture nécessaire pour votre cité).|Image1Bonus2:https://fr.wiki.elvenar.com/images/8/80/Culture_icon_elves.png|Image1Bonus2:|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content6'>Nom:Le sanctuaire|index:6|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/thumb/7/75/48_GreatBuild_Inner_Elves_02_cropped.png/800px-48_GreatBuild_Inner_Elves_02_cropped.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Améliore les points de vie des troupes|Image1Bonus1:https://fr.wiki.elvenar.com/images/4/4a/Aw_hitpoints.png|Image2Bonus1:|Bonus2:Ajoute de la culture supplémentaire (un pourcentage de culture supplémentaire est ajouté, en fonction de la culture nécessaire pour votre cité).|Image1Bonus2:https://fr.wiki.elvenar.com/images/8/80/Culture_icon_elves.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content7'>Nom:Tour du clocher|index:7|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/thumb/8/81/47_Greatbuilding_Elves_Crystaltree_01_cropped.png/700px-47_Greatbuilding_Elves_Crystaltree_01_cropped.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Confère une certaine quantité de marchandises boostées, de façon aléatoire, dépendant du nombre de provinces complétées lorsque vous ouvrez un coffre lors de l'aide entre voisins.|Image1Bonus1:https://fr.wiki.elvenar.com/images/f/f1/NHreward.png|Image2Bonus1:|Bonus2:Allonge la durée d’aide sur vos bâtiments de culture.|Image1Bonus2:https://fr.wiki.elvenar.com/images/9/93/NHlongrime.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content8'>Nom:Phare de cristal|index:8|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/thumb/b/be/47_Greatbuilding_Elves_Innercity_Crystaltree_06_cropped.png/695px-47_Greatbuilding_Elves_Innercity_Crystaltree_06_cropped.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Confère une certaine quantité de marchandises boostées, de façon aléatoire, dépendant du nombre de provinces complétées lorsque vous ouvrez un coffre lors de l'aide entre voisins.|Image1Bonus1:https://fr.wiki.elvenar.com/images/f/f1/NHreward.png|Image2Bonus1:|Bonus2:Allonge la durée d’aide sur vos bâtiments de culture.|Image1Bonus2:https://fr.wiki.elvenar.com/images/9/93/NHlongrime.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content9'>Nom:Trones des hauts hommes|index:9|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/9/96/Tr%C3%B4ne_des_Hauts_Hommes.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Vous donne des points de classement supplémentaire pour chaque merveille construite ou améliorée.|Image1Bonus1:https://fr.wiki.elvenar.com/images/f/f3/Rankingpoint_big.png|Image2Bonus1:|Bonus2:Ajoute de la culture supplémentaire. autant de culture supplémentaire que de points de classement bonus.|Image1Bonus2:https://fr.wiki.elvenar.com/images/8/80/Culture_icon_elves.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content10'>Nom:Rempart nain|index:10|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/thumb/1/1f/D_greatbuilding_dwarves_military_02_cropped.png/681px-D_greatbuilding_dwarves_military_02_cropped.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Produit des unites du premier type toutes les 3h|Image1Bonus1:https://fr.wiki.elvenar.com/images/5/53/Extratroop.png|Image2Bonus1:|Bonus2:Améliore la taille des escouades entrainables dans la caserne.|Image1Bonus2:https://fr.wiki.elvenar.com/images/c/c8/Add_training_cluster_size.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content11'>Nom:Coeur de la montagne|index:11|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/1/1d/D_greatbuilding_dwarves_goods_01_cropped.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Améliore le boost de production de vos manufactures boostées|Image1Bonus1:https://fr.wiki.elvenar.com/images/9/92/AWGoodboost.png|Image2Bonus1:|Bonus2:Ajoute de la population disponible à votre ville. |Image1Bonus2:https://fr.wiki.elvenar.com/images/8/8d/Populationadd.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content12'>Nom:Tours de la prosperite|index:12|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/6/66/F_AncientWonder_Supplies_Inner_L2_cropped.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Augmente la durée du sortilège "puissance des matériaux"|Image1Bonus1:https://fr.wiki.elvenar.com/images/2/2d/Timeboost3.png|Image2Bonus1:|Bonus2:Améliore l'effet du sortilège “puissance des matériaux”|Image1Bonus2:https://fr.wiki.elvenar.com/images/5/5a/Spell_supply_production_boost_1_bonus.png|Image2Bonus2:||Bonus3:Produit des matériaux supplémentaires collectables toutes les 3 heures.|Image1Bonus3:https://fr.wiki.elvenar.com/images/6/62/Supply_small.png|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content13'>Nom:Guilde du marchand prospere|index:13|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/9/9c/F_AncientWonder_Trader_InnerCity_L2_cropped.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Réduction de la commission du marchand sur les offres des joueurs non découverts.|Image1Bonus1:https://fr.wiki.elvenar.com/images/6/64/Trader_fee_reduced.png|Image2Bonus1:|Bonus2:Améliore la quantité de marchandises offertes par le grossiste.|Image1Bonus2:https://fr.wiki.elvenar.com/images/7/70/Trader_small.png|Image2Bonus2:||Bonus3:Améliore le boost de production de chaque portail des races invitées construit dans votre ville.|Image1Bonus3:https://fr.wiki.elvenar.com/images/3/3f/Portal_production.png|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content14'>Nom:Forge des heros|index:14|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/f/f0/B_Orcs_AW2_1_0003.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Vous donne des orcs toutes les 24h|Image1Bonus1:https://fr.wiki.elvenar.com/images/e/e3/Orcs.png|Image2Bonus1:|Bonus2:Améliore la force de vos unites de mêlée lourde|Image1Bonus2:https://fr.wiki.elvenar.com/images/6/6b/Damage_boost.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content15'>Nom:Ambassade d enar|index:15|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/9/9a/B_Woodelves_AW1.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Produit lentement des éclats de runes pour les merveilles.|Image1Bonus1:https://fr.wiki.elvenar.com/images/8/87/Brokenshard.png|Image2Bonus1:|Bonus2:Génère du mana dès que vous lancez une exploration.|Image1Bonus2:https://fr.wiki.elvenar.com/images/e/ed/Mana.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content16'>Nom:Sanctuaire des champignons astucieux|index:16|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/f/f0/B_Orcs_AW2_1_0003.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Produit des unites du 2nd type (archer/arbalétrier) toutes les 3h|Image1Bonus1:https://fr.wiki.elvenar.com/images/3/3b/Extratroop2.png|Image2Bonus1:|Bonus2:Chaque niveau d’armurerie possédé vous confère un bonus supplémentaire pour la taille de l’escouade entraînée|Image1Bonus2:https://fr.wiki.elvenar.com/images/c/c8/Add_training_cluster_size.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content17'>Nom:Academie volante|index:17|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/8/89/B_Woodelves_AW2.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Produit des unités de votre 3ième type toutes les 3 heures.|Image1Bonus1:https://fr.wiki.elvenar.com/images/3/38/Priesthead.png|Image2Bonus1:https://fr.wiki.elvenar.com/images/9/96/Sorceresshead.png, Augmente la vitesse d'entrainement du camp de mercenaires|Bonus2:https://fr.wiki.elvenar.com/images/1/1d/Time_small.png|Image1Bonus2:|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content18'>Nom:Labyrinthe de la matiere noire|index:18|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/6/61/B_gr5_aw1.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Produit du Mana toutes les 3 heures|Image1Bonus1:https://fr.wiki.elvenar.com/images/e/ed/Mana.png|Image2Bonus1:|Bonus2:Réduit la perte de Mana.|Image1Bonus2:https://fr.wiki.elvenar.com/images/7/79/ManaDecay.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content19'>Nom:Abbaye du dragon|index:19|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/7/7a/B_gr5_aw2.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Augmente la puissance des unités magiques|Image1Bonus1:https://fr.wiki.elvenar.com/images/6/6b/Damage_boost.png|Image2Bonus1:|Bonus2:Mana par sort utilisé|Image1Bonus2:https://fr.wiki.elvenar.com/images/e/ed/Mana.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content20'>Nom:Temple des crapauds|index:20|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/3/37/0009_B_Gr6_AW1_1.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Produit des unités de portée lourdes toutes les 3 heures - selon un pourcentage de la taille de vos escouades (arrondi vers le haut)|Image1Bonus1:https://fr.wiki.elvenar.com/images/9/96/Radmortarhead.png|Image2Bonus1:https://fr.wiki.elvenar.com/images/3/38/Granitgolemhead.png|Bonus2:|Image1Bonus2:Améliore la force de vos unités de portée lourde|Image2Bonus2:https://fr.wiki.elvenar.com/images/6/6b/Damage_boost.png||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content21'>Nom:Centre d echange d Elvenar|index:21|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/d/de/0008_B_Gr6_AW2_1.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Produit des graines divines toutes les 12 heures, basé sur le niveau de votre hôtel de ville.|Image1Bonus1:https://fr.wiki.elvenar.com/images/c/c6/Seed_icon.png|Image2Bonus1:|Bonus2:Augmente la durée du sortilège "Manufacture enchantée".|Image1Bonus2:https://fr.wiki.elvenar.com/images/2/2d/Timeboost3.png|Image2Bonus2:||Bonus3:Augmente la puissance du sortilège "Manufacture enchantée".|Image1Bonus3:https://fr.wiki.elvenar.com/images/1/11/Spell2boost3.png|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content22'>Nom:Tours du crepuscule|index:22|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/thumb/6/6d/B_Gr7_AW1_1_0009.png/714px-B_Gr7_AW1_1_0009.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Dans les coffres lors de l'aide entre voisins, vous obtenez des graines divines supplémentaires correspondant au bonus multiplié par le niveau de votre hôtel de ville.|Image1Bonus1:https://fr.wiki.elvenar.com/images/c/c6/Seed_icon.png|Image2Bonus1:|Bonus2:Réduit la perte de graines divines|Image1Bonus2:https://fr.wiki.elvenar.com/images/9/9b/SeedDecay.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content23'>Nom:Fontaines triomphantes|index:23|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/7/7f/B_Gr7_AW2_1_0010.png";|Cycle de vie: |Graph cycle de vie:|Bonus1: Améliore la vitesse de formation de votre terrain d'entraînement|Image1Bonus1:https://fr.wiki.elvenar.com/images/2/2d/Timeboost3.png|Image2Bonus1:|Bonus2:Dégâts des unités de mêlée légère augmentés|Image1Bonus2:https://fr.wiki.elvenar.com/images/6/6b/Damage_boost.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content24'>Nom:Pyramide purificatrice|index:24|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/e/e2/Construct_AW1_main.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Produit des unités de mêlée lourde - selon un pourcentage de la taille de vos escouades (arrondi vers le haut).|Image1Bonus1:|Image2Bonus1:|Bonus2:|Image1Bonus2:Donne des marchandises sensibles boostées de manière aléatoire lors de la collecte des orcs (en pourcentage de votre production d’orcs).|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content25'>Nom:Phare de bon entourage|index:25|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/1/11/Construct_AW2_main.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Augmente la durée du sortilège «don ensorcelé ».|Image1Bonus1:https://fr.wiki.elvenar.com/images/2/2d/Timeboost3.png|Image2Bonus1:|Bonus2:Augmente l’effet du sortilège «don ensorcelé ».|Image1Bonus2:https://fr.wiki.elvenar.com/images/3/3f/Spell_EE_icon.png|Image2Bonus2:||Bonus3:Augmente la production de mana dans les bâtiments culturels ayant reçu l’aide des voisins.|Image1Bonus3:https://fr.wiki.elvenar.com/images/5/5b/ManaBoost.png|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content26'>Nom:D111 a Voyage temporel|index:26|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/3/37/GR10_AW1_3x6.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Augmentation du bonus de production des marchandises sensibles|Image1Bonus1:https://fr.wiki.elvenar.com/images/6/63/SentientBoosted.png|Image2Bonus1:|Bonus2:Réduction du temps d'attente avant de rejouer une province de tournois|Image1Bonus2:https://fr.wiki.elvenar.com/index.php?title=Fichier:TT.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content27'>Nom:D222 z Simia Sapiens|index:27|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/a/a8/GR10_AW2_7x3.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Réduction de la perte journalière des marchandises sensibles.|Image1Bonus1:https://fr.wiki.elvenar.com/images/8/81/Sentient_decay.png|Image2Bonus1:|Bonus2:Donne un pourcentage d'unités en plus à chaque récolte de la Caserne, du Terrain d'entrainement et du Camp des mercenaires.|Image1Bonus2:https://fr.wiki.elvenar.com/images/3/3b/Barracks_boosted.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content28'>Nom:Vortex de stockage|index:28|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/0/0f/GR11_AW1_6x4.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Améliore la capacité de stockage des marchandises du campement|Image1Bonus1:https://fr.wiki.elvenar.com/images/9/94/Portal_capacity_boost.png|Image2Bonus1:|Bonus2:Augmente la production de vos trois marchandises sensibles boostées|Image1Bonus2:https://fr.wiki.elvenar.com/images/6/63/SentientBoosted.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content29'>Nom:Fontaine de jouvence thermale|index:29|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/5/54/GR11_AW2_4x5.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Augmente la population fournie par les résidences.|Image1Bonus1:https://fr.wiki.elvenar.com/images/c/cb/Population_boost.png|Image2Bonus1:|Bonus2:Confère de la culture supplémentaire pour chaque niveau de merveille antique dans votre ville.|Image1Bonus2:https://fr.wiki.elvenar.com/images/8/80/Culture_icon_elves.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content30'>Nom:Bibliotheque du donjon|index:30|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/e/e5/GR12_AW1_main.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Offre un bonus de Points de classement pour chaque Cristal du donjon de l’éternité obtenu.|Image1Bonus1:https://fr.wiki.elvenar.com/images/f/f3/Rankingpoint_big.png|Image2Bonus1:|Bonus2:Produit des Points de connaissance toutes les 24h.|Image1Bonus2:https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content31'>Nom:Arene de tournois|index:31|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/9/92/GR12_AW2_main.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Donne des Points de classement supplémentaires pour chaque Coffre de tournoi complété|Image1Bonus1:https://fr.wiki.elvenar.com/images/f/f3/Rankingpoint_big.png|Image2Bonus1:|Bonus2:Produit une certaine quantité de chevaucheurs ailés venimeux toutes les 3 heures en fonction de votre taille d'escouade.|Image1Bonus2:https://fr.wiki.elvenar.com/images/0/07/Gr11_AW2_LM.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content32'>Nom:Arche dragonique|index:32|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/0/0b/B_Ch18_AW1_1.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Rapporte une quantité de Marchandises sensibles précieuses boostées pour chaque quête d’histoire complétée|Image1Bonus1:https://fr.wiki.elvenar.com/images/f/f3/Sg3up.png|Image2Bonus1:|Bonus2:Rapporte un(des) Catalyseurs de combinaison pour chaque Coffre mystique ouvert dans l’Artisanat.|Image1Bonus2:https://fr.wiki.elvenar.com/images/6/67/Combining_Catalyst_1.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content33'>Nom:Oracle du destin|index:33|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/3/3a/B_Ch18_AW2_1.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Rapporte une quantité d’un de vos boosts de Marchandises sensibles (choix aléatoire) à chaque fois que vous récoltez une recette de l’artisanat|Image1Bonus1:https://fr.wiki.elvenar.com/images/6/63/SentientBoosted.png|Image2Bonus1:|Bonus2:Produit des Sorts de Restauration royale chaque semaine.|Image1Bonus2:https://fr.wiki.elvenar.com/images/0/00/Royal_Restoration.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content34'>Nom:Autel des champions|index:34|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/2/27/GR14_AW1_main.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Produit une quantité de Guerrier orc toutes les 3 heures (% en fonction de votre taille d'escouades)|Image1Bonus1:https://fr.wiki.elvenar.com/images/3/32/Gruff_Orc.png|Image2Bonus1:|Bonus2:Rapporte des Orcs pour chaque point de tournois obtenus à la fin du tournoi (dépend aussi de votre culture)|Image1Bonus2:https://fr.wiki.elvenar.com/images/e/e3/Orcs.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content35'>Nom:Temple des esprits|index:35|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/1/12/GR14_AW2_main.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Unurium / Coffre du donjon (en fonction de votre culture requise)|Image1Bonus1:https://fr.wiki.elvenar.com/images/b/bc/Unurium.png|Image2Bonus1:|Bonus2:Unurium / Collecte de monaie d'évènement dans la ville (en fonction de votre culture requise|Image1Bonus2:https://fr.wiki.elvenar.com/images/b/bc/Unurium.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content36'>Nom:Tour de sceau vallorien|index:36|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/d/db/GR15_AW1_main.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Donne un pourcentage d'Unurium à chaque récolte de Pièces dans les résidences. La quantité d'Unurium dépend de la quantité de Pièces récoltées.|Image1Bonus1:https://fr.wiki.elvenar.com/images/b/bc/Unurium.png|Image2Bonus1:|Bonus2:Réduit la perte journalière d'Unurium.|Image1Bonus2:https://fr.wiki.elvenar.com/images/6/6a/Unurium_decay.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content37'>Nom:Arbre d illumination|index:37|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:|Lien image:https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Produit des Ranges toutes les 3 heures (% de votre taille d'escouades).|Image1Bonus1:https://fr.wiki.elvenar.com/images/4/41/Mc_lr_units.png|Image2Bonus1:|Bonus2:Augmente le boost de production des Marchandises d'Ascension.|Image1Bonus2:https://fr.wiki.elvenar.com/images/f/ff/AscendedBoosted.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
-  <Div id='Content38'>Nom:|index:38|Image ere:https://fr.wiki.elvenar.com//images/thumb/3/3c/SRCbanner.png/80px-SRCbanner.png|Libellé ere:Sorciers et dragons|Taille:|Lien image:|Cycle de vie: |Graph cycle de vie:|Bonus1:|Image1Bonus1:|Image2Bonus1:|Bonus2:|Image1Bonus2:|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content1'>Nom:Tome des mystères |index:1|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:4x4|Lien image:https://fr.wiki.elvenar.com/images/d/d8/Tome_des_myst%C3%A8res.png|Cycle de vie: Jusqu'au chapitre 5-6|Graph cycle de vie: 100 100 100 100 100 50 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 |Bonus1: Produit un ou des point(s) de connaissance toutes les 24h|Image1Bonus1:https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png|Image2Bonus1:|Bonus2: Vous donne des matériaux pour chaque exploration lancée. La production correspond à un pourcentage du montant total de la capacité de stockage en matériaux de votre Hôtel de Ville.|Image1Bonus2:https://fr.wiki.elvenar.com/images/6/62/Supply_small.png|Image2Bonus2:||Bonus3: |Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:1|Intérêt nego nb étoiles:1|Intérêt combat auto:0|Commentaires: Utile uniquement au démarrage du jeu|Graph cycle de vie:100,100,100,100,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,|Cout et Coffre de gains:140,10,1,5,,5,,5,,,,,,,,,/198,10,1,10,,5,,5,,5,,,,,,,/250,15,1,10,1,10,,5,,5,,,,,,,/300,20,1,15,1,10,1,5,,5,,5,,,,,//390,25,2,20,1,15,1,10,,5,,5,,,,,/430,25,2,20,1,15,1,10,1,5,,5,,,,,/470,30,2,20,1,15,1,10,1,5,,5,,,,,/510,30,2,25,1,20,1,10,1,10,,5,,,,,//580,35,2,30,1,20,1,15,1,10,,5,,5,,,/610,40,2,30,1,20,1,15,1,10,,5,,5,,,/640,40,3,30,2,20,1,15,1,10,,5,,5,,,/680,45,3,30,2,25,1,15,1,10,1,5,,5,,,//740,45,3,35,2,25,1,20,1,10,1,5,,5,,,/770,50,3,35,2,25,1,20,1,10,1,5,,5,,,/790,50,3,40,2,30,1,20,1,10,1,5,,5,,,/820,50,3,40,2,30,1,20,1,10,1,5,,5,,,//870,55,3,40,2,30,2,20,1,15,1,10,,5,,,/930,55,3,45,2,30,2,20,1,15,1,10,,5,,,/930,60,3,45,2,30,2,20,1,15,1,10,,5,,,/950,60,3,45,2,35,2,25,1,15,1,10,,5,,,//1000,65,3,50,2,35,2,25,1,15,1,10,,5,,,/1020,65,3,50,2,35,2,25,1,15,1,10,,5,,,/1050,65,3,50,3,35,2,25,1,15,1,10,,5,,,/1070,65,4,50,3,35,2,25,1,15,1,10,,5,,,//2000,95,5,75,4,55,3,35,2,25,1,15,1,10,,5,/2100,95,5,75,4,55,3,35,2,25,1,15,1,10,,5,/2200,95,5,75,4,55,3,35,2,25,1,15,1,10,,5,/2300,95,5,75,4,55,3,35,2,25,1,15,1,10,,5,|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:exploration,province,matériaux,pc|SOS1:|SOS2:|</Div>
+  <Div id='Content2'>Nom:Abysse doré|index:2|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:3x3|Lien image: https://fr.wiki.elvenar.com/images/f/f8/Abysse_dor%C3%A9.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Produit des pièces toutes les 3h. La production correspond à un pourcentage du montant total de la capacité de stockage en pièces de votre hôtel de ville.|Image1Bonus1: https://fr.wiki.elvenar.com/images/a/a3/Coin_small.png|Image2Bonus1:|Bonus2: Vous procure de la population additionnelle. Cette population supplémentaire correspond à un pourcentage du montant de votre population au travail (population employée dans l'ensemble de vos bâtiments).|Image1Bonus2: https://fr.wiki.elvenar.com/images/8/8d/Populationadd.png|Image2Bonus2:||Bonus3: |Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:|Intérêt nego nb étoiles:|Intérêt combat auto:0|Commentaires:Indispensable tout au long du jeu |Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content3'>Nom:Excavation sans fin|index:3|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:5x4|Lien image:https://fr.wiki.elvenar.com/images/b/b4/Excavation_sans_fin.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Produit des matériaux supplémentaires toutes les 24h. La production correspond à un pourcentage du montant total de la capacité de stockage en matériaux de votre hôtel de ville.|Image1Bonus1:https://fr.wiki.elvenar.com/images/6/62/Supply_small.png|Image2Bonus1:|Bonus2:Vous recevez plus de reliques à la fin de chaque province complétée|Image1Bonus2:https://fr.wiki.elvenar.com/images/1/12/Extra_relic.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:2|Intérêt nego nb étoiles:2|Intérêt combat auto:|Commentaires:Un apport journalier de materiaux, utile mais non indispensable|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content4'>Nom:Aiguilles de la tempete|index:4|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:3x5|Lien image:https://fr.wiki.elvenar.com/images/4/4e/Aiguilles_de_la_temp%C3%AAte.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Renforce vos unités de portée légères|Image1Bonus1:https://fr.wiki.elvenar.com/images/6/6b/Damage_boost.png|Image2Bonus1:|Bonus2:Accélère la vitesse d’entrainement de votre caserne|Image1Bonus2:https://fr.wiki.elvenar.com/images/1/1d/Time_small.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:5|Intérêt nego nb étoiles:0|Intérêt combat auto:0|Commentaires:Indispensable pour tous les combattants|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content5'>Nom:Monastere martial|index:5|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:5x5|Lien image:https://fr.wiki.elvenar.com/images/thumb/8/8e/48_GreatBuild_Inner_Elves_01_cropped.png/800px-48_GreatBuild_Inner_Elves_01_cropped.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Améliore les points de vie des troupes|Image1Bonus1:https://fr.wiki.elvenar.com/images/4/4a/Aw_hitpoints.png|Image2Bonus1:|Bonus2:Ajoute de la culture supplémentaire (un pourcentage de culture supplémentaire est ajouté, en fonction de la culture nécessaire pour votre cité).|Image1Bonus2:https://fr.wiki.elvenar.com/images/8/80/Culture_icon_elves.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:5|Intérêt nego nb étoiles:0|Intérêt combat auto:0|Commentaires:Très bonne merveille pour la culture et indispensable pour les combats|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content6'>Nom:Le sanctuaire|index:6|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:5x5|Lien image:https://fr.wiki.elvenar.com/images/thumb/7/75/48_GreatBuild_Inner_Elves_02_cropped.png/800px-48_GreatBuild_Inner_Elves_02_cropped.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Améliore les points de vie des troupes|Image1Bonus1:https://fr.wiki.elvenar.com/images/4/4a/Aw_hitpoints.png|Image2Bonus1:|Bonus2:Ajoute de la culture supplémentaire (un pourcentage de culture supplémentaire est ajouté, en fonction de la culture nécessaire pour votre cité).|Image1Bonus2:https://fr.wiki.elvenar.com/images/8/80/Culture_icon_elves.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:5|Intérêt nego nb étoiles:0|Intérêt combat auto:0|Commentaires:Très bonne merveille pour la culture et indispensable pour les combats|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content7'>Nom:Tour du clocher|index:7|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:4x6|Lien image:https://fr.wiki.elvenar.com/images/thumb/8/81/47_Greatbuilding_Elves_Crystaltree_01_cropped.png/700px-47_Greatbuilding_Elves_Crystaltree_01_cropped.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Confère une certaine quantité de marchandises boostées, de façon aléatoire, dépendant du nombre de provinces complétées lorsque vous ouvrez un coffre lors de l'aide entre voisins.|Image1Bonus1:https://fr.wiki.elvenar.com/images/f/f1/NHreward.png|Image2Bonus1:|Bonus2:Allonge la durée d’aide sur vos bâtiments de culture.|Image1Bonus2:https://fr.wiki.elvenar.com/images/9/93/NHlongrime.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:0|Intérêt nego nb étoiles:1|Intérêt combat auto:0|Commentaires:Axée sur l'aide entre voisins et apport en marchandises, ces bonus ne compensent pas sa grande taille|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content8'>Nom:Phare de cristal|index:8|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:6x4|Lien image:https://fr.wiki.elvenar.com/images/thumb/b/be/47_Greatbuilding_Elves_Innercity_Crystaltree_06_cropped.png/695px-47_Greatbuilding_Elves_Innercity_Crystaltree_06_cropped.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Confère une certaine quantité de marchandises boostées, de façon aléatoire, dépendant du nombre de provinces complétées lorsque vous ouvrez un coffre lors de l'aide entre voisins.|Image1Bonus1:https://fr.wiki.elvenar.com/images/f/f1/NHreward.png|Image2Bonus1:|Bonus2:Allonge la durée d’aide sur vos bâtiments de culture.|Image1Bonus2:https://fr.wiki.elvenar.com/images/9/93/NHlongrime.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:0|Intérêt nego nb étoiles:1|Intérêt combat auto:0|Commentaires:Axée sur l'aide entre voisins et apport en marchandises, ces bonus ne compensent pas sa grande taille|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content9'>Nom:Trones des hauts hommes|index:9|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:4x6|Lien image:https://fr.wiki.elvenar.com/images/9/96/Tr%C3%B4ne_des_Hauts_Hommes.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Vous donne des points de classement supplémentaire pour chaque merveille construite ou améliorée.|Image1Bonus1:https://fr.wiki.elvenar.com/images/f/f3/Rankingpoint_big.png|Image2Bonus1:|Bonus2:Ajoute de la culture supplémentaire. autant de culture supplémentaire que de points de classement bonus.|Image1Bonus2:https://fr.wiki.elvenar.com/images/8/80/Culture_icon_elves.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:2|Intérêt nego nb étoiles:0|Intérêt combat auto:0|Commentaires:Non indispensable sauf pour les joueurs jouant le classement général|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content10'>Nom:Rempart nain|index:10|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:7x4|Lien image:https://fr.wiki.elvenar.com/images/thumb/1/1f/D_greatbuilding_dwarves_military_02_cropped.png/681px-D_greatbuilding_dwarves_military_02_cropped.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Produit des unites du premier type toutes les 3h|Image1Bonus1:https://fr.wiki.elvenar.com/images/5/53/Extratroop.png|Image2Bonus1:|Bonus2:Améliore la taille des escouades entrainables dans la caserne.|Image1Bonus2:https://fr.wiki.elvenar.com/images/c/c8/Add_training_cluster_size.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:5|Intérêt nego nb étoiles:0|Intérêt combat auto:0|Commentaires:Remplace vos armureries, utile pour le gain de place et de population|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content11'>Nom:Coeur de la montagne|index:11|Image ere:https://fr.wiki.elvenar.com/images/9/94/Dwarvesbannerteck.png|Libellé ere:Les nains|Taille:3x8|Lien image:https://fr.wiki.elvenar.com/images/1/1d/D_greatbuilding_dwarves_goods_01_cropped.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Améliore le boost de production de vos manufactures boostées|Image1Bonus1:https://fr.wiki.elvenar.com/images/9/92/AWGoodboost.png|Image2Bonus1:|Bonus2:Ajoute de la population disponible à votre ville. |Image1Bonus2:https://fr.wiki.elvenar.com/images/8/8d/Populationadd.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:5|Intérêt nego nb étoiles:5|Intérêt combat auto:0|Commentaires:Indispensable pour tous combattant ou négocieur|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content12'>Nom:Tours de la prosperite|index:12|Image ere:https://fr.wiki.elvenar.com//images/a/a6/Fairiesbannerteck.png|Libellé ere:Les fées|Taille:5x4|Lien image:https://fr.wiki.elvenar.com/images/6/66/F_AncientWonder_Supplies_Inner_L2_cropped.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Augmente la durée du sortilège "puissance des matériaux"|Image1Bonus1:https://fr.wiki.elvenar.com/images/2/2d/Timeboost3.png|Image2Bonus1:|Bonus2:Améliore l'effet du sortilège “puissance des matériaux”|Image1Bonus2:https://fr.wiki.elvenar.com/images/5/5a/Spell_supply_production_boost_1_bonus.png|Image2Bonus2:||Bonus3:Produit des matériaux supplémentaires collectables toutes les 3 heures.|Image1Bonus3:https://fr.wiki.elvenar.com/images/6/62/Supply_small.png|Image2Bonus3:|Intérêt combat nb étoiles:5|Intérêt nego nb étoiles:5|Intérêt combat auto:0|Commentaires:Indispensable pour ne plus manquer de matériaux|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content13'>Nom:Guilde du marchand prospere|index:13|Image ere:https://fr.wiki.elvenar.com//images/a/a6/Fairiesbannerteck.png|Libellé ere:Les fées|Taille:3x7|Lien image:https://fr.wiki.elvenar.com/images/9/9c/F_AncientWonder_Trader_InnerCity_L2_cropped.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Réduction de la commission du marchand sur les offres des joueurs non découverts.|Image1Bonus1:https://fr.wiki.elvenar.com/images/6/64/Trader_fee_reduced.png|Image2Bonus1:|Bonus2:Améliore la quantité de marchandises offertes par le grossiste.|Image1Bonus2:https://fr.wiki.elvenar.com/images/7/70/Trader_small.png|Image2Bonus2:||Bonus3:Améliore le boost de production de chaque portail des races invitées construit dans votre ville.|Image1Bonus3:https://fr.wiki.elvenar.com/images/3/3f/Portal_production.png|Image2Bonus3:|Intérêt combat nb étoiles:0|Intérêt nego nb étoiles:5|Intérêt combat auto:0|Commentaires:Indispensable pour les négociateurs et pour la production de vos campements|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content14'>Nom:Forge des heros|index:14|Image ere:https://fr.wiki.elvenar.com//images/5/5d/Orcs%26Goblinsbannerteck.png|Libellé ere:Les orcs et gobelins|Taille:5x5|Lien image:https://fr.wiki.elvenar.com/images/f/f0/B_Orcs_AW2_1_0003.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Vous donne des orcs toutes les 24h|Image1Bonus1:https://fr.wiki.elvenar.com/images/e/e3/Orcs.png|Image2Bonus1:|Bonus2:Améliore la force de vos unites de mêlée lourde|Image1Bonus2:https://fr.wiki.elvenar.com/images/6/6b/Damage_boost.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:2|Intérêt nego nb étoiles:0|Intérêt combat auto:0|Commentaires:Faible apport en orc, utile pour l'attaque sur les unités de mêlée lourde|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content15'>Nom:Ambassade d enar|index:15|Image ere:https://fr.wiki.elvenar.com//images/thumb/e/e8/TTFlags.png/75px-TTFlags.png|Libellé ere:Les elfes sylvains|Taille:4x7|Lien image:https://fr.wiki.elvenar.com/images/9/9a/B_Woodelves_AW1.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Produit lentement des éclats de runes pour les merveilles.|Image1Bonus1:https://fr.wiki.elvenar.com/images/8/87/Brokenshard.png|Image2Bonus1:|Bonus2:Génère du mana dès que vous lancez une exploration.|Image1Bonus2:https://fr.wiki.elvenar.com/images/e/ed/Mana.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:1|Intérêt nego nb étoiles:1|Intérêt combat auto:0|Commentaires:Peu utile et taille imposante|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content16'>Nom:Sanctuaire des champignons astucieux|index:16|Image ere:https://fr.wiki.elvenar.com//images/5/5d/Orcs%26Goblinsbannerteck.png|Libellé ere:Les orcs et gobelins|Taille:5x4|Lien image:https://fr.wiki.elvenar.com/images/f/f0/B_Orcs_AW2_1_0003.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Produit des unites du 2nd type (archer/arbalétrier) toutes les 3h|Image1Bonus1:https://fr.wiki.elvenar.com/images/3/3b/Extratroop2.png|Image2Bonus1:|Bonus2:Chaque niveau d’armurerie possédé vous confère un bonus supplémentaire pour la taille de l’escouade entraînée|Image1Bonus2:https://fr.wiki.elvenar.com/images/c/c8/Add_training_cluster_size.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:5|Intérêt nego nb étoiles:0|Intérêt combat auto:0|Commentaires:Remplace vos armureries, utile pour le gain de place et de population|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content17'>Nom:Academie volante|index:17|Image ere:https://fr.wiki.elvenar.com//images/thumb/e/e8/TTFlags.png/75px-TTFlags.png|Libellé ere:Les elfes sylvains|Taille:4x4|Lien image:https://fr.wiki.elvenar.com/images/8/89/B_Woodelves_AW2.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Produit des unités de votre 3ième type toutes les 3 heures.|Image1Bonus1:https://fr.wiki.elvenar.com/images/3/38/Priesthead.png|Image2Bonus1:https://fr.wiki.elvenar.com/images/9/96/Sorceresshead.png, Augmente la vitesse d'entrainement du camp de mercenaires|Bonus2:https://fr.wiki.elvenar.com/images/1/1d/Time_small.png|Image1Bonus2:|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:5|Intérêt nego nb étoiles:0|Intérêt combat auto:0|Commentaires:Très utile pour la production des unités du camp des mercenaires|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content18'>Nom:Labyrinthe de la matiere noire|index:18|Image ere:https://fr.wiki.elvenar.com//images/thumb/3/3c/SRCbanner.png/80px-SRCbanner.png|Libellé ere:Sorciers et dragons|Taille:5x6|Lien image:https://fr.wiki.elvenar.com/images/6/61/B_gr5_aw1.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Produit du Mana toutes les 3 heures|Image1Bonus1:https://fr.wiki.elvenar.com/images/e/ed/Mana.png|Image2Bonus1:|Bonus2:Réduit la perte de Mana.|Image1Bonus2:https://fr.wiki.elvenar.com/images/7/79/ManaDecay.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:0|Intérêt nego nb étoiles:3|Intérêt combat auto:0|Commentaires:Utile pour un maintenir un bon apport en mana|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content19'>Nom:Abbaye du dragon|index:19|Image ere:https://fr.wiki.elvenar.com//images/thumb/3/3c/SRCbanner.png/80px-SRCbanner.png|Libellé ere:Sorciers et dragons|Taille:4x5|Lien image:https://fr.wiki.elvenar.com/images/7/7a/B_gr5_aw2.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Augmente la puissance des unités magiques|Image1Bonus1:https://fr.wiki.elvenar.com/images/6/6b/Damage_boost.png|Image2Bonus1:|Bonus2:Mana par sort utilisé|Image1Bonus2:https://fr.wiki.elvenar.com/images/e/ed/Mana.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:5|Intérêt nego nb étoiles:4|Intérêt combat auto:0|Commentaires:Indispensable pour le mana et le combat contre les mages|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content20'>Nom:Temple des crapauds|index:20|Image ere:https://fr.wiki.elvenar.com//images/7/78/G6flag.png|Libellé ere:Halfelins|Taille:6x3|Lien image:https://fr.wiki.elvenar.com/images/3/37/0009_B_Gr6_AW1_1.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Produit des unités de portée lourdes toutes les 3 heures - selon un pourcentage de la taille de vos escouades (arrondi vers le haut)|Image1Bonus1:https://fr.wiki.elvenar.com/images/9/96/Radmortarhead.png|Image2Bonus1:https://fr.wiki.elvenar.com/images/3/38/Granitgolemhead.png|Bonus2:|Image1Bonus2:Améliore la force de vos unités de portée lourde|Image2Bonus2:https://fr.wiki.elvenar.com/images/6/6b/Damage_boost.png||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:4|Intérêt nego nb étoiles:0|Intérêt combat auto:0|Commentaires:Très utile pour le combat face aux portées lourdes|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content21'>Nom:Centre d echange d Elvenar|index:21|Image ere:https://fr.wiki.elvenar.com//images/7/78/G6flag.png|Libellé ere:Halfelins|Taille:5x5|Lien image:https://fr.wiki.elvenar.com/images/d/de/0008_B_Gr6_AW2_1.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Produit des graines divines toutes les 12 heures, basé sur le niveau de votre hôtel de ville.|Image1Bonus1:https://fr.wiki.elvenar.com/images/c/c6/Seed_icon.png|Image2Bonus1:|Bonus2:Augmente la durée du sortilège "Manufacture enchantée".|Image1Bonus2:https://fr.wiki.elvenar.com/images/2/2d/Timeboost3.png|Image2Bonus2:||Bonus3:Augmente la puissance du sortilège "Manufacture enchantée".|Image1Bonus3:https://fr.wiki.elvenar.com/images/1/11/Spell2boost3.png|Image2Bonus3:|Intérêt combat nb étoiles:0|Intérêt nego nb étoiles:4|Intérêt combat auto:0|Commentaires:Très utile pour la négo en boostant vos manufactures|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content22'>Nom:Tours du crepuscule|index:22|Image ere:https://fr.wiki.elvenar.com//images/9/97/Gr7flag.png|Libellé ere:Élémentaires|Taille:7x3|Lien image:https://fr.wiki.elvenar.com/images/thumb/6/6d/B_Gr7_AW1_1_0009.png/714px-B_Gr7_AW1_1_0009.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Dans les coffres lors de l'aide entre voisins, vous obtenez des graines divines supplémentaires correspondant au bonus multiplié par le niveau de votre hôtel de ville.|Image1Bonus1:https://fr.wiki.elvenar.com/images/c/c6/Seed_icon.png|Image2Bonus1:|Bonus2:Réduit la perte de graines divines|Image1Bonus2:https://fr.wiki.elvenar.com/images/9/9b/SeedDecay.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:0|Intérêt nego nb étoiles:3|Intérêt combat auto:0|Commentaires:Utile pour un maintenir un bon apport en graines|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content23'>Nom:Fontaines triomphantes|index:23|Image ere:https://fr.wiki.elvenar.com//images/9/97/Gr7flag.png|Libellé ere:Élémentaires|Taille:6x4|Lien image:https://fr.wiki.elvenar.com/images/7/7f/B_Gr7_AW2_1_0010.png";|Cycle de vie: |Graph cycle de vie:|Bonus1: Améliore la vitesse de formation de votre terrain d'entraînement|Image1Bonus1:https://fr.wiki.elvenar.com/images/2/2d/Timeboost3.png|Image2Bonus1:|Bonus2:Dégâts des unités de mêlée légère augmentés|Image1Bonus2:https://fr.wiki.elvenar.com/images/6/6b/Damage_boost.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:5|Intérêt nego nb étoiles:0|Intérêt combat auto:0|Commentaires:Indispensable pour les combattants |Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content24'>Nom:Pyramide purificatrice|index:24|Image ere:https://fr.wiki.elvenar.com//images/4/43/Gr8flag.png|Libellé ere:Amuni|Taille:4x6|Lien image:https://fr.wiki.elvenar.com/images/e/e2/Construct_AW1_main.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Produit des unités de mêlée lourde - selon un pourcentage de la taille de vos escouades (arrondi vers le haut).|Image1Bonus1:|Image2Bonus1:|Bonus2:|Image1Bonus2:Donne des marchandises sensibles boostées de manière aléatoire lors de la collecte des orcs (en pourcentage de votre production d’orcs).|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:4|Intérêt nego nb étoiles:4|Intérêt combat auto:0|Commentaires:Utile pour les combattants et les négociateurs|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content25'>Nom:Phare de bon entourage|index:25|Image ere:https://fr.wiki.elvenar.com//images/4/43/Gr8flag.png|Libellé ere:Amuni|Taille:8x3|Lien image:https://fr.wiki.elvenar.com/images/1/11/Construct_AW2_main.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Augmente la durée du sortilège «don ensorcelé ».|Image1Bonus1:https://fr.wiki.elvenar.com/images/2/2d/Timeboost3.png|Image2Bonus1:|Bonus2:Augmente l’effet du sortilège «don ensorcelé ».|Image1Bonus2:https://fr.wiki.elvenar.com/images/3/3f/Spell_EE_icon.png|Image2Bonus2:||Bonus3:Augmente la production de mana dans les bâtiments culturels ayant reçu l’aide des voisins.|Image1Bonus3:https://fr.wiki.elvenar.com/images/5/5b/ManaBoost.png|Image2Bonus3:|Intérêt combat nb étoiles:1|Intérêt nego nb étoiles:4|Intérêt combat auto:0|Commentaires:Utile pour booster la production de mana et de matériaux|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content26'>Nom:D111 a Voyage temporel|index:26|Image ere:https://fr.wiki.elvenar.com//images/thumb/5/59/Gr9flag.png/90px-Gr9flag.png|Libellé ere:Créateurs|Taille:3x6|Lien image:https://fr.wiki.elvenar.com/images/3/37/GR10_AW1_3x6.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Augmentation du bonus de production des marchandises sensibles|Image1Bonus1:https://fr.wiki.elvenar.com/images/6/63/SentientBoosted.png|Image2Bonus1:|Bonus2:Réduction du temps d'attente avant de rejouer une province de tournois|Image1Bonus2:https://fr.wiki.elvenar.com/index.php?title=Fichier:TT.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:0|Intérêt nego nb étoiles:3|Intérêt combat auto:0|Commentaires:Indispensable pour les tournoyeurs, économise la nourriture pour familier|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content27'>Nom:D222 z Simia Sapiens|index:27|Image ere:https://fr.wiki.elvenar.com//images/thumb/5/59/Gr9flag.png/90px-Gr9flag.png|Libellé ere:Créateurs|Taille:6x5|Lien image:https://fr.wiki.elvenar.com/images/a/a8/GR10_AW2_7x3.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Réduction de la perte journalière des marchandises sensibles.|Image1Bonus1:https://fr.wiki.elvenar.com/images/8/81/Sentient_decay.png|Image2Bonus1:|Bonus2:Donne un pourcentage d'unités en plus à chaque récolte de la Caserne, du Terrain d'entrainement et du Camp des mercenaires.|Image1Bonus2:https://fr.wiki.elvenar.com/images/3/3b/Barracks_boosted.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:5|Intérêt nego nb étoiles:3|Intérêt combat auto:0|Commentaires:Indispensable pour augementer votre production d'unités dans vos 3 casernes|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content28'>Nom:Vortex de stockage|index:28|Image ere:https://fr.wiki.elvenar.com//images/thumb/1/17/Gr10flag.png/90px-Gr10flag.png|Libellé ere:Les Elvenar|Taille:3x6|Lien image:https://fr.wiki.elvenar.com/images/0/0f/GR11_AW1_6x4.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Améliore la capacité de stockage des marchandises du campement|Image1Bonus1:https://fr.wiki.elvenar.com/images/9/94/Portal_capacity_boost.png|Image2Bonus1:|Bonus2:Augmente la production de vos trois marchandises sensibles boostées|Image1Bonus2:https://fr.wiki.elvenar.com/images/6/63/SentientBoosted.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:0|Intérêt nego nb étoiles:3|Intérêt combat auto:0|Commentaires:Utile pour aider vos campements dans les derniers chapitres |Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content29'>Nom:Fontaine de jouvence thermale|index:29|Image ere:https://fr.wiki.elvenar.com//images/thumb/1/17/Gr10flag.png/90px-Gr10flag.png|Libellé ere:Les Elvenar|Taille:7x3|Lien image:https://fr.wiki.elvenar.com/images/5/54/GR11_AW2_4x5.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Augmente la population fournie par les résidences.|Image1Bonus1:https://fr.wiki.elvenar.com/images/c/cb/Population_boost.png|Image2Bonus1:|Bonus2:Confère de la culture supplémentaire pour chaque niveau de merveille antique dans votre ville.|Image1Bonus2:https://fr.wiki.elvenar.com/images/8/80/Culture_icon_elves.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:2|Intérêt nego nb étoiles:2|Intérêt combat auto:0|Commentaires:Indispensable pour augmenter votre population si vous possédez de résidences magiques|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content30'>Nom:Bibliotheque du donjon|index:30|Image ere:https://fr.wiki.elvenar.com//images/thumb/b/bb/Gr11flag.png/90px-Gr11flag.png|Libellé ere:Ambassades|Taille:4x6|Lien image:https://fr.wiki.elvenar.com/images/e/e5/GR12_AW1_main.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Offre un bonus de Points de classement pour chaque Cristal du donjon de l’éternité obtenu.|Image1Bonus1:https://fr.wiki.elvenar.com/images/f/f3/Rankingpoint_big.png|Image2Bonus1:|Bonus2:Produit des Points de connaissance toutes les 24h.|Image1Bonus2:https://fr.wiki.elvenar.com/images/b/ba/Kpicon.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:0|Intérêt nego nb étoiles:0|Intérêt combat auto:0|Commentaires:Peu utile sauf vous jouez le classement général|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content31'>Nom:Arene de tournois|index:31|Image ere:https://fr.wiki.elvenar.com//images/thumb/b/bb/Gr11flag.png/90px-Gr11flag.png|Libellé ere:Ambassades|Taille:4x5|Lien image:https://fr.wiki.elvenar.com/images/9/92/GR12_AW2_main.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Donne des Points de classement supplémentaires pour chaque Coffre de tournoi complété|Image1Bonus1:https://fr.wiki.elvenar.com/images/f/f3/Rankingpoint_big.png|Image2Bonus1:|Bonus2:Produit une certaine quantité de chevaucheurs ailés venimeux toutes les 3 heures en fonction de votre taille d'escouade.|Image1Bonus2:https://fr.wiki.elvenar.com/images/0/07/Gr11_AW2_LM.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:0|Intérêt nego nb étoiles:0|Intérêt combat auto:0|Commentaires:Peu utile sauf vous jouez le classement général|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content32'>Nom:Arche dragonique|index:32|Image ere:https://fr.wiki.elvenar.com//images/thumb/1/14/Gr12flag.png/90px-Gr12flag.png|Libellé ere:Marchands d'Unur|Taille:5x4|Lien image:https://fr.wiki.elvenar.com/images/0/0b/B_Ch18_AW1_1.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Rapporte une quantité de Marchandises sensibles précieuses boostées pour chaque quête d’histoire complétée|Image1Bonus1:https://fr.wiki.elvenar.com/images/f/f3/Sg3up.png|Image2Bonus1:|Bonus2:Rapporte un(des) Catalyseurs de combinaison pour chaque Coffre mystique ouvert dans l’Artisanat.|Image1Bonus2:https://fr.wiki.elvenar.com/images/6/67/Combining_Catalyst_1.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:1|Intérêt nego nb étoiles:3|Intérêt combat auto:0|Commentaires:Moyennement utile si vous possédez le batiment panda roux (visions vaporeuses en +)|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content33'>Nom:Oracle du destin|index:33|Image ere:https://fr.wiki.elvenar.com//images/thumb/1/14/Gr12flag.png/90px-Gr12flag.png|Libellé ere:Marchands d'Unur|Taille:5x5|Lien image:https://fr.wiki.elvenar.com/images/3/3a/B_Ch18_AW2_1.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Rapporte une quantité d’un de vos boosts de Marchandises sensibles (choix aléatoire) à chaque fois que vous récoltez une recette de l’artisanat|Image1Bonus1:https://fr.wiki.elvenar.com/images/6/63/SentientBoosted.png|Image2Bonus1:|Bonus2:Produit des Sorts de Restauration royale chaque semaine.|Image1Bonus2:https://fr.wiki.elvenar.com/images/0/00/Royal_Restoration.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:0|Intérêt nego nb étoiles:3|Intérêt combat auto:0|Commentaires:Utile si vous possédez des batiments évolutifs|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content34'>Nom:Autel des champions|index:34|Image ere:https://fr.wiki.elvenar.com//images/thumb/2/2a/Gr13flag.png/90px-Gr13flag.png|Libellé ere:Esprit d'Equipe|Taille:3x4|Lien image:https://fr.wiki.elvenar.com/images/2/27/GR14_AW1_main.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Produit une quantité de Guerrier orc toutes les 3 heures (% en fonction de votre taille d'escouades)|Image1Bonus1:https://fr.wiki.elvenar.com/images/3/32/Gruff_Orc.png|Image2Bonus1:|Bonus2:Rapporte des Orcs pour chaque point de tournois obtenus à la fin du tournoi (dépend aussi de votre culture)|Image1Bonus2:https://fr.wiki.elvenar.com/images/e/e3/Orcs.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:4|Intérêt nego nb étoiles:4|Intérêt combat auto:0|Commentaires:Très utile chez les tournoyeurs pour un bon apport en orc |Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content35'>Nom:Temple des esprits|index:35|Image ere:https://fr.wiki.elvenar.com//images/thumb/2/2a/Gr13flag.png/90px-Gr13flag.png|Libellé ere:Esprit d'Equipe|Taille:7x4|Lien image:https://fr.wiki.elvenar.com/images/1/12/GR14_AW2_main.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Unurium / Coffre du donjon (en fonction de votre culture requise)|Image1Bonus1:https://fr.wiki.elvenar.com/images/b/bc/Unurium.png|Image2Bonus1:|Bonus2:Unurium / Collecte de monaie d'évènement dans la ville (en fonction de votre culture requise|Image1Bonus2:https://fr.wiki.elvenar.com/images/b/bc/Unurium.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:0|Intérêt nego nb étoiles:4|Intérêt combat auto:0|Commentaires:Très utile pour un bon apport en unurium|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content36'>Nom:Tour de sceau vallorien|index:36|Image ere:https://fr.wiki.elvenar.com//images/e/e1/Gr14flag.png|Libellé ere:La Revanche de l'Exilé|Taille:5x6|Lien image:https://fr.wiki.elvenar.com/images/d/db/GR15_AW1_main.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Donne un pourcentage d'Unurium à chaque récolte de Pièces dans les résidences. La quantité d'Unurium dépend de la quantité de Pièces récoltées.|Image1Bonus1:https://fr.wiki.elvenar.com/images/b/bc/Unurium.png|Image2Bonus1:|Bonus2:Réduit la perte journalière d'Unurium.|Image1Bonus2:https://fr.wiki.elvenar.com/images/6/6a/Unurium_decay.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:0|Intérêt nego nb étoiles:3|Intérêt combat auto:0|Commentaires:Utile pour un bon apport en unurium si vous possédez beaucoup de résidences|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content37'>Nom:Arbre d illumination|index:37|Image ere:https://fr.wiki.elvenar.com//images/e/e1/Gr14flag.png|Libellé ere:La Revanche de l'Exilé|Taille:4x3|Lien image:https://fr.wiki.elvenar.com/images/3/30/GR15_AW2_main.png|Cycle de vie: |Graph cycle de vie:|Bonus1: Produit des Rangers toutes les 3 heures (% de votre taille d'escouades).|Image1Bonus1:https://fr.wiki.elvenar.com/images/4/41/Mc_lr_units.png|Image2Bonus1:|Bonus2:Augmente le boost de production des Marchandises d'Ascension.|Image1Bonus2:https://fr.wiki.elvenar.com/images/f/ff/AscendedBoosted.png|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:2|Intérêt nego nb étoiles:1|Intérêt combat auto:0|Commentaires:Utile pour les combattants et moyennement utile pour les marchandises d'ascension|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+  <Div id='Content38'>Nom:Tour de Guet|index:38|Image ere:https://fr.wiki.elvenar.com//images/thumb/9/94/Gr15flag.png/80px-Gr15flag.png|Libellé ere:Le Pouvoir de la Musique|Taille:4x7|Lien image:|Cycle de vie: |Graph cycle de vie:|Bonus1:|Image1Bonus1:|Image2Bonus1:|Bonus2:|Image1Bonus2:|Image2Bonus2:||Bonus3:|Image1Bonus3:|Image2Bonus3:|Intérêt combat nb étoiles:3|Intérêt nego nb étoiles:1|Intérêt combat auto:0|Commentaires:|Graph cycle de vie:|Cout et Coffre de gains:|Cout de la merveille ressource1:|Cout de la merveille ressource2:|Cout de la merveille ressource3:|Cout de la merveille ressource4:|Mots clef:|SOS1:|SOS2:|</Div>
+
 
 </div>
 </body>
