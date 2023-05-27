@@ -240,12 +240,18 @@ function JouerSon(Num) {
    Res2 = Trouver("Image1Bonus2:")
    document.getElementById("Benef2").innerHTML =  "<img style='width:20px;'  src='" + Res2 +"'>" + Res1
   }
+  else {
+    document.getElementById("Benef2").innerHTML =  ""
+  }
+
   Res1 = Trouver("Bonus3:")
   if (Res1.length>5) {
     Res2 = Trouver("Image1Bonus3:")
     document.getElementById("Benef3").innerHTML =  "<img style='width:20px;'  src='" + Res2 +"'>" + Res1
   }
-
+  else {
+    document.getElementById("Benef3").innerHTML =  ""
+  }
   Res = Trouver("Intérêt combat nb étoiles:")
 
     if (Res.indexOf("/", 1)>0) {
@@ -331,7 +337,7 @@ var e = document.getElementById("ListeDeux");
 var Num2 = e.options[e.selectedIndex].text;
 data = Res.split('/');
 
-document.getElementById("ZoneTest").innerHTML=Res;
+
 
 
 tempo = data [Num2-2]
@@ -356,7 +362,7 @@ datatempo = tempo.split(',');
    document.getElementById("Ru8").innerHTML=datatempo [16];
 document.getElementById("Intitule").innerHTML ="Coffres disponibles pour passer du niveau " + (Num2-1)+ " à " + Num2
 
-
+//document.getElementById("ZoneTest").innerHTML=Res;
 
 
 
