@@ -1,0 +1,247 @@
+
+
+<html>
+<head>
+
+
+<link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Metamorphous&family=Rubik+Beastly&display=swap" rel="stylesheet">
+<script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+<script >
+// const items = document.querySelectorAll(".accordion a");
+function Debut() {
+alert("Ok")
+
+}
+function toggleAccordion(Num){
+  //alert(Num)
+  document.getElementById("Content" + Num).classList.toggle("active");
+  // this.classList.toggle('active');
+  // this.nextElementSibling.classList.toggle('active');
+}
+
+// items.forEach(item => item.addEventListener('click', toggleAccordion));
+</script>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400');
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Hind', sans-serif;
+  color: black;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+}
+.container {
+  margin: 0 auto;
+  padding: 1rem;
+  width: 48rem;
+}
+h3 {
+  font-size: 1.75rem;
+  color: white;
+  padding: 1.3rem;
+  margin: 0;
+}
+.accordion a {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 2rem 1rem 1rem;
+  color: white;
+  background-color: #506E62;
+  font-family: 'Metamorphous', cursive;
+  font-size: 1.15rem;
+  font-weight: 600;
+  border: 1px solid black;
+}
+.accordion a:hover,
+.accordion a:hover::after {
+  cursor: pointer;
+  color: #ff5353;
+}
+.accordion a:hover::after {
+  border: 1px solid #ff5353;
+}
+.accordion a.active {
+  color: #ff5353;
+  border-bottom: 1px solid #ff5353;
+}
+.accordion a::after {
+  font-family: 'Ionicons';
+  content: '\f218';
+  position: absolute;
+  float: right;
+  right: 1rem;
+  font-size: 1rem;
+  color: white;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid #7288a2;
+  text-align: center;
+}
+.accordion a.active::after {
+  font-family: 'Ionicons';
+  content: '\f209';
+  color: #ff5353;
+  border: 1px solid #ff5353;
+}
+.accordion .content {
+  opacity: 0;
+  padding: 0 1rem;
+  max-height: 0;
+  border: 1px solid black;
+  overflow: hidden;
+  clear: both;
+  -webkit-transition: all 0.2s ease 0.15s;
+  -o-transition: all 0.2s ease 0.15s;
+  transition: all 0.2s ease 0.15s;
+}
+.accordion .content p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.accordion .content.active {
+  opacity: 1;
+  padding: 0rem;
+  max-height: 100%;
+  -webkit-transition: all 0.35s ease 0.15s;
+  -o-transition: all 0.35s ease 0.15s;
+  transition: all 0.35s ease 0.15s;
+}
+</style>
+
+
+
+</head>
+
+
+<body>
+<div class="container">
+
+
+  <div class="accordion">
+    <div class="accordion-item" onclick="toggleAccordion(1)">
+      <a>Quel est le système de remplissage des merveilles?</a>
+      <div class="content" id="Content1">
+        <p>Un système de remplissage individuel avec une annonce de fin de merveilles par mp, où chacun pose en pc le montant des coffres (sans les runes).<br>Un système de remplissage collectif via des csf.</p>
+      </div>
+    </div>
+    <div class="accordion-item" onclick="toggleAccordion(2)">
+      <a>Comment fait-on des échanges de runes?</a>
+      <div class="content" id="Content2">
+        <p>Faire un mp général en indiquant votre demande en runes pour une ou plusieurs merveilles et votre proposition de runes à donner en échange.<br>Les membres intéressés vous répondront et l’échange doit être équitable sauf si accord entre les membres. Ne pas posez de runes pour vous en débarrasser sans l’accord préalable du membre pour éviter tout blocage.</p>
+      </div>
+    </div>
+    <div class="accordion-item" onclick="toggleAccordion(3)">
+      <a>Quelles sont les merveilles indispensables à posséder?</a>
+      <div class="content" id="Content3">
+        <p>>Voir le menu Merveilles.</p>
+      </div>
+    </div>
+    <div class="accordion-item" onclick="toggleAccordion(4)">
+      <a>Cooment être sûr qu'un membre est connecté?</a>
+      <div class="content" id="Content4">
+        <p>Taper  /who  dans le tchat puis valider.</p>
+      </div>
+    </div>
+    <div class="accordion-item" onclick="toggleAccordion(5)">
+      <a>How To Create a Light FAQ Element?</a>
+      <div class="content" id="Content5">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+<!-- merveilles,csf
+
+""
+merveilles,runes
+
+"Abysse (pop et or)
+Aiguilles (combat et caserne)
+Monastère/sanctuaire (combat et culture)
+Tour de guet (culture)
+Cœur de la Montagne (Marchandises classiques et pop)
+Tour de la prospérité (Matériaux)
+Marchand (grossiste et campement)
+Académie (combat et camp)
+Labyrinthe (Mana) (incontournable à partir du chapitre 16/17 ??)
+Abbaye du dragon (combat et Mana)
+Fontaines triomphantes (combat et terrain)
+D111 (marchandises sensibles et réduction temps tournoi)
+D222 (marchandises sensibles et combat)
+Fontaines de jouvence (pop et culture) (intéressant si résidences magiques)
+Autel des champions (orc et combat)
+Temple des esprits (unurium)
+Tour de sceau vallorien (unurium)
+ 
+Fortement conseillées :
+Champignons (combat)
+Crapaud (combat)
+CEE (graines et toutes marchandises)
+Tour crépuscule (graines) (incontournable à partir du chapitre 14/15 ??)
+Arbre illumination (marchandises ascension et combat)
+Lieu de repos (marchandises ascension et combat)
+ 
+Utile mais non indispensable :
+Pyramide purificatrice
+Taverne des éclaireurs (exploration provinces et coffres voisins)
+ 
+Utile au debut mais peut être supprimé ensuite pour récupérer de la place :
+Tome des mystères
+Phare de crystal/tour du clocher
+Rempart nain"
+merveilles
+Quels sont les bâtiments évolutifs à avoir ?
+"Phénix de feu : l’incontournable - Le bât ultra prioritaire niveau 10 à avoir !
+D’autres bâtiments évolutifs sont très utiles comme l’ours brun et l’ours polaire.
+
+Phénix de feu : bonus de dégâts des unités (lvl 10 bonus 50%)
+Ours brun : bonus production unités (lvl 10 bonus 50%)
+Ours polaire : réduction du temps de recharge du tournoi (lvl 10 réduction 20%)
+
+Artefacts phénix et ours disponibles dans l’académie de magie avec 1 plan et des fragments de sortilèges. Il en faudra 9 de chaque pour atteindre le niveau 10. "
+bâtiment évolutif,artefact
+C’est quoi l’avantage aide avancée ?
+"Cet avantage accorde plus de temps pour récupérer le bonus octroyé lorsque tu utilises l’aide entre en voisin en retour. La main doré dure plus longtemps avant de disparaître et de redevenir verte.
+Pas très utile si on se connecte tous les jours. "
+avantage,confrérie -->
+
+
+
+
+
+
+
+</body>
+</html>
