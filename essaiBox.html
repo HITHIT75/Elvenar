@@ -1,0 +1,546 @@
+<!doctype html>
+<head>
+ <link rel="icon" type="image/png" href="Image/Blason1.png" />
+ <title>Le Portail des Confréries</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Metamorphous&family=Rubik+Beastly&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<title>Example</title>
+<script>
+function Debut() {
+  Opacifier(2)
+//checkCookie()
+//Chrono(2000)
+}
+function navOnOff() {
+  //Res=document.getElementById("nav").classList
+  document.getElementById("imgNavOO").classList.toggle("imgNavOO2");
+  document.getElementById("nav").classList.toggle("nav2");
+
+  document.getElementById("MenuItem2").classList.toggle("centered3bis");
+  document.getElementById("MenuItem3").classList.toggle("centered3bis");
+  document.getElementById("MenuItem4").classList.toggle("centered3bis");
+  document.getElementById("MenuItem5").classList.toggle("centered3bis");
+  document.getElementById("MenuItem6").classList.toggle("centered3bis");
+  document.getElementById("MenuItem7").classList.toggle("centered3bis");
+  document.getElementById("MenuItem8").classList.toggle("centered3bis");
+  document.getElementById("MenuItem9").classList.toggle("centered3bis");
+  document.getElementById("MenuItem10").classList.toggle("centered3bis");
+}
+function test() {
+      Ecouter = document.getElementById("Ecoute0").innerHTML
+      document.getElementById("Ecoute0").innerHTML=Math.abs(Ecouter-1);
+    ActualisationEcouteur()
+  }
+function ActualisationEcouteur() {
+       Ecouter = document.getElementById("Ecoute0").innerHTML
+       if (Ecouter == 1 ) {
+           document.getElementById("Ecoute").src="Image/SonOn.png"
+        setCookie("Ecouteur", "1", 365);
+       }
+       else {
+         document.getElementById("Ecoute").src="Image/SonOff.png"
+        setCookie("Ecouteur", "0", 365);
+       }
+   }
+function JouerSon() {
+     Ecouter = document.getElementById("Ecoute0").innerHTML
+     if (Ecouter==1) {
+       var sound = document.getElementById("MonSon");
+         sound.play();}
+       }
+
+function essai11() {
+  if (window.innerWidth<850) {
+    document.getElementById("expication").style.fontSize = "14px";
+  }
+  else {
+    document.getElementById("expication").style.fontSize = "12px";
+  }
+  document.getElementById("expication").innerHTML= "&nbsp;&nbsp;Ca c'est le logo du jeu auquel tu joues -T'avais jamais remarqué ?"
+}
+function essaiVide() {
+  document.getElementById("expication").innerHTML = "&nbsp;"
+
+}
+function essai21() {
+  if (window.innerWidth<850) {
+    document.getElementById("expication").style.fontSize = "14px";
+  }
+  else {
+    document.getElementById("expication").style.fontSize = "12px";
+  }
+  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Toutes les informations relatives à la confrérie : News et actualités."
+
+}
+function essai31() {
+  if (window.innerWidth<850) {
+    document.getElementById("expication").style.fontSize = "14px";
+  }
+  else {
+    document.getElementById("expication").style.fontSize = "12px";
+  }
+  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Quêtes avec visualisation de la difficulté:<br>Vert «facile», jaune «moyen» et rouge «difficile».<br>Possibilité de masquer les quêtes terminées."
+
+}
+function essai41() {
+  if (window.innerWidth<850) {
+    document.getElementById("expication").style.fontSize = "14px";
+  }
+  else {
+    document.getElementById("expication").style.fontSize = "12px";
+  }
+  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Les chemins & étapes sélectionnés pour l'aventure et un simulateur gratuit pour doser manufactures et ateliers."
+}
+function essai61() {
+  if (window.innerWidth<850) {
+    document.getElementById("expication").style.fontSize = "14px";
+  }
+  else {
+    document.getElementById("expication").style.fontSize = "12px";
+  }
+  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Retrouvez ici tous les journaux de bord de la confrérie et la FAQ. ."
+}
+function essai51() {
+  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Toutes les infos pour préparer son tournoi.."
+}
+function essai71() {
+  if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+    document.getElementById("expication").style.fontSize = "14px";
+  }
+  else {
+    document.getElementById("expication").style.fontSize = "12px";
+  }
+  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Un listing des liens Elvenar en tout genre."
+}
+function essai81() {
+  if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+    document.getElementById("expication").style.fontSize = "14px";
+  }
+  else {
+    document.getElementById("expication").style.fontSize = "12px";
+  }
+  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Conseils et avis aux nouveaux membres."
+}
+function essai91() {
+  if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+    document.getElementById("expication").style.fontSize = "12px";
+  }
+  else {
+    document.getElementById("expication").style.fontSize = "10px";
+  }
+  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Les informations sur les Merveilles."
+}
+function essai101() {
+  if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+    document.getElementById("expication").style.fontSize = "12px";
+  }
+  else {
+    document.getElementById("expication").style.fontSize = "10px";
+  }
+  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Les questions fréquentes."
+}
+
+
+
+function Saut(){
+     JouerSon()
+     //document.getElementById("Frame").src="Generik.html";
+     Opacifier(1)
+   }
+function SautGenerik(){
+  JouerSon()
+  document.getElementById("Frame").src="https://hithit75.github.io/Elvenar/Generikbis.html";
+  Opacifier(10)
+  if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+    navOnOff()
+  }
+}
+function SautDoigt(){
+  JouerSon()
+  document.getElementById("Frame").src="Zoom.html";
+  Opacifier(9)
+  if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+    navOnOff()
+  }
+}
+function SautJournal(){
+  JouerSon()
+  Opacifier(7)
+  document.getElementById("Frame").src="Journal.html";
+    if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+    navOnOff()
+  }
+  //document.getElementById("Frame").src="Merveilles.html";
+  }
+function SautPadawan(){
+  JouerSon()
+  Opacifier(9)
+  document.getElementById("Frame").src="Padawan.html";
+  if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+    navOnOff()
+  }
+}
+function SautHome(){
+  JouerSon()
+  Opacifier(2)
+  document.getElementById("Frame").src="Home.html";
+  if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+    navOnOff()
+  }
+}
+function SautAventure(){
+  JouerSon()
+  Opacifier(4)
+  document.getElementById("Frame").src="Aventure.html";
+  if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+    navOnOff()
+  }
+}
+function SautLiens(){
+  JouerSon()
+  Opacifier(8)
+  document.getElementById("Frame").src="Liens.html";
+  if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+    navOnOff()
+  }
+}
+function SautTournois(){
+  JouerSon()
+  Opacifier(5)
+  document.getElementById("Frame").src="Tournois.html";
+  if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+    navOnOff()
+  }
+}
+function SautEvent(){
+  JouerSon()
+  Opacifier(3)
+  document.getElementById("Frame").src="Event.html";
+  if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+    navOnOff()
+  }
+}
+function SautMerveilles(){
+  JouerSon()
+  Opacifier(6)
+  document.getElementById("Frame").src="Merveilles.html";
+  if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+    navOnOff()
+  }
+}
+function SautFAQ(){
+  JouerSon()
+  Opacifier(10)
+  document.getElementById("Frame").src="FAQ.html";
+  if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+    navOnOff()
+  }
+}
+
+function Opacifier(Num){
+  Res=document.getElementById("Degre10").innerHTML
+  var Res = "MenuItem" + Res
+  document.getElementById(Res).style.transform = "rotate(0deg)";
+  var Cible = "MenuItem" + Num
+  document.getElementById("Degre10").innerHTML=Num
+  // document.getElementById(Cible).style.opacity= "0.5";
+  document.getElementById(Cible).style.transform = "rotate(10deg)";
+}
+
+</script>
+
+
+
+<style>
+/* * {
+  box-sizing: border-box;
+} */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+  background-size: cover;
+  background-attachment:fixed;
+  background-image:url(Image/Ecran2.png)
+
+
+
+}
+#main {
+  display: flex;
+  flex: 1;
+
+}
+#main > article {
+   flex: 1 1 auto;
+  z-index:5;
+  display: flex; /* new */
+  width:1vw;
+}
+#main > aside {
+  /* display: flex; */
+ flex: 0 0 10%;
+  display: none;
+  align-content: space-between;
+  justify-content: center; /* align horizontal */
+}
+.imgNavOO1 {
+  content: url('Image/Logo32.png');
+  animation-name: imgNavDroite;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes imgNavDroite {
+  from {margin-left: -50px;  transform: rotate(0deg);}
+  to {margin-left: 130px;  transform: rotate(360deg);}
+}
+.imgNavOO2 {
+  content: url('Image/Logo31.png');
+  animation-name: imgNavGauche;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+
+}
+@keyframes imgNavGauche {
+  from {margin-left: 130px;transform: rotate(0deg);}
+  to {margin-left: 5px;transform: rotate(-360deg);}
+}
+.nav1 {
+    /* flex: 0 0 8vw; */
+    flex: 0 0 130px;
+  /* display: inline-grid; */
+ padding-left: 20px;
+  align-content: space-between;
+  justify-content: center; /* align horizontal */
+  flex-flow: row wrap;
+  order: -1;
+  align-items: stretch;
+  margin-left: -110px;
+  animation-name: navdroite;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+    z-index:10;
+  }
+  @keyframes navdroite {
+    from {margin-left: -130px;}
+    to {margin-left: 0px;}
+  }
+.nav2 {
+      /* flex: 0 0 8vw; */
+      flex: 0 0 130px;
+    /* display: inline-grid; */
+ padding-left: 20px;
+    align-content: space-between;
+    justify-content: center; /* align horizontal */
+    flex-flow: row wrap;
+    order: -1;
+    align-items: stretch;
+    margin-left: 0px;
+    animation-name: navgauche;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    z-index:10;
+    }
+    @keyframes navgauche {
+      from {margin-left: 0px;}
+      to {margin-left: -130px;}
+    }
+header  {
+  height: 12vh;
+  z-index:9;
+}
+/* header,  article, nav, aside {
+  padding: 1em;
+} */
+
+.centered3 {
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  margin-top: -100px;
+  line-height: 5px;
+  width: 0px;
+  vertical-align: middle;
+  color: #C7100A;
+  font-size:17px;
+  font-weight: bold;
+  font-variant-caps: small-caps;
+  font-family: 'Metamorphous', cursive;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('Image/Logo-elvenarVide4.png');
+  animation-name: Menubas;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  }
+  @keyframes Menubas{
+    from {margin-top: -100px;line-height: 5px;width: 0px;}
+    to {margin-top: 0px;line-height: 75px;width: 90px;}
+  }
+.centered3Menu1 {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    margin-top: -92px;
+    line-height: 75px;
+    width: 90px;
+    vertical-align: middle;
+    color: #C7100A;
+    font-size:17px;
+    font-weight: bold;
+    font-variant-caps: small-caps;
+    font-family: 'Metamorphous', cursive;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('Image/Logo-elvenarVide4.png');
+    }
+
+
+  .centered3bis {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    margin-top: 0px;
+    line-height: 75px;
+    width: 90px;
+    vertical-align: middle;
+    color: #C7100A;
+    font-size:17px;
+    font-weight: bold;
+    font-variant-caps: small-caps;
+    font-family: 'Metamorphous', cursive;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('Image/Logo-elvenarVide4.png');
+    animation-name: Menuhaut;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    }
+    @keyframes Menuhaut{
+      from {margin-top: 0px;line-height: 75px;width: 90px;}
+      to {margin-top: -100px;line-height: 5px;width: 0px;}
+    }
+.centered3:hover {
+      opacity: 0.7;
+      cursor: pointer;
+      transform: rotate(5deg);
+    }
+
+
+
+/* .containerMenu:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  color: rgba(40, 4E, 3C, 0%);
+  transform: rotate(5deg);
+} */
+#K2 {
+  animation-name: Kbas2;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+
+}
+@keyframes Kbas2 {
+  from {margin-top: -6.3vh;}
+  to {margin-top: 6.3vh;}
+}
+#K2bis {
+  animation-name: Kbas2Bis;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes Kbas2 {
+  from {margin-top: -6.3vh;}
+  to {margin-top: 6.3vh;}
+}
+@keyframes Kbas2Bis {
+  from {margin-top: 6.3vh;}
+  to {margin-top: -6.3vh;}
+}
+
+.containerExpli {
+  font-family: 'Metamorphous', cursive;
+  font-size:12px;
+    color: black;
+  text-align:center;
+  vertical-align:middle;
+  line-height: 14px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  }
+.Frame {
+  /* background-color: white; */
+  }
+</style>
+<body onload="Debut()">
+<audio  id="MonSon" src="Image/Son.wav"></audio>
+
+  <header >
+    <table>
+      <tr>
+        <th>      <img id="imgNavOO" class="imgNavOO1" onclick="navOnOff()" src="Image/Logo32.png" style ="float: left;margin-left:50px;cursor: pointer;"></th>
+        <th>
+          <Div style="vertical-align: middle;text-align: center;display: table-cell;">
+          <img src="Image/SonOn.png" id="Ecoute" width="25px"   onclick="test()" style ="display: block;margin: 0 auto;;cursor:pointer;">
+        </div>
+          <div id="Ecoute0" style="visibility:hidden;" >1</div>
+          <div id="Degre10" style="visibility:hidden;" >2</div>
+        </th>
+
+        <th valign="top">
+              <div class="containerExpli" id="expication" style ="display: inline";>
+                      &nbsp;
+              </div>
+        </th>
+
+      </tr>
+    </table>
+
+      <!-- <img id="imgNavOO" class="imgNavOO1" onclick="navOnOff()" src="Image/Logo32.png" style ="float: left;margin-left:50px;margin-top:-15px;cursor: pointer;">
+      <div class="containerExpli" id="expication" style ="display: inline";>
+              &nbsp;
+      </div>
+      <img src="Image/SonOn.png" id="Ecoute" width="25px"   onclick="test()" style ="float:right;margin-left:0px">
+      <div id="Ecoute0" style="visibility:hidden;" >1</div> -->
+  </header>
+  <div id="main">
+  <article>
+      <iframe id="Frame" style="Border:0;overflow:hidden; height:99%; width:100%;  top: 0; left: 0; bottom: 0; right: 0;" height="100%" width="100%"
+          src="Home.html">
+      </iframe>
+  </article>
+  <nav id="nav" class='nav1'>
+
+      <div class="centered3Menu1"  id="MenuItem1" onmouseout="essaiVide()" onmouseover="essai11()" style="background-image: url('Image/Logo2.png')" >&nbsp;</div>
+      <div class="centered3" id="MenuItem2"   onmouseout="essaiVide()" onmouseover="essai21()" onclick="SautHome()">AccueiL</div>
+      <div class="centered3" id="MenuItem3" onmouseout="essaiVide()" onmouseover="essai31()" onclick="SautEvent()">EvenT</div>
+      <div class="centered3" id="MenuItem4" onmouseout="essaiVide()" onmouseover="essai41()" onclick="SautAventure()">AventurE</div>
+      <div class="centered3" id="MenuItem5" onmouseout="essaiVide()" onmouseover="essai51()" onclick="SautTournois()">TournoI</div>
+      <div class="centered3" id="MenuItem6" onmouseout="essaiVide()" onmouseover="essai91()" onclick="SautMerveilles()">Merveilles</div>
+      <div class="centered3" id="MenuItem7" onmouseout="essaiVide()" onmouseover="essai61()" onclick="SautJournal()">JournaL</div>
+      <div class="centered3" id="MenuItem8" onmouseout="essaiVide()" onmouseover="essai71()" onclick="SautLiens()">LienS</div>
+      <div class="centered3" id="MenuItem9" onmouseout="essaiVide()" onmouseover="essai81()" onclick="SautPadawan()">PadawaN</div>
+      <div class="centered3" id="MenuItem10" onmouseout="essaiVide()" onmouseover="essai101()" onclick="SautFAQ()">FaQ</div>
+
+
+
+    </nav>
+    <aside>Aside</aside>
+  </div>
+
+</body>
