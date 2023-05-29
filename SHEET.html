@@ -3,48 +3,26 @@
 <head>
 
 <script>
-  function loadData() {
+  function Debut() {
     alert("debut")
-loadData("FAQ")
+    loadData("FAQ")
   }
 
 
 
   function loadData(Vecteur) {
- var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRPAA3qaqB_cOanF7wucoqkea5OLqi5OR-DR6n2cX_yNIGPU5Gfbsh6mSNC9zLPxeHQLmBZ5SWh9-kh/pub?gid=1743005861&single=true&output=csv";
-   //https://docs.google.com/spreadsheets/d/e/2PACX-1vRPAA3qaqB_cOanF7wucoqkea5OLqi5OR-DR6n2cX_yNIGPU5Gfbsh6mSNC9zLPxeHQLmBZ5SWh9-kh/pub?gid=1743005861&single=true&output=csv
-alert(Vecteur)
+    alert(Vecteur)
+    var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRPAA3qaqB_cOanF7wucoqkea5OLqi5OR-DR6n2cX_yNIGPU5Gfbsh6mSNC9zLPxeHQLmBZ5SWh9-kh/pub?gid=1743005861&single=true&output=csv";
+
 
     xmlhttp.onreadystatechange = function () {
        if (xmlhttp.readyState == 4) {
+         alert("doc lu")
+         Num=1
+       const parts = xmlhttp.responseText.split(Vecteur);
+       alert(parts[1])
+       document.getElementById("Cont").innerHTML = parts[1]
 
-     Num=1
-     //alert(Num + "Num de loaddata")
-     const parts = xmlhttp.responseText.split(Vecteur);
-    Maxi=parts.length-2;
-    //document.getElementById("Maxo").innerHTML=Maxi
-     Concat = ""
-     alert(parts[1])
-document.getElementById("Cont").innerHTML = parts[1]
-     //for (var i = 1; i < Maxi+1; i++) {
-
-      // var0=parts[i]
-       //result = var0.substring(0, var0.length-4);
-       //Concat = Concat + "<div id='Contenu" + i + "'>" + result  + "</div>"
-         // Create element:
-         // para = document.createElement("Div");
-         // para.innerHTML = result;
-         // para.id= "Content" + i;
-
-         // Append to another element:
-         //document.getElementById("Cont").appendChild(para);
-        // Res = document.getElementById("Content" + i).innerHTML + " [ " + i +" ]"
-       //alert(Res)
-
-       //}
-     //document.getElementById("Cont").innerHTML = Concat
-
-     //document.getElementById("Contenu").style.textAlign = "left";
          }
       };
      xmlhttp.open("GET", url, true);
@@ -55,8 +33,8 @@ document.getElementById("Cont").innerHTML = parts[1]
 </head>
 
 
-<body onload="Debut">
-<div id="Cont"><div>
+<body onload="Debut()">
+<div id="Cont">Ici là<div>
 
 </body>
 </html>
