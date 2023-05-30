@@ -14,9 +14,23 @@
         if (xmlhttp.readyState == 4) {
 
             const parts = xmlhttp.responseText.split("|");
-		var0=parts[2]
-   		 result = var0.substring(0, var0.length-2);
-		document.getElementById("Contenu").innerHTML="......." + result
+
+		           var0=parts[1]
+   		         result = var0.substring(0, var0.length-2);
+		           document.getElementById("Accordeon1").innerHTML=result
+
+               var0=parts[2]
+   		         result = var0.substring(0, var0.length-2);
+		           document.getElementById("Content1").innerHTML=result
+
+               var0=parts[4]
+   		         result = var0.substring(0, var0.length-2);
+		           document.getElementById("Accordeon2").innerHTML=result
+
+               var0=parts[5]
+   		         result = var0.substring(0, var0.length-2);
+		           document.getElementById("Content2").innerHTML=result
+
             //document.getElementById("display").innerHTML = parts[1] + "<br><br><br><br>" + parts[2] + "<br><br><br><br>" + parts[3]+ "<br><br><br><br>" + parts[4];
         }
     };
@@ -31,5 +45,33 @@
 <body onload="Debut()">
 <div id="Contenu">Ici là<div>
 
+  <div class="accordion">
+    <div class="accordion-item"   onclick="toggleAccordion(1)">
+      <a id="Accordeon1">Quel est le système de remplissage des merveilles?</a>
+      <div class="content" >
+        <p id="Content1">Un système de remplissage individuel avec une annonce de fin de merveilles par mp, où chacun pose en pc le montant des coffres (sans les runes).<br>Un système de remplissage collectif via des csf.</p>
+      </div>
+    </div>
+
+      <div class="accordion-item"   onclick="toggleAccordion(1)">
+        <a id="Accordeon2">Quel est le système de remplissage des merveilles?</a>
+        <div class="content" >
+          <p id="Content2">Un système de remplissage individuel avec une annonce de fin de merveilles par mp, où chacun pose en pc le montant des coffres (sans les runes).<br>Un système de remplissage collectif via des csf.</p>
+        </div>
+      </div>
+
+        <div class="accordion-item"   onclick="toggleAccordion(1)">
+          <a id="Accordeon3">Quel est le système de remplissage des merveilles?</a>
+          <div class="content" >
+            <p id="Content3">Un système de remplissage individuel avec une annonce de fin de merveilles par mp, où chacun pose en pc le montant des coffres (sans les runes).<br>Un système de remplissage collectif via des csf.</p>
+          </div>
+        </div>
+
+
+
+
+
+
+</div>
 </body>
 </html>
