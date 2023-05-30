@@ -9,11 +9,37 @@
 <link href="https://fonts.googleapis.com/css2?family=Metamorphous&family=Rubik+Beastly&display=swap" rel="stylesheet">
 <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
 <script >
-// const items = document.querySelectorAll(".accordion a");
-function Debut() {
-alert("Ok")
 
+function Debut() {
+	  loadData()
+      }
+  function loadData() {
+  var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRPAA3qaqB_cOanF7wucoqkea5OLqi5OR-DR6n2cX_yNIGPU5Gfbsh6mSNC9zLPxeHQLmBZ5SWh9-kh/pub?gid=456137167&single=true&output=csv";
+
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4) {
+
+            const parts = xmlhttp.responseText.split("|");
+
+            for ( i = 0; i < 4; i += 1) {
+              j=i*3    //Math.floor(a)
+		           var0=parts[j]
+   		         result = var0.substring(0, var0.length-2);
+               document.getElementById("Accordeon" +(i+1)).innerHTML=result
+               var0=parts[j+1]
+   		         result = var0.substring(0, var0.length-2);
+		           document.getElementById("Content" +(i+1)).innerHTML=result
+             }
+
+        }
+    };
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send(null);
 }
+  
+  
+  
 function toggleAccordion(Num){
   //alert(Num)
   document.getElementById("Content" + Num).classList.toggle("active");
@@ -156,26 +182,26 @@ h3 {
   <div class="accordion">
     <div class="accordion-item"   onclick="toggleAccordion(1)">
       <a id="Accordeon1">Quel est le système de remplissage des merveilles?</a>
-      <div class="content" id="Content1">
-        <p>Un système de remplissage individuel avec une annonce de fin de merveilles par mp, où chacun pose en pc le montant des coffres (sans les runes).<br>Un système de remplissage collectif via des csf.</p>
+      <div class="content">
+        <p id="Content1">Un système de remplissage individuel avec une annonce de fin de merveilles par mp, où chacun pose en pc le montant des coffres (sans les runes).<br>Un système de remplissage collectif via des csf.</p>
       </div>
     </div>
     <div class="accordion-item"  onclick="toggleAccordion(2)">
       <a  id="Accordeon2">Comment fait-on des échanges de runes?</a>
-      <div class="content" id="Content2">
-        <p>Faire un mp général en indiquant votre demande en runes pour une ou plusieurs merveilles et votre proposition de runes à donner en échange.<br>Les membres intéressés vous répondront et l’échange doit être équitable sauf si accord entre les membres. Ne pas posez de runes pour vous en débarrasser sans l’accord préalable du membre pour éviter tout blocage.</p>
+      <div class="content" >
+        <p id="Content2">Faire un mp général en indiquant votre demande en runes pour une ou plusieurs merveilles et votre proposition de runes à donner en échange.<br>Les membres intéressés vous répondront et l’échange doit être équitable sauf si accord entre les membres. Ne pas posez de runes pour vous en débarrasser sans l’accord préalable du membre pour éviter tout blocage.</p>
       </div>
     </div>
-    <div class="accordion-item"  id="Accordeon3" onclick="toggleAccordion(3)">
-      <a>Quelles sont les merveilles indispensables à posséder?</a>
-      <div class="content" id="Content3">
-        <p>>Voir le menu Merveilles.</p>
+    <div class="accordion-item"   onclick="toggleAccordion(3)">
+      <a id="Accordeon3">Quelles sont les merveilles indispensables à posséder?</a>
+      <div class="content" >
+        <p id="Content3">Voir le menu Merveilles.</p>
       </div>
     </div>
     <div class="accordion-item" onclick="toggleAccordion(4)">
-      <a>Comment être sûr qu'un membre est connecté?</a>
-      <div class="content" id="Content4">
-        <p>Taper  /who  dans le tchat puis valider.</p>
+      <a id="Accordeon4"></a>
+      <div class="content" >
+        <p id="Content4"></p>
       </div>
     </div>
     <div class="accordion-item" onclick="toggleAccordion(5)">
@@ -187,65 +213,6 @@ h3 {
   </div>
 
 </div>
-
-
-
-<!-- merveilles,csf
-
-""
-merveilles,runes
-
-"Abysse (pop et or)
-Aiguilles (combat et caserne)
-Monastère/sanctuaire (combat et culture)
-Tour de guet (culture)
-Cœur de la Montagne (Marchandises classiques et pop)
-Tour de la prospérité (Matériaux)
-Marchand (grossiste et campement)
-Académie (combat et camp)
-Labyrinthe (Mana) (incontournable à partir du chapitre 16/17 ??)
-Abbaye du dragon (combat et Mana)
-Fontaines triomphantes (combat et terrain)
-D111 (marchandises sensibles et réduction temps tournoi)
-D222 (marchandises sensibles et combat)
-Fontaines de jouvence (pop et culture) (intéressant si résidences magiques)
-Autel des champions (orc et combat)
-Temple des esprits (unurium)
-Tour de sceau vallorien (unurium)
- 
-Fortement conseillées :
-Champignons (combat)
-Crapaud (combat)
-CEE (graines et toutes marchandises)
-Tour crépuscule (graines) (incontournable à partir du chapitre 14/15 ??)
-Arbre illumination (marchandises ascension et combat)
-Lieu de repos (marchandises ascension et combat)
- 
-Utile mais non indispensable :
-Pyramide purificatrice
-Taverne des éclaireurs (exploration provinces et coffres voisins)
- 
-Utile au debut mais peut être supprimé ensuite pour récupérer de la place :
-Tome des mystères
-Phare de crystal/tour du clocher
-Rempart nain"
-merveilles
-Quels sont les bâtiments évolutifs à avoir ?
-"Phénix de feu : l’incontournable - Le bât ultra prioritaire niveau 10 à avoir !
-D’autres bâtiments évolutifs sont très utiles comme l’ours brun et l’ours polaire.
-
-Phénix de feu : bonus de dégâts des unités (lvl 10 bonus 50%)
-Ours brun : bonus production unités (lvl 10 bonus 50%)
-Ours polaire : réduction du temps de recharge du tournoi (lvl 10 réduction 20%)
-
-Artefacts phénix et ours disponibles dans l’académie de magie avec 1 plan et des fragments de sortilèges. Il en faudra 9 de chaque pour atteindre le niveau 10. "
-bâtiment évolutif,artefact
-C’est quoi l’avantage aide avancée ?
-"Cet avantage accorde plus de temps pour récupérer le bonus octroyé lorsque tu utilises l’aide entre en voisin en retour. La main doré dure plus longtemps avant de disparaître et de redevenir verte.
-Pas très utile si on se connecte tous les jours. "
-avantage,confrérie -->
-
-
 
 
 
