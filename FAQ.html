@@ -17,6 +17,7 @@ alert("Ok")
 function toggleAccordion(Num){
   //alert(Num)
   document.getElementById("Content" + Num).classList.toggle("active");
+  document.getElementById("Accordeon" + Num).classList.toggle("active");
   // this.classList.toggle('active');
   // this.nextElementSibling.classList.toggle('active');
 }
@@ -74,22 +75,23 @@ h3 {
   font-family: 'Metamorphous', cursive;
   font-size: 1.15rem;
   font-weight: 600;
+  color: rgba(0, 0, 0, 1);
   border: 1px solid black;
 }
 .accordion-item a {
   background-image: url("Image/FondFAQ.png");
-}
+  }
 .accordion a:hover,
 .accordion a:hover::after {
   cursor: pointer;
-  color: #ff5353;
+  color: #506D72;
 }
 .accordion a:hover::after {
-  border: 1px solid #ff5353;
+  border: 1px solid #506D72;
 }
 .accordion a.active {
   color: #ff5353;
-  border-bottom: 1px solid #ff5353;
+  border-bottom: 1px solid #506D72;
 }
 .accordion a::after {
   font-family: 'Ionicons';
@@ -98,7 +100,7 @@ h3 {
   float: right;
   right: 1rem;
   font-size: 1rem;
-  color: white;
+  color: rgba(0, 0, 0, 1);
   padding: 5px;
   width: 30px;
   height: 30px;
@@ -149,19 +151,19 @@ h3 {
 
 
   <div class="accordion">
-    <div class="accordion-item" onclick="toggleAccordion(1)">
-      <a>Quel est le système de remplissage des merveilles?</a>
+    <div class="accordion-item"   onclick="toggleAccordion(1)">
+      <a id="Accordeon1">Quel est le système de remplissage des merveilles?</a>
       <div class="content" id="Content1">
         <p>Un système de remplissage individuel avec une annonce de fin de merveilles par mp, où chacun pose en pc le montant des coffres (sans les runes).<br>Un système de remplissage collectif via des csf.</p>
       </div>
     </div>
-    <div class="accordion-item" onclick="toggleAccordion(2)">
-      <a>Comment fait-on des échanges de runes?</a>
+    <div class="accordion-item"  onclick="toggleAccordion(2)">
+      <a  id="Accordeon2">Comment fait-on des échanges de runes?</a>
       <div class="content" id="Content2">
         <p>Faire un mp général en indiquant votre demande en runes pour une ou plusieurs merveilles et votre proposition de runes à donner en échange.<br>Les membres intéressés vous répondront et l’échange doit être équitable sauf si accord entre les membres. Ne pas posez de runes pour vous en débarrasser sans l’accord préalable du membre pour éviter tout blocage.</p>
       </div>
     </div>
-    <div class="accordion-item" onclick="toggleAccordion(3)">
+    <div class="accordion-item"  id="Accordeon3" onclick="toggleAccordion(3)">
       <a>Quelles sont les merveilles indispensables à posséder?</a>
       <div class="content" id="Content3">
         <p>>Voir le menu Merveilles.</p>
