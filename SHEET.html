@@ -1,21 +1,28 @@
 
+
 <html>
 <head>
 
-<script>
-  function Debut() {
+
+<link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Metamorphous&family=Rubik+Beastly&display=swap" rel="stylesheet">
+<script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+<script >
+
+function Debut() {
 	  loadData()
       }
   function loadData() {
   var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRPAA3qaqB_cOanF7wucoqkea5OLqi5OR-DR6n2cX_yNIGPU5Gfbsh6mSNC9zLPxeHQLmBZ5SWh9-kh/pub?gid=456137167&single=true&output=csv";
-  //https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JIJ--cTg2nZoNkudiqBrnvWDs-TZlzcw3PBOGPCv7dl9WxtasEhiJ8eJsRbV/pub?gid=569730062&single=true&output=csv";
+
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4) {
 
             const parts = xmlhttp.responseText.split("|");
 
-            for ( i = 0; i < 4; i += 1) {
+            for ( i = 0; i < 10; i += 1) {
               j=i*3    //Math.floor(a)
 		           var0=parts[j]
    		         result = var0.substring(0, var0.length-2);
@@ -24,46 +31,229 @@
    		         result = var0.substring(0, var0.length-2);
 		           document.getElementById("Content" +(i+1)).innerHTML=result
              }
-
+             for ( i = parts.length; i < 11; i += 1) {
+               document.getElementById("Accordeon" +i).style.display = "none";
+             }
         }
     };
     xmlhttp.open("GET", url, true);
     xmlhttp.send(null);
 }
+
+
+
+function toggleAccordion(Num){
+  //alert(Num)
+  document.getElementById("Content" + Num).classList.toggle("active");
+  document.getElementById("Accordeon" + Num).classList.toggle("active");
+  // this.classList.toggle('active');
+  // this.nextElementSibling.classList.toggle('active');
+}
+
+// items.forEach(item => item.addEventListener('click', toggleAccordion));
 </script>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400');
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Hind', sans-serif;
+  color: black;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+}
+.container {
+  margin: 0 auto;
+  padding: 1rem;
+  width: 48rem;
+}
+h3 {
+  font-size: 1.75rem;
+  color: white;
+  padding: 1.3rem;
+  margin: 0;
+}
+.accordion a {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 2rem 1rem 1rem;
+  color: white;
+   background-color: #506E62;
+  font-family: 'Metamorphous', cursive;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1);
+  border: 1px solid black;
+}
+.accordion-item a {
+  background-image: url("Image/FondFAQ3.png");
+  }
+.accordion a:hover,
+.accordion a:hover::after {
+  cursor: pointer;
+  color: black;
+}
+.accordion a:hover::after {
+  border: 1px solid black;
+}
+.accordion a.active {
+  /* color: #ff5353; */
+  color: black;
+
+  border-bottom: 1px solid black;
+}
+.accordion a::after {
+  font-family: 'Ionicons';
+  content: '\f218';
+  position: absolute;
+  float: right;
+  right: 1rem;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 1);
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid black;
+  text-align: center;
+}
+.accordion a.active::after {
+  font-family: 'Ionicons';
+  content: '\f209';
+  /* color: #ff5353; */
+  color: black;
+  border: 1px solid black;
+}
+.accordion .content {
+  opacity: 0;
+  padding: 0 1rem;
+  max-height: 0;
+  border: 1px solid black;
+  overflow: hidden;
+  clear: both;
+  -webkit-transition: all 0.2s ease 0.15s;
+  -o-transition: all 0.2s ease 0.15s;
+  transition: all 0.2s ease 0.15s;
+}
+.accordion .content p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.accordion .content.active {
+  opacity: 1;
+  padding: 0rem;
+  max-height: 100%;
+  -webkit-transition: all 0.35s ease 0.15s;
+  -o-transition: all 0.35s ease 0.15s;
+  transition: all 0.35s ease 0.15s;
+}
+</style>
+
+
 
 </head>
 
 
-<body onload="Debut()">
+<body>
+<div class="container">
+
 
   <div class="accordion">
-    <div class="accordion-item"   onclick="toggleAccordion(1)">
-      <a id="Accordeon1"></a>
+    <div class="accordion-item"  id="AccordeonItem1"  onclick="toggleAccordion(1)">
+      <a id="Accordeon1">Quel est le système de remplissage des merveilles?</a>
+      <div class="content" id="Content1">
+        <p >Un système de remplissage individuel avec une annonce de fin de merveilles par mp, où chacun pose en pc le montant des coffres (sans les runes).<br>Un système de remplissage collectif via des csf.</p>
+      </div>
+    </div>
+    <div class="accordion-item"  id="AccordeonItem2" onclick="toggleAccordion(2)">
+      <a  id="Accordeon2">Comment fait-on des échanges de runes?</a>
+      <div class="content"  id="Content2">
+        <p>Faire un mp général en indiquant votre demande en runes pour une ou plusieurs merveilles et votre proposition de runes à donner en échange.<br>Les membres intéressés vous répondront et l’échange doit être équitable sauf si accord entre les membres. Ne pas posez de runes pour vous en débarrasser sans l’accord préalable du membre pour éviter tout blocage.</p>
+      </div>
+    </div>
+    <div class="accordion-item"  id="AccordeonItem3"  onclick="toggleAccordion(3)">
+      <a id="Accordeon3">Quelles sont les merveilles indispensables à posséder?</a>
+      <div class="content"  id="Content3">
+        <p>Voir le menu Merveilles.</p>
+      </div>
+    </div>
+    <div class="accordion-item"  id="AccordeonItem4"onclick="toggleAccordion(4)">
+      <a id="Accordeon4"></a>
       <div class="content" >
-        <p id="Content1"></p>
+        <p id="Content4"></p>
+      </div>
+    </div>
+    <div class="accordion-item"  id="AccordeonItem5" onclick="toggleAccordion(5)">
+      <a id="Accordeon5"></a>
+      <div class="content" id="Content5">
+        <p></p>
+      </div>
+    </div>
+    <div class="accordion-item"  id="AccordeonItem6" onclick="toggleAccordion(5)">
+      <a id="Accordeon6"></a>
+      <div class="content" id="Content6">
+        <p></p>
+      </div>
+    </div>
+    <div class="accordion-item"  id="AccordeonItem7" onclick="toggleAccordion(5)">
+      <a id="Accordeon7"></a>
+      <div class="content" id="Content7">
+        <p></p>
+      </div>
+    </div>
+    <div class="accordion-item"  id="AccordeonItem8" onclick="toggleAccordion(5)">
+      <a id="Accordeon8"></a>
+      <div class="content" id="Content38">
+        <p></p>
+      </div>
+    </div>
+    <div class="accordion-item"  id="AccordeonItem9" onclick="toggleAccordion(5)">
+      <a id="Accordeon9"></a>
+      <div class="content" id="Content9">
+        <p></p>
+      </div>
+    </div>
+    <div class="accordion-item"  id="AccordeonItem10" onclick="toggleAccordion(5)">
+      <a id="Accordeon10"></a>
+      <div class="content" id="Content10">
+        <p></p>
       </div>
     </div>
 
-      <div class="accordion-item"   onclick="toggleAccordion(1)">
-        <a id="Accordeon2"></a>
-        <div class="content" >
-          <p id="Content2"></p>
-        </div>
-      </div>
-
-        <div class="accordion-item"   onclick="toggleAccordion(1)">
-          <a id="Accordeon3"></a>
-          <div class="content" >
-            <p id="Content3">.</p>
-          </div>
-        </div>
 
 
 
 
-
+  </div>
 
 </div>
+
+
+
+
+
 </body>
 </html>
