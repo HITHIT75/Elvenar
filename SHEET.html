@@ -22,17 +22,17 @@ function Debut() {
 
             const parts = xmlhttp.responseText.split("|");
 
-            for ( i = 0; i < 10; i += 1) {
+            for ( i = 0; i < parts.length+1; i += 1) {
               j=i*3    //Math.floor(a)
 		           var0=parts[j]
    		         result = var0.substring(0, var0.length-2);
                document.getElementById("Accordeon" +(i+1)).innerHTML=result
                var0=parts[j+1]
    		         result = var0.substring(0, var0.length-2);
-		           document.getElementById("Content" +(i+1)).innerHTML=result
+		           document.getElementById("Content" +(i+1)).innerHTML="<p>"+ result + "</p>"
              }
-             for ( i = parts.length; i < 11; i += 1) {
-               document.getElementById("Accordeon" +i).style.display = "none";
+             for ( i = parts.length+1; i < 11; i += 1) {
+               document.getElementById("AccordeonItem" +i).style.display = "none";
              }
         }
     };
