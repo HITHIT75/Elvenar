@@ -4,42 +4,32 @@
 
 <script>
   function Debut() {
-    alert("debut")
-    loadData("@")
-  }
-
-
-
-  function loadData(Vecteur) {
-    alert(Vecteur)
-    var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JIJ--cTg2nZoNkudiqBrnvWDs-TZlzcw3PBOGPCv7dl9WxtasEhiJ8eJsRbV/pub?gid=569730062&single=true&output=csv";
-//https://docs.google.com/spreadsheets/d/1ipOIG7IVsOwUMadLCSf_twuR17hYc8-gIECkJOJxWBE/edit#gid=1743005861
-//https://docs.google.com/spreadsheets/d/e/2PACX-1vRPAA3qaqB_cOanF7wucoqkea5OLqi5OR-DR6n2cX_yNIGPU5Gfbsh6mSNC9zLPxeHQLmBZ5SWh9-kh/pub?gid=1743005861&single=true&output=csv
-//var url = "https://docs.google.com/spreadsheets/d/e/[my-spreadsheet-id]/pub?gid=0&single=true&output=csv&range=A1";
-//https://docs.google.com/spreadsheets/d/1ipOIG7IVsOwUMadLCSf_twuR17hYc8-gIECkJOJxWBE/edit?usp=sharing
-
-//pub?output=csv&range=A1:ZZ9999&callback=googleDocCallback';
-
+	  loadData()
+      }
+  function loadData() {
+  var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuHfLMKtDlbuJTWP11JIJ--cTg2nZoNkudiqBrnvWDs-TZlzcw3PBOGPCv7dl9WxtasEhiJ8eJsRbV/pub?gid=569730062&single=true&output=csv";
+  //var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7h49K5ALJK98pf34d7KHeUecOC2w7xZLA8r5k6MMNTzOBhA8VvXSo7v5_xlAxPfrw69xGxKg5DqKf/pub?gid=569730062&single=true&output=csv";
+    xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
-       if (xmlhttp.readyState == 4) {
-         alert("doc lu")
-         Num=1
-       const parts = xmlhttp.responseText.split(Vecteur);
-       alert(parts[1])
-       document.getElementById("Cont").innerHTML = parts[1]
+        if (xmlhttp.readyState == 4) {
 
-         }
-      };
-     xmlhttp.open("GET", url, true);
-     xmlhttp.send(null);
- }
+            const parts = xmlhttp.responseText.split("|");
+		var0=parts[2]
+   		 result = var0.substring(0, var0.length-2);
+		document.getElementById("Contenu").innerHTML=result
+            //document.getElementById("display").innerHTML = parts[1] + "<br><br><br><br>" + parts[2] + "<br><br><br><br>" + parts[3]+ "<br><br><br><br>" + parts[4];
+        }
+    };
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send(null);
+}
 </script>
 
 </head>
 
 
 <body onload="Debut()">
-<div id="Cont">Ici <div>
+<div id="Contenu">Ici là<div>
 
 </body>
 </html>
