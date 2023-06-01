@@ -11,7 +11,18 @@
 <script >
 
 function Debut() {
+//	alert("ok debut")
 	  loadData()
+	//	alert("fini")
+		// for ( i = 1; i < 34; i += 1) {
+		// 		if (document.getElementById("Accordeon" +(i)).innerHTML==="") {
+		// 			tot=tot+1
+		// 		}
+		// 		else {
+		// 			tat=tat+1
+		// 		}
+		// 	}
+		// alert(tot +"   " + tat)
       }
   function loadData() {
   var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRPAA3qaqB_cOanF7wucoqkea5OLqi5OR-DR6n2cX_yNIGPU5Gfbsh6mSNC9zLPxeHQLmBZ5SWh9-kh/pub?gid=456137167&single=true&output=csv";
@@ -19,35 +30,47 @@ function Debut() {
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4) {
-alert(responseText)
+
             const parts = xmlhttp.responseText.split("|");
-		         
-		//	var0=parts[0]
-   		//         result = var0.substring(0, var0.length-2);
-               //document.getElementById("Accordeon" +(1)).innerHTML=result
+						Maxi=parts.length
+						Maxi=Math.floor(Maxi/3)+1
+						//document.getElementById("MaxQ").innerHTML=Maxi
+						//alert(Maxi)
+						//Bout = Math.floor(parts.length/3) Math.round
+						//Alert(Bout)
+//alert(xmlhttp.responseText)
+							//var0=parts[0]
+   		         //result = var0.substring(0, var0.length-2);
+              // document.getElementById("Accordeon" +1).innerHTML=result
               // var0=parts[1]
    		//         result = var0.substring(0, var0.length-2);
 		 //          document.getElementById("Content" +(1)).innerHTML=result
-		
-		
-            //for ( i = 0; i < 4; i += 1) {
-             // j=i*3    //Math.floor(a)
-		//           var0=parts[j]
-   		//         result = var0.substring(0, var0.length-2);
-            //   document.getElementById("Accordeon" +(i+1)).innerHTML=result
-            //   var0=parts[j+1]
-   		//         result = var0.substring(0, var0.length-2);
-		//           document.getElementById("Content" +(i+1)).innerHTML=result
-             //}
+		 				//Math.floor(a)
 
+            for ( i = 0; i < Maxi; i += 1) {
+              j=i*3    //Math.floor(a)
+		           var0=parts[j]
+   		         result = var0.substring(0, var0.length-2);
+               document.getElementById("Accordeon" +(i+1)).innerHTML=result
+               var0=parts[j+1]
+   		         result = var0.substring(0, var0.length-2);
+		           document.getElementById("Content" +(i+1)).innerHTML=result
+
+             }
+
+
+						 // for ( i = Maxi; i < 34; i += 1) {
+             //    document.getElementById("Accordeon" +(i+1)).style.display = "none";
+ 		         //   document.getElementById("Content" +(i+1)).style.display = "none";
+             //  }
         }
     };
     xmlhttp.open("GET", url, true);
     xmlhttp.send(null);
 }
-  
-  
-  
+
+
+
 function toggleAccordion(Num){
   //alert(Num)
   document.getElementById("Content" + Num).classList.toggle("active");
@@ -176,6 +199,13 @@ h3 {
   -o-transition: all 0.35s ease 0.15s;
   transition: all 0.35s ease 0.15s;
 }
+.content:empty {
+  display: none;
+}
+.contentZ:empty {
+  display: none;
+}
+
 </style>
 
 
@@ -183,41 +213,216 @@ h3 {
 </head>
 
 
-<body>
+<body onload="Debut()">
 <div class="container">
-
+<div id="MaxQ"></di>
 
   <div class="accordion">
-    <div class="accordion-item"   onclick="toggleAccordion(1)">
-      <a id="Accordeon1">0000</a>
+    <div class="accordion-item"  id="AccordeonItem1"  onclick="toggleAccordion(1)">
+      <a id="Accordeon1" class='contentZ'>........</a>
       <div class="content" id="Content1">
-        <p ></p>
+        <p >...</p>
       </div>
     </div>
-    <div class="accordion-item"  onclick="toggleAccordion(2)">
-      <a  id="Accordeon2"></a>
-      <div class="content"  id="Content2">
-        <p>Faire un mp général en indiquant votre demande en runes pour une ou plusieurs merveilles et votre proposition de runes à donner en échange.<br>Les membres intéressés vous répondront et l’échange doit être équitable sauf si accord entre les membres. Ne pas posez de runes pour vous en débarrasser sans l’accord préalable du membre pour éviter tout blocage.</p>
-      </div>
-    </div>
-    <div class="accordion-item"   onclick="toggleAccordion(3)">
-      <a id="Accordeon3">Quelles sont les merveilles indispensables à posséder?</a>
-      <div class="content"  id="Content3">
-        <p>Voir le menu Merveilles.</p>
-      </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(4)">
-      <a id="Accordeon4"></a>
-      <div class="content" id="Content4" >
-        <p></p>
-      </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(5)">
-      <a>Comment devenir un imbecile ingrat?</a>
-      <div class="content" id="Content5">
-        <p>Pour certains c´est inné. Cf le codeur Hit .</p>
-      </div>
-    </div>
+		<div class='accordion-item'   id='AccordeonItem2' onclick='toggleAccordion(2)'>
+		<a id='Accordeon2' class='contentZ'></a>
+		<div class='content' id='Content2'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item' style =    id='AccordeonItem3' onclick='toggleAccordion(3)'>
+		<a id='Accordeon3' class='contentZ'></a>
+		<div class='content' id='Content3'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item'  id='AccordeonItem4' onclick='toggleAccordion(4)'>
+		<a id='Accordeon4' class='contentZ'></a>
+		<div class='content' id='Content4'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item'  id='AccordeonItem5' onclick='toggleAccordion(5)'>
+		<a id='Accordeon5' class='contentZ'></a>
+		<div class='content' id='Content5'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item'  id='AccordeonItem6' onclick='toggleAccordion(6)'>
+		<a id='Accordeon6' class='contentZ'></a>
+		<div class='content' id='Content6'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item'  id='AccordeonItem7' onclick='toggleAccordion(7)'>
+		<a id='Accordeon7' class='contentZ'></a>
+		<div class='content' id='Content7'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item'  id='AccordeonItem8' onclick='toggleAccordion(8)'>
+		<a id='Accordeon8' class='contentZ'></a>
+		<div class='content' id='Content8'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item'  id='AccordeonItem9' onclick='toggleAccordion(9)'>
+		<a id='Accordeon9' class='contentZ'></a>
+		<div class='content' id='Content9'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item'  id='AccordeonItem10' onclick='toggleAccordion(10)'>
+		<a id='Accordeon10' class='contentZ'></a>
+		<div class='content' id='Content10'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item'  id='AccordeonItem11' onclick='toggleAccordion(11)'>
+		<a id='Accordeon11' class='contentZ'></a>
+		<div class='content' id='Content11'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item'  id='AccordeonItem12' onclick='toggleAccordion(12)'>
+		<a id='Accordeon12' class='contentZ'></a>
+		<div class='content' id='Content12'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item'  id='AccordeonItem13' onclick='toggleAccordion(13)'>
+		<a id='Accordeon13' class='contentZ'></a>
+		<div class='content' id='Content13'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item'  id='AccordeonItem14' onclick='toggleAccordion(14)'>
+		<a id='Accordeon14' class='contentZ'></a>
+		<div class='content' id='Content14'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item'  id='AccordeonItem15' onclick='toggleAccordion(15)'>
+		<a id='Accordeon15' class='contentZ'></a>
+		<div class='content' id='Content15'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item'  id='AccordeonItem16' onclick='toggleAccordion(16)'>
+		<a id='Accordeon16' class='contentZ'></a>
+		<div class='content' id='Content16'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item'  id='AccordeonItem17' onclick='toggleAccordion(17)'>
+		<a id='Accordeon17' class='contentZ'></a>
+		<div class='content' id='Content17'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item'  id='AccordeonItem18' onclick='toggleAccordion(18)'>
+		<a id='Accordeon18' class='contentZ'></a>
+		<div class='content' id='Content18'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item'  id='AccordeonItem19' onclick='toggleAccordion(19)'>
+		<a id='Accordeon19' class='contentZ'></a>
+		<div class='content' id='Content19'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item'  id='AccordeonItem20' onclick='toggleAccordion(20)'>
+		<a id='Accordeon20' class='contentZ'></a>
+		<div class='content' id='Content20'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item'  id='AccordeonItem21' onclick='toggleAccordion(21)'>
+		<a id='Accordeon21' class='contentZ'></a>
+		<div class='content' id='Content21'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item'  id='AccordeonItem22' onclick='toggleAccordion(22)'>
+		<a id='Accordeon22' class='contentZ'></a>
+		<div class='content' id='Content22'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item'  id='AccordeonItem23' onclick='toggleAccordion(23)'>
+		<a id='Accordeon23' class='contentZ'></a>
+		<div class='content' id='Content23'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item'  id='AccordeonItem24' onclick='toggleAccordion(24)'>
+		<a id='Accordeon24' class='contentZ'></a>
+		<div class='content' id='Content24'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item'  id='AccordeonItem25' onclick='toggleAccordion(25)'>
+		<a id='Accordeon25' class='contentZ'></a>
+		<div class='content' id='Content25'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item'  id='AccordeonItem26' onclick='toggleAccordion(26)'>
+		<a id='Accordeon26' class='contentZ'></a>
+		<div class='content' id='Content26'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item'  id='AccordeonItem27' onclick='toggleAccordion(27)'>
+		<a id='Accordeon27 class='contentZ''></a>
+		<div class='content' id='Content27'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item'  id='AccordeonItem28' onclick='toggleAccordion(28)'>
+		<a id='Accordeon28' class='contentZ'></a>
+		<div class='content' id='Content28'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item'  id='AccordeonItem29' onclick='toggleAccordion(29)'>
+		<a id='Accordeon29' class='contentZ'></a>
+		<div class='content' id='Content29'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item'  id='AccordeonItem30' onclick='toggleAccordion(30)'>
+		<a id='Accordeon30' class='contentZ'></a>
+		<div class='content' id='Content30'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item'  id='AccordeonItem31' onclick='toggleAccordion(31)'>
+		<a id='Accordeon31' class='contentZ'></a>
+		<div class='content' id='Content31'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item'  id='AccordeonItem32' onclick='toggleAccordion(32)'>
+		<a id='Accordeon32' class='contentZ'></a>
+		<div class='content' id='Content32'>
+		<p></p>
+		</div>
+		</div>
+		<div class='accordion-item'  id='AccordeonItem33' onclick='toggleAccordion(33)'>
+		<a id='Accordeon33' class='contentZ'></a>
+		<div class='content' id='Content33'>
+		<p></p>
+		</div>
+		</div>
+
+
+
+
+
+
+
   </div>
 
 </div>
