@@ -13,6 +13,10 @@
 function Debut() {
 //	alert("ok debut")
 	  loadData()
+		alert("fini")
+
+			document.getElementById("AccordeonItem1" ).style.display = "none";
+
       }
   function loadData() {
   var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRPAA3qaqB_cOanF7wucoqkea5OLqi5OR-DR6n2cX_yNIGPU5Gfbsh6mSNC9zLPxeHQLmBZ5SWh9-kh/pub?gid=456137167&single=true&output=csv";
@@ -24,7 +28,7 @@ function Debut() {
             const parts = xmlhttp.responseText.split("|");
 						Maxi=parts.length
 						Maxi=Math.floor(Maxi/3)+1
-						alert(Maxi)
+						//alert(Maxi)
 						//Bout = Math.floor(parts.length/3) Math.round
 						//Alert(Bout)
 //alert(xmlhttp.responseText)
@@ -45,9 +49,7 @@ function Debut() {
    		         result = var0.substring(0, var0.length-2);
 		           document.getElementById("Content" +(i+1)).innerHTML=result
              }
-						 alert("fini")
 
-						 //	document.getElementById("AccordeonItem1" ).style.display = "none";
 
 						 // for ( i = Maxi; i < 34; i += 1) {
              //    document.getElementById("Accordeon" +(i+1)).style.display = "none";
