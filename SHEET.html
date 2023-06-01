@@ -45,7 +45,10 @@ function Debut() {
    		         result = var0.substring(0, var0.length-2);
 		           document.getElementById("Content" +(i+1)).innerHTML=result
              }
-
+						 for ( i = Maxi; i < 34; i += 1) {
+                document.getElementById("Accordeon" +(i+1)).style.display = "none";
+ 		           document.getElementById("Content" +(i+1)).style.display = "none";
+              }
         }
     };
     xmlhttp.open("GET", url, true);
