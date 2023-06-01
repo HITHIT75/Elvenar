@@ -3,96 +3,218 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script >
+function Données(TypeTournoi) {
+if (TypeTournoi==="Marbre") {
+//  alert(TypeTournoi)
+    NbEtoileDifficulté = 2
+    Commentaire ="Marbre blabla"
+    Conseil ="kflk fklbf"
+    NatureTerrain="Rempart"
+    Image1Terrain=""
+    Image2Terrain=""
 
+    MeleeLegereEnnemie =10 // total des chiffre=100
+    PorteeLegereEnnemie =5 //
+    MagiqueEnnemie =20 //
+    MeleeLourdeEnnemie =50 //
+    PorteeLourdeEnnemie =15 //
+//alert(MeleeLegereEnnemie)
+
+    MeleeLegereCaserne =0 // 0 si pas recommandé 1  si recommandé force 2 si recommandé terrain 3 si recommandé force
+    PorteeLegereCaserne =0
+    MagiqueCaserne =0
+    MeleeLourdeCaserne =0
+    PorteeLourdeCaserne =0
+
+    MeleeLegereTerrain =0 // 0 si pas recommandé 1 si recommandé
+    PorteeLegereTerrain =0 // 0 si pas recommandé 1 si recommandé
+    MagiqueTerrain =0 // 0 si pas recommandé 1 si recommandé
+    MeleeLourdeTerrain =0 // 0 si pas recommandé 1 si recommandé
+    PorteeLourdeTerrain =0 // 0 si pas recommandé 1 si recommandé
+
+    MeleeLegereCamp =0 // 0 si pas recommandé 1 si recommandé
+    PorteeLegereCamp =0 // 0 si pas recommandé 1 si recommandé
+    MagiqueCamp =0 // 0 si pas recommandé 1 si recommandé
+    MeleeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
+    PorteeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
+}
+
+if (TypeTournoi==="Acier") {
+    NbEtoileDifficulté = 4
+    Commentaire ="...."
+    Conseil ="...."
+    NatureTerrain="Degage"
+    Image1Terrain=""
+    Image2Terrain=""
+
+    MeleeLegereEnnemie =10 // total des chiffre=100
+    PorteeLegereEnnemie =10 //
+    MagiqueEnnemie =70 //
+    MeleeLourdeEnnemie =5 //
+    PorteeLourdeEnnemie =5 //
+
+
+    MeleeLegereCaserne =0 // 0 si pas recommandé 1  si recommandé force 2 si recommandé terrain 3 si recommandé force
+    PorteeLegereCaserne =0
+    MagiqueCaserne =0
+    MeleeLourdeCaserne =0
+    PorteeLourdeCaserne =0
+
+    MeleeLegereTerrain =0 // 0 si pas recommandé 1 si recommandé
+    PorteeLegereTerrain =0 // 0 si pas recommandé 1 si recommandé
+    MagiqueTerrain =0 // 0 si pas recommandé 1 si recommandé
+    MeleeLourdeTerrain =0 // 0 si pas recommandé 1 si recommandé
+    PorteeLourdeTerrain =0 // 0 si pas recommandé 1 si recommandé
+
+    MeleeLegereCamp =0 // 0 si pas recommandé 1 si recommandé
+    PorteeLegereCamp =0 // 0 si pas recommandé 1 si recommandé
+    MagiqueCamp =0 // 0 si pas recommandé 1 si recommandé
+    MeleeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
+    PorteeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
+  }
+  //alert(MeleeLegereEnnemie)
+  Haut1=200*MeleeLegereEnnemie/100
+  Haut2=200*PorteeLegereEnnemie/100
+  Haut3=200*MagiqueEnnemie/100
+  Haut4=200*MeleeLourdeEnnemie/100
+  Haut5=200*PorteeLourdeEnnemie/100
+document.getElementById("Carre1").style.height=Haut1+"px"
+document.getElementById("Carre2").style.height=Haut2+"px"
+document.getElementById("Carre3").style.height=Haut3+"px"
+document.getElementById("Carre4").style.height=Haut4+"px"
+document.getElementById("Carre5").style.height=Haut5+"px"
+
+Chaine=""
+for ( i = 0; i < NbEtoileDifficulté; i += 1) {
+  Chaine=Chaine+"<img width='30px' src='https://fr.wiki.elvenar.com/images/a/a8/Level_small.png'>"
+}
+Chaine="Difficulté du tournoi:" + Chaine
+document.getElementById("Difficulte").innerHTML=Chaine
+document.getElementById("Conseil").innerHTML="Conseil:" + Conseil
+document.getElementById("Commentaire").innerHTML="Commentaire:" + Commentaire
+
+
+
+}
 function Debut() {
-//	alert("ok debut")
-	  document.getElementById("Premier").click();
+    handleChange2()
+	  Données("Marbre")
       }
+
+// function Genrer(this) {
+// 	alert(this.value)
+//
+//       }
+    function handleChange() {
+        document.getElementById("Mili10" ).innerHTML = "Unités combat caserne elfe";
+        document.getElementById("Mili11" ).src="https://fr.wiki.elvenar.com/images/d/df/Eb_lm_1_big.png";
+        document.getElementById("Mili12" ).src="https://fr.wiki.elvenar.com/images/4/49/Eb_lr_1_big.png";
+        document.getElementById("Mili13" ).src="https://fr.wiki.elvenar.com/images/a/a2/Eb_ma_1_big.png";
+        document.getElementById("Mili14" ).src="https://fr.wiki.elvenar.com/images/8/83/Eb_hm_1_big.png";
+        document.getElementById("Mili15" ).src="https://fr.wiki.elvenar.com/images/1/1f/Eb_hr_1_big.png";
+      }
+
+    function handleChange2() {
+          document.getElementById("Mili10" ).innerHTML = "Unités combat caserne humain";
+          document.getElementById("Mili11" ).src="https://fr.wiki.elvenar.com/images/d/df/Hb_lm_1_big.png";
+          document.getElementById("Mili12" ).src="https://fr.wiki.elvenar.com/images/e/e3/Hb_lr_1_big.png";
+          document.getElementById("Mili13" ).src="https://fr.wiki.elvenar.com/images/e/ed/Hb_ma_1_big.png";
+          document.getElementById("Mili14" ).src="https://fr.wiki.elvenar.com/images/6/6f/Hb_hm_1_big.png";
+          document.getElementById("Mili15" ).src="https://fr.wiki.elvenar.com/images/9/9f/Hb_hr_1_big.png";
+      }
+      function handleChangeR1() {
+          Données("Marbre")
+        }
+        function handleChangeR2() {
+          Données("Acier")
+          }
+
+
 </script >
 
 
 
 <style>
-body {font-family: Arial;}
+  body {font-family: Arial;}
 
-/* Style the tab */
-.tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-}
+  /* Style the tab */
+  .tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+  }
 
-/* Style the buttons inside the tab */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
-}
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
 
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
-}
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #ccc;
+  }
 
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-}
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
 
-.wrapper {
-  display: flex;
-  flex-flow: column wrap;
-  font-weight: bold;
-  text-align: center;
-  height: 100%;
+  .wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    font-weight: bold;
+    text-align: center;
+    height: 100%;
 
-}
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  margin: 0;
-}
-#main {
-  display: flex;
-  flex: 1;
-}
-#main > article {
-  flex: 1;
-}
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+  }
+  #main {
+    display: flex;
+    flex: 1;
+  }
+  #main > article {
+    flex: 1;
+  }
 
-#main > aside {
-  flex: 0 0 20vw;
-  background: beige;
-  width: 40%;
-}
-#main > nav {
-  flex: 0 0 7%;
-  background: beige;
-  // width: 10%;
-  order: -1;
-}
-header {
-  text-align:center;
-  background: yellowgreen;
-  height: 20%;
-}
-header,  article, nav, aside {
-  padding: 1em;
-}
+  #main > aside {
+    flex: 0 0 20vw;
+    background: beige;
+    width: 40%;
+  }
+  #main > nav {
+    flex: 0 0 8%;
+    background: beige;
+    // width: 10%;
+    order: -1;
+  }
+  header {
+    text-align:center;
+    background: yellowgreen;
+    height: 20%;
+  }
+  header,  article, nav, aside {
+    padding: 0em;
+  }
 
 
 
@@ -104,110 +226,189 @@ header,  article, nav, aside {
 <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'Prepa')" id="Premier">Préparation aux tournois</button>
   <button class="tablinks" onclick="openCity(event, 'Info')">Info troupes</button>
-  <button class="tablinks" onclick="openCity(event, 'Autre')">Autre</button>
+  <button class="tablinks" onclick="openCity(event, 'Autre')">Conseils</button>
 </div>
 
 
 <header>
-<Div style="display:inline-block;text-align:center;">
-    <INPUT TYPE="Radio" Name="Gender" Value="TourHum">humanoide
-      <img style="height:50px" src="Image/TournoiHumain.png">
-      <img style="height:50px" src="Image/TournoiElfe.png">
-    <INPUT TYPE="Radio" Name="Gender" Value="TourElfe">elfoide
-</div><br>
-<Div style="display:inline-block;;text-align:center">
-      <INPUT TYPE="Radio" Name="Gender" Value="Male">manuel
-      <img style="height:50px" src="https://cdn-icons-png.flaticon.com/512/1093/1093269.png">
-      <img style="height:50px" src="https://cdn-icons-png.flaticon.com/512/6471/6471690.png">
-      <INPUT TYPE="Radio" Name="Gender" Value="Female">automatique
-</div>
+<table style="margin-left: auto; margin-right: auto;">
+  <tr>
+    <td>Je suis</td>
+    <td><INPUT TYPE="Radio" Name="Genre" Value="TourHum" checked onchange="handleChange2();">humanoide</td>
+    <td><img style="height:50px" src="Image/TournoiHumain.png"></td>
+    <td><img style="height:50px" src="Image/TournoiElfe.png"></td>
+    <td><INPUT TYPE="Radio" Name="Genre" Value="TourElfe" onchange="handleChange();">elfoide</td>
+  </tr>
+  <tr>
+    <td>Je joue</td>
+    <td><INPUT TYPE="Radio" Name="Mode" Value="Male" checked>en manuel</td>
+    <td><img style="height:50px" src="https://cdn-icons-png.flaticon.com/512/1093/1093269.png"></td>
+    <td><img style="height:50px" src="https://cdn-icons-png.flaticon.com/512/6471/6471690.png"></td>
+    <td><INPUT TYPE="Radio" Name="Mode" Value="Female">en automatique</td>
+
+  </tr>
+</table>
+
 
 </header>
 <div id="main">
   <article>
-  <Div style="display:inline-block;text-align:center;">
-  Unités combat caserne elfe
-        <img style="width:50px" src="https://fr.wiki.elvenar.com/images/d/df/Eb_lm_1_big.png">
-        <img style="width:50px" src="https://fr.wiki.elvenar.com/images/4/49/Eb_lr_1_big.png">
-        <img style="width:50px" src="https://fr.wiki.elvenar.com/images/a/a2/Eb_ma_1_big.png">
-        <img style="width:50px" src="https://fr.wiki.elvenar.com/images/8/83/Eb_hm_1_big.png">
-        <img style="width:50px" src="https://fr.wiki.elvenar.com/images/1/1f/Eb_hr_1_big.png">
+  <table style="margin-left: auto; margin-right: auto;">
+    <tr style="text-align:center;" >
+    <td >
+    </td>
+      <td colspan="5"  id="Difficulte">
+      Difficulté du tournoi : <img width='30px' src='https://fr.wiki.elvenar.com/images/a/a8/Level_small.png'><img width='30px' src='https://fr.wiki.elvenar.com/images/a/a8/Level_small.png'>
+      </td>
+    </tr>
+    <tr style="text-align:center;" >
+    <td >
+    </td>
+      <td colspan="5" id="Conseil">
+      Conseil: Bien dormir avant<br><br>
+      </td>
+    </tr>
+    <tr style="text-align:center;" >
+    <td >
+    </td>
+      <td colspan="5" id="Commentaire">
+      Commentaire: Bien dormir avant
+      </td>
+    </tr>
+    <tr style="text-align:center;" >
+    <td >
+    </td>
+      <td colspan="5">
+      <br>Unités recommandées<br>
+      </td>
+    </tr>
 
-  </div><br>
-  <Div style="display:inline-block;text-align:center;">
-  Unités terrain d'entraînement
-        <img style="width:50px" src="https://fr.wiki.elvenar.com/images/5/59/Tg_lm_1_big.png">
-        <img style="width:50px" src="https://fr.wiki.elvenar.com/images/7/78/Tg_lr_1_big.png">
-        <img style="width:50px" src="https://fr.wiki.elvenar.com/images/b/b8/Tg_ma_1_big.png">
-        <img style="width:50px" src="https://no.wiki.elvenar.com/images/thumb/2/28/Tg_hm_1_big.png/108px-Tg_hm_1_big.png">
-        <img style="width:50px" src="https://fr.wiki.elvenar.com/images/5/5f/Tg_hr_1_big.png">
 
-  </div><br>
+    <tr style="text-align:center;" >
+      <td id="Mili10">Unités combat caserne elfe</td>
+        <td style="border: 2px solid red;"><img  id="Mili11" style="width:50px;border: 2px solid black;" src="https://fr.wiki.elvenar.com/images/d/df/Eb_lm_1_big.png"></td>
+        <td><img  id="Mili12" style="width:50px" src="https://fr.wiki.elvenar.com/images/4/49/Eb_lr_1_big.png"></td>
+        <td><img  id="Mili13" style="width:50px" src="https://fr.wiki.elvenar.com/images/a/a2/Eb_ma_1_big.png"></td>
+        <td><img  id="Mili14" style="width:50px" src="https://fr.wiki.elvenar.com/images/8/83/Eb_hm_1_big.png"></td>
+        <td><img  id="Mili15" style="width:50px" src="https://fr.wiki.elvenar.com/images/1/1f/Eb_hr_1_big.png"></td>
+      </tr>
+      <tr style="text-align:center;" >
+        <td>Unités terrain d'entraînement</td>
+        <td><img style="width:50px" src="https://fr.wiki.elvenar.com/images/5/59/Tg_lm_1_big.png"></td>
+        <td><img style="width:50px" src="https://fr.wiki.elvenar.com/images/7/78/Tg_lr_1_big.png"></td>
+        <td><img style="width:50px" src="https://fr.wiki.elvenar.com/images/b/b8/Tg_ma_1_big.png"></td>
+        <td><img style="width:50px" src="https://no.wiki.elvenar.com/images/thumb/2/28/Tg_hm_1_big.png/108px-Tg_hm_1_big.png"></td>
+        <td><img style="width:50px" src="https://fr.wiki.elvenar.com/images/5/5f/Tg_hr_1_big.png"></td>
+      </tr>
+
+      <tr style="text-align:center;" >
+        <td>Unités camp scout</td>
+        <td><img style="width:50px" src="https://fr.wiki.elvenar.com/images/8/8a/Mc_lm_1_big.png"></td>
+        <td><img style="width:50px" src="https://fr.wiki.elvenar.com/images/d/d0/Mc_lr_1_big.png"></td>
+        <td><img style="width:50px" src="https://fr.wiki.elvenar.com/images/6/6c/Mc_ma_1_big.png"></td>
+        <td><img style="width:50px" src="https://fr.wiki.elvenar.com/images/9/98/Mc_hm_1_big.png"></td>
+        <td><img style="width:50px" src="https://fr.wiki.elvenar.com/images/5/56/Mc_hr_1_big.png"></td>
+      </tr>
 
 
-  <Div style="display:inline-block;text-align:center;">
-  Unités camp scout
-        <img style="width:50px" src="https://fr.wiki.elvenar.com/images/8/8a/Mc_lm_1_big.png">
-        <img style="width:50px" src="https://fr.wiki.elvenar.com/images/d/d0/Mc_lr_1_big.png">
-        <img style="width:50px" src="https://fr.wiki.elvenar.com/images/6/6c/Mc_ma_1_big.png">
-        <img style="width:50px" src="https://fr.wiki.elvenar.com/images/9/98/Mc_hm_1_big.png">
-        <img style="width:50px" src="https://fr.wiki.elvenar.com/images/5/56/Mc_hr_1_big.png">
+      <tr style="text-align:center;vertical-align:bottom;" >
+        <td>Unités adverses</td>
+        <td><img id="Carre1" style="width:30px;height:60px;" src="Image/CarreBleu.png"></td>
+        <td><img id="Carre2" style="width:30px;height:10px;" src="Image/CarreBleu.png"</td>
+        <td><img id="Carre3" style="width:30px;height:20px;" src="Image/CarreBleu.png"</td>
+        <td><img id="Carre4" style="width:30px;height:5px;" src="Image/CarreBleu.png"</td>
+        <td><img id="Carre5" style="width:30px;height:30px;" src="Image/CarreBleu.png"</td>
+      </tr>
+      <tr style="text-align:center;" >
+        <td></td>
+        <td>Mêlée<br>légère</td>
+        <td>Portée <br>légère</td>
+        <td>Magiques</td>
+        <td>Mêlée <br>lourde</td>
+        <td>Portée <br>lourde</td>
+      </tr>
 
-  </div><br><br><br><br><br><br>
 
-  <Div style="display:inline-block;text-align:center;">
-  Unités de provinces
-  <img style='width:50px' src='https://fr.wiki.elvenar.com/images/7/76/Mob_eblm_1_big.png'>
-  <img style='width:50px' src='https://fr.wiki.elvenar.com/images/e/e5/Mob_hblm_1_big.png'>
-  <img style='width:50px' src='https://fr.wiki.elvenar.com/images/9/92/Mob_tglm_1_big.png'>
-  <img style='width:50px' src='https://fr.wiki.elvenar.com/images/c/c6/Mob_eblr_1_big.png'>
-  <img style='width:50px' src='https://fr.wiki.elvenar.com/images/a/a5/Mob_hblr_1_big.png'>
-  <img style='width:50px' src='https://fr.wiki.elvenar.com/images/2/2e/Mob_tglr_1_big.png'>
-  <img style='width:50px' src='https://fr.wiki.elvenar.com/images/7/77/Mob_ebma_1_big.png'>
-  <img style='width:50px' src='https://fr.wiki.elvenar.com/images/d/d0/Mc_lr_1_big.png'>
-  <img style='width:50px' src='https://fr.wiki.elvenar.com/images/7/78/Tg_lr_1_big.png'>
-  <img style='width:50px' src='https://fr.wiki.elvenar.com/images/9/99/Mob_hbma_1_big.png'>
-  <img style='width:50px' src='https://fr.wiki.elvenar.com/images/1/1e/Mob_mcma_1_big.png'>
-  <img style='width:50px' src='https://fr.wiki.elvenar.com/images/0/0b/Mob_ebhm_1_big.png'>
-  <img style='width:50px' src='https://fr.wiki.elvenar.com/images/2/2e/Mob_hbhm_1_big.png'>
-  <img style='width:50px' src='https://fr.wiki.elvenar.com/images/c/c0/Mob_tghm_1_big.png'>
-  <img style='width:50px' src='https://fr.wiki.elvenar.com/images/1/16/Mob_ebhr_1_big.png'>
-  <img style='width:50px' src='https://fr.wiki.elvenar.com/images/8/89/Mob_hbhr_1_big.png'>
-  <img style='width:50px' src='https://fr.wiki.elvenar.com/images/b/b1/Mob_tghr_1_big.png'>
+    </table>
 
-  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </article>
 
 
   <nav>
-  <img style="height:30px" src="https://fr.wiki.elvenar.com/images/3/39/Good_marble_big.png">
-  <INPUT TYPE="Radio" Name="Gender" Value="T1">Marbre
-    <br>
-    <img style="height:30px" src="https://fr.wiki.elvenar.com/images/5/58/Good_steel_big.png">
-    <INPUT TYPE="Radio" Name="Gender" Value="T2">Acier
-      <br>
-      <img style="height:30px" src="https://fr.wiki.elvenar.com/images/3/3e/Good_planks_big.png">
-      <INPUT TYPE="Radio" Name="Gender" Value="T1">Marbre
-        <br>
-        <img style="height:30px" src="https://fr.wiki.elvenar.com/images/0/07/Good_crystal_big.png">
-        <INPUT TYPE="Radio" Name="Gender" Value="T2">Acier
-          <br>
-    <img style="height:30px" src="https://fr.wiki.elvenar.com/images/3/3d/Good_scrolls_big.png">
-    <INPUT TYPE="Radio" Name="Gender" Value="T1">Marbre
-      <br>
-    <img style="height:30px" src="https://fr.wiki.elvenar.com/images/2/2b/Good_silk_big.png">
-    <INPUT TYPE="Radio" Name="Gender" Value="T2">Acier
-      <br>
-      <img style="height:30px" src="https://fr.wiki.elvenar.com/index.php?title=Fichier:Good_elixir_big.png">
-      <INPUT TYPE="Radio" Name="Gender" Value="T1">Marbre
-      <br>
-      <img style="height:30px" src="https://fr.wiki.elvenar.com/images/f/f6/Good_magic_dust_big.png">
-      <INPUT TYPE="Radio" Name="Gender" Value="T2">Acier
-        <br>
-        <img style="height:30px" src="https://fr.wiki.elvenar.com/images/3/38/Good_gems_big.png">
-        <INPUT TYPE="Radio" Name="Gender" Value="T2">Acier
+    <table>
+      <tr>
+        <td><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/3/39/Good_marble_big.png"></td>
+        <td>Marbre</td>
+        <td><img style="height:30px;"><INPUT TYPE="Radio"  onchange="handleChangeR1();" checked style="vertical-align: baseline;" Name="TypeTournoi" Value="T1"></td>
+      </tr>
+      <tr>
+      <td><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/5/58/Good_steel_big.png"></td>
+      <td>Acier</td>
+      <td><INPUT TYPE="Radio"  onchange="handleChangeR2();" Name="TypeTournoi" Value="T2"></td>
+      </tr>
+      <tr>
+        <td><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/3/3e/Good_planks_big.png"></td>
+        <td>Planches</td>
+        <td><INPUT TYPE="Radio" Name="TypeTournoi" Value="T3"></td>
+      </tr>
+      <tr>
+          <td><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/0/07/Good_crystal_big.png"></td>
+          <td>Cristal</td>
+          <td><INPUT TYPE="Radio" Name="TypeTournoi" Value="T2"></td>
+      </tr>
+      <tr>
+        <td><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/3/3d/Good_scrolls_big.png"></td>
+        <td>Parchemins</td>
+        <td><INPUT TYPE="Radio" Name="TypeTournoi" Value="T1"></td>
+      </div>
+      </tr>
+      <tr>
+
+      <td><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/2/2b/Good_silk_big.png"></td>
+      <td>Soie</td>
+      <td><INPUT TYPE="Radio" Name="TypeTournoi" Value="T2"></td>
+      </tr>
+      <tr>
+        <td><img style="height:30px" src="https://fr.wiki.elvenar.com/images/f/f1/Good_elixir_big.png"></td>
+        <td>Elixir</td>
+        <td><INPUT TYPE="Radio" Name="TypeTournoi" Value="T1"></td>
+        </tr>
+
+        <tr>
+        <td><img style="height:30px" src="https://fr.wiki.elvenar.com/images/f/f6/Good_magic_dust_big.png"></td>
+        <td>Poussiere</td>
+        <td><INPUT TYPE="Radio" Name="TypeTournoi" Value="T2"></td>
+        </tr>
+
+        <tr>
+          <td><img style="height:30px" src="https://fr.wiki.elvenar.com/images/3/38/Good_gems_big.png"></td>
+          <td>Gemmes</td>
+          <td><INPUT TYPE="Radio" Name="TypeTournoi" Value="T2"></td>
+        </tr>
+
+
+
+    </table>
+
 
   </nav>
+
+
   <aside>
   <textarea id="story" name="story"
   rows="10" cols="30">
