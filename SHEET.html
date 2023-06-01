@@ -22,6 +22,8 @@ function Debut() {
         if (xmlhttp.readyState == 4) {
 
             const parts = xmlhttp.responseText.split("|");
+						Bout = Math.floor(parts.length/3)
+						Alert(Bout)
 //alert(xmlhttp.responseText)
 							//var0=parts[0]
    		         //result = var0.substring(0, var0.length-2);
@@ -31,7 +33,7 @@ function Debut() {
 		 //          document.getElementById("Content" +(1)).innerHTML=result
 		 				//Math.floor(a)
 
-            for ( i = 0; i < 4; i += 1) {
+            for ( i = 0; i < 5; i += 1) {
               j=i*3    //Math.floor(a)
 		           var0=parts[j]
    		         result = var0.substring(0, var0.length-2);
@@ -214,9 +216,9 @@ h3 {
       </div>
     </div>
     <div class="accordion-item" onclick="toggleAccordion(5)">
-      <a>Comment devenir un imbecile ingrat?</a>
+      <a></a>
       <div class="content" id="Content5">
-        <p>Pour certains c´est inné. Cf le codeur Hit .</p>
+        <p></p>
       </div>
     </div>
   </div>
