@@ -24,7 +24,7 @@ function Debut() {
             const parts = xmlhttp.responseText.split("|");
 						Maxi=parts.length
 						Maxi=Math.floor(Maxi/3)+1
-						alert(Maxi)
+						//alert(Maxi)
 						//Bout = Math.floor(parts.length/3) Math.round
 						//Alert(Bout)
 //alert(xmlhttp.responseText)
@@ -45,6 +45,7 @@ function Debut() {
    		         result = var0.substring(0, var0.length-2);
 		           document.getElementById("Content" +(i+1)).innerHTML=result
              }
+						 alert("fini")
 						 for ( i = Maxi; i < 34; i += 1) {
                 document.getElementById("Accordeon" +(i+1)).style.display = "none";
  		           document.getElementById("Content" +(i+1)).style.display = "none";
