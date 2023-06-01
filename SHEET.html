@@ -46,10 +46,13 @@ function Debut() {
 		           document.getElementById("Content" +(i+1)).innerHTML=result
              }
 						 alert("fini")
-						 for ( i = Maxi; i < 34; i += 1) {
-                document.getElementById("Accordeon" +(i+1)).style.display = "none";
- 		           document.getElementById("Content" +(i+1)).style.display = "none";
-              }
+
+						 	document.getElementById("AccordeonItem1" ).style.display = "none";
+
+						 // for ( i = Maxi; i < 34; i += 1) {
+             //    document.getElementById("Accordeon" +(i+1)).style.display = "none";
+ 		         //   document.getElementById("Content" +(i+1)).style.display = "none";
+             //  }
         }
     };
     xmlhttp.open("GET", url, true);
@@ -198,7 +201,7 @@ h3 {
 
 
   <div class="accordion">
-    <div class="accordion-item"   onclick="toggleAccordion(1)">
+    <div class="accordion-item" id="AccordeonItem1"  onclick="toggleAccordion(1)">
       <a id="Accordeon1">........</a>
       <div class="content" id="Content1">
         <p >...</p>
