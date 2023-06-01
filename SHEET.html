@@ -23,7 +23,7 @@ function Debut() {
 
             const parts = xmlhttp.responseText.split("|");
 						Maxi=parts.length
-						Maxi=Math.floor(Maxi/3)
+						Maxi=Math.floor(Maxi/3)+1
 						alert(Maxi)
 						//Bout = Math.floor(parts.length/3) Math.round
 						//Alert(Bout)
@@ -36,7 +36,7 @@ function Debut() {
 		 //          document.getElementById("Content" +(1)).innerHTML=result
 		 				//Math.floor(a)
 
-            for ( i = 0; i < 5; i += 1) {
+            for ( i = 0; i < Maxi; i += 1) {
               j=i*3    //Math.floor(a)
 		           var0=parts[j]
    		         result = var0.substring(0, var0.length-2);
