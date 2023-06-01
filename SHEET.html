@@ -13,16 +13,16 @@
 function Debut() {
 //	alert("ok debut")
 	  loadData()
-		alert("fini")
-		for ( i = 1; i < 34; i += 1) {
-				if (document.getElementById("Accordeon" +(i)).innerHTML==="") {
-					tot=tot+1
-				}
-				else {
-					tat=tat+1
-				}
-			}
-		alert(tot +"   " + tat)
+	//	alert("fini")
+		// for ( i = 1; i < 34; i += 1) {
+		// 		if (document.getElementById("Accordeon" +(i)).innerHTML==="") {
+		// 			tot=tot+1
+		// 		}
+		// 		else {
+		// 			tat=tat+1
+		// 		}
+		// 	}
+		// alert(tot +"   " + tat)
       }
   function loadData() {
   var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRPAA3qaqB_cOanF7wucoqkea5OLqi5OR-DR6n2cX_yNIGPU5Gfbsh6mSNC9zLPxeHQLmBZ5SWh9-kh/pub?gid=456137167&single=true&output=csv";
@@ -199,6 +199,13 @@ h3 {
   -o-transition: all 0.35s ease 0.15s;
   transition: all 0.35s ease 0.15s;
 }
+.content:empty {
+  display: none;
+}
+.contentZ:empty {
+  display: none;
+}
+
 </style>
 
 
@@ -212,199 +219,199 @@ h3 {
 
   <div class="accordion">
     <div class="accordion-item"  id="AccordeonItem1"  onclick="toggleAccordion(1)">
-      <a id="Accordeon1">........</a>
+      <a id="Accordeon1" class='contentZ'>........</a>
       <div class="content" id="Content1">
         <p >...</p>
       </div>
     </div>
 		<div class='accordion-item'   id='AccordeonItem2' onclick='toggleAccordion(2)'>
-		<a id='Accordeon2'></a>
+		<a id='Accordeon2' class='contentZ'></a>
 		<div class='content' id='Content2'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item' style =    id='AccordeonItem3' onclick='toggleAccordion(3)'>
-		<a id='Accordeon3'></a>
+		<a id='Accordeon3' class='contentZ'></a>
 		<div class='content' id='Content3'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item'  id='AccordeonItem4' onclick='toggleAccordion(4)'>
-		<a id='Accordeon4'></a>
+		<a id='Accordeon4' class='contentZ'></a>
 		<div class='content' id='Content4'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item'  id='AccordeonItem5' onclick='toggleAccordion(5)'>
-		<a id='Accordeon5'></a>
+		<a id='Accordeon5' class='contentZ'></a>
 		<div class='content' id='Content5'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item'  id='AccordeonItem6' onclick='toggleAccordion(6)'>
-		<a id='Accordeon6'></a>
+		<a id='Accordeon6' class='contentZ'></a>
 		<div class='content' id='Content6'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item'  id='AccordeonItem7' onclick='toggleAccordion(7)'>
-		<a id='Accordeon7'></a>
+		<a id='Accordeon7' class='contentZ'></a>
 		<div class='content' id='Content7'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item'  id='AccordeonItem8' onclick='toggleAccordion(8)'>
-		<a id='Accordeon8'></a>
+		<a id='Accordeon8' class='contentZ'></a>
 		<div class='content' id='Content8'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item'  id='AccordeonItem9' onclick='toggleAccordion(9)'>
-		<a id='Accordeon9'></a>
+		<a id='Accordeon9' class='contentZ'></a>
 		<div class='content' id='Content9'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item'  id='AccordeonItem10' onclick='toggleAccordion(10)'>
-		<a id='Accordeon10'></a>
+		<a id='Accordeon10' class='contentZ'></a>
 		<div class='content' id='Content10'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item'  id='AccordeonItem11' onclick='toggleAccordion(11)'>
-		<a id='Accordeon11'></a>
+		<a id='Accordeon11' class='contentZ'></a>
 		<div class='content' id='Content11'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item'  id='AccordeonItem12' onclick='toggleAccordion(12)'>
-		<a id='Accordeon12'></a>
+		<a id='Accordeon12' class='contentZ'></a>
 		<div class='content' id='Content12'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item'  id='AccordeonItem13' onclick='toggleAccordion(13)'>
-		<a id='Accordeon13'></a>
+		<a id='Accordeon13' class='contentZ'></a>
 		<div class='content' id='Content13'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item'  id='AccordeonItem14' onclick='toggleAccordion(14)'>
-		<a id='Accordeon14'></a>
+		<a id='Accordeon14' class='contentZ'></a>
 		<div class='content' id='Content14'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item'  id='AccordeonItem15' onclick='toggleAccordion(15)'>
-		<a id='Accordeon15'></a>
+		<a id='Accordeon15' class='contentZ'></a>
 		<div class='content' id='Content15'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item'  id='AccordeonItem16' onclick='toggleAccordion(16)'>
-		<a id='Accordeon16'></a>
+		<a id='Accordeon16' class='contentZ'></a>
 		<div class='content' id='Content16'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item'  id='AccordeonItem17' onclick='toggleAccordion(17)'>
-		<a id='Accordeon17'></a>
+		<a id='Accordeon17' class='contentZ'></a>
 		<div class='content' id='Content17'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item'  id='AccordeonItem18' onclick='toggleAccordion(18)'>
-		<a id='Accordeon18'></a>
+		<a id='Accordeon18' class='contentZ'></a>
 		<div class='content' id='Content18'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item'  id='AccordeonItem19' onclick='toggleAccordion(19)'>
-		<a id='Accordeon19'></a>
+		<a id='Accordeon19' class='contentZ'></a>
 		<div class='content' id='Content19'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item'  id='AccordeonItem20' onclick='toggleAccordion(20)'>
-		<a id='Accordeon20'></a>
+		<a id='Accordeon20' class='contentZ'></a>
 		<div class='content' id='Content20'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item'  id='AccordeonItem21' onclick='toggleAccordion(21)'>
-		<a id='Accordeon21'></a>
+		<a id='Accordeon21' class='contentZ'></a>
 		<div class='content' id='Content21'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item'  id='AccordeonItem22' onclick='toggleAccordion(22)'>
-		<a id='Accordeon22'></a>
+		<a id='Accordeon22' class='contentZ'></a>
 		<div class='content' id='Content22'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item'  id='AccordeonItem23' onclick='toggleAccordion(23)'>
-		<a id='Accordeon23'></a>
+		<a id='Accordeon23' class='contentZ'></a>
 		<div class='content' id='Content23'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item'  id='AccordeonItem24' onclick='toggleAccordion(24)'>
-		<a id='Accordeon24'></a>
+		<a id='Accordeon24' class='contentZ'></a>
 		<div class='content' id='Content24'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item'  id='AccordeonItem25' onclick='toggleAccordion(25)'>
-		<a id='Accordeon25'></a>
+		<a id='Accordeon25' class='contentZ'></a>
 		<div class='content' id='Content25'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item'  id='AccordeonItem26' onclick='toggleAccordion(26)'>
-		<a id='Accordeon26'></a>
+		<a id='Accordeon26' class='contentZ'></a>
 		<div class='content' id='Content26'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item'  id='AccordeonItem27' onclick='toggleAccordion(27)'>
-		<a id='Accordeon27'></a>
+		<a id='Accordeon27 class='contentZ''></a>
 		<div class='content' id='Content27'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item'  id='AccordeonItem28' onclick='toggleAccordion(28)'>
-		<a id='Accordeon28'></a>
+		<a id='Accordeon28' class='contentZ'></a>
 		<div class='content' id='Content28'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item'  id='AccordeonItem29' onclick='toggleAccordion(29)'>
-		<a id='Accordeon29'></a>
+		<a id='Accordeon29' class='contentZ'></a>
 		<div class='content' id='Content29'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item'  id='AccordeonItem30' onclick='toggleAccordion(30)'>
-		<a id='Accordeon30'></a>
+		<a id='Accordeon30' class='contentZ'></a>
 		<div class='content' id='Content30'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item'  id='AccordeonItem31' onclick='toggleAccordion(31)'>
-		<a id='Accordeon31'></a>
+		<a id='Accordeon31' class='contentZ'></a>
 		<div class='content' id='Content31'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item'  id='AccordeonItem32' onclick='toggleAccordion(32)'>
-		<a id='Accordeon32'></a>
+		<a id='Accordeon32' class='contentZ'></a>
 		<div class='content' id='Content32'>
 		<p></p>
 		</div>
 		</div>
 		<div class='accordion-item'  id='AccordeonItem33' onclick='toggleAccordion(33)'>
-		<a id='Accordeon33'></a>
+		<a id='Accordeon33' class='contentZ'></a>
 		<div class='content' id='Content33'>
 		<p></p>
 		</div>
