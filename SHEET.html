@@ -11,7 +11,7 @@
 <script >
 
 function Debut() {
-	alert("ok debut")
+//	alert("ok debut")
 	  loadData()
       }
   function loadData() {
@@ -22,7 +22,7 @@ function Debut() {
         if (xmlhttp.readyState == 4) {
 
             const parts = xmlhttp.responseText.split("|");
-alert(xmlhttp.responseText)
+//alert(xmlhttp.responseText)
 							var0=parts[0]
    		         result = var0.substring(0, var0.length-2);
                document.getElementById("Accordeon" +1).innerHTML=result
@@ -31,15 +31,15 @@ alert(xmlhttp.responseText)
 		 //          document.getElementById("Content" +(1)).innerHTML=result
 
 
-            //for ( i = 0; i < 4; i += 1) {
-             // j=i*3    //Math.floor(a)
-		//           var0=parts[j]
-   		//         result = var0.substring(0, var0.length-2);
-            //   document.getElementById("Accordeon" +(i+1)).innerHTML=result
-            //   var0=parts[j+1]
-   		//         result = var0.substring(0, var0.length-2);
-		//           document.getElementById("Content" +(i+1)).innerHTML=result
-             //}
+            for ( i = 0; i < 2; i += 1) {
+              j=i*3    //Math.floor(a)
+		           var0=parts[j]
+   		         result = var0.substring(0, var0.length-2);
+               document.getElementById("Accordeon" +(i+1)).innerHTML=result
+               var0=parts[j+1]
+   		         result = var0.substring(0, var0.length-2);
+		           document.getElementById("Content" +(i+1)).innerHTML=result
+             }
 
         }
     };
