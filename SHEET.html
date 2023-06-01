@@ -11,6 +11,7 @@
 <script >
 
 function Debut() {
+	alert("ok debut")
 	  loadData()
       }
   function loadData() {
@@ -19,9 +20,9 @@ function Debut() {
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4) {
-alert(responseText)
-            const parts = xmlhttp.responseText.split("|");
 
+            const parts = xmlhttp.responseText.split("|");
+alert(xmlhttp.responseText)
 							var0=parts[0]
    		         result = var0.substring(0, var0.length-2);
                document.getElementById("Accordeon" +1).innerHTML=result
