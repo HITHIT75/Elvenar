@@ -51,6 +51,8 @@ function Debut() {
               j=i*3    //Math.floor(a)
 		           var0=parts[j]
    		         result = var0.substring(0, var0.length-3);
+		    	//result = result.replace('l', ''))
+		    
                document.getElementById("Accordeon" +(i+1)).innerHTML=result
                var0=parts[j+1]
    		         result = var0.substring(0, var0.length-3);
@@ -138,7 +140,7 @@ h3 {
 .accordion-item a {
   background-image: url("Image/FondFAQ4.png");
 	background-size: cover;
-	padding-rigth:60px;
+	padding-right:60px;
   }
 .accordion a:hover,
 .accordion a:hover::after {
