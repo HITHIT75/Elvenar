@@ -51,11 +51,12 @@ function Debut() {
               j=i*3    //Math.floor(a)
 		           var0=parts[j]
    		         result = var0.substring(0, var0.length-3);
-		    	//result = result.replace('l', ''))
+		    	result = result.replaceAll("\"","")
 		    
                document.getElementById("Accordeon" +(i+1)).innerHTML=result
                var0=parts[j+1]
    		         result = var0.substring(0, var0.length-3);
+		    		result = result.replaceAll("\"","")
 		           document.getElementById("Content" +(i+1)).innerHTML=result
 
              }
