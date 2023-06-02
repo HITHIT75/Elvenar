@@ -356,36 +356,79 @@ function Debut() {
           document.getElementById("Mili14" ).src="https://fr.wiki.elvenar.com/images/6/6f/Hb_hm_1_big.png";
           document.getElementById("Mili15" ).src="https://fr.wiki.elvenar.com/images/9/9f/Hb_hr_1_big.png";
       }
+      function handleChangeAll(Num, Vecteur) {
+        Res=document.getElementById("Tournoi").innerHTML
+         document.getElementById("MenuB" + Res).style.backgroundColor=""
+         document.getElementById("MenuA" + Res).style.backgroundColor=""
+         document.getElementById("Recommande").innerHTML="Unités recommandées pour le tournoi " + Vecteur
+          document.getElementById("Tournoi").innerHTML=Num
+           document.getElementById("MenuB" + Num).style.backgroundColor="#F9C291"
+           document.getElementById("MenuA" + Num).style.backgroundColor="#F9C291"
+           if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+             CacherMenu()
+           }
+
+      }
       function handleChangeR1() {
+          handleChangeAll(1,"de Marbre")
           Données("Marbre")
         }
       function handleChangeR2() {
+          handleChangeAll(2,"d'Acier")
           Données("Acier")
           }
       function handleChangeR3() {
+        handleChangeAll(3,"de Planches")
               Données("Planches")
             }
       function handleChangeR4() {
+          handleChangeAll(4,"de Cristal")
               Données("Cristal")
               }
       function handleChangeR5() {
+          handleChangeAll(5,"de Parchemins")
                   Données("Parchemins")
                 }
       function handleChangeR6() {
+        handleChangeAll(6,"de Soie")
                   Données("Soie")
                   }
       function handleChangeR7() {
+        handleChangeAll(7,"d'Elixir")
                           Données("Elixir")
                           }
       function handleChangeR8() {
+        handleChangeAll(8,"de Poussiere")
                               Données("Poussiere")
                             }
       function handleChangeR9() {
+        handleChangeAll(9,"de Gemmes")
                               Données("Gemmes")
                               }
 
 
-
+      function CacherMenu() {
+        passage=0
+        document.getElementById("MenuA1").classList.toggle("MenuGI");
+        document.getElementById("MenuB1").classList.toggle("MenuGI");
+        document.getElementById("MenuA2").classList.toggle("MenuGI");
+        document.getElementById("MenuB2").classList.toggle("MenuGI");
+        document.getElementById("MenuA3").classList.toggle("MenuGI");
+        document.getElementById("MenuB3").classList.toggle("MenuGI");
+        document.getElementById("MenuA4").classList.toggle("MenuGI");
+        document.getElementById("MenuB4").classList.toggle("MenuGI");
+        document.getElementById("MenuA5").classList.toggle("MenuGI");
+        document.getElementById("MenuB5").classList.toggle("MenuGI");
+        document.getElementById("MenuA6").classList.toggle("MenuGI");
+        document.getElementById("MenuB6").classList.toggle("MenuGI");
+        document.getElementById("MenuA7").classList.toggle("MenuGI");
+        document.getElementById("MenuB7").classList.toggle("MenuGI");
+        document.getElementById("MenuA8").classList.toggle("MenuGI");
+        document.getElementById("MenuB8").classList.toggle("MenuGI");
+        document.getElementById("MenuA9").classList.toggle("MenuGI");
+        document.getElementById("MenuB9").classList.toggle("MenuGI");
+        document.getElementById("TriangleMenuG").classList.toggle("TriangleMenuGI");
+      }
 
 
 </script >
@@ -471,6 +514,25 @@ function Debut() {
     padding: 0em;
   }
 
+.MenuG {
+  display:content;
+  cursor:pointer;
+}
+.MenuGI {
+  display:none;
+}
+.TriangleMenuG {
+  background-image: url("Image/TriangleMenu2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor:pointer;
+}
+.TriangleMenuGI {
+  background-image: url("Image/TriangleMenu.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor:pointer;
+}
 
 
 </style>
@@ -534,7 +596,7 @@ function Debut() {
     <td >
     </td>
       <td colspan="5">
-      <br>Unités recommandées<br>
+      <br><div id="Recommande">Unités recommandées</div><br>
       </td>
     </tr>
 
@@ -605,55 +667,55 @@ function Debut() {
 
 
   <nav>
-    <table>
+  <div id="Tournoi" style="display:none">1</div>
+    <table style="border-collapse;border-spacing : 0;">
       <tr>
-        <td><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/3/39/Good_marble_big.png"></td>
-        <td>Marbre</td>
-        <td><img style="height:30px;"><INPUT TYPE="Radio"  onchange="handleChangeR1();" checked style="vertical-align: baseline;" Name="TypeTournoi" Value="T1"></td>
+        <td  onclick="handleChangeR1();" class="MenuG" id="MenuA1"   style="border-left: 4px solid green;border-top: 4px solid green;background-color:#F9C291"><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/3/39/Good_marble_big.png"></td>
+        <td  onclick="handleChangeR1();" class="MenuG"  id="MenuB1"   style="border-top: 4px solid green;border-right: 4px solid green;border-top-right-radius : 20px;background-color:#F9C291">Marbre</td>
+        <td></td>
       </tr>
       <tr>
-      <td><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/5/58/Good_steel_big.png"></td>
-      <td>Acier</td>
-      <td><INPUT TYPE="Radio"  onchange="handleChangeR2();" Name="TypeTournoi" Value="T2"></td>
+      <td  onclick="handleChangeR2();" class="MenuG" id="MenuA2"  style="border-left: 4px solid green;"><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/5/58/Good_steel_big.png"></td>
+      <td  onclick="handleChangeR2();" class="MenuG"  id="MenuB2"  style="border-right: 4px solid green;">Acier</td>
+      <td></td>
       </tr>
       <tr>
-        <td><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/3/3e/Good_planks_big.png"></td>
-        <td>Planches</td>
-        <td><INPUT TYPE="Radio"  onchange="handleChangeR3();" Name="TypeTournoi" Value="T3"></td>
+        <td  onclick="handleChangeR3();" lass="MenuG" id="MenuA3"   style="border-left: 4px solid green;"><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/3/3e/Good_planks_big.png"></td>
+        <td  onclick="handleChangeR3();" class="MenuG"  id="MenuB3"  style="border-right: 4px solid green;">Planches</td>
+        <td></td>
       </tr>
       <tr>
-          <td><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/0/07/Good_crystal_big.png"></td>
-          <td>Cristal</td>
-          <td><INPUT TYPE="Radio" onchange="handleChangeR4();"  Name="TypeTournoi" Value="T2"></td>
+          <td  onclick="handleChangeR4();" class="MenuG" id="MenuA4"   style="border-left: 4px solid green;"><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/0/07/Good_crystal_big.png"></td>
+          <td  onclick="handleChangeR4();" class="MenuG"  id="MenuB4"  style="border-right: 4px solid green;">Cristal</td>
+          <td></td>
       </tr>
       <tr>
-        <td><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/3/3d/Good_scrolls_big.png"></td>
-        <td>Parchemins</td>
-        <td><INPUT TYPE="Radio" onchange="handleChangeR5();"  Name="TypeTournoi" Value="T1"></td>
+        <td  onclick="handleChangeR5();" class="MenuG" id="MenuA5"    style="border-left: 4px solid green;"><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/3/3d/Good_scrolls_big.png"></td>
+        <td  onclick="handleChangeR5();" class="MenuG"  id="MenuB5"  style="border-right: 4px solid green;">Parchemins</td>
+        <td><Div class="TriangleMenuG" id="TriangleMenuG" onclick="CacherMenu()" style="height:50px;">.......</div></td>
       </div>
       </tr>
       <tr>
-
-      <td><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/2/2b/Good_silk_big.png"></td>
-      <td>Soie</td>
-      <td><INPUT TYPE="Radio"  onchange="handleChangeR6();" Name="TypeTournoi" Value="T2"></td>
+      <td  onclick="handleChangeR6();" class="MenuG" id="MenuA6"   style="border-left: 4px solid green;"><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/2/2b/Good_silk_big.png"></td>
+      <td  onclick="handleChangeR6();" class="MenuG"  id="MenuB6"  style="border-right: 4px solid green;">Soie</td>
+      <td></td>
       </tr>
       <tr>
-        <td><img style="height:30px" src="https://fr.wiki.elvenar.com/images/f/f1/Good_elixir_big.png"></td>
-        <td>Elixir</td>
-        <td><INPUT TYPE="Radio"  onchange="handleChangeR7();" Name="TypeTournoi" Value="T1"></td>
+        <td  onclick="handleChangeR7();" class="MenuG" id="MenuA7"   style="border-left: 4px solid green;"><img style="height:30px" src="https://fr.wiki.elvenar.com/images/f/f1/Good_elixir_big.png"></td>
+        <td  onclick="handleChangeR7();" class="MenuG"  id="MenuB7"  style="border-right: 4px solid green;">Elixir</td>
+        <td></td>
         </tr>
 
         <tr>
-        <td><img style="height:30px" src="https://fr.wiki.elvenar.com/images/f/f6/Good_magic_dust_big.png"></td>
-        <td>Poussiere</td>
-        <td><INPUT TYPE="Radio"  onchange="handleChangeR8();" Name="TypeTournoi" Value="T2"></td>
+        <td  onclick="handleChangeR8();" class="MenuG" id="MenuA8"   style="border-left: 4px solid green;"><img style="height:30px" src="https://fr.wiki.elvenar.com/images/f/f6/Good_magic_dust_big.png"></td>
+        <td  onclick="handleChangeR8();" class="MenuG"  id="MenuB8"  style="border-right: 4px solid green;">Poussiere</td>
+        <td></td>
         </tr>
 
         <tr>
-          <td><img style="height:30px" src="https://fr.wiki.elvenar.com/images/3/38/Good_gems_big.png"></td>
-          <td>Gemmes</td>
-          <td><INPUT TYPE="Radio"  onchange="handleChangeR9();" Name="TypeTournoi" Value="T2"></td>
+          <td onclick="handleChangeR9();" class="MenuG" id="MenuA9"  style="border-left: 4px solid green;border-bottom: 4px solid green;"><img style="height:30px" src="https://fr.wiki.elvenar.com/images/3/38/Good_gems_big.png"></td>
+          <td onclick="handleChangeR9();" class="MenuG" id="MenuB9"  style="border-right: 4px solid green;border-bottom: 4px solid green;border-bottom-right-radius : 20px;">Gemmes</td>
+          <td></td>
         </tr>
 
 
