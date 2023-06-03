@@ -1,770 +1,255 @@
-<!DOCTYPE html>
+
+
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Metamorphous&family=Rubik+Beastly&display=swap" rel="stylesheet">
+<script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
 <script >
-function Données(TypeTournoi) {
-if (TypeTournoi==="Marbre") {
-//  alert(TypeTournoi)
-    NbEtoileDifficulté = 1
-    Commentaire ="Tournoi facile avec peu de pertes"
-    Conseil ="Poser équitablement chaque type de boost (portée légère, mage, déchaînement et armurier nain"
-    NatureTerrain="Rempart"
-    Image1Terrain=""
-    Image2Terrain=""
-
-    MeleeLegereEnnemie =10 // total des chiffre=100
-    PorteeLegereEnnemie =5 //
-    MagiqueEnnemie =20 //
-    MeleeLourdeEnnemie =50 //
-    PorteeLourdeEnnemie =15 //
-//alert(MeleeLegereEnnemie)
-
-    MeleeLegereCaserne =0 // 0 si pas recommandé 1  si recommandé force 2 si recommandé terrain 3 si recommandé force
-    PorteeLegereCaserne =0
-    MagiqueCaserne =0
-    MeleeLourdeCaserne =0
-    PorteeLourdeCaserne =0
-
-    MeleeLegereTerrain =0 // 0 si pas recommandé 1 si recommandé
-    PorteeLegereTerrain =0 // 0 si pas recommandé 1 si recommandé
-    MagiqueTerrain =0 // 0 si pas recommandé 1 si recommandé
-    MeleeLourdeTerrain =0 // 0 si pas recommandé 1 si recommandé
-    PorteeLourdeTerrain =0 // 0 si pas recommandé 1 si recommandé
-
-    MeleeLegereCamp =0 // 0 si pas recommandé 1 si recommandé
-    PorteeLegereCamp =0 // 0 si pas recommandé 1 si recommandé
-    MagiqueCamp =0 // 0 si pas recommandé 1 si recommandé
-    MeleeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
-    PorteeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
-}
-
-if (TypeTournoi==="Acier") {
-    NbEtoileDifficulté = 2
-    Commentaire ="Tournoi d'archer, prioriser les ranger pour leur initiative et leur portée"
-    Conseil ="Poser les boost portée légère, déchaînement et armurier nain"
-    NatureTerrain="Degage"
-    Image1Terrain=""
-    Image2Terrain=""
-
-    MeleeLegereEnnemie =10 // total des chiffre=100
-    PorteeLegereEnnemie =10 //
-    MagiqueEnnemie =70 //
-    MeleeLourdeEnnemie =5 //
-    PorteeLourdeEnnemie =5 //
-
-
-    MeleeLegereCaserne =0 // 0 si pas recommandé 1  si recommandé force 2 si recommandé terrain 3 si recommandé force
-    PorteeLegereCaserne =0
-    MagiqueCaserne =0
-    MeleeLourdeCaserne =0
-    PorteeLourdeCaserne =0
-
-    MeleeLegereTerrain =0 // 0 si pas recommandé 1 si recommandé
-    PorteeLegereTerrain =0 // 0 si pas recommandé 1 si recommandé
-    MagiqueTerrain =0 // 0 si pas recommandé 1 si recommandé
-    MeleeLourdeTerrain =0 // 0 si pas recommandé 1 si recommandé
-    PorteeLourdeTerrain =0 // 0 si pas recommandé 1 si recommandé
-
-    MeleeLegereCamp =0 // 0 si pas recommandé 1 si recommandé
-    PorteeLegereCamp =0 // 0 si pas recommandé 1 si recommandé
-    MagiqueCamp =0 // 0 si pas recommandé 1 si recommandé
-    MeleeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
-    PorteeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
-  }
-  if (TypeTournoi==="Planches") {
-      NbEtoileDifficulté = 4
-      Commentaire ="Tournoi assez difficile avec pas mal de pertes"
-      Conseil ="Poser un boost portée légère et booster les points de vie avec 1/2 armuriers ou 3/4 déchainements"
-      NatureTerrain="Degage"
-      Image1Terrain=""
-      Image2Terrain=""
-
-      MeleeLegereEnnemie =11
-      PorteeLegereEnnemie =60
-      MagiqueEnnemie =8
-      MeleeLourdeEnnemie =11
-      PorteeLourdeEnnemie =10
-
-
-      MeleeLegereCaserne =0 // 0 si pas recommandé 1  si recommandé force 2 si recommandé terrain 3 si recommandé force
-      PorteeLegereCaserne =0
-      MagiqueCaserne =0
-      MeleeLourdeCaserne =0
-      PorteeLourdeCaserne =0
-
-      MeleeLegereTerrain =0 // 0 si pas recommandé 1 si recommandé
-      PorteeLegereTerrain =0 // 0 si pas recommandé 1 si recommandé
-      MagiqueTerrain =0 // 0 si pas recommandé 1 si recommandé
-      MeleeLourdeTerrain =0 // 0 si pas recommandé 1 si recommandé
-      PorteeLourdeTerrain =0 // 0 si pas recommandé 1 si recommandé
-
-      MeleeLegereCamp =0 // 0 si pas recommandé 1 si recommandé
-      PorteeLegereCamp =0 // 0 si pas recommandé 1 si recommandé
-      MagiqueCamp =0 // 0 si pas recommandé 1 si recommandé
-      MeleeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
-      PorteeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
-    }
-    if (TypeTournoi==="Cristal") {
-        NbEtoileDifficulté = 3
-        Commentaire ="Produire principalement des mages"
-        Conseil ="Poser un boost mage et équitablement boost déchaînement/armurier nain"
-        NatureTerrain="Degage"
-        Image1Terrain=""
-        Image2Terrain=""
-
-        MeleeLegereEnnemie =10
-        PorteeLegereEnnemie =8
-        MagiqueEnnemie =38
-        MeleeLourdeEnnemie =8
-        PorteeLourdeEnnemie =36
-
-
-        MeleeLegereCaserne =0 // 0 si pas recommandé 1  si recommandé force 2 si recommandé terrain 3 si recommandé force
-        PorteeLegereCaserne =0
-        MagiqueCaserne =0
-        MeleeLourdeCaserne =0
-        PorteeLourdeCaserne =0
-
-        MeleeLegereTerrain =0 // 0 si pas recommandé 1 si recommandé
-        PorteeLegereTerrain =0 // 0 si pas recommandé 1 si recommandé
-        MagiqueTerrain =0 // 0 si pas recommandé 1 si recommandé
-        MeleeLourdeTerrain =0 // 0 si pas recommandé 1 si recommandé
-        PorteeLourdeTerrain =0 // 0 si pas recommandé 1 si recommandé
-
-        MeleeLegereCamp =0 // 0 si pas recommandé 1 si recommandé
-        PorteeLegereCamp =0 // 0 si pas recommandé 1 si recommandé
-        MagiqueCamp =0 // 0 si pas recommandé 1 si recommandé
-        MeleeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
-        PorteeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
-      }
-      if (TypeTournoi==="Parchemins") {
-          NbEtoileDifficulté = 5
-          Commentaire ="Tournoi difficile avec beaucoup de pertes. Prioriser les ranger"
-          Conseil ="Bien booster les points de vie avec déchaînement et armurier nain"
-          NatureTerrain="Degage"
-          Image1Terrain=""
-          Image2Terrain=""
-
-          MeleeLegereEnnemie =7
-          PorteeLegereEnnemie =37
-          MagiqueEnnemie =12
-          MeleeLourdeEnnemie =7
-          PorteeLourdeEnnemie =37
-
-
-          MeleeLegereCaserne =0 // 0 si pas recommandé 1  si recommandé force 2 si recommandé terrain 3 si recommandé force
-          PorteeLegereCaserne =0
-          MagiqueCaserne =0
-          MeleeLourdeCaserne =0
-          PorteeLourdeCaserne =0
-
-          MeleeLegereTerrain =0 // 0 si pas recommandé 1 si recommandé
-          PorteeLegereTerrain =0 // 0 si pas recommandé 1 si recommandé
-          MagiqueTerrain =0 // 0 si pas recommandé 1 si recommandé
-          MeleeLourdeTerrain =0 // 0 si pas recommandé 1 si recommandé
-          PorteeLourdeTerrain =0 // 0 si pas recommandé 1 si recommandé
-
-          MeleeLegereCamp =0 // 0 si pas recommandé 1 si recommandé
-          PorteeLegereCamp =0 // 0 si pas recommandé 1 si recommandé
-          MagiqueCamp =0 // 0 si pas recommandé 1 si recommandé
-          MeleeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
-          PorteeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
-        }
-        if (TypeTournoi==="Soie") {
-            NbEtoileDifficulté = 3
-            Commentaire ="Tournoi relativement facile"
-            Conseil ="Poser un boost portée légère et mage. Booster les points de vie avec déchaînement et armurier nain"
-            NatureTerrain="Degage"
-            Image1Terrain=""
-            Image2Terrain=""
-
-            MeleeLegereEnnemie =35
-            PorteeLegereEnnemie =8
-            MagiqueEnnemie =11
-            MeleeLourdeEnnemie =35
-            PorteeLourdeEnnemie =11
-
-
-            MeleeLegereCaserne =0 // 0 si pas recommandé 1  si recommandé force 2 si recommandé terrain 3 si recommandé force
-            PorteeLegereCaserne =0
-            MagiqueCaserne =0
-            MeleeLourdeCaserne =0
-            PorteeLourdeCaserne =0
-
-            MeleeLegereTerrain =0 // 0 si pas recommandé 1 si recommandé
-            PorteeLegereTerrain =0 // 0 si pas recommandé 1 si recommandé
-            MagiqueTerrain =0 // 0 si pas recommandé 1 si recommandé
-            MeleeLourdeTerrain =0 // 0 si pas recommandé 1 si recommandé
-            PorteeLourdeTerrain =0 // 0 si pas recommandé 1 si recommandé
-
-            MeleeLegereCamp =0 // 0 si pas recommandé 1 si recommandé
-            PorteeLegereCamp =0 // 0 si pas recommandé 1 si recommandé
-            MagiqueCamp =0 // 0 si pas recommandé 1 si recommandé
-            MeleeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
-            PorteeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
-          }
-          if (TypeTournoi==="Elixir") {
-              NbEtoileDifficulté = 3
-              Commentaire ="Produire une majorité de portée lourde"
-              Conseil ="Poser un boost portée légère. Booster les points de vie avec déchaînement et armurier nain"
-              NatureTerrain="Degage"
-              Image1Terrain=""
-              Image2Terrain=""
-
-              MeleeLegereEnnemie =26
-              PorteeLegereEnnemie =26
-              MagiqueEnnemie =10
-              MeleeLourdeEnnemie =28
-              PorteeLourdeEnnemie =10
-
-
-              MeleeLegereCaserne =0 // 0 si pas recommandé 1  si recommandé force 2 si recommandé terrain 3 si recommandé force
-              PorteeLegereCaserne =0
-              MagiqueCaserne =0
-              MeleeLourdeCaserne =0
-              PorteeLourdeCaserne =0
-
-              MeleeLegereTerrain =0 // 0 si pas recommandé 1 si recommandé
-              PorteeLegereTerrain =0 // 0 si pas recommandé 1 si recommandé
-              MagiqueTerrain =0 // 0 si pas recommandé 1 si recommandé
-              MeleeLourdeTerrain =0 // 0 si pas recommandé 1 si recommandé
-              PorteeLourdeTerrain =0 // 0 si pas recommandé 1 si recommandé
-
-              MeleeLegereCamp =0 // 0 si pas recommandé 1 si recommandé
-              PorteeLegereCamp =0 // 0 si pas recommandé 1 si recommandé
-              MagiqueCamp =0 // 0 si pas recommandé 1 si recommandé
-              MeleeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
-              PorteeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
-            }
-            if (TypeTournoi==="Poussiere") {
-                NbEtoileDifficulté = 5
-                Commentaire ="Attention aux lourdes pertes sur ce tournoi"
-                Conseil ="Poser un boost portée légère. Placez plus de bonus points de vie pour encaisser avec des déchaînement et des armuriers nain"
-                NatureTerrain="Degage"
-                Image1Terrain=""
-                Image2Terrain=""
-
-                MeleeLegereEnnemie =26
-                PorteeLegereEnnemie =12
-                MagiqueEnnemie =28
-                MeleeLourdeEnnemie =6
-                PorteeLourdeEnnemie =28
-
-
-                MeleeLegereCaserne =0 // 0 si pas recommandé 1  si recommandé force 2 si recommandé terrain 3 si recommandé force
-                PorteeLegereCaserne =0
-                MagiqueCaserne =0
-                MeleeLourdeCaserne =0
-                PorteeLourdeCaserne =0
-
-                MeleeLegereTerrain =0 // 0 si pas recommandé 1 si recommandé
-                PorteeLegereTerrain =0 // 0 si pas recommandé 1 si recommandé
-                MagiqueTerrain =0 // 0 si pas recommandé 1 si recommandé
-                MeleeLourdeTerrain =0 // 0 si pas recommandé 1 si recommandé
-                PorteeLourdeTerrain =0 // 0 si pas recommandé 1 si recommandé
-
-                MeleeLegereCamp =0 // 0 si pas recommandé 1 si recommandé
-                PorteeLegereCamp =0 // 0 si pas recommandé 1 si recommandé
-                MagiqueCamp =0 // 0 si pas recommandé 1 si recommandé
-                MeleeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
-                PorteeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
-              }
-              if (TypeTournoi==="Gemmes") {
-                  NbEtoileDifficulté = 1
-                  Commentaire ="Le cycle se termine par un tournoi assez simple, bien équilibrer mage/portée lourde"
-                  Conseil ="Poser un boost mage. Booster les points de vie avec déchaînement et armurier nain"
-                  NatureTerrain="Degage"
-                  Image1Terrain=""
-                  Image2Terrain=""
-
-                  MeleeLegereEnnemie =24
-                  PorteeLegereEnnemie =12
-                  MagiqueEnnemie =8
-                  MeleeLourdeEnnemie =28
-                  PorteeLourdeEnnemie =28
-
-
-                  MeleeLegereCaserne =0 // 0 si pas recommandé 1  si recommandé force 2 si recommandé terrain 3 si recommandé force
-                  PorteeLegereCaserne =0
-                  MagiqueCaserne =0
-                  MeleeLourdeCaserne =0
-                  PorteeLourdeCaserne =0
-
-                  MeleeLegereTerrain =0 // 0 si pas recommandé 1 si recommandé
-                  PorteeLegereTerrain =0 // 0 si pas recommandé 1 si recommandé
-                  MagiqueTerrain =0 // 0 si pas recommandé 1 si recommandé
-                  MeleeLourdeTerrain =0 // 0 si pas recommandé 1 si recommandé
-                  PorteeLourdeTerrain =0 // 0 si pas recommandé 1 si recommandé
-
-                  MeleeLegereCamp =0 // 0 si pas recommandé 1 si recommandé
-                  PorteeLegereCamp =0 // 0 si pas recommandé 1 si recommandé
-                  MagiqueCamp =0 // 0 si pas recommandé 1 si recommandé
-                  MeleeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
-                  PorteeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
-                }	
-	
-	
-	
-  //alert(MeleeLegereEnnemie)
-  Haut1=200*MeleeLegereEnnemie/100
-  Haut2=200*PorteeLegereEnnemie/100
-  Haut3=200*MagiqueEnnemie/100
-  Haut4=200*MeleeLourdeEnnemie/100
-  Haut5=200*PorteeLourdeEnnemie/100
-document.getElementById("Carre1").style.height=Haut1+"px"
-document.getElementById("Carre2").style.height=Haut2+"px"
-document.getElementById("Carre3").style.height=Haut3+"px"
-document.getElementById("Carre4").style.height=Haut4+"px"
-document.getElementById("Carre5").style.height=Haut5+"px"
-
-Chaine=""
-for ( i = 0; i < NbEtoileDifficulté; i += 1) {
-  Chaine=Chaine+"<img width='30px' src='https://w7.pngwing.com/pngs/761/962/png-transparent-skull-and-bones-skull-and-crossbones-skull-thumbnail.png'>"
-}
-Chaine="Difficulté du tournoi:" + Chaine
-document.getElementById("Difficulte").innerHTML=Chaine
-document.getElementById("Conseil").innerHTML="Conseil:" + Conseil
-document.getElementById("Commentaire").innerHTML="Commentaire:" + Commentaire
-
-
-
-}
+// const items = document.querySelectorAll(".accordion a");
 function Debut() {
-    handleChange2()
-	  Données("Marbre")
-      }
+alert("Ok")
 
-// function Genrer(this) {
-// 	alert(this.value)
-//
-//       }
-    function handleChange() {
-        document.getElementById("Mili10" ).innerHTML = "Unités combat caserne elfe";
-        document.getElementById("Mili11" ).src="https://fr.wiki.elvenar.com/images/d/df/Eb_lm_1_big.png";
-        document.getElementById("Mili12" ).src="https://fr.wiki.elvenar.com/images/4/49/Eb_lr_1_big.png";
-        document.getElementById("Mili13" ).src="https://fr.wiki.elvenar.com/images/a/a2/Eb_ma_1_big.png";
-        document.getElementById("Mili14" ).src="https://fr.wiki.elvenar.com/images/8/83/Eb_hm_1_big.png";
-        document.getElementById("Mili15" ).src="https://fr.wiki.elvenar.com/images/1/1f/Eb_hr_1_big.png";
-      }
+}
+function toggleAccordion(Num){
+  //alert(Num)
+  document.getElementById("Content" + Num).classList.toggle("active");
+  document.getElementById("Accordeon" + Num).classList.toggle("active");
+  // this.classList.toggle('active');
+  // this.nextElementSibling.classList.toggle('active');
+}
 
-    function handleChange2() {
-          document.getElementById("Mili10" ).innerHTML = "Unités combat caserne humain";
-          document.getElementById("Mili11" ).src="https://fr.wiki.elvenar.com/images/d/df/Hb_lm_1_big.png";
-          document.getElementById("Mili12" ).src="https://fr.wiki.elvenar.com/images/e/e3/Hb_lr_1_big.png";
-          document.getElementById("Mili13" ).src="https://fr.wiki.elvenar.com/images/e/ed/Hb_ma_1_big.png";
-          document.getElementById("Mili14" ).src="https://fr.wiki.elvenar.com/images/6/6f/Hb_hm_1_big.png";
-          document.getElementById("Mili15" ).src="https://fr.wiki.elvenar.com/images/9/9f/Hb_hr_1_big.png";
-      }
-      function handleChangeAll(Num, Vecteur) {
-        Res=document.getElementById("Tournoi").innerHTML
-         document.getElementById("MenuB" + Res).style.backgroundColor=""
-         document.getElementById("MenuA" + Res).style.backgroundColor=""
-         document.getElementById("Recommande").innerHTML="Unités recommandées pour le tournoi " + Vecteur
-          document.getElementById("Tournoi").innerHTML=Num
-           document.getElementById("MenuB" + Num).style.backgroundColor="#F9C291"
-           document.getElementById("MenuA" + Num).style.backgroundColor="#F9C291"
-           if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
-             CacherMenu()
-           }
-
-      }
-      function handleChangeR1() {
-          handleChangeAll(1,"de Marbre")
-          Données("Marbre")
-        }
-      function handleChangeR2() {
-          handleChangeAll(2,"d'Acier")
-          Données("Acier")
-          }
-      function handleChangeR3() {
-        handleChangeAll(3,"de Planches")
-              Données("Planches")
-            }
-      function handleChangeR4() {
-          handleChangeAll(4,"de Cristal")
-              Données("Cristal")
-              }
-      function handleChangeR5() {
-          handleChangeAll(5,"de Parchemins")
-                  Données("Parchemins")
-                }
-      function handleChangeR6() {
-        handleChangeAll(6,"de Soie")
-                  Données("Soie")
-                  }
-      function handleChangeR7() {
-        handleChangeAll(7,"d'Elixir")
-                          Données("Elixir")
-                          }
-      function handleChangeR8() {
-        handleChangeAll(8,"de Poussiere")
-                              Données("Poussiere")
-                            }
-      function handleChangeR9() {
-        handleChangeAll(9,"de Gemmes")
-                              Données("Gemmes")
-                              }
-
-
-      function CacherMenu() {
-        passage=0
-        document.getElementById("MenuA1").classList.toggle("MenuGI");
-        document.getElementById("MenuB1").classList.toggle("MenuGI");
-        document.getElementById("MenuA2").classList.toggle("MenuGI");
-        document.getElementById("MenuB2").classList.toggle("MenuGI");
-        document.getElementById("MenuA3").classList.toggle("MenuGI");
-        document.getElementById("MenuB3").classList.toggle("MenuGI");
-        document.getElementById("MenuA4").classList.toggle("MenuGI");
-        document.getElementById("MenuB4").classList.toggle("MenuGI");
-        document.getElementById("MenuA5").classList.toggle("MenuGI");
-        document.getElementById("MenuB5").classList.toggle("MenuGI");
-        document.getElementById("MenuA6").classList.toggle("MenuGI");
-        document.getElementById("MenuB6").classList.toggle("MenuGI");
-        document.getElementById("MenuA7").classList.toggle("MenuGI");
-        document.getElementById("MenuB7").classList.toggle("MenuGI");
-        document.getElementById("MenuA8").classList.toggle("MenuGI");
-        document.getElementById("MenuB8").classList.toggle("MenuGI");
-        document.getElementById("MenuA9").classList.toggle("MenuGI");
-        document.getElementById("MenuB9").classList.toggle("MenuGI");
-        document.getElementById("TriangleMenuG").classList.toggle("TriangleMenuGI");
-      }
-
-
-</script >
-
-
+// items.forEach(item => item.addEventListener('click', toggleAccordion));
+</script>
 
 <style>
-  body {font-family: Arial;}
-
-  /* Style the tab */
-  .tab {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-  }
-
-  /* Style the buttons inside the tab */
-  .tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-  }
-
-  /* Change background color of buttons on hover */
-  .tab button:hover {
-    background-color: #ddd;
-  }
-
-  /* Create an active/current tablink class */
-  .tab button.active {
-    background-color: #ccc;
-  }
-
-  /* Style the tab content */
-  .tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-  }
-
-  .wrapper {
-    display: flex;
-    flex-flow: column wrap;
-    font-weight: bold;
-    text-align: center;
-    height: 100%;
-
-  }
-  body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    margin: 0;
-  }
-  #main {
-    display: flex;
-    flex: 1;
-  }
-  #main > article {
-    flex: 1;
-  }
-
-  #main > aside {
-    flex: 0 0 20vw;
-    width: 40%;
-  }
-  #main > nav {
-    flex: 0 0 8%;
-    // width: 10%;
-    order: -1;
-  }
-  header {
-    text-align:center;
-    height: 20%;
-  }
-  header,  article, nav, aside {
-    padding: 0em;
-  }
-
-.MenuG {
-  display:content;
-  cursor:pointer;
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400');
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
 }
-.MenuGI {
-  display:none;
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
-.TriangleMenuG {
-  background-image: url("Image/TriangleMenu2.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  cursor:pointer;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Hind', sans-serif;
+  color: black;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
 }
-.TriangleMenuGI {
-  background-image: url("Image/TriangleMenu.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  cursor:pointer;
+.container {
+  margin: 0 auto;
+  padding: 1rem;
+  width: 48rem;
 }
+h3 {
+  font-size: 1.75rem;
+  color: white;
+  padding: 1.3rem;
+  margin: 0;
+}
+.accordion a {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 2rem 1rem 1rem;
+  color: white;
+   background-color: #506E62;
+  font-family: 'Metamorphous', cursive;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1);
+  border: 1px solid black;
+}
+.accordion-item a {
+  background-image: url("Image/FondFAQ2.png");
+  }
+.accordion a:hover,
+.accordion a:hover::after {
+  cursor: pointer;
+  color: black;
+}
+.accordion a:hover::after {
+  border: 1px solid black;
+}
+.accordion a.active {
+  /* color: #ff5353; */
+  color: black;
 
-
+  border-bottom: 1px solid black;
+}
+.accordion a::after {
+  font-family: 'Ionicons';
+  content: '\f218';
+  position: absolute;
+  float: right;
+  right: 1rem;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 1);
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid black;
+  text-align: center;
+}
+.accordion a.active::after {
+  font-family: 'Ionicons';
+  content: '\f209';
+  /* color: #ff5353; */
+  color: black;
+  border: 1px solid black;
+}
+.accordion .content {
+  opacity: 0;
+  padding: 0 1rem;
+  max-height: 0;
+  border: 1px solid black;
+  overflow: hidden;
+  clear: both;
+  -webkit-transition: all 0.2s ease 0.15s;
+  -o-transition: all 0.2s ease 0.15s;
+  transition: all 0.2s ease 0.15s;
+}
+.accordion .content p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.accordion .content.active {
+  opacity: 1;
+  padding: 0rem;
+  max-height: 100%;
+  -webkit-transition: all 0.35s ease 0.15s;
+  -o-transition: all 0.35s ease 0.15s;
+  transition: all 0.35s ease 0.15s;
+}
 </style>
+
+
+
 </head>
-<body onload="Debut()">
 
 
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Prepa')" id="Premier">Préparation aux tournois</button>
-  <button class="tablinks" onclick="openCity(event, 'Info')">Info troupes</button>
-  <button class="tablinks" onclick="openCity(event, 'Autre')">Conseils</button>
-</div>
+<body>
+<div class="container">
 
 
-<header>
-<table style="margin-left: auto; margin-right: auto;">
-  <tr>
-    <td>Je suis</td>
-    <td><INPUT TYPE="Radio" Name="Genre" Value="TourHum" checked onchange="handleChange2();">humanoide</td>
-    <td><img style="height:50px" src="Image/TournoiHumain.png"></td>
-    <td><img style="height:50px" src="Image/TournoiElfe.png"></td>
-    <td><INPUT TYPE="Radio" Name="Genre" Value="TourElfe" onchange="handleChange();">elfoide</td>
-  </tr>
-  <tr>
-    <td>Je joue</td>
-    <td><INPUT TYPE="Radio" Name="Mode" Value="Male" checked>en manuel</td>
-    <td><img style="height:50px" src="https://cdn-icons-png.flaticon.com/512/1093/1093269.png"></td>
-    <td><img style="height:50px" src="https://cdn-icons-png.flaticon.com/512/6471/6471690.png"></td>
-    <td><INPUT TYPE="Radio" Name="Mode" Value="Female">en automatique</td>
-
-  </tr>
-</table>
-
-
-</header>
-<div id="main">
-  <article>
-  <table style="margin-left: auto; margin-right: auto;">
-    <tr style="text-align:center;" >
-    <td >
-    </td>
-      <td colspan="5"  id="Difficulte">
-      Difficulté du tournoi : <img width='30px' src='https://fr.wiki.elvenar.com/images/a/a8/Level_small.png'><img width='30px' src='https://fr.wiki.elvenar.com/images/a/a8/Level_small.png'>
-      </td>
-    </tr>
-    <tr style="text-align:center;" >
-    <td >
-    </td>
-      <td colspan="5" id="Conseil">
-      Conseil: Bien dormir avant<br><br>
-      </td>
-    </tr>
-    <tr style="text-align:center;" >
-    <td >
-    </td>
-      <td colspan="5" id="Commentaire">
-      Commentaire: Bien dormir avant
-      </td>
-    </tr>
-    <tr style="text-align:center;" >
-    <td >
-    </td>
-      <td colspan="5">
-      <br><div id="Recommande">Unités recommandées</div><br>
-      </td>
-    </tr>
-
-
-    <tr style="text-align:center;" >
-      <td id="Mili10">Unités combat caserne elfe</td>
-        <td style="border: 2px solid red;"><img  id="Mili11" style="width:50px;border: 2px solid black;" src="https://fr.wiki.elvenar.com/images/d/df/Eb_lm_1_big.png"></td>
-        <td><img  id="Mili12" style="width:50px" src="https://fr.wiki.elvenar.com/images/4/49/Eb_lr_1_big.png"></td>
-        <td><img  id="Mili13" style="width:50px" src="https://fr.wiki.elvenar.com/images/a/a2/Eb_ma_1_big.png"></td>
-        <td><img  id="Mili14" style="width:50px" src="https://fr.wiki.elvenar.com/images/8/83/Eb_hm_1_big.png"></td>
-        <td><img  id="Mili15" style="width:50px" src="https://fr.wiki.elvenar.com/images/1/1f/Eb_hr_1_big.png"></td>
-      </tr>
-      <tr style="text-align:center;" >
-        <td>Unités terrain d'entraînement</td>
-        <td><img style="width:50px" src="https://fr.wiki.elvenar.com/images/5/59/Tg_lm_1_big.png"></td>
-        <td><img style="width:50px" src="https://fr.wiki.elvenar.com/images/7/78/Tg_lr_1_big.png"></td>
-        <td><img style="width:50px" src="https://fr.wiki.elvenar.com/images/b/b8/Tg_ma_1_big.png"></td>
-        <td><img style="width:50px" src="https://no.wiki.elvenar.com/images/thumb/2/28/Tg_hm_1_big.png/108px-Tg_hm_1_big.png"></td>
-        <td><img style="width:50px" src="https://fr.wiki.elvenar.com/images/5/5f/Tg_hr_1_big.png"></td>
-      </tr>
-
-      <tr style="text-align:center;" >
-        <td>Unités camp scout</td>
-        <td><img style="width:50px" src="https://fr.wiki.elvenar.com/images/8/8a/Mc_lm_1_big.png"></td>
-        <td><img style="width:50px" src="https://fr.wiki.elvenar.com/images/d/d0/Mc_lr_1_big.png"></td>
-        <td><img style="width:50px" src="https://fr.wiki.elvenar.com/images/6/6c/Mc_ma_1_big.png"></td>
-        <td><img style="width:50px" src="https://fr.wiki.elvenar.com/images/9/98/Mc_hm_1_big.png"></td>
-        <td><img style="width:50px" src="https://fr.wiki.elvenar.com/images/5/56/Mc_hr_1_big.png"></td>
-      </tr>
-
-
-      <tr style="text-align:center;vertical-align:bottom;" >
-        <td>Unités adverses</td>
-        <td><img id="Carre1" style="width:30px;height:60px;" src="Image/CarreBleu.png"></td>
-        <td><img id="Carre2" style="width:30px;height:10px;" src="Image/CarreBleu.png"</td>
-        <td><img id="Carre3" style="width:30px;height:20px;" src="Image/CarreBleu.png"</td>
-        <td><img id="Carre4" style="width:30px;height:5px;" src="Image/CarreBleu.png"</td>
-        <td><img id="Carre5" style="width:30px;height:30px;" src="Image/CarreBleu.png"</td>
-      </tr>
-      <tr style="text-align:center;" >
-        <td></td>
-        <td>Mêlée<br>légère</td>
-        <td>Portée <br>légère</td>
-        <td>Magiques</td>
-        <td>Mêlée <br>lourde</td>
-        <td>Portée <br>lourde</td>
-      </tr>
-
-
-    </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </article>
-
-
-  <nav>
-  <div id="Tournoi" style="display:none">1</div>
-    <table style="border-collapse;border-spacing : 0;">
-      <tr>
-        <td  onclick="handleChangeR1();" class="MenuG" id="MenuA1"   style="border-left: 4px solid green;border-top: 4px solid green;background-color:#F9C291"><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/3/39/Good_marble_big.png"></td>
-        <td  onclick="handleChangeR1();" class="MenuG"  id="MenuB1"   style="border-top: 4px solid green;border-right: 4px solid green;border-top-right-radius : 20px;background-color:#F9C291">Marbre</td>
-        <td></td>
-      </tr>
-      <tr>
-      <td  onclick="handleChangeR2();" class="MenuG" id="MenuA2"  style="border-left: 4px solid green;"><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/5/58/Good_steel_big.png"></td>
-      <td  onclick="handleChangeR2();" class="MenuG"  id="MenuB2"  style="border-right: 4px solid green;">Acier</td>
-      <td></td>
-      </tr>
-      <tr>
-        <td  onclick="handleChangeR3();" lass="MenuG" id="MenuA3"   style="border-left: 4px solid green;"><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/3/3e/Good_planks_big.png"></td>
-        <td  onclick="handleChangeR3();" class="MenuG"  id="MenuB3"  style="border-right: 4px solid green;">Planches</td>
-        <td></td>
-      </tr>
-      <tr>
-          <td  onclick="handleChangeR4();" class="MenuG" id="MenuA4"   style="border-left: 4px solid green;"><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/0/07/Good_crystal_big.png"></td>
-          <td  onclick="handleChangeR4();" class="MenuG"  id="MenuB4"  style="border-right: 4px solid green;">Cristal</td>
-          <td></td>
-      </tr>
-      <tr>
-        <td  onclick="handleChangeR5();" class="MenuG" id="MenuA5"    style="border-left: 4px solid green;"><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/3/3d/Good_scrolls_big.png"></td>
-        <td  onclick="handleChangeR5();" class="MenuG"  id="MenuB5"  style="border-right: 4px solid green;">Parchemins</td>
-        <td><Div class="TriangleMenuG" id="TriangleMenuG" onclick="CacherMenu()" style="height:50px;">.......</div></td>
+  <div class="accordion">
+    <div class="accordion-item"   onclick="toggleAccordion(1)">
+      <a id="Accordeon1">Quel est le système de remplissage des merveilles?</a>
+      <div class="content" id="Content1">
+        <p>Un système de remplissage individuel avec une annonce de fin de merveilles par mp, où chacun pose en pc le montant des coffres (sans les runes).<br>Un système de remplissage collectif via des csf.</p>
       </div>
-      </tr>
-      <tr>
-      <td  onclick="handleChangeR6();" class="MenuG" id="MenuA6"   style="border-left: 4px solid green;"><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/2/2b/Good_silk_big.png"></td>
-      <td  onclick="handleChangeR6();" class="MenuG"  id="MenuB6"  style="border-right: 4px solid green;">Soie</td>
-      <td></td>
-      </tr>
-      <tr>
-        <td  onclick="handleChangeR7();" class="MenuG" id="MenuA7"   style="border-left: 4px solid green;"><img style="height:30px" src="https://fr.wiki.elvenar.com/images/f/f1/Good_elixir_big.png"></td>
-        <td  onclick="handleChangeR7();" class="MenuG"  id="MenuB7"  style="border-right: 4px solid green;">Elixir</td>
-        <td></td>
-        </tr>
+    </div>
+    <div class="accordion-item"  onclick="toggleAccordion(2)">
+      <a  id="Accordeon2">Comment fait-on des échanges de runes?</a>
+      <div class="content" id="Content2">
+        <p>Faire un mp général en indiquant votre demande en runes pour une ou plusieurs merveilles et votre proposition de runes à donner en échange.<br>Les membres intéressés vous répondront et l’échange doit être équitable sauf si accord entre les membres. Ne pas posez de runes pour vous en débarrasser sans l’accord préalable du membre pour éviter tout blocage.</p>
+      </div>
+    </div>
+    <div class="accordion-item"  id="Accordeon3" onclick="toggleAccordion(3)">
+      <a>Quelles sont les merveilles indispensables à posséder?</a>
+      <div class="content" id="Content3">
+        <p>>Voir le menu Merveilles.</p>
+      </div>
+    </div>
+    <div class="accordion-item" onclick="toggleAccordion(4)">
+      <a>Comment être sûr qu'un membre est connecté?</a>
+      <div class="content" id="Content4">
+        <p>Taper  /who  dans le tchat puis valider.</p>
+      </div>
+    </div>
+    <div class="accordion-item" onclick="toggleAccordion(5)">
+      <a>Comment devenir un imbecile ingrat?</a>
+      <div class="content" id="Content5">
+        <p>Pour certains c´est inné. Cf le codeur Hit .</p>
+      </div>
+    </div>
+  </div>
 
-        <tr>
-        <td  onclick="handleChangeR8();" class="MenuG" id="MenuA8"   style="border-left: 4px solid green;"><img style="height:30px" src="https://fr.wiki.elvenar.com/images/f/f6/Good_magic_dust_big.png"></td>
-        <td  onclick="handleChangeR8();" class="MenuG"  id="MenuB8"  style="border-right: 4px solid green;">Poussiere</td>
-        <td></td>
-        </tr>
-
-        <tr>
-          <td onclick="handleChangeR9();" class="MenuG" id="MenuA9"  style="border-left: 4px solid green;border-bottom: 4px solid green;"><img style="height:30px" src="https://fr.wiki.elvenar.com/images/3/38/Good_gems_big.png"></td>
-          <td onclick="handleChangeR9();" class="MenuG" id="MenuB9"  style="border-right: 4px solid green;border-bottom: 4px solid green;border-bottom-right-radius : 20px;">Gemmes</td>
-          <td></td>
-        </tr>
-
-
-
-    </table>
-
-
-  </nav>
-
-
-  <aside>
-  <textarea id="story" name="story"
-  rows="10" cols="30">
-  Nature du terrain
-  </textarea><br>
-  <textarea id="story" name="story"
-  rows="10" cols="30">
-  Commentaire perso
-  </textarea>
-  </aside>
 </div>
 
 
 
-<div id="Info" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p>
-</div>
+<!-- merveilles,csf
 
-<div id="Autre" class="tabcontent">
-  <h3>Autre</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
+""
+merveilles,runes
 
-<script>
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-</script>
+"Abysse (pop et or)
+Aiguilles (combat et caserne)
+Monastère/sanctuaire (combat et culture)
+Tour de guet (culture)
+Cœur de la Montagne (Marchandises classiques et pop)
+Tour de la prospérité (Matériaux)
+Marchand (grossiste et campement)
+Académie (combat et camp)
+Labyrinthe (Mana) (incontournable à partir du chapitre 16/17 ??)
+Abbaye du dragon (combat et Mana)
+Fontaines triomphantes (combat et terrain)
+D111 (marchandises sensibles et réduction temps tournoi)
+D222 (marchandises sensibles et combat)
+Fontaines de jouvence (pop et culture) (intéressant si résidences magiques)
+Autel des champions (orc et combat)
+Temple des esprits (unurium)
+Tour de sceau vallorien (unurium)
+ 
+Fortement conseillées :
+Champignons (combat)
+Crapaud (combat)
+CEE (graines et toutes marchandises)
+Tour crépuscule (graines) (incontournable à partir du chapitre 14/15 ??)
+Arbre illumination (marchandises ascension et combat)
+Lieu de repos (marchandises ascension et combat)
+ 
+Utile mais non indispensable :
+Pyramide purificatrice
+Taverne des éclaireurs (exploration provinces et coffres voisins)
+ 
+Utile au debut mais peut être supprimé ensuite pour récupérer de la place :
+Tome des mystères
+Phare de crystal/tour du clocher
+Rempart nain"
+merveilles
+Quels sont les bâtiments évolutifs à avoir ?
+"Phénix de feu : l’incontournable - Le bât ultra prioritaire niveau 10 à avoir !
+D’autres bâtiments évolutifs sont très utiles comme l’ours brun et l’ours polaire.
+
+Phénix de feu : bonus de dégâts des unités (lvl 10 bonus 50%)
+Ours brun : bonus production unités (lvl 10 bonus 50%)
+Ours polaire : réduction du temps de recharge du tournoi (lvl 10 réduction 20%)
+
+Artefacts phénix et ours disponibles dans l’académie de magie avec 1 plan et des fragments de sortilèges. Il en faudra 9 de chaque pour atteindre le niveau 10. "
+bâtiment évolutif,artefact
+C’est quoi l’avantage aide avancée ?
+"Cet avantage accorde plus de temps pour récupérer le bonus octroyé lorsque tu utilises l’aide entre en voisin en retour. La main doré dure plus longtemps avant de disparaître et de redevenir verte.
+Pas très utile si on se connecte tous les jours. "
+avantage,confrérie -->
+
+
+
+
+
+
 
 </body>
 </html>
