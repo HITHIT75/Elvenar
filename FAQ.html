@@ -52,11 +52,16 @@ function Debut() {
 		           var0=parts[j]
    		         result = var0.substring(0, var0.length-2);
 		    	result = result.replaceAll("\"","")
-		    
+		    	if (result.length<5) {
+			result = ""
+			}
                document.getElementById("Accordeon" +(i+1)).innerHTML=result
                var0=parts[j+1]
    		         result = var0.substring(0, var0.length-2);
 		    		result = result.replaceAll("\"","")
+		    if (result.length<5) {
+			result = ""
+			}
 		           document.getElementById("Content" +(i+1)).innerHTML=result
 
              }
