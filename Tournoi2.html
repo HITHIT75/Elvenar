@@ -4,8 +4,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script >
 function Données(TypeTournoi) {
-  if (TypeTournoi==="Marbre") {
-  //  alert(TypeTournoi)
+    if (TypeTournoi==="Marbre") {
+        //  alert(TypeTournoi)
       NbEtoileDifficulté = 1
       Commentaire ="Tournoi facile avec peu de pertes"
       Conseil ="Poser équitablement chaque type de boost (portée légère, mage, déchaînement et armurier nain"
@@ -18,7 +18,7 @@ function Données(TypeTournoi) {
       MagiqueEnnemie =20 //
       MeleeLourdeEnnemie =50 //
       PorteeLourdeEnnemie =15 //
-  //alert(MeleeLegereEnnemie)
+        //alert(MeleeLegereEnnemie)
 
       MeleeLegereCaserne =0 // 0 si pas recommandé 1  si recommandé force 2 si recommandé terrain 3 si recommandé force
       PorteeLegereCaserne =0
@@ -37,9 +37,9 @@ function Données(TypeTournoi) {
       MagiqueCamp =0 // 0 si pas recommandé 1 si recommandé
       MeleeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
       PorteeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
-  }
+    }
 
-  if (TypeTournoi==="Acier") {
+    if (TypeTournoi==="Acier") {
       NbEtoileDifficulté = 2
       Commentaire ="Tournoi d'archer, prioriser les ranger pour leur initiative et leur portée"
       Conseil ="Poser les boost portée légère, déchaînement et armurier nain"
@@ -71,7 +71,7 @@ function Données(TypeTournoi) {
       MagiqueCamp =0 // 0 si pas recommandé 1 si recommandé
       MeleeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
       PorteeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
-    }
+      }
     if (TypeTournoi==="Planches") {
         NbEtoileDifficulté = 4
         Commentaire ="Tournoi assez difficile avec pas mal de pertes"
@@ -105,7 +105,7 @@ function Données(TypeTournoi) {
         MeleeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
         PorteeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
       }
-      if (TypeTournoi==="Cristal") {
+    if (TypeTournoi==="Cristal") {
           NbEtoileDifficulté = 3
           Commentaire ="Produire principalement des mages"
           Conseil ="Poser un boost mage et équitablement boost déchaînement/armurier nain"
@@ -138,7 +138,7 @@ function Données(TypeTournoi) {
           MeleeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
           PorteeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
         }
-        if (TypeTournoi==="Parchemins") {
+    if (TypeTournoi==="Parchemins") {
             NbEtoileDifficulté = 5
             Commentaire ="Tournoi difficile avec beaucoup de pertes. Prioriser les ranger"
             Conseil ="Bien booster les points de vie avec déchaînement et armurier nain"
@@ -171,7 +171,7 @@ function Données(TypeTournoi) {
             MeleeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
             PorteeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
           }
-          if (TypeTournoi==="Soie") {
+    if (TypeTournoi==="Soie") {
               NbEtoileDifficulté = 3
               Commentaire ="Tournoi relativement facile"
               Conseil ="Poser un boost portée légère et mage. Booster les points de vie avec déchaînement et armurier nain"
@@ -204,7 +204,7 @@ function Données(TypeTournoi) {
               MeleeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
               PorteeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
             }
-            if (TypeTournoi==="Elixir") {
+    if (TypeTournoi==="Elixir") {
                 NbEtoileDifficulté = 3
                 Commentaire ="Produire une majorité de portée lourde"
                 Conseil ="Poser un boost portée légère. Booster les points de vie avec déchaînement et armurier nain"
@@ -237,7 +237,7 @@ function Données(TypeTournoi) {
                 MeleeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
                 PorteeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
               }
-              if (TypeTournoi==="Poussiere") {
+    if (TypeTournoi==="Poussiere") {
                   NbEtoileDifficulté = 5
                   Commentaire ="Attention aux lourdes pertes sur ce tournoi"
                   Conseil ="Poser un boost portée légère. Placez plus de bonus points de vie pour encaisser avec des déchaînement et des armuriers nain"
@@ -270,7 +270,7 @@ function Données(TypeTournoi) {
                   MeleeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
                   PorteeLourdeCamp =0 // 0 si pas recommandé 1 si recommandé
                 }
-                if (TypeTournoi==="Gemmes") {
+    if (TypeTournoi==="Gemmes") {
                     NbEtoileDifficulté = 1
                     Commentaire ="Le cycle se termine par un tournoi assez simple, bien équilibrer mage/portée lourde"
                     Conseil ="Poser un boost mage. Booster les points de vie avec déchaînement et armurier nain"
@@ -285,16 +285,16 @@ function Données(TypeTournoi) {
                     PorteeLourdeEnnemie =28
 
 
-                    MeleeLegereCaserne ="5,0,0"
-                    PorteeLegereCaserne ="0,0,0"
-                    MagiqueCaserne ="0,0,0"
+                    MeleeLegereCaserne ="1,0,1"
+                    PorteeLegereCaserne ="0,0,1"
+                    MagiqueCaserne ="0,1,0"
                     MeleeLourdeCaserne ="0,0,0"
-                    PorteeLourdeCaserne ="0,0,4"
+                    PorteeLourdeCaserne ="1,1,1"
 
                     MeleeLegereTerrain ="1,0,0"
                     PorteeLegereTerrain ="0,0,1"
-                    MagiqueTerrain ="0,0,0"
-                    MeleeLourdeTerrain ="0,0,0"
+                    MagiqueTerrain ="1,0,0"
+                    MeleeLourdeTerrain ="1,0,0"
                     PorteeLourdeTerrain ="0,0,0"
 
                     MeleeLegereCamp ="1,0,4"
@@ -335,70 +335,82 @@ document.getElementById("Commentaire").innerHTML="<strong>Commentaire:</strong>"
  for ( j = 1; j < 4; j += 1) {
    for ( i = 1; i < 6; i += 1) {
      document.getElementById("Mili" + j + i).setAttribute("style", "width: 50px;") ;
+     document.getElementById("MiliTerrain" + j + i).style="height:20px;margin-left:-15px;visibility: hidden;"
      document.getElementById("Milit" + j + i).setAttribute("style", "border: 0px;");
    }
  }
 
 parts = MeleeLegereCaserne.split(",");
-Uniter(parts[0],parts[1],parts[2],1,1)
+Uniter(parts[0],parts[1],parts[2],1,11)
 parts = PorteeLegereCaserne.split(",");
-Uniter(parts[0],parts[1],parts[2],1,2)
+Uniter(parts[0],parts[1],parts[2],1,12)
 parts = MagiqueCaserne.split(",");
-Uniter(parts[0],parts[1],parts[2],1,3)
+Uniter(parts[0],parts[1],parts[2],1,13)
 parts = MeleeLourdeCaserne.split(",");
-Uniter(parts[0],parts[1],parts[2],1,4)
+Uniter(parts[0],parts[1],parts[2],1,14)
 parts = PorteeLourdeCaserne.split(",");
-Uniter(parts[0],parts[1],parts[2],1,5)
+Uniter(parts[0],parts[1],parts[2],1,15)
 
 parts = MeleeLegereTerrain.split(",");
-Uniter(parts[0],parts[1],parts[2],2,1)
+Uniter(parts[0],parts[1],parts[2],"2",21)
 parts = PorteeLegereTerrain.split(",");
-Uniter(parts[0],parts[1],parts[2],2,2)
+Uniter(parts[0],parts[1],parts[2],"2",22)
 parts = MagiqueTerrain.split(",");
-Uniter(parts[0],parts[1],parts[2],2,3)
+Uniter(parts[0],parts[1],parts[2],"2",23)
 parts = MeleeLourdeTerrain.split(",");
-Uniter(parts[0],parts[1],parts[2],2,4)
+Uniter(parts[0],parts[1],parts[2],"2",24)
 parts = PorteeLourdeTerrain.split(",");
-Uniter(parts[0],parts[1],parts[2],2,5)
+Uniter(parts[0],parts[1],parts[2],"2",25)
 
 parts = MeleeLegereCamp.split(",");
-Uniter(parts[0],parts[1],parts[2],3,1)
+Uniter(parts[0],parts[1],parts[2],3,31)
 parts = PorteeLegereTCamp.split(",");
-Uniter(parts[0],parts[1],parts[2],3,2)
+Uniter(parts[0],parts[1],parts[2],3,32)
 parts = MagiqueCamp.split(",");
-Uniter(parts[0],parts[1],parts[2],3,3)
+Uniter(parts[0],parts[1],parts[2],3,33)
 parts = MeleeLourdeCamp.split(",");
-Uniter(parts[0],parts[1],parts[2],3,4)
+Uniter(parts[0],parts[1],parts[2],3,34)
 parts = PorteeLourdeCamp.split(",");
-Uniter(parts[0],parts[1],parts[2],3,5)
+Uniter(parts[0],parts[1],parts[2],3,35)
 //    <td style="border: 2px solid red;" id="Milit11"><img  id="Mili11" style="width:50px;border: 2px solid black;"
 
 }
-function Uniter(Num1,Num2,Num3,Cas,Uni) {
+function Uniter(Num1,Num2,Num3,Caser,Unit) {
+
+
+
+    //alert(Unit+">>>"+ Casio +">"+ Uni + "  " +Num1 + "   " + Num2 + "    " + Num3)
+
   if (Num1>0) {
   //  taille = (50 + 4*parts[0]*1) +"px;"
-    tailleBord = parts[0]*1 +"px"
+    tailleBord = 1 //parts[0]*1 +"px"
   //  alert(tailleBord)
   //document.getElementById("Mili" + Cas + Uni).setAttribute("style", "width: 50px;" );
       //  document.getElementById("Mili" + Cas + Uni).setAttribute("style", "width: " + taille );
-        document.getElementById("Mili" + Cas + Uni).setAttribute("style", "border: " + tailleBord + " solid black;width: 50px;opacity: 1;");
+        document.getElementById("Mili" + Unit).setAttribute("style", "border: " + tailleBord + "solid;border-color: red;width: 50px;opacity: 1;border-radius: 50%;border-style: double;");
+//alert("selection opacity 1  " + Num1)
   }
   else {
     if (Num3>0) {
-      document.getElementById("Mili" + Cas + Uni).setAttribute("style", "opacity: 1;width: 50px;")
+
+      document.getElementById("Mili" + Unit).setAttribute("style", "opacity: 1;width: 50px;")
+      //alert("terrain donc opacity 1")
     }
     else {
-      document.getElementById("Mili" + Cas + Uni).setAttribute("style", "opacity: 0.4;width: 50px;")
+document.getElementById("Mili" + Unit).setAttribute("style", "opacity: 0.4;width: 50px;")
+      //alert("pas terrain donc opacity 0.4")
     }
 
 
   }
-  if (Num3>0) {
-    tailleBord = parts[2]*1 +"px"
-    document.getElementById("Milit" + Cas + Uni).setAttribute("style", "border: " + tailleBord + " solid red;width: 50px;opacity: 1;");
-  }
+
+   if (Num3>0) {
+document.getElementById("MiliTerrain" + Unit).style="height:20px;margin-left:-15px;visibility: visible;"   }
 
 }
+
+
+
 function ColorierHisto(Num,Type) {
   if (Num>25) {
       document.getElementById("Carre" + Type).src="Image/CarreRouge2.png";
@@ -416,12 +428,9 @@ function Debut() {
 	  Données("Marbre")
       }
 
-// function Genrer(this) {
-// 	alert(this.value)
-//
-//       }
+
     function handleChange() {
-        document.getElementById("Mili10" ).innerHTML = "Unités combat caserne elfe";
+        document.getElementById("Mili10" ).innerHTML = "Caserne<br>elfe";
         document.getElementById("Mili11" ).src="https://fr.wiki.elvenar.com/images/d/df/Eb_lm_1_big.png";
         document.getElementById("Mili12" ).src="https://fr.wiki.elvenar.com/images/4/49/Eb_lr_1_big.png";
         document.getElementById("Mili13" ).src="https://fr.wiki.elvenar.com/images/a/a2/Eb_ma_1_big.png";
@@ -434,7 +443,7 @@ function Debut() {
       }
 
     function handleChange2() {
-          document.getElementById("Mili10" ).innerHTML = "Unités combat caserne humain";
+          document.getElementById("Mili10" ).innerHTML = "Caserne<br>humain";
           document.getElementById("Mili11" ).src="https://fr.wiki.elvenar.com/images/d/df/Hb_lm_1_big.png";
           document.getElementById("Mili12" ).src="https://fr.wiki.elvenar.com/images/e/e3/Hb_lr_1_big.png";
           document.getElementById("Mili13" ).src="https://fr.wiki.elvenar.com/images/e/ed/Hb_ma_1_big.png";
@@ -458,8 +467,7 @@ function Debut() {
       document.getElementById("Manu2b" ).style.backgroundColor="#F9C291"
       document.getElementById("Manu1" ).style.backgroundColor=""
       document.getElementById("Manu1b" ).style.backgroundColor=""
-
-    }
+      }
 
 
       function handleChangeAll(Num, Vecteur) {
@@ -501,15 +509,15 @@ function Debut() {
                   }
       function handleChangeR7() {
         handleChangeAll(7,"d'Elixir")
-                          Données("Elixir")
+                Données("Elixir")
                           }
       function handleChangeR8() {
         handleChangeAll(8,"de Poussiere")
-                              Données("Poussiere")
+                Données("Poussiere")
                             }
       function handleChangeR9() {
         handleChangeAll(9,"de Gemmes")
-                              Données("Gemmes")
+                  Données("Gemmes")
                               }
 
 
@@ -536,6 +544,50 @@ function Debut() {
         document.getElementById("TriangleMenuG").classList.toggle("TriangleMenuGI");
       }
 
+  function ShowForce(Num) {
+
+
+      document.getElementById("StockShow").innerHTML =Num
+      document.getElementById("ShowMili1").style.visibility ="visible"
+      document.getElementById("ShowMili2").style.visibility ="visible"
+      document.getElementById("ShowMili3").style.visibility ="visible"
+      document.getElementById("ShowMili4").style.visibility ="visible"
+      document.getElementById("ShowMili5").style.visibility ="visible"
+
+
+
+      document.getElementById("ShowMili1Img1").src = document.getElementById("Mili" +Num).src
+      document.getElementById("ShowMili2Img1").src = document.getElementById("Mili" +Num).src
+      document.getElementById("ShowMili3Img1").src = document.getElementById("Mili" +Num).src
+      document.getElementById("ShowMili4Img1").src = document.getElementById("Mili" +Num).src
+      document.getElementById("ShowMili5Img1").src = document.getElementById("Mili" +Num).src
+
+      document.getElementById("ShowMili" + Num + "Img2" ).style.visibility ="visible"
+      document.getElementById("ShowMili" + Num + "Img3" ).style.visibility ="visible"
+      document.getElementById("ShowMili" + Num + "Img4" ).style.visibility ="visible"
+      document.getElementById("ShowMili" + Num + "Img5" ).style.visibility ="visible"
+      document.getElementById("ShowMili" + Num + "Img6" ).style.visibility ="visible"
+
+  }
+  function DeShowForce() {
+    if(document.getElementById("StockShow").innerHTML!="z") {
+    document.getElementById("ShowMili1").style.visibility ="hidden"
+    document.getElementById("ShowMili2").style.visibility ="hidden"
+    document.getElementById("ShowMili3").style.visibility ="hidden"
+    document.getElementById("ShowMili4").style.visibility ="hidden"
+    document.getElementById("ShowMili5").style.visibility ="hidden"
+
+    document.getElementById("ShowMili" + document.getElementById("StockShow").innerHTML + "Img2" ).style.visibility ="hidden"
+    document.getElementById("ShowMili" + document.getElementById("StockShow").innerHTML + "Img3" ).style.visibility ="hidden"
+    document.getElementById("ShowMili" + document.getElementById("StockShow").innerHTML + "Img4" ).style.visibility ="hidden"
+    document.getElementById("ShowMili" + document.getElementById("StockShow").innerHTML + "Img5" ).style.visibility ="hidden"
+    document.getElementById("ShowMili" + document.getElementById("StockShow").innerHTML + "Img6" ).style.visibility ="hidden"
+
+
+    document.getElementById("StockShow").innerHTML="z"
+    }
+
+  }
 
 </script >
 
@@ -544,42 +596,10 @@ function Debut() {
 <style>
   body {font-family: Arial;}
 
-  /* Style the tab */
-  .tab {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-  }
 
-  /* Style the buttons inside the tab */
-  .tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-  }
 
-  /* Change background color of buttons on hover */
-  .tab button:hover {
-    background-color: #ddd;
-  }
 
-  /* Create an active/current tablink class */
-  .tab button.active {
-    background-color: #ccc;
-  }
 
-  /* Style the tab content */
-  .tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-  }
 
   .wrapper {
     display: flex;
@@ -620,150 +640,332 @@ function Debut() {
     padding: 0em;
   }
 
-.MenuG {
-  display:content;
-  cursor:pointer;
-}
-.MenuGI {
-  display:none;
-}
-.TriangleMenuG {
-  background-image: url("Image/TriangleMenu2.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  cursor:pointer;
-}
-.TriangleMenuGI {
-  background-image: url("Image/TriangleMenu.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  cursor:pointer;
-}
-.TabG {
+  .MenuG {
+    display:content;
+    cursor:pointer;
+  }
+  .MenuGI {
+    display:none;
+  }
+  .TriangleMenuG {
+    background-image: url("Image/TriangleMenu2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor:pointer;
+    }
+  .TriangleMenuGI {
+    background-image: url("Image/TriangleMenu.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor:pointer;
+  }
+  .TabG {
+    border-top: 4px solid green;border-bottom: 4px solid green;
+    border-left: 4px solid green;
+    border-top-left-radius : 20px;
+    border-bottom-left-radius : 20px;
+  }
+  .TabD {
+  border-top: 4px solid green;border-bottom: 4px solid green;
+  border-right: 4px solid green;
+  border-top-right-radius : 20px;
+  border-bottom-right-radius : 20px;
+  }
+  .TabGD {
+  border-top: 4px solid green;border-bottom: 4px solid green;
+  border-right: 4px solid green;
+  border-top-right-radius : 20px;
+  border-bottom-right-radius : 20px;
   border-top: 4px solid green;border-bottom: 4px solid green;
   border-left: 4px solid green;
   border-top-left-radius : 20px;
   border-bottom-left-radius : 20px;
-}
-.TabD {
-border-top: 4px solid green;border-bottom: 4px solid green;
-border-right: 4px solid green;
-border-top-right-radius : 20px;
-border-bottom-right-radius : 20px;
-}
-.TabGD {
-border-top: 4px solid green;border-bottom: 4px solid green;
-border-right: 4px solid green;
-border-top-right-radius : 20px;
-border-bottom-right-radius : 20px;
-border-top: 4px solid green;border-bottom: 4px solid green;
-border-left: 4px solid green;
-border-top-left-radius : 20px;
-border-bottom-left-radius : 20px;
-
-
 
 }
 
 </style>
 </head>
 <body onload="Debut()">
-
-
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Prepa')" id="Premier">Préparation aux tournois</button>
-  <button class="tablinks" onclick="openCity(event, 'Info')">Info troupes</button>
-  <button class="tablinks" onclick="openCity(event, 'Autre')">Conseils</button>
-</div>
+<div id="StockShow" style="display:none;">z</div>
 
 
 <header>
-<table style="margin-left: 0px; margin-right: auto;border-collapse;border-spacing : 0;width: 40%">
-  <tr>
-    <td style="text-align:right;"><strong>Je suis</strong></td>
-    <td class="TabG" id="Genre1" style="width: 20%; background-color:#F9C291;cursor:pointer;" onclick="handleChange2();">humanoide</td>
-    <td class="TabD" id="Genre1b" style="width: 20%; background-color:#F9C291;cursor:pointer;" onclick="handleChange2();"><img style="height:50px" src="Image/TournoiHumain.png"></td>
-    <td class="TabG" id="Genre2"  style="width: 20%; background-color:;cursor:pointer;" onclick="handleChange();"><img style="height:50px" src="Image/TournoiElfe.png"></td>
-    <td class="TabD" id="Genre2b"  style="width: 20%; background-color:;cursor:pointer;" onclick="handleChange();">elfoide</td>
-  </tr>
-  <tr><td colspan="5"></td></tr>
-  <tr >
-    <td style="text-align:right;"><strong>Je joue</strong></td>
-    <td class="TabG"  id="Manu1"  style="width: 20%; background-color:#F9C291;cursor:pointer;" onclick="handleChange2b();">en manuel</td>
-    <td class="TabD"   id="Manu1b"   style="width: 20%; background-color:#F9C291;cursor:pointer;" onclick="handleChange2b();"><img style="height:50px" src="https://cdn-icons-png.flaticon.com/512/1093/1093269.png"></td>
-    <td class="TabG"   id="Manu2"   style="width: 20%; background-color;cursor:pointer;:" onclick="handleChangeb();"><img style="height:50px" src="https://cdn-icons-png.flaticon.com/512/6471/6471690.png"></td>
-    <td class="TabD"  id="Manu2b"    style="width: 20%; background-color:;cursor:pointer;" onclick="handleChangeb();">en automatique</td>
-
-  </tr>
-</table>
-
-
-</header>
-<div id="main">
-  <article>
-  <table style="margin-left: auto; margin-right: auto;">
-    <tr style="text-align:center;border: 4px solid green;" >
-    <td >
-    </td>
-      <td colspan="5"  id="Difficulte" class="TabGD" ><strong>
-      Difficulté du tournoi : </strong><img width='30px' src='https://fr.wiki.elvenar.com/images/a/a8/Level_small.png'><img width='30px' src='https://fr.wiki.elvenar.com/images/a/a8/Level_small.png'>
-      </td>
+  <table style="margin-left: 0px; margin-right: auto;border-collapse;border-spacing : 0;width: 40%">
+    <tr>
+      <td style="text-align:right;"><strong>Je suis</strong></td>
+      <td class="TabG" id="Genre1" style="width: 20%; background-color:#F9C291;cursor:pointer;" onclick="handleChange2();">humanoide</td>
+      <td class="TabD" id="Genre1b" style="width: 20%; background-color:#F9C291;cursor:pointer;" onclick="handleChange2();"><img style="height:50px" src="Image/TournoiHumain.png"></td>
+      <td class="TabG" id="Genre2"  style="width: 20%; background-color:;cursor:pointer;" onclick="handleChange();"><img style="height:50px" src="Image/TournoiElfe.png"></td>
+      <td class="TabD" id="Genre2b"  style="width: 20%; background-color:;cursor:pointer;" onclick="handleChange();">elfoide</td>
     </tr>
-    <tr style="text-align:center;" >
-    <td >
-    </td>
-      <td colspan="5" id="Conseil" class="TabGD" >
-      Conseil: Bien dormir avant<br><br>
-      </td>
-    </tr>
-    <tr style="text-align:center;"  class="TabGD" >
-    <td >
-    </td>
-      <td colspan="5" id="Commentaire" class="TabGD" >
-      Commentaire: Bien dormir avant
-      </td>
-    </tr>
-    <tr style="text-align:center;" >
-    <td >
-
-</table>
-  <table style="margin-left: auto; margin-right: auto;">
-    </td>
-      <td colspan="5">
-      <br><strong><div id="Recommande">Unités recommandées</div></strong><br>
-      </td>
-    </tr>
-
-
+    <tr><td colspan="5"></td></tr>
     <tr >
-      <td id="Mili10">Unités caserne elfe</td>
-        <td  id="Milit11" ><img  id="Mili11" style="width:50px;" src="https://fr.wiki.elvenar.com/images/d/df/Eb_lm_1_big.png"></td>
-        <td id="Milit12"><img  id="Mili12" style="width:50px" src="https://fr.wiki.elvenar.com/images/4/49/Eb_lr_1_big.png"></td>
-        <td id="Milit13"><img  id="Mili13" style="width:50px" src="https://fr.wiki.elvenar.com/images/a/a2/Eb_ma_1_big.png"></td>
-        <td id="Milit14"><img  id="Mili14" style="width:50px" src="https://fr.wiki.elvenar.com/images/8/83/Eb_hm_1_big.png"></td>
-        <td id="Milit15"><img  id="Mili15" style="width:50px" src="https://fr.wiki.elvenar.com/images/1/1f/Eb_hr_1_big.png"></td>
+      <td style="text-align:right;"><strong>Je joue</strong></td>
+      <td class="TabG"  id="Manu1"  style="width: 20%; background-color:#F9C291;cursor:pointer;" onclick="handleChange2b();">en manuel</td>
+      <td class="TabD"   id="Manu1b"   style="width: 20%; background-color:#F9C291;cursor:pointer;" onclick="handleChange2b();"><img style="height:50px" src="https://cdn-icons-png.flaticon.com/512/1093/1093269.png"></td>
+      <td class="TabG"   id="Manu2"   style="width: 20%; background-color;cursor:pointer;:" onclick="handleChangeb();"><img style="height:50px" src="https://cdn-icons-png.flaticon.com/512/6471/6471690.png"></td>
+      <td class="TabD"  id="Manu2b"    style="width: 20%; background-color:;cursor:pointer;" onclick="handleChangeb();">en automatique</td>
+
+    </tr>
+  </table>
+</header>
+  <div id="main">
+    <article>
+    <table style="margin-left: auto; margin-right: auto;">
+      <tr style="text-align:center;border: 4px solid green;" >
+      <td >
+      </td>
+        <td colspan="5"  id="Difficulte" class="TabGD" ><strong>
+        Difficulté du tournoi : </strong><img width='30px' src='https://fr.wiki.elvenar.com/images/a/a8/Level_small.png'><img width='30px' src='https://fr.wiki.elvenar.com/images/a/a8/Level_small.png'>
+        </td>
       </tr>
       <tr style="text-align:center;" >
-        <td>Unités terrain d'entraînement</td>
-        <td  id="Milit21" ><img  id="Mili21" style="width:50px" src="https://fr.wiki.elvenar.com/images/5/59/Tg_lm_1_big.png"></td>
-        <td id="Milit22" ><img  id="Mili22" style="width:50px" src="https://fr.wiki.elvenar.com/images/7/78/Tg_lr_1_big.png"></td>
-        <td id="Milit23" ><img  id="Mili23" style="width:50px" src="https://fr.wiki.elvenar.com/images/b/b8/Tg_ma_1_big.png"></td>
-        <td id="Milit24" ><img  id="Mili24" style="width:50px" src="https://no.wiki.elvenar.com/images/thumb/2/28/Tg_hm_1_big.png/108px-Tg_hm_1_big.png"></td>
-        <td id="Milit25" ><img  id="Mili25" style="width:50px" src="https://fr.wiki.elvenar.com/images/5/5f/Tg_hr_1_big.png"></td>
+      <td >
+      </td>
+        <td colspan="5" id="Conseil" class="TabGD" style="background-color: white;">
+        Conseil: Bien dormir avant<br><br>
+        </td>
+      </tr>
+      <tr style="text-align:center;"  class="TabGD" >
+      <td >
+      </td>
+        <td colspan="5" id="Commentaire" class="TabGD"  style="background-color: white;">
+        Commentaire: Bien dormir avant
+        </td>
+      </tr>
+      <tr style="text-align:center;" >
+      <td >
+
+  </table>
+  <table style="margin-left: auto; margin-right: auto;width:50%;">
+    <tr>
+      <td colspan="6" style="width:50%;">
+        <div style="text-align:center;">
+          <strong><div id="Recommande">Unités recommandées</div></strong>
+          Recommandées pour le rapport de force: <img style="width:15px;" src="Image/LegendeRondRouge.png">
+          , pour l avantage terrain: <img style="width:15px;" src="Image/Hexagone.png">
+          <br>Survoler une unité pour voir ses forces et failbesses contre l ennemi.
+        </div>
+      </td>
+    </tr>
+
+
+
+    <tr  style="text-align:center;" >
+      <td id="Mili10"  >Caserne<br>elfe</td>
+        <td  id="Milit11" onmouseover="ShowForce(11)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;cursor:pointer;">
+        <conteneur style="display: flex;  justify-content: center;">
+          <img  id="Mili11" style="width:50px;" src="https://fr.wiki.elvenar.com/images/d/df/Eb_lm_1_big.png">
+          <img  id="MiliTerrain11" <img style="height:20px;margin-left:-15px;visibility: hidden;" src="Image/Hexagone.png">
+        </conteneur>
+        </td>
+
+        <td id="Milit12" onmouseover="ShowForce(12)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;cursor:pointer;" >
+        <conteneur style="display: flex;  justify-content: center;">
+          <img  id="Mili12" style="width:50px" src="https://fr.wiki.elvenar.com/images/4/49/Eb_lr_1_big.png">
+          <img  id="MiliTerrain12" <img style="height:20px;margin-left:-15px" src="Image/Hexagone.png">
+        </conteneur>
+        </td>
+
+        <td id="Milit13" onmouseover="ShowForce(13)"  onmouseout="DeShowForce()"  style="max-width:20%;min-width:20%;cursor:pointer;" >
+        <conteneur style="display: flex;  justify-content: center;">
+          <img  id="Mili13" style="width:50px" src="https://fr.wiki.elvenar.com/images/a/a2/Eb_ma_1_big.png">
+          <img  id="MiliTerrain13" <img style="height:20px;margin-left:-15px" src="Image/Hexagone.png">
+          </conteneur>
+          </td>
+
+        <td id="Milit14" onmouseover="ShowForce(14)"  onmouseout="DeShowForce()"  style="max-width:20%;min-width:20%;cursor:pointer;" >
+        <conteneur style="display: flex;  justify-content: center;">
+          <img  id="Mili14" style="width:50px" src="https://fr.wiki.elvenar.com/images/8/83/Eb_hm_1_big.png">
+          <img  id="MiliTerrain14" <img style="height:20px;margin-left:-15px" src="Image/Hexagone.png">
+        </conteneur>
+        </td>
+
+        <td id="Milit15" onmouseover="ShowForce(15)"  onmouseout="DeShowForce()"  style="max-width:20%;min-width:20%;cursor:pointer;" >
+          <conteneur style="display: flex;  justify-content: center;">
+            <img  id="Mili15" style="width:50px" src="https://fr.wiki.elvenar.com/images/1/1f/Eb_hr_1_big.png">
+            <img  id="MiliTerrain15" <img style="height:20px;margin-left:-15px" src="Image/Hexagone.png">
+            </conteneur>
+        </td>
+    </tr>
+    <tr style="text-align:center;" >
+        <td>Terrain<br>d entraînement</td>
+        <td  id="Milit21" onmouseover="ShowForce(21)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;cursor:pointer;"  >
+          <conteneur style="display: flex;  justify-content: center;">
+        <img  id="Mili21" style="width:50px" src="https://fr.wiki.elvenar.com/images/5/59/Tg_lm_1_big.png">
+        <img  id="MiliTerrain21" <img style="height:20px;margin-left:-15px" src="Image/Hexagone.png">
+        </conteneur>
+        </td>
+
+        <td id="Milit22"  onmouseover="ShowForce(22)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;cursor:pointer;" >
+        <conteneur style="display: flex;  justify-content: center;">
+        <img  id="Mili22" style="width:50px" src="https://fr.wiki.elvenar.com/images/7/78/Tg_lr_1_big.png">
+        <img  id="MiliTerrain22" <img style="height:20px;margin-left:-15px" src="Image/Hexagone.png">
+        </conteneur>
+        </td>
+
+
+        <td id="Milit23" onmouseover="ShowForce(23)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;cursor:pointer;"  >
+          <conteneur style="display: flex;  justify-content: center;">
+        <img  id="Mili23" style="width:50px" src="https://fr.wiki.elvenar.com/images/b/b8/Tg_ma_1_big.png">
+        <img  id="MiliTerrain23" <img style="height:20px;margin-left:-15px" src="Image/Hexagone.png">
+        </conteneur>
+        </td>
+
+        <td id="Milit24"  onmouseover="ShowForce(24)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;cursor:pointer;" >
+          <conteneur style="display: flex;  justify-content: center;">
+        <img  id="Mili24" style="width:50px" src="https://no.wiki.elvenar.com/images/thumb/2/28/Tg_hm_1_big.png/108px-Tg_hm_1_big.png">
+        <img  id="MiliTerrain24" <img style="height:20px;margin-left:-15px" src="Image/Hexagone.png">
+        </conteneur>
+        </td>
+
+        <td id="Milit25"  onmouseover="ShowForce(25)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;cursor:pointer;" >
+        <conteneur style="display: flex;  justify-content: center;">
+        <img  id="Mili25" style="width:50px" src="https://fr.wiki.elvenar.com/images/5/5f/Tg_hr_1_big.png">
+        <img  id="MiliTerrain25" <img style="height:20px;margin-left:-15px" src="Image/Hexagone.png">
+        </conteneur>
+        </td>
+
       </tr>
 
       <tr style="text-align:center;" >
-        <td>Unités camp scout</td>
-        <td id="Milit31" ><img  id="Mili31" style="width:50px" src="https://fr.wiki.elvenar.com/images/8/8a/Mc_lm_1_big.png"></td>
-        <td id="Milit32" ><img id="Mili32" style="width:50px" src="https://fr.wiki.elvenar.com/images/d/d0/Mc_lr_1_big.png"></td>
-        <td id="Milit33" ><img id="Mili33" style="width:50px" src="https://fr.wiki.elvenar.com/images/6/6c/Mc_ma_1_big.png"></td>
-        <td id="Milit34" ><img id="Mili34" style="width:50px" src="https://fr.wiki.elvenar.com/images/9/98/Mc_hm_1_big.png"></td>
-        <td id="Milit35" ><img id="Mili35" style="width:50px" src="https://fr.wiki.elvenar.com/images/5/56/Mc_hr_1_big.png"></td>
+        <td>Camp<br>mercenaire</td>
+        <td id="Milit31"  onmouseover="ShowForce(31)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;cursor:pointer;" >
+        <conteneur style="display: flex;  justify-content: center;">
+        <img  id="Mili31" style="width:50px" src="https://fr.wiki.elvenar.com/images/8/8a/Mc_lm_1_big.png">
+        <img  id="MiliTerrain31" <img style="height:20px;margin-left:-15px" src="Image/Hexagone.png">
+        </conteneur>
+        </td>
+
+        <td id="Milit32"  onmouseover="ShowForce(32)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;cursor:pointer;" >
+        <conteneur style="display: flex;  justify-content: center;">
+        <img id="Mili32" style="width:50px" src="https://fr.wiki.elvenar.com/images/d/d0/Mc_lr_1_big.png">
+        <img  id="MiliTerrain32" <img style="height:20px;margin-left:-15px" src="Image/Hexagone.png">
+        </conteneur>
+        </td>
+
+        <td id="Milit33"  onmouseover="ShowForce(33)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;cursor:pointer;" >
+        <conteneur style="display: flex;  justify-content: center;">
+        <img id="Mili33" style="width:50px" src="https://fr.wiki.elvenar.com/images/6/6c/Mc_ma_1_big.png">
+        <img  id="MiliTerrain33" <img style="height:20px;margin-left:-15px" src="Image/Hexagone.png">
+        </conteneur>
+        </td>
+
+        <td id="Milit34"  onmouseover="ShowForce(34)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;cursor:pointer;" >
+        <conteneur style="display: flex;  justify-content: center;">
+        <img id="Mili34" style="width:50px" src="https://fr.wiki.elvenar.com/images/9/98/Mc_hm_1_big.png">
+        <img  id="MiliTerrain34" <img style="height:20px;margin-left:-15px" src="Image/Hexagone.png">
+        </conteneur>
+        </td>
+
+        <td id="Milit35"  onmouseover="ShowForce(35)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;cursor:pointer;" >
+        <conteneur style="display: flex;  justify-content: center;">
+        <img id="Mili35" style="width:50px" src="https://fr.wiki.elvenar.com/images/5/56/Mc_hr_1_big.png">
+        <img  id="MiliTerrain35" <img style="height:20px;margin-left:-15px" src="Image/Hexagone.png">
+        </conteneur>
+        </td>
+
       </tr>
-
-
-      <tr style="text-align:center;vertical-align:bottom;" >
-        <td>Unités adverses</td>
+      <tr style="height:10px;">
+      <td></td>
+        <td style="height:10px;">
+          <div  id = "ShowMili1" style="height:100%;width:100%;position:relative;text-align:center;visibility:hidden;">
+            <img id="ShowMili1Img1" style="width:30px;position:relative;top:50px;left:0px;" src="https://fr.wiki.elvenar.com/images/d/df/Eb_lm_1_big.png">
+            <img id='ShowMili11Img2'  src='Image/Egal.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili12Img2'  src='Image/MoinsMoins.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili13Img2'  src='Image/MoinsC.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili14Img2'  src='Image/Egal.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili15Img2'  src='Image/PlusC.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili21Img2'  src='Image/Egal.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili22Img2'  src='Image/MoinsMoins.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili23Img2'  src='Image/MoinsC.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili24Img2'  src='Image/PlusPlus.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili25Img2'  src='Image/Egal.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili31Img2'  src='Image/Egal.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili32Img2'  src='Image/MoinsMoins.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili33Img2'  src='Image/MoinsC.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili34Img2'  src='Image/Egal.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili35Img2'  src='Image/PlusPlus.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>          </div>
+        </td>
+        <td  style="height:10px;">
+          <div  id = "ShowMili2" style="height:100%;width:100%;position:relative;text-align:center;visibility:hidden;">
+            <img id="ShowMili2Img1"   style="width:30px;position:relative;top:50px;left:0px;" src="https://fr.wiki.elvenar.com/images/d/df/Eb_lm_1_big.png">
+            <img id='ShowMili11Img3'  src='Image/PlusC.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili12Img3'  src='Image/Egal.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili13Img3'  src='Image/MoinsMoins.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili14Img3'  src='Image/MoinsC.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili15Img3'  src='Image/Egal.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili21Img3'  src='Image/Egal.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili22Img3'  src='Image/Egal.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili23Img3'  src='Image/MoinsMoins.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili24Img3'  src='Image/MoinsC.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili25Img3'  src='Image/PlusPlus.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili31Img3'  src='Image/PlusPlus.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili32Img3'  src='Image/Egal.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili33Img3'  src='Image/MoinsMoins.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili34Img3'  src='Image/MoinsC.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili35Img3'  src='Image/PlusC.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>          </div>
+        </td>
+        <td  style="height:10px;">
+          <div  id = "ShowMili3" style="height:100%;width:100%;position:relative;text-align:center;visibility:hidden;">
+          <img id="ShowMili3Img1"  style="width:30px;position:relative;top:50px;left:0px;" src="https://fr.wiki.elvenar.com/images/d/df/Eb_lm_1_big.png">
+          <img id='ShowMili11Img4'  src='Image/PlusPlus.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+          <img id='ShowMili12Img4'  src='Image/PlusC.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+          <img id='ShowMili13Img4'  src='Image/Egal.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+          <img id='ShowMili14Img4'  src='Image/MoinsMoins.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+          <img id='ShowMili15Img4'  src='Image/MoinsC.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+          <img id='ShowMili21Img4'  src='Image/PlusC.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+          <img id='ShowMili22Img4'  src='Image/Egal.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+          <img id='ShowMili23Img4'  src='Image/Egal.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+          <img id='ShowMili24Img4'  src='Image/MoinsMoins.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+          <img id='ShowMili25Img4'  src='Image/MoinsC.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+          <img id='ShowMili31Img4'  src='Image/Egal.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+          <img id='ShowMili32Img4'  src='Image/PlusPlus.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+          <img id='ShowMili33Img4'  src='Image/Egal.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+          <img id='ShowMili34Img4'  src='Image/MoinsMoins.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+          <img id='ShowMili35Img4'  src='Image/MoinsC.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>          </div>
+        </td>
+        <td  style="height:10px;">
+          <div  id = "ShowMili4" style="height:100%;width:100%;position:relative;text-align:center;visibility:hidden;">
+            <img id="ShowMili4Img1"  style="width:30px;position:relative;top:50px;left:0px;" src="https://fr.wiki.elvenar.com/images/d/df/Eb_lm_1_big.png">
+            <img id='ShowMili11Img5'  src='Image/MoinsC.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili12Img5'  src='Image/PlusPlus.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili13Img5'  src='Image/PlusC.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili14Img5'  src='Image/Egal.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili15Img5'  src='Image/MoinsMoins.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili21Img5'  src='Image/MoinsC.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili22Img5'  src='Image/PlusPlus.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili23Img5'  src='Image/Egal.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili24Img5'  src='Image/Egal.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili25Img5'  src='Image/MoinsMoins.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili31Img5'  src='Image/MoinsC.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili32Img5'  src='Image/PlusC.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili33Img5'  src='Image/PlusPlus.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili34Img5'  src='Image/Egal.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili35Img5'  src='Image/MoinsMoins.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>          </div>
+        </td>
+        <td  style="height:10px;">
+          <div  id = "ShowMili5" style="height:100%;width:100%;position:relative;text-align:center;visibility:hidden;">
+            <img id="ShowMili5Img1"  style="width:30px;position:relative;top:50px;left:0px;" src="https://fr.wiki.elvenar.com/images/d/df/Eb_lm_1_big.png">
+            <img id='ShowMili11Img6'  src='Image/MoinsMoins.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili12Img6'  src='Image/MoinsC.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili13Img6'  src='Image/PlusC.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili14Img6'  src='Image/PlusC.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili15Img6'  src='Image/Egal.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili21Img6'  src='Image/MoinsMoins.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili22Img6'  src='Image/MoinsC.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili23Img6'  src='Image/PlusPlus.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili24Img6'  src='Image/Egal.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili25Img6'  src='Image/Egal.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili31Img6'  src='Image/MoinsMoins.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili32Img6'  src='Image/MoinsC.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili33Img6'  src='Image/PlusC.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili34Img6'  src='Image/PlusPlus.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>
+            <img id='ShowMili35Img6'  src='Image/Egal.png'  style='width:15px;position:relative;top:40px;left:0px;display:inline-block;visibility:hidden;'>          </div>
+        </td>
+      </tr>
+      <tr style="top=-100%;text-align:center;vertical-align:bottom;" >
+        <td>Proportion<br>unités<br>adverses</td>
         <td><img id="Carre1" style="width:30px;" src="Image/CarreBleu.png"></td>
         <td><img id="Carre2" style="width:30px;" src="Image/CarreBleu.png"</td>
         <td><img id="Carre3" style="width:30px;" src="Image/CarreBleu.png"</td>
@@ -772,11 +974,11 @@ border-bottom-left-radius : 20px;
       </tr>
       <tr style="text-align:center;" >
         <td></td>
-        <td>Mêlée<br>légère</td>
-        <td>Portée <br>légère</td>
-        <td>Magiques</td>
-        <td>Mêlée <br>lourde</td>
-        <td>Portée <br>lourde</td>
+        <td style="max-width:20%;min-width:20%;">Mêlée<br>légère</td>
+        <td style="max-width:20%;min-width:20%;">Portée <br>légère</td>
+        <td style="max-width:20%;min-width:20%;">Magik</td>
+        <td style="max-width:20%;min-width:20%;">Mêlée <br>lourde</td>
+        <td style="max-width:20%;min-width:20%;">Portée <br>lourde</td>
       </tr>
 
 
@@ -826,7 +1028,7 @@ border-bottom-left-radius : 20px;
       <tr>
         <td  onclick="handleChangeR5();" class="MenuG" id="MenuA5"    style="border-left: 4px solid green;"><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/3/3d/Good_scrolls_big.png"></td>
         <td  onclick="handleChangeR5();" class="MenuG"  id="MenuB5"  style="border-right: 4px solid green;">Parchemins</td>
-        <td><Div class="TriangleMenuG" id="TriangleMenuG" onclick="CacherMenu()" style="height:50px;">.......</div></td>
+        <td><Div class="TriangleMenuG" id="TriangleMenuG" onclick="CacherMenu()" style="height:50px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
       </div>
       </tr>
       <tr>
@@ -861,10 +1063,12 @@ border-bottom-left-radius : 20px;
 
 
   <aside>
-  <textarea id="story" name="story"
-  rows="10" cols="30">
-  Nature du terrain
-  </textarea><br>
+  <Div style="background-color: white;width: 80%;text-align:center;">
+  Nature du terrain : type rempart<br>, favorise les portées longues<br>
+  <img style="width:70px;" src="Image/HexagoneRempart1.png">
+  <img style="width:70px;" src="Image/HexagoneRempart2.png">
+  <img style="width:70px;" src="Image/HexagoneRempart3.png">
+  </Div><br>
   <textarea id="story" name="story"
   rows="10" cols="30">
   Commentaire perso
@@ -874,31 +1078,9 @@ border-bottom-left-radius : 20px;
 
 
 
-<div id="Info" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p>
-</div>
 
-<div id="Autre" class="tabcontent">
-  <h3>Autre</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
 
-<script>
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-</script>
+
 
 </body>
 </html>
