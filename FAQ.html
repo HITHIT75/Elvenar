@@ -13,16 +13,7 @@
 function Debut() {
 //	alert("ok debut")
 	  loadData()
-	//	alert("fini")
-		// for ( i = 1; i < 34; i += 1) {
-		// 		if (document.getElementById("Accordeon" +(i)).innerHTML==="") {
-		// 			tot=tot+1
-		// 		}
-		// 		else {
-		// 			tat=tat+1
-		// 		}
-		// 	}
-		// alert(tot +"   " + tat)
+
       }
   function loadData() {
   var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRPAA3qaqB_cOanF7wucoqkea5OLqi5OR-DR6n2cX_yNIGPU5Gfbsh6mSNC9zLPxeHQLmBZ5SWh9-kh/pub?gid=456137167&single=true&output=csv";
@@ -30,11 +21,11 @@ function Debut() {
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4) {
-Alert(xmlhttp.responseText)
-            const parts = xmlhttp.responseText.split("|");
-						Maxi=parts.length+1
 
-						
+            const parts = xmlhttp.responseText.split("|");
+	Maxi=parts.length+1
+
+	Alert(xmlhttp.responseText)					
 
 
             for ( i = 0; i < Maxi; i += 1) {
