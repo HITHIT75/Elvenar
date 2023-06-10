@@ -60,7 +60,10 @@
          document.getElementById("Chaine2").innerTxt=  username
          document.getElementById("InfoPerso").value=  username
         }
-        // else {
+         else {
+           TypeDeTournoi
+           document.getElementById("Chaine2").innerTxt=  ""
+           document.getElementById("InfoPerso").value=  ""
         //   username = 'peemzie'
         //   if (username != "" && username != null) {
         //
@@ -68,7 +71,7 @@
         //     document.getElementById("Chaine1").innerTxt=  Cible + "crée"
         //     document.getElementById("Chaine2").innerTxt=  username
         //   }
-        // }
+         }
       }
 
   function Données() {
@@ -539,6 +542,8 @@
     Uniter()
     //    <td style="border: 2px solid red;" id="Milit11"><img  id="Mili11" style="width:50px;border: 2px solid black;"
 
+    TypeDeTournoi=  document.getElementById("TournoiShow").innerHTML
+    checkCookie(TypeDeTournoi)  
   }
   function Uniter() {
 
