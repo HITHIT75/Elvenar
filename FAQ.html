@@ -30,22 +30,12 @@ function Debut() {
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4) {
-
+Alert(xmlhttp.responseText)
             const parts = xmlhttp.responseText.split("|");
 						Maxi=parts.length+1
-						Maxi=Math.floor(Maxi/3)
-						//document.getElementById("MaxQ").innerHTML=Maxi
-						//alert(Maxi)
-						//Bout = Math.floor(parts.length/3) Math.round
-						//Alert(Bout)
-//alert(xmlhttp.responseText)
-							//var0=parts[0]
-   		         //result = var0.substring(0, var0.length-2);
-              // document.getElementById("Accordeon" +1).innerHTML=result
-              // var0=parts[1]
-   		//         result = var0.substring(0, var0.length-2);
-		 //          document.getElementById("Content" +(1)).innerHTML=result
-		 				//Math.floor(a)
+
+						
+
 
             for ( i = 0; i < Maxi; i += 1) {
               j=i*3    //Math.floor(a)
