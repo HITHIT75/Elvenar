@@ -337,7 +337,7 @@
     //  alert("données")
     TypeTournoi=document.getElementById("TournoiShow").innerHTML
     //alert(document.getElementById("ManuelShow").innerHTML)
-      if (TypeTournoi==="Marbre") {
+            if (TypeTournoi==="Marbre") {
           //  alert(TypeTournoi)
         NbEtoileDifficulté = 1
         Commentaire ="Tournoi facile avec peu de pertes"
@@ -410,8 +410,8 @@
           NbEtoileDifficulté = 4
           Commentaire ="Tournoi assez difficile avec pas mal de pertes"
           Conseil ="Poser un boost portée légère et booster les points de vie avec 1/2 armuriers ou 3/4 déchainements"
-          NatureTerrain="Proportion élévée de type PLAINE: favorise les unités à forte résistance et initiative elevée"
-          Image1Terrain="Image/Hexagone.png"
+          NatureTerrain="Grosse proportion de type PLAINE: favorise les unités à forte résistance et initiative elevée"
+          Image1Terrain=""
           Image2Terrain=""
           Image2Terrain=""
 
@@ -423,29 +423,29 @@
           PorteeLourdeEnnemie =10
 
 
-          MeleeLegereCaserne ="0,0,0" // 0 = pas recommandé  1 = recommandé   dans  l ordre  "manuel,auto,terrain"
+        MeleeLegereCaserne ="0,1,0" // 0 = pas recommandé  1 = recommandé   dans  l ordre  "manuel,auto,terrain"
         PorteeLegereCaserne ="0,0,0"
         MagiqueCaserne ="0,0,0"
         MeleeLourdeCaserne ="0,0,0"
-        PorteeLourdeCaserne ="1,0,0"
+        PorteeLourdeCaserne ="1,1,0"
 
         MeleeLegereTerrain ="0,0,0"
-        PorteeLegereTerrain ="1,0,0"
+        PorteeLegereTerrain ="1,1,0"
         MagiqueTerrain ="0,0,0"
         MeleeLourdeTerrain ="0,0,0"
-        PorteeLourdeTerrain ="1,0,0"
+        PorteeLourdeTerrain ="1,1,0"
 
-        MeleeLegereCamp ="0,0,0"
-        PorteeLegereCamp ="1,0,0"
+        MeleeLegereCamp ="0,1,0"
+        PorteeLegereCamp ="1,1,0"
         MagiqueCamp ="0,0,0"
         MeleeLourdeCamp ="0,0,0"
-        PorteeLourdeCamp ="1,0,0"
+        PorteeLourdeCamp ="1,1,0"
         }
       if (TypeTournoi==="Cristal") {
             NbEtoileDifficulté = 3
             Commentaire ="Produire principalement des mages"
             Conseil ="Poser un boost mage et équitablement boost déchaînement/armurier nain"
-            NatureTerrain="Proportion elevée de type REMPART: favorise les unités longue portée (grenouille/mage fleuri/archer)"
+            NatureTerrain="Grosse proportionde type REMPART: favorise les untés longue portée (grenouille/mage fleuri/archer)"
             Image1Terrain="Image/HexagoneRempart1.png"
             Image2Terrain="Image/HexagoneRempart2.png"
             Image3Terrain="Image/HexagoneRempart3.png"
@@ -458,29 +458,29 @@
 
 
             MeleeLegereCaserne ="0,0,0" // 0 = pas recommandé  1 = recommandé   dans  l ordre  "manuel,auto,terrain"
-            PorteeLegereCaserne ="0,0,1"
-            MagiqueCaserne ="0,0,0"
+            PorteeLegereCaserne ="0,1,1"
+            MagiqueCaserne ="0,1,0"
             MeleeLourdeCaserne ="0,0,0"
             PorteeLourdeCaserne ="1,0,0"
 
-            MeleeLegereTerrain ="0,0,0"
+            MeleeLegereTerrain ="0,1,0"
             PorteeLegereTerrain ="0,0,0"
-            MagiqueTerrain ="1,0,0"
+            MagiqueTerrain ="1,1,0"
             MeleeLourdeTerrain ="0,0,0"
             PorteeLourdeTerrain ="1,0,0"
 
             MeleeLegereCamp ="0,0,0"
-            PorteeLegereCamp ="0,0,0"
-            MagiqueCamp ="1,0,1"
-            MeleeLourdeCamp ="0,0,0"
+            PorteeLegereCamp ="0,1,0"
+            MagiqueCamp ="1,1,1"
+            MeleeLourdeCamp ="0,1,0"
             PorteeLourdeCamp ="1,0,1"
           }
       if (TypeTournoi==="Parchemins") {
               NbEtoileDifficulté = 5
               Commentaire ="Tournoi difficile avec beaucoup de pertes. Prioriser les ranger"
               Conseil ="Bien booster les points de vie avec déchaînement et armurier nain"
-              NatureTerrain="Proportion élévée de type PLAINE: favorise les unités à forte résistance et initiative elevée"
-              Image1Terrain="Image/Hexagone.png"
+              NatureTerrain=""
+              Image1Terrain=""
               Image2Terrain=""
               Image3Terrain=""
 
@@ -491,22 +491,22 @@
               PorteeLourdeEnnemie =37
 
 
-              MeleeLegereCaserne ="0,0,0" // 0 = pas recommandé  1 = recommandé   dans  l ordre  "manuel,auto,terrain"
+             MeleeLegereCaserne ="0,0,0" // 0 = pas recommandé  1 = recommandé   dans  l ordre  "manuel,auto,terrain"
              PorteeLegereCaserne ="0,0,0"
-             MagiqueCaserne ="0,0,0"
-             MeleeLourdeCaserne ="0,0,0"
-             PorteeLourdeCaserne ="1,0,0"
+             MagiqueCaserne ="0,1,0"
+             MeleeLourdeCaserne ="0,1,0"
+             PorteeLourdeCaserne ="1,1,0"
 
              MeleeLegereTerrain ="0,0,0"
              PorteeLegereTerrain ="0,0,0"
-             MagiqueTerrain ="1,0,0"
+             MagiqueTerrain ="1,1,0"
              MeleeLourdeTerrain ="0,0,0"
-             PorteeLourdeTerrain ="0,0,0"
+             PorteeLourdeTerrain ="0,1,0"
 
-             MeleeLegereCamp ="0,0,0"
-             PorteeLegereCamp ="1,0,0"
+             MeleeLegereCamp ="0,1,0"
+             PorteeLegereCamp ="1,1,0"
              MagiqueCamp ="1,0,0"
-             MeleeLourdeCamp ="0,0,0"
+             MeleeLourdeCamp ="0,1,0"
              PorteeLourdeCamp ="1,0,0"
             }
       if (TypeTournoi==="Soie") {
@@ -526,22 +526,22 @@
 
 
                 MeleeLegereCaserne ="0,0,0" // 0 = pas recommandé  1 = recommandé   dans  l ordre  "manuel,auto,terrain"
-                PorteeLegereCaserne ="0,0,0"
+                PorteeLegereCaserne ="0,1,0"
                 MagiqueCaserne ="0,0,0"
                 MeleeLourdeCaserne ="0,0,0"
-                PorteeLourdeCaserne ="1,0,0"
+                PorteeLourdeCaserne ="1,1,0"
 
                 MeleeLegereTerrain ="0,0,0"
-                PorteeLegereTerrain ="0,0,0"
+                PorteeLegereTerrain ="0,1,0"
                 MagiqueTerrain ="1,0,0"
                 MeleeLourdeTerrain ="0,0,0"
                 PorteeLourdeTerrain ="0,0,0"
 
                 MeleeLegereCamp ="0,0,0"
-                PorteeLegereCamp ="1,0,0"
-                MagiqueCamp ="1,0,0"
+                PorteeLegereCamp ="1,1,0"
+                MagiqueCamp ="1,1,0"
                 MeleeLourdeCamp ="0,0,0"
-                PorteeLourdeCamp ="1,0,0"
+                PorteeLourdeCamp ="1,1,0"
               }
       if (TypeTournoi==="Elixir") {
                   NbEtoileDifficulté = 3
@@ -560,22 +560,22 @@
 
 
                   MeleeLegereCaserne ="0,0,0" // 0 = pas recommandé  1 = recommandé   dans  l ordre  "manuel,auto,terrain"
-                  PorteeLegereCaserne ="0,0,0"
+                  PorteeLegereCaserne ="0,1,0"
                   MagiqueCaserne ="0,0,0"
-                  MeleeLourdeCaserne ="0,0,0"
-                  PorteeLourdeCaserne ="1,0,0"
+                  MeleeLourdeCaserne ="0,1,0"
+                  PorteeLourdeCaserne ="1,1,0"
 
                   MeleeLegereTerrain ="0,0,0"
-                  PorteeLegereTerrain ="1,0,0"
+                  PorteeLegereTerrain ="1,1,0"
                   MagiqueTerrain ="0,0,0"
-                  MeleeLourdeTerrain ="0,0,0"
+                  MeleeLourdeTerrain ="0,1,0"
                   PorteeLourdeTerrain ="0,0,0"
 
                   MeleeLegereCamp ="0,0,0"
-                  PorteeLegereCamp ="1,0,0"
-                  MagiqueCamp ="0,0,0"
+                  PorteeLegereCamp ="1,1,0"
+                  MagiqueCamp ="0,1,0"
                   MeleeLourdeCamp ="0,0,0"
-                  PorteeLourdeCamp ="1,0,0"
+                  PorteeLourdeCamp ="1,1,0"
                 }
       if (TypeTournoi==="Poussiere") {
                     NbEtoileDifficulté = 5
@@ -634,7 +634,7 @@
                       PorteeLourdeCaserne ="1,1,1"
 
                       MeleeLegereTerrain ="0,0,0"
-                      PorteeLegereTerrain ="0,0,1"
+                      PorteeLegereTerrain ="0,1,1"
                       MagiqueTerrain ="1,1,0"
                       MeleeLourdeTerrain ="0,1,0"
                       PorteeLourdeTerrain ="0,0,0"
