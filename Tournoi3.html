@@ -20,14 +20,18 @@
     handleChange2()
     handleChange2b()
     checkCookie(TypeDeTournoi)
+    checkCookie2()
       }
   function EcrireCook() {
       TypeDeTournoi=document.getElementById("TournoiShow").innerHTML
       Contenu=document.getElementById("InfoPerso").value
         setCookie(TypeDeTournoi, Contenu, 365);
-
   }
-
+  function EcrireCook2() {
+      TypeDeTournoi='Ecran'
+      Contenu=document.getElementById("GenreShow").innerHTML+'|'+document.getElementById("ManuelShow").innerHTML
+        setCookie(TypeDeTournoi, Contenu, 365);
+  }
   function setCookie(cname, cvalue, exdays) {
         document.getElementById("Chaine2").innerHTML=  cvalue
         const d = new Date();
@@ -61,18 +65,25 @@
          document.getElementById("InfoPerso").value=  username
         }
          else {
-           TypeDeTournoi
            document.getElementById("Chaine2").innerTxt=  ""
            document.getElementById("InfoPerso").value=  ""
-        //   username = 'peemzie'
-        //   if (username != "" && username != null) {
-        //
-        //     setCookie(Cible, username, 365);
-        //     document.getElementById("Chaine1").innerTxt=  Cible + "crée"
-        //     document.getElementById("Chaine2").innerTxt=  username
-        //   }
          }
       }
+    function checkCookie2() {
+          //document.getElementById("Chaine").innerHTML=  "attente cookie"
+            let username = getCookie('Ecran');
+            if (username != "") {
+             //alert("Welcome again " + username);
+             Genre =username.substring(0,1)
+             Manuel=username.substring(2)
+             document.getElementById("GenreShow").innerTxt=  Genre
+             document.getElementById("ManuelShow").innerTxt=  Manuel
+
+            }
+          }
+
+
+
   function InfoUnite(Num) {
     //Num =document.getElementById("StockShow").innerHTML
     if (document.getElementById("GenreShow").innerHTML == "1" ) {
@@ -80,7 +91,7 @@
           Num = Num + "b"
         }
       }
-//alert(Num)
+      //alert(Num)
 
     if (Num==='11') {
       Degats ='10'
@@ -339,7 +350,7 @@
     //  alert("données")
     TypeTournoi=document.getElementById("TournoiShow").innerHTML
     //alert(document.getElementById("ManuelShow").innerHTML)
-            if (TypeTournoi==="Marbre") {
+      if (TypeTournoi==="Marbre") {
           //  alert(TypeTournoi)
         NbEtoileDifficulté = 1
         Commentaire ="Tournoi facile avec peu de pertes"
@@ -599,19 +610,19 @@
                     PorteeLegereCaserne ="0,0,0"
                     MagiqueCaserne ="0,0,0"
                     MeleeLourdeCaserne ="0,0,0"
-                    PorteeLourdeCaserne ="1,0,0"
+                    PorteeLourdeCaserne ="1,1,0"
 
                     MeleeLegereTerrain ="0,0,0"
                     PorteeLegereTerrain ="0,0,0"
-                    MagiqueTerrain ="1,0,0"
+                    MagiqueTerrain ="1,1,0"
                     MeleeLourdeTerrain ="0,0,0"
                     PorteeLourdeTerrain ="0,0,0"
 
                     MeleeLegereCamp ="0,0,0"
                     PorteeLegereCamp ="0,0,0"
-                    MagiqueCamp ="1,0,0"
+                    MagiqueCamp ="1,1,0"
                     MeleeLourdeCamp ="0,0,0"
-                    PorteeLourdeCamp ="1,0,0"
+                    PorteeLourdeCamp ="1,1,0"
                   }
       if (TypeTournoi==="Gemmes") {
                       NbEtoileDifficulté = 1
@@ -920,6 +931,24 @@
              }
 
         }
+    function Legender() {
+      Res=document.getElementById("LegendeShow").innerHTML*1
+      Res=Math.abs(Res-1)
+      document.getElementById("LegendeShow").innerHTML=Res
+        if (Res==1) {
+            document.getElementById("Legende0").style.display ="none"
+            document.getElementById("Legende1").style.display ="block"
+          }
+          else {
+            document.getElementById("Legende1").style.display ="none"
+            document.getElementById("Legende0").style.display ="block"
+          }
+
+
+
+      }
+
+
       function handleChangeR1() {
             handleChangeAll(1,"de Marbre")
             document.getElementById("TournoiShow").innerHTML="Marbre"
@@ -1088,10 +1117,7 @@
   #main > article {
     flex: 1;
   }
-  #main > aside {
-    flex: 0 0 20vw;
-    width: 40%;
-  }
+
   #main > nav {
     flex: 0 0 8%;
     // width: 10%;
@@ -1101,7 +1127,7 @@
     text-align:center;
     height: 20%;
   }
-  header,  article, nav, aside {
+  header,  article, nav  {
     padding: 0em;
   }
   .MenuG {
@@ -1173,6 +1199,12 @@
     .TabDtrait {
         border-right: 4px solid green;
       }
+    .TabGDHB {
+      border: 4px solid green;
+      border-radius : 20px;
+      font-size: 13px;
+      text-align: left;
+    }
       #flex-container {
           display: flex;
           height: 200px;
@@ -1191,17 +1223,18 @@
 </style>
 </head>
 <body onload="Debut()">
-<div id="StockShow" >z</div>
-<div id="ManuelShow">0</div>
-<div id="GenreShow">0</div>
+<div id="StockShow"  style="display:none;">z</div>
+<div id="ManuelShow"  style="display:none;">0</div>
+<div id="GenreShow"  style="display:none;">0</div>
+<div id="LegendeShow"  style="display:none;">0</div>
 <div id="TournoiShow" style="display:none;"></div>
 <div id="Num1Show" style="display:none;"></div>
 <div id="Num2Show" style="display:none;" ></div>
 <div id="Num3Show" style="display:none;"></div>
 <div id="UnitShow" style="display:none;" ></div>
-<div id="Chaine1" ></div>
-<div id="Chaine2" ></div>
-<div id="Confirm" ></div>
+<div id="Chaine1"  style="display:none;"></div>
+<div id="Chaine2"  style="display:none;"></div>
+<div id="Confirm"  style="display:none;"></div>
 
   <header>
     <table style="margin-left: 0px; margin-right: auto;border-collapse;border-spacing : 0;width: 50%">
@@ -1211,8 +1244,17 @@
         <td class="TabD" id="Genre1b" style="width: 20%; background-color:#F7A63D;cursor:pointer;" onclick="handleChange2();"><img style="height:50px" src="Image/TournoiHumain.png"></td>
         <td class="TabG" id="Genre2"  style="width: 20%; background-color:;cursor:pointer;" onclick="handleChange();"><img style="height:50px" src="Image/TournoiElfe.png"></td>
         <td class="TabD" id="Genre2b"  style="width: 20%; background-color:;cursor:pointer;" onclick="handleChange();">elfoide</td>
-        <td rowspan="3" style="text-align:left;width: 20%">
-            <textarea onchange="EcrireCook()" id="InfoPerso" placeholder="Saisir ici vos commentaires personels sur ce tournoi - Ils seront visibles à votre prochaine visite."  rows="8" cols="40"></textarea>
+        <td rowspan="3" style="text-align:left;width: 40%">
+            <div id="Legende0">
+              <textarea onchange="EcrireCook()" id="InfoPerso" placeholder="Saisir ici vos commentaires personnels sur ce tournoi - Ils seront visibles à votre prochaine visite."  rows="8" cols="50"></textarea>
+            </div>
+            <div id="Legende1" class="TabGDHB" style="width:500px;height:130px;display:none;">
+              Recommandées pour le rapport de force: <img style="width:15px;" src="Image/LegendeRondRouge.png">
+              , pour l avantage terrain: <img style="width:15px;" src="Image/Hexagone.png">
+              <br>Survoler une unité pour voir ses forces et failbesses contre l ennemi.
+            </div>
+
+
         </td>
       </tr>
       <tr><td colspan="5"></td></tr>
@@ -1232,9 +1274,17 @@
         <tr style="text-align:center;border: 4px solid green;" >
         <td >
         </td>
-          <td colspan="5"  id="Difficulte" class="TabGD" ><strong>
-          Difficulté du tournoi : </strong><img width='30px' src='https://fr.wiki.elvenar.com/images/a/a8/Level_small.png'><img width='30px' src='https://fr.wiki.elvenar.com/images/a/a8/Level_small.png'>
+          <td colspan="5" class="TabGD" >
+          <div  id="Difficulte" style="display:inline;">
+            <strong>Difficulté du tournoi : </strong><img width='30px' src='https://fr.wiki.elvenar.com/images/a/a8/Level_small.png'><img width='30px' src='https://fr.wiki.elvenar.com/images/a/a8/Level_small.png'>
+          </div>
+          <div onclick="Legender()" style="display:inline;position:relative;left:0px;text-align:right;float:right;cursor:pointer;"><img width='30px' src='Image/interro.gif'></div>
+
           </td>
+
+
+
+
         </tr>
         <tr style="text-align:center;" >
         <td >
@@ -1259,18 +1309,22 @@
           <td colspan="7" style="width:50%;" class="TabGDHseul">
             <div style="text-align:center;">
               <strong><div id="Recommande">Unités recommandées</div></strong>
-              Recommandées pour le rapport de force: <img style="width:15px;" src="Image/LegendeRondRouge.png">
-              , pour l avantage terrain: <img style="width:15px;" src="Image/Hexagone.png">
-              <br>Survoler une unité pour voir ses forces et failbesses contre l ennemi.
+
             </div>
           </td>
+
+
+
         </tr>
         <tr  style="text-align:center;" >
         <td class="TabGtrait"  rowspan="3" style="width: 30%;">
-        <div id="IntituleZero">
+        <div id="IntituleZero" style="position:relative;top:-20px;font-size:16px;">
             <div id="flex-container" >
+              <div ><img style='width:65px;display:inline;' src='Image/IconeCaserne.png'></div>
               <div  id="Mili10" >Caserne elfe</div>
+              <div ><img style='width:65px;display:inline;' src='Image/IconeTerrain.png'></div>
               <div >Terrain dentraînement</div>
+              <div ><img style='width:40px;display:inline;' src='Image/IconeCamp.png'></div>
               <div >Camp mercenaire</div>
             </div>
         </div>
@@ -1327,6 +1381,9 @@
             </td>
             <td class="TabDtrait">
             </td>
+
+
+
         </tr>
         <tr style="text-align:center;" >
             <td  id="Milit21" onmouseover="ShowForce(21)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;cursor:pointer;"  >
@@ -1415,7 +1472,7 @@
           <tr style="text-align:center;vertical-align:bottom;" >
             <td style=" border-top: 4px solid green;border-left: 4px solid green;border-top-left-radius : 20px;">
 
-              <div id="IntituleUn" style="position:relative;top:-50px;display:none;border: 1px solid;border-radius: 8px;font-size: 10px;background-color: white;width: 80%;">
+              <div id="IntituleUn" style="position:relative;top:0px;display:none;border: 1px solid;border-radius: 8px;font-size: 10px;background-color: white;width: 80%;">
                   <Div id ="CommentMap" style="text-align:center;">
                   Nature du terrain : type rempart<br>, favorise les portées longues<br></Div>
                   <Div style="text-align:center;">
@@ -1588,6 +1645,8 @@
               </div>
           </conteneur>
           </div>
+          <td>
+          </td>
 
 
         </tr>
@@ -1665,10 +1724,6 @@
 
     </nav>
 
-
-  <aside>
-
-  </aside>
 </div>
 
 
