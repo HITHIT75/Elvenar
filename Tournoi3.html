@@ -5,7 +5,7 @@
 <script >
   function Debut() {
 
-NumeroTournoi = 4 // saiqir le nurmero du tournoi
+    NumeroTournoi = 4 // saiqir le nurmero du tournoi
 
     if (NumeroTournoi == 1) {
       TypeDeTournoi ="Marbre"
@@ -51,7 +51,7 @@ NumeroTournoi = 4 // saiqir le nurmero du tournoi
   function EcrireCook2() {
       TypeDeTournoi='Ecran'
       Contenu=document.getElementById("GenreShow").innerHTML+'|'+document.getElementById("ManuelShow").innerHTML
-        setCookie(TypeDeTournoi, Contenu, 365);
+        setCookie2(TypeDeTournoi, Contenu, 365);
   }
   function setCookie(cname, cvalue, exdays) {
         document.getElementById("Chaine2").innerHTML=  cvalue
@@ -60,7 +60,12 @@ NumeroTournoi = 4 // saiqir le nurmero du tournoi
         let expires = "expires="+d.toUTCString();
         document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
       }
-
+  function setCookie2(cname, cvalue, exdays) {
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            let expires = "expires="+d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+          }
   function getCookie(cname) {
         let name = cname + "=";
         let ca = document.cookie.split(';');
@@ -90,7 +95,7 @@ NumeroTournoi = 4 // saiqir le nurmero du tournoi
            document.getElementById("InfoPerso").value=  ""
          }
       }
-    function checkCookie2() {
+  function checkCookie2() {
           //document.getElementById("Chaine").innerHTML=  "attente cookie"
             let username = getCookie('Ecran');
             if (username != "") {
@@ -1297,13 +1302,32 @@ NumeroTournoi = 4 // saiqir le nurmero du tournoi
             <div id="Legende0">
               <textarea onchange="EcrireCook()" id="InfoPerso" placeholder="Saisir ici vos commentaires personnels sur ce tournoi - Ils seront visibles à votre prochaine visite."  rows="8" cols="50"></textarea>
             </div>
-            <div id="Legende1" class="TabGDHB" style="width:500px;height:130px;display:none;">
+            <div id="Legende1" class="TabGDHB" style="width:500px;height:130px;display:none;font-size:10px;">
+              Survoler une unité pour avoir plus d informations.<br>
               Recommandées pour le rapport de force: <img style="width:15px;" src="Image/LegendeRondRouge.png">
               , pour l avantage terrain: <img style="width:15px;" src="Image/Hexagone.png">
-              <br>Survoler une unité pour voir ses forces et failbesses contre l ennemi.
+              <div style="display:inline-block;font-size:8px;">
+                <img alt="Dégâts" src="https://fr.wiki.elvenar.com/images/6/6a/Damage.png" decoding="async" width="10" height="10"  />
+                Dégâts : Les dégâts infligés par une attaque sont déterminés au hasard, en fonction de l'intervalle de dommages possibles.
+                <Br>
+                <img alt="Points de vie" src="https://fr.wiki.elvenar.com/images/2/2e/Hitpoints.png" decoding="async" width="10" height="10" />
+                Points de vie : Points de vie par unité.
+                                <img alt="Portée d’attaque" src="https://fr.wiki.elvenar.com/images/c/cc/Attack_range.png" decoding="async" width="10" height="10" />
+                Portée d’attaque : C’est la distance maximale que l’attaque d’une unité peut atteindre.
+                <Br>
+                <img alt="Distance de déplacement" src="https://fr.wiki.elvenar.com/images/c/c0/Move_range.png" decoding="async" width="10" height="10" />
+                Distance de déplacement : C’est le nombre de cases dans lesquelles une unité peut se déplacer en un tour.
+                <Br>
+                <img alt="Initiative" src="https://fr.wiki.elvenar.com/images/e/ea/Initiative.png" decoding="async" width="10" height="10" />
+                Initiative : L’unité avec le plus d’initiative sera en mesure d’attaquer la première à chaque tour du combat.
+                <Br>
+                <img alt="Weight" src="https://fr.wiki.elvenar.com/images/a/ac/Unit_size.png" decoding="async" width="10" height="10" />
+                Poids : Les unités ont un poids différent. Plus le poids est grand, moins il y a besoin d’unités pour remplir une escouade. De même, plus le poids est important, plus il est difficile de tuer une unité au sein de son escouade lors d’une bataille.
+                <Br>
+                <img alt="Contre-attaquer" src="https://fr.wiki.elvenar.com/images/b/b6/Strike_back.png" decoding="async" width="10" height="10" />
+                Contre-attaquer : Cette capacité permet à une unité de contre-attaquer automatiquement après avoir été attaquée en combat rapproché. Le chiffre indique combien de fois par tour complet l'unité peut contre-attaquer.
+              </div>
             </div>
-
-
         </td>
       </tr>
       <tr><td colspan="5"></td></tr>
@@ -1330,10 +1354,6 @@ NumeroTournoi = 4 // saiqir le nurmero du tournoi
           <div onclick="Legender()" style="display:inline;position:relative;left:0px;text-align:right;float:right;cursor:pointer;"><img width='30px' src='Image/interro.gif'></div>
 
           </td>
-
-
-
-
         </tr>
         <tr style="text-align:center;" >
         <td >
@@ -1774,6 +1794,11 @@ NumeroTournoi = 4 // saiqir le nurmero du tournoi
     </nav>
 
 </div>
+
+
+
+
+
 
 
 </body>
