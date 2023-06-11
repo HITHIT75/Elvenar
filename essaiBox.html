@@ -30,6 +30,17 @@ function navOnOff() {
   document.getElementById("MenuItem8").classList.toggle("centered3bis");
   document.getElementById("MenuItem9").classList.toggle("centered3bis");
   document.getElementById("MenuItem10").classList.toggle("centered3bis");
+  Res = document.getElementById("FrameUpDown").innerHTML*1
+  if (Res ==0) {
+    document.getElementById("FrameUpDown").innerHTML ="1";
+    document.getElementById('Frame').style="Border:0;overflow:hidden;height:99%; width:100%; margin-top: -100px; "
+  }
+  else {
+    document.getElementById("FrameUpDown").innerHTML ="0";
+    document.getElementById('Frame').style="Border:0;overflow:hidden;height:99%;width:100%;margin-top: 0px;"
+  }
+
+
 }
 function test() {
       Ecouter = document.getElementById("Ecoute0").innerHTML
@@ -257,144 +268,128 @@ function Opacifier(Num){
 
 
 <style>
-/* * {
-  box-sizing: border-box;
-} */
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  margin: 0;
-  background-size: cover;
-  background-attachment:fixed;
-  background-image:url(Image/Ecran2.png)
+  /* * {
+    box-sizing: border-box;
+  } */
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    background-size: cover;
+    background-attachment:fixed;
+    background-image:url(Image/Ecran2.png)
 
 
 
-}
-#main {
-  display: flex;
-  flex: 1;
-
-}
-#main > article {
-   flex: 1 1 auto;
-  z-index:5;
-  display: flex; /* new */
-  width:1vw;
-}
-#main > aside {
-  /* display: flex; */
- flex: 0 0 10%;
-  display: none;
-  align-content: space-between;
-  justify-content: center; /* align horizontal */
-}
-.imgNavOO1 {
-  content: url('Image/Logo32.png');
-  animation-name: imgNavDroite;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-}
-@keyframes imgNavDroite {
-  from {margin-left: -50px;  transform: rotate(0deg);}
-  to {margin-left: 130px;  transform: rotate(360deg);}
-}
-.imgNavOO2 {
-  content: url('Image/Logo31.png');
-  animation-name: imgNavGauche;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-
-}
-@keyframes imgNavGauche {
-  from {margin-left: 130px;transform: rotate(0deg);}
-  to {margin-left: 5px;transform: rotate(-360deg);}
-}
-.nav1 {
-    /* flex: 0 0 8vw; */
-    flex: 0 0 130px;
-  /* display: inline-grid; */
- padding-left: 20px;
-  align-content: space-between;
-  justify-content: center; /* align horizontal */
-  flex-flow: row wrap;
-  order: -1;
-  align-items: stretch;
-  margin-left: -110px;
-  animation-name: navdroite;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-    z-index:10;
   }
-  @keyframes navdroite {
-    from {margin-left: -130px;}
-    to {margin-left: 0px;}
+  #main {
+    display: flex;
+    flex: 1;
+
   }
-.nav2 {
+  #main > article {
+     flex: 1 1 auto;
+    z-index:5;
+    display: flex; /* new */
+    width:1vw;
+  }
+  #main > aside {
+    /* display: flex; */
+   /* flex: 0 0 10%;
+    display: none;
+    align-content: space-between;
+    justify-content: center; /* align horizontal */ */
+  }
+  header  {
+     height: 12vh;
+     z-index:9;
+     }
+  /* .head1  {
+     height: 12vh;
+     z-index:9;
+     } */
+
+
+
+  .imgNavOO1 {
+    content: url('Image/Logo32.png');
+    animation-name: imgNavDroite;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+  @keyframes imgNavDroite {
+    from {margin-left: -50px;  transform: rotate(0deg);}
+    to {margin-left: 130px;  transform: rotate(360deg);}
+  }
+  .imgNavOO2 {
+    content: url('Image/Logo31.png');
+    animation-name: imgNavGauche;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+
+  }
+  @keyframes imgNavGauche {
+    from {margin-left: 130px;transform: rotate(0deg);}
+    to {margin-left: 5px;transform: rotate(-360deg);}
+  }
+  .nav1 {
       /* flex: 0 0 8vw; */
       flex: 0 0 130px;
     /* display: inline-grid; */
- padding-left: 20px;
+    padding-left: 20px;
     align-content: space-between;
     justify-content: center; /* align horizontal */
     flex-flow: row wrap;
     order: -1;
     align-items: stretch;
-    margin-left: 0px;
-    animation-name: navgauche;
+    margin-left: -110px;
+    animation-name: navdroite;
     animation-duration: 0.5s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
-    z-index:10;
+      z-index:10;
     }
+    @keyframes navdroite {
+      from {margin-left: -130px;}
+      to {margin-left: 0px;}
+    }
+  .nav2 {
+        /* flex: 0 0 8vw; */
+        flex: 0 0 130px;
+      /* display: inline-grid; */
+      padding-left: 20px;
+      align-content: space-between;
+      justify-content: center; /* align horizontal */
+      flex-flow: row wrap;
+      order: -1;
+      align-items: stretch;
+      margin-left: 0px;
+      animation-name: navgauche;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+      z-index:10;
+      }
     @keyframes navgauche {
-      from {margin-left: 0px;}
-      to {margin-left: -130px;}
-    }
-header  {
-  height: 12vh;
-  z-index:9;
-}
-/* header,  article, nav, aside {
-  padding: 1em;
-} */
+        from {margin-left: 0px;}
+        to {margin-left: -130px;}
+      }
 
-.centered3 {
-  display: flex;
-  align-items:center;
-  justify-content:center;
-  margin-top: -100px;
-  line-height: 5px;
-  width: 0px;
-  vertical-align: middle;
-  color: #C7100A;
-  font-size:17px;
-  font-weight: bold;
-  font-variant-caps: small-caps;
-  font-family: 'Metamorphous', cursive;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url('Image/Logo-elvenarVide4.png');
-  animation-name: Menubas;
-  animation-duration: 0.7s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-  }
-  @keyframes Menubas{
-    from {margin-top: -100px;line-height: 5px;width: 0px;}
-    to {margin-top: 0px;line-height: 75px;width: 90px;}
-  }
-.centered3Menu1 {
+
+  /* header,  article, nav, aside {
+    padding: 1em;
+  } */
+
+  .centered3 {
     display: flex;
     align-items:center;
     justify-content:center;
-    margin-top: -92px;
-    line-height: 75px;
-    width: 90px;
+    margin-top: -100px;
+    line-height: 5px;
+    width: 0px;
     vertical-align: middle;
     color: #C7100A;
     font-size:17px;
@@ -404,93 +399,118 @@ header  {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url('Image/Logo-elvenarVide4.png');
-    }
-
-
-  .centered3bis {
-    display: flex;
-    align-items:center;
-    justify-content:center;
-    margin-top: 0px;
-    line-height: 75px;
-    width: 90px;
-    vertical-align: middle;
-    color: #C7100A;
-    font-size:17px;
-    font-weight: bold;
-    font-variant-caps: small-caps;
-    font-family: 'Metamorphous', cursive;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url('Image/Logo-elvenarVide4.png');
-    animation-name: Menuhaut;
+    animation-name: Menubas;
     animation-duration: 0.7s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
     }
-    @keyframes Menuhaut{
-      from {margin-top: 0px;line-height: 75px;width: 90px;}
-      to {margin-top: -100px;line-height: 5px;width: 0px;}
+    @keyframes Menubas{
+      from {margin-top: -100px;line-height: 5px;width: 0px;}
+      to {margin-top: 0px;line-height: 75px;width: 90px;}
     }
-.centered3:hover {
+  .centered3Menu1 {
+      display: flex;
+      align-items:center;
+      justify-content:center;
+      margin-top: -92px;
+      line-height: 75px;
+      width: 90px;
+      vertical-align: middle;
+      color: #C7100A;
+      font-size:17px;
+      font-weight: bold;
+      font-variant-caps: small-caps;
+      font-family: 'Metamorphous', cursive;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url('Image/Logo-elvenarVide4.png');
+      }
+
+
+    .centered3bis {
+      display: flex;
+      align-items:center;
+      justify-content:center;
+      margin-top: 0px;
+      line-height: 75px;
+      width: 90px;
+      vertical-align: middle;
+      color: #C7100A;
+      font-size:17px;
+      font-weight: bold;
+      font-variant-caps: small-caps;
+      font-family: 'Metamorphous', cursive;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url('Image/Logo-elvenarVide4.png');
+      animation-name: Menuhaut;
+      animation-duration: 0.7s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+      }
+      @keyframes Menuhaut{
+        from {margin-top: 0px;line-height: 75px;width: 90px;}
+        to {margin-top: -100px;line-height: 5px;width: 0px;}
+      }
+  .centered3:hover {
+        opacity: 0.7;
+        cursor: pointer;
+        transform: rotate(5deg);
+      }
+
+
+
+    /* .containerMenu:hover {
       opacity: 0.7;
       cursor: pointer;
+      color: rgba(40, 4E, 3C, 0%);
       transform: rotate(5deg);
+    } */
+  #K2 {
+    animation-name: Kbas2;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+
+  }
+  @keyframes Kbas2 {
+    from {margin-top: -6.3vh;}
+    to {margin-top: 6.3vh;}
+  }
+  #K2bis {
+    animation-name: Kbas2Bis;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+  @keyframes Kbas2 {
+    from {margin-top: -6.3vh;}
+    to {margin-top: 6.3vh;}
+  }
+  @keyframes Kbas2Bis {
+    from {margin-top: 6.3vh;}
+    to {margin-top: -6.3vh;}
+  }
+
+  .containerExpli {
+    font-family: 'Metamorphous', cursive;
+    font-size:12px;
+      color: black;
+    text-align:center;
+    vertical-align:middle;
+    line-height: 14px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
     }
-
-
-
-/* .containerMenu:hover {
-  opacity: 0.7;
-  cursor: pointer;
-  color: rgba(40, 4E, 3C, 0%);
-  transform: rotate(5deg);
-} */
-#K2 {
-  animation-name: Kbas2;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-
-}
-@keyframes Kbas2 {
-  from {margin-top: -6.3vh;}
-  to {margin-top: 6.3vh;}
-}
-#K2bis {
-  animation-name: Kbas2Bis;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-}
-@keyframes Kbas2 {
-  from {margin-top: -6.3vh;}
-  to {margin-top: 6.3vh;}
-}
-@keyframes Kbas2Bis {
-  from {margin-top: 6.3vh;}
-  to {margin-top: -6.3vh;}
-}
-
-.containerExpli {
-  font-family: 'Metamorphous', cursive;
-  font-size:12px;
-    color: black;
-  text-align:center;
-  vertical-align:middle;
-  line-height: 14px;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  }
-.Frame {
-  /* background-color: white; */
-  }
+  .Frame {
+    /* background-color: white; */
+    }
 </style>
 <body onload="Debut()">
 <audio  id="MonSon" src="Image/Son.wav"></audio>
 
-  <header >
+  <header>
     <table>
       <tr>
         <th>      <img id="imgNavOO" class="imgNavOO1" onclick="navOnOff()" src="Image/Logo32.png" style ="float: left;margin-left:50px;cursor: pointer;"></th>
@@ -507,20 +527,13 @@ header  {
                       &nbsp;
               </div>
         </th>
-
+        <th id="FrameUpDown"  style="display: none;">0</th>
       </tr>
     </table>
-
-      <!-- <img id="imgNavOO" class="imgNavOO1" onclick="navOnOff()" src="Image/Logo32.png" style ="float: left;margin-left:50px;margin-top:-15px;cursor: pointer;">
-      <div class="containerExpli" id="expication" style ="display: inline";>
-              &nbsp;
-      </div>
-      <img src="Image/SonOn.png" id="Ecoute" width="25px"   onclick="test()" style ="float:right;margin-left:0px">
-      <div id="Ecoute0" style="visibility:hidden;" >1</div> -->
   </header>
   <div id="main">
   <article>
-      <iframe id="Frame" style="Border:0;overflow:hidden; height:99%; width:100%;  top: 0; left: 0; bottom: 0; right: 0;" height="100%" width="100%"
+      <iframe id="Frame" style="Border:0;overflow:hidden; height:99%; width:100%;  margin-top: 0px; left: 0; bottom: 0; right: 0;" height="100%" width="100%"
           src="Home.html">
       </iframe>
   </article>
@@ -540,7 +553,7 @@ header  {
 
 
     </nav>
-    <aside>Aside</aside>
+
   </div>
 
 </body>

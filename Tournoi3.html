@@ -38,9 +38,10 @@
     MenuShort()
     handleChange2()
     handleChange2b()
+    handleChangeAll(NumeroTournoi,"de " + TypeDeTournoi)
     checkCookie(TypeDeTournoi)
     checkCookie2()
-    handleChangeAll(NumeroTournoi,"de " + TypeDeTournoi)
+
 
       }
   function EcrireCook() {
@@ -86,12 +87,13 @@
         let username = getCookie(Cible);
         if (username != "") {
          //alert("Welcome again " + username);
-         document.getElementById("Chaine1").innerHTML=  Cible + "loade"
+         document.getElementById("Chaine1").innerHTML=  Cible + " loade"
          document.getElementById("Chaine2").innerTxt=  username
          document.getElementById("InfoPerso").value=  username
         }
          else {
            document.getElementById("Chaine2").innerTxt=  ""
+           document.getElementById("InfoPerso").value=  ""
            document.getElementById("InfoPerso").value=  ""
          }
       }
@@ -684,9 +686,6 @@
                     }
 
 
-
-
-
       if (NatureTerrain==="") {
                   document.getElementById("CommentMap").innerHTML="A venir"
                 }
@@ -700,19 +699,28 @@
                    document.getElementById("Map1").src=Image1Terrain
                  }
        if (Image2Terrain==="") {
-                             document.getElementById("Map2").src="Image/FondTransparent.png"
+                    document.getElementById("Map2").src="Image/FondTransparent.png"
                            }
                  else {
-                            document.getElementById("Map2").src=Image2Terrain
+                    document.getElementById("Map2").src=Image2Terrain
                           }
       if (Image3Terrain==="") {
-                                      document.getElementById("Map3").src="Image/FondTransparent.png"
+                    document.getElementById("Map3").src="Image/FondTransparent.png"
                                     }
                           else {
                                       document.getElementById("Map3").src=Image3Terrain
                                     }
+    if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+      document.getElementById("Map1").style="width:30px;"
+      document.getElementById("Map2").style="width:30px;"
+      document.getElementById("Map3").style="width:30px;"
+    }
+    else {
+      document.getElementById("Map1").style="width:50px;"
+      document.getElementById("Map2").style="width:50px;"
+      document.getElementById("Map3").style="width:50px;"
 
-
+    }
 
     Haut1=200*MeleeLegereEnnemie/100
     Haut2=200*PorteeLegereEnnemie/100
