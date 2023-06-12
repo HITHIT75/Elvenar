@@ -22,28 +22,27 @@ function Debut() {
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4) {
 
-            const parts = xmlhttp.responseText.split("|");
-	Maxi=parts.length+1
+            	const parts = xmlhttp.responseText.split("|");
+		Maxi=parts.length+1
+			
 
-	//Alert(xmlhttp.responseText)					
 
-
-            for ( i = 0; i < Maxi; i += 1) {
-              j=i*3    //Math.floor(a)
-		           var0=parts[j]
-   		         result = var0.substring(0, var0.length-2);
-		    	result = result.replaceAll("\"","")
+            for ( i = 1; i < Maxi; i += 1) {
+              		j=i*3   
+		         var0=parts[j]
+   		         	result = var0.substring(0, var0.length-2);
+		    		result = result.replaceAll("\"","")
 		    	if (result.length<5) {
-			result = ""
+				result = ""
 			}
-               document.getElementById("Accordeon" +(i+1)).innerHTML=(i+1) +" / "+ j +"  = " +result
+               		document.getElementById("Accordeon" +(i)).innerHTML=(i) +" / "+ j + " / "+ Maxi +     "  = " +result
                var0=parts[j+1]
    		         result = var0.substring(0, var0.length-2);
 		    		result = result.replaceAll("\"","")
 		    if (result.length<5) {
 			result = ""
 			}
-		           document.getElementById("Content" +(i+1)).innerHTML=(i+1) +" / "+ j +"  = " +result
+		           document.getElementById("Content" +(i)).innerHTML=(i) +" / "+ j +"  = " +result
 
              }
 
