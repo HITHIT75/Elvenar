@@ -36,22 +36,17 @@ function Debut() {
 		    	if (result.length<5) {
 			result = ""
 			}
-               document.getElementById("Accordeon" +(i+1)).innerHTML=result
+               document.getElementById("Accordeon" +(i+1)).innerHTML=(i+1) +" / "+ j +"  = " +result
                var0=parts[j+1]
    		         result = var0.substring(0, var0.length-2);
 		    		result = result.replaceAll("\"","")
 		    if (result.length<5) {
 			result = ""
 			}
-		           document.getElementById("Content" +(i+1)).innerHTML=result
+		           document.getElementById("Content" +(i+1)).innerHTML=(i+1) +" / "+ j +"  = " +result
 
              }
 
-
-						 // for ( i = Maxi; i < 34; i += 1) {
-             //    document.getElementById("Accordeon" +(i+1)).style.display = "none";
- 		         //   document.getElementById("Content" +(i+1)).style.display = "none";
-             //  }
         }
     };
     xmlhttp.open("GET", url, true);
