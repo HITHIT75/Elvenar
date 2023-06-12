@@ -228,16 +228,17 @@ function SautDoigt(){
 function SautJournal(){
   JouerSon()
   Opacifier(7)
-  document.getElementById("Frame").src="Journal.html";
+  Cible="Journal.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
+  document.getElementById("Frame").src=Cible; 
     if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
     navOnOff()
   }
-  //document.getElementById("Frame").src="Merveilles.html";
   }
 function SautPadawan(){
   JouerSon()
   Opacifier(9)
-  document.getElementById("Frame").src="Padawan.html";
+  Cible="Padawan.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
+  document.getElementById("Frame").src=Cible;
   if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
     navOnOff()
   }
@@ -254,7 +255,8 @@ function SautHome(){
 function SautAventure(){
   JouerSon()
   Opacifier(4)
-  document.getElementById("Frame").src="Aventure.html";
+  Cible="Aventure.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
+  document.getElementById("Frame").src=Cible; 
   if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
     navOnOff()
   }
@@ -262,7 +264,8 @@ function SautAventure(){
 function SautLiens(){
   JouerSon()
   Opacifier(8)
-  document.getElementById("Frame").src="Liens.html";
+  Cible="Liens.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
+  document.getElementById("Frame").src=Cible;  
   if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
     navOnOff()
   }
@@ -270,7 +273,8 @@ function SautLiens(){
 function SautTournois(){
   JouerSon()
   Opacifier(5)
-  document.getElementById("Frame").src="Tournoi3.html";
+  Cible="Tournoi3.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
+  document.getElementById("Frame").src=Cible; 
   if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
     navOnOff()
   }
@@ -278,7 +282,8 @@ function SautTournois(){
 function SautEvent(){
   JouerSon()
   Opacifier(3)
-  document.getElementById("Frame").src="Event.html";
+  Cible="Event.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
+  document.getElementById("Frame").src=Cible;  
   if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
     navOnOff()
   }
@@ -286,7 +291,8 @@ function SautEvent(){
 function SautMerveilles(){
   JouerSon()
   Opacifier(6)
-  document.getElementById("Frame").src="Merveilles.html";
+  Cible="Merveilles.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
+  document.getElementById("Frame").src=Cible;   
   if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
     navOnOff()
   }
@@ -294,7 +300,8 @@ function SautMerveilles(){
 function SautFAQ(){
   JouerSon()
   Opacifier(10)
-  document.getElementById("Frame").src="FAQ.html";
+  Cible="FAQ.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
+  document.getElementById("Frame").src=Cible;    
   if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
     navOnOff()
   }
