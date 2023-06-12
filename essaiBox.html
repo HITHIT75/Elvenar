@@ -17,7 +17,7 @@
     checkCookie()
    Chrono(2000)
    Chrono(2500)
-    SautHome()
+   
   //  checkCookie()
   //
   }
@@ -35,7 +35,8 @@
                document.getElementById("Frame").src="Generik.html" }
              }
              if (Timing=2500) {
-               document.getElementById("Frame").src="Home.html" }
+               SautHome()
+               }
              }     
      
      
@@ -595,9 +596,9 @@ function Opacifier(Num){
             <img src="Image/SonOn.png" id="Ecoute" width="30px"   onclick="OnOffSon()" >
             <a href="mailto:HITHIT.Elvenar@gmail.com"><img src="Image/mailto.png"  width="30px"   ></a>
           </div>
-          <div id="Degre10" >2</div>
-          <div id="nom"  ></div>
-          <div id="son"  >1</div>
+          <div id="Degre10"  style="display:none">2</div>
+          <div id="nom"   style="display:none"></div>
+          <div id="son"  style="display:none" >1</div>
         </th>
 
         <th valign="top">
