@@ -13,6 +13,7 @@
 <script>
 function Debut() {
   Opacifier(2)
+checkCookie()
 //checkCookie()
 //Chrono(2000)
 }
@@ -534,7 +535,7 @@ function Opacifier(Num){
   <div id="main">
   <article>
       <iframe id="Frame" style="Border:0;overflow:hidden; height:99%; width:100%;  margin-top: 0px; left: 0; bottom: 0; right: 0;" height="100%" width="100%"
-          src="Home.html">
+          src="Home.html?nom=Itel&age=60">
       </iframe>
   </article>
   <nav id="nav" class='nav1'>
@@ -556,4 +557,5 @@ function Opacifier(Num){
 
   </div>
 
+<script type="text/javascript" src="CookieNom.js"></script>
 </body>
