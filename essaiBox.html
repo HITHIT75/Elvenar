@@ -15,10 +15,32 @@
     
     Opacifier(2)
     checkCookie()
+   Chrono(2000)
+   Chrono(2500)
     SautHome()
   //  checkCookie()
-  //Chrono(2000)
+  //
   }
+ function Chrono(Timing) {
+    var countDownDate = new Date().getTime() + Timing;
+    var x = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+        if (distance < 0) {
+             clearInterval(x);
+             if (Timing=2000) {
+               document.getElementById("Frame").src="Generik.html" }
+             }
+             if (Timing=2500) {
+               document.getElementById("Frame").src="Home.html" }
+             }     
+     
+     
+          }, 1000);
+     }
   function setCookie(cname, cvalue, exdays) {
     document.getElementById("nom").innerHTML=  cvalue
     const d = new Date();
