@@ -11,13 +11,55 @@
 
 <title>Example</title>
 <script>
-function Debut() {
-  Opacifier(2)
- alert("denut cook")
-checkCookie()
-//checkCookie()
-//Chrono(2000)
-}
+  function Debut() {
+    Opacifier(2)
+    checkCookie()
+    checkCookie()
+  //Chrono(2000)
+  }
+  function setCookie(cname, cvalue, exdays) {
+    document.getElementById("nom").innerHTML=  cvalue
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    let expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+
+  function getCookie(cname) {
+    let name = cname + "=";
+    let ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+
+
+  function checkCookie() {
+  //document.getElementById("Chaine").innerHTML=  "attente cookie"
+    let username = getCookie("Pseudo");
+    if (username != "") {
+     //alert("Welcome again " + username);
+      document.getElementById("nom").innerHTML=  username
+    } else {
+      username = prompt("C'est ta première visite ? Merci de me donner ton pseudo de jeu ☺.", "");
+      if (username != "" && username != null) {
+        setCookie("Pseudo", username, 365);
+        //document.getElementById("nom").innerTxt=  username
+      }
+    }
+  }
+
+
+
+
+
 function navOnOff() {
   //Res=document.getElementById("nav").classList
   document.getElementById("imgNavOO").classList.toggle("imgNavOO2");
@@ -44,24 +86,24 @@ function navOnOff() {
 
 
 }
-function test() {
-      Ecouter = document.getElementById("Ecoute0").innerHTML
-      document.getElementById("Ecoute0").innerHTML=Math.abs(Ecouter-1);
-    ActualisationEcouteur()
+function OnOffSon() {
+      Ecouter = document.getElementById("son").innerHTML
+      document.getElementById("son").innerHTML=Math.abs(Ecouter-1);
+      ActualisationEcouteur()
   }
 function ActualisationEcouteur() {
-       Ecouter = document.getElementById("Ecoute0").innerHTML
+       Ecouter = document.getElementById("son").innerHTML
        if (Ecouter == 1 ) {
            document.getElementById("Ecoute").src="Image/SonOn.png"
-        setCookie("Ecouteur", "1", 365);
+           document.getElementById("son").innerHTML="1"
        }
        else {
          document.getElementById("Ecoute").src="Image/SonOff.png"
-        setCookie("Ecouteur", "0", 365);
+        document.getElementById("son").innerHTML="0"
        }
    }
 function JouerSon() {
-     Ecouter = document.getElementById("Ecoute0").innerHTML
+     Ecouter = document.getElementById("son").innerHTML
      if (Ecouter==1) {
        var sound = document.getElementById("MonSon");
          sound.play();}
@@ -201,7 +243,8 @@ function SautPadawan(){
 function SautHome(){
   JouerSon()
   Opacifier(2)
-  document.getElementById("Frame").src="Home.html";
+  Cible="Home.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
+  document.getElementById("Frame").src=Cible;
   if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
     navOnOff()
   }
@@ -292,7 +335,7 @@ function Opacifier(Num){
   }
   #main > article {
      flex: 1 1 auto;
-    z-index:5;
+    z-index:9;
     display: flex; /* new */
     width:1vw;
   }
@@ -305,7 +348,7 @@ function Opacifier(Num){
   }
   header  {
      height: 12vh;
-     z-index:9;
+     z-index:5;
      }
   /* .head1  {
      height: 12vh;
@@ -517,11 +560,13 @@ function Opacifier(Num){
       <tr>
         <th>      <img id="imgNavOO" class="imgNavOO1" onclick="navOnOff()" src="Image/Logo32.png" style ="float: left;margin-left:50px;cursor: pointer;"></th>
         <th>
-          <Div style="vertical-align: middle;text-align: center;display: table-cell;">
-          <img src="Image/SonOn.png" id="Ecoute" width="25px"   onclick="test()" style ="display: block;margin: 0 auto;;cursor:pointer;">
-        </div>
-          <div id="Ecoute0" style="visibility:hidden;" >1</div>
-          <div id="Degre10" style="visibility:hidden;" >2</div>
+          <Div style ="position:fixed;top:0px;right:0px;cursor:pointer;">
+            <img src="Image/SonOn.png" id="Ecoute" width="30px"   onclick="OnOffSon()" >
+            <a href="mailto:HITHIT.Elvenar@gmail.com"><img src="Image/mailto.png"  width="30px"   ></a>
+          </div>
+          <div id="Degre10" >2</div>
+          <div id="nom"  ></div>
+          <div id="son"  >1</div>
         </th>
 
         <th valign="top">
@@ -558,5 +603,5 @@ function Opacifier(Num){
 
   </div>
 
-<script type="text/javascript" src="CookieNom.js"></script>
+
 </body>
