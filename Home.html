@@ -98,10 +98,24 @@ window.open('https://docs.google.com/spreadsheets/d/1ipOIG7IVsOwUMadLCSf_twuR17h
         }
       }
 
-
+function getParamValue(paramName)
+			{
+			    var url = window.location.search.substring(1); //get rid of "?" in querystring
+			    var qArray = url.split('&'); //get key-value pairs
+			    for (var i = 0; i < qArray.length; i++)
+			    {
+			        var pArr = qArray[i].split('='); //split key and value
+			        if (pArr[0] == paramName)
+			            return pArr[1]; //return value
+			    }
+			}
 
     function Debut() {
-        checkCookie()
+        //checkCookie()
+	 param1 = getParamValue('nom'); 
+	    document.getElementById("nom").innerHTML=param1
+	 param2 = getParamValue('son'); 
+	    document.getElementById("son").innerHTML=param2	    
 	MessageAlex()
 	    return
         var alea = Math.random()
@@ -262,7 +276,8 @@ Contenu3[6] =" Je suis la remarquée AlexAngus ! "
 </style>
 <body onload="Debut()" >
 <audio  id="MonSon" src="Image/Son.wav"></audio>
-
+          <div id="nom"  ></div>
+          <div id="son"  >1</div>
 <Div style="display:inline-flex;width:80%;height:40%;">
   <Div style="width: 150px;max-width:150px;display:inline-block;">
   <img src="Image\Personage2.png" style="width: 130px;max-width:130px;height: 210px">
