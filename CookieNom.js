@@ -25,6 +25,7 @@ function getCookie(cname) {
 
 
 function checkCookie() {
+  alert("cook")
 //document.getElementById("Chaine").innerHTML=  "attente cookie"
   let username = getCookie("Pseudo");
   if (username != "") {
@@ -34,7 +35,7 @@ function checkCookie() {
     username = prompt("C'est ta première visite ? Merci de me donner ton pseudo de jeu ☺.", "");
     if (username != "" && username != null) {
       setCookie("Pseudo", username, 365);
-      document.getElementById("Chaine").innerTxt=  username
+     // document.getElementById("Chaine").innerTxt=  username
     }
   }
 }
