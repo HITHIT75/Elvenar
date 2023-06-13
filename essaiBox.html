@@ -16,13 +16,13 @@
     checkCookie()
     // Chrono(3500)
 
-  }
+    }
   function myTimeout1() {
     document.getElementById("Frame").src="Generik2.html";
       }
   function myTimeout2() {
     SautHome()
-  }
+    }
 
 
   function setCookie(cname, cvalue, exdays) {
@@ -64,273 +64,268 @@
       }
     }
 
+  function navOnOff() {
+    JouerSon(1)
+    document.getElementById("imgNavOO").classList.toggle("imgNavOO2");
+    document.getElementById("nav").classList.toggle("nav2");
 
-function navOnOff() {
-  JouerSon(1)
-  document.getElementById("imgNavOO").classList.toggle("imgNavOO2");
-  document.getElementById("nav").classList.toggle("nav2");
-
-  document.getElementById("MenuItem2").classList.toggle("centered3bis");
-  document.getElementById("MenuItem3").classList.toggle("centered3bis");
-  document.getElementById("MenuItem4").classList.toggle("centered3bis");
-  document.getElementById("MenuItem5").classList.toggle("centered3bis");
-  document.getElementById("MenuItem6").classList.toggle("centered3bis");
-  document.getElementById("MenuItem7").classList.toggle("centered3bis");
-  document.getElementById("MenuItem8").classList.toggle("centered3bis");
-  document.getElementById("MenuItem9").classList.toggle("centered3bis");
-  document.getElementById("MenuItem10").classList.toggle("centered3bis");
-  Res = document.getElementById("FrameUpDown").innerHTML*1
-  if (Res ==0) {
-    document.getElementById("FrameUpDown").innerHTML ="1";
-    document.getElementById('Frame').style="Border:0;overflow:hidden;height:99%; width:100%; margin-top: -95px; "
-  }
-  else {
-    document.getElementById("FrameUpDown").innerHTML ="0";
-    document.getElementById('Frame').style="Border:0;overflow:hidden;height:99%;width:100%;margin-top: 0px;"
-  }
-
-
-}
-function OnOffSon() {
-      Ecouter = document.getElementById("son").innerHTML
-      document.getElementById("son").innerHTML=Math.abs(Ecouter-1);
-      ActualisationEcouteur()
-  }
-function ActualisationEcouteur() {
-       Ecouter = document.getElementById("son").innerHTML
-       if (Ecouter == 1 ) {
-           document.getElementById("Ecoute").src="Image/SonOn.png"
-           document.getElementById("son").innerHTML="1"
-       }
-       else {
-         document.getElementById("Ecoute").src="Image/SonOff.png"
-        document.getElementById("son").innerHTML="0"
-       }
-   }
-function JouerSon(Num) {
-
-      Ecouter = document.getElementById("son").innerHTML
+    document.getElementById("MenuItem2").classList.toggle("centered3bis");
+    document.getElementById("MenuItem3").classList.toggle("centered3bis");
+    document.getElementById("MenuItem4").classList.toggle("centered3bis");
+    document.getElementById("MenuItem5").classList.toggle("centered3bis");
+    document.getElementById("MenuItem6").classList.toggle("centered3bis");
+    document.getElementById("MenuItem7").classList.toggle("centered3bis");
+    document.getElementById("MenuItem8").classList.toggle("centered3bis");
+    document.getElementById("MenuItem9").classList.toggle("centered3bis");
+    document.getElementById("MenuItem10").classList.toggle("centered3bis");
+    Res = document.getElementById("FrameUpDown").innerHTML*1
+    if (Res ==0) {
+      document.getElementById("FrameUpDown").innerHTML ="1";
+      document.getElementById('Frame').style="Border:0;overflow:hidden;height:99%; width:100%; margin-top: -95px; "
+    }
+    else {
+      document.getElementById("FrameUpDown").innerHTML ="0";
+      document.getElementById('Frame').style="Border:0;overflow:hidden;height:99%;width:100%;margin-top: 0px;"
+    }
 
 
-     if (Ecouter==1) {
-        if (Num==1) {
-            var sound = document.getElementById("MonSon");
-        }
-        if (Num==2) {
-            var sound = document.getElementById("MonSonOuverture");
-        }
+  }
+  function OnOffSon() {
+        Ecouter = document.getElementById("son").innerHTML
+        document.getElementById("son").innerHTML=Math.abs(Ecouter-1);
+        ActualisationEcouteur()
+    }
+  function ActualisationEcouteur() {
+         Ecouter = document.getElementById("son").innerHTML
+         if (Ecouter == 1 ) {
+             document.getElementById("Ecoute").src="Image/SonOn.png"
+             document.getElementById("son").innerHTML="1"
+         }
+         else {
+           document.getElementById("Ecoute").src="Image/SonOff.png"
+          document.getElementById("son").innerHTML="0"
+         }
+     }
+  function JouerSon(Num) {
 
-         sound.play();}
-       }
-
-function essai11() {
-  if (window.innerWidth<850) {
-    document.getElementById("expication").style.fontSize = "14px";
-  }
-  else {
-    document.getElementById("expication").style.fontSize = "12px";
-  }
-  document.getElementById("expication").innerHTML= "&nbsp;&nbsp;Ca c'est le logo du jeu auquel tu joues -T'avais jamais remarqué ?"
-}
-function essaiVide() {
-  document.getElementById("expication").innerHTML = "&nbsp;"
-
-}
-function essai21() {
-  if (window.innerWidth<850) {
-    document.getElementById("expication").style.fontSize = "14px";
-  }
-  else {
-    document.getElementById("expication").style.fontSize = "12px";
-  }
-  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Toutes les informations relatives à la confrérie : News et actualités."
-
-}
-function essai31() {
-  if (window.innerWidth<850) {
-    document.getElementById("expication").style.fontSize = "14px";
-  }
-  else {
-    document.getElementById("expication").style.fontSize = "12px";
-  }
-  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Quêtes avec visualisation de la difficulté:<br>Vert «facile», jaune «moyen» et rouge «difficile».<br>Possibilité de masquer les quêtes terminées."
-
-}
-function essai41() {
-  if (window.innerWidth<850) {
-    document.getElementById("expication").style.fontSize = "14px";
-  }
-  else {
-    document.getElementById("expication").style.fontSize = "12px";
-  }
-  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Les chemins & étapes sélectionnés pour l'aventure et un simulateur gratuit pour doser manufactures et ateliers."
-}
-function essai61() {
-  if (window.innerWidth<850) {
-    document.getElementById("expication").style.fontSize = "14px";
-  }
-  else {
-    document.getElementById("expication").style.fontSize = "12px";
-  }
-  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Retrouvez ici tous les journaux de bord de la confrérie et la FAQ. ."
-}
-function essai51() {
-  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Toutes les infos pour préparer son tournoi.."
-}
-function essai71() {
-  if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
-    document.getElementById("expication").style.fontSize = "14px";
-  }
-  else {
-    document.getElementById("expication").style.fontSize = "12px";
-  }
-  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Un listing des liens Elvenar en tout genre."
-}
-function essai81() {
-  if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
-    document.getElementById("expication").style.fontSize = "14px";
-  }
-  else {
-    document.getElementById("expication").style.fontSize = "12px";
-  }
-  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Conseils et avis aux nouveaux membres."
-}
-function essai91() {
-  if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
-    document.getElementById("expication").style.fontSize = "12px";
-  }
-  else {
-    document.getElementById("expication").style.fontSize = "10px";
-  }
-  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Les informations sur les Merveilles."
-}
-function essai101() {
-  if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
-    document.getElementById("expication").style.fontSize = "12px";
-  }
-  else {
-    document.getElementById("expication").style.fontSize = "10px";
-  }
-  document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Les questions fréquentes."
-}
+        Ecouter = document.getElementById("son").innerHTML
 
 
+       if (Ecouter==1) {
+          if (Num==1) {
+              var sound = document.getElementById("MonSon");
+          }
+          if (Num==2) {
+              var sound = document.getElementById("MonSonOuverture");
+          }
 
-function Saut(){
-     JouerSon(1)
-     //document.getElementById("Frame").src="Generik.html";
-     Opacifier(1)
-   }
-function SautGenerik(){
-  JouerSon(2)
-  document.getElementById("Frame").src="Generik2.html";
-  Opacifier(1)
-  if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
-    navOnOff()
+           sound.play();}
+         }
+
+  function essai11() {
+    if (window.innerWidth<850) {
+      document.getElementById("expication").style.fontSize = "14px";
+    }
+    else {
+      document.getElementById("expication").style.fontSize = "12px";
+    }
+    document.getElementById("expication").innerHTML= "&nbsp;&nbsp;Ca c'est le logo du jeu auquel tu joues -T'avais jamais remarqué ?"
   }
-}
-function SautDoigt(){
-  JouerSon(2)
-  document.getElementById("Frame").src="Zoom.html";
-  Opacifier(9)
-  if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
-    navOnOff()
+  function essaiVide() {
+    document.getElementById("expication").innerHTML = "&nbsp;"
+
   }
-}
-function SautJournal(){
-  JouerSon(2)
-  Opacifier(7)
-  Cible="Journal.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
-  document.getElementById("Frame").src=Cible;
+  function essai21() {
+    if (window.innerWidth<850) {
+      document.getElementById("expication").style.fontSize = "14px";
+    }
+    else {
+      document.getElementById("expication").style.fontSize = "12px";
+    }
+    document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Toutes les informations relatives à la confrérie : News et actualités."
+
+  }
+  function essai31() {
+    if (window.innerWidth<850) {
+      document.getElementById("expication").style.fontSize = "14px";
+    }
+    else {
+      document.getElementById("expication").style.fontSize = "12px";
+    }
+    document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Quêtes avec visualisation de la difficulté:<br>Vert «facile», jaune «moyen» et rouge «difficile».<br>Possibilité de masquer les quêtes terminées."
+
+  }
+  function essai41() {
+    if (window.innerWidth<850) {
+      document.getElementById("expication").style.fontSize = "14px";
+    }
+    else {
+      document.getElementById("expication").style.fontSize = "12px";
+    }
+    document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Les chemins & étapes sélectionnés pour l'aventure et un simulateur gratuit pour doser manufactures et ateliers."
+  }
+  function essai61() {
+    if (window.innerWidth<850) {
+      document.getElementById("expication").style.fontSize = "14px";
+    }
+    else {
+      document.getElementById("expication").style.fontSize = "12px";
+    }
+    document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Retrouvez ici tous les journaux de bord de la confrérie et la FAQ. ."
+  }
+  function essai51() {
+    document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Toutes les infos pour préparer son tournoi.."
+  }
+  function essai71() {
     if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
-    navOnOff()
+      document.getElementById("expication").style.fontSize = "14px";
+    }
+    else {
+      document.getElementById("expication").style.fontSize = "12px";
+    }
+    document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Un listing des liens Elvenar en tout genre."
   }
+  function essai81() {
+    if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+      document.getElementById("expication").style.fontSize = "14px";
+    }
+    else {
+      document.getElementById("expication").style.fontSize = "12px";
+    }
+    document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Conseils et avis aux nouveaux membres."
   }
-function SautPadawan(){
-  JouerSon(2)
-  Opacifier(9)
-  Cible="Padawan.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
-  document.getElementById("Frame").src=Cible;
-  if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
-    navOnOff()
+  function essai91() {
+    if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+      document.getElementById("expication").style.fontSize = "12px";
+    }
+    else {
+      document.getElementById("expication").style.fontSize = "10px";
+    }
+    document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Les informations sur les Merveilles."
   }
-}
-function SautHome(){
-  JouerSon(2)
-  Opacifier(2)
-  Cible="Home2.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
-  document.getElementById("Frame").src=Cible;
-  if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
-    navOnOff()
+  function essai101() {
+    if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+      document.getElementById("expication").style.fontSize = "12px";
+    }
+    else {
+      document.getElementById("expication").style.fontSize = "10px";
+    }
+    document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Les questions fréquentes."
   }
-}
-function SautAventure(){
-  JouerSon(2)
-  Opacifier(4)
-  Cible="Aventure.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
-  document.getElementById("Frame").src=Cible;
-  if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
-    navOnOff()
-  }
-}
-function SautLiens(){
-  JouerSon(2)
-  Opacifier(8)
-  Cible="Liens.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
-  document.getElementById("Frame").src=Cible;
-  if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
-    navOnOff()
-  }
-}
-function SautTournois(){
-  JouerSon(2)
-  Opacifier(5)
-  Cible="Tournoi3.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
-  document.getElementById("Frame").src=Cible;
-  if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
-    navOnOff()
-  }
-}
-function SautEvent(){
-  JouerSon(2)
-  Opacifier(3)
-  Cible="Event.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
-  document.getElementById("Frame").src=Cible;
-  if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
-    navOnOff()
-  }
-}
-function SautMerveilles(){
-  JouerSon(2)
-  Opacifier(6)
-  Cible="Merveilles.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
-  document.getElementById("Frame").src=Cible;
-  if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
-    navOnOff()
-  }
-}
-function SautFAQ(){
-  JouerSon(2)
-  Opacifier(10)
-  Cible="FAQ.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
-  document.getElementById("Frame").src=Cible;
-  if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
-    navOnOff()
-  }
-}
 
-function Opacifier(Num){
-  Res=document.getElementById("Degre10").innerHTML
-  var Res = "MenuItem" + Res
-  document.getElementById(Res).style.transform = "rotate(0deg)";
-  var Cible = "MenuItem" + Num
-  document.getElementById("Degre10").innerHTML=Num
-  // document.getElementById(Cible).style.opacity= "0.5";
-  document.getElementById(Cible).style.transform = "rotate(10deg)";
-}
+  function Saut(){
+       JouerSon(1)
+       //document.getElementById("Frame").src="Generik.html";
+       Opacifier(1)
+     }
+  function SautGenerik(){
+    JouerSon(2)
+    document.getElementById("Frame").src="Generik.html";
+    Opacifier(1)
+    if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+      navOnOff()
+    }
+  }
+  function SautDoigt(){
+    JouerSon(2)
+    document.getElementById("Frame").src="Zoom.html";
+    Opacifier(9)
+    if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+      navOnOff()
+    }
+  }
+  function SautJournal(){
+    JouerSon(2)
+    Opacifier(7)
+    Cible="Journal.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
+    document.getElementById("Frame").src=Cible;
+      if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+      navOnOff()
+    }
+    }
+  function SautPadawan(){
+    JouerSon(2)
+    Opacifier(9)
+    Cible="Padawan.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
+    document.getElementById("Frame").src=Cible;
+    if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+      navOnOff()
+    }
+  }
+  function SautHome(){
+    JouerSon(2)
+    Opacifier(2)
+    Cible="Home2.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
+    document.getElementById("Frame").src=Cible;
+    if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+      navOnOff()
+    }
+  }
+  function SautAventure(){
+    JouerSon(2)
+    Opacifier(4)
+    Cible="Aventure.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
+    document.getElementById("Frame").src=Cible;
+    if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+      navOnOff()
+    }
+  }
+  function SautLiens(){
+    JouerSon(2)
+    Opacifier(8)
+    Cible="Liens.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
+    document.getElementById("Frame").src=Cible;
+    if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+      navOnOff()
+    }
+  }
+  function SautTournois(){
+    JouerSon(2)
+    Opacifier(5)
+    Cible="Tournoi3.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
+    document.getElementById("Frame").src=Cible;
+    if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+      navOnOff()
+    }
+  }
+  function SautEvent(){
+    JouerSon(2)
+    Opacifier(3)
+    Cible="Event.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
+    document.getElementById("Frame").src=Cible;
+    if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+      navOnOff()
+    }
+  }
+  function SautMerveilles(){
+    JouerSon(2)
+    Opacifier(6)
+    Cible="Merveilles.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
+    document.getElementById("Frame").src=Cible;
+    if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+      navOnOff()
+    }
+  }
+  function SautFAQ(){
+    JouerSon(2)
+    Opacifier(10)
+    Cible="FAQ.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
+    document.getElementById("Frame").src=Cible;
+    if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+      navOnOff()
+    }
+  }
 
+  function Opacifier(Num){
+    Res=document.getElementById("Degre10").innerHTML
+    var Res = "MenuItem" + Res
+    document.getElementById(Res).style.transform = "rotate(0deg)";
+    var Cible = "MenuItem" + Num
+    document.getElementById("Degre10").innerHTML=Num
+    // document.getElementById(Cible).style.opacity= "0.5";
+    document.getElementById(Cible).style.transform = "rotate(10deg)";
+  }
 </script>
-
 
 
 <style>
@@ -577,9 +572,6 @@ function Opacifier(Num){
 <audio  id="MonSon" src="Image/Son.wav"></audio>
 <audio  id="MonSonOuverture" src="Image/Son9.wav"></audio>
 
-
-
-
   <header>
     <table>
       <tr>
@@ -587,7 +579,7 @@ function Opacifier(Num){
         <th>
           <Div style ="position:fixed;top:0px;right:0px;cursor:pointer;">
             <img src="Image/SonOn.png" id="Ecoute" width="30px"   onclick="OnOffSon()" >
-            <a href="mailto:HITHIT.Elvenar@gmail.com"><img src="Image/mailto.png"  width="30px"   ></a>
+            <a href="mailto:HITHIT.Elvenar@gmail.com"><img src="Image/mailto.png"  width="40px"   ></a>
           </div>
           <div id="Degre10"  style="display:none">2</div>
           <div id="nom"   style="display:none"></div>
