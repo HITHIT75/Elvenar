@@ -8,40 +8,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-
-<title>Example</title>
 <script>
   function Debut() {
-    
+    setTimeout(myTimeout1, 4000)
+    setTimeout(myTimeout2, 10000)
     Opacifier(2)
     checkCookie()
-  // Chrono(3500)
-SautHome()
-   
-  //  checkCookie()
-  //
+    // Chrono(3500)
+
   }
-// function Chrono(Timing) {
- //   var countDownDate = new Date().getTime() + Timing;
-//    var x = setInterval(function() {
-//        var now = new Date().getTime();
-//        var distance = countDownDate - now;
-//        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  function myTimeout1() {
+    document.getElementById("Frame").src="Generik.html";
+      }
+  function myTimeout2() {
+    SautHome()
+  }
 
 
- //       if (distance < 0) {
-//             clearInterval(x);
-//             if (Timing=2000) {
-//               document.getElementById("Frame").src="Generik.html" }
-//             }
-//             if (Timing=3500) {
-//              SautHome()
-//               }
-//             }     
-     
-     
-//          }, 1000);
-//    }
   function setCookie(cname, cvalue, exdays) {
     document.getElementById("nom").innerHTML=  cvalue
     const d = new Date();
@@ -67,7 +50,7 @@ SautHome()
 
 
   function checkCookie() {
-  //document.getElementById("Chaine").innerHTML=  "attente cookie"
+    //document.getElementById("Chaine").innerHTML=  "attente cookie"
     let username = getCookie("Pseudo");
     if (username != "") {
      //alert("Welcome again " + username);
@@ -77,16 +60,13 @@ SautHome()
       if (username != "" && username != null) {
         setCookie("Pseudo", username, 365);
         //document.getElementById("nom").innerTxt=  username
+        }
       }
     }
-  }
-
-
-
 
 
 function navOnOff() {
-  //Res=document.getElementById("nav").classList
+  JouerSon(1)
   document.getElementById("imgNavOO").classList.toggle("imgNavOO2");
   document.getElementById("nav").classList.toggle("nav2");
 
@@ -102,7 +82,7 @@ function navOnOff() {
   Res = document.getElementById("FrameUpDown").innerHTML*1
   if (Res ==0) {
     document.getElementById("FrameUpDown").innerHTML ="1";
-    document.getElementById('Frame').style="Border:0;overflow:hidden;height:99%; width:100%; margin-top: -100px; "
+    document.getElementById('Frame').style="Border:0;overflow:hidden;height:99%; width:100%; margin-top: -95px; "
   }
   else {
     document.getElementById("FrameUpDown").innerHTML ="0";
@@ -127,10 +107,19 @@ function ActualisationEcouteur() {
         document.getElementById("son").innerHTML="0"
        }
    }
-function JouerSon() {
-     Ecouter = document.getElementById("son").innerHTML
+function JouerSon(Num) {
+
+      Ecouter = document.getElementById("son").innerHTML
+
+
      if (Ecouter==1) {
-       var sound = document.getElementById("MonSon");
+        if (Num==1) {
+            var sound = document.getElementById("MonSon");
+        }
+        if (Num==2) {
+            var sound = document.getElementById("MonSonOuverture");
+        }
+
          sound.play();}
        }
 
@@ -228,20 +217,20 @@ function essai101() {
 
 
 function Saut(){
-     JouerSon()
+     JouerSon(1)
      //document.getElementById("Frame").src="Generik.html";
      Opacifier(1)
    }
 function SautGenerik(){
-  JouerSon()
-  document.getElementById("Frame").src="https://hithit75.github.io/Elvenar/Generikbis.html";
-  Opacifier(10)
+  JouerSon(2)
+  document.getElementById("Frame").src="Generik.html";
+  Opacifier(1)
   if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
     navOnOff()
   }
 }
 function SautDoigt(){
-  JouerSon()
+  JouerSon(2)
   document.getElementById("Frame").src="Zoom.html";
   Opacifier(9)
   if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
@@ -249,16 +238,16 @@ function SautDoigt(){
   }
 }
 function SautJournal(){
-  JouerSon()
+  JouerSon(2)
   Opacifier(7)
   Cible="Journal.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
-  document.getElementById("Frame").src=Cible; 
+  document.getElementById("Frame").src=Cible;
     if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
     navOnOff()
   }
   }
 function SautPadawan(){
-  JouerSon()
+  JouerSon(2)
   Opacifier(9)
   Cible="Padawan.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
   document.getElementById("Frame").src=Cible;
@@ -267,64 +256,64 @@ function SautPadawan(){
   }
 }
 function SautHome(){
-  JouerSon()
+  JouerSon(2)
   Opacifier(2)
-  Cible="Home.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
+  Cible="Home2.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
   document.getElementById("Frame").src=Cible;
   if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
     navOnOff()
   }
 }
 function SautAventure(){
-  JouerSon()
+  JouerSon(2)
   Opacifier(4)
   Cible="Aventure.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
-  document.getElementById("Frame").src=Cible; 
+  document.getElementById("Frame").src=Cible;
   if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
     navOnOff()
   }
 }
 function SautLiens(){
-  JouerSon()
+  JouerSon(2)
   Opacifier(8)
   Cible="Liens.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
-  document.getElementById("Frame").src=Cible;  
+  document.getElementById("Frame").src=Cible;
   if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
     navOnOff()
   }
 }
 function SautTournois(){
-  JouerSon()
+  JouerSon(2)
   Opacifier(5)
   Cible="Tournoi3.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
-  document.getElementById("Frame").src=Cible; 
+  document.getElementById("Frame").src=Cible;
   if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
     navOnOff()
   }
 }
 function SautEvent(){
-  JouerSon()
+  JouerSon(2)
   Opacifier(3)
   Cible="Event.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
-  document.getElementById("Frame").src=Cible;  
+  document.getElementById("Frame").src=Cible;
   if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
     navOnOff()
   }
 }
 function SautMerveilles(){
-  JouerSon()
+  JouerSon(2)
   Opacifier(6)
   Cible="Merveilles.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
-  document.getElementById("Frame").src=Cible;   
+  document.getElementById("Frame").src=Cible;
   if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
     navOnOff()
   }
 }
 function SautFAQ(){
-  JouerSon()
+  JouerSon(2)
   Opacifier(10)
   Cible="FAQ.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
-  document.getElementById("Frame").src=Cible;    
+  document.getElementById("Frame").src=Cible;
   if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
     navOnOff()
   }
@@ -363,16 +352,16 @@ function Opacifier(Num){
   #main {
     display: flex;
     flex: 1;
-
+    z-index:6;
   }
   #main > article {
      flex: 1 1 auto;
-    z-index:9;
+    z-index:7;
     display: flex; /* new */
     width:1vw;
   }
-  #main > aside {
-    /* display: flex; */
+  #main > nav {
+    z-index:8;
    /* flex: 0 0 10%;
     display: none;
     align-content: space-between;
@@ -586,6 +575,10 @@ function Opacifier(Num){
 </style>
 <body onload="Debut()">
 <audio  id="MonSon" src="Image/Son.wav"></audio>
+<audio  id="MonSonOuverture" src="Image/Son9.wav"></audio>
+
+
+
 
   <header>
     <table>
@@ -612,13 +605,13 @@ function Opacifier(Num){
   </header>
   <div id="main">
   <article>
-      <iframe id="Frame" style="Border:0;overflow:hidden; height:99%; width:100%;  margin-top: 0px; left: 0; bottom: 0; right: 0;" height="100%" width="100%"
+      <iframe id="Frame" style="Border:0;overflow:hidden; height:99%; width:100%;  margin-top: 0px; left: 0; bottom: 0; right: 0;"
           src="terra.html">
       </iframe>
   </article>
   <nav id="nav" class='nav1'>
 
-      <div class="centered3Menu1"  id="MenuItem1" onmouseout="essaiVide()" onmouseover="essai11()" style="background-image: url('Image/Logo2.png')" >&nbsp;</div>
+      <div class="centered3Menu1"  id="MenuItem1" onmouseout="essaiVide()" onmouseover="essai11()" onclick="SautGenerik()" style="cursor:pointer;background-image: url('Image/Logo2.png')" >&nbsp;</div>
       <div class="centered3" id="MenuItem2"   onmouseout="essaiVide()" onmouseover="essai21()" onclick="SautHome()">AccueiL</div>
       <div class="centered3" id="MenuItem3" onmouseout="essaiVide()" onmouseover="essai31()" onclick="SautEvent()">EvenT</div>
       <div class="centered3" id="MenuItem4" onmouseout="essaiVide()" onmouseover="essai41()" onclick="SautAventure()">AventurE</div>
