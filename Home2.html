@@ -26,8 +26,11 @@
 						alert(xmlhttp.responseText)
 	            const parts = xmlhttp.responseText.split("|");
 							var0=parts[1]
-	   		 			result = var0.substring(0, var0.length-2);
+	   		 			result = var0.substring(0, var0.length-3);
 							document.getElementById("MotsAlex").innerHTML= result
+							var0=parts[3]
+							result = var0.substring(0, var0.length-3);
+							document.getElementById("MotsHIT").innerHTML= result
 			//document.getElementById("Contenu").innerHTML=result
 	          }
 	    };
@@ -278,7 +281,7 @@ Contenu3[6] =" Je suis la remarquée AlexAngus ! "
       <span style="padding-top:10px;padding-bottom: 10px;" id ="mot9">Encore toi !?</span><br>
       <span id ="mot10" >Moi, j'te cause </span>
       <span id ="mot11" > des machins </span>
-      <span id ="mot12" >
+      <span id ="MotsHIT" >
         du portail.<br>
 	      Mise à disposition de la page Tournois dans les prochains jours.
         <br>
