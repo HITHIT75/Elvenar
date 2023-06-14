@@ -22,9 +22,8 @@
       }
   function myTimeout2() {
     SautHome()
+    document.getElementById("nav").style="display:content;"
     }
-
-
   function setCookie(cname, cvalue, exdays) {
     document.getElementById("nom").innerHTML=  cvalue
     const d = new Date();
@@ -32,7 +31,6 @@
     let expires = "expires="+d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
   }
-
   function getCookie(cname) {
     let name = cname + "=";
     let ca = document.cookie.split(';');
@@ -47,8 +45,6 @@
     }
     return "";
   }
-
-
   function checkCookie() {
     //document.getElementById("Chaine").innerHTML=  "attente cookie"
     let username = getCookie("Pseudo");
@@ -63,7 +59,6 @@
         }
       }
     }
-
   function navOnOff() {
     JouerSon(1)
     document.getElementById("imgNavOO").classList.toggle("imgNavOO2");
@@ -79,9 +74,20 @@
     document.getElementById("MenuItem9").classList.toggle("centered3bis");
     document.getElementById("MenuItem10").classList.toggle("centered3bis");
     Res = document.getElementById("FrameUpDown").innerHTML*1
+
     if (Res ==0) {
       document.getElementById("FrameUpDown").innerHTML ="1";
-      document.getElementById('Frame').style="Border:0;overflow:hidden;height:99%; width:100%; margin-top: -95px; "
+      document.getElementById("expication").innerHTML ="";
+      expication
+      Res2=document.getElementById('Frame').src
+      Res3=Res2.indexOf("Tournoi")
+      //alert(Res3)
+        if (Res3!=-1) {
+          document.getElementById('Frame').style="Border:0;overflow:hidden;height:99%; width:100%; margin-top: -95px;"
+        }
+        else {
+            document.getElementById('Frame').style="Border:0;overflow:hidden;height:99%; width:100%; margin-top: -20px;"
+        }
     }
     else {
       document.getElementById("FrameUpDown").innerHTML ="0";
@@ -121,7 +127,6 @@
 
            sound.play();}
          }
-
   function essai11() {
     if (window.innerWidth<850) {
       document.getElementById("expication").style.fontSize = "14px";
@@ -215,12 +220,11 @@
 
   function Saut(){
        JouerSon(1)
-       //document.getElementById("Frame").src="Generik.html";
        Opacifier(1)
      }
   function SautGenerik(){
     JouerSon(2)
-    document.getElementById("Frame").src="Generik.html";
+    document.getElementById("Frame").src="Generik2.html";
     Opacifier(1)
     if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
       navOnOff()
@@ -598,10 +602,10 @@
   <div id="main">
   <article>
       <iframe id="Frame" style="Border:0;overflow:hidden; height:99%; width:100%;  margin-top: 0px; left: 0; bottom: 0; right: 0;"
-          src="terra.html">
+          src="terra2.html">
       </iframe>
   </article>
-  <nav id="nav" class='nav1'>
+  <nav id="nav" class='nav1' style="display:none;">
 
       <div class="centered3Menu1"  id="MenuItem1" onmouseout="essaiVide()" onmouseover="essai11()" onclick="SautGenerik()" style="cursor:pointer;background-image: url('Image/Logo2.png')" >&nbsp;</div>
       <div class="centered3" id="MenuItem2"   onmouseout="essaiVide()" onmouseover="essai21()" onclick="SautHome()">AccueiL</div>
