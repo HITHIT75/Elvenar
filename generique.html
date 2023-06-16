@@ -1,0 +1,231 @@
+<!doctype html>
+<title>Example</title>
+<style>
+  * {
+   box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+  }
+  #main {
+    display: flex;
+    min-height: calc(99vh - 40vh);
+  }
+  #main > article {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width:100%;
+    margin-top:20%;
+  }
+
+ footer, article {
+    padding: 0em;
+  }
+   footer {
+        height: 40vh;
+  }
+  #ImgChevalier {
+    z-index: 99;
+    Opacity: 0;
+    animation-name: Chevalier;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+
+@keyframes Chevalier {
+    0%   {Opacity: 0;}
+    50%   {Opacity: 0.5;}
+    100% {Opacity: 1;}
+  }
+  #ImgGenerik {
+    z-index: -1;
+    animation-name: Pulp;
+    animation-duration: 3s;
+    animation-fill-mode:forwards;
+ }
+ /* @keyframes Pulp {
+   0% {top: 0%;opacity: 0;width: 0%;left:50%;}
+   50% {top: 40%;opacity: 0.5;width: 15%;left:37%;}
+   100% {top: 23%;opacity: 1;width: 37%;left:25%;}
+ } */
+ #ImgLettre1{
+     opacity: 0;
+     animation-delay: 0.6s;
+     animation-name: vanishIn;
+     animation-timing-function: ease-in-out;
+     animation-duration: 2s;
+    animation-fill-mode: forwards;
+   }
+   #ImgLettre2{
+
+     opacity: 0;
+     animation-delay:0.7s;
+     animation-name: vanishIn;
+     animation-timing-function: ease-in-out;
+     animation-duration: 2s;
+    animation-fill-mode: forwards;
+   }
+   #ImgLettre3{
+     opacity: 0;
+     animation-delay:0.9s;
+     animation-name: vanishIn;
+     animation-timing-function: ease-in-out;
+     animation-duration: 2s;
+    animation-fill-mode: forwards;
+   }
+   #ImgLettre4{
+     opacity: 0;
+     animation-delay:1.1s;
+     animation-name: vanishIn;
+     animation-timing-function: ease-in-out;
+     animation-duration: 2s;
+    animation-fill-mode: forwards;
+   }
+   #ImgLettre5{
+     opacity: 0;
+     animation-delay:1.3s;
+     animation-name: vanishIn;
+     animation-timing-function: ease-in-out;
+     animation-duration: 2s;
+    animation-fill-mode: forwards;
+   }
+   #ImgLettre6{
+     opacity: 0;
+     animation-delay:1.5s;
+     animation-name: vanishIn;
+     animation-timing-function: ease-in-out;
+     animation-duration: 2s;
+    animation-fill-mode: forwards;
+   }
+   #ImgLettre7{
+     opacity: 0;
+     animation-delay:1.7s;
+     animation-name: vanishIn;
+     animation-timing-function: ease-in-out;
+     animation-duration: 2s;
+    animation-fill-mode: forwards;
+   }
+   #ImgLettre8{
+     opacity: 0;
+     animation-delay:1.9s;
+     animation-name: vanishIn;
+     animation-timing-function: ease-in-out;
+     animation-duration: 2s;
+    animation-fill-mode: forwards;
+   }
+   #ImgLettre9{
+     opacity: 0;
+     animation-delay:2.1s;
+     animation-name: vanishIn;
+     animation-timing-function: ease-in-out;
+     animation-duration: 2s;
+    animation-fill-mode: forwards;
+   }
+
+
+  @-webkit-keyframes vanishIn {
+          0% {
+            opacity: 0;
+            transform-origin: 50% 50%;
+            transform: scale(2, 2);
+            filter: blur(90px);
+          }
+          100% {
+            opacity: 1;
+            transform-origin: 50% 50%;
+            transform: scale(1, 1);
+            filter: blur(0px);
+          }
+        }
+
+        @keyframes vanishIn {
+          0% {
+            opacity: 0;
+            transform-origin: 50% 50%;
+            transform: scale(2, 2);
+            filter: blur(90px);
+          }
+          100% {
+            opacity: 1;
+            transform-origin: 50% 50%;
+            transform: scale(1, 1);
+            filter: blur(0px);
+          }
+        }
+  #ImgGenerik {
+          animation-name: perspectiveDownReturn;
+          animation-timing-function: ease-in-out;
+          animation-duration: 2s;
+          animation-fill-mode: forwards;
+        }
+
+  .perspectiveDownReturn {
+          -webkit-animation-name: perspectiveDownReturn;
+          animation-name: perspectiveDownReturn;
+        }
+        @-webkit-keyframes perspectiveDownReturn {
+          0% {
+            -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+            -webkit-transform: perspective(800px) rotateX(-180deg);
+            transform: perspective(800px) rotateX(-180deg);
+          }
+
+          100% {
+            -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+            -webkit-transform: perspective(800px) rotateX(0deg);
+            transform: perspective(800px) rotateX(0deg);
+          }
+        }
+        @keyframes perspectiveDownReturn {
+          0% {
+            -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+            -webkit-transform: perspective(800px) rotateX(-180deg);
+            transform: perspective(800px) rotateX(-180deg);
+          }
+
+          100% {
+            -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+            -webkit-transform: perspective(800px) rotateX(0deg);
+            transform: perspective(800px) rotateX(0deg);
+          }
+        }
+
+</style>
+<body>
+
+  <div id="main">
+    <article>
+      <Div>
+
+        <div ">
+                <img  id="ImgLettre1"  src="Image/ImgGenerikLettreL.png"    >
+              <img  id="ImgLettre2"    src="Image/ImgGenerikLettree.png"    >
+              <img  id="ImgLettre3"   src="Image/ImgGenerikLettreP.png"    >
+              <img  id="ImgLettre4"   src="Image/ImgGenerikLettreo.png"    >
+              <img  id="ImgLettre5"   src="Image/ImgGenerikLettrer.png"    >
+              <img  id="ImgLettre6"   src="Image/ImgGenerikLettret.png"    >
+              <img  id="ImgLettre7"    src="Image/ImgGenerikLettrea.png"    >
+              <img  id="ImgLettre8"   src="Image/ImgGenerikLettrei.png"    >
+              <img  id="ImgLettre9"  src="Image/ImgGenerikLettrell.png"    >
+
+        </div>
+        <img  id="ImgGenerik" src="Image/ImgGenerik2.png"    >
+
+      </div>
+    </article>
+
+
+  </div>
+  <footer>
+      <div id="PosiChevalier">
+        <img  id="ImgChevalier"  style="height:40vh;" src="Image/ChevalierGenerik.gif"    >
+      </div>
+  </footer>
+</body>

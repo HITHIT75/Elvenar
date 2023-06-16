@@ -10,19 +10,20 @@
 
 <script>
   function Debut() {
-    setTimeout(myTimeout1, 4000)
-    setTimeout(myTimeout2, 10000)
+    setTimeout(myTimeout1, 1500)
+    setTimeout(myTimeout2, 5500)
     Opacifier(2)
-    checkCookie()
+
     // Chrono(3500)
 
     }
   function myTimeout1() {
-    document.getElementById("Frame").src="Generik2.html";
+    document.getElementById("Frame").src="Generique.html";
       }
   function myTimeout2() {
     SautHome()
     document.getElementById("nav").style="display:content;"
+    checkCookie()
     }
   function setCookie(cname, cvalue, exdays) {
     document.getElementById("nom").innerHTML=  cvalue
