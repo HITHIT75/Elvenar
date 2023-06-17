@@ -87,13 +87,12 @@
         let username = getCookie(Cible);
         if (username != "") {
          //alert("Welcome again " + username);
-         document.getElementById("Chaine1").innerHTML=  Cible + " loade"
-         document.getElementById("Chaine2").innerTxt=  username
+         //document.getElementById("Chaine1").innerHTML=  Cible + " loade"
+         //document.getElementById("Chaine2").innerTxt=  username
          document.getElementById("InfoPerso").value=  username
         }
          else {
-           document.getElementById("Chaine2").innerTxt=  ""
-           document.getElementById("InfoPerso").value=  ""
+           //document.getElementById("Chaine2").innerTxt=  ""
            document.getElementById("InfoPerso").value=  ""
          }
       }
@@ -106,6 +105,18 @@
              Manuel=username.substring(2)
              document.getElementById("GenreShow").innerTxt=  Genre
              document.getElementById("ManuelShow").innerTxt=  Manuel
+              if (Genre==0) {
+                handleChange()
+              }
+              else {
+                handleChange2()
+              }
+              if (Manuel==0) {
+                handleChange2b()
+              }
+              else {
+                handleChangeb()
+              }
 
             }
           }
