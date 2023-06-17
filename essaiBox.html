@@ -84,10 +84,10 @@
       Res3=Res2.indexOf("Tournoi")
       //alert(Res3)
         if (Res3!=-1) {
-          document.getElementById('Frame').style="Border:0;overflow:hidden;height:99%; width:100%; margin-top: -95px;"
+          document.getElementById('Frame').style="Border:0;overflow:hidden;height:99%; width:100%; margin-top: -65px;"
         }
         else {
-            document.getElementById('Frame').style="Border:0;overflow:hidden;height:99%; width:100%; margin-top: -20px;"
+            document.getElementById('Frame').style="Border:0;overflow:hidden;height:99%; width:100%; margin-top: -45px;"
         }
     }
     else {
@@ -361,7 +361,7 @@
     width:1vw;
   }
   #main > nav {
-    z-index:8;
+    z-index:9;
    /* flex: 0 0 10%;
     display: none;
     align-content: space-between;
@@ -369,14 +369,8 @@
   }
   header  {
      height: 12vh;
-     z-index:5;
+     z-index:6;
      }
-  /* .head1  {
-     height: 12vh;
-     z-index:9;
-     } */
-
-
 
   .imgNavOO1 {
     content: url('Image/Logo32.png');
@@ -489,7 +483,8 @@
       font-family: 'Metamorphous', cursive;
       background-size: cover;
       background-repeat: no-repeat;
-      background-image: url('Image/Logo-elvenarVide4.png');
+      cursor:pointer;
+      background-image: url('Image/Logo2.png');
       }
 
 
@@ -502,13 +497,14 @@
       width: 90px;
       vertical-align: middle;
       color: #C7100A;
+      cursor:pointer;
       font-size:17px;
       font-weight: bold;
       font-variant-caps: small-caps;
       font-family: 'Metamorphous', cursive;
       background-size: cover;
       background-repeat: no-repeat;
-      background-image: url('Image/Logo-elvenarVide4.png');
+      background-image: url('Image/Logo2.png');
       animation-name: Menuhaut;
       animation-duration: 0.7s;
       animation-timing-function: ease-out;
@@ -608,7 +604,7 @@
   </article>
   <nav id="nav" class='nav1' style="display:none;">
 
-      <div class="centered3Menu1"  id="MenuItem1" onmouseout="essaiVide()" onmouseover="essai11()" onclick="SautGenerik()" style="cursor:pointer;background-image: url('Image/Logo2.png')" >&nbsp;</div>
+      <div class="centered3Menu1"  id="MenuItem1" onmouseout="essaiVide()" onmouseover="essai11()" onclick="SautGenerik()">&nbsp;</div>
       <div class="centered3" id="MenuItem2"   onmouseout="essaiVide()" onmouseover="essai21()" onclick="SautHome()">AccueiL</div>
       <div class="centered3" id="MenuItem3" onmouseout="essaiVide()" onmouseover="essai31()" onclick="SautEvent()">EvenT</div>
       <div class="centered3" id="MenuItem4" onmouseout="essaiVide()" onmouseover="essai41()" onclick="SautAventure()">AventurE</div>
@@ -618,8 +614,6 @@
       <div class="centered3" id="MenuItem8" onmouseout="essaiVide()" onmouseover="essai71()" onclick="SautLiens()">LienS</div>
       <div class="centered3" id="MenuItem9" onmouseout="essaiVide()" onmouseover="essai81()" onclick="SautPadawan()">PadawaN</div>
       <div class="centered3" id="MenuItem10" onmouseout="essaiVide()" onmouseover="essai101()" onclick="SautFAQ()">FaQ</div>
-
-
 
     </nav>
 

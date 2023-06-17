@@ -35,7 +35,7 @@
 
     document.getElementById("TournoiShow").innerHTML=TypeDeTournoi
     document.getElementById("ManuelShow").innerHTML=0
-    MenuShort()
+    //MenuShort()
     handleChange2()
     handleChange2b()
     handleChangeAll(NumeroTournoi,"de " + TypeDeTournoi)
@@ -902,7 +902,7 @@
   }
 
     function handleChange() {
-          document.getElementById("Mili10" ).innerHTML = "Caserne elfoide";
+          //document.getElementById("Mili10" ).innerHTML = "Caserne elfoide";
           document.getElementById("Mili11" ).src="https://fr.wiki.elvenar.com/images/d/df/Eb_lm_1_big.png";
           document.getElementById("Mili12" ).src="https://fr.wiki.elvenar.com/images/4/49/Eb_lr_1_big.png";
           document.getElementById("Mili13" ).src="https://fr.wiki.elvenar.com/images/a/a2/Eb_ma_1_big.png";
@@ -910,8 +910,8 @@
           document.getElementById("Mili15" ).src="https://fr.wiki.elvenar.com/images/1/1f/Eb_hr_1_big.png";
 
           document.getElementById("Genre2" ).style.backgroundColor="#F7A63D"
-          document.getElementById("Genre2b" ).style.backgroundColor="#F7A63D"
-          document.getElementById("Genre1" ).style.backgroundColor=""
+        //  document.getElementById("Genre2b" ).style.backgroundColor="#F7A63D"
+        //  document.getElementById("Genre1" ).style.backgroundColor=""
           document.getElementById("Genre1b" ).style.backgroundColor=""
           document.getElementById("GenreShow").innerHTML = "0";
           Données()
@@ -919,34 +919,34 @@
         }
 
     function handleChange2() {
-            document.getElementById("Mili10" ).innerHTML = "Caserne humainoide";
+            //document.getElementById("Mili10" ).innerHTML = "Caserne humainoide";
             document.getElementById("Mili11" ).src="https://fr.wiki.elvenar.com/images/d/df/Hb_lm_1_big.png";
             document.getElementById("Mili12" ).src="https://fr.wiki.elvenar.com/images/e/e3/Hb_lr_1_big.png";
             document.getElementById("Mili13" ).src="https://fr.wiki.elvenar.com/images/e/ed/Hb_ma_1_big.png";
             document.getElementById("Mili14" ).src="https://fr.wiki.elvenar.com/images/6/6f/Hb_hm_1_big.png";
             document.getElementById("Mili15" ).src="https://fr.wiki.elvenar.com/images/9/9f/Hb_hr_1_big.png";
 
-            document.getElementById("Genre1" ).style.backgroundColor="#F7A63D"
+          //  document.getElementById("Genre1" ).style.backgroundColor="#F7A63D"
             document.getElementById("Genre1b" ).style.backgroundColor="#F7A63D"
             document.getElementById("Genre2" ).style.backgroundColor=""
-            document.getElementById("Genre2b" ).style.backgroundColor=""
+          //  document.getElementById("Genre2b" ).style.backgroundColor=""
             document.getElementById("GenreShow").innerHTML = "1";
             Données()
             EcrireCook2()
         }
     function handleChange2b() {
-        document.getElementById("Manu1" ).style.backgroundColor="#F7A63D"
+        //document.getElementById("Manu1" ).style.backgroundColor="#F7A63D"
         document.getElementById("Manu1b" ).style.backgroundColor="#F7A63D"
         document.getElementById("Manu2" ).style.backgroundColor=""
-        document.getElementById("Manu2b" ).style.backgroundColor=""
+        //document.getElementById("Manu2b" ).style.backgroundColor=""
         document.getElementById("ManuelShow").innerHTML = "0";
         Données()
         EcrireCook2()
       }
     function handleChangeb() {
         document.getElementById("Manu2" ).style.backgroundColor="#F7A63D"
-        document.getElementById("Manu2b" ).style.backgroundColor="#F7A63D"
-        document.getElementById("Manu1" ).style.backgroundColor=""
+        //document.getElementById("Manu2b" ).style.backgroundColor="#F7A63D"
+        //document.getElementById("Manu1" ).style.backgroundColor=""
         document.getElementById("Manu1b" ).style.backgroundColor=""
         document.getElementById("ManuelShow").innerHTML = "1";
         Données()
@@ -966,7 +966,7 @@
 
         }
 
-    function MenuShort() {
+    function MenuShort() {  // a supprimer
         if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
           document.getElementById("Genre1").style ="width: 0%;display:none;"
           document.getElementById("Genre2b").style ="width: 0%;display:none;"
@@ -981,6 +981,9 @@
           document.getElementById("Genre2").className = "TabGDHB";
           document.getElementById("Manu1b").className = "TabGDHB";
           document.getElementById("Manu2").className = "TabGDHB";
+          document.getElementById("Jesuis").innerHTML ="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+          document.getElementById("Jejoue").innerHTML ="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+
         }
       }
 
@@ -1280,35 +1283,66 @@
           height: 25px;
         }
 
+        .CellWithComment{
+          position:relative;
+          border: 2px solid green;
+          border-radius : 20px;
+          font-size: 13px;
+          text-align: center;
+          width:50px;
+        }
 
+        .CellComment
+        {
+            visibility: hidden;
+            width: auto;
+            color:white;
+            position:absolute;
+            z-index:100;
+            text-align: center;
+            opacity: 0.4;
+            transition: opacity 2s;
+            border-radius: 6px;
+            background-color: #555;
+            padding:3px;
+            bottom:-10px;
+            left:0px;
+
+        }
+        .CellWithComment:hover span.CellComment {visibility: visible;opacity: 1;}
 
 </style>
 </head>
 <body onload="Debut()">
-<div id="StockShow"  style="display:none;">z</div>
-<div id="ManuelShow"  style="display:none;">0</div>
-<div id="GenreShow"  style="display:none;">0</div>
-<div id="LegendeShow"  style="display:none;">0</div>
-<div id="TournoiShow" style="display:none;"></div>
-<div id="Num1Show" style="display:none;"></div>
-<div id="Num2Show" style="display:none;" ></div>
-<div id="Num3Show" style="display:none;"></div>
-<div id="UnitShow" style="display:none;" ></div>
-<div id="Chaine1"  style="display:none;"></div>
-<div id="Chaine2"  style="display:none;"></div>
-<div id="Confirm"  style="display:none;"></div>
+<div id="StockShow"  style="visibility:hidden;font-Size:0;display:inline-block;">z</div>
+<div id="ManuelShow"  style="visibility:hidden;font-Size:0;display:inline-block;">0</div>
+<div id="GenreShow"  style="visibility:hidden;font-Size:0;display:inline-block;">0</div>
+<div id="LegendeShow"  style="visibility:hidden;font-Size:0;display:inline-block;">0</div>
+<div id="TournoiShow" style="visibility:hidden;font-Size:0;display:inline-block;"></div>
+<div id="Num1Show" style="visibility:hidden;font-Size:0;display:inline-block;"></div>
+<div id="Num2Show" style="visibility:hidden;font-Size:0;display:inline-block;" ></div>
+<div id="Num3Show" style="visibility:hidden;font-Size:0;display:inline-block;"></div>
+<div id="UnitShow" style="visibility:hidden;font-Size:0;display:inline-block;" ></div>
+<div id="Chaine1"  style="visibility:hidden;font-Size:0;display:inline-block;"></div>
+<div id="Chaine2"  style="visibility:hidden;font-Size:0;display:inline-block;"></div>
+<div id="Confirm"  style="visibility:hidden;font-Size:0;display:inline-block;"></div>
 
   <header>
-    <table style="margin-left: 0px; margin-right: auto;border-collapse;border-spacing : 0;width: 50%">
+    <table style="margin-left: 0px; margin-right: auto;border-collapse;border-spacing : 0;width: 40%">
       <tr>
-        <td style="text-align:right;"><strong>Je suis</strong></td>
-        <td class="TabG" id="Genre1" style="width: 20%; background-color:#F7A63D;cursor:pointer;" onclick="handleChange2();">humanoide</td>
-        <td class="TabD" id="Genre1b" style="width: 20%; background-color:#F7A63D;cursor:pointer;" onclick="handleChange2();"><img style="height:50px" src="Image/TournoiHumain.png"></td>
-        <td class="TabG" id="Genre2"  style="width: 20%; background-color:;cursor:pointer;" onclick="handleChange();"><img style="height:50px" src="Image/TournoiElfe.png"></td>
-        <td class="TabD" id="Genre2b"  style="width: 20%; background-color:;cursor:pointer;" onclick="handleChange();">elfoide</td>
-        <td rowspan="3" style="text-align:left;width: 40%">
-            <div id="Legende0">
-              <textarea onchange="EcrireCook()" id="InfoPerso" placeholder="Saisir ici vos commentaires personnels sur ce tournoi - Ils seront visibles à votre prochaine visite."  rows="8" cols="50"></textarea>
+
+            <td class="CellWithComment" id="Genre1b" style="width: 20%;;background-color:#F7A63D;cursor:pointer;" onclick="handleChange2();">
+              <img style="height:50px" src="Image/TournoiHumain.png">
+              <span class="CellComment">Je suis humanoide</span>
+            </td>
+
+          <td class="CellWithComment" id="Genre2"  style="width: 20%; background-color:;cursor:pointer;" onclick="handleChange();">
+            <img style="height:50px" src="Image/TournoiElfe.png">
+              <span class="CellComment">Je suis elfoide</span>
+          </td>
+        <td rowspan="6" style="text-align:left;">
+            <div id="Legende0" >
+              <textarea onchange="EcrireCook()" id="InfoPerso" placeholder="Saisir ici vos commentaires personnels sur ce tournoi - Ils seront visibles à votre prochaine visite."  rows="8" cols="45"></textarea>
             </div>
             <div id="Legende1" class="TabGDHB" style="width:500px;height:130px;display:none;font-size:10px;">
               Survoler une unité pour avoir plus d informations.<br>
@@ -1338,14 +1372,20 @@
             </div>
         </td>
       </tr>
-      <tr><td colspan="5"></td></tr>
+      <tr><td colspan="2"></td></tr>
       <tr >
-        <td style="text-align:right;"><strong>Je joue</strong></td>
-        <td class="TabG"  id="Manu1"  style="width: 20%; background-color:#F7A63D;cursor:pointer;" onclick="handleChange2b();">en manuel</td>
-        <td class="TabD"   id="Manu1b"   style="width: 20%; background-color:#F7A63D;cursor:pointer;" onclick="handleChange2b();"><img style="height:50px" src="https://cdn-icons-png.flaticon.com/512/1093/1093269.png"></td>
-        <td class="TabG"   id="Manu2"   style="width: 20%; background-color;cursor:pointer;:" onclick="handleChangeb();"><img style="height:50px" src="https://cdn-icons-png.flaticon.com/512/6471/6471690.png"></td>
-        <td class="TabD"  id="Manu2b"    style="width: 20%; background-color:;cursor:pointer;" onclick="handleChangeb();">en automatique</td>
 
+        <td class="CellWithComment"   id="Manu1b"   style="width: 20%; background-color:#F7A63D;cursor:pointer;" onclick="handleChange2b();">
+          <img style="height:50px" src="https://cdn-icons-png.flaticon.com/512/1093/1093269.png">
+          <span class="CellComment">Je joue en manuel</span>
+        </td>
+        <td class="CellWithComment"   id="Manu2"   style="width: 20%; background-color;cursor:pointer;:" onclick="handleChangeb();">
+          <img style="height:50px" src="https://cdn-icons-png.flaticon.com/512/6471/6471690.png">
+          <span class="CellComment">Je joue en automatique</span>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
     </table>
   </header>
@@ -1398,11 +1438,11 @@
         <div id="IntituleZero" style="position:relative;top:-20px;font-size:16px;">
             <div id="flex-container" >
               <div ><img style='width:65px;display:inline;' src='Image/IconeCaserne.png'></div>
-              <div  id="Mili10" >Caserne elfe</div>
+              <div  id="Mili10" >Caserne</div>
               <div ><img style='width:65px;display:inline;' src='Image/IconeTerrain.png'></div>
-              <div >Terrain d&#8217;entraînement</div>
+              <div >Terrain</div>
               <div ><img style='width:40px;display:inline;' src='Image/IconeCamp.png'></div>
-              <div >Camp mercenaire</div>
+              <div >Camp</div>
             </div>
         </div>
         <div id="InfoMili1"  style="display:none;">
