@@ -78,18 +78,25 @@
 		//alert("apres -1 = " + Num)
 			if (Num<1) {
 				Num=1
-				return
+
 			}
 		//alert("apres condition 0 = " + Num)
 			document.getElementById("Actuel").innerHTML=Num
 		//Num=document.getElementById("Actuel").innerHTML*1
 		//alert("apres enregister element = " + Num + "ex" + NumEx)
-			if (NumEx<Maxo) {
+			if (Num<Maxo) {
 				document.getElementById("Fleche2").className= "FlecheVis"
 			}
-			if (NumEx===2) {
+      else {
+        document.getElementById("Fleche2").className= "FlecheInVis"
+      }
+			if (NumEx==1) {
 				document.getElementById("Fleche1").className="FlecheInVis"
 			}
+      else {
+        document.getElementById("Fleche1").className="FlecheVis"
+      }
+
 		//alert("fin fleche 1")
 			InfoStock()
 			//loadData()
@@ -106,20 +113,21 @@
 			if (Num>Maxo) {
 				//alert("lod Num>Maxo " + Num + " Maxo   " + Maxo)
 						Num=Maxo
-						return
 					}
 				document.getElementById("Actuel").innerHTML=Num
-				Num=document.getElementById("Actuel").innerHTML*1
 
-
-			if (NumEx===1) {
-				//alert("apflch1 ")
-				document.getElementById("Fleche1").className= "FlecheVis"
-			}
-			if (Num===Maxo) {
-				//alert("flch2 numex =" + NumEx + " maxo = " + Maxo  + " maxo-1 = " + (Maxo-1) )
-				document.getElementById("Fleche2").className= "FlecheInVis"
-			}
+        if (Num<Maxo) {
+  				document.getElementById("Fleche2").className= "FlecheVis"
+  			}
+        else {
+          document.getElementById("Fleche2").className= "FlecheInVis"
+        }
+  			if (NumEx==1) {
+  				document.getElementById("Fleche1").className="FlecheInVis"
+  			}
+        else {
+          document.getElementById("Fleche1").className="FlecheVis"
+        }
 		//alert("apres enregister element = " + Num + "ex" + NumEx)
 			InfoStock()
 		//alert("apres loaddata  ")
