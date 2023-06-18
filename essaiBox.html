@@ -1,0 +1,641 @@
+<!doctype html>
+<head>
+ <link rel="icon" type="image/png" href="Image/Blason1.png" />
+ <title>Le Portail des Confréries</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Metamorphous&family=Rubik+Beastly&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<script>
+  function Debut() {
+    setTimeout(myTimeout1, 1500)
+    setTimeout(myTimeout2, 5500)
+    Opacifier(2)
+
+    // Chrono(3500)
+
+    }
+  function myTimeout1() {
+    document.getElementById("Frame").src="generique.html";
+      }
+  function myTimeout2() {
+    checkCookie()
+    SautHome()
+    document.getElementById("nav").style="display:content;"
+    Res=getParamValue("Mode")
+      if (Res==2) {
+        document.getElementById("MenuItem4").style="display:none;"
+        document.getElementById("MenuItem7").style="display:none;"
+        document.getElementById("MenuItem9").style="display:none;"
+
+      }
+    }
+  function getParamValue(paramName)			{
+  			    var url = window.location.search.substring(1); //get rid of "?" in querystring
+  			    var qArray = url.split('&'); //get key-value pairs
+  			    for (var i = 0; i < qArray.length; i++)
+  			    {
+  			        var pArr = qArray[i].split('='); //split key and value
+  			        if (pArr[0] == paramName)
+  			            return pArr[1]; //return value
+  			    }
+  			}
+
+  function setCookie(cname, cvalue, exdays) {
+    document.getElementById("nom").innerHTML=  cvalue
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    let expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+  function getCookie(cname) {
+    let name = cname + "=";
+    let ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+  function checkCookie() {
+    //document.getElementById("Chaine").innerHTML=  "attente cookie"
+    let username = getCookie("Pseudo");
+    if (username != "") {
+     //alert("Welcome again " + username);
+      document.getElementById("nom").innerHTML=  username
+    } else {
+      username = prompt("C'est ta première visite ? Merci de me donner ton pseudo de jeu ☺.", "");
+      if (username != "" && username != null) {
+        setCookie("Pseudo", username, 365);
+        //document.getElementById("nom").innerTxt=  username
+        }
+      }
+    }
+  function navOnOff() {
+    JouerSon(1)
+    document.getElementById("imgNavOO").classList.toggle("imgNavOO2");
+    document.getElementById("nav").classList.toggle("nav2");
+
+    document.getElementById("MenuItem2").classList.toggle("centered3bis");
+    document.getElementById("MenuItem3").classList.toggle("centered3bis");
+    document.getElementById("MenuItem4").classList.toggle("centered3bis");
+    document.getElementById("MenuItem5").classList.toggle("centered3bis");
+    document.getElementById("MenuItem6").classList.toggle("centered3bis");
+    document.getElementById("MenuItem7").classList.toggle("centered3bis");
+    document.getElementById("MenuItem8").classList.toggle("centered3bis");
+    document.getElementById("MenuItem9").classList.toggle("centered3bis");
+    document.getElementById("MenuItem10").classList.toggle("centered3bis");
+    Res = document.getElementById("FrameUpDown").innerHTML*1
+
+    if (Res ==0) {
+      document.getElementById("FrameUpDown").innerHTML ="1";
+      document.getElementById("expication").innerHTML ="";
+      expication
+      Res2=document.getElementById('Frame').src
+      Res3=Res2.indexOf("Tournoi")
+      //alert(Res3)
+        if (Res3!=-1) {
+          document.getElementById('Frame').style="Border:0;overflow:hidden;height:99%; width:100%; margin-top: -65px;"
+        }
+        else {
+            document.getElementById('Frame').style="Border:0;overflow:hidden;height:99%; width:100%; margin-top: -45px;"
+        }
+    }
+    else {
+      document.getElementById("FrameUpDown").innerHTML ="0";
+      document.getElementById('Frame').style="Border:0;overflow:hidden;height:99%;width:100%;margin-top: 0px;"
+    }
+
+
+  }
+  function OnOffSon() {
+        Ecouter = document.getElementById("son").innerHTML
+        document.getElementById("son").innerHTML=Math.abs(Ecouter-1);
+        ActualisationEcouteur()
+    }
+  function ActualisationEcouteur() {
+         Ecouter = document.getElementById("son").innerHTML
+         if (Ecouter == 1 ) {
+             document.getElementById("Ecoute").src="Image/SonOn.png"
+             document.getElementById("son").innerHTML="1"
+         }
+         else {
+           document.getElementById("Ecoute").src="Image/SonOff.png"
+          document.getElementById("son").innerHTML="0"
+         }
+     }
+  function JouerSon(Num) {
+
+        Ecouter = document.getElementById("son").innerHTML
+
+
+       if (Ecouter==1) {
+          if (Num==1) {
+              var sound = document.getElementById("MonSon");
+          }
+          if (Num==2) {
+              var sound = document.getElementById("MonSonOuverture");
+          }
+
+           sound.play();}
+         }
+  function essai11() {
+    if (window.innerWidth<850) {
+      document.getElementById("expication").style.fontSize = "14px";
+    }
+    else {
+      document.getElementById("expication").style.fontSize = "12px";
+    }
+    document.getElementById("expication").innerHTML= "&nbsp;&nbsp;Ca c'est le logo du jeu auquel tu joues -T'avais jamais remarqué ?"
+  }
+  function essaiVide() {
+    document.getElementById("expication").innerHTML = "&nbsp;"
+
+  }
+  function essai21() {
+    if (window.innerWidth<850) {
+      document.getElementById("expication").style.fontSize = "14px";
+    }
+    else {
+      document.getElementById("expication").style.fontSize = "12px";
+    }
+    document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Toutes les informations relatives à la confrérie : News et actualités."
+
+  }
+  function essai31() {
+    if (window.innerWidth<850) {
+      document.getElementById("expication").style.fontSize = "14px";
+    }
+    else {
+      document.getElementById("expication").style.fontSize = "12px";
+    }
+    document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Quêtes avec visualisation de la difficulté:<br>Vert «facile», jaune «moyen» et rouge «difficile».<br>Possibilité de masquer les quêtes terminées."
+
+  }
+  function essai41() {
+    if (window.innerWidth<850) {
+      document.getElementById("expication").style.fontSize = "14px";
+    }
+    else {
+      document.getElementById("expication").style.fontSize = "12px";
+    }
+    document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Les chemins & étapes sélectionnés pour l'aventure et un simulateur gratuit pour doser manufactures et ateliers."
+  }
+  function essai61() {
+    if (window.innerWidth<850) {
+      document.getElementById("expication").style.fontSize = "14px";
+    }
+    else {
+      document.getElementById("expication").style.fontSize = "12px";
+    }
+    document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Retrouvez ici tous les journaux de bord de la confrérie et la FAQ. ."
+  }
+  function essai51() {
+    document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Toutes les infos pour préparer son tournoi.."
+  }
+  function essai71() {
+    if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+      document.getElementById("expication").style.fontSize = "14px";
+    }
+      else {
+        document.getElementById("expication").style.fontSize = "12px";
+      }
+    document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Un listing des liens Elvenar en tout genre."
+  }
+  function essai81() {
+    if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+      document.getElementById("expication").style.fontSize = "14px";
+    }
+    else {
+      document.getElementById("expication").style.fontSize = "12px";
+    }
+    document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Conseils et avis aux nouveaux membres."
+  }
+  function essai91() {
+    if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+      document.getElementById("expication").style.fontSize = "12px";
+    }
+    else {
+      document.getElementById("expication").style.fontSize = "10px";
+    }
+    document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Les informations sur les Merveilles."
+  }
+  function essai101() {
+    if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+      document.getElementById("expication").style.fontSize = "12px";
+    }
+    else {
+      document.getElementById("expication").style.fontSize = "10px";
+    }
+    document.getElementById("expication").innerHTML = "&nbsp;&nbsp;Les questions fréquentes."
+  }
+
+  function Saut(){
+       JouerSon(1)
+       Opacifier(1)
+     }
+  function SautGenerik(){
+    JouerSon(2)
+    document.getElementById("Frame").src="generique.html";
+    Opacifier(1)
+    if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+      navOnOff()
+    }
+  }
+  function SautDoigt(){
+    JouerSon(2)
+    document.getElementById("Frame").src="Zoom.html";
+    Opacifier(9)
+    if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+      navOnOff()
+    }
+  }
+  function SautJournal(){
+    JouerSon(2)
+    Opacifier(7)
+    Cible="Journal2.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
+    document.getElementById("Frame").src=Cible;
+      if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+      navOnOff()
+    }
+    }
+  function SautPadawan(){
+    JouerSon(2)
+    Opacifier(9)
+    Cible="Padawan.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
+    document.getElementById("Frame").src=Cible;
+    if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+      navOnOff()
+    }
+  }
+  function SautHome(){
+    JouerSon(2)
+    Opacifier(2)
+    Cible="Home2.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
+    document.getElementById("Frame").src=Cible;
+    if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+      navOnOff()
+    }
+  }
+  function SautAventure(){
+    JouerSon(2)
+    Opacifier(4)
+    Cible="Aventure.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
+    document.getElementById("Frame").src=Cible;
+    if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+      navOnOff()
+    }
+  }
+  function SautLiens(){
+    JouerSon(2)
+    Opacifier(8)
+    Cible="Liens.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
+    document.getElementById("Frame").src=Cible;
+    if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+      navOnOff()
+    }
+  }
+  function SautTournois(){
+    JouerSon(2)
+    Opacifier(5)
+    Cible="Tournoi3.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
+    document.getElementById("Frame").src=Cible;
+    if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+      navOnOff()
+    }
+  }
+  function SautEvent(){
+    JouerSon(2)
+    Opacifier(3)
+    Cible="Event.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
+    document.getElementById("Frame").src=Cible;
+    if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+      navOnOff()
+    }
+  }
+  function SautMerveilles(){
+    JouerSon(2)
+    Opacifier(6)
+    Cible="Merveilles.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
+    document.getElementById("Frame").src=Cible;
+    if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+      navOnOff()
+    }
+  }
+  function SautFAQ(){
+    JouerSon(2)
+    Opacifier(10)
+    Cible="FAQ.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
+    document.getElementById("Frame").src=Cible;
+    if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
+      navOnOff()
+    }
+  }
+
+  function Opacifier(Num){
+    Res=document.getElementById("Degre10").innerHTML
+    var Res = "MenuItem" + Res
+    document.getElementById(Res).style.transform = "rotate(0deg)";
+    var Cible = "MenuItem" + Num
+    document.getElementById("Degre10").innerHTML=Num
+    // document.getElementById(Cible).style.opacity= "0.5";
+    document.getElementById(Cible).style.transform = "rotate(10deg)";
+  }
+</script>
+
+
+<style>
+  /* * {
+    box-sizing: border-box;
+  } */
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    background-size: cover;
+    background-attachment:fixed;
+    background-image:url(Image/Ecran2.png)
+
+
+
+  }
+  #main {
+    display: flex;
+    flex: 1;
+    z-index:6;
+  }
+  #main > article {
+     flex: 1 1 auto;
+    z-index:7;
+    display: flex; /* new */
+    width:1vw;
+  }
+  #main > nav {
+    z-index:9;
+   /* flex: 0 0 10%;
+    display: none;
+    align-content: space-between;
+    justify-content: center; /* align horizontal */ */
+  }
+  header  {
+     height: 12vh;
+     z-index:6;
+     }
+
+  .imgNavOO1 {
+    content: url('Image/Logo32.png');
+    animation-name: imgNavDroite;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+  @keyframes imgNavDroite {
+    from {margin-left: -50px;  transform: rotate(0deg);}
+    to {margin-left: 130px;  transform: rotate(360deg);}
+  }
+  .imgNavOO2 {
+    content: url('Image/Logo31.png');
+    animation-name: imgNavGauche;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+
+  }
+  @keyframes imgNavGauche {
+    from {margin-left: 130px;transform: rotate(0deg);}
+    to {margin-left: 5px;transform: rotate(-360deg);}
+  }
+  .nav1 {
+      /* flex: 0 0 8vw; */
+      flex: 0 0 130px;
+    /* display: inline-grid; */
+    padding-left: 20px;
+    align-content: space-between;
+    justify-content: center; /* align horizontal */
+    flex-flow: row wrap;
+    order: -1;
+    align-items: stretch;
+    margin-left: -110px;
+    animation-name: navdroite;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+      z-index:10;
+    }
+    @keyframes navdroite {
+      from {margin-left: -130px;}
+      to {margin-left: 0px;}
+    }
+  .nav2 {
+        /* flex: 0 0 8vw; */
+        flex: 0 0 130px;
+      /* display: inline-grid; */
+      padding-left: 20px;
+      align-content: space-between;
+      justify-content: center; /* align horizontal */
+      flex-flow: row wrap;
+      order: -1;
+      align-items: stretch;
+      margin-left: 0px;
+      animation-name: navgauche;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+      z-index:10;
+      }
+    @keyframes navgauche {
+        from {margin-left: 0px;}
+        to {margin-left: -130px;}
+      }
+
+
+  /* header,  article, nav, aside {
+    padding: 1em;
+  } */
+
+  .centered3 {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    margin-top: -100px;
+    line-height: 5px;
+    width: 0px;
+    vertical-align: middle;
+    color: #C7100A;
+    font-size:17px;
+    font-weight: bold;
+    font-variant-caps: small-caps;
+    font-family: 'Metamorphous', cursive;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('Image/Logo-elvenarVide4.png');
+    animation-name: Menubas;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    }
+    @keyframes Menubas{
+      from {margin-top: -100px;line-height: 5px;width: 0px;}
+      to {margin-top: 0px;line-height: 75px;width: 90px;}
+    }
+  .centered3Menu1 {
+      display: flex;
+      align-items:center;
+      justify-content:center;
+      margin-top: -92px;
+      line-height: 75px;
+      width: 90px;
+      vertical-align: middle;
+      color: #C7100A;
+      font-size:17px;
+      font-weight: bold;
+      font-variant-caps: small-caps;
+      font-family: 'Metamorphous', cursive;
+      background-size: cover;
+      background-repeat: no-repeat;
+      cursor:pointer;
+      background-image: url('Image/Logo2.png');
+      }
+
+
+    .centered3bis {
+      display: flex;
+      align-items:center;
+      justify-content:center;
+      margin-top: 0px;
+      line-height: 75px;
+      width: 90px;
+      vertical-align: middle;
+      color: #C7100A;
+      cursor:pointer;
+      font-size:17px;
+      font-weight: bold;
+      font-variant-caps: small-caps;
+      font-family: 'Metamorphous', cursive;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url('Image/Logo2.png');
+      animation-name: Menuhaut;
+      animation-duration: 0.7s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+      }
+      @keyframes Menuhaut{
+        from {margin-top: 0px;line-height: 75px;width: 90px;}
+        to {margin-top: -100px;line-height: 5px;width: 0px;}
+      }
+  .centered3:hover {
+        opacity: 0.7;
+        cursor: pointer;
+        transform: rotate(5deg);
+      }
+
+
+
+    /* .containerMenu:hover {
+      opacity: 0.7;
+      cursor: pointer;
+      color: rgba(40, 4E, 3C, 0%);
+      transform: rotate(5deg);
+    } */
+  #K2 {
+    animation-name: Kbas2;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+
+  }
+  @keyframes Kbas2 {
+    from {margin-top: -6.3vh;}
+    to {margin-top: 6.3vh;}
+  }
+  #K2bis {
+    animation-name: Kbas2Bis;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+  @keyframes Kbas2 {
+    from {margin-top: -6.3vh;}
+    to {margin-top: 6.3vh;}
+  }
+  @keyframes Kbas2Bis {
+    from {margin-top: 6.3vh;}
+    to {margin-top: -6.3vh;}
+  }
+
+  .containerExpli {
+    font-family: 'Metamorphous', cursive;
+    font-size:12px;
+      color: black;
+    text-align:center;
+    vertical-align:middle;
+    line-height: 14px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    }
+  .Frame {
+    /* background-color: white; */
+    }
+</style>
+<body onload="Debut()">
+<audio  id="MonSon" src="Image/Son.wav"></audio>
+<audio  id="MonSonOuverture" src="Image/Son9.wav"></audio>
+
+  <header>
+    <table>
+      <tr>
+        <th>      <img id="imgNavOO" class="imgNavOO1" onclick="navOnOff()" src="Image/Logo32.png" style ="float: left;margin-left:50px;cursor: pointer;"></th>
+        <th>
+          <Div style ="position:fixed;top:0px;right:0px;cursor:pointer;">
+            <img src="Image/SonOn.png" id="Ecoute" width="30px"   onclick="OnOffSon()" >
+            <a href="mailto:HITHIT.Elvenar@gmail.com"><img src="Image/Mailto.png"  width="30px"   ></a>
+          </div>
+          <div id="Degre10"  style="display:none">2</div>
+          <div id="nom"   style="display:none"></div>
+          <div id="son"  style="display:none" >1</div>
+        </th>
+
+        <th valign="top">
+              <div class="containerExpli" id="expication" style ="display: inline";>
+                      &nbsp;
+              </div>
+        </th>
+        <th id="FrameUpDown"  style="display: none;">0</th>
+      </tr>
+    </table>
+  </header>
+  <div id="main">
+  <article>
+      <iframe id="Frame" style="Border:0;overflow:hidden; height:99%; width:100%;  margin-top: 0px; left: 0; bottom: 0; right: 0;"
+          src="terra2.html">
+      </iframe>
+  </article>
+  <nav id="nav" class='nav1' style="display:none;">
+
+      <div class="centered3Menu1"  id="MenuItem1" onmouseout="essaiVide()" onmouseover="essai11()" onclick="SautGenerik()">&nbsp;</div>
+      <div class="centered3" id="MenuItem2"   onmouseout="essaiVide()" onmouseover="essai21()" onclick="SautHome()">AccueiL</div>
+      <div class="centered3" id="MenuItem3" onmouseout="essaiVide()" onmouseover="essai31()" onclick="SautEvent()">EvenT</div>
+      <div class="centered3" id="MenuItem4" onmouseout="essaiVide()" onmouseover="essai41()" onclick="SautAventure()">AventurE</div>
+      <div class="centered3" id="MenuItem5" onmouseout="essaiVide()" onmouseover="essai51()" onclick="SautTournois()">TournoI</div>
+      <div class="centered3" id="MenuItem6" onmouseout="essaiVide()" onmouseover="essai91()" onclick="SautMerveilles()">Merveilles</div>
+      <div class="centered3" id="MenuItem7" onmouseout="essaiVide()" onmouseover="essai61()" onclick="SautJournal()">JournaL</div>
+      <div class="centered3" id="MenuItem8" onmouseout="essaiVide()" onmouseover="essai71()" onclick="SautLiens()">LienS</div>
+      <div class="centered3" id="MenuItem9" onmouseout="essaiVide()" onmouseover="essai81()" onclick="SautPadawan()">PadawaN</div>
+      <div class="centered3" id="MenuItem10" onmouseout="essaiVide()" onmouseover="essai101()" onclick="SautFAQ()">FaQ</div>
+
+    </nav>
+
+  </div>
+
+
+</body>
