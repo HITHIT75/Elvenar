@@ -52,6 +52,7 @@
   function EcrireCook2() {
       TypeDeTournoi='Ecran'
       Contenu=document.getElementById("GenreShow").innerHTML+'|'+document.getElementById("ManuelShow").innerHTML
+      alert("avant erciture cok :" + TypeDeTournoi + "   " + Contenu )
         setCookie2(TypeDeTournoi, Contenu, 365);
   }
   function setCookie(cname, cvalue, exdays) {
@@ -101,7 +102,7 @@
   function checkCookie2() {
           //document.getElementById("Chaine").innerHTML=  "attente cookie"
             let username = getCookie('Ecran');
-            alert("cook1 Ecran =" + username)
+            alert("lecture cook2 Ecran =" + username)
             if (username != "") {
              //alert("Welcome again " + username);
              Genre =username.substring(0,1)
@@ -1002,74 +1003,72 @@
       }
 
 
-    function Legender() {
-      Res=document.getElementById("LegendeShow").innerHTML*1
-      Res=Math.abs(Res-1)
-      document.getElementById("LegendeShow").innerHTML=Res
-        if (Res==1) {
+    function Legender1() {
+      document.getElementById("LegendeShow").innerHTML=1
             document.getElementById("Table0").style.display ="none"
             document.getElementById("Table1").style.display ="block"
-            // document.getElementById("Genre1").style.visibility ="hidden"
-            // document.getElementById("Genre2b").style.visibility ="hidden"
-            // document.getElementById("Manu1").style.visibility ="hidden"
-            // document.getElementById("Manu2b").style.visibility ="hidden"
-
-          }
-          else {
-            document.getElementById("Table1").style.display ="none"
-            document.getElementById("Table0").style.display ="block"
-          }
-
-
-
+            document.getElementById("Table2").style.display ="none"
       }
+      function Legender2() {
+        document.getElementById("LegendeShow").innerHTML=2
+              document.getElementById("Table0").style.display ="none"
+              document.getElementById("Table2").style.display ="block"
+              document.getElementById("Table1").style.display ="none"
+        }
+        function LegenderOff() {
+          document.getElementById("LegendeShow").innerHTML=0
+                document.getElementById("Table0").style.display ="block"
+                document.getElementById("Table2").style.display ="none"
+                document.getElementById("Table1").style.display ="none"
+          }
 
 
-      function handleChangeR1() {
+
+    function handleChangeR1() {
             handleChangeAll(1,"de Marbre")
             document.getElementById("TournoiShow").innerHTML="Marbre"
             Données()
           }
-      function handleChangeR2() {
-            document.getElementById("TournoiShow").innerHTML="Acier"
-            handleChangeAll(2,"d'Acier")
-            Données()
-            }
-      function handleChangeR3() {
-          handleChangeAll(3,"de Planches")
-          document.getElementById("TournoiShow").innerHTML="Planches"
-                Données()
+        function handleChangeR2() {
+              document.getElementById("TournoiShow").innerHTML="Acier"
+              handleChangeAll(2,"d'Acier")
+              Données()
               }
-      function handleChangeR4() {
-            handleChangeAll(4,"de Cristal")
-            document.getElementById("TournoiShow").innerHTML="Cristal"
-                Données()
+        function handleChangeR3() {
+            handleChangeAll(3,"de Planches")
+            document.getElementById("TournoiShow").innerHTML="Planches"
+                  Données()
                 }
-      function handleChangeR5() {
-            handleChangeAll(5,"de Parchemins")
-            document.getElementById("TournoiShow").innerHTML="Parchemins"
-                    Données()
+        function handleChangeR4() {
+              handleChangeAll(4,"de Cristal")
+              document.getElementById("TournoiShow").innerHTML="Cristal"
+                  Données()
                   }
-      function handleChangeR6() {
-          handleChangeAll(6,"de Soie")
-          document.getElementById("TournoiShow").innerHTML="Soie"
-                    Données()
+        function handleChangeR5() {
+              handleChangeAll(5,"de Parchemins")
+              document.getElementById("TournoiShow").innerHTML="Parchemins"
+                      Données()
                     }
-      function handleChangeR7() {
-          handleChangeAll(7,"d'Elixir")
-          document.getElementById("TournoiShow").innerHTML="Elixir"
-                  Données()
-                            }
-      function handleChangeR8() {
-          handleChangeAll(8,"de Poussiere")
-          document.getElementById("TournoiShow").innerHTML="Poussiere"
-                  Données()
+        function handleChangeR6() {
+            handleChangeAll(6,"de Soie")
+            document.getElementById("TournoiShow").innerHTML="Soie"
+                      Données()
+                      }
+        function handleChangeR7() {
+            handleChangeAll(7,"d'Elixir")
+            document.getElementById("TournoiShow").innerHTML="Elixir"
+                    Données()
                               }
-      function handleChangeR9() {
-          handleChangeAll(9,"de Gemmes")
-          document.getElementById("TournoiShow").innerHTML="Gemmes"
+        function handleChangeR8() {
+            handleChangeAll(8,"de Poussiere")
+            document.getElementById("TournoiShow").innerHTML="Poussiere"
                     Données()
                                 }
+        function handleChangeR9() {
+            handleChangeAll(9,"de Gemmes")
+            document.getElementById("TournoiShow").innerHTML="Gemmes"
+                      Données()
+                                  }
 
 
     function CacherMenu() {
@@ -1382,26 +1381,30 @@
     <article>
       <table style="margin-left: auto; margin-right: auto;border-collapse;border-spacing : 0;">
         <tr style="text-align:center;border: 2px solid green;" >
-        <td >
+        <td rowspan="3">
+          <div onmouseover="Legender1()" onmouseout="LegenderOff()" style="text-align:center;cursor:pointer;">
+            <img width='45px' src='Image/AideTounoi1.png'>
+          </div>
+          <div onmouseover="Legender2()" onmouseout="LegenderOff()" style="text-align:center;cursor:pointer;">
+            <img width='45px' src='Image/AideTounoi2.png'>
+          </div>
+
         </td>
           <td colspan="5" class="TabGD" >
-          <div  id="Difficulte" style="display:inline;">
-            <strong>Difficulté du tournoi : </strong><img width='30px' src='https://fr.wiki.elvenar.com/images/a/a8/Level_small.png'><img width='30px' src='https://fr.wiki.elvenar.com/images/a/a8/Level_small.png'>
-          </div>
-          <div onclick="Legender()" style="display:inline;position:relative;left:0px;text-align:right;float:right;cursor:pointer;"><img width='30px' src='Image/interro.gif'></div>
 
+
+            <div  id="Difficulte" style="display:inline;">
+              <strong>Difficulté du tournoi : </strong><img width='30px' src='https://fr.wiki.elvenar.com/images/a/a8/Level_small.png'><img width='30px' src='https://fr.wiki.elvenar.com/images/a/a8/Level_small.png'>
+            </div>
           </td>
         </tr>
         <tr style="text-align:center;" >
-        <td >
-        </td>
           <td colspan="5" id="Conseil" class="TabGD" style="background-color: white;">
           Conseil: ...<br><br>
           </td>
         </tr>
         <tr style="text-align:center;"  class="TabGD" >
-        <td >
-        </td>
+
           <td colspan="5" id="Commentaire" class="TabGD"  style="background-color: white;">
           Commentaire: ...
           </td>
@@ -1801,6 +1804,23 @@
         </tr>
         </table>
       </div>
+      <div id="Table2" style="display:none;">
+        <table style="margin-left: auto; margin-right: auto;border-collapse;border-spacing : 0;">
+        <tr>
+          <TD style="width:1500px;">
+            <div id="Legende1" class="TabGDHB" style="font-size:16px;">
+              <div style="display:inline-block;font-size:16px;">
+                deuxieme
+                <Br>
+                aide
+              </div>
+            </div>
+          </TD>
+        </tr>
+        </table>
+      </div>
+
+
     </article>
 
 
