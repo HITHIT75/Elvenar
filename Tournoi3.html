@@ -84,21 +84,24 @@
 
   function checkCookie(Cible) {
       //document.getElementById("Chaine").innerHTML=  "attente cookie"
+      alert("cook0 note =" + Cible)
         let username = getCookie(Cible);
         if (username != "") {
          //alert("Welcome again " + username);
          //document.getElementById("Chaine1").innerHTML=  Cible + " loade"
          //document.getElementById("Chaine2").innerTxt=  username
          document.getElementById("InfoPerso").value=  username
+         alert("cook0 note loadé  =" + Cible)
         }
          else {
            //document.getElementById("Chaine2").innerTxt=  ""
-           document.getElementById("InfoPerso").value=  ""
+           document.getElementById("InfoPerso").value=  username
          }
       }
   function checkCookie2() {
           //document.getElementById("Chaine").innerHTML=  "attente cookie"
             let username = getCookie('Ecran');
+            alert("cook1 Ecran =" + username)
             if (username != "") {
              //alert("Welcome again " + username);
              Genre =username.substring(0,1)
