@@ -35,7 +35,7 @@
       TypeDeTournoi ="Gemmes"
     }
 
-
+    alert("parametre son nom type de tournoi avant cookie cookie")
     document.getElementById("TournoiShow").innerHTML=TypeDeTournoi
     param1 = getParamValue('nom');
     document.getElementById("nom").innerHTML=param1
@@ -44,10 +44,10 @@
     //MenuShort()
     //handleChange2()
     //handleChange2b()
-
+    alert("ChangeAll avant cookie")
     handleChangeAll(NumeroTournoi,"de " + TypeDeTournoi)
     //checkCookie(TypeDeTournoi)
-    ALERT("dans dbt entree de check cook2")
+    alert("dans dbt entree de check cook2")
     checkCookie2()
     document.getElementById("LoadOff").innerHTML=1
 
@@ -1007,8 +1007,8 @@
     function handleChangeAll(Num, Vecteur) {
       JouerSon(1)
           Res=document.getElementById("Tournoi").innerHTML
-           document.getElementById("MenuB" + Res).style.backgroundColor=""
-           document.getElementById("MenuA" + Res).style.backgroundColor=""
+           document.getElementById("MenuB" + Res).style.backgroundColor="#D4BB93"
+           document.getElementById("MenuA" + Res).style.backgroundColor="#D4BB93"
            document.getElementById("Recommande").innerHTML="Unités recommandées pour le tournoi " + Vecteur
             document.getElementById("Tournoi").innerHTML=Num
              document.getElementById("MenuB" + Num).style.backgroundColor="#F7A63D"
@@ -1232,9 +1232,12 @@
                   diff =diff/86400000 // en jour
                   diff = 7+(diff/7)
                   //Math.floor(diff/7) // nombre de semaine depuis
-
+                  Jourmeme = 0
+                  if((diff/7)==Math.floor(diff/7)) {
+                    Jourmeme = 1
+                  }
                   NumTournoi=Math.floor(diff-(9*Math.floor((diff-1)/9)))
-                  alert(hour +":" +minutes + "   " + NumTournoi)
+                //  alert(hour +":" +minutes + "   " + NumTournoi +"  jour meme :" + Jourmeme)
                   return NumTournoi
                }
 </script >
@@ -1511,18 +1514,18 @@ LoadOff<div id="LoadOff">0</div>
         <td >
 
       </table>
-      <div id="Table0" style="display:content;">
+      <div id="Table0" style="display:content;padding:0px;margin:0px;">
         <table style="margin-left: auto; margin-right: auto;width:50%;border-collapse;border-spacing : 0;">
           <tr>
-            <td colspan="7" style="width:50%;" class="TabGDHseul">
+            <td colspan="7" style="width:50%;background-color: #D4BB93;" class="TabGDHseul">
               <div style="text-align:center;">
                 <strong><div id="Recommande">Unités recommandées</div></strong>
 
               </div>
             </td>
           </tr>
-          <tr  style="text-align:center;" >
-          <td class="TabGtrait"  rowspan="3" style="width: 30%;">
+          <tr  style="text-align:center;background-color: #D4BB93;" >
+          <td class="TabGtrait"  rowspan="3" style="width: 30%;background-color: #D4BB93;">
           <div id="IntituleZero" style="position:relative;top:-20px;font-size:16px;">
               <div id="flex-container" >
                 <div ><img style='width:65px;display:inline;' src='Image/IconeCaserne.png'></div>
@@ -1550,36 +1553,36 @@ LoadOff<div id="LoadOff">0</div>
 
 
           </td>
-              <td  id="Milit11" onmouseover="ShowForce(11)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;">
-              <conteneur style="display: flex;  justify-content: center;cursor:pointer;">
+              <td  id="Milit11" onmouseover="ShowForce(11)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;background-color: #D4BB93;">
+              <conteneur style="display: flex;  justify-content: center;cursor:pointer;background-color: #D4BB93;">
                 <img  id="Mili11" style="width:50px;" src="https://fr.wiki.elvenar.com/images/d/df/Eb_lm_1_big.png">
                 <img  id="MiliTerrain11"  style="height:20px;margin-left:-15px;visibility: hidden;" src="Image/Hexagone.png">
               </conteneur>
               </td>
 
-              <td  id="Milit12" onmouseover="ShowForce(12)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;" >
-              <conteneur style="display: flex;  justify-content: center;cursor:pointer;">
+              <td  id="Milit12" onmouseover="ShowForce(12)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;background-color: #D4BB93;" >
+              <conteneur style="display: flex;  justify-content: center;cursor:pointer;background-color: #D4BB93;">
                 <img  id="Mili12" style="width:50px" src="https://fr.wiki.elvenar.com/images/4/49/Eb_lr_1_big.png">
                 <img  id="MiliTerrain12"  style="height:20px;margin-left:-15px" src="Image/Hexagone.png">
               </conteneur>
               </td>
 
-              <td  id="Milit13" onmouseover="ShowForce(13)"  onmouseout="DeShowForce()"  style="max-width:20%;min-width:20%;" >
-              <conteneur style="display: flex;  justify-content: center;cursor:pointer;">
+              <td  id="Milit13" onmouseover="ShowForce(13)"  onmouseout="DeShowForce()"  style="max-width:20%;min-width:20%;background-color: #D4BB93;" >
+              <conteneur style="display: flex;  justify-content: center;cursor:pointer;background-color: #D4BB93;">
                 <img  id="Mili13" style="width:50px" src="https://fr.wiki.elvenar.com/images/a/a2/Eb_ma_1_big.png">
                 <img  id="MiliTerrain13"  style="height:20px;margin-left:-15px" src="Image/Hexagone.png">
                 </conteneur>
                 </td>
 
-              <td  id="Milit14" onmouseover="ShowForce(14)"  onmouseout="DeShowForce()"  style="max-width:20%;min-width:20%;" >
-              <conteneur style="display: flex;  justify-content: center;cursor:pointer;">
+              <td  id="Milit14" onmouseover="ShowForce(14)"  onmouseout="DeShowForce()"  style="max-width:20%;min-width:20%;background-color: #D4BB93;" >
+              <conteneur style="display: flex;  justify-content: center;cursor:pointer;background-color: #D4BB93;">
                 <img  id="Mili14" style="width:50px" src="https://fr.wiki.elvenar.com/images/8/83/Eb_hm_1_big.png">
                 <img  id="MiliTerrain14"  style="height:20px;margin-left:-15px" src="Image/Hexagone.png">
               </conteneur>
               </td>
 
-              <td  id="Milit15" onmouseover="ShowForce(15)"  onmouseout="DeShowForce()"  style="max-width:20%;min-width:20%;cursor:pointer;" >
-                <conteneur style="display: flex;  justify-content: center;cursor:pointer;">
+              <td  id="Milit15" onmouseover="ShowForce(15)"  onmouseout="DeShowForce()"  style="max-width:20%;min-width:20%;cursor:pointer;background-color: #D4BB93;" >
+                <conteneur style="display: flex;  justify-content: center;cursor:pointer;background-color: #D4BB93;">
                   <img  id="Mili15" style="width:50px" src="https://fr.wiki.elvenar.com/images/1/1f/Eb_hr_1_big.png">
                   <img  id="MiliTerrain15"  style="height:20px;margin-left:-15px" src="Image/Hexagone.png">
                   </conteneur>
@@ -1590,38 +1593,38 @@ LoadOff<div id="LoadOff">0</div>
 
 
           </tr>
-          <tr style="text-align:center;" >
-              <td  id="Milit21" onmouseover="ShowForce(21)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;cursor:pointer;"  >
-                <conteneur style="display: flex;  justify-content: center;cursor:pointer;">
+          <tr style="text-align:center;background-color: #D4BB93;" >
+              <td  id="Milit21" onmouseover="ShowForce(21)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;cursor:pointer;background-color: #D4BB93;"  >
+                <conteneur style="display: flex;  justify-content: center;cursor:pointer;background-color: #D4BB93;">
               <img  id="Mili21" style="width:50px" src="https://fr.wiki.elvenar.com/images/5/59/Tg_lm_1_big.png">
               <img  id="MiliTerrain21"  style="height:20px;margin-left:-15px" src="Image/Hexagone.png">
               </conteneur>
               </td>
 
-              <td id="Milit22"  onmouseover="ShowForce(22)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;cursor:pointer;" >
-              <conteneur style="display: flex;  justify-content: center;cursor:pointer;">
+              <td id="Milit22"  onmouseover="ShowForce(22)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;cursor:pointer;background-color: #D4BB93;" >
+              <conteneur style="display: flex;  justify-content: center;cursor:pointer;background-color: #D4BB93;">
               <img  id="Mili22" style="width:50px" src="https://fr.wiki.elvenar.com/images/7/78/Tg_lr_1_big.png">
               <img  id="MiliTerrain22"  style="height:20px;margin-left:-15px" src="Image/Hexagone.png">
               </conteneur>
               </td>
 
 
-              <td id="Milit23" onmouseover="ShowForce(23)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;cursor:pointer;"  >
-                <conteneur style="display: flex;  justify-content: center;cursor:pointer;">
+              <td id="Milit23" onmouseover="ShowForce(23)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;cursor:pointer;background-color: #D4BB93;"  >
+                <conteneur style="display: flex;  justify-content: center;cursor:pointer;background-color: #D4BB93;">
               <img  id="Mili23" style="width:50px" src="https://fr.wiki.elvenar.com/images/b/b8/Tg_ma_1_big.png">
               <img  id="MiliTerrain23"  style="height:20px;margin-left:-15px" src="Image/Hexagone.png">
               </conteneur>
               </td>
 
-              <td id="Milit24"  onmouseover="ShowForce(24)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;" >
-                <conteneur style="display: flex;  justify-content: center;cursor:pointer;">
+              <td id="Milit24"  onmouseover="ShowForce(24)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;background-color: #D4BB93;" >
+                <conteneur style="display: flex;  justify-content: center;cursor:pointer;background-color: #D4BB93;">
               <img  id="Mili24" style="width:50px" src="https://no.wiki.elvenar.com/images/thumb/2/28/Tg_hm_1_big.png/108px-Tg_hm_1_big.png">
               <img  id="MiliTerrain24"  style="height:20px;margin-left:-15px" src="Image/Hexagone.png">
               </conteneur>
               </td>
 
-              <td id="Milit25"  onmouseover="ShowForce(25)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;" >
-              <conteneur style="display: flex;  justify-content: center;cursor:pointer;">
+              <td id="Milit25"  onmouseover="ShowForce(25)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;background-color: #D4BB93;" >
+              <conteneur style="display: flex;  justify-content: center;cursor:pointer;background-color: #D4BB93;">
               <img  id="Mili25" style="width:50px" src="https://fr.wiki.elvenar.com/images/5/5f/Tg_hr_1_big.png">
               <img  id="MiliTerrain25"  style="height:20px;margin-left:-15px" src="Image/Hexagone.png">
               </conteneur>
@@ -1630,37 +1633,37 @@ LoadOff<div id="LoadOff">0</div>
               </td>
             </tr>
 
-            <tr style="text-align:center;" >
-                          <td id="Milit31"  onmouseover="ShowForce(31)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;" >
-              <conteneur style="display: flex;  justify-content: center;cursor:pointer;">
+            <tr style="text-align:center;background-color: #D4BB93;" >
+                          <td id="Milit31"  onmouseover="ShowForce(31)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;background-color: #D4BB93;" >
+              <conteneur style="display: flex;  justify-content: center;cursor:pointer;background-color: #D4BB93;">
                 <img  id="Mili31" style="width:50px" src="https://fr.wiki.elvenar.com/images/8/8a/Mc_lm_1_big.png">
                 <img  id="MiliTerrain31" style="height:20px;margin-left:-15px" src="Image/Hexagone.png">
               </conteneur>
               </td>
 
-              <td  id="Milit32" onmouseover="ShowForce(32)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;" >
+              <td  id="Milit32" onmouseover="ShowForce(32)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;background-color: #D4BB93;" >
               <conteneur style="display: flex;  justify-content: center;cursor:pointer;">
                 <img id="Mili32" style="width:50px" src="https://fr.wiki.elvenar.com/images/d/d0/Mc_lr_1_big.png">
                 <img  id="MiliTerrain32"  style="height:20px;margin-left:-15px" src="Image/Hexagone.png">
               </conteneur>
               </td>
 
-              <td  id="Milit33"  onmouseover="ShowForce(33)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;" >
-              <conteneur style="display: flex;  justify-content: center;cursor:pointer;">
+              <td  id="Milit33"  onmouseover="ShowForce(33)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;background-color: #D4BB93;" >
+              <conteneur style="display: flex;  justify-content: center;cursor:pointer;background-color: #D4BB93;">
               <img id="Mili33" style="width:50px" src="https://fr.wiki.elvenar.com/images/6/6c/Mc_ma_1_big.png">
               <img  id="MiliTerrain33"  style="height:20px;margin-left:-15px" src="Image/Hexagone.png">
               </conteneur>
               </td>
 
-              <td  id="Milit34"  onmouseover="ShowForce(34)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;" >
-              <conteneur style="display: flex;  justify-content: center;cursor:pointer;">
+              <td  id="Milit34"  onmouseover="ShowForce(34)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;background-color: #D4BB93;" >
+              <conteneur style="display: flex;  justify-content: center;cursor:pointer;background-color: #D4BB93;">
               <img id="Mili34" style="width:50px" src="https://fr.wiki.elvenar.com/images/9/98/Mc_hm_1_big.png">
               <img  id="MiliTerrain34"  style="height:20px;margin-left:-15px" src="Image/Hexagone.png">
               </conteneur>
               </td>
 
-              <td  class="TabDtrait" id="Milit35"  onmouseover="ShowForce(35)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;" >
-              <conteneur style="display: flex;  justify-content: center;cursor:pointer;">
+              <td  class="TabDtrait" id="Milit35"  onmouseover="ShowForce(35)"  onmouseout="DeShowForce()" style="max-width:20%;min-width:20%;background-color: #D4BB93;" >
+              <conteneur style="display: flex;  justify-content: center;cursor:pointer;background-color: #D4BB93;">
               <img id="Mili35" style="width:50px" src="https://fr.wiki.elvenar.com/images/5/56/Mc_hr_1_big.png">
               <img  id="MiliTerrain35"  style="height:20px;margin-left:-15px" src="Image/Hexagone.png">
               </conteneur>
@@ -1669,13 +1672,13 @@ LoadOff<div id="LoadOff">0</div>
               </td>
             </tr>
             <tr>
-              <td colspan="7" style=" border-bottom: 2px solid green;border-bottom-right-radius : 20px;border-bottom-left-radius : 20px;"
+              <td colspan="7" style=" border-bottom: 2px solid green;border-bottom-right-radius : 20px;border-bottom-left-radius : 20px;background-color: #D4BB93;"
             </tr>
             <tr>
               <td colspan="7"></tD>
             </tr>
             <tr style="text-align:center;vertical-align:bottom;" >
-              <td style=" border-top: 2px solid green;border-left: 2px solid green;border-top-left-radius : 20px;">
+              <td style=" border-top: 2px solid green;border-left: 2px solid green;border-top-left-radius : 20px;background-color: #D4BB93;">
 
                 <div id="IntituleUn" style="position:relative;top:0px;display:none;border: 1px solid;border-radius: 8px;font-size: 10px;background-color: white;width: 80%;">
                     <Div id ="CommentMap" style="text-align:center;">
@@ -1695,12 +1698,12 @@ LoadOff<div id="LoadOff">0</div>
                 </div>
               </td>
 
-            <td style="border-top: 2px solid green;">
+            <td style="border-top: 2px solid green;background-color: #D4BB93;">
             <div  style="text-align:center;">
             <conteneurstyle="display: flex;  justify-content: center;display:inline;text-align:center;">
                 <div  id="ShowMili1"  style="display:inline-block;visibility:hidden;">
                   <img id="ShowMili1Img1" style="height:50px;margin-left:0px;" src="Image/FondTransparent.png">
-                  <div style='margin-left:0px;'>
+                  <div style='margin-left:0px;background-color: #D4BB93;'>
                     <img id='ShowMili11Img2'  src='Image/Egal.png'  style='height:20px;margin-left:0%;display:none;'>
                     <img id='ShowMili12Img2'  src='Image/MoinsMoins.png'  style='height:20px;margin-left:-50%;;display:none;'>
                     <img id='ShowMili13Img2'  src='Image/MoinsC.png'  style='height:20px;margin-left:-50%;;display:none;'>
@@ -1725,7 +1728,7 @@ LoadOff<div id="LoadOff">0</div>
             </div>
             </td>
 
-            <td style="border-top: 2px solid green;">
+            <td style="border-top: 2px solid green;background-color: #D4BB93;">
             <div  style="text-align:center;">
             <conteneur  style="display: flex;  justify-content: center;display:inline;text-align:center;">
                 <div  id="ShowMili2"  style="display:inline-block;visibility:visible;">
@@ -1756,7 +1759,7 @@ LoadOff<div id="LoadOff">0</div>
             </div>
             </td>
 
-            <td style="border-top: 2px solid green;">
+            <td style="border-top: 2px solid green;background-color: #D4BB93;">
             <div  style="text-align:center;">
             <conteneur  style="display: flex;  justify-content: center;display:inline;text-align:center;">
                 <div  id="ShowMili3"  style="display:inline-block;visibility:hidden;">
@@ -1787,7 +1790,7 @@ LoadOff<div id="LoadOff">0</div>
             </div>
             </td>
 
-            <td style="border-top: 2px solid green;">
+            <td style="border-top: 2px solid green;background-color: #D4BB93;">
             <div  style="text-align:center;">
             <conteneur  style="display: flex;  justify-content: center;display:inline;text-align:center;">
                 <div  id="ShowMili4"  style="display:inline-block;visibility:hidden;">
@@ -1820,7 +1823,7 @@ LoadOff<div id="LoadOff">0</div>
             </td>
 
 
-            <td style="border-top: 2px solid green;border-right: 2px solid green;border-top-right-radius : 20px;">
+            <td style="border-top: 2px solid green;border-right: 2px solid green;border-top-right-radius : 20px;background-color: #D4BB93;">
             <div  style="text-align:center;">
             <conteneur  style="display: flex;  justify-content: center;display:inline;text-align:center;">
                 <div  id="ShowMili5"  style="display:inline-block;visibility:hidden;">
@@ -1855,7 +1858,7 @@ LoadOff<div id="LoadOff">0</div>
 
 
           </tr>
-          <tr style="text-align:center;" >
+          <tr style="text-align:center;background-color: #D4BB93;" >
             <td style="border-bottom: 2px solid green;border-left: 2px solid green;border-bottom-left-radius : 20px;"></td>
             <td style="max-width:20%;min-width:20%;border-bottom: 2px solid green;Vertical-align: bottom;">Mêlée légère<br><img style='width:15px' src='https://fr.wiki.elvenar.com/images/b/b0/Light_melee.png'></td>
             <td style="max-width:20%;min-width:20%;border-bottom: 2px solid green;Vertical-align: bottom;">Portée légère<br><img style='width:15px' src='https://fr.wiki.elvenar.com/images/1/17/Short_ranged.png'></td>
@@ -1944,51 +1947,52 @@ LoadOff<div id="LoadOff">0</div>
     <div id="Tournoi" style="display:none">1</div>
       <table style="border-collapse;border-spacing : 0;">
         <tr>
-          <td  onclick="handleChangeR1();" class="MenuG" id="MenuA1"   style="border-left: 4px solid green;border-top: 4px solid green;background-color:#F7A63D"><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/3/39/Good_marble_big.png"></td>
-          <td  onclick="handleChangeR1();" class="MenuG"  id="MenuB1"   style="border-top: 4px solid green;border-right: 4px solid green;border-top-right-radius : 20px;background-color:#F7A63D">Marbre</td>
-          <td></td>
+          <td  onclick="handleChangeR1();" class="MenuG" id="MenuA1"   style="border-left: 4px solid green;border-top: 4px solid green;background-color:#D4BB93">
+          <img style="height:30px;" src="https://fr.wiki.elvenar.com/images/3/39/Good_marble_big.png"></td>
+          <td  onclick="handleChangeR1();" class="MenuG"  id="MenuB1" style="border-top: 4px solid green;border-right: 4px solid green;border-top-right-radius : 20px;background-color:#D4BB93">Marbre</td>
+          <td style="background-color: transparent"></td>
         </tr>
         <tr>
-        <td  onclick="handleChangeR2();" class="MenuG" id="MenuA2"  style="border-left: 4px solid green;"><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/5/58/Good_steel_big.png"></td>
-        <td  onclick="handleChangeR2();" class="MenuG"  id="MenuB2"  style="border-right: 4px solid green;">Acier</td>
-        <td></td>
+        <td  onclick="handleChangeR2();" class="MenuG" id="MenuA2"  style="border-left: 4px solid green;background-color: #D4BB93;"><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/5/58/Good_steel_big.png"></td>
+        <td  onclick="handleChangeR2();" class="MenuG"  id="MenuB2"  style="border-right: 4px solid green;background-color: #D4BB93;">Acier</td>
+        <td style="background-color: transparent"></td>
         </tr>
         <tr>
-          <td  onclick="handleChangeR3();" lass="MenuG" id="MenuA3"   style="border-left: 4px solid green;"><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/3/3e/Good_planks_big.png"></td>
-          <td  onclick="handleChangeR3();" class="MenuG"  id="MenuB3"  style="border-right: 4px solid green;">Planches</td>
-          <td></td>
+          <td  onclick="handleChangeR3();" lass="MenuG" id="MenuA3"   style="border-left: 4px solid green;background-color: #D4BB93;"><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/3/3e/Good_planks_big.png"></td>
+          <td  onclick="handleChangeR3();" class="MenuG"  id="MenuB3"  style="border-right: 4px solid green;background-color: #D4BB93;">Planches</td>
+          <td style="background-color: transparent;"></td>
         </tr>
         <tr>
-            <td  onclick="handleChangeR4();" class="MenuG" id="MenuA4"   style="border-left: 4px solid green;"><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/0/07/Good_crystal_big.png"></td>
-            <td  onclick="handleChangeR4();" class="MenuG"  id="MenuB4"  style="border-right: 4px solid green;">Cristal</td>
-            <td></td>
+            <td  onclick="handleChangeR4();" class="MenuG" id="MenuA4"   style="border-left: 4px solid green;background-color: #D4BB93;"><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/0/07/Good_crystal_big.png"></td>
+            <td  onclick="handleChangeR4();" class="MenuG"  id="MenuB4"  style="border-right: 4px solid green;background-color: #D4BB93;">Cristal</td>
+            <td style="background-color: transparent;"></td>
         </tr>
         <tr>
-          <td  onclick="handleChangeR5();" class="MenuG" id="MenuA5"    style="border-left: 4px solid green;"><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/3/3d/Good_scrolls_big.png"></td>
-          <td  onclick="handleChangeR5();" class="MenuG"  id="MenuB5"  style="border-right: 4px solid green;">Parchemins</td>
+          <td  onclick="handleChangeR5();" class="MenuG" id="MenuA5"    style="border-left: 4px solid green;background-color: #D4BB93;"><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/3/3d/Good_scrolls_big.png"></td>
+          <td  onclick="handleChangeR5();" class="MenuG"  id="MenuB5"  style="border-right: 4px solid green;background-color: #D4BB93;">Parchemins</td>
           <td><Div class="TriangleMenuG" id="TriangleMenuG" onclick="CacherMenu()" style="height:50px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
         </div>
         </tr>
         <tr>
-        <td  onclick="handleChangeR6();" class="MenuG" id="MenuA6"   style="border-left: 4px solid green;"><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/2/2b/Good_silk_big.png"></td>
-        <td  onclick="handleChangeR6();" class="MenuG"  id="MenuB6"  style="border-right: 4px solid green;">Soie</td>
-        <td></td>
+        <td  onclick="handleChangeR6();" class="MenuG" id="MenuA6"   style="border-left: 4px solid green;background-color: #D4BB93;"><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/2/2b/Good_silk_big.png"></td>
+        <td  onclick="handleChangeR6();" class="MenuG"  id="MenuB6"  style="border-right: 4px solid green;background-color: #D4BB93;">Soie</td>
+        <td style="background-color: transparent;"></td>
         </tr>
         <tr>
-          <td  onclick="handleChangeR7();" class="MenuG" id="MenuA7"   style="border-left: 4px solid green;"><img style="height:30px" src="https://fr.wiki.elvenar.com/images/f/f1/Good_elixir_big.png"></td>
-          <td  onclick="handleChangeR7();" class="MenuG"  id="MenuB7"  style="border-right: 4px solid green;">Elixir</td>
+          <td  onclick="handleChangeR7();" class="MenuG" id="MenuA7"   style="border-left: 4px solid green;background-color: #D4BB93;"><img style="height:30px" src="https://fr.wiki.elvenar.com/images/f/f1/Good_elixir_big.png"></td>
+          <td  onclick="handleChangeR7();" class="MenuG"  id="MenuB7"  style="border-right: 4px solid green;background-color: #D4BB93;">Elixir</td>
           <td></td>
           </tr>
 
           <tr>
-          <td  onclick="handleChangeR8();" class="MenuG" id="MenuA8"   style="border-left: 4px solid green;"><img style="height:30px" src="https://fr.wiki.elvenar.com/images/f/f6/Good_magic_dust_big.png"></td>
-          <td  onclick="handleChangeR8();" class="MenuG"  id="MenuB8"  style="border-right: 4px solid green;">Poussiere</td>
+          <td  onclick="handleChangeR8();" class="MenuG" id="MenuA8"   style="border-left: 4px solid green;background-color: #D4BB93;"><img style="height:30px" src="https://fr.wiki.elvenar.com/images/f/f6/Good_magic_dust_big.png"></td>
+          <td  onclick="handleChangeR8();" class="MenuG"  id="MenuB8"  style="border-right: 4px solid green;background-color: #D4BB93;">Poussiere</td>
           <td></td>
           </tr>
 
           <tr>
-            <td onclick="handleChangeR9();" class="MenuG" id="MenuA9"  style="border-left: 4px solid green;border-bottom: 4px solid green;"><img style="height:30px" src="https://fr.wiki.elvenar.com/images/3/38/Good_gems_big.png"></td>
-            <td onclick="handleChangeR9();" class="MenuG" id="MenuB9"  style="border-right: 4px solid green;border-bottom: 4px solid green;border-bottom-right-radius : 20px;">Gemmes</td>
+            <td onclick="handleChangeR9();" class="MenuG" id="MenuA9"  style="border-left: 4px solid green;border-bottom: 4px solid green;background-color: #D4BB93;"><img style="height:30px" src="https://fr.wiki.elvenar.com/images/3/38/Good_gems_big.png"></td>
+            <td onclick="handleChangeR9();" class="MenuG" id="MenuB9"  style="border-right: 4px solid green;border-bottom: 4px solid green;border-bottom-right-radius : 20px;background-color: #D4BB93;">Gemmes</td>
             <td></td>
           </tr>
 
