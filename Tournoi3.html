@@ -14,21 +14,24 @@
       TypeDeTournoi ="Acier"
     }
     if (NumeroTournoi == 3) {
-      TypeDeTournoi ="Cristal"
+      TypeDeTournoi ="Planches"
     }
     if (NumeroTournoi == 4) {
-      TypeDeTournoi ="Parchemins"
+      TypeDeTournoi ="Cristal"
     }
     if (NumeroTournoi == 5) {
-      TypeDeTournoi ="Soie"
+      TypeDeTournoi ="Parchemins"
     }
     if (NumeroTournoi == 6) {
-      TypeDeTournoi ="Elixir"
+      TypeDeTournoi ="Soie"
     }
     if (NumeroTournoi == 7) {
-      TypeDeTournoi ="Poussiere"
+      TypeDeTournoi ="Elixir"
     }
     if (NumeroTournoi == 8) {
+      TypeDeTournoi ="Poussiere"
+    }
+    if (NumeroTournoi == 9) {
       TypeDeTournoi ="Gemmes"
     }
 
@@ -45,7 +48,7 @@
     checkCookie(TypeDeTournoi)
     checkCookie2()
 
-
+    document.getElementById("LoadOff").innerHTML="1"
       }
   function EcrireCook() {
       TypeDeTournoi=document.getElementById("TournoiShow").innerHTML
@@ -953,10 +956,11 @@
           document.getElementById("Genre1b" ).style.backgroundColor=""
           document.getElementById("Elfe").classList.toggle("down")
           document.getElementById("GenreShow").innerHTML = "1";
-          //Données()
-          //EcrireCook2()
+          Données()
+          if (document.getElementById("LoadOff").innerHTML=="1") {
+            EcrireCook2()
+          }
         }
-
     function handleChange2() {
             JouerSon(1)
             document.getElementById("Mili11" ).src="https://fr.wiki.elvenar.com/images/d/df/Hb_lm_1_big.png";
@@ -970,8 +974,10 @@
 
             document.getElementById("Homme").classList.toggle("down")
             document.getElementById("GenreShow").innerHTML = "0";
-            //Données()
-            //EcrireCook2()
+            Données()
+            if (document.getElementById("LoadOff").innerHTML=="1") {
+              EcrireCook2()
+            }
         }
     function handleChange2b() {
       JouerSon(1)
@@ -979,17 +985,21 @@
         document.getElementById("Manu2" ).style.backgroundColor=""
         document.getElementById("ManuelShow").innerHTML = "0";
         document.getElementById("Manu").classList.toggle("down")
-        //Données()
-        //EcrireCook2()
+        Données()
+        if (document.getElementById("LoadOff").innerHTML=="1") {
+          EcrireCook2()
+        }
       }
     function handleChangeb() {
-      JouerSon(1)
+        JouerSon(1)
         document.getElementById("Manu2").style.backgroundColor="#F7A63D"
         document.getElementById("Manu1b" ).style.backgroundColor=""
         document.getElementById("ManuelShow").innerHTML = "1";
         document.getElementById("Auto").classList.toggle("down")
-        //Données()
-        //EcrireCook2()
+        Données()
+        if (document.getElementById("LoadOff").innerHTML=="1") {
+          EcrireCook2()
+        }
         }
     function handleChangeAll(Num, Vecteur) {
       JouerSon(1)
@@ -1000,6 +1010,7 @@
             document.getElementById("Tournoi").innerHTML=Num
              document.getElementById("MenuB" + Num).style.backgroundColor="#F7A63D"
              document.getElementById("MenuA" + Num).style.backgroundColor="#F7A63D"
+             Données()
              if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
                CacherMenu()
              }
@@ -1093,7 +1104,7 @@
                       Données()
                                   }
     function CacherMenu() {
-        JouerSon(1)
+          JouerSon(1)
           passage=0
           document.getElementById("MenuA1").classList.toggle("MenuGI");
           document.getElementById("MenuB1").classList.toggle("MenuGI");
@@ -1207,8 +1218,15 @@
                 }
                  sound.play();}
                }
+    function CalculNumTournoi() {
+               aujourdhui = new Date()
+                DateRef = new Date("2022-06-17"); // dimanche 23/10/2022 00:00 tournoi = 1
+                    diff = aujourdhui.getTime() - DateRef.getTime();
+                    diff =diff/86400000 // en jour
+                    diff =Math.floor(diff/7) // nombre de semaine depuis
 
-
+                    NumTournoi=Math.floor(((diff/63)-Math.floor(diff/63))*10)-1
+               }
 </script >
 
 
@@ -1406,6 +1424,7 @@
 <div id="Confirm"  style="visibility:hidden;font-Size:0;display:inline-block;"></div>
 <div id="nom"  style="visibility:visible;color:transparent;font-size:0;"  ></div>
 <div id="son"  style="visibility:hidden;color:transparent;font-size:0;" >1</div>
+<div id="LoadOff"  style="visibility:hidden;color:transparent;font-size:0;" >0</div>
 <audio  id="MonSon" src="Image/Son.wav"></audio>
 
 
@@ -1853,7 +1872,7 @@
                 <Br>
                 <img alt="Points de vie" src="https://fr.wiki.elvenar.com/images/2/2e/Hitpoints.png" decoding="async" width="20" height="20" />
                 <strong>Points de vie :</strong> Points de vie par unité.
-                <img alt="Portée d’attaque" src="https://fr.wiki.elvenar.com/images/c/cc/Attack_range.png" decoding="async" width="20" height="20" />
+                <Br><img alt="Portée d’attaque" src="https://fr.wiki.elvenar.com/images/c/cc/Attack_range.png" decoding="async" width="20" height="20" />
                 <strong>Portée d’attaque :</strong> C’est la distance maximale que l’attaque d’une unité peut atteindre.
                 <Br>
                 <img alt="Distance de déplacement" src="https://fr.wiki.elvenar.com/images/c/c0/Move_range.png" decoding="async" width="20" height="20" />
@@ -1880,16 +1899,23 @@
             <div id="Legende1" class="TabGDHB" style="font-size:16px;">
               <div style="display:inline-block;font-size:16px;padding-left: 10px">
                 Même si les terrains sont aléatoires , chaque tournoi possède une typologie de terrain majoritaire:<br>
-                Type REMPART<br>
-                Type PLAINE<br>
-                Type ILOTS<Br>
+                Type REMPART <img  style="height:30px;" src="Image/HexagoneRempart1.png">
+                <img  style="height:30px;" src="Image/HexagoneRempart2.png">
+                <img  style="height:30px;" src="Image/HexagoneRempart3.png"><br>
+                Type PLAINE <img  style="height:30px;" src="Image/Hexagone.png"><br>
+                Type ILOTS <img  style="height:30px;" src="Image/HexagoneILOT1.png">
+                <img  style="height:30px;" src="Image/HexagoneILOT2.png">
+                <img  style="height:30px;" src="Image/HexagoneILOT3.png">
+                <br>
                 La connaissance au préalable du terrain permet de choisir quelles troupes préparer, de comprendre les echecs en automatique.<Br>
-                Une bonne technique en manuel pour reconnaitre le terrain consiste à envoyer dans un premier tou 1 seul archer ou ranger ou treant.<Br>
+                Une bonne technique en manuel pour reconnaitre le terrain consiste à envoyer dans un premier tour 1 seul archer ou ranger ou treant ; puis d abandonner.<Br>
                 <Br>
+                <img  style="height:30px;" src="https://cdn-icons-png.flaticon.com/512/1093/1093269.png">
+                <img  style="height:30px;" src="https://cdn-icons-png.flaticon.com/512/6471/6471690.png">
                 L algorithme automatique consiste à faire avancer les troupes et à attaquer tout ce qui est à portée ; même si c est suicidaire<Br>
-                Certain combat en auto sont impossible et ne génère aucune perte en manuel<Br>
+                Certains combats en auto sont impossible et ne génère aucune perte en manuel<Br>
                 Les pertes en auto sont au minimum de 50% supérieures au manuel<Br>
-                Certaines unités : tréant, Orc, Vallorien ne servent quasi jamais en manuel et la merveille forge des héros très peu utiles
+                Certaines unités : tréant, Orc, Vallorien ne servent quasi jamais en manuel et la merveille forge des héros très peu utile.
 
 
 
