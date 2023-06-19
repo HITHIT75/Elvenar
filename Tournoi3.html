@@ -100,26 +100,48 @@
          }
       }
   function checkCookie2() {
-          //document.getElementById("Chaine").innerHTML=  "attente cookie"
+
             let username = getCookie('Ecran');
-            alert("lecture cook2 Ecran =" + username)
             if (username != "") {
-             //alert("Welcome again " + username);
-             Genre =username.substring(0,1)
+                         Genre =username.substring(0,1)
              Manuel=username.substring(2)
-             document.getElementById("GenreShow").innerTxt=  Genre
-             document.getElementById("ManuelShow").innerTxt=  Manuel
+             
               if (Genre==0) {
-                handleChange()
+                document.getElementById("Mili11" ).src="https://fr.wiki.elvenar.com/images/d/df/Hb_lm_1_big.png";
+                document.getElementById("Mili12" ).src="https://fr.wiki.elvenar.com/images/e/e3/Hb_lr_1_big.png";
+                document.getElementById("Mili13" ).src="https://fr.wiki.elvenar.com/images/e/ed/Hb_ma_1_big.png";
+                document.getElementById("Mili14" ).src="https://fr.wiki.elvenar.com/images/6/6f/Hb_hm_1_big.png";
+                document.getElementById("Mili15" ).src="https://fr.wiki.elvenar.com/images/9/9f/Hb_hr_1_big.png";
+
+                document.getElementById("Genre1b" ).style.backgroundColor="#F7A63D"
+                document.getElementById("Genre2" ).style.backgroundColor=""
+
+                document.getElementById("Homme").classList.toggle("down")
+                document.getElementById("GenreShow").innerHTML = "0";
               }
               else {
-                handleChange2()
+                document.getElementById("Mili11" ).src="https://fr.wiki.elvenar.com/images/d/df/Eb_lm_1_big.png";
+                document.getElementById("Mili12" ).src="https://fr.wiki.elvenar.com/images/4/49/Eb_lr_1_big.png";
+                document.getElementById("Mili13" ).src="https://fr.wiki.elvenar.com/images/a/a2/Eb_ma_1_big.png";
+                document.getElementById("Mili14" ).src="https://fr.wiki.elvenar.com/images/8/83/Eb_hm_1_big.png";
+                document.getElementById("Mili15" ).src="https://fr.wiki.elvenar.com/images/1/1f/Eb_hr_1_big.png";
+
+                document.getElementById("Genre2" ).style.backgroundColor="#F7A63D"
+                document.getElementById("Genre1b" ).style.backgroundColor=""
+                document.getElementById("Elfe").classList.toggle("down")
+                document.getElementById("GenreShow").innerHTML = "1";
               }
               if (Manuel==0) {
-                handleChange2b()
+                document.getElementById("Manu1b" ).style.backgroundColor="#F7A63D"
+                document.getElementById("Manu2" ).style.backgroundColor=""
+                document.getElementById("ManuelShow").innerHTML = "0";
+                document.getElementById("Manu").classList.toggle("down")
               }
               else {
-                handleChangeb()
+                document.getElementById("Manu2").style.backgroundColor="#F7A63D"
+                document.getElementById("Manu1b" ).style.backgroundColor=""
+                document.getElementById("ManuelShow").innerHTML = "1";
+                document.getElementById("Auto").classList.toggle("down")
               }
 
             }
@@ -917,7 +939,6 @@
   }
 
     function handleChange() {
-          //document.getElementById("Mili10" ).innerHTML = "Caserne elfoide";
           document.getElementById("Mili11" ).src="https://fr.wiki.elvenar.com/images/d/df/Eb_lm_1_big.png";
           document.getElementById("Mili12" ).src="https://fr.wiki.elvenar.com/images/4/49/Eb_lr_1_big.png";
           document.getElementById("Mili13" ).src="https://fr.wiki.elvenar.com/images/a/a2/Eb_ma_1_big.png";
@@ -925,46 +946,43 @@
           document.getElementById("Mili15" ).src="https://fr.wiki.elvenar.com/images/1/1f/Eb_hr_1_big.png";
 
           document.getElementById("Genre2" ).style.backgroundColor="#F7A63D"
-        //  document.getElementById("Genre2b" ).style.backgroundColor="#F7A63D"
-        //  document.getElementById("Genre1" ).style.backgroundColor=""
           document.getElementById("Genre1b" ).style.backgroundColor=""
-          document.getElementById("GenreShow").innerHTML = "0";
-          Données()
+          document.getElementById("Elfe").classList.toggle("down")
+          document.getElementById("GenreShow").innerHTML = "1";
+          //Données()
           EcrireCook2()
         }
 
     function handleChange2() {
-            //document.getElementById("Mili10" ).innerHTML = "Caserne humainoide";
+
             document.getElementById("Mili11" ).src="https://fr.wiki.elvenar.com/images/d/df/Hb_lm_1_big.png";
             document.getElementById("Mili12" ).src="https://fr.wiki.elvenar.com/images/e/e3/Hb_lr_1_big.png";
             document.getElementById("Mili13" ).src="https://fr.wiki.elvenar.com/images/e/ed/Hb_ma_1_big.png";
             document.getElementById("Mili14" ).src="https://fr.wiki.elvenar.com/images/6/6f/Hb_hm_1_big.png";
             document.getElementById("Mili15" ).src="https://fr.wiki.elvenar.com/images/9/9f/Hb_hr_1_big.png";
 
-          //  document.getElementById("Genre1" ).style.backgroundColor="#F7A63D"
             document.getElementById("Genre1b" ).style.backgroundColor="#F7A63D"
             document.getElementById("Genre2" ).style.backgroundColor=""
-          //  document.getElementById("Genre2b" ).style.backgroundColor=""
-            document.getElementById("GenreShow").innerHTML = "1";
-            Données()
+
+            document.getElementById("Homme").classList.toggle("down")
+            document.getElementById("GenreShow").innerHTML = "0";
+            //Données()
             EcrireCook2()
         }
     function handleChange2b() {
-        //document.getElementById("Manu1" ).style.backgroundColor="#F7A63D"
         document.getElementById("Manu1b" ).style.backgroundColor="#F7A63D"
         document.getElementById("Manu2" ).style.backgroundColor=""
-        //document.getElementById("Manu2b" ).style.backgroundColor=""
         document.getElementById("ManuelShow").innerHTML = "0";
-        Données()
+        document.getElementById("Manu").classList.toggle("down")
+        //Données()
         EcrireCook2()
       }
     function handleChangeb() {
-        document.getElementById("Manu2" ).style.backgroundColor="#F7A63D"
-        //document.getElementById("Manu2b" ).style.backgroundColor="#F7A63D"
-        //document.getElementById("Manu1" ).style.backgroundColor=""
+        document.getElementById("Manu2").style.backgroundColor="#F7A63D"
         document.getElementById("Manu1b" ).style.backgroundColor=""
         document.getElementById("ManuelShow").innerHTML = "1";
-        Données()
+        document.getElementById("Auto").classList.toggle("down")
+        //Données()
         EcrireCook2()
         }
     function handleChangeAll(Num, Vecteur) {
@@ -1324,6 +1342,28 @@
         }
         .CellWithComment:hover span.CellComment {visibility: visible;opacity: 1;}
 
+        .AideTounoi1:hover {
+            animation: rotation 6s infinite linear;
+          }
+        @keyframes rotation {
+            from {
+              transform: rotate(0deg);
+            }
+            to {
+              transform: rotate(359deg);
+            }
+          }
+
+          .rotate {
+              -moz-transition: all .5s linear;
+              -webkit-transition: all .5s linear;
+              transition: all .5s linear;
+          }
+          .down {
+              -moz-transform:rotate(360deg);
+              -webkit-transform:rotate(360deg);
+              transform:rotate(360deg);
+          }
 </style>
 </head>
 <body onload="Debut()">
@@ -1345,12 +1385,12 @@
       <tr>
 
             <td class="CellWithComment" id="Genre1b" style="width: 20%;;background-color:#F7A63D;cursor:pointer;" onclick="handleChange2();">
-              <img style="height:50px" src="Image/TournoiHumain.png">
+              <img class ="rotate" id="Homme" style="height:50px" src="Image/TournoiHumain.png">
               <span class="CellComment">Je suis humanoide</span>
             </td>
 
           <td class="CellWithComment" id="Genre2"  style="width: 20%; background-color:;cursor:pointer;" onclick="handleChange();">
-            <img style="height:50px" src="Image/TournoiElfe.png">
+            <img class ="rotate" id="Elfe" style="height:50px" src="Image/TournoiElfe.png">
               <span class="CellComment">Je suis elfoide</span>
           </td>
         <td rowspan="6" style="text-align:left;">
@@ -1364,11 +1404,11 @@
       <tr >
 
         <td class="CellWithComment"   id="Manu1b"   style="width: 20%; background-color:#F7A63D;cursor:pointer;" onclick="handleChange2b();">
-          <img style="height:50px" src="https://cdn-icons-png.flaticon.com/512/1093/1093269.png">
+          <img class ="rotate" id="Manu" style="height:50px" src="https://cdn-icons-png.flaticon.com/512/1093/1093269.png">
           <span class="CellComment">Je joue en manuel</span>
         </td>
         <td class="CellWithComment"   id="Manu2"   style="width: 20%; background-color;cursor:pointer;:" onclick="handleChangeb();">
-          <img style="height:50px" src="https://cdn-icons-png.flaticon.com/512/6471/6471690.png">
+          <img class ="rotate" id="Auto"  style="height:50px" src="https://cdn-icons-png.flaticon.com/512/6471/6471690.png">
           <span class="CellComment">Je joue en automatique</span>
         </td>
         <td></td>
@@ -1383,10 +1423,10 @@
         <tr style="text-align:center;border: 2px solid green;" >
         <td rowspan="3">
           <div onmouseover="Legender1()" onmouseout="LegenderOff()" style="text-align:center;cursor:pointer;">
-            <img width='45px' src='Image/AideTounoi1.png'>
+            <img class ="AideTounoi1" width='45px' src='Image/AideTounoi1.png'>
           </div>
           <div onmouseover="Legender2()" onmouseout="LegenderOff()" style="text-align:center;cursor:pointer;">
-            <img width='45px' src='Image/AideTounoi2.png'>
+            <img class ="AideTounoi1" width='45px' src='Image/AideTounoi2.png'>
           </div>
 
         </td>
@@ -1774,7 +1814,7 @@
         <table style="margin-left: auto; margin-right: auto;border-collapse;border-spacing : 0;">
         <tr>
           <TD style="width:1500px;">
-            <div id="Legende1" class="TabGDHB" style="font-size:16px;">
+            <div id="Legende1" class="TabGDHB" style="font-size:16px;padding-left: 10px">
               Survoler une unité pour avoir plus d informations.<br>
               Recommandées pour le rapport de force: <img style="width:15px;" src="Image/LegendeRondRouge.png">
               , pour l avantage terrain: <img style="width:15px;" src="Image/Hexagone.png">
@@ -1809,10 +1849,21 @@
         <tr>
           <TD style="width:1500px;">
             <div id="Legende1" class="TabGDHB" style="font-size:16px;">
-              <div style="display:inline-block;font-size:16px;">
-                deuxieme
+              <div style="display:inline-block;font-size:16px;padding-left: 10px">
+                Même si les terrains sont aléatoires , chaque tournoi possède une typologie de terrain majoritaire:<br>
+                Type REMPART<br>
+                Type PLAINE<br>
+                Type ILOTS<Br>
+                La connaissance au préalable du terrain permet de choisir quelles troupes préparer, de comprendre les echecs en automatique.<Br>
+                Une bonne technique en manuel pour reconnaitre le terrain consiste à envoyer dans un premier tou 1 seul archer ou ranger ou treant.<Br>
                 <Br>
-                aide
+                L algorithme automatique consiste à faire avancer les troupes et à attaquer tout ce qui est à portée ; même si c est suicidaire<Br>
+                Certain combat en auto sont impossible et ne génère aucune perte en manuel<Br>
+                Les pertes en auto sont au minimum de 50% supérieures au manuel<Br>
+                Certaines unités : tréant, Orc, Vallorien ne servent quasi jamais en manuel et la merveille forge des héros très peu utiles
+
+
+
               </div>
             </div>
           </TD>
