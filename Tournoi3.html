@@ -104,8 +104,9 @@
         }
          else {
            //document.getElementById("Chaine2").innerTxt=  ""
-           document.getElementById("InfoPerso").value=  username
+           document.getElementById("InfoPerso").value=  "RAS"
          }
+         alert("sortie cook0   =" )
       }
   function checkCookie2() {
           alert("dans chekc  cook2 demande ecran")
@@ -421,7 +422,7 @@
   function Données() {
 
     TypeTournoi=document.getElementById("TournoiShow").innerHTML
-    alert("dans donnes() tournoi=" + TypeTournoi)
+    //alert("dans donnes() tournoi=" + TypeTournoi)
       if (TypeTournoi==="Marbre") {
           //  alert(TypeTournoi)
         NbEtoileDifficulté = 1
@@ -731,7 +732,7 @@
                         PorteeLourdeCamp ="1,1,0"
                       }
 
-      alert("dans donnes() terrain" )
+      //alert("dans donnes() terrain" )
       if (NatureTerrain==="") {
                   document.getElementById("CommentMap").innerHTML="A venir"
                 }
@@ -756,7 +757,7 @@
                           else {
                                       document.getElementById("Map3").src=Image3Terrain
                                     }
-    alert("dans donnes() reduction terrain" )
+    //alert("dans donnes() reduction terrain" )
     if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
       document.getElementById("Map1").style="width:30px;"
       document.getElementById("Map2").style="width:30px;"
@@ -769,7 +770,7 @@
 
     }
 
-    alert("dans donnes() dbt calcul histo" )
+    //alert("dans donnes() dbt calcul histo" )
     Haut1=200*MeleeLegereEnnemie/100
     Haut2=200*PorteeLegereEnnemie/100
     Haut3=200*MagiqueEnnemie/100
@@ -785,7 +786,7 @@
     document.getElementById("Carre3").style.height=Haut3+"px"
     document.getElementById("Carre4").style.height=Haut4+"px"
     document.getElementById("Carre5").style.height=Haut5+"px"
-    alert("dans donnes() fin calcul histo" )
+    //alert("dans donnes() fin calcul histo" )
 
 
 
@@ -897,8 +898,8 @@
     Uniter()
     //    <td style="border: 2px solid red;" id="Milit11"><img  id="Mili11" style="width:50px;border: 2px solid black;"
     //TypeDeTournoi=  document.getElementById("TournoiShow").innerHTML
-    alert("dans donnes() fin unité avant cookie" + TypeDeTournoi)
-    checkCookie(TypeDeTournoi)
+    alert("dans donnes() fin unité avant cookie en pausee" + TypeDeTournoi)
+    //checkCookie(TypeDeTournoi)
 
   }
   function Uniter() {
