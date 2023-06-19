@@ -34,10 +34,13 @@
 
 
     document.getElementById("TournoiShow").innerHTML=TypeDeTournoi
-    document.getElementById("ManuelShow").innerHTML=0
+    param1 = getParamValue('nom');
+    document.getElementById("nom").innerHTML=param1
+    param2 = getParamValue('son');
+    document.getElementById("son").innerHTML=param2
     //MenuShort()
-    handleChange2()
-    handleChange2b()
+    //handleChange2()
+    //handleChange2b()
     handleChangeAll(NumeroTournoi,"de " + TypeDeTournoi)
     checkCookie(TypeDeTournoi)
     checkCookie2()
@@ -939,6 +942,7 @@
   }
 
     function handleChange() {
+        JouerSon(1)
           document.getElementById("Mili11" ).src="https://fr.wiki.elvenar.com/images/d/df/Eb_lm_1_big.png";
           document.getElementById("Mili12" ).src="https://fr.wiki.elvenar.com/images/4/49/Eb_lr_1_big.png";
           document.getElementById("Mili13" ).src="https://fr.wiki.elvenar.com/images/a/a2/Eb_ma_1_big.png";
@@ -954,7 +958,7 @@
         }
 
     function handleChange2() {
-
+            JouerSon(1)
             document.getElementById("Mili11" ).src="https://fr.wiki.elvenar.com/images/d/df/Hb_lm_1_big.png";
             document.getElementById("Mili12" ).src="https://fr.wiki.elvenar.com/images/e/e3/Hb_lr_1_big.png";
             document.getElementById("Mili13" ).src="https://fr.wiki.elvenar.com/images/e/ed/Hb_ma_1_big.png";
@@ -970,6 +974,7 @@
             //EcrireCook2()
         }
     function handleChange2b() {
+      JouerSon(1)
         document.getElementById("Manu1b" ).style.backgroundColor="#F7A63D"
         document.getElementById("Manu2" ).style.backgroundColor=""
         document.getElementById("ManuelShow").innerHTML = "0";
@@ -978,6 +983,7 @@
         //EcrireCook2()
       }
     function handleChangeb() {
+      JouerSon(1)
         document.getElementById("Manu2").style.backgroundColor="#F7A63D"
         document.getElementById("Manu1b" ).style.backgroundColor=""
         document.getElementById("ManuelShow").innerHTML = "1";
@@ -986,6 +992,7 @@
         //EcrireCook2()
         }
     function handleChangeAll(Num, Vecteur) {
+      JouerSon(1)
           Res=document.getElementById("Tournoi").innerHTML
            document.getElementById("MenuB" + Res).style.backgroundColor=""
            document.getElementById("MenuA" + Res).style.backgroundColor=""
@@ -1027,20 +1034,18 @@
             document.getElementById("Table1").style.display ="block"
             document.getElementById("Table2").style.display ="none"
       }
-      function Legender2() {
+    function Legender2() {
         document.getElementById("LegendeShow").innerHTML=2
               document.getElementById("Table0").style.display ="none"
               document.getElementById("Table2").style.display ="block"
               document.getElementById("Table1").style.display ="none"
         }
-        function LegenderOff() {
+    function LegenderOff() {
           document.getElementById("LegendeShow").innerHTML=0
                 document.getElementById("Table0").style.display ="block"
                 document.getElementById("Table2").style.display ="none"
                 document.getElementById("Table1").style.display ="none"
           }
-
-
 
     function handleChangeR1() {
             handleChangeAll(1,"de Marbre")
@@ -1087,9 +1092,8 @@
             document.getElementById("TournoiShow").innerHTML="Gemmes"
                       Données()
                                   }
-
-
     function CacherMenu() {
+        JouerSon(1)
           passage=0
           document.getElementById("MenuA1").classList.toggle("MenuGI");
           document.getElementById("MenuB1").classList.toggle("MenuGI");
@@ -1111,7 +1115,6 @@
           document.getElementById("MenuB9").classList.toggle("MenuGI");
           document.getElementById("TriangleMenuG").classList.toggle("TriangleMenuGI");
         }
-
     function ShowForce(Num) {
 
 
@@ -1183,6 +1186,28 @@
       }
 
     }
+    function getParamValue(paramName)			{
+  			    var url = window.location.search.substring(1); //get rid of "?" in querystring
+  			    var qArray = url.split('&'); //get key-value pairs
+  			    for (var i = 0; i < qArray.length; i++)
+  			    {
+  			        var pArr = qArray[i].split('='); //split key and value
+  			        if (pArr[0] == paramName)
+  			            return pArr[1]; //return value
+  			    }
+  			}
+      function JouerSon(Num) {
+              Ecouter = document.getElementById("son").innerHTML
+             if (Ecouter==1) {
+                if (Num==1) {
+                    var sound = document.getElementById("MonSon");
+                }
+                if (Num==2) {
+                    var sound = document.getElementById("MonSonOuverture");
+                }
+                 sound.play();}
+               }
+
 
 </script >
 
@@ -1379,6 +1404,10 @@
 <div id="Chaine1"  style="visibility:hidden;font-Size:0;display:inline-block;"></div>
 <div id="Chaine2"  style="visibility:hidden;font-Size:0;display:inline-block;"></div>
 <div id="Confirm"  style="visibility:hidden;font-Size:0;display:inline-block;"></div>
+<div id="nom"  style="visibility:visible;color:transparent;font-size:0;"  ></div>
+<div id="son"  style="visibility:hidden;color:transparent;font-size:0;" >1</div>
+<audio  id="MonSon" src="Image/Son.wav"></audio>
+
 
   <header>
     <table style="margin-left: 0px; margin-right: auto;border-collapse;border-spacing : 0;width: 40%">
@@ -1901,7 +1930,7 @@
         <tr>
           <td  onclick="handleChangeR5();" class="MenuG" id="MenuA5"    style="border-left: 4px solid green;"><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/3/3d/Good_scrolls_big.png"></td>
           <td  onclick="handleChangeR5();" class="MenuG"  id="MenuB5"  style="border-right: 4px solid green;">Parchemins</td>
-          <td><Div class="TriangleMenuG" id="TriangleMenuG" onclick="CacherMenu()" style="height:50px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
+          <td><Div class="TriangleMenuG" id="TriangleMenuG" onclick="CacherMenu()" style="height:50px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
         </div>
         </tr>
         <tr>
