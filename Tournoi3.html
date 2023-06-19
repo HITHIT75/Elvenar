@@ -93,13 +93,14 @@
       }
 
   function checkCookie(Cible) {
+        alert("cook0 recherche de =" + Cible)
         username=""
         let username = getCookie(Cible);
         if (username != "") {
-
+          alert("cook0 note loadé  =" + username)
 
          document.getElementById("InfoPerso").value=  username
-         alert("cook0 note loadé  =" + Cible)
+
         }
          else {
            //document.getElementById("Chaine2").innerTxt=  ""
@@ -420,7 +421,7 @@
   function Données() {
 
     TypeTournoi=document.getElementById("TournoiShow").innerHTML
-    //alert(document.getElementById("ManuelShow").innerHTML)
+    alert("dans donnes() tournoi=" + TypeTournoi)
       if (TypeTournoi==="Marbre") {
           //  alert(TypeTournoi)
         NbEtoileDifficulté = 1
@@ -456,281 +457,281 @@
           MeleeLourdeCamp ="0,0,0"
           PorteeLourdeCamp ="0,0,0"
       }
-      if (TypeTournoi==="Acier") {
-        NbEtoileDifficulté = 2
-        Commentaire ="Tournoi d'archer, prioriser les ranger pour leur initiative et leur portée"
-        Conseil ="Poser les boost portée légère, déchaînement et armurier nain"
-        NatureTerrain=""
-        Image1Terrain=""
-        Image2Terrain=""
-        Image3Terrain=""
-
-        MeleeLegereEnnemie =10 // total des chiffre=100
-        PorteeLegereEnnemie =10 //
-        MagiqueEnnemie =70 //
-        MeleeLourdeEnnemie =5 //
-        PorteeLourdeEnnemie =5 //
-
-
-        MeleeLegereCaserne ="0,0,0" // 0 = pas recommandé  1 = recommandé   dans  l ordre  "manuel,auto,terrain"
-        PorteeLegereCaserne ="0,1,0"
-        MagiqueCaserne ="0,1,0"
-        MeleeLourdeCaserne ="0,0,0"
-        PorteeLourdeCaserne ="1,1,0"
-
-        MeleeLegereTerrain ="0,0,0"
-        PorteeLegereTerrain ="1,1,0"
-        MagiqueTerrain ="0,1,0"
-        MeleeLourdeTerrain ="0,0,0"
-        PorteeLourdeTerrain ="0,0,0"
-
-        MeleeLegereCamp ="0,0,0"
-        PorteeLegereCamp ="1,1,0"
-        MagiqueCamp ="0,1,0"
-        MeleeLourdeCamp ="0,0,0"
-        PorteeLourdeCamp ="1,1,0"
-        }
-      if (TypeTournoi==="Planches") {
-          NbEtoileDifficulté = 4
-          Commentaire ="Tournoi assez difficile avec pas mal de pertes"
-          Conseil ="Poser un boost portée légère et booster les points de vie avec 1/2 armuriers ou 3/4 déchainements"
-          NatureTerrain="Grosse proportion de type PLAINE: favorise les unités à forte résistance et initiative elevée"
+        if (TypeTournoi==="Acier") {
+          NbEtoileDifficulté = 2
+          Commentaire ="Tournoi d'archer, prioriser les ranger pour leur initiative et leur portée"
+          Conseil ="Poser les boost portée légère, déchaînement et armurier nain"
+          NatureTerrain=""
           Image1Terrain=""
           Image2Terrain=""
-          Image2Terrain=""
+          Image3Terrain=""
+
+          MeleeLegereEnnemie =10 // total des chiffre=100
+          PorteeLegereEnnemie =10 //
+          MagiqueEnnemie =70 //
+          MeleeLourdeEnnemie =5 //
+          PorteeLourdeEnnemie =5 //
 
 
-          MeleeLegereEnnemie =11
-          PorteeLegereEnnemie =60
-          MagiqueEnnemie =8
-          MeleeLourdeEnnemie =11
-          PorteeLourdeEnnemie =10
+          MeleeLegereCaserne ="0,0,0" // 0 = pas recommandé  1 = recommandé   dans  l ordre  "manuel,auto,terrain"
+          PorteeLegereCaserne ="0,1,0"
+          MagiqueCaserne ="0,1,0"
+          MeleeLourdeCaserne ="0,0,0"
+          PorteeLourdeCaserne ="1,1,0"
 
+          MeleeLegereTerrain ="0,0,0"
+          PorteeLegereTerrain ="1,1,0"
+          MagiqueTerrain ="0,1,0"
+          MeleeLourdeTerrain ="0,0,0"
+          PorteeLourdeTerrain ="0,0,0"
 
-        MeleeLegereCaserne ="0,1,0" // 0 = pas recommandé  1 = recommandé   dans  l ordre  "manuel,auto,terrain"
-        PorteeLegereCaserne ="0,0,0"
-        MagiqueCaserne ="0,0,0"
-        MeleeLourdeCaserne ="0,0,0"
-        PorteeLourdeCaserne ="1,1,0"
-
-        MeleeLegereTerrain ="0,0,0"
-        PorteeLegereTerrain ="1,1,0"
-        MagiqueTerrain ="0,0,0"
-        MeleeLourdeTerrain ="0,0,0"
-        PorteeLourdeTerrain ="1,1,0"
-
-        MeleeLegereCamp ="0,1,0"
-        PorteeLegereCamp ="1,1,0"
-        MagiqueCamp ="0,0,0"
-        MeleeLourdeCamp ="0,0,0"
-        PorteeLourdeCamp ="1,1,0"
-        }
-      if (TypeTournoi==="Cristal") {
-            NbEtoileDifficulté = 3
-            Commentaire ="Produire principalement des mages"
-            Conseil ="Poser un boost mage et équitablement boost déchaînement/armurier nain"
-            NatureTerrain="Grosse proportionde type REMPART: favorise les untés longue portée (grenouille/mage fleuri/archer)"
-            Image1Terrain="Image/HexagoneRempart1.png"
-            Image2Terrain="Image/HexagoneRempart2.png"
-            Image3Terrain="Image/HexagoneRempart3.png"
-
-            MeleeLegereEnnemie =10
-            PorteeLegereEnnemie =8
-            MagiqueEnnemie =38
-            MeleeLourdeEnnemie =8
-            PorteeLourdeEnnemie =36
-
-
-            MeleeLegereCaserne ="0,0,0" // 0 = pas recommandé  1 = recommandé   dans  l ordre  "manuel,auto,terrain"
-            PorteeLegereCaserne ="0,1,1"
-            MagiqueCaserne ="0,1,0"
-            MeleeLourdeCaserne ="0,0,0"
-            PorteeLourdeCaserne ="1,0,0"
-
-            MeleeLegereTerrain ="0,1,0"
-            PorteeLegereTerrain ="0,0,0"
-            MagiqueTerrain ="1,1,0"
-            MeleeLourdeTerrain ="0,0,0"
-            PorteeLourdeTerrain ="1,0,0"
-
-            MeleeLegereCamp ="0,0,0"
-            PorteeLegereCamp ="0,1,0"
-            MagiqueCamp ="1,1,1"
-            MeleeLourdeCamp ="0,1,0"
-            PorteeLourdeCamp ="1,0,1"
+          MeleeLegereCamp ="0,0,0"
+          PorteeLegereCamp ="1,1,0"
+          MagiqueCamp ="0,1,0"
+          MeleeLourdeCamp ="0,0,0"
+          PorteeLourdeCamp ="1,1,0"
           }
-      if (TypeTournoi==="Parchemins") {
-              NbEtoileDifficulté = 5
-              Commentaire ="Tournoi difficile avec beaucoup de pertes. Prioriser les ranger"
-              Conseil ="Bien booster les points de vie avec déchaînement et armurier nain"
-              NatureTerrain=""
-              Image1Terrain=""
-              Image2Terrain=""
-              Image3Terrain=""
-
-              MeleeLegereEnnemie =7
-              PorteeLegereEnnemie =37
-              MagiqueEnnemie =12
-              MeleeLourdeEnnemie =7
-              PorteeLourdeEnnemie =37
+        if (TypeTournoi==="Planches") {
+            NbEtoileDifficulté = 4
+            Commentaire ="Tournoi assez difficile avec pas mal de pertes"
+            Conseil ="Poser un boost portée légère et booster les points de vie avec 1/2 armuriers ou 3/4 déchainements"
+            NatureTerrain="Grosse proportion de type PLAINE: favorise les unités à forte résistance et initiative elevée"
+            Image1Terrain=""
+            Image2Terrain=""
+            Image2Terrain=""
 
 
-             MeleeLegereCaserne ="0,0,0" // 0 = pas recommandé  1 = recommandé   dans  l ordre  "manuel,auto,terrain"
-             PorteeLegereCaserne ="0,0,0"
-             MagiqueCaserne ="0,1,0"
-             MeleeLourdeCaserne ="0,1,0"
-             PorteeLourdeCaserne ="1,1,0"
+            MeleeLegereEnnemie =11
+            PorteeLegereEnnemie =60
+            MagiqueEnnemie =8
+            MeleeLourdeEnnemie =11
+            PorteeLourdeEnnemie =10
 
-             MeleeLegereTerrain ="0,0,0"
-             PorteeLegereTerrain ="0,0,0"
-             MagiqueTerrain ="1,1,0"
-             MeleeLourdeTerrain ="0,0,0"
-             PorteeLourdeTerrain ="0,1,0"
 
-             MeleeLegereCamp ="0,1,0"
-             PorteeLegereCamp ="1,1,0"
-             MagiqueCamp ="1,0,0"
-             MeleeLourdeCamp ="0,1,0"
-             PorteeLourdeCamp ="1,0,0"
+          MeleeLegereCaserne ="0,1,0" // 0 = pas recommandé  1 = recommandé   dans  l ordre  "manuel,auto,terrain"
+          PorteeLegereCaserne ="0,0,0"
+          MagiqueCaserne ="0,0,0"
+          MeleeLourdeCaserne ="0,0,0"
+          PorteeLourdeCaserne ="1,1,0"
+
+          MeleeLegereTerrain ="0,0,0"
+          PorteeLegereTerrain ="1,1,0"
+          MagiqueTerrain ="0,0,0"
+          MeleeLourdeTerrain ="0,0,0"
+          PorteeLourdeTerrain ="1,1,0"
+
+          MeleeLegereCamp ="0,1,0"
+          PorteeLegereCamp ="1,1,0"
+          MagiqueCamp ="0,0,0"
+          MeleeLourdeCamp ="0,0,0"
+          PorteeLourdeCamp ="1,1,0"
+          }
+        if (TypeTournoi==="Cristal") {
+              NbEtoileDifficulté = 3
+              Commentaire ="Produire principalement des mages"
+              Conseil ="Poser un boost mage et équitablement boost déchaînement/armurier nain"
+              NatureTerrain="Grosse proportionde type REMPART: favorise les untés longue portée (grenouille/mage fleuri/archer)"
+              Image1Terrain="Image/HexagoneRempart1.png"
+              Image2Terrain="Image/HexagoneRempart2.png"
+              Image3Terrain="Image/HexagoneRempart3.png"
+
+              MeleeLegereEnnemie =10
+              PorteeLegereEnnemie =8
+              MagiqueEnnemie =38
+              MeleeLourdeEnnemie =8
+              PorteeLourdeEnnemie =36
+
+
+              MeleeLegereCaserne ="0,0,0" // 0 = pas recommandé  1 = recommandé   dans  l ordre  "manuel,auto,terrain"
+              PorteeLegereCaserne ="0,1,1"
+              MagiqueCaserne ="0,1,0"
+              MeleeLourdeCaserne ="0,0,0"
+              PorteeLourdeCaserne ="1,0,0"
+
+              MeleeLegereTerrain ="0,1,0"
+              PorteeLegereTerrain ="0,0,0"
+              MagiqueTerrain ="1,1,0"
+              MeleeLourdeTerrain ="0,0,0"
+              PorteeLourdeTerrain ="1,0,0"
+
+              MeleeLegereCamp ="0,0,0"
+              PorteeLegereCamp ="0,1,0"
+              MagiqueCamp ="1,1,1"
+              MeleeLourdeCamp ="0,1,0"
+              PorteeLourdeCamp ="1,0,1"
             }
-      if (TypeTournoi==="Soie") {
-                NbEtoileDifficulté = 3
-                Commentaire ="Tournoi relativement facile"
-                Conseil ="Poser un boost portée légère et mage. Booster les points de vie avec déchaînement et armurier nain"
+        if (TypeTournoi==="Parchemins") {
+                NbEtoileDifficulté = 5
+                Commentaire ="Tournoi difficile avec beaucoup de pertes. Prioriser les ranger"
+                Conseil ="Bien booster les points de vie avec déchaînement et armurier nain"
                 NatureTerrain=""
                 Image1Terrain=""
                 Image2Terrain=""
                 Image3Terrain=""
 
-                MeleeLegereEnnemie =35
-                PorteeLegereEnnemie =8
-                MagiqueEnnemie =11
-                MeleeLourdeEnnemie =35
-                PorteeLourdeEnnemie =11
+                MeleeLegereEnnemie =7
+                PorteeLegereEnnemie =37
+                MagiqueEnnemie =12
+                MeleeLourdeEnnemie =7
+                PorteeLourdeEnnemie =37
 
 
-                MeleeLegereCaserne ="0,0,0" // 0 = pas recommandé  1 = recommandé   dans  l ordre  "manuel,auto,terrain"
-                PorteeLegereCaserne ="0,1,0"
-                MagiqueCaserne ="0,0,0"
-                MeleeLourdeCaserne ="0,0,0"
-                PorteeLourdeCaserne ="1,1,0"
+               MeleeLegereCaserne ="0,0,0" // 0 = pas recommandé  1 = recommandé   dans  l ordre  "manuel,auto,terrain"
+               PorteeLegereCaserne ="0,0,0"
+               MagiqueCaserne ="0,1,0"
+               MeleeLourdeCaserne ="0,1,0"
+               PorteeLourdeCaserne ="1,1,0"
 
-                MeleeLegereTerrain ="0,0,0"
-                PorteeLegereTerrain ="0,1,0"
-                MagiqueTerrain ="1,0,0"
-                MeleeLourdeTerrain ="0,0,0"
-                PorteeLourdeTerrain ="0,0,0"
+               MeleeLegereTerrain ="0,0,0"
+               PorteeLegereTerrain ="0,0,0"
+               MagiqueTerrain ="1,1,0"
+               MeleeLourdeTerrain ="0,0,0"
+               PorteeLourdeTerrain ="0,1,0"
 
-                MeleeLegereCamp ="0,0,0"
-                PorteeLegereCamp ="1,1,0"
-                MagiqueCamp ="1,1,0"
-                MeleeLourdeCamp ="0,0,0"
-                PorteeLourdeCamp ="1,1,0"
+               MeleeLegereCamp ="0,1,0"
+               PorteeLegereCamp ="1,1,0"
+               MagiqueCamp ="1,0,0"
+               MeleeLourdeCamp ="0,1,0"
+               PorteeLourdeCamp ="1,0,0"
               }
-      if (TypeTournoi==="Elixir") {
+        if (TypeTournoi==="Soie") {
                   NbEtoileDifficulté = 3
-                  Commentaire ="Produire une majorité de portée lourde"
-                  Conseil ="Poser un boost portée légère. Booster les points de vie avec déchaînement et armurier nain"
+                  Commentaire ="Tournoi relativement facile"
+                  Conseil ="Poser un boost portée légère et mage. Booster les points de vie avec déchaînement et armurier nain"
                   NatureTerrain=""
                   Image1Terrain=""
                   Image2Terrain=""
                   Image3Terrain=""
 
-                  MeleeLegereEnnemie =26
-                  PorteeLegereEnnemie =26
-                  MagiqueEnnemie =10
-                  MeleeLourdeEnnemie =28
-                  PorteeLourdeEnnemie =10
+                  MeleeLegereEnnemie =35
+                  PorteeLegereEnnemie =8
+                  MagiqueEnnemie =11
+                  MeleeLourdeEnnemie =35
+                  PorteeLourdeEnnemie =11
 
 
                   MeleeLegereCaserne ="0,0,0" // 0 = pas recommandé  1 = recommandé   dans  l ordre  "manuel,auto,terrain"
                   PorteeLegereCaserne ="0,1,0"
                   MagiqueCaserne ="0,0,0"
-                  MeleeLourdeCaserne ="0,1,0"
+                  MeleeLourdeCaserne ="0,0,0"
                   PorteeLourdeCaserne ="1,1,0"
 
                   MeleeLegereTerrain ="0,0,0"
-                  PorteeLegereTerrain ="1,1,0"
-                  MagiqueTerrain ="0,0,0"
-                  MeleeLourdeTerrain ="0,1,0"
+                  PorteeLegereTerrain ="0,1,0"
+                  MagiqueTerrain ="1,0,0"
+                  MeleeLourdeTerrain ="0,0,0"
                   PorteeLourdeTerrain ="0,0,0"
 
                   MeleeLegereCamp ="0,0,0"
                   PorteeLegereCamp ="1,1,0"
-                  MagiqueCamp ="0,1,0"
+                  MagiqueCamp ="1,1,0"
                   MeleeLourdeCamp ="0,0,0"
                   PorteeLourdeCamp ="1,1,0"
                 }
-      if (TypeTournoi==="Poussiere") {
-                    NbEtoileDifficulté = 5
-                    Commentaire ="Attention aux lourdes pertes sur ce tournoi"
-                    Conseil ="Poser un boost portée légère. Placez plus de bonus points de vie pour encaisser avec des déchaînement et des armuriers nain"
+        if (TypeTournoi==="Elixir") {
+                    NbEtoileDifficulté = 3
+                    Commentaire ="Produire une majorité de portée lourde"
+                    Conseil ="Poser un boost portée légère. Booster les points de vie avec déchaînement et armurier nain"
                     NatureTerrain=""
                     Image1Terrain=""
                     Image2Terrain=""
                     Image3Terrain=""
 
                     MeleeLegereEnnemie =26
-                    PorteeLegereEnnemie =12
-                    MagiqueEnnemie =28
-                    MeleeLourdeEnnemie =6
-                    PorteeLourdeEnnemie =28
+                    PorteeLegereEnnemie =26
+                    MagiqueEnnemie =10
+                    MeleeLourdeEnnemie =28
+                    PorteeLourdeEnnemie =10
 
 
                     MeleeLegereCaserne ="0,0,0" // 0 = pas recommandé  1 = recommandé   dans  l ordre  "manuel,auto,terrain"
-                    PorteeLegereCaserne ="0,0,0"
+                    PorteeLegereCaserne ="0,1,0"
                     MagiqueCaserne ="0,0,0"
-                    MeleeLourdeCaserne ="0,0,0"
+                    MeleeLourdeCaserne ="0,1,0"
                     PorteeLourdeCaserne ="1,1,0"
 
                     MeleeLegereTerrain ="0,0,0"
-                    PorteeLegereTerrain ="0,0,0"
-                    MagiqueTerrain ="1,1,0"
-                    MeleeLourdeTerrain ="0,0,0"
+                    PorteeLegereTerrain ="1,1,0"
+                    MagiqueTerrain ="0,0,0"
+                    MeleeLourdeTerrain ="0,1,0"
                     PorteeLourdeTerrain ="0,0,0"
 
                     MeleeLegereCamp ="0,0,0"
-                    PorteeLegereCamp ="0,0,0"
-                    MagiqueCamp ="1,1,0"
+                    PorteeLegereCamp ="1,1,0"
+                    MagiqueCamp ="0,1,0"
                     MeleeLourdeCamp ="0,0,0"
                     PorteeLourdeCamp ="1,1,0"
                   }
-      if (TypeTournoi==="Gemmes") {
-                      NbEtoileDifficulté = 1
-                      Commentaire ="Le cycle se termine par un tournoi assez simple, bien équilibrer mage/portée lourde"
-                      Conseil ="Poser un boost mage. Booster les points de vie avec déchaînement et armurier nain"
+        if (TypeTournoi==="Poussiere") {
+                      NbEtoileDifficulté = 5
+                      Commentaire ="Attention aux lourdes pertes sur ce tournoi"
+                      Conseil ="Poser un boost portée légère. Placez plus de bonus points de vie pour encaisser avec des déchaînement et des armuriers nain"
                       NatureTerrain=""
                       Image1Terrain=""
                       Image2Terrain=""
                       Image3Terrain=""
 
-                      MeleeLegereEnnemie =24
+                      MeleeLegereEnnemie =26
                       PorteeLegereEnnemie =12
-                      MagiqueEnnemie =8
-                      MeleeLourdeEnnemie =28
+                      MagiqueEnnemie =28
+                      MeleeLourdeEnnemie =6
                       PorteeLourdeEnnemie =28
 
 
-                      MeleeLegereCaserne ="0,0,1"
-                      PorteeLegereCaserne ="0,1,1"
+                      MeleeLegereCaserne ="0,0,0" // 0 = pas recommandé  1 = recommandé   dans  l ordre  "manuel,auto,terrain"
+                      PorteeLegereCaserne ="0,0,0"
                       MagiqueCaserne ="0,0,0"
-                      MeleeLourdeCaserne ="0,1,0"
-                      PorteeLourdeCaserne ="1,1,1"
+                      MeleeLourdeCaserne ="0,0,0"
+                      PorteeLourdeCaserne ="1,1,0"
 
                       MeleeLegereTerrain ="0,0,0"
-                      PorteeLegereTerrain ="0,1,1"
+                      PorteeLegereTerrain ="0,0,0"
                       MagiqueTerrain ="1,1,0"
-                      MeleeLourdeTerrain ="0,1,0"
+                      MeleeLourdeTerrain ="0,0,0"
                       PorteeLourdeTerrain ="0,0,0"
 
                       MeleeLegereCamp ="0,0,0"
-                      PorteeLegereCamp ="0,1,0"
+                      PorteeLegereCamp ="0,0,0"
                       MagiqueCamp ="1,1,0"
                       MeleeLourdeCamp ="0,0,0"
                       PorteeLourdeCamp ="1,1,0"
                     }
+        if (TypeTournoi==="Gemmes") {
+                        NbEtoileDifficulté = 1
+                        Commentaire ="Le cycle se termine par un tournoi assez simple, bien équilibrer mage/portée lourde"
+                        Conseil ="Poser un boost mage. Booster les points de vie avec déchaînement et armurier nain"
+                        NatureTerrain=""
+                        Image1Terrain=""
+                        Image2Terrain=""
+                        Image3Terrain=""
+
+                        MeleeLegereEnnemie =24
+                        PorteeLegereEnnemie =12
+                        MagiqueEnnemie =8
+                        MeleeLourdeEnnemie =28
+                        PorteeLourdeEnnemie =28
 
 
+                        MeleeLegereCaserne ="0,0,1"
+                        PorteeLegereCaserne ="0,1,1"
+                        MagiqueCaserne ="0,0,0"
+                        MeleeLourdeCaserne ="0,1,0"
+                        PorteeLourdeCaserne ="1,1,1"
+
+                        MeleeLegereTerrain ="0,0,0"
+                        PorteeLegereTerrain ="0,1,1"
+                        MagiqueTerrain ="1,1,0"
+                        MeleeLourdeTerrain ="0,1,0"
+                        PorteeLourdeTerrain ="0,0,0"
+
+                        MeleeLegereCamp ="0,0,0"
+                        PorteeLegereCamp ="0,1,0"
+                        MagiqueCamp ="1,1,0"
+                        MeleeLourdeCamp ="0,0,0"
+                        PorteeLourdeCamp ="1,1,0"
+                      }
+
+      alert("dans donnes() terrain" )
       if (NatureTerrain==="") {
                   document.getElementById("CommentMap").innerHTML="A venir"
                 }
@@ -755,6 +756,7 @@
                           else {
                                       document.getElementById("Map3").src=Image3Terrain
                                     }
+    alert("dans donnes() reduction terrain" )
     if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
       document.getElementById("Map1").style="width:30px;"
       document.getElementById("Map2").style="width:30px;"
@@ -767,6 +769,7 @@
 
     }
 
+    alert("dans donnes() dbt calcul histo" )
     Haut1=200*MeleeLegereEnnemie/100
     Haut2=200*PorteeLegereEnnemie/100
     Haut3=200*MagiqueEnnemie/100
@@ -782,6 +785,9 @@
     document.getElementById("Carre3").style.height=Haut3+"px"
     document.getElementById("Carre4").style.height=Haut4+"px"
     document.getElementById("Carre5").style.height=Haut5+"px"
+    alert("dans donnes() fin calcul histo" )
+
+
 
     Chaine=""
     for ( i = 0; i < NbEtoileDifficulté; i += 1) {
@@ -890,8 +896,8 @@
       document.getElementById("UnitShow").innerHTML='35'
     Uniter()
     //    <td style="border: 2px solid red;" id="Milit11"><img  id="Mili11" style="width:50px;border: 2px solid black;"
-    TypeDeTournoi=  document.getElementById("TournoiShow").innerHTML
-
+    //TypeDeTournoi=  document.getElementById("TournoiShow").innerHTML
+    alert("dans donnes() fin unité avant cookie" + TypeDeTournoi)
     checkCookie(TypeDeTournoi)
 
   }
@@ -1006,6 +1012,7 @@
         }
     function handleChangeAll(Num, Vecteur) {
       JouerSon(1)
+      alert("debut dans change all")
           Res=document.getElementById("Tournoi").innerHTML
            document.getElementById("MenuB" + Res).style.backgroundColor="#D4BB93"
            document.getElementById("MenuA" + Res).style.backgroundColor="#D4BB93"
@@ -1013,9 +1020,9 @@
             document.getElementById("Tournoi").innerHTML=Num
              document.getElementById("MenuB" + Num).style.backgroundColor="#F7A63D"
              document.getElementById("MenuA" + Num).style.backgroundColor="#F7A63D"
-
+             alert("avant données() dans change all")
              Données()
-
+             alert("après données() dans change all")
              if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
                CacherMenu()
              }
