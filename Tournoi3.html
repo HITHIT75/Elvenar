@@ -47,6 +47,7 @@
   function EcrireCook() {
       TypeDeTournoi=document.getElementById("TournoiShow").innerHTML
       Contenu=document.getElementById("InfoPerso").value
+      alert("avanr ecritue cook lecture du tournoi : " + TypeDeTournoi + "   info perso = " + Contenu)
         setCookie(TypeDeTournoi, Contenu, 365);
   }
   function EcrireCook2() {
@@ -56,7 +57,7 @@
         setCookie2(TypeDeTournoi, Contenu, 365);
   }
   function setCookie(cname, cvalue, exdays) {
-        document.getElementById("Chaine2").innerHTML=  cvalue
+        //document.getElementById("Chaine2").innerHTML=  cvalue
         const d = new Date();
         d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
         let expires = "expires="+d.toUTCString();
@@ -85,12 +86,11 @@
 
   function checkCookie(Cible) {
       //document.getElementById("Chaine").innerHTML=  "attente cookie"
-      alert("cook0 note =" + Cible)
+        username=""
         let username = getCookie(Cible);
         if (username != "") {
-         //alert("Welcome again " + username);
-         //document.getElementById("Chaine1").innerHTML=  Cible + " loade"
-         //document.getElementById("Chaine2").innerTxt=  username
+
+
          document.getElementById("InfoPerso").value=  username
          alert("cook0 note loadé  =" + Cible)
         }
@@ -105,7 +105,7 @@
             if (username != "") {
                          Genre =username.substring(0,1)
              Manuel=username.substring(2)
-             
+
               if (Genre==0) {
                 document.getElementById("Mili11" ).src="https://fr.wiki.elvenar.com/images/d/df/Hb_lm_1_big.png";
                 document.getElementById("Mili12" ).src="https://fr.wiki.elvenar.com/images/e/e3/Hb_lr_1_big.png";
@@ -950,7 +950,7 @@
           document.getElementById("Elfe").classList.toggle("down")
           document.getElementById("GenreShow").innerHTML = "1";
           //Données()
-          EcrireCook2()
+          //EcrireCook2()
         }
 
     function handleChange2() {
@@ -967,7 +967,7 @@
             document.getElementById("Homme").classList.toggle("down")
             document.getElementById("GenreShow").innerHTML = "0";
             //Données()
-            EcrireCook2()
+            //EcrireCook2()
         }
     function handleChange2b() {
         document.getElementById("Manu1b" ).style.backgroundColor="#F7A63D"
@@ -975,7 +975,7 @@
         document.getElementById("ManuelShow").innerHTML = "0";
         document.getElementById("Manu").classList.toggle("down")
         //Données()
-        EcrireCook2()
+        //EcrireCook2()
       }
     function handleChangeb() {
         document.getElementById("Manu2").style.backgroundColor="#F7A63D"
@@ -983,7 +983,7 @@
         document.getElementById("ManuelShow").innerHTML = "1";
         document.getElementById("Auto").classList.toggle("down")
         //Données()
-        EcrireCook2()
+        //EcrireCook2()
         }
     function handleChangeAll(Num, Vecteur) {
           Res=document.getElementById("Tournoi").innerHTML
@@ -1366,7 +1366,7 @@
           }
 </style>
 </head>
-<body onload="Debut()">
+<body onload="Debut()" onunload="EcrireCook2()">
 <div id="StockShow"  style="visibility:hidden;font-Size:0;display:inline-block;">z</div>
 <div id="ManuelShow"  style="visibility:hidden;font-Size:0;display:inline-block;">0</div>
 <div id="GenreShow"  style="visibility:hidden;font-Size:0;display:inline-block;">0</div>
