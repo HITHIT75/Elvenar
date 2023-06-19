@@ -44,11 +44,12 @@
     //MenuShort()
     //handleChange2()
     //handleChange2b()
+document.getElementById("LoadOff").innerHTML=1
     handleChangeAll(NumeroTournoi,"de " + TypeDeTournoi)
-    checkCookie(TypeDeTournoi)
+    //checkCookie(TypeDeTournoi)
     checkCookie2()
 
-    document.getElementById("LoadOff").innerHTML="1"
+
       }
   function EcrireCook() {
       TypeDeTournoi=document.getElementById("TournoiShow").innerHTML
@@ -91,7 +92,6 @@
       }
 
   function checkCookie(Cible) {
-      //document.getElementById("Chaine").innerHTML=  "attente cookie"
         username=""
         let username = getCookie(Cible);
         if (username != "") {
@@ -416,7 +416,7 @@
 
     }
   function Données() {
-    //  alert("données")
+
     TypeTournoi=document.getElementById("TournoiShow").innerHTML
     //alert(document.getElementById("ManuelShow").innerHTML)
       if (TypeTournoi==="Marbre") {
@@ -888,9 +888,10 @@
       document.getElementById("UnitShow").innerHTML='35'
     Uniter()
     //    <td style="border: 2px solid red;" id="Milit11"><img  id="Mili11" style="width:50px;border: 2px solid black;"
-
     TypeDeTournoi=  document.getElementById("TournoiShow").innerHTML
+
     checkCookie(TypeDeTournoi)
+
   }
   function Uniter() {
 
@@ -1010,7 +1011,9 @@
             document.getElementById("Tournoi").innerHTML=Num
              document.getElementById("MenuB" + Num).style.backgroundColor="#F7A63D"
              document.getElementById("MenuA" + Num).style.backgroundColor="#F7A63D"
+
              Données()
+
              if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
                CacherMenu()
              }
@@ -1422,9 +1425,9 @@
 <div id="Chaine1"  style="visibility:hidden;font-Size:0;display:inline-block;"></div>
 <div id="Chaine2"  style="visibility:hidden;font-Size:0;display:inline-block;"></div>
 <div id="Confirm"  style="visibility:hidden;font-Size:0;display:inline-block;"></div>
-<div id="nom"  style="visibility:visible;color:transparent;font-size:0;"  ></div>
-<div id="son"  style="visibility:hidden;color:transparent;font-size:0;" >1</div>
-<div id="LoadOff"  style="visibility:hidden;color:transparent;font-size:0;" >0</div>
+<div id="nom">...</div>
+<div id="son">1</div>
+<div id="LoadOff">0</div>
 <audio  id="MonSon" src="Image/Son.wav"></audio>
 
 
@@ -1901,8 +1904,8 @@
                 Même si les terrains sont aléatoires , chaque tournoi possède une typologie de terrain majoritaire:<br>
                 Type REMPART <img  style="height:30px;" src="Image/HexagoneRempart1.png">
                 <img  style="height:30px;" src="Image/HexagoneRempart2.png">
-                <img  style="height:30px;" src="Image/HexagoneRempart3.png"><br>
-                Type PLAINE <img  style="height:30px;" src="Image/Hexagone.png"><br>
+                <img  style="height:30px;" src="Image/HexagoneRempart3.png"> favorise les longues portées.<br>
+                Type PLAINE <img  style="height:30px;" src="Image/Hexagone.png"> favorise les unités résist<br>
                 Type ILOTS <img  style="height:30px;" src="Image/HexagoneILOT1.png">
                 <img  style="height:30px;" src="Image/HexagoneILOT2.png">
                 <img  style="height:30px;" src="Image/HexagoneILOT3.png">
@@ -1912,8 +1915,8 @@
                 <Br>
                 <img  style="height:30px;" src="https://cdn-icons-png.flaticon.com/512/1093/1093269.png">
                 <img  style="height:30px;" src="https://cdn-icons-png.flaticon.com/512/6471/6471690.png">
-                L algorithme automatique consiste à faire avancer les troupes et à attaquer tout ce qui est à portée ; même si c est suicidaire<Br>
-                Certains combats en auto sont impossible et ne génère aucune perte en manuel<Br>
+                L algorithme 'automatique' consiste à faire avancer les troupes et à attaquer tout ce qui est à portée ; même si c est suicidaire<Br>
+                Certains combats en auto sont impossible et ne génère aucune perte en manuel.<Br>
                 Les pertes en auto sont au minimum de 50% supérieures au manuel<Br>
                 Certaines unités : tréant, Orc, Vallorien ne servent quasi jamais en manuel et la merveille forge des héros très peu utile.
 
