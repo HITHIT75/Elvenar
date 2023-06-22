@@ -60,9 +60,8 @@
       }
   function EcrireCook() {
       document.getElementById("Chaine2").innerHTML=document.getElementById("InfoPerso").value
-    return
       TypeDeTournoi=document.getElementById("TournoiShow").innerHTML
-      Contenu=document.getElementById("InfoPerso").value
+      Contenu=document.getElementById("Chaine2").innerHTML
       alert("avanr ecritue cook lecture du tournoi : " + TypeDeTournoi + "   info perso = " + Contenu)
         setCookie(TypeDeTournoi, Contenu, 365);
   }
@@ -540,7 +539,7 @@
               NbEtoileDifficulté = 3
               Commentaire ="Produire principalement des mages"
               Conseil ="Poser un boost mage et équitablement boost déchaînement/armurier nain"
-              NatureTerrain="Grosse proportionde type REMPART: favorise les untés longue portée (grenouille/mage fleuri/archer)"
+              NatureTerrain="Grosse proportion de type REMPART: favorise les untés longue portée (grenouille/mage fleuri/archer)"
               Image1Terrain="Image/HexagoneRempart1.png"
               Image2Terrain="Image/HexagoneRempart2.png"
               Image3Terrain="Image/HexagoneRempart3.png"
@@ -574,8 +573,8 @@
                 NbEtoileDifficulté = 5
                 Commentaire ="Tournoi difficile avec beaucoup de pertes. Prioriser les ranger"
                 Conseil ="Bien booster les points de vie avec déchaînement et armurier nain"
-                NatureTerrain=""
-                Image1Terrain=""
+                NatureTerrain="Majorité de type PLAINE avec des ennemies bien adpatés à ce terrain."
+                Image1Terrain="Image/Hexagone.png"
                 Image2Terrain=""
                 Image3Terrain=""
 
@@ -590,26 +589,26 @@
                PorteeLegereCaserne ="0,0,0"
                MagiqueCaserne ="0,1,0"
                MeleeLourdeCaserne ="0,1,0"
-               PorteeLourdeCaserne ="1,1,0"
+               PorteeLourdeCaserne ="1,1,1"
 
                MeleeLegereTerrain ="0,0,0"
                PorteeLegereTerrain ="0,0,0"
                MagiqueTerrain ="1,1,0"
                MeleeLourdeTerrain ="0,0,0"
-               PorteeLourdeTerrain ="0,1,0"
+               PorteeLourdeTerrain ="0,1,1"
 
                MeleeLegereCamp ="0,1,0"
                PorteeLegereCamp ="1,1,0"
                MagiqueCamp ="1,0,0"
                MeleeLourdeCamp ="0,1,0"
-               PorteeLourdeCamp ="1,0,0"
+               PorteeLourdeCamp ="1,0,1"
               }
         if (TypeTournoi==="Soie") {
-                  NbEtoileDifficulté = 3
+                  NbEtoileDifficulté = 2
                   Commentaire ="Tournoi relativement facile"
                   Conseil ="Poser un boost portée légère et mage. Booster les points de vie avec déchaînement et armurier nain"
-                  NatureTerrain=""
-                  Image1Terrain=""
+                  NatureTerrain="Le terrain pour ce tournoi est le royaume des Grenouilles et Mages fleuris"
+                  Image1Terrain="Image/Hexagone.png"
                   Image2Terrain=""
                   Image3Terrain=""
 
@@ -634,18 +633,18 @@
 
                   MeleeLegereCamp ="0,0,0"
                   PorteeLegereCamp ="1,1,0"
-                  MagiqueCamp ="1,1,0"
+                  MagiqueCamp ="1,1,1"
                   MeleeLourdeCamp ="0,0,0"
-                  PorteeLourdeCamp ="1,1,0"
+                  PorteeLourdeCamp ="1,1,1"
                 }
         if (TypeTournoi==="Elixir") {
                     NbEtoileDifficulté = 3
                     Commentaire ="Produire une majorité de portée lourde"
                     Conseil ="Poser un boost portée légère. Booster les points de vie avec déchaînement et armurier nain"
-                    NatureTerrain=""
-                    Image1Terrain=""
-                    Image2Terrain=""
-                    Image3Terrain=""
+                    NatureTerrain="Grenouille Golem et Archer sont adaptés au terrain"
+                    Image1Terrain="Image/HexagoneILOT1.png"
+                    Image2Terrain="Image/HexagoneILOT2.png"
+                    Image3Terrain="Image/HexagoneILOT3.png"
 
                     MeleeLegereEnnemie =26
                     PorteeLegereEnnemie =26
@@ -655,12 +654,12 @@
 
 
                     MeleeLegereCaserne ="0,0,0" // 0 = pas recommandé  1 = recommandé   dans  l ordre  "manuel,auto,terrain"
-                    PorteeLegereCaserne ="0,1,0"
+                    PorteeLegereCaserne ="0,1,1"
                     MagiqueCaserne ="0,0,0"
                     MeleeLourdeCaserne ="0,1,0"
                     PorteeLourdeCaserne ="1,1,0"
 
-                    MeleeLegereTerrain ="0,0,0"
+                    MeleeLegereTerrain ="0,0,1"
                     PorteeLegereTerrain ="1,1,0"
                     MagiqueTerrain ="0,0,0"
                     MeleeLourdeTerrain ="0,1,0"
@@ -670,7 +669,7 @@
                     PorteeLegereCamp ="1,1,0"
                     MagiqueCamp ="0,1,0"
                     MeleeLourdeCamp ="0,0,0"
-                    PorteeLourdeCamp ="1,1,0"
+                    PorteeLourdeCamp ="1,1,1"
                   }
         if (TypeTournoi==="Poussiere") {
                       NbEtoileDifficulté = 5
@@ -722,14 +721,14 @@
                         PorteeLourdeEnnemie =28
 
 
-                        MeleeLegereCaserne ="0,0,1"
-                        PorteeLegereCaserne ="0,1,1"
+                        MeleeLegereCaserne ="0,0,0"
+                        PorteeLegereCaserne ="0,1,0"
                         MagiqueCaserne ="0,0,0"
                         MeleeLourdeCaserne ="0,1,0"
-                        PorteeLourdeCaserne ="1,1,1"
+                        PorteeLourdeCaserne ="1,1,0"
 
                         MeleeLegereTerrain ="0,0,0"
-                        PorteeLegereTerrain ="0,1,1"
+                        PorteeLegereTerrain ="0,1,0"
                         MagiqueTerrain ="1,1,0"
                         MeleeLourdeTerrain ="0,1,0"
                         PorteeLourdeTerrain ="0,0,0"
@@ -743,7 +742,7 @@
 
       //alert("dans donnes() terrain" )
       if (NatureTerrain==="") {
-                  document.getElementById("CommentMap").innerHTML="A venir"
+                  document.getElementById("CommentMap").innerHTML="En manwque de Stat : à venir"
                 }
       else {
                   document.getElementById("CommentMap").innerHTML=NatureTerrain
@@ -1270,8 +1269,27 @@
         //alert(Res)
         if ((Res==7) || (Res==1) || ((Res==6) && (aujourdhui.getHour()>21)) || ((Res==2) && (aujourdhui.getHour()<17))) {
             DebutTournoi =  new Date(aujourdhui.getFullYear(),aujourdhui.getMonth(),Res2,19,0)
-
-          alert (DebutTournoi )
+            diff = DebutTournoi.getTime() - aujourdhui.getTime();
+            diff =diff/86400000 // en jour
+            Chaine=""
+            NbJour = Math.floor(diff)
+            if (NbJour>0) {
+              Chaine=Chaine + NbJour +"j "
+            }
+            Reste = (diff - NbJour)*24
+            NbHeure = Math.floor(Reste)
+            if (NbHeure>0) {
+              Chaine=Chaine + NbHeure +"h "
+            }
+            Reste = (Reste - NbHeure)*60
+            NbMinute = Math.floor(Reste)
+            if (NbMinute>0) {
+              Chaine=Chaine + NbMinute +"mn "
+            }
+            Chaine="Début " + Chaine
+             TypeDeTournoi = document.getElementById("TournoiNum").innerHTML
+             //alert(Chaine +'  ' + TypeDeTournoi)
+              document.getElementById("chrono" + TypeDeTournoi).innerHTML=Chaine
         }
         else {
           FinTournoi =  new Date(aujourdhui.getFullYear(),aujourdhui.getMonth(),Res3,22,0)
@@ -1976,27 +1994,24 @@
           <TD style="width:1500px;">
             <div id="Legende1" class="TabGDHB" style="font-size:16px;">
               <div style="display:inline-block;font-size:16px;padding-left: 10px">
-                Même si les terrains sont aléatoires , chaque tournoi possède une typologie de terrain majoritaire:<br>
+                Même si les terrains sont aléatoires, chaque tournoi possède une typologie de terrain majoritaire:<br>
                 Type REMPART <img  style="height:30px;" src="Image/HexagoneRempart1.png">
                 <img  style="height:30px;" src="Image/HexagoneRempart2.png">
                 <img  style="height:30px;" src="Image/HexagoneRempart3.png"> favorise les longues portées.<br>
-                Type PLAINE <img  style="height:30px;" src="Image/Hexagone.png"> favorise les unités résist<br>
+                Type PLAINE <img  style="height:30px;" src="Image/Hexagone.png"> favorise les unités résistantes et/ou à initiative élevée.<br>
                 Type ILOTS <img  style="height:30px;" src="Image/HexagoneILOT1.png">
                 <img  style="height:30px;" src="Image/HexagoneILOT2.png">
-                <img  style="height:30px;" src="Image/HexagoneILOT3.png">
+                <img  style="height:30px;" src="Image/HexagoneILOT3.png"> favorise les unités à mobilité élevée.
                 <br>
                 La connaissance au préalable du terrain permet de choisir quelles troupes préparer, de comprendre les echecs en automatique.<Br>
                 Une bonne technique en manuel pour reconnaitre le terrain consiste à envoyer dans un premier tour 1 seul archer ou ranger ou treant ; puis d abandonner.<Br>
                 <Br>
                 <img  style="height:30px;" src="https://cdn-icons-png.flaticon.com/512/1093/1093269.png">
                 <img  style="height:30px;" src="https://cdn-icons-png.flaticon.com/512/6471/6471690.png">
-                L algorithme 'automatique' consiste à faire avancer les troupes et à attaquer tout ce qui est à portée ; même si c est suicidaire<Br>
+                L algorithme 'automatique' consiste à faire avancer les troupes et à attaquer tout ce qui est à portée ; même si c&rsquo;est suicidaire<Br>
                 Certains combats en auto sont impossible et ne génère aucune perte en manuel.<Br>
                 Les pertes en auto sont au minimum de 50% supérieures au manuel<Br>
-                Certaines unités : tréant, Orc, Vallorien ne servent quasi jamais en manuel et la merveille forge des héros très peu utile.
-
-
-
+                Certaines unités : tréant, Orc, Vallorien ne servent quasi jamais en manuel et la merveille forge des héros est très peu utile.
               </div>
             </div>
           </TD>
