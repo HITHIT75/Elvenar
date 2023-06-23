@@ -90,14 +90,14 @@ function RechCookie(cname) {
   Cible =  document.getElementById("TournoiShow").innerHTML
   name = Cible + "="
   Res1 =Vecteur.indexOf(name)*1
-  if (Res1==-1) {
-    document.getElementById("InfoPerso").value=  "RAS"
-    alert('RAS')
-  }
+  // if (Res1==-1) {
+  //   document.getElementById("InfoPerso").value=  "RAS"
+  //   alert('RAS')
+  // }
   Longueur = 1*name.length
 
   alert(Res1 +' +long =  ' + (Res1+ Longueur))
-  Res2 = Vecteur.indexOf(";", Res1)*1
+  Res2 = Vecteur.indexOf(";", Res1+1)*1
   alert(Res2 + ' -long =  ' + Res2-Res1-Longueur)
   Res3 = Vecteur.substring(Res1+Longueur,Res2-Res1-Longueur)
   alert(Res3)
@@ -982,7 +982,7 @@ function RechCookie(cname) {
   }
 
     function handleChange() {
-        JouerSon(1)
+        JouerSon(3)
           document.getElementById("Mili11" ).src="https://fr.wiki.elvenar.com/images/d/df/Eb_lm_1_big.png";
           document.getElementById("Mili12" ).src="https://fr.wiki.elvenar.com/images/4/49/Eb_lr_1_big.png";
           document.getElementById("Mili13" ).src="https://fr.wiki.elvenar.com/images/a/a2/Eb_ma_1_big.png";
@@ -1001,7 +1001,7 @@ function RechCookie(cname) {
           }
         }
     function handleChange2() {
-            JouerSon(1)
+            JouerSon(3)
             document.getElementById("Mili11" ).src="https://fr.wiki.elvenar.com/images/d/df/Hb_lm_1_big.png";
             document.getElementById("Mili12" ).src="https://fr.wiki.elvenar.com/images/e/e3/Hb_lr_1_big.png";
             document.getElementById("Mili13" ).src="https://fr.wiki.elvenar.com/images/e/ed/Hb_ma_1_big.png";
@@ -1019,7 +1019,7 @@ function RechCookie(cname) {
             }
         }
     function handleChange2b() {
-      JouerSon(1)
+      JouerSon(3)
         document.getElementById("Manu1b" ).style.backgroundColor="#F7A63D"
         document.getElementById("Manu2" ).style.backgroundColor=""
         document.getElementById("ManuelShow").innerHTML = "0";
@@ -1030,7 +1030,7 @@ function RechCookie(cname) {
         }
       }
     function handleChangeb() {
-        JouerSon(1)
+        JouerSon(3)
         document.getElementById("Manu2").style.backgroundColor="#F7A63D"
         document.getElementById("Manu1b" ).style.backgroundColor=""
         document.getElementById("ManuelShow").innerHTML = "1";
@@ -1266,8 +1266,12 @@ function RechCookie(cname) {
                 if (Num==2) {
                     var sound = document.getElementById("MonSon2");
                 }
-                 sound.play();}
+
+               if (Num==3) {
+                   var sound = document.getElementById("MonSon3");
                }
+                sound.play();}
+              }
     function CalculNumTournoi() {
       const aujourdhui= new Date();
       let hour = aujourdhui.getHours();
@@ -1549,7 +1553,7 @@ function RechCookie(cname) {
 <div id="LoadOff" style="visibility:hidden;font-Size:0;display:inline-block;">0</div>
 <audio  id="MonSon" src="Image/Son.wav"></audio>
 <audio  id="MonSon2" src="Image/SonDing.wav"></audio>
-
+<audio  id="MonSon3" src="Image/SonWhoo.wav"></audio>
   <header>
     <table style="margin-left: 0px; margin-right: auto;border-collapse;border-spacing : 0;width: 40%">
       <tr>
