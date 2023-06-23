@@ -89,11 +89,16 @@ function RechCookie(cname) {
   alert("tous "  + Vecteur)
   Cible =  document.getElementById("TournoiShow").innerHTML
   name = Cible + "="
-  Res1 =Vecteur.indexOf(name)
-  alert(Res1 +'   ' + (Res1+ 1*name.length))
-  Res2 = Vecteur.indexOf(";", Res1)
+  Res1 =Vecteur.indexOf(name)*1
+  if (Res1==-1) {
+    document.getElementById("InfoPerso").value=  "RAS"
+    alert('RAS')
+  }
+  Longueur = 1*name.length
+  alert(Res1 +'   ' + (Res1+ Longueur))
+  Res2 = Vecteur.indexOf(";", Res1)*1
   alert(Res2)
-  Res3 = Vecteur.substring(Res1+1*name.length,Res2-Res1-(1*name.length))
+  Res3 = Vecteur.substring(Res1+Longueur,Res2-Res1-Longueur)
   alert(Res3)
 
 }
