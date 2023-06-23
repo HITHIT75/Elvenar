@@ -85,12 +85,16 @@
             document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
           }
 function RechCookie(cname) {
-  alert("tous "  + document.cookie)
+  Vecteur = document.cookie
+  alert("tous "  + Vecteur)
   Cible =  document.getElementById("TournoiShow").innerHTML
   name = Cible + "="
-  alert(name)
-  Res = document.cookie.indexOf(name)
-  alert(Res)
+  Res1 =Vecteur.indexOf(name)
+  alert(Res1)
+  Res2 = Vecteur.indexOf(";", Res1)
+  alert(Res2)
+  Res3 = Vecteur.substring(Res1+name.length,Res2-Res1-name.length)
+  alert(Res3)
 
 }
   function getCookie(cname) {
