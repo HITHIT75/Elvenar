@@ -84,11 +84,15 @@
             let expires = "expires="+d.toUTCString();
             document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
           }
-function RechCookie() {
+function RechCookie(cname) {
   alert("tous "  + document.cookie)
+  Cible =  document.getElementById("TournoiShow").innerHTML
+  name = Cible + "=";
+  Res = document.cookie.indexOf(name)
+  alert(Res)
+
 }
   function getCookie(cname) {
-    alert(cname)
         let name = cname + "=";
         let ca = document.cookie.split(';');
         for(let i = 0; i < ca.length; i++) {
