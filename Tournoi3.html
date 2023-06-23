@@ -85,7 +85,7 @@
             document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
           }
 function RechCookie() {
-  alert(document.cookie)
+  alert("tous "  + document.cookie)
 }
   function getCookie(cname) {
 
@@ -978,8 +978,9 @@ function RechCookie() {
           document.getElementById("Genre1b" ).style.backgroundColor=""
           document.getElementById("Elfe").classList.toggle("down")
           document.getElementById("GenreShow").innerHTML = "1";
-          Données()
           RechCookie()
+          Données()
+
           if (document.getElementById("LoadOff").innerHTML=="1") {
             EcrireCook2()
           }
