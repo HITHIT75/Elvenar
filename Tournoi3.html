@@ -90,7 +90,7 @@ function RechCookie(cname) {
   Cible =  document.getElementById("TournoiShow").innerHTML
   name = Cible + "="
   Res1 =Vecteur.indexOf(name)
-  alert(Res1)
+  alert(Res1 +'   ' + Res1+name.length)
   Res2 = Vecteur.indexOf(";", Res1)
   alert(Res2)
   Res3 = Vecteur.substring(Res1+name.length,Res2-Res1-name.length)
