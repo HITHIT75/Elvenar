@@ -84,6 +84,9 @@
             let expires = "expires="+d.toUTCString();
             document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
           }
+function RechCookie() {
+  alert(document.cookie)
+}
   function getCookie(cname) {
 
         let name = cname + "=";
@@ -976,7 +979,7 @@
           document.getElementById("Elfe").classList.toggle("down")
           document.getElementById("GenreShow").innerHTML = "1";
           Données()
-          Chronometrer()
+          RechCookie()
           if (document.getElementById("LoadOff").innerHTML=="1") {
             EcrireCook2()
           }
