@@ -88,7 +88,7 @@ function RechCookie(cname) {
   Vecteur = document.cookie
   alert("tous "  + Vecteur)
   Cible =  document.getElementById("TournoiShow").innerHTML
-  document.getElementById("Chaine2").value=  Vecteur
+  document.getElementById("Chaine2").innerHTML=  Vecteur
   name = Cible + "="
   Res1 =Vecteur.indexOf(name)*1
   // if (Res1==-1) {
@@ -1537,9 +1537,11 @@ function RechCookie(cname) {
 </head>
 <body onload="Debut()" onbeforeunload="EcrireCook2()">
 <div id="Chaine2"  ></div>
+<div id="ManuelShow"  >0</div>
+<div id="GenreShow"  >0</div>
 <div style="visibility:hidden;font-Size:0;display:inline-block;">
     <div id="StockShow"  style="visibility:hidden;font-Size:0;display:inline-block;">z</div>
-    <div id="ManuelShow"  style="visibility:hidden;font-Size:0;display:inline-block;">0</div>
+    <div id="ManuelShow"  >0</div>
     <div id="GenreShow"  >0</div>
     <div id="LegendeShow" >0</div>
     <div id="TournoiShow" ></div>
