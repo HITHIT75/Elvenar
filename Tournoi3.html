@@ -62,8 +62,10 @@
       document.getElementById("Chaine2").innerHTML=document.getElementById("InfoPerso").value
       TypeDeTournoi=document.getElementById("TournoiShow").innerHTML
       Contenu=document.getElementById("Chaine2").innerHTML
+      document.getElementById("InfoPerso").style.backgroundColor = "green;"
       alert("avanr ecritue cook lecture du tournoi : " + TypeDeTournoi + "   info perso = " + Contenu)
         setCookie(TypeDeTournoi, Contenu, 365);
+      document.getElementById("InfoPerso").style.backgroundColor = "white;"
   }
   function EcrireCook2() {
       TypeDeTournoi='Ecran'
@@ -76,6 +78,7 @@
         const d = new Date();
         d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
         let expires = "expires="+d.toUTCString();
+        alert(cname + "=" + cvalue + ";" + expires + ";path=/")
         document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
       }
   function setCookie2(cname, cvalue, exdays) {
@@ -694,8 +697,8 @@
                     MeleeLourdeTerrain ="0,1,0"
                     PorteeLourdeTerrain ="0,0,0"
 
-                    MeleeLegereCamp ="0,0,0"
-                    PorteeLegereCamp ="1,1,0"
+                    MeleeLegereCamp ="0,0,1"
+                    PorteeLegereCamp ="1,1,1"
                     MagiqueCamp ="0,1,0"
                     MeleeLourdeCamp ="0,0,0"
                     PorteeLourdeCamp ="1,1,1"
@@ -2062,7 +2065,7 @@
                 Type PLAINE <img  style="height:30px;" src="Image/Hexagone.png"> favorise les unités résistantes et/ou à initiative élevée.<br>
                 Type ILOTS <img  style="height:30px;" src="Image/HexagoneILOT1.png">
                 <img  style="height:30px;" src="Image/HexagoneILOT2.png">
-                <img  style="height:30px;" src="Image/HexagoneILOT3.png"> favorise les unités à mobilité élevée.
+                <img  style="height:30px;" src="Image/HexagoneILOT3.png"> favorise les unités intermédiaires : portée moyenne et résitance et/ou mobilité élevée.
                 <br>
                 La connaissance au préalable du terrain permet de choisir quelles troupes préparer, de comprendre les echecs en automatique.<Br>
                 Une bonne technique en manuel pour reconnaitre le terrain consiste à envoyer dans un premier tour 1 seul archer ou ranger ou treant ; puis d abandonner.<Br>
