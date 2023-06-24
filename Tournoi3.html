@@ -62,11 +62,13 @@
       document.getElementById("Chaine2").innerHTML=document.getElementById("InfoPerso").value
       TypeDeTournoi=document.getElementById("TournoiShow").innerHTML
       Contenu=document.getElementById("Chaine2").innerHTML
-      document.getElementById("InfoPerso").style.backgroundColor = "green;"
-      alert("avanr ecritue cook lecture du tournoi : " + TypeDeTournoi + "   info perso = " + Contenu)
+      document.getElementById("InfoPerso").classList.toggle("TA2");
+      //alert("avanr ecritue cook lecture du tournoi : " + TypeDeTournoi + "   info perso = " + Contenu)
         setCookie(TypeDeTournoi, Contenu, 365);
-      document.getElementById("InfoPerso").style.backgroundColor = "white;"
+        setCookie("Blanc", "Blanc", 365);
+        document.getElementById("InfoPerso").classList.toggle("TA1");
   }
+
   function EcrireCook2() {
       TypeDeTournoi='Ecran'
       Contenu=document.getElementById("GenreShow").innerHTML+'|'+document.getElementById("ManuelShow").innerHTML
@@ -689,7 +691,7 @@
                     PorteeLegereCaserne ="0,1,1"
                     MagiqueCaserne ="0,0,0"
                     MeleeLourdeCaserne ="0,1,0"
-                    PorteeLourdeCaserne ="1,1,0"
+                    PorteeLourdeCaserne ="1,1,1"
 
                     MeleeLegereTerrain ="0,0,1"
                     PorteeLegereTerrain ="1,1,0"
@@ -1057,6 +1059,7 @@
       JouerSon(1)
       //alert("debut dans change all")
           Res=document.getElementById("Tournoi").innerHTML
+          document.getElementById("Res" + Num).classList.toggle("down")
            document.getElementById("MenuB" + Res).style.backgroundColor="#D4BB93"
            document.getElementById("MenuA" + Res).style.backgroundColor="#D4BB93"
            document.getElementById("Recommande").innerHTML="Unités recommandées pour le tournoi " + Vecteur
@@ -1092,7 +1095,6 @@
 
         }
       }
-
 
     function Legender1() {
       JouerSon(2)
@@ -1376,8 +1378,6 @@
 
 
 
-
-
 </script >
 
 
@@ -1558,6 +1558,40 @@
               -webkit-transform:rotate(360deg);
               transform:rotate(360deg);
           }
+          .TA1 {
+            background-color: white;
+          }
+          .TA2 {
+            background-color: white;
+            -webkit-animation-name: demo;
+            -webkit-animation-duration: 900ms;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-timing-function: ease-in-out;
+          }
+          @-webkit-keyframes demo {
+              0% {
+                  background-color: #90EE90;
+                  opacity:1;
+              }
+              20% {
+                  background-color: #FFFFE0;
+              }
+
+              40% {
+                  background-color: #90EE90;
+              }
+              60% {
+                  background-color: #FFFFE0;
+              }
+
+              80% {
+                  background-color: #90EE90;
+              }
+
+              100% {
+                  background-color: white;
+              }
+          }
 </style>
 </head>
 <body onload="Debut()" onbeforeunload="EcrireCook2()">
@@ -1603,7 +1637,7 @@
           </td>
         <td rowspan="6" style="text-align:left;">
             <div id="Legende0" >
-              <textarea onchange="EcrireCook()" id="InfoPerso" placeholder="Saisir ici vos commentaires personnels sur ce tournoi - Ils seront visibles à votre prochaine visite."  rows="8" cols="45"></textarea>
+              <textarea onchange="EcrireCook()" class="TA1" id="InfoPerso" placeholder="Saisir ici vos commentaires personnels sur ce tournoi - Ils seront visibles à votre prochaine visite."  rows="8" cols="45"></textarea>
             </div>
 
         </td>
@@ -2092,58 +2126,66 @@
       <table style="border-collapse;border-spacing : 0;">
         <tr>
           <td  onclick="handleChangeR1();" class="MenuG" id="MenuA1"   style="border-left: 4px solid green;border-top: 4px solid green;background-color:#D4BB93">
-          <img style="height:30px;" src="https://fr.wiki.elvenar.com/images/3/39/Good_marble_big.png"></td>
+          <img style="height:30px;" id="Res1" class ="rotate" src="https://fr.wiki.elvenar.com/images/3/39/Good_marble_big.png"></td>
           <td  onclick="handleChangeR1();" class="MenuG"  id="MenuB1" style="border-top: 4px solid green;border-right: 4px solid green;border-top-right-radius : 20px;background-color:#D4BB93">
           Marbre<br><div id="chrono1" style="font-size:12px"></div></td>
           <td style="background-color: transparent"></td>
         </tr>
         <tr>
-        <td  onclick="handleChangeR2();" class="MenuG" id="MenuA2"  style="border-left: 4px solid green;background-color: #D4BB93;"><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/5/58/Good_steel_big.png"></td>
+        <td  onclick="handleChangeR2();" class="MenuG" id="MenuA2"  style="border-left: 4px solid green;background-color: #D4BB93;">
+        <img style="height:30px;" id="Res2" class ="rotate" src="https://fr.wiki.elvenar.com/images/5/58/Good_steel_big.png"></td>
         <td  onclick="handleChangeR2();" class="MenuG"  id="MenuB2"  style="border-right: 4px solid green;background-color: #D4BB93;">
         Acier<br><div id="chrono2" style="font-size:12px"></div></td>
         <td style="background-color: transparent"></td>
         </tr>
         <tr>
-          <td  onclick="handleChangeR3();" lass="MenuG" id="MenuA3"   style="border-left: 4px solid green;background-color: #D4BB93;"><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/3/3e/Good_planks_big.png"></td>
+          <td  onclick="handleChangeR3();" lass="MenuG" id="MenuA3"   style="border-left: 4px solid green;background-color: #D4BB93;">
+          <img style="height:30px;" id="Res3" class ="rotate" src="https://fr.wiki.elvenar.com/images/3/3e/Good_planks_big.png"></td>
           <td  onclick="handleChangeR3();" class="MenuG"  id="MenuB3"  style="border-right: 4px solid green;background-color: #D4BB93;">
           Planches<br><div id="chrono3" style="font-size:12px"></div></td>
           <td style="background-color: transparent;"></td>
         </tr>
         <tr>
-            <td  onclick="handleChangeR4();" class="MenuG" id="MenuA4"   style="border-left: 4px solid green;background-color: #D4BB93;"><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/0/07/Good_crystal_big.png"></td>
+            <td  onclick="handleChangeR4();" class="MenuG" id="MenuA4"   style="border-left: 4px solid green;background-color: #D4BB93;">
+            <img style="height:30px;" id="Res4" class ="rotate" src="https://fr.wiki.elvenar.com/images/0/07/Good_crystal_big.png"></td>
             <td  onclick="handleChangeR4();" class="MenuG"  id="MenuB4"  style="border-right: 4px solid green;background-color: #D4BB93;">
             Cristal<br><div id="chrono4" style="font-size:12px"></div></td>
             <td style="background-color: transparent;"></td>
         </tr>
         <tr>
-          <td  onclick="handleChangeR5();" class="MenuG" id="MenuA5"    style="border-left: 4px solid green;background-color: #D4BB93;"><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/3/3d/Good_scrolls_big.png"></td>
+          <td  onclick="handleChangeR5();" class="MenuG" id="MenuA5"    style="border-left: 4px solid green;background-color: #D4BB93;">
+          <img style="height:30px;" id="Res5" class ="rotate" src="https://fr.wiki.elvenar.com/images/3/3d/Good_scrolls_big.png"></td>
           <td  onclick="handleChangeR5();" class="MenuG"  id="MenuB5"  style="border-right: 4px solid green;background-color: #D4BB93;">
           Parchemins<br><div id="chrono5" style="font-size:12px"></div></td>
           <td><Div class="TriangleMenuG" id="TriangleMenuG" onclick="CacherMenu()" style="height:50px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
         </div>
         </tr>
         <tr>
-        <td  onclick="handleChangeR6();" class="MenuG" id="MenuA6"   style="border-left: 4px solid green;background-color: #D4BB93;"><img style="height:30px;" src="https://fr.wiki.elvenar.com/images/2/2b/Good_silk_big.png"></td>
+        <td  onclick="handleChangeR6();" class="MenuG" id="MenuA6"   style="border-left: 4px solid green;background-color: #D4BB93;">
+        <img style="height:30px;" id="Res6" class ="rotate" src="https://fr.wiki.elvenar.com/images/2/2b/Good_silk_big.png"></td>
         <td  onclick="handleChangeR6();" class="MenuG"  id="MenuB6"  style="border-right: 4px solid green;background-color: #D4BB93;">
         Soie<br><div id="chrono6" style="font-size:12px"></div></td>
         <td style="background-color: transparent;"></td>
         </tr>
         <tr>
-          <td  onclick="handleChangeR7();" class="MenuG" id="MenuA7"   style="border-left: 4px solid green;background-color: #D4BB93;"><img style="height:30px" src="https://fr.wiki.elvenar.com/images/f/f1/Good_elixir_big.png"></td>
+          <td  onclick="handleChangeR7();" class="MenuG" id="MenuA7"   style="border-left: 4px solid green;background-color: #D4BB93;">
+          <img style="height:30px" id="Res7" class ="rotate" src="https://fr.wiki.elvenar.com/images/f/f1/Good_elixir_big.png"></td>
           <td  onclick="handleChangeR7();" class="MenuG"  id="MenuB7"  style="border-right: 4px solid green;background-color: #D4BB93;">
           Elixir<br><div id="chrono7" style="font-size:12px"></div></td>
           <td></td>
           </tr>
 
           <tr>
-          <td  onclick="handleChangeR8();" class="MenuG" id="MenuA8"   style="border-left: 4px solid green;background-color: #D4BB93;"><img style="height:30px" src="https://fr.wiki.elvenar.com/images/f/f6/Good_magic_dust_big.png"></td>
+          <td  onclick="handleChangeR8();" class="MenuG" id="MenuA8"   style="border-left: 4px solid green;background-color: #D4BB93;">
+          <img style="height:30px" id="Res8" class ="rotate" src="https://fr.wiki.elvenar.com/images/f/f6/Good_magic_dust_big.png"></td>
           <td  onclick="handleChangeR8();" class="MenuG"  id="MenuB8"  style="border-right: 4px solid green;background-color: #D4BB93;">
           Poussiere<br><div id="chrono8" style="font-size:12px"></div></td>
           <td></td>
           </tr>
 
           <tr>
-            <td onclick="handleChangeR9();" class="MenuG" id="MenuA9"  style="border-left: 4px solid green;border-bottom: 4px solid green;background-color: #D4BB93;"><img style="height:30px" src="https://fr.wiki.elvenar.com/images/3/38/Good_gems_big.png"></td>
+            <td onclick="handleChangeR9();" class="MenuG" id="MenuA9"  style="border-left: 4px solid green;border-bottom: 4px solid green;background-color: #D4BB93;">
+            <img style="height:30px" id="Res9" class ="rotate" src="https://fr.wiki.elvenar.com/images/3/38/Good_gems_big.png"></td>
             <td onclick="handleChangeR9();" class="MenuG" id="MenuB9"  style="border-right: 4px solid green;border-bottom: 4px solid green;border-bottom-right-radius : 20px;background-color: #D4BB93;">
             Gemmes<br><div id="chrono9" style="font-size:12px"></div></td>
             <td></td>
