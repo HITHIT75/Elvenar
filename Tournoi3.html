@@ -5,7 +5,7 @@
 <script >
   function Debut() {
     NumeroTournoi = CalculNumTournoi()
-
+    //alert(NumeroTournoi)
     //NumeroTournoi = 4 // saiqir le nurmero du tournoi
 
     if (NumeroTournoi == 1) {
@@ -84,29 +84,28 @@
             let expires = "expires="+d.toUTCString();
             document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
           }
-function RechCookie(cname) {
-//username=HITHIT; user=John; event=4,1,2,3,2,1,1,2,2,1,2,3,1,2,2,1,3,2,3,2,2,1,2,1,1,1,1,1,1,2,3,2,2,1,1,3,1,2,1,2,1,3,2,2,3,1,1,1,1,2,1,1,1,1,2,1,2,; Pseudo=HITHIT; Ecouteur=1; Cristal=jkqdf jkfh kjh kzf hzk; Marbre=Essai marbre; Planches=Essai Planches; Parchemins=Parchemaintxt; evenement=25,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3,3,2,1,2,1,1,3,1,1,1,1,3,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,#8; Ecran=0|0
+  function RechCookie() {
+    //username=HITHIT; user=John; event=4,1,2,3,2,1,1,2,2,1,2,3,1,2,2,1,3,2,3,2,2,1,2,1,1,1,1,1,1,2,3,2,2,1,1,3,1,2,1,2,1,3,2,2,3,1,1,1,1,2,1,1,1,1,2,1,2,; Pseudo=HITHIT; Ecouteur=1; Cristal=jkqdf jkfh kjh kzf hzk; Marbre=Essai marbre; Planches=Essai Planches; Parchemins=Parchemaintxt; evenement=25,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3,3,2,1,2,1,1,3,1,1,1,1,3,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,#8; Ecran=0|0
+    Vecteur = document.cookie
+    alert("tous "  + Vecteur)
+    Cible =  document.getElementById("TournoiShow").innerHTML
+    document.getElementById("Chaine2").innerHTML=  Vecteur
+    name = Cible + "="
+    Res1 =Vecteur.indexOf(name)*1
+    // if (Res1==-1) {
+    //   document.getElementById("InfoPerso").value=  "RAS"
+    //   alert('RAS')
+    // }
+    Longueur = 1*name.length
 
+    //alert(Res1 +' +long =  ' + (Res1+ Longueur))
+    Res2 = Vecteur.indexOf('\;', Res1+1)
+    //alert(Res2 + ' -long =  ' + Res2-Res1-Longueur)
+    Res3 = Vecteur.substring(Res1+Longueur,Res2)
+    document.getElementById("Chaine1").innerHTML=  Res3
+    document.getElementById("InfoPerso").value=  Res3
 
-  Vecteur = document.cookie
-  alert("tous "  + Vecteur)
-  Cible =  document.getElementById("TournoiShow").innerHTML
-  document.getElementById("Chaine2").innerHTML=  Vecteur
-  name = Cible + "="
-  Res1 =Vecteur.indexOf(name)*1
-  // if (Res1==-1) {
-  //   document.getElementById("InfoPerso").value=  "RAS"
-  //   alert('RAS')
-  // }
-  Longueur = 1*name.length
-
-  alert(Res1 +' +long =  ' + (Res1+ Longueur))
-  Res2 = Vecteur.indexOf('\;', Res1+1)
-  alert(Res2 + ' -long =  ' + Res2-Res1-Longueur)
-  Res3 = Vecteur.substring(Res1+Longueur,Res2-1)
-  alert(Res3)
-
-}
+    }
   function getCookie(cname) {
         let name = cname + "=";
         let ca = document.cookie.split(';');
@@ -123,6 +122,8 @@ function RechCookie(cname) {
       }
 
   function checkCookie(Cible) {
+    RechCookie()
+    return
       Cible =  document.getElementById("TournoiShow").innerHTML
         //alert("cook0 recherche de =" + Cible)
         username=""
@@ -997,7 +998,7 @@ function RechCookie(cname) {
           document.getElementById("Genre1b" ).style.backgroundColor=""
           document.getElementById("Elfe").classList.toggle("down")
           document.getElementById("GenreShow").innerHTML = "1";
-          RechCookie()
+          //RechCookie()
           Données()
 
           if (document.getElementById("LoadOff").innerHTML=="1") {
@@ -1296,12 +1297,14 @@ function RechCookie(cname) {
 
 
     function Chronometrer() {
+      //alert("chrono")
         aujourdhui= new Date();
         Res = aujourdhui.getDay();
         Res2 = aujourdhui.getDate() - (Res -2)
         Res3 = aujourdhui.getDate() + (6 - Res)
-        //alert(Res)
-        if ((Res==7) || (Res==1) || ((Res==6) && (aujourdhui.getHour()>21)) || ((Res==2) && (aujourdhui.getHour()<17))) {
+        //alert(Res + "   " + aujourdhui.getHours())
+        if ((Res==7) || (Res==1) || ((Res==6) && (aujourdhui.getHours()>21)) || ((Res==2) && (aujourdhui.getHours()<17))) {
+          //alert(' 2 ' )
             DebutTournoi =  new Date(aujourdhui.getFullYear(),aujourdhui.getMonth(),Res2,19,0)
             diff = DebutTournoi.getTime() - aujourdhui.getTime();
             diff =diff/86400000 // en jour
@@ -1322,10 +1325,11 @@ function RechCookie(cname) {
             }
             Chaine="Début " + Chaine
              TypeDeTournoi = document.getElementById("TournoiNum").innerHTML
-             //alert(Chaine +'  ' + TypeDeTournoi)
+             //alert(Chaine +' 0 ' + TypeDeTournoi)
               document.getElementById("chrono" + TypeDeTournoi).innerHTML=Chaine
         }
         else {
+          //alert(' 1 ' )
           FinTournoi =  new Date(aujourdhui.getFullYear(),aujourdhui.getMonth(),Res3,22,0)
           diff = FinTournoi.getTime() - aujourdhui.getTime();
           diff =diff/86400000 // en jour
@@ -1346,7 +1350,7 @@ function RechCookie(cname) {
           }
           Chaine="fin " + Chaine
            TypeDeTournoi = document.getElementById("TournoiNum").innerHTML
-           //alert(Chaine +'  ' + TypeDeTournoi)
+          // alert(Chaine +' 1 ' + TypeDeTournoi)
             document.getElementById("chrono" + TypeDeTournoi).innerHTML=Chaine
         }
         setTimeout(Chronometrer, 60000)
@@ -1539,9 +1543,10 @@ function RechCookie(cname) {
 </style>
 </head>
 <body onload="Debut()" onbeforeunload="EcrireCook2()">
-<div id="Chaine2"  ></div>
-<div id="ManuelShow"  >0</div>
-<div id="GenreShow"  >0</div>
+<div id="Chaine1"></div>
+<div id="Chaine2"></div>
+<div id="ManuelShow">0</div>
+<div id="GenreShow">0</div>
 <div style="visibility:hidden;font-Size:0;display:inline-block;">
     <div id="StockShow"  style="visibility:hidden;font-Size:0;display:inline-block;">z</div>
     <div id="ManuelShow"  >0</div>
@@ -1553,7 +1558,7 @@ function RechCookie(cname) {
     <div id="Num2Show" style="visibility:hidden;font-Size:0;display:inline-block;" ></div>
     <div id="Num3Show" style="visibility:hidden;font-Size:0;display:inline-block;"></div>
     <div id="UnitShow" style="visibility:hidden;font-Size:0;display:inline-block;" ></div>
-    <div id="Chaine1"  style="visibility:hidden;font-Size:0;display:inline-block;"></div>
+
     <div id="Confirm"  style="visibility:hidden;font-Size:0;display:inline-block;"></div>
     <div id="nom" style="visibility:hidden;font-Size:0;display:inline-block;">...</div>
     <div id="son" style="visibility:hidden;font-Size:0;display:inline-block;">1</div>
