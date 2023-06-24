@@ -93,7 +93,7 @@
     name = Cible + "="
     Res1 =Vecteur.indexOf(name)*1
      if (Res1==-1) {
-       document.getElementById("InfoPerso").value=  "RAS"
+       document.getElementById("InfoPerso").value=  ""
        //alert('RAS')
      }
      else {
@@ -1544,10 +1544,7 @@
 </style>
 </head>
 <body onload="Debut()" onbeforeunload="EcrireCook2()">
-<div id="Chaine1"></div>
-<div id="Chaine2"></div>
-<div id="ManuelShow">0</div>
-<div id="GenreShow">0</div>
+
 <div style="visibility:hidden;font-Size:0;display:inline-block;">
     <div id="StockShow"  style="visibility:hidden;font-Size:0;display:inline-block;">z</div>
     <div id="ManuelShow"  >0</div>
@@ -1555,15 +1552,18 @@
     <div id="LegendeShow" >0</div>
     <div id="TournoiShow" ></div>
     <div id="TournoiNum" ></div>
-    <div id="Num1Show" style="visibility:hidden;font-Size:0;display:inline-block;"></div>
-    <div id="Num2Show" style="visibility:hidden;font-Size:0;display:inline-block;" ></div>
-    <div id="Num3Show" style="visibility:hidden;font-Size:0;display:inline-block;"></div>
-    <div id="UnitShow" style="visibility:hidden;font-Size:0;display:inline-block;" ></div>
-
-    <div id="Confirm"  style="visibility:hidden;font-Size:0;display:inline-block;"></div>
-    <div id="nom" style="visibility:hidden;font-Size:0;display:inline-block;">...</div>
-    <div id="son" style="visibility:hidden;font-Size:0;display:inline-block;">1</div>
-    <div id="LoadOff" style="visibility:hidden;font-Size:0;display:inline-block;">0</div>
+    <div id="Chaine1"></div>
+    <div id="Chaine2"></div>
+    <div id="ManuelShow">0</div>
+    <div id="GenreShow">0</div>
+    <div id="Num1Show"></div>
+    <div id="Num2Show"></div>
+    <div id="Num3Show"></div>
+    <div id="UnitShow"></div>
+    <div id="Confirm"></div>
+    <div id="nom">...</div>
+    <div id="son">1</div>
+    <div id="LoadOff">0</div>
 </div>
 <audio  id="MonSon" src="Image/Son.wav"></audio>
 <audio  id="MonSon2" src="Image/SonDing.wav"></audio>
