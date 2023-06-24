@@ -101,6 +101,10 @@
 
         //alert(Res1 +' +long =  ' + (Res1+ Longueur))
         Res2 = Vecteur.indexOf('\;', Res1+1)
+          if (Res2==-1) {
+            Res2 = Longueur
+            //alert('RAS')
+          }
         //alert(Res2 + ' -long =  ' + Res2-Res1-Longueur)
         Res3 = Vecteur.substring(Res1+Longueur,Res2)
         document.getElementById("Chaine1").innerHTML=  Res3
@@ -1288,11 +1292,15 @@
                   diff = 7+(diff/7)
                   //Math.floor(diff/7) // nombre de semaine depuis
                   Jourmeme = 0
-                  if((diff/7)==Math.floor(diff/7)) {
-                    Jourmeme = 1
-                  }
                   NumTournoi=Math.floor(diff-(9*Math.floor((diff-1)/9)))
                 //  alert(hour +":" +minutes + "   " + NumTournoi +"  jour meme :" + Jourmeme)
+                //alert(aujourdhui.getDay())
+                if((aujourdhui.getDay()==6) && (aujourdhui.getHours()<22)) { // même jour fin tournoi
+                  //alert("jour id")
+                  NumTournoi = NumTournoi - 1
+                }
+
+
                   return NumTournoi
                }
 
