@@ -1187,7 +1187,7 @@
           document.getElementById("TriangleMenuG").classList.toggle("TriangleMenuGI");
         }
     function ShowForce(Num) {
-
+        JouerSon(4)
 
         document.getElementById("StockShow").innerHTML =Num
 
@@ -1280,7 +1280,13 @@
                if (Num==3) {
                    var sound = document.getElementById("MonSon3");
                }
-                sound.play();}
+              if (Num==4) {
+                    var sound = document.getElementById("MonSon4");
+                }
+              if (Num==5) {
+                     var sound = document.getElementById("MonSon5");
+                 }
+                  sound.play();}
               }
     function CalculNumTournoi() {
       const aujourdhui= new Date();
@@ -1576,6 +1582,9 @@
 <audio  id="MonSon" src="Image/Son.wav"></audio>
 <audio  id="MonSon2" src="Image/SonDing.wav"></audio>
 <audio  id="MonSon3" src="Image/SonWhoo.wav"></audio>
+<audio  id="MonSon4" src="Image/SonEpee.mp3"></audio>
+<audio  id="MonSon5" src="Image/SonRire.mp3"></audio>
+
   <header>
     <table style="margin-left: 0px; margin-right: auto;border-collapse;border-spacing : 0;width: 40%">
       <tr>
@@ -1629,7 +1638,7 @@
           <td colspan="5" class="TabGD" >
 
 
-            <div  id="Difficulte" style="display:inline;">
+            <div  id="Difficulte" style="display:inline;" onmouseover="JouerSon(5)">
               <strong>Difficulté du tournoi : </strong><img width='30px' src='https://fr.wiki.elvenar.com/images/a/a8/Level_small.png'><img width='30px' src='https://fr.wiki.elvenar.com/images/a/a8/Level_small.png'>
             </div>
           </td>
