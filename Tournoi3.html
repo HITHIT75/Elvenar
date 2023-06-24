@@ -88,6 +88,7 @@ function RechCookie(cname) {
   Vecteur = document.cookie
   alert("tous "  + Vecteur)
   Cible =  document.getElementById("TournoiShow").innerHTML
+  document.getElementById("Chaine2").value=  Vecteur
   name = Cible + "="
   Res1 =Vecteur.indexOf(name)*1
   // if (Res1==-1) {
@@ -97,7 +98,7 @@ function RechCookie(cname) {
   Longueur = 1*name.length
 
   alert(Res1 +' +long =  ' + (Res1+ Longueur))
-  Res2 = Vecteur.indexOf(";", Res1+1)
+  Res2 = Vecteur.indexOf('\;', Res1+1)
   alert(Res2 + ' -long =  ' )
   Res3 = Vecteur.substring(Res1+Longueur,Res2-Res1-Longueur)
   alert(Res3)
@@ -1535,22 +1536,24 @@ function RechCookie(cname) {
 </style>
 </head>
 <body onload="Debut()" onbeforeunload="EcrireCook2()">
-<div id="StockShow"  style="visibility:hidden;font-Size:0;display:inline-block;">z</div>
-<div id="ManuelShow"  style="visibility:hidden;font-Size:0;display:inline-block;">0</div>
-<div id="GenreShow"  style="visibility:hidden;font-Size:0;display:inline-block;">0</div>
-<div id="LegendeShow"  style="visibility:hidden;font-Size:0;display:inline-block;">0</div>
-<div id="TournoiShow" ></div>
-<div id="TournoiNum" style="visibility:hidden;font-Size:0;display:inline-block;"></div>
-<div id="Num1Show" style="visibility:hidden;font-Size:0;display:inline-block;"></div>
-<div id="Num2Show" style="visibility:hidden;font-Size:0;display:inline-block;" ></div>
-<div id="Num3Show" style="visibility:hidden;font-Size:0;display:inline-block;"></div>
-<div id="UnitShow" style="visibility:hidden;font-Size:0;display:inline-block;" ></div>
-<div id="Chaine1"  style="visibility:hidden;font-Size:0;display:inline-block;"></div>
 <div id="Chaine2"  ></div>
-<div id="Confirm"  style="visibility:hidden;font-Size:0;display:inline-block;"></div>
-<div id="nom" style="visibility:hidden;font-Size:0;display:inline-block;">...</div>
-<div id="son" style="visibility:hidden;font-Size:0;display:inline-block;">1</div>
-<div id="LoadOff" style="visibility:hidden;font-Size:0;display:inline-block;">0</div>
+<div style="visibility:hidden;font-Size:0;display:inline-block;">
+    <div id="StockShow"  style="visibility:hidden;font-Size:0;display:inline-block;">z</div>
+    <div id="ManuelShow"  style="visibility:hidden;font-Size:0;display:inline-block;">0</div>
+    <div id="GenreShow"  >0</div>
+    <div id="LegendeShow" >0</div>
+    <div id="TournoiShow" ></div>
+    <div id="TournoiNum" ></div>
+    <div id="Num1Show" style="visibility:hidden;font-Size:0;display:inline-block;"></div>
+    <div id="Num2Show" style="visibility:hidden;font-Size:0;display:inline-block;" ></div>
+    <div id="Num3Show" style="visibility:hidden;font-Size:0;display:inline-block;"></div>
+    <div id="UnitShow" style="visibility:hidden;font-Size:0;display:inline-block;" ></div>
+    <div id="Chaine1"  style="visibility:hidden;font-Size:0;display:inline-block;"></div>
+    <div id="Confirm"  style="visibility:hidden;font-Size:0;display:inline-block;"></div>
+    <div id="nom" style="visibility:hidden;font-Size:0;display:inline-block;">...</div>
+    <div id="son" style="visibility:hidden;font-Size:0;display:inline-block;">1</div>
+    <div id="LoadOff" style="visibility:hidden;font-Size:0;display:inline-block;">0</div>
+</div>
 <audio  id="MonSon" src="Image/Son.wav"></audio>
 <audio  id="MonSon2" src="Image/SonDing.wav"></audio>
 <audio  id="MonSon3" src="Image/SonWhoo.wav"></audio>
