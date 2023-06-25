@@ -1278,7 +1278,8 @@
   			    }
   			}
     function JouerSon(Num) {
-              Ecouter = document.getElementById("son").innerHTML
+              
+              Ecouter = getCookie(son)//document.getElementById("son").innerHTML
              if (Ecouter==1) {
                 if (Num==1) {
                     var sound = document.getElementById("MonSon");
