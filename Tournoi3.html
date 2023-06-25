@@ -69,7 +69,7 @@
         setCookie(TypeDeTournoi, Contenu, 365);
         setCookie("Noir", "Noir", 365);
         Vecteur = document.cookie
-        alert("apres ecriture : "  + Vecteur)
+        //alert("apres ecriture : "  + Vecteur)
         document.getElementById("InfoPerso").classList.toggle("TA2");
         //document.getElementById("InfoPerso").classList.toggle("TA1");
   }
@@ -1278,8 +1278,9 @@
   			    }
   			}
     function JouerSon(Num) {
-              
-              Ecouter = getCookie(son)//document.getElementById("son").innerHTML
+
+              //Ecouter = getCookie(son)//
+              document.getElementById("son").innerHTML
              if (Ecouter==1) {
                 if (Num==1) {
                     var sound = document.getElementById("MonSon");
@@ -1382,7 +1383,7 @@
         setTimeout(Chronometrer, 60000)
       }
 
-
+//placeholder="Saisir ici vos commentaires personnels sur ce tournoi - Ils seront visibles à votre prochaine visite."
 
 </script >
 
@@ -1643,7 +1644,7 @@
           </td>
         <td rowspan="6" style="text-align:left;">
             <div id="Legende0" style="position:relative;">
-              <textarea  class="TA1" id="InfoPerso" style="z-index:90;" placeholder="Saisir ici vos commentaires personnels sur ce tournoi - Ils seront visibles à votre prochaine visite."  rows="8" cols="45">
+              <textarea  class="TA1" id="InfoPerso" style="z-index:90;" placeholder="Encore une anomalie à corriger avant que les notes perso soient fonctionnelles."  rows="8" cols="45">
               </textarea>
               <div id='Interro' style='position:absolute;top:0px;right:0px;cursor:pointer;z-index:100;' onclick="EcrireCook()">
                 <img style="height:20px" src="https://snpl.com/wp-content/uploads/2019/12/icone-valider-png-2-300x200.png">
