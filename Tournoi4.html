@@ -97,11 +97,11 @@
             let expires = "expires="+d.toUTCString();
             document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
           }
-  function RechCookie() {
+  function RechCookie(Cible) {
     //username=HITHIT; user=John; event=4,1,2,3,2,1,1,2,2,1,2,3,1,2,2,1,3,2,3,2,2,1,2,1,1,1,1,1,1,2,3,2,2,1,1,3,1,2,1,2,1,3,2,2,3,1,1,1,1,2,1,1,1,1,2,1,2,; Pseudo=HITHIT; Ecouteur=1; Cristal=jkqdf jkfh kjh kzf hzk; Marbre=Essai marbre; Planches=Essai Planches; Parchemins=Parchemaintxt; evenement=25,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3,3,2,1,2,1,1,3,1,1,1,1,3,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,#8; Ecran=0|0
     Vecteur = document.cookie
     //alert("tous "  + Vecteur)
-    Cible =  document.getElementById("TournoiShow").innerHTML
+    //Cible =  document.getElementById("TournoiShow").innerHTML
     document.getElementById("Chaine2").innerHTML=  Vecteur
     name = Cible + "="
     Res1 =Vecteur.indexOf(name)*1
@@ -121,7 +121,8 @@
         //alert(Res2 + ' -long =  ' + Res2-Res1-Longueur)
         Res3 = Vecteur.substring(Res1+Longueur,Res2)
         document.getElementById("Chaine1").innerHTML=  Res3
-        document.getElementById("InfoPerso").value=  Res3
+        return Res3
+        //document.getElementById("InfoPerso").value=  Res3
       }
     }
   function getCookie(cname) {
@@ -138,7 +139,7 @@
         }
         return "";
       }
-    function LireCookieNote() {
+  function LireCookieNote() {
         <div id="Marbre"></div>
         <div id="Acier"></div>
         <div id="Planches"></div>
@@ -149,42 +150,38 @@
         <div id="Poussiere"></div>
         <div id="Gemmes"></div>
         <div id="son">1</div>
-        Res = getCookie("Marbre")
+        Res = RechCookie("Marbre")
           document.getElementById("Marbre" ).innerHTML=Res;
           if(Res=="") {
             document.getElementById("Marbre" ).innerHTML="RAS";
           }
-        Res = getCookie("Acier")
+        Res = RechCookie("Acier")
             document.getElementById("Acier" ).innerHTML=Res;
             if(Res=="") {
               document.getElementById("Acier" ).innerHTML="RAS";
             }
-        Res = getCookie("Planches")
+        Res = RechCookie("Planches")
               document.getElementById("Planches" ).innerHTML=Res;
               if(Res=="") {
                 document.getElementById("Planches" ).innerHTML="RAS";
                 }
-        Res = getCookie("Parchemins")
+        Res = RechCookie("Parchemins")
                 document.getElementById("Parchemins" ).innerHTML=Res;
                     if(Res=="") {
                       document.getElementById("Parchemins" ).innerHTML="RAS";
                     }
-        Res = getCookie("Soie")
+        Res = RechCookie("Soie")
                         document.getElementById("Soie" ).innerHTML=Res;
                         if(Res=="") {
                           document.getElementById("Soie" ).innerHTML="RAS";
                         }
-        Res = getCookie("Soie")
-              document.getElementById("Soie" ).innerHTML=Res;
-              if(Res=="") {
-              document.getElementById("Soie" ).innerHTML="RAS";
-              }
-              Res = getCookie("Elixir")
-        document.getElementById("Elixir" ).innerHTML=Res;
+
+        Res = RechCookie("Elixir")
+            document.getElementById("Elixir" ).innerHTML=Res;
             if(Res=="") {
               document.getElementById("Elixir" ).innerHTML="RAS";
             }
-        Res = getCookie("Poussiere")
+        Res = RechCookie("Poussiere")
                   document.getElementById("Poussiere" ).innerHTML=Res;
                       if(Res=="") {
                         document.getElementById("Poussiere" ).innerHTML="RAS";
