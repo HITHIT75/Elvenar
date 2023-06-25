@@ -42,7 +42,13 @@
   			            return pArr[1]; //return value
   			    }
   			}
-
+  function setCookieSon() {
+    Ecouter = document.getElementById("son").innerHTML
+    const d = new Date();
+    d.setTime(d.getTime() + (256 * 24 * 60 * 60 * 1000));
+    let expires = "expires="+d.toUTCString();
+    document.cookie = "son=" + Ecouter + ";" + expires + ";path=/";
+  }
   function setCookie(cname, cvalue, exdays) {
     document.getElementById("nom").innerHTML=  cvalue
     const d = new Date();
@@ -125,10 +131,12 @@
          if (Ecouter == 1 ) {
              document.getElementById("Ecoute").src="Image/SonOn.png"
              document.getElementById("son").innerHTML="1"
+           setCookieSon()
          }
          else {
            document.getElementById("Ecoute").src="Image/SonOff.png"
           document.getElementById("son").innerHTML="0"
+           setCookieSon()
          }
      }
   function JouerSon(Num) {
