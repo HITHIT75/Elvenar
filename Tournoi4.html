@@ -99,14 +99,14 @@
           }
   function RechCookie(Cible) {
     //username=HITHIT; user=John; event=4,1,2,3,2,1,1,2,2,1,2,3,1,2,2,1,3,2,3,2,2,1,2,1,1,1,1,1,1,2,3,2,2,1,1,3,1,2,1,2,1,3,2,2,3,1,1,1,1,2,1,1,1,1,2,1,2,; Pseudo=HITHIT; Ecouteur=1; Cristal=jkqdf jkfh kjh kzf hzk; Marbre=Essai marbre; Planches=Essai Planches; Parchemins=Parchemaintxt; evenement=25,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3,3,2,1,2,1,1,3,1,1,1,1,3,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,#8; Ecran=0|0
-    Vecteur = document.cookie
+    Vecteur = document.getElementById("Chaine2").innerHTML
     //alert("tous "  + Vecteur)
     //Cible =  document.getElementById("TournoiShow").innerHTML
-    document.getElementById("Chaine2").innerHTML=  Vecteur
     name = Cible + "="
     Res1 =Vecteur.indexOf(name)*1
      if (Res1==-1) {
-       document.getElementById("InfoPerso").value=  ""
+       return "RAS"
+       //document.getElementById("InfoPerso").value=  ""
        //alert('RAS')
      }
      else {
@@ -140,16 +140,9 @@
         return "";
       }
   function LireCookieNote() {
-        <div id="Marbre"></div>
-        <div id="Acier"></div>
-        <div id="Planches"></div>
-        <div id="Cristal"></div>
-        <div id="Parchemins"></div>
-        <div id="Soie"></div>
-        <div id="Elixir"></div>
-        <div id="Poussiere"></div>
-        <div id="Gemmes"></div>
-        <div id="son">1</div>
+    Vecteur = document.cookie
+    document.getElementById("Chaine2").innerHTML=  Vecteur
+
         Res = RechCookie("Marbre")
           document.getElementById("Marbre" ).innerHTML=Res;
           if(Res=="") {
@@ -1685,7 +1678,7 @@
       <div id="Poussiere"></div>
       <div id="Gemmes"></div>
       <div id="son">1</div>
-
+      <div id="Chaine2"></div>
       <div style="visibility:hidden;font-Size:0;display:inline-block;">
           <div id="StockShow"  style="visibility:hidden;font-Size:0;display:inline-block;">z</div>
           <div id="ManuelShow"  >0</div>
@@ -1694,7 +1687,7 @@
           <div id="TournoiShow" ></div>
           <div id="TournoiNum" ></div>
           <div id="Chaine1"></div>
-          <div id="Chaine2"></div>
+
           <div id="ManuelShow">0</div>
           <div id="GenreShow">0</div>
           <div id="Num1Show"></div>
