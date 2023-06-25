@@ -59,19 +59,20 @@
 
       }
   function EcrireCook() {
-      document.getElementById("Chaine2").innerHTML=document.getElementById("InfoPerso").value
-      TypeDeTournoi=document.getElementById("TournoiShow").innerHTML
-      Contenu=document.getElementById("Chaine2").innerHTML
-      document.getElementById("InfoPerso").classList.toggle("TA2");
-      //alert("avanr ecritue cook lecture du tournoi : " + TypeDeTournoi + "   info perso = " + Contenu)
 
-        setCookie("Blanc", "Blanc", 365);
-        setCookie(TypeDeTournoi, Contenu, 365);
-        setCookie("Noir", "Noir", 365);
-        Vecteur = document.cookie
-        //alert("apres ecriture : "  + Vecteur)
-        document.getElementById("InfoPerso").classList.toggle("TA2");
-        //document.getElementById("InfoPerso").classList.toggle("TA1");
+      // document.getElementById("Chaine2").innerHTML=document.getElementById("InfoPerso").value
+      // TypeDeTournoi=document.getElementById("TournoiShow").innerHTML
+      // Contenu=document.getElementById("Chaine2").innerHTML
+      // document.getElementById("InfoPerso").classList.toggle("TA2");
+      // //alert("avanr ecritue cook lecture du tournoi : " + TypeDeTournoi + "   info perso = " + Contenu)
+      //
+      //   setCookie("Blanc", "Blanc", 365);
+      //   setCookie(TypeDeTournoi, Contenu, 365);
+      //   setCookie("Noir", "Noir", 365);
+      //   Vecteur = document.cookie
+      //   //alert("apres ecriture : "  + Vecteur)
+      //   document.getElementById("InfoPerso").classList.toggle("TA2");
+      //   //document.getElementById("InfoPerso").classList.toggle("TA1");
   }
 
   function EcrireCook2() {
@@ -153,7 +154,7 @@
            //document.getElementById("Chaine2").innerTxt=  ""
            document.getElementById("InfoPerso").value=  "RAS"
          }
-         alert("sortie cook0   =" )
+        //alert("sortie cook0   =" )
       }
   function checkCookie2() {
           //alert("dans chekc  cook2 demande ecran")
@@ -1061,8 +1062,9 @@
         }
         }
     function handleChangeAll(Num, Vecteur) {
-      JouerSon(1)
       //alert("debut dans change all")
+        JouerSon(1)
+
           Res=document.getElementById("Tournoi").innerHTML
           document.getElementById("Res" + Num).classList.toggle("down")
            document.getElementById("MenuB" + Res).style.backgroundColor="#D4BB93"
@@ -1078,6 +1080,7 @@
                CacherMenu()
              }
 
+             //alert("debut dans change all apres son")
         }
 
     function MenuShort() {  // a supprimer
@@ -1279,8 +1282,9 @@
   			}
     function JouerSon(Num) {
 
-              //Ecouter = getCookie(son)//
-              document.getElementById("son").innerHTML
+            //Ecouter = getCookie(son)//
+            Ecouter=document.getElementById("son").innerHTML
+
              if (Ecouter==1) {
                 if (Num==1) {
                     var sound = document.getElementById("MonSon");
@@ -1298,7 +1302,9 @@
               if (Num==5) {
                      var sound = document.getElementById("MonSon5");
                  }
-                  sound.play();}
+                // alert(Num)
+                 sound.play();}
+
               }
     function CalculNumTournoi() {
       const aujourdhui= new Date();
@@ -1602,32 +1608,32 @@
 </style>
 </head>
 <body onload="Debut()" onbeforeunload="EcrireCook2()">
+      <audio  id="MonSon" src="Image/Son.wav"></audio>
+      <audio  id="MonSon2" src="Image/SonDing.wav"></audio>
+      <audio  id="MonSon3" src="Image/SonWhoo.wav"></audio>
+      <audio  id="MonSon4" src="Image/SonEpee.mp3"></audio>
+      <audio  id="MonSon5" src="Image/SonRire.mp3"></audio>
+      <div style="visibility:hidden;font-Size:0;display:inline-block;">
+          <div id="StockShow"  style="visibility:hidden;font-Size:0;display:inline-block;">z</div>
+          <div id="ManuelShow"  >0</div>
+          <div id="GenreShow"  >0</div>
+          <div id="LegendeShow" >0</div>
+          <div id="TournoiShow" ></div>
+          <div id="TournoiNum" ></div>
+          <div id="Chaine1"></div>
+          <div id="Chaine2"></div>
+          <div id="ManuelShow">0</div>
+          <div id="GenreShow">0</div>
+          <div id="Num1Show"></div>
+          <div id="Num2Show"></div>
+          <div id="Num3Show"></div>
+          <div id="UnitShow"></div>
+          <div id="Confirm"></div>
+          <div id="nom">...</div>
+          <div id="son">1</div>
+          <div id="LoadOff">0</div>
+      </div>
 
-<div style="visibility:hidden;font-Size:0;display:inline-block;">
-    <div id="StockShow"  style="visibility:hidden;font-Size:0;display:inline-block;">z</div>
-    <div id="ManuelShow"  >0</div>
-    <div id="GenreShow"  >0</div>
-    <div id="LegendeShow" >0</div>
-    <div id="TournoiShow" ></div>
-    <div id="TournoiNum" ></div>
-    <div id="Chaine1"></div>
-    <div id="Chaine2"></div>
-    <div id="ManuelShow">0</div>
-    <div id="GenreShow">0</div>
-    <div id="Num1Show"></div>
-    <div id="Num2Show"></div>
-    <div id="Num3Show"></div>
-    <div id="UnitShow"></div>
-    <div id="Confirm"></div>
-    <div id="nom">...</div>
-    <div id="son">1</div>
-    <div id="LoadOff">0</div>
-</div>
-<audio  id="MonSon" src="Image/Son.wav"></audio>
-<audio  id="MonSon2" src="Image/SonDing.wav"></audio>
-<audio  id="MonSon3" src="Image/SonWhoo.wav"></audio>
-<audio  id="MonSon4" src="Image/SonEpee.mp3"></audio>
-<audio  id="MonSon5" src="Image/SonRire.mp3"></audio>
 
   <header>
     <table style="margin-left: 0px; margin-right: auto;border-collapse;border-spacing : 0;width: 40%">
