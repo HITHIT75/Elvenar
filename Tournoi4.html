@@ -57,7 +57,7 @@
     //alert("dans dbt entree de check cook2")
     checkCookie2()
     document.getElementById("LoadOff").innerHTML=1
-    LireCookieNote()
+    //LireCookieNote()
 
       }
   function EcrireCook() {
@@ -139,7 +139,24 @@
         }
         return "";
       }
+
+  function MaJ(Num) {
+    document.getElementById("Chaine2").innerHTML=Num
+  }
   function LireCookieNote() {
+      var Produit = localStorage.getItem('Marbre');
+      alert(Produit)
+       if (Produit==null) {
+         alert("Ras")
+         localStorage.setItem('Marbre', 'RAS');
+       }
+       else (
+         alert(Produit)
+         document.getElementById("InfoPerso").value = Produit
+       )
+
+
+    return
     Vecteur = document.cookie
     document.getElementById("Chaine2").innerHTML=  Vecteur
 
@@ -153,6 +170,12 @@
             if(Res=="") {
               document.getElementById("Acier" ).innerHTML="RAS";
             }
+        Res = RechCookie("Cristal")
+                  document.getElementById("Cristal" ).innerHTML=Res;
+                  if(Res=="") {
+                    document.getElementById("Cristal" ).innerHTML="RAS";
+                    }
+
         Res = RechCookie("Planches")
               document.getElementById("Planches" ).innerHTML=Res;
               if(Res=="") {
@@ -1070,7 +1093,6 @@
           document.getElementById("GenreShow").innerHTML = "1";
           //RechCookie()
           Données()
-
           if (document.getElementById("LoadOff").innerHTML=="1") {
             EcrireCook2()
           }
@@ -1679,6 +1701,7 @@
       <div id="Gemmes"></div>
       <div id="son">1</div>
       <div id="Chaine2"></div>
+      <div id="GenreShow"  >0</div>
       <div style="visibility:hidden;font-Size:0;display:inline-block;">
           <div id="StockShow"  style="visibility:hidden;font-Size:0;display:inline-block;">z</div>
           <div id="ManuelShow"  >0</div>
