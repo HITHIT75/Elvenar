@@ -61,11 +61,11 @@
 
       }
   function EcrireCook() {
-
+      Num= document.getElementById("TournoiShow").innerHTML
       // document.getElementById("Chaine2").innerHTML=document.getElementById("InfoPerso").value
       // TypeDeTournoi=document.getElementById("TournoiShow").innerHTML
       // Contenu=document.getElementById("Chaine2").innerHTML
-      // document.getElementById("InfoPerso").classList.toggle("TA2");
+      localStorage.setItem(Num, document.getElementById("InfoPerso").value);
       // //alert("avanr ecritue cook lecture du tournoi : " + TypeDeTournoi + "   info perso = " + Contenu)
       //
       //   setCookie("Blanc", "Blanc", 365);
@@ -73,8 +73,9 @@
       //   setCookie("Noir", "Noir", 365);
       //   Vecteur = document.cookie
       //   //alert("apres ecriture : "  + Vecteur)
-      //   document.getElementById("InfoPerso").classList.toggle("TA2");
-      //   //document.getElementById("InfoPerso").classList.toggle("TA1");
+         //document.getElementById("InfoPerso").classList.toggle("TA1");
+        //  document.getElementById("InfoPerso").className = "TA1";
+          document.getElementById("InfoPerso").classList.toggle("TA2");
   }
 
   function EcrireCook2() {
@@ -140,75 +141,15 @@
         return "";
       }
 
-  function MaJ(Num) {
-    document.getElementById("Chaine2").innerHTML=Num
-  }
   function LireCookieNote() {
-      var Produit = localStorage.getItem('Marbre');
-      alert(Produit)
+      Num=document.getElementById("TournoiShow").innerHTML
+      var Produit = localStorage.getItem(Num);
        if (Produit==null) {
-         alert("Ras")
-         localStorage.setItem('Marbre', 'RAS');
+         document.getElementById("InfoPerso").value=  ""
+         return
        }
-       else (
-         alert(Produit)
-         //document.getElementById("InfoPerso").value = Produit
-       )
-
-
-    return
-    Vecteur = document.cookie
-    document.getElementById("Chaine2").innerHTML=  Vecteur
-
-        Res = RechCookie("Marbre")
-          document.getElementById("Marbre" ).innerHTML=Res;
-          if(Res=="") {
-            document.getElementById("Marbre" ).innerHTML="RAS";
-          }
-        Res = RechCookie("Acier")
-            document.getElementById("Acier" ).innerHTML=Res;
-            if(Res=="") {
-              document.getElementById("Acier" ).innerHTML="RAS";
-            }
-        Res = RechCookie("Cristal")
-                  document.getElementById("Cristal" ).innerHTML=Res;
-                  if(Res=="") {
-                    document.getElementById("Cristal" ).innerHTML="RAS";
-                    }
-
-        Res = RechCookie("Planches")
-              document.getElementById("Planches" ).innerHTML=Res;
-              if(Res=="") {
-                document.getElementById("Planches" ).innerHTML="RAS";
-                }
-        Res = RechCookie("Parchemins")
-                document.getElementById("Parchemins" ).innerHTML=Res;
-                    if(Res=="") {
-                      document.getElementById("Parchemins" ).innerHTML="RAS";
-                    }
-        Res = RechCookie("Soie")
-                        document.getElementById("Soie" ).innerHTML=Res;
-                        if(Res=="") {
-                          document.getElementById("Soie" ).innerHTML="RAS";
-                        }
-
-        Res = RechCookie("Elixir")
-            document.getElementById("Elixir" ).innerHTML=Res;
-            if(Res=="") {
-              document.getElementById("Elixir" ).innerHTML="RAS";
-            }
-        Res = RechCookie("Poussiere")
-                  document.getElementById("Poussiere" ).innerHTML=Res;
-                      if(Res=="") {
-                        document.getElementById("Poussiere" ).innerHTML="RAS";
-                      }
-      Res = RechCookie("Gemmes")
-                    document.getElementById("Gemmes" ).innerHTML=Res;
-                    if(Res=="") {
-                  document.getElementById("Gemmes" ).innerHTML="RAS";
-                                }
-      Res = RechCookie("son")
-                document.getElementById("son" ).innerHTML=Res;
+       document.getElementById("Chaine2").innerHTML=  localStorage.getItem(Num);
+       document.getElementById("InfoPerso").value=  localStorage.getItem(Num);
 
       }
   function checkCookie(Cible) {
@@ -1151,6 +1092,7 @@
              document.getElementById("MenuA" + Num).style.backgroundColor="#F7A63D"
             // alert("avant données() dans change all")
              Données()
+             LireCookieNote()
              //alert("après données() dans change all")
              if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
                CacherMenu()
@@ -1464,9 +1406,7 @@
         }
         setTimeout(Chronometrer, 60000)
       }
-
-//placeholder="Saisir ici vos commentaires personnels sur ce tournoi - Ils seront visibles à votre prochaine visite."
-
+//:not( :hover )
 </script >
 
 
@@ -1650,8 +1590,10 @@
           .TA1 {
             background-color: white;
           }
+
           .TA2 {
             background-color: white;
+            animation-fill-mode: backwards;
             -webkit-animation-name: demo;
             -webkit-animation-duration: 900ms;
             -webkit-animation-iteration-count: 1;
@@ -1690,18 +1632,7 @@
       <audio  id="MonSon4" src="Image/SonEpee.mp3"></audio>
       <audio  id="MonSon5" src="Image/SonRire.mp3"></audio>
 
-      <div id="Marbre"></div>
-      <div id="Acier"></div>
-      <div id="Planches"></div>
-      <div id="Cristal"></div>
-      <div id="Parchemins"></div>
-      <div id="Soie"></div>
-      <div id="Elixir"></div>
-      <div id="Poussiere"></div>
-      <div id="Gemmes"></div>
-      <div id="son">1</div>
-      <div id="Chaine2"></div>
-      <div id="GenreShow"  >0</div>
+
       <div style="visibility:hidden;font-Size:0;display:inline-block;">
           <div id="StockShow"  style="visibility:hidden;font-Size:0;display:inline-block;">z</div>
           <div id="ManuelShow"  >0</div>
@@ -1710,7 +1641,18 @@
           <div id="TournoiShow" ></div>
           <div id="TournoiNum" ></div>
           <div id="Chaine1"></div>
-
+          <div id="Marbre"></div>
+          <div id="Acier"></div>
+          <div id="Planches"></div>
+          <div id="Cristal"></div>
+          <div id="Parchemins"></div>
+          <div id="Soie"></div>
+          <div id="Elixir"></div>
+          <div id="Poussiere"></div>
+          <div id="Gemmes"></div>
+          <div id="son">1</div>
+          <div id="Chaine2"></div>
+          <div id="GenreShow"  >0</div>
           <div id="ManuelShow">0</div>
           <div id="GenreShow">0</div>
           <div id="Num1Show"></div>
@@ -1739,11 +1681,8 @@
           </td>
         <td rowspan="6" style="text-align:left;">
             <div id="Legende0" style="position:relative;">
-              <textarea  class="TA1" id="InfoPerso" style="z-index:90;" placeholder="Encore une anomalie à corriger avant que les notes perso soient fonctionnelles."  rows="8" cols="45">
+              <textarea  class="TA1" onchange='EcrireCook()' id="InfoPerso" style="z-index:90;" placeholder="Saisir ici vos commentaires personnels sur ce tournoi - Ils seront visibles à votre prochaine visite."  rows="8" cols="45">
               </textarea>
-              <div id='Interro' style='position:absolute;top:0px;right:0px;cursor:pointer;z-index:100;' onclick="EcrireCook()">
-                <img style="height:20px" src="https://snpl.com/wp-content/uploads/2019/12/icone-valider-png-2-300x200.png">
-              </div>
 
             </div>
 
