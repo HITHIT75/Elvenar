@@ -42,7 +42,13 @@
   			            return pArr[1]; //return value
   			    }
   			}
-
+  function setCookieSon() {
+    Ecouter = document.getElementById("son").innerHTML
+    const d = new Date();
+    d.setTime(d.getTime() + (256 * 24 * 60 * 60 * 1000));
+    let expires = "expires="+d.toUTCString();
+    document.cookie = "son=" + Ecouter + ";" + expires + ";path=/";
+  }
   function setCookie(cname, cvalue, exdays) {
     document.getElementById("nom").innerHTML=  cvalue
     const d = new Date();
@@ -125,10 +131,12 @@
          if (Ecouter == 1 ) {
              document.getElementById("Ecoute").src="Image/SonOn.png"
              document.getElementById("son").innerHTML="1"
+           setCookieSon()
          }
          else {
            document.getElementById("Ecoute").src="Image/SonOff.png"
           document.getElementById("son").innerHTML="0"
+           setCookieSon()
          }
      }
   function JouerSon(Num) {
@@ -244,6 +252,7 @@
   function SautGenerik(){
     JouerSon(2)
     document.getElementById("Frame").src="generique.html";
+   document.getElementById("Compteur").visibility = "hidden"
     Opacifier(1)
     if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
       navOnOff()
@@ -252,6 +261,7 @@
   function SautDoigt(){
     JouerSon(2)
     document.getElementById("Frame").src="Zoom.html";
+   document.getElementById("Compteur").visibility = "hidden"
     Opacifier(9)
     if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
       navOnOff()
@@ -260,8 +270,9 @@
   function SautJournal(){
     JouerSon(2)
     Opacifier(7)
-    Cible="Journal2.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
+    Cible="Journal3.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
     document.getElementById("Frame").src=Cible;
+   document.getElementById("Compteur").style="visibility:hidden"
       if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
       navOnOff()
     }
@@ -271,6 +282,7 @@
     Opacifier(9)
     Cible="Padawan.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
     document.getElementById("Frame").src=Cible;
+   document.getElementById("Compteur").style="visibility:hidden"
     if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
       navOnOff()
     }
@@ -280,6 +292,7 @@
     Opacifier(2)
     Cible="Home2.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
     document.getElementById("Frame").src=Cible;
+    document.getElementById("Compteur").style="visibility:visible"
     if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
       navOnOff()
     }
@@ -289,6 +302,7 @@
     Opacifier(4)
     Cible="Aventure.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
     document.getElementById("Frame").src=Cible;
+   document.getElementById("Compteur").style="visibility:hidden"
     if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
       navOnOff()
     }
@@ -298,6 +312,7 @@
     Opacifier(8)
     Cible="Liens.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
     document.getElementById("Frame").src=Cible;
+   document.getElementById("Compteur").visibility = "hidden"
     if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
       navOnOff()
     }
@@ -307,6 +322,7 @@
     Opacifier(5)
     Cible="Tournoi4.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
     document.getElementById("Frame").src=Cible;
+   document.getElementById("Compteur").style="visibility:hidden"
     if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
       navOnOff()
     }
@@ -316,6 +332,7 @@
     Opacifier(3)
     Cible="Event.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
     document.getElementById("Frame").src=Cible;
+    document.getElementById("Compteur").style="visibility:hidden"
     if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
       navOnOff()
     }
@@ -325,6 +342,7 @@
     Opacifier(6)
     Cible="Merveilles.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
     document.getElementById("Frame").src=Cible;
+   document.getElementById("Compteur").style="visibility:hidden"
     if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
       navOnOff()
     }
@@ -334,6 +352,7 @@
     Opacifier(10)
     Cible="FAQ.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
     document.getElementById("Frame").src=Cible;
+   document.getElementById("Compteur").style="visibility:hidden"
     if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
       navOnOff()
     }
@@ -597,9 +616,15 @@
         <th>      <img id="imgNavOO" class="imgNavOO1" onclick="navOnOff()" src="Image/Logo32.png" style ="float: left;margin-left:50px;cursor: pointer;"></th>
         <th>
           <Div style ="position:fixed;top:0px;right:0px;cursor:pointer;">
-            <img src="Image/SonOn.png" id="Ecoute" width="30px"   onclick="OnOffSon()" >
+           <Div style="display:inline-block">
+                    <img  id="Compteur" style="visibility:visible" src="https://counter10.optistats.ovh/private/compteurdevisite.php?c=4en834az4fqmde73d2aunp2tf9mpx9wz" border="0" title="compteur de visiteur" alt="compteur de visiteur">
+            </div>
+           <img src="Image/SonOn.png" id="Ecoute" width="30px"   onclick="OnOffSon()" >
             <a href="mailto:HITHIT.Elvenar@gmail.com"><img src="Image/Mailto.png"  width="30px"   ></a>
           </div>
+
+
+
           <div id="Degre10"  style="display:none">2</div>
           <div id="nom"   style="display:none"></div>
           <div id="son"  style="display:none" >1</div>
@@ -621,7 +646,7 @@
       </iframe>
   </article>
   <nav id="nav" class='nav1' style="display:none;">
-
+...
       <div class="centered3Menu1"  id="MenuItem1" onmouseout="essaiVide()" onmouseover="essai11()" onclick="SautGenerik()">&nbsp;</div>
       <div class="centered3" id="MenuItem2"   onmouseout="essaiVide()" onmouseover="essai21()" onclick="SautHome()">AccueiL</div>
       <div class="centered3" id="MenuItem3" onmouseout="essaiVide()" onmouseover="essai31()" onclick="SautEvent()">EvenT</div>
