@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@500&family=Metamorphous&family=Rubik+Beastly&display=swap" rel="stylesheet">
+
+<script type="text/javascript">
+
+  function Debut() {
+	  loadData()
+document.getElementById("Fleche1").addEventListener("click", FlecheMoins);
+document.getElementById("Fleche2").addEventListener("click", FlechePlus);
+      }
+
+  function loadData() {
+	var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRPAA3qaqB_cOanF7wucoqkea5OLqi5OR-DR6n2cX_yNIGPU5Gfbsh6mSNC9zLPxeHQLmBZ5SWh9-kh/pub?gid=682187405&single=true&output=csv";
+  	//var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7h49K5ALJK98pf34d7KHeUecOC2w7xZLA8r5k6MMNTzOBhA8VvXSo7v5_xlAxPfrw69xGxKg5DqKf/pub?gid=569730062&single=true&output=csv";
+    	xmlhttp = new XMLHttpRequest();
+   	 xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4) {
+
+			Num=document.getElementById("Actuel").innerHTML*1
+			//alert(Num + "Num de loaddata")
+			const parts = xmlhttp.responseText.split("@");
+			Maxo=parts.length-2;
+
+			if (Num<1) {
+				Num=Maxo
+				document.getElementById("Maxi").innerHTML = Maxo
+				document.getElementById("Actuel").innerHTML = Num
+			}
+
+			var0=parts[Num]
+			 result = var0.substring(0, var0.length-4);
+			document.getElementById("Contenu").innerHTML=result
+			Concat = ""
+			for (var i = 1; i < Maxo+1; i++) {
+
+				var0=parts[i]
+			 	result = var0.substring(0, var0.length-4);
+				//Concat = Concat + "<div id='Contenu" + i + "'>" + result  + "</div>"
+					// Create element:
+					para = document.createElement("Div");
+					para.innerHTML = result;
+					para.id= "Content" + i;
+					// Append to another element:
+					document.getElementById("Cont").appendChild(para);
+					Res = document.getElementById("Content" + i).innerHTML + " [ " + i +" ]"
+
+
+				//alert(Res)
+
+				}
+			//document.getElementById("Cont").innerHTML = Concat
+
+			document.getElementById("Contenu").style.textAlign = "left";
+        	}
+   		 };
+	    xmlhttp.open("GET", url, true);
+	    xmlhttp.send(null);
+	}
+	function InfoStock() {
+		//alert("Infostock")
+		Num=document.getElementById("Actuel").innerHTML*1
+		Concat = document.getElementById("Content" + Num).innerHTML
+		document.getElementById("Contenu").innerHTML=Concat
+	}
+	function FlecheMoins() {
+		JouerSon(1)
+		document.getElementById("Contenu").innerHTML="<img src='https://img1.picmix.com/output/stamp/normal/2/4/0/6/1356042_c854c.gif' style='width: 200px;'>"
+		//document.getElementById("Contenu").style.textAlign = "center";
+			Num=document.getElementById("Actuel").innerHTML*1
+			Maxo=document.getElementById("Maxi").innerHTML*1
+		//alert("lecture = " + Num)
+		NumEx=Num
+		//alert("avant -1 = " + Num + "ex" + NumEx)
+			Num=Num-1
+		//alert("apres -1 = " + Num)
+			if (Num<1) {
+				Num=1
+
+			}
+		//alert("apres condition 0 = " + Num)
+			document.getElementById("Actuel").innerHTML=Num
+		//Num=document.getElementById("Actuel").innerHTML*1
+		//alert("apres enregister element = " + Num + "ex" + NumEx)
+			if (Num<Maxo) {
+				document.getElementById("Fleche2").className= "FlecheVis"
+			}
+      else {
+        document.getElementById("Fleche2").className= "FlecheInVis"
+      }
+			if (Num==1) {
+				document.getElementById("Fleche1").className="FlecheInVis"
+			}
+      else {
+        document.getElementById("Fleche1").className="FlecheVis"
+      }
+
+		//alert("fin fleche 1")
+			InfoStock()
+			//loadData()
+		}
+	function FlechePlus() {
+		JouerSon(1)
+		//document.getElementById("Contenu").innerHTML="<img src='https://img1.picmix.com/output/stamp/normal/2/4/0/6/1356042_c854c.gif' style='width: 200px;'>"
+			Num=document.getElementById("Actuel").innerHTML*1
+			Maxo=document.getElementById("Maxi").innerHTML*1
+		NumEx=Num
+		//alert("lod num = " + Num + " ex   " + NumEx  +"Maxo =" + Maxo)
+		Num=Num+1
+		//
+		//alert("apres + 1 = " + Num)
+			if (Num>Maxo) {
+				//alert("lod Num>Maxo " + Num + " Maxo   " + Maxo)
+						Num=Maxo
+					}
+				document.getElementById("Actuel").innerHTML=Num
+
+        if (Num<Maxo) {
+  				document.getElementById("Fleche2").className= "FlecheVis"
+  			}
+        else {
+          document.getElementById("Fleche2").className= "FlecheInVis"
+        }
+  			if (Num==1) {
+  				document.getElementById("Fleche1").className="FlecheInVis"
+  			}
+        else {
+          document.getElementById("Fleche1").className="FlecheVis"
+        }
+		//alert("apres enregister element = " + Num + "ex" + NumEx)
+			InfoStock()
+		//alert("apres loaddata  ")
+		}
+
+
+ function JouerSon(Num) {
+
+        Ecouter = 1
+
+
+       if (Ecouter==1) {
+          if (Num==1) {
+              var sound = document.getElementById("MonSon1");
+          }
+           sound.play();}
+         }
+
+
+</script>
+<Style>
+/*********************************** Site Structure ******************************/
+
+body {
+	font-size: 14px;
+	font-family: Merienda;
+  	padding: 0;
+  background-image: url('Image/FondJournal2.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 80% 0%;
+
+
+}
+br {
+	content: "";
+	margin: 2em;
+	display: block;
+	font-size: 24%;
+}
+#header-{
+	background-image: url(Image/header_bg.jpg);
+	height: 186px;
+	width: 100%;
+	padding-top: 214px;
+	padding-left: 59px;
+}
+#container {margin: 0px 0px;
+          width: 100%;
+	font-size: 14px;
+    }
+#content_top {
+
+	height: 120px;
+	width: 100%;
+	text-align: center;
+	padding-top: 25px;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+#content {
+
+	padding-left: 60px;
+    padding-right: 60px;
+}
+#footer {
+	background-image: url(Image/footer.png);
+background-size: contain;
+background-repeat: no-repeat;
+	height: 211px;
+	text-align: center;
+}
+
+/********************************** Text formatting *****************/
+
+
+p {
+   padding-bottom: 25px;
+}
+
+
+p.text:first-letter
+{
+font-size: 20px;;
+padding: 0.143em;
+color:green;
+float: left;
+}
+
+.FlecheVis {
+	visibility:visible;
+	}
+.FlecheInVis {
+	visibility:hidden;
+	}
+  .flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: first baseline;
+
+  }
+
+  .flex-container > div {
+    margin: 5px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 20px;
+  }
+
+
+</Style>
+
+
+
+</head>
+<body onload="Debut()">
+<audio  id="MonSon1" src="Image/SonJournalFleche.wav"></audio>
+
+
+<div class="flex-container">
+  <div ><img id="Fleche1"  onclick="FlecheMoins()" src="Image\Fleche.png" style="width: 50px;transform: rotateY(180deg);cursor:pointer;"></div>
+  <div id="Actuel" ></div>
+  <div><img  src="Image\LivrePage.gif" width="70px" style="display: inline;"></div>
+  <div id="Maxi" ></div>
+  <div  ><img id="Fleche2" onclick="FlechePlus()" src="Image\Fleche.png" style="width: 50px;cursor:pointer;" ></div>
+</div>
+
+
+<div id="container">
+  <div id="content">
+    <p class="text" id="Contenu" style="text-align: left;">
+	    <img src="https://img1.picmix.com/output/stamp/normal/2/4/0/6/1356042_c854c.gif" style="width: 200px;">
+    </p>
+  </div>
+
+</div>
+<div id="Cont" style="display: none;"></div>
+
+
+
+
+
+
+
+
+</html>
