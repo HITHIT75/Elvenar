@@ -8,6 +8,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@500&family=Metamorphous&family=Rubik+Beastly&display=swap" rel="stylesheet">
 
 <script type="text/javascript">
+document.getElementById("ContFleche1").addEventListener("click", FlecheMoins);	
+document.getElementById("ContFleche2").addEventListener("click", FlechePlus);		
   function Debut() {
 	  loadData()
 
@@ -225,7 +227,7 @@ float: left;
 </head>
 <body onload="Debut()">
   <div style="display: inline-block;width:50px;max-width:50px;">
-	   <div id="ContFleche1"  style="cursor:pointer;display: inline-block;width: 30px;" onclick="FlecheMoins()">
+	   <div id="ContFleche1"  style="cursor:pointer;display: inline-block;width: 30px;" >
 		     <img id="Fleche1" src="Image\Fleche.png" style="width: 50px;transform: rotateY(180deg);cursor:pointer;">
     </div>
 	</div>
@@ -235,7 +237,7 @@ float: left;
 	</div>
 
 	<div id="Maxi" style="display: inline-block;text-align: center;width: 20px;font-size: 18px;"></div>
-	<div id="ContFleche2" Class="FlecheInVis" style="display: inline-block;"  onclick="FlechePlus()" onTouchEnd="FlechePlus()">
+	<div id="ContFleche2" Class="FlecheInVis" style="display: inline-block;" >
 		<img id="Fleche2" src="Image\Fleche.png" style="width: 50px;cursor:pointer;" onclick="FlechePlus()" onTouchEnd="FlechePlus()">
 	</div>
 
