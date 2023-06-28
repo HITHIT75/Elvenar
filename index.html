@@ -252,6 +252,7 @@
   function SautGenerik(){
     JouerSon(2)
     document.getElementById("Frame").src="generique.html";
+   document.getElementById("Compteur").visibility = "hidden"
     Opacifier(1)
     if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
       navOnOff()
@@ -260,6 +261,7 @@
   function SautDoigt(){
     JouerSon(2)
     document.getElementById("Frame").src="Zoom.html";
+   document.getElementById("Compteur").visibility = "hidden"
     Opacifier(9)
     if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
       navOnOff()
@@ -270,6 +272,7 @@
     Opacifier(7)
     Cible="Journal2.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
     document.getElementById("Frame").src=Cible;
+   document.getElementById("Compteur").visibility = "hidden"
       if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
       navOnOff()
     }
@@ -279,6 +282,7 @@
     Opacifier(9)
     Cible="Padawan.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
     document.getElementById("Frame").src=Cible;
+   document.getElementById("Compteur").visibility = "hidden"
     if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
       navOnOff()
     }
@@ -288,7 +292,7 @@
     Opacifier(2)
     Cible="Home2.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
     document.getElementById("Frame").src=Cible;
-    document.getElementById("Compteur").visibility="visible";
+    document.getElementById("Compteur").visibility = "visible"
     if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
       navOnOff()
     }
@@ -298,6 +302,7 @@
     Opacifier(4)
     Cible="Aventure.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
     document.getElementById("Frame").src=Cible;
+   document.getElementById("Compteur").visibility = "hidden"
     if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
       navOnOff()
     }
@@ -307,6 +312,7 @@
     Opacifier(8)
     Cible="Liens.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
     document.getElementById("Frame").src=Cible;
+   document.getElementById("Compteur").visibility = "hidden"
     if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
       navOnOff()
     }
@@ -316,6 +322,7 @@
     Opacifier(5)
     Cible="Tournoi4.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
     document.getElementById("Frame").src=Cible;
+   document.getElementById("Compteur").visibility = "hidden"
     if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
       navOnOff()
     }
@@ -325,7 +332,7 @@
     Opacifier(3)
     Cible="Event.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
     document.getElementById("Frame").src=Cible;
-    document.getElementById("Compteur").visibility="hidden";
+    document.getElementById("Compteur").visibility = "hidden"
     if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
       navOnOff()
     }
@@ -335,6 +342,7 @@
     Opacifier(6)
     Cible="Merveilles.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
     document.getElementById("Frame").src=Cible;
+   document.getElementById("Compteur").visibility = "hidden"
     if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
       navOnOff()
     }
@@ -344,6 +352,7 @@
     Opacifier(10)
     Cible="FAQ.html?nom=" + document.getElementById("nom").innerHTML + "&son=" + + document.getElementById("son").innerHTML
     document.getElementById("Frame").src=Cible;
+   document.getElementById("Compteur").visibility = "hidden"
     if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
       navOnOff()
     }
@@ -607,8 +616,8 @@
         <th>      <img id="imgNavOO" class="imgNavOO1" onclick="navOnOff()" src="Image/Logo32.png" style ="float: left;margin-left:50px;cursor: pointer;"></th>
         <th>
           <Div style ="position:fixed;top:0px;right:0px;cursor:pointer;">
-           <Div id="Compteur">
-            <a><img src="https://counter10.optistats.ovh/private/compteurdevisite.php?c=j66lw9yckdquz7d7hyyj1rj1hprwqtkr" border="0" title="compteur pour site" alt="compteur pour site"></a>
+           <Div id="Compteur" style="display:inline-block">
+             <a><img src="https://counter10.optistats.ovh/private/compteurdevisite.php?c=8hjfwklcb6b5fca5wdg4q7ceu5u87fx7" border="0" title="compteur de visite" alt="compteur de visite"></a>
            </Div>
             <img src="Image/SonOn.png" id="Ecoute" width="30px"   onclick="OnOffSon()" >
             <a href="mailto:HITHIT.Elvenar@gmail.com"><img src="Image/Mailto.png"  width="30px"   ></a>
