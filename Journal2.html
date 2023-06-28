@@ -69,6 +69,7 @@ document.getElementById("ContFleche2").addEventListener("click", FlechePlus);
 		document.getElementById("Contenu").innerHTML=Concat
 	}
 	function FlecheMoins() {
+		JouerSon(1)
 		document.getElementById("Contenu").innerHTML="<img src='https://img1.picmix.com/output/stamp/normal/2/4/0/6/1356042_c854c.gif' style='width: 200px;'>"
 		//document.getElementById("Contenu").style.textAlign = "center";
 			Num=document.getElementById("Actuel").innerHTML*1
@@ -104,6 +105,7 @@ document.getElementById("ContFleche2").addEventListener("click", FlechePlus);
 			//loadData()
 		}
 	function FlechePlus() {
+		JouerSon(1)
 		//document.getElementById("Contenu").innerHTML="<img src='https://img1.picmix.com/output/stamp/normal/2/4/0/6/1356042_c854c.gif' style='width: 200px;'>"
 			Num=document.getElementById("Actuel").innerHTML*1
 			Maxo=document.getElementById("Maxi").innerHTML*1
@@ -135,12 +137,20 @@ document.getElementById("ContFleche2").addEventListener("click", FlechePlus);
 		//alert("apres loaddata  ")
 		}
 
-//	background-image: url(Image/ParcheminJdB.png);
-//  background-size: contain;
-//  background-repeat: no-repeat;
-//  background-image: url(Image/Parchemin.png);
 
-//  background-size: 100% 360%;
+ function JouerSon(Num) {
+
+        Ecouter = 1
+
+
+       if (Ecouter==1) {
+          if (Num==1) {
+              var sound = document.getElementById("MonSon1");
+          }
+           sound.play();}
+         }
+
+	
 </script>
 <Style>
 /*********************************** Site Structure ******************************/
@@ -226,9 +236,12 @@ float: left;
 
 </head>
 <body onload="Debut()">
+<audio  id="MonSon1" src="Image/SonJournalFleche.wav"></audio>	
+
+	
   <div style="display: inline-block;width:50px;max-width:50px;">
 	   <div id="ContFleche1"  style="cursor:pointer;display: inline-block;width: 30px;" >
-		     <img id="Fleche1" src="Image\Fleche.png" style="width: 50px;transform: rotateY(180deg);cursor:pointer;">
+	<img id="Fleche1" src="Image\Fleche.png" style="width: 50px;transform: rotateY(180deg);cursor:pointer;">
     </div>
 	</div>
 	<div id="Actuel" style="display: inline-block;text-align: center;width: 20px;font-size: 18px;"></div>
