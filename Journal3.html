@@ -9,14 +9,9 @@
 
 <script type="text/javascript">
 
-  function Debut() {
-	  loadData()
-document.getElementById("Fleche1").addEventListener("click", FlecheMoins);
-document.getElementById("Fleche2").addEventListener("click", FlechePlus);
-      }
 
   function loadData() {
-	var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRPAA3qaqB_cOanF7wucoqkea5OLqi5OR-DR6n2cX_yNIGPU5Gfbsh6mSNC9zLPxeHQLmBZ5SWh9-kh/pub?gid=682187405&single=true&output=csv";
+	   var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRPAA3qaqB_cOanF7wucoqkea5OLqi5OR-DR6n2cX_yNIGPU5Gfbsh6mSNC9zLPxeHQLmBZ5SWh9-kh/pub?gid=682187405&single=true&output=csv";
   	//var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7h49K5ALJK98pf34d7KHeUecOC2w7xZLA8r5k6MMNTzOBhA8VvXSo7v5_xlAxPfrw69xGxKg5DqKf/pub?gid=569730062&single=true&output=csv";
     	xmlhttp = new XMLHttpRequest();
    	 xmlhttp.onreadystatechange = function () {
@@ -267,8 +262,14 @@ document.getElementById("Fleche2").addEventListener("click", FlechePlus);
 
 
 
+<script type="text/javascript">
 
-
+  function Debut() {
+	  loadData()
+document.getElementById("Fleche1").addEventListener("click", FlecheMoins);
+document.getElementById("Fleche2").addEventListener("click", FlechePlus);
+      }
+</script>
 
 
 
