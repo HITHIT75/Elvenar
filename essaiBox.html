@@ -14,7 +14,7 @@
     setTimeout(myTimeout2, 5500)
     Opacifier(2)
     Sonore = localStorage.getItem("son");
-    alert(Sonore)
+    //alert(Sonore)
      if (Sonore==null) {
         localStorage.setItem("son", 1);
      }
@@ -148,9 +148,10 @@
      }
   function JouerSon(Num) {
 
-        Ecouter = localStorage.getItem("son");
+        Ecouter = localStorage.getItem("son")*1;
         alert(Ecouter + "  " + Num)
        if (Ecouter==1) {
+         alert("dans  " + Ecouter + "  " + Num)
             if (Num==1) {
                 var sound = document.getElementById("MonSon");
             }
