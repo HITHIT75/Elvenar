@@ -13,9 +13,12 @@
     setTimeout(myTimeout1, 1500)
     setTimeout(myTimeout2, 5500)
     Opacifier(2)
+    Sonore = localStorage.getItem("son");
+     if (Sonore==null) {
+        localStorage.setItem("son", 1);
 
-    // Chrono(3500)
-
+     }    
+     ActualisationEcouteur()
     }
   function myTimeout1() {
     document.getElementById("Frame").src="generique.html";
@@ -122,27 +125,26 @@
 
   }
   function OnOffSon() {
-        Ecouter = document.getElementById("son").innerHTML
-        document.getElementById("son").innerHTML=Math.abs(Ecouter-1);
+        Ecouter = localStorage.getItem("son")
+        localStorage.setItem("son", Math.abs(Ecouter-1));
         ActualisationEcouteur()
     }
   function ActualisationEcouteur() {
-         Ecouter = document.getElementById("son").innerHTML
+         Ecouter = localStorage.getItem("son")
          if (Ecouter == 1 ) {
              document.getElementById("Ecoute").src="Image/SonOn.png"
-             document.getElementById("son").innerHTML="1"
-           setCookieSon()
+          //   document.getElementById("son").innerHTML="1"
+           //setCookieSon()
          }
          else {
            document.getElementById("Ecoute").src="Image/SonOff.png"
-          document.getElementById("son").innerHTML="0"
-           setCookieSon()
+          //document.getElementById("son").innerHTML="0"
+           //setCookieSon()
          }
      }
   function JouerSon(Num) {
 
-        Ecouter = document.getElementById("son").innerHTML
-
+        Ecouter = localStorage.getItem("son");
 
        if (Ecouter==1) {
           if (Num==1) {

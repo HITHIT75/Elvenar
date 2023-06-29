@@ -140,9 +140,7 @@ document.getElementById("Fleche2").addEventListener("click", FlechePlus);
 
  function JouerSon(Num) {
 
-        Ecouter = 1
-
-
+      Ecouter = localStorage.getItem("son");
        if (Ecouter==1) {
           if (Num==1) {
               var sound = document.getElementById("MonSon1");
@@ -153,80 +151,78 @@ document.getElementById("Fleche2").addEventListener("click", FlechePlus);
 
 </script>
 <Style>
-/*********************************** Site Structure ******************************/
+  body {
+  	font-size: 14px;
+  	font-family: Merienda;
+    	padding: 0;
+    background-image: url('Image/FondJournal2.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 80% 0%;
 
-body {
-	font-size: 14px;
-	font-family: Merienda;
-  	padding: 0;
-  background-image: url('Image/FondJournal2.png');
+
+  }
+  br {
+  	content: "";
+  	margin: 2em;
+  	display: block;
+  	font-size: 24%;
+  }
+  #header-{
+  	background-image: url(Image/header_bg.jpg);
+  	height: 186px;
+  	width: 100%;
+  	padding-top: 214px;
+  	padding-left: 59px;
+  }
+  #container {margin: 0px 0px;
+            width: 100%;
+  	font-size: 14px;
+      }
+  #content_top {
+
+  	height: 120px;
+  	width: 100%;
+  	text-align: center;
+  	padding-top: 25px;
+  	padding-left: 100px;
+  	padding-right: 100px;
+  }
+  #content {
+
+  	padding-left: 60px;
+      padding-right: 60px;
+  }
+  #footer {
+  	background-image: url(Image/footer.png);
+  background-size: contain;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 80% 0%;
+  	height: 211px;
+  	text-align: center;
+  }
+
+  /********************************** Text formatting *****************/
 
 
-}
-br {
-	content: "";
-	margin: 2em;
-	display: block;
-	font-size: 24%;
-}
-#header-{
-	background-image: url(Image/header_bg.jpg);
-	height: 186px;
-	width: 100%;
-	padding-top: 214px;
-	padding-left: 59px;
-}
-#container {margin: 0px 0px;
-          width: 100%;
-	font-size: 14px;
-    }
-#content_top {
-
-	height: 120px;
-	width: 100%;
-	text-align: center;
-	padding-top: 25px;
-	padding-left: 100px;
-	padding-right: 100px;
-}
-#content {
-
-	padding-left: 60px;
-    padding-right: 60px;
-}
-#footer {
-	background-image: url(Image/footer.png);
-background-size: contain;
-background-repeat: no-repeat;
-	height: 211px;
-	text-align: center;
-}
-
-/********************************** Text formatting *****************/
+  p {
+     padding-bottom: 25px;
+  }
 
 
-p {
-   padding-bottom: 25px;
-}
+  p.text:first-letter
+  {
+  font-size: 20px;;
+  padding: 0.143em;
+  color:green;
+  float: left;
+  }
 
-
-p.text:first-letter
-{
-font-size: 20px;;
-padding: 0.143em;
-color:green;
-float: left;
-}
-
-.FlecheVis {
-	visibility:visible;
-	}
-.FlecheInVis {
-	visibility:hidden;
-	}
+  .FlecheVis {
+  	visibility:visible;
+  	}
+  .FlecheInVis {
+  	visibility:hidden;
+  	}
   .flex-container {
     display: flex;
     flex-wrap: nowrap;
@@ -249,14 +245,14 @@ float: left;
 </head>
 <body onload="Debut()">
 <audio  id="MonSon1" src="Image/SonJournalFleche.wav"></audio>
-
+<div id="Cont" style="display: none;"></div>
 
 <div class="flex-container">
-  <div ><img id="Fleche1"  onclick="FlecheMoins()" src="Image\Fleche.png" style="width: 50px;transform: rotateY(180deg);cursor:pointer;"></div>
-  <div id="Actuel" ></div>
+  <div ><img id="Fleche1"   src="Image\Fleche.png" style="width: 50px;transform: rotateY(180deg);cursor:pointer;"></div>
+  <div id="Actuel" >3</div>
   <div><img  src="Image\LivrePage.gif" width="70px" style="display: inline;"></div>
-  <div id="Maxi" ></div>
-  <div  ><img id="Fleche2" onclick="FlechePlus()" src="Image\Fleche.png" style="width: 50px;cursor:pointer;" ></div>
+  <div id="Maxi" >12</div>
+  <div  ><img id="Fleche2"  src="Image\Fleche.png" style="width: 50px;cursor:pointer;" ></div>
 </div>
 
 
@@ -268,7 +264,6 @@ float: left;
   </div>
 
 </div>
-<div id="Cont" style="display: none;"></div>
 
 
 
@@ -277,4 +272,5 @@ float: left;
 
 
 
+</body>
 </html>

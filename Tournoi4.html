@@ -223,14 +223,14 @@
           }
 
   function InfoUnite(Num) {
-  //  alert(Num)
+    //  alert(Num)
     //Num =document.getElementById("StockShow").innerHTML
     if (document.getElementById("GenreShow").innerHTML == "0" ) {
       if ((Num=='11') || (Num=='12') ||(Num=='13') ||(Num=='14') ||(Num=='15')) {
           Num = Num + "b"
         }
       }
-//alert(Num)
+      //alert(Num)
 
     if (Num==11) {
 
@@ -1306,7 +1306,7 @@
     function JouerSon(Num) {
 
             //Ecouter = getCookie(son)//
-            Ecouter=document.getElementById("son").innerHTML
+            Ecouter = localStorage.getItem("son");
 
              if (Ecouter==1) {
                 if (Num==1) {
