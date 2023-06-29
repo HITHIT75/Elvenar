@@ -16,9 +16,11 @@
     Sonore = localStorage.getItem("son");
      if (Sonore==null) {
         localStorage.setItem("son", 1);
-
      }
-     ActualisationEcouteur()
+     if (Sonore==0) {
+        OnOffSon();
+     }
+     
     }
   function myTimeout1() {
     document.getElementById("Frame").src="generique.html";
