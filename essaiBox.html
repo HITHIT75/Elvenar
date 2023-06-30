@@ -14,17 +14,20 @@
     setTimeout(myTimeout2, 5500)
     Opacifier(2)
     Sonore = localStorage.getItem("son");
-//    alert(Sonore)
+    //alert(Sonore)
     pass=0
      if (Sonore==0)  {
+       alert("Son: OFF à l ouverture ")
         document.getElementById("Ecoute").src="Image/SonOff.png"
         pass=1;
      }
-     if ((Sonore==1) && (pass=0)) {
+     if ((Sonore==1) && (pass==0)) {
+       alert("Son: ON à l ouverture ")
         pass=1;
      }
 
-     if (pass=0) {
+     if (pass==0) {
+       alert("Son: inconnu à l ouverture ")
         localStorage.setItem("son", 1);
      }
     }
@@ -154,8 +157,9 @@
   function JouerSon(Num) {
  Num=Num*1
         Ecouter = localStorage.getItem("son")*1;
-
+        document.getElementById("Chaine2").innerHTML ="Son: OFF - Num son " + Num
        if (Ecouter==1) {
+          document.getElementById("Chaine2").innerHTML ="Lecture Son: ON - Num son " + Num
          //alert("dans  " + Ecouter + "  " + Num)
             if (Num==1) {
                 var sound = document.getElementById("MonSon");
@@ -624,7 +628,7 @@
 <audio  id="MonSonOuverture" src="Image/Son9.wav"></audio>
 
 <div style="display:none">
-  <div id="son" >1</div>
+  <div id="Chaine2" ></div>
   <div id="Degre10" >2</div>
   <div id="nom"  ></div>
   <div id="son" >1</div>

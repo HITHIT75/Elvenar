@@ -49,7 +49,7 @@
     //MenuShort()
     //handleChange2()
     //handleChange2b()
-//alert(TypeDeTournoi)
+    //alert(TypeDeTournoi)
     handleChangeAll(NumeroTournoi,"de " + TypeDeTournoi)
 
       document.getElementById("Recommande").innerHTML="Unités recommandées pour le tournoi " + TypeDeTournoi
@@ -1026,7 +1026,9 @@
   }
 
   function handleChange() {
+
         JouerSon(3)
+        //alert("ok")
           document.getElementById("Mili11" ).src="https://fr.wiki.elvenar.com/images/d/df/Eb_lm_1_big.png";
           document.getElementById("Mili12" ).src="https://fr.wiki.elvenar.com/images/4/49/Eb_lr_1_big.png";
           document.getElementById("Mili13" ).src="https://fr.wiki.elvenar.com/images/a/a2/Eb_ma_1_big.png";
@@ -1085,7 +1087,7 @@
         }
     function handleChangeAll(Num, Vecteur) {
       //alert("debut dans change all")
-        JouerSon(1)
+
 
           Res=document.getElementById("Tournoi").innerHTML
           document.getElementById("Res" + Num).classList.toggle("down")
@@ -1102,7 +1104,7 @@
              if ((window.innerWidth<850) & (window.innerWidth<window.innerHeight)) {
                CacherMenu()
              }
-
+             JouerSon(1)
              //alert("debut dans change all apres son")
         }
 
@@ -1340,10 +1342,12 @@
               //    }
                 // alert(Num)
                 chaineson = "MonSon" + Num
+                //alert(chaineson)
+                //sound.stop();
                 var sound = document.getElementById(chaineson)
 
                  sound.play();}
-
+                  //alert(chaineson)
               }
     function CalculNumTournoi() {
       const aujourdhui= new Date();
