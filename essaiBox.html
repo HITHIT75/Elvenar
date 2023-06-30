@@ -14,14 +14,19 @@
     setTimeout(myTimeout2, 5500)
     Opacifier(2)
     Sonore = localStorage.getItem("son");
-    alert(Sonore)
+//    alert(Sonore)
+
+     if (Sonore==0) {
+        document.getElementById("Ecoute").src="Image/SonOff.png"
+        break;
+     }
+     if (Sonore==1) {
+        break;
+     }
+
      if (Sonore==null) {
         localStorage.setItem("son", 1);
      }
-     if (Sonore==0) {
-        OnOffSon();
-     }
-
     }
   function myTimeout1() {
     document.getElementById("Frame").src="generique.html";
