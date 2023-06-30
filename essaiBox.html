@@ -17,17 +17,17 @@
     //alert(Sonore)
     pass=0
      if (Sonore==0)  {
-       alert("Son: OFF à l ouverture ")
+       //alert("Son: OFF à l ouverture ")
         document.getElementById("Ecoute").src="Image/SonOff.png"
         pass=1;
      }
      if ((Sonore==1) && (pass==0)) {
-       alert("Son: ON à l ouverture ")
+       //alert("Son: ON à l ouverture ")
         pass=1;
      }
 
      if (pass==0) {
-       alert("Son: inconnu à l ouverture ")
+       //alert("Son: inconnu à l ouverture ")
         localStorage.setItem("son", 1);
      }
     }

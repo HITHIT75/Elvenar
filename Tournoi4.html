@@ -1027,7 +1027,7 @@
 
   function handleChange() {
 
-        JouerSon(3)
+        JouerSon(9)
         //alert("ok")
           document.getElementById("Mili11" ).src="https://fr.wiki.elvenar.com/images/d/df/Eb_lm_1_big.png";
           document.getElementById("Mili12" ).src="https://fr.wiki.elvenar.com/images/4/49/Eb_lr_1_big.png";
@@ -1046,7 +1046,7 @@
           }
         }
     function handleChange2() {
-            JouerSon(3)
+            JouerSon(8)
             document.getElementById("Mili11" ).src="https://fr.wiki.elvenar.com/images/d/df/Hb_lm_1_big.png";
             document.getElementById("Mili12" ).src="https://fr.wiki.elvenar.com/images/e/e3/Hb_lr_1_big.png";
             document.getElementById("Mili13" ).src="https://fr.wiki.elvenar.com/images/e/ed/Hb_ma_1_big.png";
@@ -1064,7 +1064,7 @@
             }
         }
     function handleChange2b() {
-      JouerSon(3)
+      JouerSon(11)
         document.getElementById("Manu1b" ).style.backgroundColor="#F7A63D"
         document.getElementById("Manu2" ).style.backgroundColor=""
         document.getElementById("ManuelShow").innerHTML = "0";
@@ -1075,7 +1075,7 @@
         }
       }
     function handleChangeb() {
-        JouerSon(3)
+        JouerSon(10)
         document.getElementById("Manu2").style.backgroundColor="#F7A63D"
         document.getElementById("Manu1b" ).style.backgroundColor=""
         document.getElementById("ManuelShow").innerHTML = "1";
@@ -1231,10 +1231,21 @@
         else if(Num == 35)       {
            JouerSon(7)
        }
+       else if((Num == 15) || (Num == 25))      {
+          JouerSon(13)
+      }
+      else if(Num == 31)       {
+         JouerSon(15)
+     }
        else if ((Num == 12) || (Num == 22) || (Num == 32))      {
           JouerSon(3)
       }
-
+      else if ((Num == 13) || (Num == 23) || (Num == 33))      {
+         JouerSon(12)
+     }
+     else if ((Num == 14) || (Num == 24) || (Num == 34))      {
+        JouerSon(14)
+    }
        else       {
            JouerSon(4)
        }
@@ -1343,7 +1354,7 @@
                 // alert(Num)
                 chaineson = "MonSon" + Num
                 //alert(chaineson)
-                //sound.stop();
+
                 var sound = document.getElementById(chaineson)
 
                  sound.play();}
@@ -1651,13 +1662,22 @@
 </style>
 </head>
 <body onload="Debut()" onbeforeunload="EcrireCook2()">
-      <audio  id="MonSon" src="Image/Son.wav"></audio>
+      <audio  id="MonSon1" src="Image/Son.wav"></audio>
       <audio  id="MonSon2" src="Image/SonDing.wav"></audio>
       <audio  id="MonSon3" src="Image/SonWhoo.wav"></audio>
       <audio  id="MonSon4" src="Image/SonEpee.mp3"></audio>
       <audio  id="MonSon5" src="Image/SonRire.mp3"></audio>
       <audio  id="MonSon6" src="Image/SonTournoiCerbere.mp3"></audio>
       <audio  id="MonSon7" src="Image/SonTournoiGrenouille.mp3"></audio>
+      <audio  id="MonSon8" src="Image/SonTournoiHumain.wav"></audio>
+      <audio  id="MonSon9" src="Image/SonTournoiElfe.wav"></audio>
+      <audio  id="MonSon10" src="Image/SonTournoiAuto.mp3"></audio>
+      <audio  id="MonSon11" src="Image/SontTournoiManuel.mp3"></audio>
+      <audio  id="MonSon12" src="Image/SonTournoiSorciere.wav"></audio>
+      <audio  id="MonSon13" src="Image/SonTournoiMortier.mp3"></audio>
+      <audio  id="MonSon14" src="Image/SonTournoiPorteelourde.mp3"></audio>
+      <audio  id="MonSon15" src="Image/SonTournoiChevaucheur.mp3"></audio>
+
 
       <div style="visibility:hidden;font-Size:0;display:inline-block;">
           <div id="StockShow"  style="visibility:hidden;font-Size:0;display:inline-block;">z</div>
