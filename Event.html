@@ -274,7 +274,7 @@ document.getElementById("Chaine").innerHTML=matches[1]
      UpMax()
     }
   function JouerSon() {
-	Resultat = getCookie("Ecouteur")
+	Resultat =  localStorage.getItem("son");
 	    if (Resultat ==1) {
     		var sound = document.getElementById("MonSon");
     		sound.play();}
