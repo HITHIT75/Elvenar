@@ -240,7 +240,11 @@
 </head>
 <body onload="Debut()">
 <audio  id="MonSon1" src="Image/SonJournalFleche.wav"></audio>
-<div id="Cont" style="display: none;"></div>
+<div id="son" ></div>
+<div style="display: none;">
+  <div id="Cont" ></div>
+</div>
+
 
 <div class="flex-container">
   <div ><img id="Fleche1"   src="Image\Fleche.png" style="width: 50px;transform: rotateY(180deg);cursor:pointer;"></div>
@@ -268,6 +272,8 @@
 	  loadData()
 document.getElementById("Fleche1").addEventListener("click", FlecheMoins);
 document.getElementById("Fleche2").addEventListener("click", FlechePlus);
+Ecouter = localStorage.getItem("son");
+document.getElementById("son").innerHTML = Ecouter
       }
 </script>
 
