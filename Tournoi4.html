@@ -49,9 +49,9 @@
     //MenuShort()
     //handleChange2()
     //handleChange2b()
-
+//alert(TypeDeTournoi)
     handleChangeAll(NumeroTournoi,"de " + TypeDeTournoi)
-    //alert(TypeDeTournoi)
+
       document.getElementById("Recommande").innerHTML="Unités recommandées pour le tournoi " + TypeDeTournoi
     //checkCookie(TypeDeTournoi)
     //alert("dans dbt entree de check cook2")
@@ -1223,7 +1223,20 @@
           document.getElementById("TriangleMenuG").classList.toggle("TriangleMenuGI");
         }
     function ShowForce(Num) {
-        JouerSon(4)
+        if (Num==21) {
+          JouerSon(6)
+        }
+        else if(Num == 35)       {
+           JouerSon(7)
+       }
+       else if ((Num == 12) || (Num == 22) || (Num == 32))      {
+          JouerSon(3)
+      }
+
+       else       {
+           JouerSon(4)
+       }
+
 
         document.getElementById("StockShow").innerHTML =Num
 
@@ -1309,23 +1322,26 @@
             Ecouter = localStorage.getItem("son");
 
              if (Ecouter==1) {
-                if (Num==1) {
-                    var sound = document.getElementById("MonSon");
-                }
-                if (Num==2) {
-                    var sound = document.getElementById("MonSon2");
-                }
-
-               if (Num==3) {
-                   var sound = document.getElementById("MonSon3");
-               }
-              if (Num==4) {
-                    var sound = document.getElementById("MonSon4");
-                }
-              if (Num==5) {
-                     var sound = document.getElementById("MonSon5");
-                 }
+              //   if (Num==1) {
+              //       var sound = document.getElementById("MonSon");
+              //   }
+              //   if (Num==2) {
+              //       var sound = document.getElementById("MonSon2");
+              //   }
+              //
+              //  if (Num==3) {
+              //      var sound = document.getElementById("MonSon3");
+              //  }
+              // if (Num==4) {
+              //       var sound = document.getElementById("MonSon4");
+              //   }
+              // if (Num==5) {
+              //        var sound = document.getElementById("MonSon5");
+              //    }
                 // alert(Num)
+                chaineson = "MonSon" + Num
+                var sound = document.getElementById(chaineson)
+
                  sound.play();}
 
               }
@@ -1636,7 +1652,8 @@
       <audio  id="MonSon3" src="Image/SonWhoo.wav"></audio>
       <audio  id="MonSon4" src="Image/SonEpee.mp3"></audio>
       <audio  id="MonSon5" src="Image/SonRire.mp3"></audio>
-
+      <audio  id="MonSon6" src="Image/SonTournoiCerbere.mp3"></audio>
+      <audio  id="MonSon7" src="Image/SonTournoiGrenouille.mp3"></audio>
 
       <div style="visibility:hidden;font-Size:0;display:inline-block;">
           <div id="StockShow"  style="visibility:hidden;font-Size:0;display:inline-block;">z</div>
