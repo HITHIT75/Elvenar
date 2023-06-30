@@ -10,21 +10,21 @@
 
 <script>
   function Debut() {
-    setTimeout(myTimeout1, 1500)
+    setTimeout(myTimeout1, 1300)
     setTimeout(myTimeout2, 5500)
     Opacifier(2)
     Sonore = localStorage.getItem("son");
 //    alert(Sonore)
-
-     if (Sonore==0) {
+    pass=0
+     if (Sonore==0)  {
         document.getElementById("Ecoute").src="Image/SonOff.png"
-        break;
+        pass=1;
      }
-     if (Sonore==1) {
-        break;
+     if ((Sonore==1) && (pass=0)) {
+        pass=1;
      }
 
-     if (Sonore==null) {
+     if (pass=0) {
         localStorage.setItem("son", 1);
      }
     }
