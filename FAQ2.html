@@ -23,7 +23,7 @@ function Debut() {
         if (xmlhttp.readyState == 4) {
 document.getElementById("Ecrit").innerHTML=xmlhttp.responseText
             	const parts = xmlhttp.responseText.split("|");
-		Maxi=parts.length
+		Maxi=parts.length+1
 document.getElementById("Ecrit1").innerHTML=parts[81]			
 document.getElementById("Ecrit2").innerHTML=parts[82]
 document.getElementById("Ecrit3").innerHTML=parts[83]
