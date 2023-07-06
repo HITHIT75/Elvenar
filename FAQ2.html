@@ -21,14 +21,14 @@ function Debut() {
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4) {
-document.getElementById("Ecrit").innerHTML=xmlhttp.responseText
+//document.getElementById("Ecrit").innerHTML=xmlhttp.responseText
             	const parts = xmlhttp.responseText.split("|");
-		Maxi=parts.length+1
-document.getElementById("Ecrit1").innerHTML=parts[81]			
-document.getElementById("Ecrit2").innerHTML=parts[82]
-document.getElementById("Ecrit3").innerHTML=Maxi
+		Maxi=math.floor(parts.length/3)+1
+			
+
             for ( i = 1; i < Maxi; i += 1) {
               		j=i*3   
+		    	document.getElementById("Ecrit" + i).innerHTML=parts[81]
 		         var0=parts[j]
    		         	result = var0.substring(0, var0.length-2);
 		    		//result = result.replaceAll("\"","")
@@ -434,11 +434,66 @@ h3 {
 </div>
 <div id="Ecrit">
 </div><br>
-<div id="Ecrit1">
-</div><br>
-<div id="Ecrit2">
-</div><br>
-<div id="Ecrit3">
-</div><br>
+<div id='Ecrit'1></div><br>
+<div id='Ecrit'2></div><br>
+<div id='Ecrit'3></div><br>
+<div id='Ecrit'4></div><br>
+<div id='Ecrit'5></div><br>
+<div id='Ecrit'6></div><br>
+<div id='Ecrit'7></div><br>
+<div id='Ecrit'8></div><br>
+<div id='Ecrit'9></div><br>
+<div id='Ecrit'10></div><br>
+<div id='Ecrit'11></div><br>
+<div id='Ecrit'12></div><br>
+<div id='Ecrit'13></div><br>
+<div id='Ecrit'14></div><br>
+<div id='Ecrit'15></div><br>
+<div id='Ecrit'16></div><br>
+<div id='Ecrit'17></div><br>
+<div id='Ecrit'18></div><br>
+<div id='Ecrit'19></div><br>
+<div id='Ecrit'20></div><br>
+<div id='Ecrit'21></div><br>
+<div id='Ecrit'22></div><br>
+<div id='Ecrit'23></div><br>
+<div id='Ecrit'24></div><br>
+<div id='Ecrit'25></div><br>
+<div id='Ecrit'26></div><br>
+<div id='Ecrit'27></div><br>
+<div id='Ecrit'28></div><br>
+<div id='Ecrit'29></div><br>
+<div id='Ecrit'30></div><br>
+<div id='Ecrit'31></div><br>
+<div id='Ecrit'32></div><br>
+<div id='Ecrit'33></div><br>
+<div id='Ecrit'34></div><br>
+<div id='Ecrit'35></div><br>
+<div id='Ecrit'36></div><br>
+<div id='Ecrit'37></div><br>
+<div id='Ecrit'38></div><br>
+<div id='Ecrit'39></div><br>
+<div id='Ecrit'40></div><br>
+<div id='Ecrit'41></div><br>
+<div id='Ecrit'42></div><br>
+<div id='Ecrit'43></div><br>
+<div id='Ecrit'44></div><br>
+<div id='Ecrit'45></div><br>
+<div id='Ecrit'46></div><br>
+<div id='Ecrit'47></div><br>
+<div id='Ecrit'48></div><br>
+<div id='Ecrit'49></div><br>
+<div id='Ecrit'50></div><br>
+<div id='Ecrit'51></div><br>
+<div id='Ecrit'52></div><br>
+<div id='Ecrit'53></div><br>
+<div id='Ecrit'54></div><br>
+<div id='Ecrit'55></div><br>
+<div id='Ecrit'56></div><br>
+<div id='Ecrit'57></div><br>
+<div id='Ecrit'58></div><br>
+<div id='Ecrit'59></div><br>
+<div id='Ecrit'60></div><br>
+<div id='Ecrit'61></div><br>
 </body>
 </html>
