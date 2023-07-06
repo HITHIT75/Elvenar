@@ -24,25 +24,25 @@ function Debut() {
 document.getElementById("Ecrit").innerHTML=xmlhttp.responseText
             	const parts = xmlhttp.responseText.split("|");
 		Maxi=parts.length
-document.getElementById("Ecrit1").innerHTML=parts[25]			
+document.getElementById("Ecrit1").innerHTML=Maxi			
 document.getElementById("Ecrit2").innerHTML=parts[26]
 document.getElementById("Ecrit3").innerHTML=parts[27]
             for ( i = 1; i < Maxi; i += 1) {
               		j=i*3   
 		         var0=parts[j]
    		         	result = var0.substring(0, var0.length-2);
-		    		result = result.replaceAll("\"","")
+		    		//result = result.replaceAll("\"","")
 		    	if (result.length<5) {
 				result = ""
 			}
-               		document.getElementById("Accordeon" +(i)).innerHTML=result
+               		document.getElementById("Accordeon" +(i)).innerHTML=i + "/" + result
                var0=parts[j+1]
    		         result = var0.substring(0, var0.length-2);
-		    		result = result.replaceAll("\"","")
+		    		//result = result.replaceAll("\"","")
 		    if (result.length<5) {
 			result = ""
 			}
-		           document.getElementById("Content" +(i)).innerHTML=result
+		           document.getElementById("Content" +(i)).innerHTML=i + "/" + result
 
              }
 
