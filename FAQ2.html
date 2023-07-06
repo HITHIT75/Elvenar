@@ -23,9 +23,9 @@ function Debut() {
         if (xmlhttp.readyState == 4) {
 document.getElementById("Ecrit").innerHTML=xmlhttp.responseText
             	const parts = xmlhttp.responseText.split("|");
-		Maxi=parts.length+2
-document.getElementById("Ecrit1").innerHTML=parts[Maxi-4]			
-document.getElementById("Ecrit2").innerHTML=parts[Maxi-3]
+		Maxi=parts.length-1
+document.getElementById("Ecrit1").innerHTML=parts[Maxi-1]			
+document.getElementById("Ecrit2").innerHTML=parts[Maxi]
 document.getElementById("Ecrit3").innerHTML=parts[1]
             for ( i = 1; i < Maxi; i += 1) {
               		j=i*3   
@@ -63,7 +63,12 @@ function toggleAccordion(Num){
 }
 
 // items.forEach(item => item.addEventListener('click', toggleAccordion));
-	
+//.content:empty {
+//  display: none;
+//}
+//.contentZ:empty {
+//  display: none;
+//}	
 	
 	
 	
@@ -190,12 +195,7 @@ h3 {
   -o-transition: all 0.35s ease 0.15s;
   transition: all 0.35s ease 0.15s;
 }
-.content:empty {
-  display: none;
-}
-.contentZ:empty {
-  display: none;
-}
+
 
 </style>
 
