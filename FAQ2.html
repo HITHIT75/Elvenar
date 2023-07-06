@@ -21,7 +21,7 @@ function Debut() {
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4) {
-
+document.getElementById("Ecrit").innerHTML=xmlhttp.responseText
             	const parts = xmlhttp.responseText.split("|");
 		Maxi=parts.length+1
 			
@@ -35,14 +35,14 @@ function Debut() {
 		    	if (result.length<5) {
 				result = ""
 			}
-               		document.getElementById("Accordeon" +(i)).innerHTML=(i) +" / "+ j + " / "+ Maxi +     "  = " +result
+               		document.getElementById("Accordeon" +(i)).innerHTML=result
                var0=parts[j+1]
    		         result = var0.substring(0, var0.length-2);
 		    		result = result.replaceAll("\"","")
 		    if (result.length<5) {
 			result = ""
 			}
-		           document.getElementById("Content" +(i)).innerHTML=(i) +" / "+ j +"  = " +result
+		           document.getElementById("Content" +(i)).innerHTML=result
 
              }
 
@@ -419,7 +419,12 @@ h3 {
 		<p></p>
 		</div>
 		</div>
-
+		<div class='accordion-item'  id='AccordeonItem36' onclick='toggleAccordion(36)'>
+		<a id='Accordeon36' class='contentZ'></a>
+		<div class='content' id='Content36'>
+		<p></p>
+		</div>
+		</div>
 
 
 
@@ -427,8 +432,8 @@ h3 {
   </div>
 
 </div>
-
-
+<div id="Ecrit">
+</div>
 
 
 
