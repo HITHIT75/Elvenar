@@ -24,8 +24,8 @@ function Debut() {
 document.getElementById("Ecrit").innerHTML=xmlhttp.responseText
             	const parts = xmlhttp.responseText.split("|");
 		Maxi=parts.length+2
-			
-
+document.getElementById("Ecrit1").innerHTML=parts[Maxi-2]			
+document.getElementById("Ecrit2").innerHTML=parts[Maxi-1]
 
             for ( i = 1; i < Maxi; i += 1) {
               		j=i*3   
@@ -429,13 +429,15 @@ h3 {
 
 
 
-  </div>
+  </div><br>
 
 </div>
 <div id="Ecrit">
-</div>
-
-
+</div><br>
+<div id="Ecrit1">
+</div><br>
+<div id="Ecrit2">
+</div><br>
 
 </body>
 </html>
