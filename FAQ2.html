@@ -24,8 +24,36 @@ function Debut() {
 //document.getElementById("Ecrit").innerHTML=xmlhttp.responseText
             	const parts = xmlhttp.responseText.split("|");
 		Maxi=math.floor(parts.length/3)+1
-			
-
+document.getElementById('Ecrit1' ).innerHTML=parts[1]
+document.getElementById('Ecrit2' ).innerHTML=parts[4]
+document.getElementById('Ecrit3' ).innerHTML=parts[7]
+document.getElementById('Ecrit4' ).innerHTML=parts[10]
+document.getElementById('Ecrit5' ).innerHTML=parts[13]
+document.getElementById('Ecrit6' ).innerHTML=parts[16]
+document.getElementById('Ecrit7' ).innerHTML=parts[19]
+document.getElementById('Ecrit8' ).innerHTML=parts[22]
+document.getElementById('Ecrit9' ).innerHTML=parts[25]
+document.getElementById('Ecrit10' ).innerHTML=parts[28]
+document.getElementById('Ecrit11' ).innerHTML=parts[31]
+document.getElementById('Ecrit12' ).innerHTML=parts[34]
+document.getElementById('Ecrit13' ).innerHTML=parts[37]
+document.getElementById('Ecrit14' ).innerHTML=parts[40]
+document.getElementById('Ecrit15' ).innerHTML=parts[43]
+document.getElementById('Ecrit16' ).innerHTML=parts[46]
+document.getElementById('Ecrit17' ).innerHTML=parts[49]
+document.getElementById('Ecrit18' ).innerHTML=parts[52]
+document.getElementById('Ecrit19' ).innerHTML=parts[55]
+document.getElementById('Ecrit20' ).innerHTML=parts[58]
+document.getElementById('Ecrit21' ).innerHTML=parts[61]
+document.getElementById('Ecrit22' ).innerHTML=parts[64]
+document.getElementById('Ecrit23' ).innerHTML=parts[67]
+document.getElementById('Ecrit24' ).innerHTML=parts[70]
+document.getElementById('Ecrit25' ).innerHTML=parts[73]
+document.getElementById('Ecrit26' ).innerHTML=parts[76]
+document.getElementById('Ecrit27' ).innerHTML=parts[79]
+document.getElementById('Ecrit28' ).innerHTML=parts[82]
+document.getElementById('Ecrit29' ).innerHTML=parts[85]
+return
             for ( i = 1; i < Maxi; i += 1) {
               		j=i*3   
 		    	document.getElementById("Ecrit" + i).innerHTML=parts[j]
